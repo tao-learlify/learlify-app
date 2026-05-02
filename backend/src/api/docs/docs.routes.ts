@@ -6,7 +6,7 @@ import path from 'path'
 
 const router = express.Router()
 
-const openApiPath = path.join(__dirname, '../../../..', 'docs', 'openapi.yaml')
+const openApiPath = path.join(__dirname, '../../..', 'docs', 'openapi.yaml')
 
 let swaggerDocument: object
 
