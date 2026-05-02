@@ -1,21 +1,40 @@
-import { useCallback, useState } from 'react'
+import { useCallback, useRef, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import api from 'api'
 import { fetchAdvanceThunk } from 'store/@thunks/courses'
 
+const DEBOUNCE_MS = 1500
+const MAX_RETRIES = 2
+
+/** Retry fn up to maxRetries extra times with linear back-off. */
+async function callWithRetry(fn, maxRetries) {
+  let lastErr
+  for (let attempt = 0; attempt <= maxRetries; attempt++) {
+    try {
+      return await fn()
+    } catch (err) {
+      lastErr = err
+      if (attempt < maxRetries) {
+        await new Promise(r => setTimeout(r, 500 * (attempt + 1)))
+      }
+    }
+  }
+  throw lastErr
+}
+
 /**
  * useProgressTracking — Update and track user progress through sections.
  *
- * Handles:
- * - Mid-section progress updates (exercises completed, XP earned)
- * - Section completion (mark as complete, auto-advance)
- * - Local optimistic updates (instant UI feedback)
- * - Backend sync (dispatch to Redux)
+ * - Debounced backend sync (1500ms) — only the last call per window hits the network
+ * - Auto-creates advance record on first save (PUT returns 404 → POST → retry PUT)
+ * - Retry up to MAX_RETRIES times with back-off
+ * - flush() persists any pending save immediately (call on unmount / navigation)
+ * - completeSection never throws — UI stays alive even on save failure
  *
- * @param {number} courseId — Current course ID
- * @param {number} sectionIndex — Current section (1-based)
- * @param {number} [totalExercises] — Total exercises in section (for progress %)
- * @returns {{ updateProgress, completeSection, localProgress, localXp, loading, error }}
+ * @param {number|string} courseId
+ * @param {number|string} sectionIndex — 1-based
+ * @param {number} [totalExercises=10]
+ * @returns {{ updateProgress, completeSection, flush, localProgress, localXp, loading, error }}
  */
 function useProgressTracking(courseId, sectionIndex, totalExercises = 10) {
   const dispatch = useDispatch()
@@ -24,100 +43,163 @@ function useProgressTracking(courseId, sectionIndex, totalExercises = 10) {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
 
-  // Ensure IDs are numbers — params from useParams() come as strings
   const numericCourseId = courseId ? Number(courseId) : null
   const numericSectionIndex = sectionIndex ? Number(sectionIndex) : null
 
+  const debounceTimer = useRef(null)
+  const pendingPayload = useRef(null)
+  // Track whether we've already confirmed the record exists in this session
+  const advanceExistsRef = useRef(false)
+
   /**
-   * Update progress mid-section (exercises completed, XP earned).
-   * Uses existing PUT /api/v1/advance endpoint.
-   *
-   * @param {number} xp — XP earned so far
-   * @param {number} exercisesCompleted — Number of exercises completed
-   * @param {number} [progressPercent] — Optional progress percentage (0-1); if not provided, calculates from exercises/total
+   * Ensure an advance record exists for this course.
+   * On first call creates it via POST; subsequent calls are a no-op.
+   */
+  const _ensureAdvanceRecord = useCallback(async () => {
+    if (advanceExistsRef.current) return
+    console.log('[progress] creating advance record for courseId:', numericCourseId)
+    await api.courses.createAdvance({ courseId: numericCourseId })
+    advanceExistsRef.current = true
+    console.log('[progress] advance record created ✓')
+  }, [numericCourseId])
+
+  /**
+   * Sync payload to backend.
+   * If the advance record doesn't exist yet (404), creates it first then retries.
+   */
+  const _syncToBackend = useCallback(async (payload) => {
+    console.log('[progress] _syncToBackend payload:', payload, '| recordExists:', advanceExistsRef.current)
+    const doUpdate = () => api.courses.updateAdvance(payload)
+    try {
+      if (advanceExistsRef.current) {
+        // Fast path: record known to exist
+        console.log('[progress] PUT /advance (fast path)')
+        await callWithRetry(doUpdate, MAX_RETRIES)
+        console.log('[progress] PUT /advance OK ✓')
+      } else {
+        // Optimistic: try PUT first (record may already exist from another session)
+        try {
+          console.log('[progress] PUT /advance (optimistic)')
+          await doUpdate()
+          advanceExistsRef.current = true
+          console.log('[progress] PUT /advance OK ✓')
+        } catch (err) {
+          console.warn('[progress] PUT failed, statusCode:', err?.statusCode, err)
+          if (err?.statusCode === 404) {
+            // Record doesn't exist — create then retry
+            await _ensureAdvanceRecord()
+            console.log('[progress] retrying PUT after create...')
+            await callWithRetry(doUpdate, MAX_RETRIES)
+            console.log('[progress] PUT /advance OK after create ✓')
+          } else {
+            throw err
+          }
+        }
+      }
+    } catch (err) {
+      console.error('[progress] _syncToBackend FINAL FAILURE:', err)
+    }
+  }, [_ensureAdvanceRecord])
+
+  /** Flush any pending debounced save immediately (call on unmount/navigation). */
+  const flush = useCallback(() => {
+    if (debounceTimer.current) {
+      clearTimeout(debounceTimer.current)
+      debounceTimer.current = null
+    }
+    if (pendingPayload.current) {
+      const payload = pendingPayload.current
+      pendingPayload.current = null
+      _syncToBackend(payload)
+    }
+  }, [_syncToBackend])
+
+  /**
+   * Update progress mid-section. UI updates immediately; backend is debounced.
+   * @param {number} xp
+   * @param {number} exercisesCompleted
+   * @param {number|null} progressPercent
+   * @param {object|null} v2 — block-level state { completedBlockIds, xpRecord, currentBlockId, updatedAt }
    */
   const updateProgress = useCallback(
-    async (xp, exercisesCompleted, progressPercent = null) => {
-      if (!numericCourseId || !numericSectionIndex) return
-
-      try {
-        setLoading(true)
-        setError(null)
-
-        // Calculate progress percent if not provided
-        const actualProgress = progressPercent !== null 
-          ? progressPercent 
-          : (totalExercises > 0 ? exercisesCompleted / totalExercises : 0)
-
-        // Optimistic update (instant UI feedback)
-        setLocalXp(xp)
-        setLocalProgress(actualProgress)
-
-        // Sync to backend using existing PUT /advance endpoint
-        if (api.courses.updateAdvance) {
-          api.courses.updateAdvance({
-            courseId: numericCourseId,
-            unit: numericSectionIndex,
-            last: Math.round(xp),
-            completed: false
-          }).catch(err => {
-            console.warn('Failed to sync progress:', err)
-          })
-        }
-
-        setLoading(false)
-      } catch (err) {
-        console.error('Progress update error:', err)
-        setError(err.message)
-        setLoading(false)
+    (xp, exercisesCompleted, progressPercent = null, v2 = null) => {
+      console.log('[progress] updateProgress called — xp:', xp, 'exercises:', exercisesCompleted, 'courseId:', numericCourseId, 'section:', numericSectionIndex)
+      if (!numericCourseId || !numericSectionIndex) {
+        console.warn('[progress] updateProgress aborted — missing courseId or sectionIndex')
+        return
       }
+
+      const actualProgress = progressPercent !== null
+        ? progressPercent
+        : (totalExercises > 0 ? exercisesCompleted / totalExercises : 0)
+
+      // Optimistic — instant UI, no loading spinner
+      setLocalXp(xp)
+      setLocalProgress(actualProgress)
+
+      // Debounce: reset timer, keep latest payload only
+      const payload = {
+        courseId: numericCourseId,
+        unit: numericSectionIndex,
+        last: Math.round(xp),
+        completed: false,
+        ...(v2 ? { v2 } : {})
+      }
+      pendingPayload.current = payload
+      clearTimeout(debounceTimer.current)
+      debounceTimer.current = setTimeout(() => {
+        debounceTimer.current = null
+        pendingPayload.current = null
+        _syncToBackend(payload)
+      }, DEBOUNCE_MS)
     },
-    [numericCourseId, numericSectionIndex, totalExercises]
+    [numericCourseId, numericSectionIndex, totalExercises, _syncToBackend]
   )
 
   /**
-   * Mark section complete and auto-advance to next.
-   * Uses existing PUT /api/v1/advance endpoint with completed: true.
-   *
-   * @param {number} finalXp — Total XP for this section
-   * @param {number} [examScore] — Optional exam/quiz score (not stored in current API)
-   * @returns {Promise} Resolves when backend confirms
+   * Mark section complete. Flushes pending save first, then persists completion.
+   * Never throws — UI must not break on save failure.
    */
   const completeSection = useCallback(
     async (finalXp, examScore = null) => {
-      if (!numericCourseId || !numericSectionIndex) return
+      console.log('[progress] completeSection called — finalXp:', finalXp, 'courseId:', numericCourseId, 'section:', numericSectionIndex)
+      if (!numericCourseId || !numericSectionIndex) {
+        console.warn('[progress] completeSection aborted — missing courseId or sectionIndex')
+        return
+      }
+
+      flush()
+      setLoading(true)
+      setError(null)
+
+      const payload = {
+        courseId: numericCourseId,
+        unit: numericSectionIndex,
+        last: Math.round(finalXp),
+        completed: true
+      }
 
       try {
-        setLoading(true)
-        setError(null)
-
-        const response = await api.courses.updateAdvance({
-          courseId: numericCourseId,
-          unit: numericSectionIndex,
-          last: Math.round(finalXp),
-          completed: true
-        })
-
-        await dispatch(fetchAdvanceThunk(numericCourseId))
-
+        await _syncToBackend(payload)
+        dispatch(fetchAdvanceThunk(numericCourseId))
         setLocalXp(0)
         setLocalProgress(0)
-        setLoading(false)
-        
-        return response
       } catch (err) {
-        console.error('Complete section error:', err)
-        setError(err.message)
+        if (process.env.NODE_ENV === 'development') {
+          console.error('[useProgressTracking] completeSection failed:', err)
+        }
+        setError(err?.message ?? 'Failed to save progress')
+      } finally {
         setLoading(false)
-        throw err
       }
     },
-    [numericCourseId, numericSectionIndex, dispatch]
+    [numericCourseId, numericSectionIndex, dispatch, flush, _syncToBackend]
   )
 
   return {
     updateProgress,
     completeSection,
+    flush,
     localProgress,
     localXp,
     loading,
@@ -126,3 +208,5 @@ function useProgressTracking(courseId, sectionIndex, totalExercises = 10) {
 }
 
 export default useProgressTracking
+
+

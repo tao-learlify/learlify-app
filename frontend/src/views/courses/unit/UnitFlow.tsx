@@ -41,6 +41,8 @@ interface UnitFlowProps {
   onXP: (xp: number) => void;
   onNextUnit?: () => void;
   onBackToCourse?: () => void;
+  /** When true, skip the intro card and go directly to the first block */
+  skipIntro?: boolean;
 }
 
 export function UnitFlow({
@@ -49,6 +51,7 @@ export function UnitFlow({
   onXP,
   onNextUnit,
   onBackToCourse,
+  skipIntro = false,
 }: UnitFlowProps) {
   const progress = useUnitProgressContext();
 
@@ -60,12 +63,32 @@ export function UnitFlow({
   );
 
   // ── Phase state ────────────────────────────────────────────
-  const [showIntro, setShowIntro] = useState(true);
+  // When skipIntro=true (unit already started), go directly to the flow.
+  const [showIntro, setShowIntro] = useState(!skipIntro);
   const [showCompletion, setShowCompletion] = useState(false);
 
   // The block currently displayed — persists after completion so user
   // sees the completed state + Continue button (rather than a blank screen).
   const [displayBlockId, setDisplayBlockId] = useState<string | null>(null);
+
+  // When skipping the intro, auto-start the saved or first available block on mount.
+  // Priority: savedCurrentBlockId (from v2) → nextAvailableBlockId → first block
+  React.useEffect(() => {
+    if (!skipIntro && displayBlockId === null) return;
+    if (skipIntro && displayBlockId === null) {
+      // progress.currentBlockId was hydrated from savedProgress in useUnitProgress
+      const resumeId =
+        progress.currentBlockId                      // saved "in progress" block
+        ?? progress.nextAvailableBlockId             // first incomplete block
+        ?? (allBlocks.length > 0 ? allBlocks[0].id : null); // fallback: first block
+
+      if (resumeId) {
+        progress.startBlock(resumeId);
+        setDisplayBlockId(resumeId);
+      }
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [skipIntro]); // run once on mount only
 
   // ── Derived state ──────────────────────────────────────────
   const displayBlock = displayBlockId

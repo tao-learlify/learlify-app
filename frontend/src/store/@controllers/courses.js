@@ -9,7 +9,10 @@ export const fetchCoursesControllerRejected = (state) => {
 
 export const fetchCoursesControllerFulfilled = (state, action) => {
   state.courses.data = action.payload.response.courses
-  state.advance.data = action.payload.response.advance
+  const advance = action.payload.response.advance
+  if (Array.isArray(advance)) {
+    state.advance.data = advance
+  }
   state.courses.loading = false
 }
 
@@ -26,6 +29,7 @@ export const fetchAdvanceFulfilled = (state, action) => {
 
   // Only update advance data if a full record exists (has an id)
   if (response.id) {
+    if (!Array.isArray(state.advance.data)) state.advance.data = []
     const idx = state.advance.data.findIndex(a => a.id === response.id)
     if (idx >= 0) {
       state.advance.data[idx] = response
