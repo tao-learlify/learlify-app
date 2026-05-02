@@ -4,7 +4,8 @@
   "private": true,
   "description": "Learlify monorepo — backend API + frontend client",
   "scripts": {
-    "setup": "npm install --legacy-peer-deps && npm install --legacy-peer-deps --prefix backend && npm install --legacy-peer-deps --prefix frontend",
+    "setup": "npm run setup:env && npm install --legacy-peer-deps && npm install --legacy-peer-deps --prefix backend && npm install --legacy-peer-deps --prefix frontend",
+    "setup:env": "node scripts/generate-env.mjs",
     "dev": "concurrently -n backend,frontend -c blue,green \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
     "dev:backend": "npm run dev --prefix backend",
     "dev:frontend": "npm run dev --prefix frontend",
