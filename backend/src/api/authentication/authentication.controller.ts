@@ -92,7 +92,7 @@ export class AuthenticationController {
           <p>${res.__('mails.services.signUp.html.verification')}</p>
           <a href="${
             mailConfig.domain
-          }/account/verification?code=${confirmationCode}">
+          }/verification?code=${confirmationCode}">
             ${res.__('mails.services.signUp.html.verificate')}
           </a>
         </div>
@@ -472,7 +472,7 @@ export class AuthenticationController {
             ${res.__('mails.services.resetPassword.html.practice')}
             <strong>${res.__('mails.services.resetPassword.html.team')}</strong>
           </p>
-          <a href="${mailConfig.domain}/accounts/reset?code=${token}">
+          <a href="${mailConfig.domain}/reset?code=${token}">
             Restaura tu cuenta haciendo click aquí
           </a>
           <br>
