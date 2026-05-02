@@ -1,0 +1,93 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - generic [ref=e8]:
+          - generic [ref=e9]: Unit 1
+          - heading "Daily Routines" [level=1] [ref=e10]
+        - generic [ref=e11]:
+          - generic [ref=e12]:
+            - img [ref=e13]
+            - generic [ref=e15]: "0"
+            - generic [ref=e16]: / 250 XP
+          - generic [ref=e17]: 🐼
+      - progressbar [ref=e18]
+  - main [ref=e19]:
+    - generic [ref=e20]:
+      - generic [ref=e66]:
+        - generic [ref=e67]: Block 1 of 27
+        - generic [ref=e68]: 4%
+      - generic [ref=e97]:
+        - generic [ref=e98]:
+          - generic [ref=e99]: 📐
+          - generic [ref=e100]: grammar
+        - generic [ref=e101]: ·
+        - generic [ref=e102]: Learn
+      - generic [ref=e104]:
+        - img [ref=e167]
+        - generic [ref=e106]:
+          - generic [ref=e107]:
+            - img [ref=e109]
+            - heading "Present Simple" [level=2] [ref=e112]
+          - generic [ref=e113]:
+            - generic [ref=e114]:
+              - generic [ref=e115]: Affirmative
+              - table [ref=e116]:
+                - rowgroup [ref=e117]:
+                  - row "I, you, we, they swim" [ref=e118]:
+                    - cell "I, you, we, they" [ref=e119]
+                    - cell "swim" [ref=e120]
+                  - row "He, she, it swims" [ref=e121]:
+                    - cell "He, she, it" [ref=e122]
+                    - cell "swims" [ref=e123]
+            - paragraph [ref=e124]:
+              - text: With most verbs, we add
+              - strong [ref=e125]: "-s"
+              - text: to the third person singular (affirmative only).
+            - paragraph [ref=e126]:
+              - text: When verbs end in
+              - strong [ref=e127]: o, s, sh, ch or x
+              - text: we add
+              - strong [ref=e128]: "-es"
+              - text: "instead:"
+              - emphasis [ref=e129]: I watch TV → She watches TV.
+            - paragraph [ref=e130]:
+              - text: Verbs ending in consonant +
+              - strong [ref=e131]: "-y"
+              - text: replace -y with
+              - strong [ref=e132]: "-ies"
+              - text: ":"
+              - emphasis [ref=e133]: I try → She tries.
+            - generic [ref=e134]:
+              - generic [ref=e135]: Negative
+              - table [ref=e136]:
+                - rowgroup [ref=e137]:
+                  - row "I, you, we, they don't swim / do not swim" [ref=e138]:
+                    - cell "I, you, we, they" [ref=e139]
+                    - cell "don't swim / do not swim" [ref=e140]
+                  - row "He, she, it doesn't swim / does not swim" [ref=e141]:
+                    - cell "He, she, it" [ref=e142]
+                    - cell "doesn't swim / does not swim" [ref=e143]
+            - generic [ref=e144]:
+              - generic [ref=e145]: Interrogative
+              - table [ref=e146]:
+                - rowgroup [ref=e147]:
+                  - row "Do I, you, we, they swim?" [ref=e148]:
+                    - cell "Do" [ref=e149]
+                    - cell "I, you, we, they swim?" [ref=e150]
+                  - row "Does he, she, it swim?" [ref=e151]:
+                    - cell "Does" [ref=e152]
+                    - cell "he, she, it swim?" [ref=e153]
+            - generic [ref=e154]:
+              - generic [ref=e155]: Short answers
+              - table [ref=e156]:
+                - rowgroup [ref=e157]:
+                  - row "Yes, I do. No, you don't." [ref=e158]:
+                    - cell "Yes, I do." [ref=e159]
+                    - cell "No, you don't." [ref=e160]
+                  - row "Yes, he does. No, she doesn't." [ref=e161]:
+                    - cell "Yes, he does." [ref=e162]
+                    - cell "No, she doesn't." [ref=e163]
+      - button "Continue" [ref=e171] [cursor=pointer]:
+        - text: Continue
+        - img [ref=e172]

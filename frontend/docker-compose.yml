@@ -1,0 +1,51 @@
+services:
+  # Cliente en modo desarrollo
+  client-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development
+    container_name: aptis-client-dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./src:/app/src
+      - ./public:/app/public
+      - ./index.html:/app/index.html
+      - ./vite.config.js:/app/vite.config.js
+      - /app/node_modules
+    environment:
+      - VITE_API_URL=http://localhost:3100
+      - VITE_WEBSOCKET=http://localhost:3100
+      - VITE_CLOUDFRONT=
+      - VITE_FALLBACK_LANGUAGE=en
+      - VITE_STRIPE_PUBLIC_API_KEY=
+      - VITE_GOOGLE_CLIENT_ID=
+    stdin_open: true
+    tty: true
+    networks:
+      - aptis-network
+
+  # Cliente en modo producción
+  client-prod:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+    container_name: aptis-client-prod
+    ports:
+      - "80:80"
+    environment:
+      - VITE_API_URL=${VITE_API_URL:-http://localhost:3100}
+      - VITE_WEBSOCKET=${VITE_WEBSOCKET:-http://localhost:3100}
+      - VITE_CLOUDFRONT=${VITE_CLOUDFRONT:-}
+      - VITE_FALLBACK_LANGUAGE=${VITE_FALLBACK_LANGUAGE:-en}
+      - VITE_STRIPE_PUBLIC_API_KEY=${VITE_STRIPE_PUBLIC_API_KEY:-}
+      - VITE_GOOGLE_CLIENT_ID=${VITE_GOOGLE_CLIENT_ID:-}
+    networks:
+      - aptis-network
+    restart: unless-stopped
+
+networks:
+  aptis-network:
+    driver: bridge

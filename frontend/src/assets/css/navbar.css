@@ -1,0 +1,22 @@
+.no-arrow .dropdown-toggle::after {
+  display: none;
+}
+
+.no-arrow .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+
+.circlePulse {
+  z-index: 0;
+  top: -5.2px;
+  right: calc(50% - 55px);
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: #f8166a;
+  animation-iteration-count: infinite;
+}

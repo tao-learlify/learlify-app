@@ -1,0 +1,106 @@
+/* ==========================================================================
+   Input — Unified text input with label, error, and hint support.
+   Replaces: assets/css/input.css + Bootstrap .form-control + Select.js.
+   ========================================================================== */
+
+/* ── WRAPPER ──────────────────────────────────────────────────────────────── */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  width: 100%;
+}
+
+/* ── LABEL ────────────────────────────────────────────────────────────────── */
+.label {
+  font-family: var(--font-base);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-primary);
+  line-height: var(--leading-normal);
+}
+
+.required {
+  color: var(--color-danger);
+  margin-left: var(--space-1);
+}
+
+/* ── INPUT ────────────────────────────────────────────────────────────────── */
+.input {
+  width: 100%;
+  background-color: var(--color-bg-surface);
+  border: 1.5px solid var(--color-border-default);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-base);
+  color: var(--color-text-primary);
+  transition:
+    border-color var(--duration-base) var(--easing-default),
+    box-shadow var(--duration-base) var(--easing-default),
+    background-color var(--duration-base) var(--easing-default);
+  -webkit-appearance: none;
+  appearance: none;
+
+  &::placeholder {
+    color: var(--color-text-disabled);
+  }
+
+  &:hover:not(:disabled):not(.inputError) {
+    border-color: var(--color-border-strong);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--color-border-focus);
+    box-shadow: var(--shadow-focus);
+  }
+
+  &:disabled {
+    background-color: var(--color-bg-muted);
+    cursor: not-allowed;
+    opacity: 0.7;
+    color: var(--color-text-disabled);
+  }
+
+  &:read-only {
+    background-color: var(--color-bg-muted);
+    cursor: default;
+  }
+}
+
+/* Size variants */
+.sm {
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--text-sm);
+  min-height: 36px;
+}
+
+.md {
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--text-md);
+  min-height: 44px;
+}
+
+/* ── ERROR STATE ──────────────────────────────────────────────────────────── */
+.inputError {
+  border-color: var(--color-danger);
+
+  &:focus {
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.20);
+  }
+}
+
+/* ── HINT / ERROR MESSAGE ─────────────────────────────────────────────────── */
+.hint {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-normal);
+}
+
+.errorMsg {
+  font-size: var(--text-sm);
+  color: var(--color-danger);
+  line-height: var(--leading-normal);
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}

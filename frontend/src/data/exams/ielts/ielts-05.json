@@ -1,0 +1,1526 @@
+{
+  "$schema": "./schema/exam.schema.json",
+  "name": "Exam 5",
+  "schema": [
+    {
+      "category": "Grammar & Vocabulary",
+      "exercises": [
+        {
+          "answers": [
+            "A. did",
+            "B.was ",
+            "C.were "
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": "1.  Jack played football when he {x} a child. "
+        },
+        {
+          "answers": [
+            "A.on ",
+            "B.in ",
+            "C. under"
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "2.  I've made you a cup of tea. It's {x} the table "
+        },
+        {
+          "answers": [
+            "A.her ",
+            "B. his",
+            "C.hers "
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "3. Jane forgot {x} tracksuit at school. "
+        },
+        {
+          "answers": [
+            "A.at ",
+            "B. on",
+            "C.in "
+          ],
+          "correct": 2,
+          "description": "None",
+          "label": "Grammar",
+          "title": "4.  Why don't we meet {x} the morning? "
+        },
+        {
+          "answers": [
+            "A.wear",
+            "B.are wearing ",
+            "C. wearing"
+          ],
+          "correct": 2,
+          "description": "None",
+          "label": "Grammar",
+          "title": "5. Why are you {x} a jacket? It is not cold today. "
+        },
+        {
+          "answers": [
+            "A.two ",
+            "B.some",
+            "C.a "
+          ],
+          "correct": 2,
+          "description": "None",
+          "label": "Grammar",
+          "title": "6. Jane has {x} dog and two cats."
+        },
+        {
+          "answers": [
+            "A. do",
+            "B. will",
+            "C.is "
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": "7. James {x} visit his aunt after school. "
+        },
+        {
+          "answers": [
+            "A.ought ",
+            "B. should",
+            "C. better"
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": " 8.You {x} eat less sugar."
+        },
+        {
+          "answers": [
+            "A. were",
+            "B. was",
+            "C.be "
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": " 9. Liam {x} reading in the garden. "
+        },
+        {
+          "answers": [
+            "A. have been waiting",
+            "B.have waited ",
+            "C.be waiting "
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "10. By two o’clock we’ll {x} for an hour. "
+        },
+        {
+          "answers": [
+            "A. enough strong",
+            "B. strong enough",
+            "C.so strong "
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": " 11. I’m not {x} to carry this suitcase. "
+        },
+        {
+          "answers": [
+            "A.can´t ",
+            "B.must ",
+            "C.mustn`t "
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": "12.  The lights are on, so they {x} be home. "
+        },
+        {
+          "answers": [
+            "A.next ",
+            "B.last ",
+            "C.ago "
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": " 13. I saw this film in the cinema {x} month."
+        },
+        {
+          "answers": [
+            "A. attends",
+            "B.attend ",
+            "C. to attend"
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": "14. Amelia may {x} the conference in Oxford. "
+        },
+        {
+          "answers": [
+            "A.must ",
+            "B.mustn’t ",
+            "C. doesn’t have"
+          ],
+          "correct": 2,
+          "description": "None",
+          "label": "Grammar",
+          "title": " 15.She {x} to wear a skirt to school, but she usually does. "
+        },
+        {
+          "answers": [
+            "A.had ",
+            "B.has",
+            "C.have "
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "16. When I came home Sophie {x} already cooked dinner."
+        },
+        {
+          "answers": [
+            "A.have been studying ",
+            "B. studied",
+            "C.was studying "
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "17. I {x} French since I was a child. "
+        },
+        {
+          "answers": [
+            "A. left",
+            "B.leaving ",
+            "C.leave "
+          ],
+          "correct": 2,
+          "description": "None",
+          "label": "Grammar",
+          "title": " 18. We have to {x} now or we’ll miss the bus. "
+        },
+        {
+          "answers": [
+            "A.be studying ",
+            "B.am studying ",
+            "C.have been studying "
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "19. Next year I’ll  {x} at the university. "
+        },
+        {
+          "answers": [
+            "A.had been studying ",
+            "B.was studying ",
+            "C.had studied "
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "20.  She was very tired because she {x} all night. "
+        },
+        {
+          "answers": [
+            "A. will have finished",
+            "B. will has finished",
+            "C. has finished"
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "21. Linda {x} her studies by next June. "
+        },
+        {
+          "answers": [
+            "A. would go",
+            "B.would have gone ",
+            "C.will go "
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": " 22. If you hadn’t wasted all your money, you {x} on holidays with me next month. "
+        },
+        {
+          "answers": [
+            "A.can’t see ",
+            "B. can’t have seen",
+            "C.can’t to see "
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": "23. You {x} this film before, it  hasn’t been released yet. "
+        },
+        {
+          "answers": [
+            "A.must have escaped ",
+            "B.can’t have escaped ",
+            "C.could escaped "
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": " 24.The cat {x} through the window. It’s open. "
+        },
+        {
+          "answers": [
+            "A.should have left ",
+            "B. might leave",
+            "C.might have left  "
+          ],
+          "correct": 2,
+          "description": "None",
+          "label": "Grammar",
+          "title": "25.  I can’t find my phone. I {x} it at work. "
+        },
+        {
+          "description": "1.Write the letter (A-K) of the word that is most similar in meaning to a word on the left (1-5). Use each word only once. Write your answers (A-K) on your answer paper. You will not need five of the words (A-K).",
+          "label": "Vocabulary",
+          "questions": [
+            {
+              "title": "1. become{x}",
+              "answers": [
+                "E grow",
+                "C describe"
+              ],
+              "correct": 0
+            },
+            {
+              "title": "2. decision{x}",
+              "answers": [
+                "B choice",
+                "F bag"
+              ],
+              "correct": 0
+            },
+            {
+              "title": "3.pair {x}",
+              "answers": [
+                "A couple",
+                "G egg"
+              ],
+              "correct": 0
+            },
+            {
+              "title": "4.early {x}",
+              "answers": [
+                "H soon",
+                "J beauty"
+              ],
+              "correct": 0
+            },
+            {
+              "title": "5. job{x}",
+              "answers": [
+                "D work",
+                "K only"
+              ],
+              "correct": 0
+            }
+          ]
+        },
+        {
+          "description": "2. Finish each sentence (6-10) using a word from the list (A-K). Use each word only once. Write your answers (A-K) on your answer paper. You will not need five of the words (A-K).",
+          "label": "Vocabulary",
+          "questions": [
+            {
+              "answers": [
+                "D clever",
+                "A experiment"
+              ],
+              "correct": 0,
+              "title": "6. To be intelligent and to learn quickly is to be {x}"
+            },
+            {
+              "answers": [
+                "J discover",
+                "C comfortable"
+              ],
+              "correct": 0,
+              "title": "7. To find something new is to {x} "
+            },
+            {
+              "answers": [
+                "F criminal",
+                "E emotion"
+              ],
+              "correct": 0,
+              "title": "8. A person who did something illegal is a/an {x} "
+            },
+            {
+              "answers": [
+                "B diary",
+                "H tidy"
+              ],
+              "correct": 0,
+              "title": "9.A book where you write about your personal experiences is a/an {x} "
+            },
+            {
+              "answers": [
+                "G swim",
+                "K search"
+              ],
+              "correct": 0,
+              "title": "10. To move in the water is to {x} "
+            }
+          ]
+        },
+        {
+          "description": "3. Write the letter of the word on the right (A-K) that matches the definition on the left (11-15). Use each word only once. Write your answers (A-K) on your answer paper. You will not need five of the words (A-K).",
+          "label": "Vocabulary",
+          "questions": [
+            {
+              "answers": [
+                "G hobby",
+                "A crash"
+              ],
+              "correct": 0,
+              "title": "11. An activity you do regularly in your free time.{x} "
+            },
+            {
+              "answers": [
+                "D misery",
+                "C congratulate"
+              ],
+              "correct": 0,
+              "title": "12.A feeling of unhappiness and suffering. {x} "
+            },
+            {
+              "answers": [
+                "K pause",
+                "E aggressive"
+              ],
+              "correct": 0,
+              "title": "13.To stop an activity or speech temporary.{x} "
+            },
+            {
+              "answers": [
+                "B pronounce",
+                "H cotton"
+              ],
+              "correct": 0,
+              "title": "14. . To make the sound in the correct way.{x}"
+            },
+            {
+              "answers": [
+                "F shy",
+                "J blanket"
+              ],
+              "correct": 0,
+              "title": "15. Timid when with other people.{x} "
+            }
+          ]
+        },
+        {
+          "description": "4.Finish each sentence (16-20) using a word from the list (A-K). Use each word only once. Write your answers (A-K) on your answer paper. You will not need five of the words (A-K).",
+          "label": "Vocabulary",
+          "questions": [
+            {
+              "answers": [
+                "K instrument",
+                ""
+              ],
+              "correct": 0,
+              "title": "16. I would like to learn to play a musical {x}, probably the piano. "
+            },
+            {
+              "answers": [
+                "B shelf",
+                "C butcher"
+              ],
+              "correct": 0,
+              "title": "17.The book you`re looking for is on the {x}. "
+            },
+            {
+              "answers": [
+                "G founded",
+                "F bow"
+              ],
+              "correct": 0,
+              "title": "18. This museum was {x} in 1996. "
+            },
+            {
+              "answers": [
+                "A plaster",
+                "H ambulance"
+              ],
+              "correct": 0,
+              "title": "19.  I've cut my finger, I need a/an {x}."
+            },
+            {
+              "answers": [
+                "E queue",
+                "J concert"
+              ],
+              "correct": 0,
+              "title": "20.There are a lot of people, so we have to {x} to buy tickets. "
+            }
+          ]
+        },
+        {
+          "description": "5.Write the letter of the word on the right (A-K) that is most often used with a word on the left (21-25). Use each word only once. Write your answers (A-K) on your answer paper. You will not need five of the words (A-K).",
+          "label": "Vocabulary",
+          "questions": [
+            {
+              "answers": [
+                "B quiet",
+                "A lifestyle"
+              ],
+              "correct": 0,
+              "title": "21.keep{x} "
+            },
+            {
+              "answers": [
+                "F attention",
+                "E gorgeous"
+              ],
+              "correct": 0,
+              "title": "22. pay{x}"
+            },
+            {
+              "answers": [
+                "D energy",
+                "G whisper"
+              ],
+              "correct": 0,
+              "title": "23.save{x} "
+            },
+            {
+              "answers": [
+                "C subject",
+                "J sneeze"
+              ],
+              "correct": 0,
+              "title": "24.compulsory{x}"
+            },
+            {
+              "answers": [
+                "H painting",
+                "K insect"
+              ],
+              "correct": 0,
+              "title": "25.abstract {x}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Reading",
+      "exercises": [
+        {
+          "heading": "Part 1: Types of non-verbal communication",
+          "description": "TRANSFER OF INFORMATION THROUGH BODY LANGUAGE.{v} PARAGRAPH A.{v} In today's society, we are in constant communication and contact with one another whether that's face to face, over the phone or via social media. There are two sides to the arguments about our connection to these worlds. However, a big part of the way we communicate with one another is surprisingly non-verbal, meaning the facial expressions, postures, tone of voice say a lot more about who we are and how we interact with one another. These signals can be so subtle that we are not consciously aware yet that they can speak a 1,000 words. So, let's have a look at the different ways in which we do this! {v} PARAGRAPH B.{v} Whether someone is smiling or frowning is a substantial part of non-verbal communication. When someone is approaching us the first thing we notice is their facial expression and we make an assumption on whether the person is friendly or cold or how they might be feeling based upon that. Even those greetings can differ depending on country to country. Facial expressions which project happiness, sadness, anger and fear are universally recognised.{v} PARAGRAPH C.{v} Movements and signals are another means of communicating which has proved influential. We can use hand signals to indicate numbers that are apparent in Chinese culture. Where a shop assistant will commonly tell you the price of your goods with a finger gesture rather than speaking. Another way in which we use hand signals to communicate is by waving, pointing and this can vary from culture to culture. Where one signal may be considered offensive in one country it is considered polite in another for example, a thumbs up in Iran and other middle eastern countries is hugely offensive whereas in North America and western culture it is a sign that everything is OK. Another example is the thumb and pinky finger sticking up which is popular amongst surfers. In Italy, it is a gesture that a husband is cheating on his wife.{v} PARAGRAPH D.{v} Paralinguistics are related to tone of voice, pitch, loudness and inflection which refers to the way we say things. Think of the different meaning of the different ways you say ‘’I’m fine’’ and what can be interpreted. A bright, happy tone of voice projects happiness, but a flat, low tone of voice would mean maybe that person was not actually OK. Your tone of voice accounts for 38% of what you say, body language 55% and the words you use are just 7%.{v} PARAGRAPH E.{v} How you stand and how much you gesticulate can be attributed to certain feelings and attitudes. Classically leg and arm crossing are seen as defensive behaviours. Whereas open eyes, showing the palms of your hands is when someone is engaged in the conversation and open.{v} PARAGRAPH F.{v} We often hear the phrase ‘’personal space’’ the distance required for people to feel comfortable with one another is called proxemics. It is estimated that the space needed can be between 18 inches to 4 feet when having a casual conversation and 10 to 12 feet when speaking to a crowd. The variation in distance depends on cultural factors, social norms, personality and level of familiarity. Argentinians are known for their lack of regard for ‘’personal space’’ and require the least personal space when talking to an absolute stranger, typically 31 inches. {v} PARAGRAPH G.{v} Finally by looking, starting or blinking we convey whether we are interested, attracted or have feelings of hostility towards someone. Furthermore when someone maintains eye contact we view that as a sign of honesty and truth telling. However an ability to hold eye contact is seen as distrustworthy. {v} PARAGRAPH H.{v} In conclusion, we can see that communication is so much more than the words we speak, and the brain works in the background to read different signals like lack of contact, defensive posture or high pitch to read the situation or person that we are with. Even if we are not consciously aware of doing this. Next time, you are having a conversation with someone, think about how your body language or tone of voice is portraying a message that you may or may not want to send out. ",
+          "label": "Reading Part 4",
+          "modules": [
+            {
+              "module": "Matching",
+              "title": "Part 1, Section 1:",
+              "subtitle": "Fill in the gaps. USE NO MORE THAN TWO WORDS/NUMBERS.",
+              "questions": [
+                {
+                  "title": "1. The _____{x} we speak says a lot more than the actual words. {x}",
+                  "answers": [
+                    "Way",
+                    "way"
+                  ]
+                },
+                {
+                  "title": "2. Hand signals vary depending on what _____{x} you are from.",
+                  "answers": [
+                    "Culture",
+                    "culture"
+                  ]
+                },
+                {
+                  "title": "3. How you _____{x} says a lot about your feelings and attitudes.",
+                  "answers": [
+                    "Stand",
+                    "stand"
+                  ]
+                },
+                {
+                  "title": "4. Not maintaining eye contact is seen as _____{x}.",
+                  "answers": [
+                    "Distrustworthy",
+                    "distrustworthy"
+                  ]
+                }
+              ]
+            },
+            {
+              "module": "Matching",
+              "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t5-r1.jpg",
+              "title": "Part 1, Section 2:",
+              "subtitle": "Complete the blanks. DO NOT USE MORE THAN TWO WORDS/NUMBERS.",
+              "questions": [
+                {
+                  "title": "1. {x}",
+                  "answers": [
+                    "Feeling",
+                    "feeling"
+                  ]
+                },
+                {
+                  "title": "2. {x}",
+                  "answers": [
+                    "Hand signals",
+                    "hand signals"
+                  ]
+                },
+                {
+                  "title": "3. {x}",
+                  "answers": [
+                    "Distance",
+                    "distance",
+                    "Social distance",
+                    "social distance"
+                  ]
+                },
+                {
+                  "title": "4. {x}",
+                  "answers": [
+                    "Truth telling",
+                    "truth telling"
+                  ]
+                }
+              ]
+            },
+            {
+              "module": "Dropdown",
+              "title": "Part 1, Section 3:",
+              "subtitle": "Choose the correct heading for each paragraph.",
+              "label": "Reading Part 4",
+              "questions": [
+                {
+                  "answers": [
+                    "1.The power of sight.",
+                    "2.How social norms define distance.",
+                    "3.Are you good at reading microexpressions?.",
+                    "4.Gestures used to indicate numbers.",
+                    "5.Factors that contribute to body spacing.",
+                    "6.Difference in hand gestures around the world.",
+                    "7.People will forget what you said but remember how you made them feel.",
+                    "8.How to show friendliness."
+                  ],
+                  "correct": 2,
+                  "title": "Paragraph B)"
+                },
+                {
+                  "answers": [
+                    "1.The power of sight.",
+                    "2.How social norms define distance.",
+                    "3.Are you good at reading microexpressions?.",
+                    "4.Gestures used to indicate numbers.",
+                    "5.Factors that contribute to body spacing.",
+                    "6.Difference in hand gestures around the world.",
+                    "7.People will forget what you said but remember how you made them feel.",
+                    "8.How to show friendliness."
+                  ],
+                  "correct": 5,
+                  "title": "Paragraph C)"
+                },
+                {
+                  "answers": [
+                    "1.The power of sight.",
+                    "2.How social norms define distance.",
+                    "3.Are you good at reading microexpressions?.",
+                    "4.Gestures used to indicate numbers.",
+                    "5.Factors that contribute to body spacing.",
+                    "6.Difference in hand gestures around the world.",
+                    "7.People will forget what you said but remember how you made them feel.",
+                    "8.How to show friendliness."
+                  ],
+                  "correct": 6,
+                  "title": "Paragraph D)"
+                },
+                {
+                  "answers": [
+                    "1.The power of sight.",
+                    "2.How social norms define distance.",
+                    "3.Are you good at reading microexpressions?.",
+                    "4.Gestures used to indicate numbers.",
+                    "5.Factors that contribute to body spacing.",
+                    "6.Difference in hand gestures around the world.",
+                    "7.People will forget what you said but remember how you made them feel.",
+                    "8.How to show friendliness."
+                  ],
+                  "correct": 4,
+                  "title": "Paragraph F)"
+                },
+                {
+                  "answers": [
+                    "1.The power of sight.",
+                    "2.How social norms define distance.",
+                    "3.Are you good at reading microexpressions?.",
+                    "4.Gestures used to indicate numbers.",
+                    "5.Factors that contribute to body spacing.",
+                    "6.Difference in hand gestures around the world.",
+                    "7.People will forget what you said but remember how you made them feel.",
+                    "8.How to show friendliness."
+                  ],
+                  "correct": 0,
+                  "title": "Paragraph G)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Part 2: Fashion Addicts",
+          "description": "PARAGRAPH A.{v} The consistent sounds of chatter easily blocks out any of the sounds that would have been heard from behind the decorated stage. Guests shuffle around, looking for their seats while greeting others politely, stopping for occasional conversations. To say everyone is dressed to their best is a gross understatement as people are flaunting some of the finest gowns or suits imaginable. Anyone would be able to place this as a high-fashion runway show with some of the most sophisticated and remarkable figures in fashion lining its seats. While from the outside the room is filled with an air of excitement and anticipation, the other side of the stage can only be described as tense and somewhat panic stricken. The designers are scattered around, trying to make last minute adjustments to their models and their creations. Everything has to be perfect the moment the model steps foot on the runway because, beyond that point, there is no turning back. The designers have dressed their models to impress the audience in attendance and the pressure is extremely high.{v} PARAGRAPH B.{v} The fashion industry is not something not only the elite can take part in. In fact, a vast variety of people take substantial interest in the world of fashion, using the things that they see on TV, in fashion magazines and on the internet to influence their daily choices. Fashion is a form of expression and one does not have to drop funds on expensive items to be into fashion. Be that as it may, there are those who take their love for fashion one step too far and allow it to turn into an addiction, putting not only their wallets in jeopardy, but also their personal values and morals. Falling into the footsteps of a fashion addict can creep up on people slowly and silently. Signs that someone may have their head a little too far into the fashion world can be when they are constantly refreshing their fashion pages as well as looking to be up to date and aware of everything new. Furthermore, finding discontentment with one's own apparel is a serious problem, as this can only lead to more and more purchases, but never being able to stay on top of it all. Fashion addiction can extend from you to the people around you by the way you interact with them based on their own fashion tastes.{v} PARAGRAPH C.{v} At the core of the problem known as fashion addiction, we are most likely to find social media. Through social media people are able to be in constant contact with the world around them, knowing within seconds when there is something new in the fashion industry. Not only that, but social media is urging users to make purchases to feed their fashion addiction by overloading their pages with ads. Influencers sport new styles or products, making their followers feel that they are in need of what they see advertised in the pictures no matter what the cost. A vicious cycle is formed through social media as person after person flaunts their new fashion, but craves for something new and different the moment they catch a glimpse of an article they haven’t seen before. While there is nothing wrong with wanting to look good, fashion addiction can slowly turn into a form of idolization of both influencers and clothes themselves. {v}PARAGRAPH D.{v} The brain is an interesting and complex part of the body, and while it may seem curious to associate fashion with the way we think, there is an apparent connection between the two, especially when it comes to the mental health of these fashion addicts. A very common disorder seen in fashion addicts goes by the name of Compulsive Buying Disorder (CBD) which, as stated in its name, is when a shopper cannot cease to buy items, even when they know that they are not needed. Those suffering from this disorder feel stress when there is something they would like to have and do not yet have in their possession. They find peace in making purchases and feel the most calm when at stores, actively looking for things to buy. While being extremely dangerous to one's bank account, this is also an impairment as it blocks them from being able to participate in other activities that could be necessary or beneficial for them.{v} PARAGRAPH E.{v} Naturally, to some individuals, the thought of being addicted to fashion could be worthy of a good laugh. Everyone has their struggles and for some, fashion just may not be anywhere near relevant. However, the world of fashion is something that has an impact on all parts of a community as purchasing and wearing clothes is a commodity that we all take part in. Fashion is not a sustainable industry which means that it is bringing harm to our planet. Every time someone makes a purchase, it means that something else in their closet will be pushed to the back or simply thrown out. Clothing companies are producing more and more products creating a world in which clothing is gotten rid of sooner than it needs to be. While the option of donating clothes is a noble act that many do take the time to do, it does not stop the production. Fashion addicts are adding more fuel to this raging fire by purchasing clothes the minute the new item they want hits the market.{v} PARAGRAPH F.{v} It’s important to ask yourself a few questions about clothing before you decide to enhance your wardrobe or take a huge interest in the fashion industry. Think about how many wears you will get out of a single item. Many people who invest in a high fashion item just wear it once and ultimately, it is hidden away in the back of their closet. This is not only a waste of money, but a waste of space and a bad habit. Making slight tweaks to your already owned clothes can allow you to feel as if you have new clothing without having spent a dime. Recording your purchases can be extremely effective as sometimes, with the swipe of a credit card, we are not completely aware of how much money we are spending on our fashion addiction. Keeping tabs on receipts on a monthly or weekly basis can force us to see how quickly they add up and how this money could be put towards other, more productive or health things in our everyday lives.",
+          "label": "Reading Part 4",
+          "modules": [
+            {
+              "module": "Matching",
+              "title": "Part 2, Section 1:",
+              "subtitle": "Answer these questions USING NO MORE THAN TWO WORDS.",
+              "questions": [
+                {
+                  "title": "1.  What does a fashion addict take note of that may negatively affect their impression of a person? {x}",
+                  "answers": [
+                    "Fashion tastes",
+                    "fashion tastes"
+                  ]
+                },
+                {
+                  "title": "2. What does social media feature too much of that may tempt fashion addicts? {x}",
+                  "answers": [
+                    "Ads",
+                    "ads"
+                  ]
+                },
+                {
+                  "title": "3. Who might fashion addicts start to idolize? {x}",
+                  "answers": [
+                    "Influencers",
+                    "influencers"
+                  ]
+                },
+                {
+                  "title": "4. What method can be done in order to get rid of clothing to promote sustainability? {x}",
+                  "answers": [
+                    "donating",
+                    "Donating"
+                  ]
+                },
+                {
+                  "title": "5. In order to realize the added costs of what we buy, what is a good idea to do? {x}",
+                  "answers": [
+                    "record purchases",
+                    "Record purchases"
+                  ]
+                }
+              ]
+            },
+            {
+              "module": "Matching",
+              "title": "Part 2, Section 2:",
+              "subtitle": "Complete the label below. DO NOT USE MORE THAN THREE WORDS/NUMBERS.",
+              "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t5-r2.jpg",
+              "questions": [
+                {
+                  "title": "1. {x}",
+                  "answers": [
+                    "media",
+                    "Media",
+                    "Social Media",
+                    "social media"
+                  ]
+                },
+                {
+                  "title": "2. {x}",
+                  "answers": [
+                    "Idolization",
+                    "idolization",
+                    "idolisation",
+                    "Idolisation"
+                  ]
+                },
+                {
+                  "title": "3. {x}",
+                  "answers": [
+                    "Tastes",
+                    "tastes",
+                    "Fashion tastes",
+                    "fashion tastes"
+                  ]
+                },
+                {
+                  "title": "4. {x}",
+                  "answers": [
+                    "Needed",
+                    "needed",
+                    "Necessary",
+                    "necessary"
+                  ]
+                }
+              ]
+            },
+            {
+              "module": "Dropdown",
+              "label": "Grammar",
+              "title": "Part 2, Section 3:",
+              "subtitle": "Do the following statements agree with the information given in the reading passage? {v} TRUE= if the statement agrees with the information. {v} FALSE= if the statement contradicts the information. {v} NOT GIVEN= if there is no information on this.",
+              "questions": [
+                {
+                  "title": "1. Before a piece is sent on to the runway, designers have to commit to the look entirely as they will not have the opportunity to make more changes. {x}",
+                  "answers": [
+                    "True",
+                    "False",
+                    "Not given"
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "2. Social media is the largest influencer in the world of fashion today as well as the biggest problem. {x}",
+                  "answers": [
+                    "True",
+                    "False",
+                    "Not given"
+                  ],
+                  "correct": 2
+                },
+                {
+                  "title": "3. Compulsive Buying Disorder is a disorder that causes individuals to feel a large amount of distress when not making purchases. {x}",
+                  "answers": [
+                    "True",
+                    "False",
+                    "Not given"
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "4. Fashion has neither a negative nor positive impact on society as it is simply a way to enjoy one's creativity. {x}",
+                  "answers": [
+                    "True",
+                    "False",
+                    "Not given"
+                  ],
+                  "correct": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Part 3: US Inmigration",
+          "description": "PARAGRAPH A. {v}Humanity has been traveling for decades and the development of technology has allowed for this process to become easier and easier. While some may travel for pleasure on holiday before returning to their homes, others travel with the intention of only going one way. When an individual or family travels from their home country to another with the intention of building a new life there, it is called immigration. Immigration can happen as a result of many different things, but generally speaking someone may choose to create a new home because of a danger in their home country or simply because they wish to live a different lifestyle with new experiences. {v} PARAGRAPH B.{v} Today in the USA, almost 15% of the country's population is made up of immigrants from all over the world. This percentage has tripled over the past 50 years. While more than one third of the immigrants in the United States are there with a legal status, the remaining percentage are either in the United States on a temporary visa or illegally. 25% of all immigrants in the United States are from Mexico, while the percentage drops down to 6% or lower when it comes to immigrants from China, India and the Philippines. Many immigrants choose to become legal citizens as soon as they are able to fulfill the certain requirements that the US government imposes. Some of the requirements normally include to have lived in the United States for a minimum of 5 years as well as some language requirements. Immigration in the United States is a controversial issue as many immigrants are not able to work and do not speak the English language at a high level.{v} PARAGRAPH C.{v} Immigration is not an easy feat and those who successfully manage it have to exhibit a lot of strong personal qualities. One of the top reasons behind it has to do with the difference in economy between the home country and the target country. Most people choose to move their home because they are unable to support their family financially in their country. Poor economy can also be a cause of lack of safety, therefore the urge to live in a more sound community is also there. Many times the process happens in the form of a chain, in which one person becomes an immigrant in a new country, finds a job and a home and prepares everything for the rest of the family to safely make the trip. Others decide to take the leap because they want to live in a different culture that will allow them and their children to have more opportunities. Education system may not necessarily be stelar all around the world and therefore people want to reside in areas where they can receive a level of education that will benefit their futures. In order to make such a journey, one must be determined, resilient and a hard-worker.{v} PARAGRAPH D.{v} With the concept of immigration sometimes comes some negative reactions as there are certain pessimistic myths surrounding it. Many believe that immigration is overrunning the United States and that the vast majority of immigrants are illegal. Others also believe that with higher amounts of immigration, the level of crime in certain areas increases. There are those who even presume that immigrants are bringing other diseases across the borders and bring no benefit to the American society as a whole by taking up jobs that US citizens could occupy. While these ideas don’t come out of thin air, statistics have shown that none of these are concepts that need to be worried about.{v} PARAGRAPH E.{v} There are, in fact, many benefits to immigration, not just for the immigrants themselves. One large benefit is that of increased economic growth as these immigrants can bring more value and knowledge to many groups. While there is a stigma that immigrants are uneducated and unable to perform high class jobs, this is not true and they can further their communities by taking on roles such as doctors, teachers or nurses. One of the greatest benefits that immigration brings is that of cultural diversity. Especially in the United States, there is a high population of immigration which results in a very diverse country. {v} PARAGRAPH F.{v} So, what type of impact has immigration in the United States had on the American society over the years? In the United States, immigration has benefitted the job market immensely as it opens the possibility for growth as there are more workers doing groundwork. While the topic of taxes can be a touchy one, it is still a fact that immigrants pay taxes, therefore they are contributing to government services, erasing the idea that they take more than they give. Finally, immigrants are actually less likely to commit any crimes than an individual born in the United States as they are extremely aware of the value of the life they have there having worked for it. Overall, there are many benefits to immigration in the United States.",
+          "label": "Reading Part 4",
+          "modules": [
+            {
+              "module": "Dropdown",
+              "label": "Grammar",
+              "title": " Part 3, Section 1:",
+              "subtitle": "Choose the correct answer (A-D).",
+              "questions": [
+                {
+                  "title": "1. Which of the following best describes an immigrant according to the text? {x}",
+                  "answers": [
+                    "A. Someone who is fleeing from their home country.",
+                    "B. Someone who embarks on a one way trip.",
+                    "C. Someone who goes on a holiday to another country.",
+                    "D. Both B and C."
+                  ],
+                  "correct": 1
+                },
+                {
+                  "title": "2.  What are some of the main reasons people choose immigration?{x}",
+                  "answers": [
+                    "A. They are struggling financially in their own country.",
+                    "B. They wish for a better education.",
+                    "C. They are looking for a more stable political situation.",
+                    "D. Both A and B."
+                  ],
+                  "correct": 3
+                },
+                {
+                  "title": "3. Which of the following is NOT considered a myth of immigration? {x}",
+                  "answers": [
+                    "A. Illegal immigrants outnumber legal immigrants.",
+                    "B. Immigrants have very little impact on crime rate.",
+                    "C. Diseases can be carried over by immigrants.",
+                    "D. America does not benefit from immigration in the least."
+                  ],
+                  "correct": 1
+                },
+                {
+                  "title": "4. How can immigrants benefit the American communities? {x}",
+                  "answers": [
+                    "A. They cannot until they learn the language fluently.",
+                    "B. They contribute money by paying for housing and schooling.",
+                    "C. The enable the lives of those who have more money.",
+                    "D. They can go on to become influential figures in the community."
+                  ],
+                  "correct": 3
+                },
+                {
+                  "title": "5. What is the writer's view on immigrantion as a whole? {x}",
+                  "answers": [
+                    "A. The writer thinks that the main benefit of immigration is the diversity it bring.",
+                    "B. The writer believes that immigration has more advantages than disadvantages to both sides.",
+                    "C. The writer implies that some immigration myths hold small amounts of truth.",
+                    "D. The writer considers that more immigrants should apply for US citizenship."
+                  ],
+                  "correct": 1
+                }
+              ]
+            },
+            {
+              "module": "Dropdown",
+              "label": "Grammar",
+              "title": "Part 3, Section 2:",
+              "subtitle": "Do the following statements agree with the information given in the reading passage?{v}YES= if the statement agrees with the information.{v} NO= if the statement contradicts the information. {v}NOT GIVEN= if there is no information on this.",
+              "questions": [
+                {
+                  "title": "1. The application to become a US citizen is quite difficult due to the numerous requirements. {x}",
+                  "answers": [
+                    "Yes",
+                    "No",
+                    "Not given"
+                  ],
+                  "correct": 2
+                },
+                {
+                  "title": "2. The majority of immigrants in the United States only cross one border throughout their journey. {x}",
+                  "answers": [
+                    "Yes",
+                    "No",
+                    "Not given"
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "3. The number one reason a family would consider immigration is because of the bleak future they may face. {x}",
+                  "answers": [
+                    "Yes",
+                    "No",
+                    "Not given"
+                  ],
+                  "correct": 1
+                },
+                {
+                  "title": "4. The diversity that immigrants bring to the United States is a defining factor of the United States. {x}",
+                  "answers": [
+                    "Yes",
+                    "No",
+                    "Not given"
+                  ],
+                  "correct": 2
+                },
+                {
+                  "title": "5. Because of their appreciation for the benefits of an American life, immigrants tend to avoid any crime. {x}",
+                  "answers": [
+                    "Yes",
+                    "No",
+                    "Not given"
+                  ],
+                  "correct": 0
+                }
+              ]
+            },
+            {
+              "module": "Matching",
+              "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t5-r3.jpg",
+              "title": "Part 3, Section 3:",
+              "subtitle": "Complete the table below. DO NOT USE NO MORE THAN TWO WORDS/NUMBERS.",
+              "questions": [
+                {
+                  "title": "1. {x}",
+                  "answers": [
+                    "5",
+                    "five",
+                    "Five",
+                    "5%",
+                    "5 %",
+                    "Five percent",
+                    "five percent"
+                  ]
+                },
+                {
+                  "title": "2. {x}",
+                  "answers": [
+                    "Mexican"
+                  ]
+                },
+                {
+                  "title": "3. {x}",
+                  "answers": [
+                    "2",
+                    "Two",
+                    "two"
+                  ]
+                },
+                {
+                  "title": "4. {x}",
+                  "answers": [
+                    "5 years",
+                    "Five years",
+                    "five years"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Listening",
+      "exercises": [
+        {
+          "heading": "Part 1: CHARITY EVENT",
+          "label": "Reading Part 4",
+          "description": "",
+          "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t1-l1.jpg",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/E1-1.mp3",
+          "modules": [
+            {
+              "module": "Matching",
+              "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t1--l1.jpg",
+              "title": "Part 1, Questions 1-6:",
+              "subtitle": "Complete the form below. Write NO MORE THAN THREE WORDS/NUMBERS for each answer.",
+              "questions": [
+                {
+                  "title": "1. {x}",
+                  "answers": [
+                    "May 17",
+                    "17 May",
+                    "17th May",
+                    "17th of May"
+                  ]
+                },
+                {
+                  "title": "2. {x}",
+                  "answers": [
+                    "London"
+                  ]
+                },
+                {
+                  "title": "3. {x}",
+                  "answers": [
+                    "Cherry",
+                    "Cherry Smith",
+                    "Smith"
+                  ]
+                },
+                {
+                  "title": "4. {x}",
+                  "answers": [
+                    "medium"
+                  ]
+                },
+                {
+                  "title": "5. {x}",
+                  "answers": [
+                    "20",
+                    "twenty"
+                  ]
+                },
+                {
+                  "title": "6. {x}",
+                  "answers": [
+                    "entrance"
+                  ]
+                }
+              ]
+            },
+            {
+              "module": "Matching",
+              "title": "Part 1, Questions 7-10:",
+              "subtitle": "Answer the questions. Write NO MORE THAN THREE WORDS/NUMBERS for each answer.",
+              "questions": [
+                {
+                  "title": "7. Who is the man registering for the event? {x}",
+                  "answers": [
+                    "wife and son",
+                    "son and wife",
+                    "son, wife",
+                    "wife, son"
+                  ]
+                },
+                {
+                  "title": "8. What is the man interested in doing at the event? {x}",
+                  "answers": [
+                    "volunteering"
+                  ]
+                },
+                {
+                  "title": "9. When will the man pay the fee? {x}",
+                  "answers": [
+                    "day of event",
+                    "Day of event"
+                  ]
+                },
+                {
+                  "title": "10. Where does the money for the event go? {x}",
+                  "answers": [
+                    "charity",
+                    "charity for cancer",
+                    "Cancer charity event"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Part 2: VISIT: LOUVRE MUSEUM",
+          "description": "",
+          "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t5-l2.jpg",
+          "label": "Reading Part 4",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/E5-2.mp3",
+          "modules": [
+            {
+              "module": "Dropdown",
+              "label": "Grammar",
+              "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t5--p2.jpg",
+              "title": "Part 2, Questions 11-15:",
+              "subtitle": "Label the following places:",
+              "questions": [
+                {
+                  "title": "11. {x}",
+                  "answers": [
+                    "A.  Cafe",
+                    "B. ’’Bathsheba at her bath’’",
+                    "C. Richelieu",
+                    "D. Toilets",
+                    "E. Gift shop"
+                  ],
+                  "correct": 2
+                },
+                {
+                  "title": "12. {x}",
+                  "answers": [
+                    "A.  Richelieu",
+                    "B. ’’Bathsheba at her bath’’",
+                    "C. Cafe",
+                    "D. Toilets",
+                    "E. Gift shop"
+                  ],
+                  "correct": 1
+                },
+                {
+                  "title": "13. {x}",
+                  "answers": [
+                    "A.  Richelieu",
+                    "B. ’’Bathsheba at her bath’’",
+                    "C. Gift shop",
+                    "D. Toilets",
+                    "E. Cafe"
+                  ],
+                  "correct": 4
+                },
+                {
+                  "title": "14. {x}",
+                  "answers": [
+                    "A.  Richelieu",
+                    "B. ’’Bathsheba at her bath’’",
+                    "C. Cafe",
+                    "D. Toilets",
+                    "E. Gift shop"
+                  ],
+                  "correct": 3
+                },
+                {
+                  "title": "15. {x}",
+                  "answers": [
+                    "A. Gift shop",
+                    "B. ’’Bathsheba at her bath’’",
+                    "C. Cafe",
+                    "D. Toilets",
+                    "E. Richelieu"
+                  ],
+                  "correct": 0
+                }
+              ]
+            },
+            {
+              "module": "Dropdown",
+              "label": "Grammar",
+              "title": "Part 2, Questions 16-20:",
+              "subtitle": "Select the correct answer (A-E).",
+              "questions": [
+                {
+                  "title": "16. Where can you find paintings from dutch artists? {x}",
+                  "answers": [
+                    "A. Sully",
+                    "B. Restaurant",
+                    "C. Denom",
+                    "D. Richelieu",
+                    "E. Entrance"
+                  ],
+                  "correct": 3
+                },
+                {
+                  "title": "17. Where can you get a map of the Louvre?{x}",
+                  "answers": [
+                    "A. Sully",
+                    "B. Restaurant",
+                    "C. Denom",
+                    "D. Richelieu",
+                    "E. Entrance"
+                  ],
+                  "correct": 4
+                },
+                {
+                  "title": "18. Easter antiquities are found in the _____.{x}",
+                  "answers": [
+                    "A. Sully",
+                    "B. Restaurant",
+                    "C. Denom",
+                    "D. Richelieu",
+                    "E. Entrance"
+                  ],
+                  "correct": 3
+                },
+                {
+                  "title": "19. Learn about ancient egyptian life in _____.{x}",
+                  "answers": [
+                    "A. Sully",
+                    "B. Restaurant",
+                    "C. Denom",
+                    "D. Richelieu",
+                    "E. Entrance"
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "20. There are likely to be big crowds in _____.{x}",
+                  "answers": [
+                    "A. Sully",
+                    "B. Restaurant",
+                    "C. Denom",
+                    "D. Richelieu",
+                    "E. Entrance"
+                  ],
+                  "correct": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Part 3: BENEFITS OF SURFING",
+          "description": "",
+          "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t5-l3.png",
+          "label": "Reading Part 4",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/E5-3.mp3",
+          "modules": [
+            {
+              "module": "Dropdown",
+              "label": "Grammar",
+              "title": "Part 3, Questions 21-25:",
+              "subtitle": "Select the correct answer (A-D).",
+              "questions": [
+                {
+                  "title": "21. Why does Charlie want to learn how to surf? {x}",
+                  "answers": [
+                    "A. His dad surfs.",
+                    "B. It’s his passion.",
+                    "C. He likes being in the water.",
+                    "D. He think it is an easy sport."
+                  ],
+                  "correct": 2
+                },
+                {
+                  "title": "22. What does the Coach NOT say is important to be able to surf? {x}",
+                  "answers": [
+                    "A. You must be physically fit.",
+                    "B. You have to be mentally strong.",
+                    "C. You ought to practice on land first.",
+                    "D. You need to like a challenge."
+                  ],
+                  "correct": 2
+                },
+                {
+                  "title": "23. What type of experience does the Coach have in surfing? {x}",
+                  "answers": [
+                    "A. He does not have much experience.",
+                    "B. He used to surf in competitions.",
+                    "C. He has experience as a snowboarder.",
+                    "D. None of the above."
+                  ],
+                  "correct": 1
+                },
+                {
+                  "title": "24. Which benefit of surfing is NOT mentioned? {x}",
+                  "answers": [
+                    "A. It is good for a person's physical health.",
+                    "B. It is a nice way to reduce stress.",
+                    "C. It is good for hand-eye coordination.",
+                    "D. It forces you to be in the sun."
+                  ],
+                  "correct": 2
+                },
+                {
+                  "title": "25. On what things did Sam used to spend money when he worked in the office? {x}",
+                  "answers": [
+                    "A. The tide.",
+                    "B. The board type.",
+                    "C. What you eat.",
+                    "D. Sea creatures."
+                  ],
+                  "correct": 0
+                }
+              ]
+            },
+            {
+              "module": "Matching",
+              "title": "Part 3, Questions 26-30:",
+              "subtitle": "Answer the questions. Write NO MORE THAN TWO WORDS/NUMBERS for each answer.",
+              "questions": [
+                {
+                  "title": "26. What sport(s) does Charlie think surfing is similar to? {x}",
+                  "answers": [
+                    "skating",
+                    "Skating",
+                    "snowboarding",
+                    "Snowboarding"
+                  ]
+                },
+                {
+                  "title": "27. What kind of board will Charlie start out with? {x}",
+                  "answers": [
+                    "big board",
+                    "Big board",
+                    "Bigger board",
+                    "bigger board"
+                  ]
+                },
+                {
+                  "title": "28. What exactly will Charlie learn on land first? {x}",
+                  "answers": [
+                    "movements",
+                    "Movements"
+                  ]
+                },
+                {
+                  "title": "29. What does surfing scientifically prove to reduce? {x}",
+                  "answers": [
+                    "Stress",
+                    "stress"
+                  ]
+                },
+                {
+                  "title": "30. What must you know about in order to be a safe surfer? {x}",
+                  "answers": [
+                    "Ocean",
+                    "ocean"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Part 4: VEGANISM",
+          "label": "Reading Part 4",
+          "description": "",
+          "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t5-l4.jpg",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/E5-4.mp3",
+          "modules": [
+            {
+              "module": "Matching",
+              "title": "Part 4, Questions 31-35:",
+              "subtitle": "Answer the questions. Write NO MORE THAN THREE WORDS/NUMBERS for each answer.",
+              "questions": [
+                {
+                  "title": "31. Aside from the health benefits veganism is seen as one of the best ways to protect the _____{x}.",
+                  "answers": [
+                    "environment",
+                    "Environment"
+                  ]
+                },
+                {
+                  "title": "32. Vegans believe that killing a conscious being is _____{x} and avoid not just meat but animal products too.",
+                  "answers": [
+                    "wrong",
+                    "Wrong"
+                  ]
+                },
+                {
+                  "title": "33. The meat rearing industry has also been said to cause not just physical but _____{x}  stress to animals.",
+                  "answers": [
+                    "psychological",
+                    "Psychological"
+                  ]
+                },
+                {
+                  "title": "34. Ethical vegans are known to raise awareness and _____{x}.",
+                  "answers": [
+                    "protest",
+                    "Protest"
+                  ]
+                },
+                {
+                  "title": "35. By eating meat you also consume _____{x}  and hormones which are fed to animals.",
+                  "answers": [
+                    "Antibiotics",
+                    "antibiotics"
+                  ]
+                }
+              ]
+            },
+            {
+              "module": "Matching",
+              "title": "Part 4, Questions 36-40:",
+              "subtitle": "Answer the questions. Write NO MORE THAN THREE WORDS/NUMBERS for each answer.",
+              "questions": [
+                {
+                  "title": "36. By following a vegan diet you can also reduce the risk of of contracting _____{x} disease, type 2 diabetes and Alzheimer's.",
+                  "answers": [
+                    "Heart",
+                    "heart"
+                  ]
+                },
+                {
+                  "title": "37. The meat industry is also responsible for emitting harmful _____{x} into the atmosphere.",
+                  "answers": [
+                    "gases",
+                    "Gases"
+                  ]
+                },
+                {
+                  "title": "38. Main parts of the rainforest have been _____{x} to raise cattle.",
+                  "answers": [
+                    "cut down",
+                    "Cut down"
+                  ]
+                },
+                {
+                  "title": "39. Rearing livestock is also responsible for emitting _____{x} of methane emissions.",
+                  "answers": [
+                    "35 to 40%",
+                    "35-40%",
+                    "35 40%",
+                    "35 to 40 percent",
+                    "35-40 percent",
+                    "35 40 percent"
+                  ]
+                },
+                {
+                  "title": "40. Within veganism there are many different types of _____{x} that you can follow.",
+                  "answers": [
+                    "Diets",
+                    "diets"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Writing",
+      "exercises": [
+        {
+          "description": " TASK 1 {v} - {v} You should spend about 20 minutes on this task. {v} - {v} INSTRUCTIONS: The table below estimates total fertility rates (live births per woman) 1950 – 2020. {v} - {v} Summarise the information by selecting and reporting the main features and make comparisons where relevant. ",
+          "label": "Writing Part 4",
+          "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t5-w1.png",
+          "questions": [
+            {
+              "title": "Write at least 150 words. {x}",
+              "correct": 0
+            }
+          ]
+        },
+        {
+          "description": " TASK 2 {v} - {v} You should spend about 40 minutes on this task. {v} - {v} Write about the following topic: {v} - {v} INSTRUCTIONS: Scientists tell us the best way to protect endangered species is to protect the places where they live. From your point of view, how can we protect animals? {v} - {v} ",
+          "label": "Writing Part 4",
+          "questions": [
+            {
+              "title": " Write at least 250 words. {x}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Speaking",
+      "exercises": [
+        {
+          "description": "PART 1 (4 -5 minutes) {v} TIP 1: At the beginning of the test the examiner will ask you your full name and will ask to see your identification. {v} TIP 2: The examiner will ask you some questions about different topics. First some personal questions about yourself then some questions about two specific topics. {v} TIP 3: Try and answer each question in one or two sentences. {v} ",
+          "label": "Speaking Part 1",
+          "recordingTime": 30,
+          "questions": [
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t5-s1.mp3",
+              "title": " EXAMINER´S INSTRUCTIONS: I´m going to ask you some questions about yourself. {v} What do you like about where you live? {x}"
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t5-s4.mp3",
+              "title": "EXAMINER´S INSTRUCTIONS: Let’s talk about Festivals. {v} What type of festivals are typical in your country?  {x}"
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t5-s6.mp3",
+              "title": " Which festival would you like to visit? {x}"
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t5-s8.mp3",
+              "title": " EXAMINER´S INSTRUCTIONS Let’s talk about learning languages. {v} Why do people learn more than one language?  {x}"
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t5-s9.mp3",
+              "title": " :Do you think that all children should learn foreign languages at school? {x}"
+            }
+          ]
+        },
+        {
+          "description": "PART 2 (3-4 minutes) {v} - {v} TIP 1: The examiner will give you a paper, a pencil and a piece of paper with your topic. {v} TIP 2: Once you finish talking normally the examiner will ask you some follow up questions. {v} EXAMINER´S INSTRUCTIONS: You now have one minute to make notes. ",
+          "subtitle": "Describe an environmental problem that affects you. You should say:",
+          "label": "Speaking Part 1",
+          "recordingTime": 120,
+          "questions": [
+            {
+              "imageUrl": {
+                "images": [
+                  "https://dkmwdxc6g4lk7.cloudfront.net/img/t5-s1.jpg"
+                ]
+              },
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t5-s10.mp3",
+              "title": "I’d like you to describe an environmental problem. {x}"
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t5-s11.mp3",
+              "title": "  How does this problem affect you? {x}"
+            }
+          ]
+        },
+        {
+          "description": "PART 3 (4-5 minutes) {v} EXAMINER'S INSTRUCTIONS: We’ve been talking about an environmental problem and I’d now like to ask you some questions related to environmental issues.",
+          "label": "Speaking Part 1",
+          "recordingTime": 60,
+          "questions": [
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t5-s12.mp3",
+              "title": " Which are the main environmental problems in your country? {x}"
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t5-s13.mp3",
+              "title": " Do you think climate change is a problem? {x}"
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t5-s14.mp3",
+              "title": " What can people do to recycle more? {x}"
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t5-s15.mp3",
+              "title": " What can governments do to increase the awareness about pollution? {x}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "title": "Read the Room",
+  "description": "Uncover the hidden language behind gestures, social cues, and human connection — then put your insights into words."
+}

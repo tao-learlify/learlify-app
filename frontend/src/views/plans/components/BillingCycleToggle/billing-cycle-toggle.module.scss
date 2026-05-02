@@ -1,0 +1,60 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-6) var(--space-4) var(--space-8);
+}
+
+.toggle {
+  display: inline-flex;
+  background: var(--color-bg-muted);
+  border-radius: var(--radius-pill);
+  padding: var(--space-1);
+  gap: var(--space-1);
+}
+
+.option {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-2) var(--space-5);
+  border: none;
+  background: transparent;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition:
+    background var(--duration-base) var(--easing-default),
+    color var(--duration-base) var(--easing-default),
+    box-shadow var(--duration-base) var(--easing-default);
+  font-family: var(--font-base);
+  font-size: var(--text-md);
+  color: var(--color-text-secondary);
+  min-width: 100px;
+
+  &:focus-visible {
+    outline: 2px solid var(--color-border-focus);
+    outline-offset: 2px;
+  }
+}
+
+.active {
+  background: var(--color-bg-surface);
+  color: var(--color-brand-primary);
+  box-shadow: var(--shadow-1);
+  font-weight: var(--weight-bold);
+}
+
+.label {
+  line-height: var(--leading-tight);
+}
+
+.badge {
+  font-size: var(--text-xs);
+  font-weight: var(--weight-bold);
+  color: var(--color-brand-accent);
+  margin-top: 2px;
+}
+
+.active .badge {
+  color: var(--color-brand-accent-dark);
+}

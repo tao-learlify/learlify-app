@@ -1,0 +1,198 @@
+// ── Review zone ───────────────────────────────────────────────────────────────
+// Shared post-recording review UI — used by SpeakingExercise and SpeakingImageView.
+// Extracted verbatim from SpeakingExercise so both components stay identical.
+.reviewZone {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  animation: reviewIn 0.35s var(--easing-bounce, cubic-bezier(0.34, 1.56, 0.64, 1)) both;
+}
+
+@keyframes reviewIn {
+  from { opacity: 0; transform: translateY(12px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0)    scale(1); }
+}
+
+// ── "Response submitted" pill ─────────────────────────────────────────────────
+.submittedBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  background: #F0FDF4;
+  border: 1.5px solid #86EFAC;
+  color: #15803D;
+  font-size: var(--text-xs);
+  font-weight: 800;
+  align-self: flex-start;
+  animation: submittedIn 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+@keyframes submittedIn {
+  from { opacity: 0; transform: scale(0.7) translateY(-6px); }
+  to   { opacity: 1; transform: scale(1)   translateY(0); }
+}
+
+// ── 3-step stepper ────────────────────────────────────────────────────────────
+.stepper {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  padding: 2px 0;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.stepDot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #F1F5F9;
+  border: 2px solid #E2E8F0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #CBD5E1;
+  flex-shrink: 0;
+
+  &[data-done='true'] {
+    background: #16A34A;
+    border-color: #16A34A;
+    color: #fff;
+  }
+
+  &[data-active='true'] {
+    background: #FFF1F2;
+    border-color: #DB2777;
+  }
+}
+
+.stepPulse {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #DB2777;
+  animation: stepPulseAnim 1.4s ease-in-out infinite;
+}
+
+@keyframes stepPulseAnim {
+  0%, 100% { transform: scale(1);   opacity: 1; }
+  50%       { transform: scale(0.6); opacity: 0.4; }
+}
+
+.stepLine {
+  flex: 1;
+  height: 2px;
+  background: #E2E8F0;
+  margin-top: 13px; // aligns to center of 28px dot
+}
+
+.stepLabel {
+  font-size: 9px;
+  font-weight: 700;
+  color: #94A3B8;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.stepLabelDone   { color: #16A34A; }
+.stepLabelActive { color: #DB2777; }
+
+// ── Instructor message ────────────────────────────────────────────────────────
+.reviewMsg {
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: #F8FAFC;
+  border: 1.5px solid #E2E8F0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  animation: fadeUp 0.4s ease-out 0.1s both;
+}
+
+.reviewMsgTitle {
+  margin: 0;
+  font-size: var(--text-sm);
+  font-weight: 800;
+  color: #1E293B;
+}
+
+.reviewMsgSub {
+  margin: 0;
+  font-size: var(--text-xs);
+  color: #64748B;
+  line-height: 1.55;
+}
+
+// ── Criteria chips ────────────────────────────────────────────────────────────
+.criteriaBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  animation: fadeUp 0.4s ease-out 0.2s both;
+}
+
+.criteriaTitle {
+  margin: 0;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #94A3B8;
+}
+
+.criteriaList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.criteriaItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  background: #F0FDF4;
+  border: 1.5px solid #BBF7D0;
+  color: #15803D;
+  font-size: var(--text-xs);
+  font-weight: 700;
+
+  svg { color: #16A34A; }
+}
+
+// ── Replay button ─────────────────────────────────────────────────────────────
+.replayBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: 1.5px solid #E2E8F0;
+  background: #F8FAFC;
+  color: #475569;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, transform 0.1s;
+
+  &:hover  { background: #F1F5F9; border-color: #CBD5E1; transform: translateY(-1px); }
+  &:active { transform: scale(0.97); }
+  &:focus-visible { outline: 2px solid #DB2777; outline-offset: 3px; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

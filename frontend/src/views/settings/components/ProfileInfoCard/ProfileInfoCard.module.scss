@@ -1,0 +1,46 @@
+.sectionLabel { composes: sectionLabel from '../_shared.module.scss'; }
+.actions      { composes: actions      from '../_shared.module.scss'; }
+.cardTop      { composes: cardTop      from '../_shared.module.scss'; }
+.fieldRow     { composes: fieldRow     from '../_shared.module.scss'; }
+.fieldLabel   { composes: fieldLabel   from '../_shared.module.scss'; }
+.fieldValue   { composes: fieldValue   from '../_shared.module.scss'; }
+
+.fieldRows {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup {
+  margin-bottom: var(--space-4);
+}
+
+.btnEdit {
+  background-color: transparent;
+  color: var(--color-text-accent);
+  border: none;
+  padding: 0;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition:
+    color var(--duration-base) var(--easing-default),
+    text-decoration-color var(--duration-base) var(--easing-default);
+
+  &:hover:not(:disabled) {
+    color: var(--color-brand-accent);
+    text-decoration-color: var(--color-brand-accent);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-border-focus);
+    outline-offset: 2px;
+    border-radius: var(--radius-xs);
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}

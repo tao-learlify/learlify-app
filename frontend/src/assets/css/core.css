@@ -1,0 +1,177 @@
+.footer-style {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid #70707052;
+  transition: 1.2s ease-out;
+  padding: 10px 0px 10px 269px;
+}
+
+.bg-invalid {
+  background-color: #ffc1c1;
+}
+
+.bg-valid {
+  background-color: #b8f28b;
+}
+
+.exam-footer {
+  width: 100% !important;
+  transition: 0.9s ease-in-out;
+}
+
+.footer-style-valid {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border: 1px solid #70707052;
+  transition: 0.4s ease-in;
+}
+
+.footer-style-valid {
+  border: 1px solid #70707052;
+  transition: 0.4s ease-in;
+}
+
+.footer-style-invalid {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border: 1px solid #70707052;
+  transition: 0.4s ease-in;
+}
+
+.footer-style-demo {
+  left: 15px;
+}
+
+.custom-buttom {
+  background-color: #003e6d;
+  color: #fff !important;
+  font-family: 'Dunkin';
+  font-size: 1.4rem;
+  border-radius: 15px;
+  padding: 14px 24px;
+}
+
+.icon-valid-answer {
+  color: #58a700;
+  background-color: #ffffff;
+}
+
+.icon-invalid-answer {
+  color: #ea2b2b;
+  background-color: #ffffff;
+}
+
+.text-valid-answer {
+  color: #58a700;
+}
+
+.text-invalid-answer {
+  color: #ea2b2b;
+}
+
+.next-btn-style {
+  height: 55px;
+  border-radius: 20px;
+  background-color: transparent;
+  border-color: #b2b2b2;
+  color: #b7b7b7;
+}
+
+@media (max-width: 575.98px) {
+  .btn-block-xs {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .btn-block-sm {
+    display: block;
+    width: 100%;
+  }
+  .footer-style {
+    width: calc(100% - 45px);
+    padding: 10px 0px 10px 0px;
+  }
+}
+
+@media (min-width: 320px) {
+  h5 {
+    font-size: 17.8px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  h5 {
+    font-size: 17.8px;
+  }
+}
+
+@media screen and (device-aspect-ratio: 40/71) {
+  h5 {
+    font-size: 13px;
+  }
+
+  .custom-buttom-style {
+    height: auto;
+  }
+
+  /*   .footer-style-valid {
+    bottom: auto;
+  }
+  .footer-style {
+    bottom: auto !important;
+  }
+  .footer-style-invalid {
+    bottom: auto !important;
+  } */
+}
+
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
+  /*   .footer-style-valid {
+    bottom: auto;
+  }
+  .footer-style {
+    bottom: auto !important;
+  }
+  .footer-style-invalid {
+    bottom: auto !important;
+  } */
+}
+
+/* Landscape */
+/* @media screen 
+  and (device-width: 412px) 
+  and (device-height: 823px) 
+  and (-webkit-device-pixel-ratio: 3.5) 
+  and (orientation: landscape) {
+    .footer-style-valid {
+      bottom: auto;
+    }
+  
+    .footer-style {
+      bottom: auto !important;
+    }
+  
+    .footer-style-invalid {
+      bottom: auto !important;
+    }
+} */
+
+/* Target Portrait and Landscape */
+@media screen and (device-width: 412px) and (device-height: 823px) and (-webkit-device-pixel-ratio: 3.5) and (orientation: landscape) {
+  /*   .footer-style-valid {
+    bottom: auto;
+  }
+  .footer-style {
+    bottom: auto !important;
+  }
+  .footer-style-invalid {
+    bottom: auto !important;
+  } */
+}

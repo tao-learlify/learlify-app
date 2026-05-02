@@ -1,0 +1,1512 @@
+{
+  "$schema": "./schema/exam.schema.json",
+  "name": "Exam 2",
+  "schema": [
+    {
+      "category": "Grammar & Vocabulary",
+      "exercises": [
+        {
+          "answers": [
+            "A.were ",
+            "B.was ",
+            "C. did "
+          ],
+          "correct": 2,
+          "description": "None",
+          "label": "Grammar",
+          "title": "1.  What {x} you do last weekend? "
+        },
+        {
+          "answers": [
+            "A. in",
+            "B.on ",
+            "C.at "
+          ],
+          "correct": 2,
+          "description": "None",
+          "label": "Grammar",
+          "title": "2.  My sister is {x} school at the moment"
+        },
+        {
+          "answers": [
+            "A.couldn’t ",
+            "B. can’t",
+            "C.wasn’t "
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "3. Michael said he {x} remember the name of the place. "
+        },
+        {
+          "answers": [
+            "A.your ",
+            "B.yours ",
+            "C. you"
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": "4. Stop taking my mobile, you have {x}."
+        },
+        {
+          "answers": [
+            "A.at ",
+            "B.on ",
+            "C.in "
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "5. The meeting is this Friday {x} five.  "
+        },
+        {
+          "answers": [
+            "A. is",
+            "B. am",
+            "C.are "
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "6. Anna {x} having a shower, she´ll call you later. "
+        },
+        {
+          "answers": [
+            "A.much ",
+            "B. many",
+            "C. a lot"
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "7.  I´m afraid I don't have {x} time today. "
+        },
+        {
+          "answers": [
+            "A.want ",
+            "B. will want",
+            "C.wanted "
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "8.  If you {x} to come with me, call me tomorrow. "
+        },
+        {
+          "answers": [
+            "A.stand ",
+            "B.get",
+            "C. go"
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": "9. On weekdays I usually {x} up at 7:30, but at weekends I stay in bed longer."
+        },
+        {
+          "answers": [
+            "A.going ",
+            "B.am going ",
+            "C.go "
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": "10.  I {x} to a concert this weekend "
+        },
+        {
+          "answers": [
+            "A.forgot ",
+            "B. had forgotten",
+            "C. have forgotten"
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": "11. When I asked for the bill I realised that I {x} my wallet. "
+        },
+        {
+          "answers": [
+            "A.ever ",
+            "B.never ",
+            "C.any "
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "12. Have you {x} tried Japanese food? "
+        },
+        {
+          "answers": [
+            "A.enough time ",
+            "B.time enough ",
+            "C. lot of time"
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "13.   We have {x} to cook for the party."
+        },
+        {
+          "answers": [
+            "A.can´t ",
+            "B.must ",
+            "C.isn´t "
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "14.  He {x} be happy about failing his exam. "
+        },
+        {
+          "answers": [
+            "A.might  ",
+            "B. mights",
+            "C. couldn’t"
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "15.  Jacob {x} be late for dinner tonight. "
+        },
+        {
+          "answers": [
+            "A. should have",
+            "B.should ",
+            "C.needed to "
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "16. I’m going to be late! I {x} left earlier. "
+        },
+        {
+          "answers": [
+            "A.mustn’t to ",
+            "B.mustn’t",
+            "C.don’t have to "
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": "17. You {x} speak during listening exam. "
+        },
+        {
+          "answers": [
+            "A.have been ",
+            "B.has been ",
+            "C. has being"
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": "18. Victoria {x} working here for 2 years. "
+        },
+        {
+          "answers": [
+            "A.won’t ",
+            "B.will ",
+            "C.wouldn’t "
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "19. Unless it stops raining, we {x} go for a walk. "
+        },
+        {
+          "answers": [
+            "A.made ",
+            "B.made to ",
+            "C.make "
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": "20.  I was {x} do overtime by my boss. "
+        },
+        {
+          "answers": [
+            "A.was ",
+            "B.has been ",
+            "C.had been "
+          ],
+          "correct": 2,
+          "description": "None",
+          "label": "Grammar",
+          "title": "21.  Daniel {x} living in France for two years before he came here. "
+        },
+        {
+          "answers": [
+            "A.forward ",
+            "B.for ",
+            "C.after "
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "22.Are you looking {x} to your trip?  "
+        },
+        {
+          "answers": [
+            "A. that",
+            "B.who ",
+            "C.which"
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": "23. My grandmother, {x} is 81, Lives with my parents. "
+        },
+        {
+          "answers": [
+            "A. will live",
+            "B.live ",
+            "C.lived "
+          ],
+          "correct": 2,
+          "description": "None",
+          "label": "Grammar",
+          "title": "24.  I wish I {x} near my workplace. I hate commuting every day! "
+        },
+        {
+          "answers": [
+            "A.would ",
+            "B.use to ",
+            "C.used to "
+          ],
+          "correct": 2,
+          "description": "None",
+          "label": "Grammar",
+          "title": "25.  When I was a teenager I {x} have blue hair. "
+        },
+        {
+          "description": "1.Write the letter (A-K) of the word that is most similar in meaning to a word on the left (1-5). Use each word only once. Write your answers (A-K) on your answer paper. You will not need five of the words (A-K)",
+          "label": "Vocabulary",
+          "questions": [
+            {
+              "title": "1.call{x}",
+              "answers": [
+                "E ring",
+                "J blow"
+              ],
+              "correct": 0
+            },
+            {
+              "title": "2.produce {x}",
+              "answers": [
+                "D create",
+                "B buy "
+              ],
+              "correct": 0
+            },
+            {
+              "title": "3. normal{x}",
+              "answers": [
+                "G common",
+                "C pardon"
+              ],
+              "correct": 0
+            },
+            {
+              "title": "4.exercise{x}",
+              "answers": [
+                "A work",
+                "G responsible"
+              ],
+              "correct": 0
+            },
+            {
+              "title": "5. terrible{x}",
+              "answers": [
+                "K bad",
+                "H design"
+              ],
+              "correct": 0
+            }
+          ]
+        },
+        {
+          "description": "2.Finish each sentence (6-10) using a word from the list (A-K). Use each word only once. Write your answers (A-K) on your answer paper. You will not need five of the words (A-K).",
+          "label": "Vocabulary",
+          "questions": [
+            {
+              "answers": [
+                "C advise",
+                "A deny"
+              ],
+              "correct": 0,
+              "title": "6.To give somebody an opinion about what you should do is to{x} "
+            },
+            {
+              "answers": [
+                "F afraid",
+                "B significant"
+              ],
+              "correct": 0,
+              "title": "7.To feel fear in a situation is to be{x} "
+            },
+            {
+              "answers": [
+                "E chat",
+                "K dump"
+              ],
+              "correct": 0,
+              "title": "8.To send messages over the internet is to {x} "
+            },
+            {
+              "answers": [
+                "J abroad",
+                "D remain"
+              ],
+              "correct": 0,
+              "title": "9.  To travel to a foreign country is to travel {x} "
+            },
+            {
+              "answers": [
+                "H donate ",
+                "G ridiculous"
+              ],
+              "correct": 0,
+              "title": "10.   To give money to help a person or organisation is to{x}"
+            }
+          ]
+        },
+        {
+          "description": "3.Write the letter of the word on the right (A-K) that matches the definition on the left (11-15). Use each word only once. Write your answers (A-K) on your answer paper. You will not need five of the words (A-K).",
+          "label": "Vocabulary",
+          "questions": [
+            {
+              "answers": [
+                "A curious ",
+                "C crush"
+              ],
+              "correct": 0,
+              "title": "11. Interested in learning about things or people around you.{x} "
+            },
+            {
+              "answers": [
+                "D canteen",
+                "E funeral"
+              ],
+              "correct": 0,
+              "title": "12. A place in a factory, school, university where people have meals.{x} "
+            },
+            {
+              "answers": [
+                "B forecast ",
+                "G grammar"
+              ],
+              "correct": 0,
+              "title": "13.A prediction of what is likely to happen in the future, especially about the weather.{x} "
+            },
+            {
+              "answers": [
+                "K generous",
+                "H fiddle"
+              ],
+              "correct": 0,
+              "title": "14.Willing to give and share, kind and helpful.{x} "
+            },
+            {
+              "answers": [
+                "F panic",
+                "J smooth"
+              ],
+              "correct": 0,
+              "title": "15. To feel scared or worried suddenly, when you can't think calmly.{x} "
+            }
+          ]
+        },
+        {
+          "description": "4.Finish each sentence (16-20) using a word from the list (A-K). Use each word only once. Write your answers (A-K) on your answer paper. You will not need five of the words (A-K).",
+          "label": "Vocabulary",
+          "questions": [
+            {
+              "answers": [
+                "H nervous",
+                "A  widow"
+              ],
+              "correct": 0,
+              "title": "16. I felt very {x} driving again after the accident."
+            },
+            {
+              "answers": [
+                "G pollute ",
+                "B turkey"
+              ],
+              "correct": 0,
+              "title": "17. We should take care of the environment and not {x} it."
+            },
+            {
+              "answers": [
+                "C referee ",
+                "D swallow"
+              ],
+              "correct": 0,
+              "title": "18. The {x} decided to allow the goal and they won the match."
+            },
+            {
+              "answers": [
+                "K silk",
+                "F mortal"
+              ],
+              "correct": 0,
+              "title": "19.  This scarf is quite expensive, it's made from pure {x}."
+            },
+            {
+              "answers": [
+                "E housewife",
+                "J plumb"
+              ],
+              "correct": 0,
+              "title": "20. She used to work as a doctor, but now she`s a {x}."
+            }
+          ]
+        },
+        {
+          "description": "5.Write the letter of the word on the right (A-K) that is most often used with a word on the left (21-25). Use each word only once. Write your answers (A-K) on your answer paper. You will not need five of the words (A-K).",
+          "label": "Vocabulary",
+          "questions": [
+            {
+              "answers": [
+                "F time",
+                "C abolish"
+              ],
+              "correct": 0,
+              "title": "21.devote {x} "
+            },
+            {
+              "answers": [
+                "A trouble",
+                "E bookshop"
+              ],
+              "correct": 0,
+              "title": "22.cause {x}"
+            },
+            {
+              "answers": [
+                "J space",
+                "G bureaucracy"
+              ],
+              "correct": 0,
+              "title": "23.parking {x} "
+            },
+            {
+              "answers": [
+                "D mate",
+                "H cod"
+              ],
+              "correct": 0,
+              "title": "24.room {x}"
+            },
+            {
+              "answers": [
+                "B area",
+                "K firework "
+              ],
+              "correct": 0,
+              "title": "25.isolated {x} "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Reading",
+      "exercises": [
+        {
+          "heading": "Part 1: Intermittent fasting",
+          "description": "THE SCIENCE OF GOING WITHOUT {v} Intermittent fasting is becoming more and more popular with many people swearing the multiple health benefits it brings about. Studies have shown that it not only helps with weight loss but may even help your brain power and increase life expectancy. In this guide we will look more at what exactly intermittent fasting is, the different methods, how it works, and whether it is safe or not. {v} WHAT IS IF? {v} IF is a pattern of eating in which you switch between eating and fasting as the name suggests. As you aren’t restricted in the foods you eat it isn't exactly a diet and we can regard it more as an eating pattern, with fasts ranging from 16 - 24 hours.{v} Historically speaking, people did not have access to supermarkets, refrigerators or even food all year round, therefore, we humans have evolved to be able to go without food for periods of time. Actually having pauses is more normal than eating 3 or 4 times a day. Many religions practice fasting for religious purposes, for example muslims have Ramadan where they go through a month-long fast where they aren’t able to eat or drink anything from dawn until dusk. {v} WHAT ARE THE METHODS? {v} So let's take a closer look at the types of intermittent fasting that exist. {v} 16/18 method: This technique entails missing breakfast and only eating within an 8 hour period for example between 2pm - 10pm, as a result you fast for 16 hours in between. {v} Eat stop Eat: This involves fasting for a whole day for two times a week. Therefore you would eat breakfast then not eat until breakfast time the following day. {v} 5:2 Diet: with the 5:2 diet you eat just 500 calories for the day on two non-consecutive days. The rest of the week you eat normally. {v} HOW DOES IT AFFECT YOUR CELLS AND HORMONES? {v} There are other changes that occur in the body as a result of the fasting process which isn't just related to weight loss. For example, the level of human growth hormone increases meaning you can gain muscle as well as lose weight. Also our insulin levels drop making stored fat easier to get to. Furthermore our cells go into a repair process and our gene function changes potentially enabling disease protection. {v} DOES IT HELP WEIGHT LOSS? {v} Weight loss is the main reason people decide to try intermittent fasting, as eating less automatically means less calorie consumption. {v} So how does this happen? When we stop eating our levels of glucose in the body drop and this causes a decrease in insulin production. Because of this the body starts to burn stored energy. After 12 hours of fast the stored energy runs out and the body will begin to burn stored fat which results in weight loss. It's also been seen to increase your metabolism which is the rate at which you burn calories. {v} A 2014 study showed that participants lost 3-8% of weight over 3-24 weeks which is much more successful compared to other diets. Also people lose between 4-7% of the waist circumference which is a cause of disease around the internal organs. {v} IS IT SAFE? {v} Intermittent fasting yields lots of benefits however it is not recommended for everyone. {v} Initial side effects as you would expect are hunger and reduced brain function as a result of the lack of calorie intake. Therefore if you are studying for important exams, IF may not be the best idea. People who are underweight, have diabetes or low blood pressure should avoid the diet. And of course with any change which affects your health it's always good to check with a doctor first. {v} That being said, the positive effects certainly outweigh the negatives and when you take the weight loss, cell repair and hormone regulation that can come about from fasting it sure does seem like an appealing lifestyle change. {v} It may not be great for some people and exercise and sleeping well should never be substituted. The only way to find out if intermittent fasting is for you is to try it.",
+          "label": "Reading Part 4",
+          "modules": [
+            {
+              "module": "Matching",
+              "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t2-r1.png",
+              "title": "Part 1, Section 1:",
+              "subtitle": "Complete the diagram below.{v}DO NOT USE MORE THAN THREE WORDS/NUMBERS from the passage for each answer.",
+              "questions": [
+                {
+                  "title": "1. {x}",
+                  "answers": [
+                    "levels drop",
+                    "Levels drop"
+                  ]
+                },
+                {
+                  "title": "2. {x}",
+                  "answers": [
+                    "Production",
+                    "production"
+                  ]
+                },
+                {
+                  "title": "3. {x}",
+                  "answers": [
+                    "Energy",
+                    "energy"
+                  ]
+                },
+                {
+                  "title": "4.{x} ",
+                  "answers": [
+                    "Metabolism",
+                    "metabolism"
+                  ]
+                }
+              ]
+            },
+            {
+              "module": "Dropdown",
+              "label": "Grammar",
+              "title": "Part 1, Section 2:",
+              "subtitle": "Select the correct answer (A-C).",
+              "questions": [
+                {
+                  "title": "1. Which method involves taking in solid food not taking into account the calories you ingest and eating at least twice a day? {x}",
+                  "answers": [
+                    "A. 16/18 method",
+                    "B. Eat stop Eat",
+                    "C. 5:2 Diet"
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "2. Which method involves consuming one meal a day? {x}",
+                  "answers": [
+                    "A. 16/18 method",
+                    "B. Eat stop Eat",
+                    "C. 5:2 Diet"
+                  ],
+                  "correct": 1
+                },
+                {
+                  "title": "3. Most people try intermittent fasting to? {x}",
+                  "answers": [
+                    "A. Maximize muscle building in a process called protein synthesis",
+                    "B. Lose weight",
+                    "C. Regulate hormones, by initiating important cellular repair processes"
+                  ],
+                  "correct": 1
+                },
+                {
+                  "title": "4.  Intermittent fasting also helps you lose weight by increasing the rate of your? {x}",
+                  "answers": [
+                    "A. Metabolism ",
+                    "B. Weight loss",
+                    "C. Calorie intake"
+                  ],
+                  "correct": 0
+                }
+              ]
+            },
+            {
+              "module": "Matching",
+              "title": "Part 1, Section 3:",
+              "subtitle": "Fill in the gaps with the correct information. Write NO MORE THAN THREE WORDS/NUMBERS for each answer.",
+              "questions": [
+                {
+                  "title": "1. Intermittent fasting yields a multitude of _____.{x}",
+                  "answers": [
+                    "health benefits",
+                    "Health benefits"
+                  ]
+                },
+                {
+                  "title": "2. It is considered more of an _____{x} than a diet.",
+                  "answers": [
+                    "eating pattern",
+                    "Eating pattern"
+                  ]
+                },
+                {
+                  "title": "3. Many _____{x} also follow the diet.",
+                  "answers": [
+                    "Religions",
+                    "religions"
+                  ]
+                },
+                {
+                  "title": "4. As the body adjusts to less calories the body might experience reduced _____{x}.",
+                  "answers": [
+                    "Brain functioning",
+                    "brain functioning"
+                  ]
+                },
+                {
+                  "title": "5. It is important to consult your _____{x} before trying IF.",
+                  "answers": [
+                    "Doctor",
+                    "doctor"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Part 2: Climate Change",
+          "description": "PARAGRAPH A.{v} As the sun sets on another beautiful summer day, a young couple is relaxing on the deck of their beach house, reminiscing about the memorable moments they’re summer has given them. It’s a tradition for them to spend the summer by the shore, and countless summers have provided them with the ideal amount of sunshine - just enough to sit comfortably on the beach to catch the rays, but relax comfortably at dusk. Their dream summers may soon be lasting longer than usual as the beloved summer temperatures stick around longer than they should. While at first thought this may sound like a blessing, it is sadly a sign of a more imposing and dangerous force that humans will be struggling with in years to come. Global warming is just one among many of the factors involved with climate change. {v} PARAGRAPH B.{v} For years humans have shrugged off any strange and drastic change in weather as a bizarre situation. Having a warm day in the midst of winter or an extremely hot day midsummer are actually evidence that climate change is visible in our lives today. In fact, scientists have started seeing strong evidence of this since the year 2012. It only takes some study of temperature records to observe changes in the climate over the whole face of the earth. While climate change may have been stirring for decades, technology has only recently allowed for professionals to both track it and come up with evidence in order to prove it is a danger to our planet. For example, the average temperature of the Earth’s atmosphere has become over 1 degree Fahrenheit warmer than it was in the 20th century. The number may seem quite small now, but these degrees can increase swiftly in the next few years. {v} PARAGRAPH C.{v} Even with evidence of climate change, it is easy to ask ourselves how this has an impact on our daily lives and why it should be a concerning matter. One of the most obvious reasons behind the relevance of climate change in our daily lives is the fact that it is causing the death of many. As the climate changes there is a higher amount of natural disasters which bring danger to the lives of many people in all parts of the world. Weather events that have already been perilous in the past, are becoming more and more treacherous as temperatures increase. Wildfires occur more frequently causing the deaths of not only people, but animals that play a substantial role on our planet. Not all repercussions of climate change are visible on land, however. Coral bleaching is a matter that is in dire need of our attention if we want to keep our oceans safe and healthy. Miles of the underwater world is strewn with nothing but dead coral and fish as a result of various things, climate change being a hefty culprit. {v}PARAGRAPH D.{v} If humans are the problem, what exactly are we doing that is fueling climate change? What is it that we do in our everyday lives that will ultimately destroy the planet that we love so much? The answer is difficult as many people don’t have a direct hand in the problem that is climate change, but some of our daily actions, repeated over time, do add to the fire. Most likely the most substantial cause of climate change is the burning of fossil fuels followed by deforestation. Additionally, the emission from cars or power plants adds to the growing doom that is climate change. The demand for the industries that produce machinery that ultimately put us in a losing battle against climate change is likely the root of the problem, and therefore, where we need to direct our attention. {v} PARAGRAPH E.{v} If humanity is the problem, then humanity must also provide the solution. There are several things that humans, as citizens of the world can afford to do on a daily basis without having to interrupt their lives. Decreasing the usage of cars is possibly one of the most effective yet simple acts that can be done. Therefore, moving closer to your place of work or simply swapping out your vehicle for a metro pass or bicycle can be a good way of advocating for the world we live in. Another concept we should consider is that we don’t stop to think about whether, as consumers, we may not be purchasing environmentally friendly items. Changing our habits may take a little effort at first, but it is easy to get into a new rhythm that will ultimately benefit our society. Finally, consuming less energy, not only in the form of transportation, but around the house, is a great way to become active in saving our climate. {v} PARAGRAPH F. {v} Multiple cities around the world have already started making moves in order to slow down climate changes. In this way they have made a public announcement to their citizens and the rest of the world that they actively care about not only the world, but the future generations who will be inhabiting it. In Canada, the city of Vancouver has invested in planting trees as well as improving their public transportation systems causing for me green spaces and less car emission. Other cities like Lund, Sweden or Cleveland, Ohio have decided to make it easier for citizens to walk or use their bikes by renovating or installing bike lanes throughout the city, thus promoting the usage of different forms of transportation. An increase in the availability of electric cars has been seen in Tokyo, Japan and in Jakarta, Indonesia schools are being powered by solar panels. The world is slowly coming together to fight climate change, so it is important that everyone chip in and do what they can to help. ",
+          "label": "Reading Part 4",
+          "modules": [
+            {
+              "module": "Matching",
+              "title": "Part 2, Section 1:",
+              "subtitle": "Fill in the gaps with the correct information. Write NO MORE THAN THREE WORDS/NUMBERS for each answer.",
+              "questions": [
+                {
+                  "title": "1. Because of the changes in _____{x} ,the danger of natural disasters is rising.",
+                  "answers": [
+                    "Temperature",
+                    "temperature"
+                  ]
+                },
+                {
+                  "title": "2. Both the problem and the solution should be provided by _____.{x}",
+                  "answers": [
+                    "Humanity",
+                    "humanity"
+                  ]
+                },
+                {
+                  "title": "3. A good way to make a change for the better is to invest in _____{x}  that are better for the environment.",
+                  "answers": [
+                    "Items",
+                    "items"
+                  ]
+                },
+                {
+                  "title": "4. The main concern is not for those who inhabit the world now, but for the  _____{x}  that will be on Earth in the years to come.",
+                  "answers": [
+                    "Generations",
+                    "generations"
+                  ]
+                },
+                {
+                  "title": "5. Certain cities around the world are striving for change by using _____{x} that charge buildings with solar energy.",
+                  "answers": [
+                    "Panels",
+                    "panels"
+                  ]
+                }
+              ]
+            },
+            {
+              "module": "Dropdown",
+              "label": "Grammar",
+              "title": "Part 2, Section 2:",
+              "subtitle": "The text has six paragraphs (A-F). Which paragraphs contain the following information? ",
+              "questions": [
+                {
+                  "answers": [
+                    "Paragraph A",
+                    "Paragraph B",
+                    "Paragraph C",
+                    "Paragraph D",
+                    "Paragraph E",
+                    "Paragraph F"
+                  ],
+                  "correct": 5,
+                  "title": "States the commitment made by certain regions to improve a sustainable development."
+                },
+                {
+                  "answers": [
+                    "Paragraph A",
+                    "Paragraph B",
+                    "Paragraph C",
+                    "Paragraph D",
+                    "Paragraph E",
+                    "Paragraph F"
+                  ],
+                  "correct": 1,
+                  "title": "Emphasizes the natural way in which humanity disregards signals of global climate change."
+                },
+                {
+                  "answers": [
+                    "Paragraph A",
+                    "Paragraph B",
+                    "Paragraph C",
+                    "Paragraph D",
+                    "Paragraph E",
+                    "Paragraph F"
+                  ],
+                  "correct": 4,
+                  "title": "Considers profound changes in human behaviour that encourage the protection and conservation of natural resources."
+                },
+                {
+                  "answers": [
+                    "Paragraph A",
+                    "Paragraph B",
+                    "Paragraph C",
+                    "Paragraph D",
+                    "Paragraph E",
+                    "Paragraph F"
+                  ],
+                  "correct": 2,
+                  "title": "Mentions the mutual relationship throughout the last decades between natural disasters and extreme climatic events."
+                }
+              ]
+            },
+            {
+              "module": "Dropdown",
+              "label": "Grammar",
+              "title": "Part 2, Section 3:",
+              "subtitle": "Do the following statements agree with the information given in the reading passage? {v}TRUE= if the statement agrees with the information. {v} FALSE= if the statement contradicts the information. {v} NOT GIVEN= if there is no information on this.",
+              "questions": [
+                {
+                  "title": "1. Weather fluctuations from warm to hot and the reverse show evidence of climate change even today. {x}",
+                  "answers": [
+                    "True",
+                    "False",
+                    "Not given"
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "2. Every continent contains examples of communities doing their best to save the environment. {x}",
+                  "answers": [
+                    "True",
+                    "False",
+                    "Not given"
+                  ],
+                  "correct": 2
+                },
+                {
+                  "title": "3. Large industries with massive machinery are guilty of causing the majority of the problems behind climate change.  {x}",
+                  "answers": [
+                    "True",
+                    "False",
+                    "Not given"
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "4. Scientists have been able to see evidence of climate change for decades. {x}",
+                  "answers": [
+                    "True",
+                    "False",
+                    "Not given"
+                  ],
+                  "correct": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Part 3: Fishing as a sport",
+          "description": "PARAGRAPH A.{v} 40,000 years of existence is a hefty number to be claimed by any activity that is still popular in the present day and age. Scientists have proven that humans have been consuming fish since early times which means that fishing has been around since then. While the equipment and methods used may have been primitive to begin with, extreme modifications have been made over the years. Weapons like harpoons and spears were the go-to, which required unthinkable levels of skill. One of the biggest differences between past fishing habits and those of today are found in the reasons behind fishing in the first place. Survival was key 40,000 years ago and therefore fish were needed as a means of survival. While today people do take pleasure in sliding their own catch of the day in the oven, it is not a necessity. Being able to pinpoint when exactly fishing became more of a fun activity and less of a survival strategy may be hard to do, but today it has developed into a very pleasurable way to spend time. {v} PARAGRAPH B.{v} The intensity, speed, skill and stamina followed by the rush of adrenaline that comes with physically demanding work are just a few things that are assumed to come with what it means for an activity to be defined as a sport. Football, baseball, basketball, wrestling and even tennis are clear examples of what a sport is. Choosing to side in an argument about whether or not any of the above are to be considered sports would be a lost cause as there is simply no question. Fishing, on the other hand, is bound to bring up a lot of conflict when discussing sports. Fishing is commonly viewed as more of a hobby than a sport as many people consider it to require few physical strength or skills at all. The typical angler will either fish with monetary benefits in mind, or simply as a time to spend relaxing. Furthermore, to those who lack knowledge of fishing, it seems that there are no rules to such a concept, therefore eliminating it completely from the realm of sports. {v} PARAGRAPH C.{v} The fact of the matter is that it is close to impossible to come to a conclusion about whether fishing is a sport or simply a hobby. In terms of the benefits and demands that sports tend to have on the body, it is imperative to stop and analyze what this looks like in the world of fishing. Fishing is great for the brain, the heart and even the body. It allows for individuals who may not be capable of performing more high demanding sports to spend time outdoors which has proven to improve mental and emotional well-being. Sports do not only require physical strength, it is also vital for those participating in a sport to be responsible, disciplined and exhibit certain leadership and teamwork skills. These same skills are necessary for those avid anglers. While the definition of a sport may not come with the possibility of endangering oneself, fishing does not fall below that line. As fishing requires physical strength and skill, an inexperienced angler could put themselves in harm's way while dealing with a particularly feisty fish or even rough weather conditions. {v} PARAGRAPH D.{v} At the end of the day, defining fishing as being a sport or not comes down to the context. What many don’t realize is that fishing activities are more common than not. A professional level of fishing is existent and is not an achievement to be jeered at. In fact, contrary to common thinking, fishing is actually the fourth most popular sport in the United States of America as well as being extremely popular in the UK. Winners in these types of competitions are judged by a series of different factors involving the weight of the fish they catch, the type of fish they catch and techniques or equipment used in certain situations. There are even competitions that involve fishing from less conventional locations even though most fishing competitions are held on boats or docks. While those who fish competitively may not be viewed with such revere as Michael Jordan or Babe Ruth, there is no reason why they shouldn’t be as they have put time and effort into developing and training skills in the same way as any successful professional athlete. {v} PARAGRAPH E.{v} A complete dictionary could be written about all the different types of fishing that have been created over time. These different types of fishing are defined by the equipment used, the type of fish one is trying to catch as well as the location and conditions. Bottom fishing refers to fishing with the intention of bringing in a species that tends to live in the deepest parts of the focus area. Common examples might be suckerfish, catfish or bream. In order to achieve this, a weight must be put on the line. A unique type of fishing is done in the winter when bodies of water have been frozen over and the fisherman has to dig a hole into the ice itself. This is known as ice fishing and is particularly popular in colder climates. Pitch fishing is focused not on the equipment as much as the style in which the equipment enters the water. The goal is to cast the fishing line in a way that it enters the water almost silently, therefore not scaring off any fish. {v} PARAGRAPH F.{v} Both sports and hobbies have been known to bring a lot of benefits to the lives of their participants, and fishing is no exception. Many people use fishing as a way to spend time with themselves, allowing for self-reflection and meditation. It opens the possibility for people to connect with nature which is known to promote less stress and provide heaps of relaxation. Strange as it may seem, fishing is the type of activity that can improve the self-esteem of those who take part in it. Time to process and relax tends to be a mood booster which ultimately allows for people to find more confidence in themselves, forcing the toils and trials of the world around them to beat them down just a tiny bit less. Finally, being in contact with water can be a form of therapy in and of itself. Whether it is just hearing the sound of waves lapping on the side of the boat or stepping into the water, this can promote peace of mind. ",
+          "label": "Reading Part 4",
+          "modules": [
+            {
+              "module": "Dropdown",
+              "label": "Grammar",
+              "title": "Part 3, Section 1:",
+              "subtitle": "Do the following statements agree with the information given in the reading passage? {v}TRUE= if the statement agrees with the information.{v} FALSE= if the statement contradicts the information. {v}NOT GIVEN= if there is no information on this.",
+              "questions": [
+                {
+                  "title": "1. The writer seems to believe that fishing use to require a series of different skills in order to be successful. {x}",
+                  "answers": [
+                    "True",
+                    "False",
+                    "Not given"
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "2. The writer thinks that professional fishermen are not comparable to other famous athletes. {x}",
+                  "answers": [
+                    "True",
+                    "False",
+                    "Not given"
+                  ],
+                  "correct": 1
+                },
+                {
+                  "title": "3. The writer talks about how one must start fishing early on to benefit from the sport. {x}",
+                  "answers": [
+                    "True",
+                    "False",
+                    "Not given"
+                  ],
+                  "correct": 2
+                },
+                {
+                  "title": "4. The writer emphasises the fact that fishing has countless benefits on the physical and mental health of its participants. {x}",
+                  "answers": [
+                    "True",
+                    "False",
+                    "Not given"
+                  ],
+                  "correct": 0
+                }
+              ]
+            },
+            {
+              "module": "Dropdown",
+              "label": "Grammar",
+              "title": "Part 3, Section 2:",
+              "subtitle": "Choose the correct answer (A-D).",
+              "questions": [
+                {
+                  "title": "1. The main difference identified between fishing and other sports is that {x}",
+                  "answers": [
+                    "A. None, because fishing is not a sport.",
+                    "B. fishing is not as popular around the world as other sports.",
+                    "C. to become a skilled angler does not take that much work.",
+                    "D. it is not commonly viewed as a sport ."
+                  ],
+                  "correct": 3
+                },
+                {
+                  "title": "2. Benefits of spending time fishing may include {x}",
+                  "answers": [
+                    "A. an increase in upper body muscles as they are used to cast the line out.",
+                    "B. knowledge of survival.",
+                    "C. greater awareness and appreciation of the natural world.",
+                    "D. growth in emotional well-being."
+                  ],
+                  "correct": 3
+                },
+                {
+                  "title": "3. Fishing may be a good activity for children as it {x}",
+                  "answers": [
+                    "A. teaches them to be both responsible and disciplined.",
+                    "B. allows them to learn about the different species of fish.",
+                    "C. improves their intelligence in school.",
+                    "D. gives them the opportunity to spend time with their fathers."
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "4. Different styles of fishing are NOT defined by the {x}",
+                  "answers": [
+                    "A. equipment used.",
+                    "B. location and weather.",
+                    "C. qualification of the angler.",
+                    "D. type of fish being caught."
+                  ],
+                  "correct": 2
+                },
+                {
+                  "title": "5. In summary, this piece strives to {x}",
+                  "answers": [
+                    "A. discuss the historic relevance of fishing and its evolution.",
+                    "B. point out the reasons why people should take up fishing.",
+                    "C. explain how fishing is not just a hobby.",
+                    "D. Both B and C."
+                  ],
+                  "correct": 3
+                }
+              ]
+            },
+            {
+              "module": "Dropdown",
+              "label": "Grammar",
+              "title": "Part 3, Section 3:",
+              "subtitle": "Do the following statements agree with the information given in the reading passage? {v}TRUE= if the statement agrees with the information.{v} FALSE= if the statement contradicts the information. {v} NOT GIVEN= if there is no information on this.",
+              "questions": [
+                {
+                  "title": "1. While fishing was historically used as a way to survive, an element of competition has always been incorporated with it.{x}",
+                  "answers": [
+                    "True",
+                    "False",
+                    "Not given"
+                  ],
+                  "correct": 1
+                },
+                {
+                  "title": "2. Patience is the most important trait an angler must exhibit in order to be successful with fishing as either a sport or hobby. {x}",
+                  "answers": [
+                    "True",
+                    "False",
+                    "Not given"
+                  ],
+                  "correct": 1
+                },
+                {
+                  "title": "3. The likelihood of getting injured while fishing professionally is close to none. {x}",
+                  "answers": [
+                    "True",
+                    "False",
+                    "Not given"
+                  ],
+                  "correct": 2
+                },
+                {
+                  "title": "4. Some of the most challenging fishing competitions are held in ambiguous situations. {x}",
+                  "answers": [
+                    "True",
+                    "False",
+                    "Not given"
+                  ],
+                  "correct": 0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Listening",
+      "exercises": [
+        {
+          "heading": "Part 1: BOOKING A RESTAURANT FOR A WEDDING",
+          "description": "",
+          "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t2-l1.jpg",
+          "label": "Reading Part 4",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/E2-1.mp3",
+          "modules": [
+            {
+              "module": "Matching",
+              "title": "Part 1, Questions 1-6:",
+              "subtitle": "Answer the questions. Write NO MORE THAN TWO WORDS/NUMBERS for each answer.",
+              "questions": [
+                {
+                  "title": "1. What month is the wedding in?  {x}",
+                  "answers": [
+                    "August"
+                  ]
+                },
+                {
+                  "title": "2. At what time of day will the wedding be?  {x}",
+                  "answers": [
+                    "afternoon",
+                    "Afternoon"
+                  ]
+                },
+                {
+                  "title": "3. What size will the wedding be? {x}",
+                  "answers": [
+                    "small",
+                    "Small"
+                  ]
+                },
+                {
+                  "title": "4. What style will the food be served in? {x}",
+                  "answers": [
+                    "buffet",
+                    "Buffet"
+                  ]
+                },
+                {
+                  "title": "5. What type of cake will the restaurant serve?  {x}",
+                  "answers": [
+                    "cheesecake",
+                    "Cheesecake",
+                    "cheese cake",
+                    "Cheese cake"
+                  ]
+                },
+                {
+                  "title": "6. How much time do they have to pay the deposit? {x}",
+                  "answers": [
+                    "24 hours",
+                    "twenty-four hours",
+                    "Twenty-four hours",
+                    "twenty four hours",
+                    "Twenty four hours",
+                    "24h"
+                  ]
+                }
+              ]
+            },
+            {
+              "module": "Matching",
+              "title": "Part 1, Questions 7-10:",
+              "subtitle": "Fill in the gaps. Write NO MORE THAN THREE WORDS/NUMBERS for each answer.",
+              "questions": [
+                {
+                  "title": "7. The restaurant has availability starting at _____{x}",
+                  "answers": [
+                    "5 PM",
+                    "5 pm",
+                    "five PM",
+                    "Five PM",
+                    "5 p.m.",
+                    "5p.m.",
+                    "5 pm.",
+                    "five",
+                    "5"
+                  ]
+                },
+                {
+                  "title": "8. They want a paper that shows the _____{x} of the seating area.",
+                  "answers": [
+                    "layout"
+                  ]
+                },
+                {
+                  "title": "9. Some of the guests are _____{x} so they need different food.",
+                  "answers": [
+                    "vegan",
+                    "Vegan"
+                  ]
+                },
+                {
+                  "title": "10. They will bring her own _____ {x} to the restaurant.",
+                  "answers": [
+                    "wedding cake",
+                    "cake"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Part 2: BRECON BEACONS NATIONAL PARK ",
+          "label": "Reading Part 4",
+          "description": "",
+          "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t2 - l2.jpg",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/E2-2.mp3",
+          "modules": [
+            {
+              "module": "Matching",
+              "title": "Part 2, Questions 11-17:",
+              "subtitle": "Answer the questions with the correct information. Write NO MORE THAN THREE WORDS/NUMBERS for each answer.",
+              "questions": [
+                {
+                  "title": "11. Where is Brecon Beacons situated? {x}",
+                  "answers": [
+                    "Mid-Wales",
+                    "mid-Wales",
+                    "in Mid-Wales",
+                    "In Mid-Wales",
+                    "mid Wales",
+                    "Mid Wales",
+                    "in mid Wales",
+                    "In Mid Wales"
+                  ]
+                },
+                {
+                  "title": "12. How far is Pen y Fan from Crickhowell? {x}",
+                  "answers": [
+                    "forty minutes",
+                    "40 minutes",
+                    "40 minutes drive",
+                    "forty minutes drive"
+                  ]
+                },
+                {
+                  "title": "13. Looking for food from the land is called _____. {x}",
+                  "answers": [
+                    "foraging",
+                    "Foraging"
+                  ]
+                },
+                {
+                  "title": "14. Name one thing you can do from your accomodation.{x}",
+                  "answers": [
+                    "Stargaze",
+                    "stargaze"
+                  ]
+                },
+                {
+                  "title": "15. What festival is held in August? {x}",
+                  "answers": [
+                    "Jazz",
+                    "Jazz Festival",
+                    "Jazz festival"
+                  ]
+                },
+                {
+                  "title": "16. What will they do if it rains? {x}",
+                  "answers": [
+                    "A whiskey tour",
+                    "a whiskey tour",
+                    "whiskey tour",
+                    "Whiskey tour",
+                    "A whisky tour",
+                    "a whisky tour",
+                    "whisky tour",
+                    "Whisky tour"
+                  ]
+                },
+                {
+                  "title": "17. What does the speaker want to buy for her family and friends? {x}",
+                  "answers": [
+                    "Souvenirs",
+                    "souvenirs"
+                  ]
+                }
+              ]
+            },
+            {
+              "module": "Matching",
+              "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t2--l2.jpg",
+              "title": "Part 2, Questions 18-20:",
+              "subtitle": "Complete the map below. Write NO MORE THAN TWO WORDS/NUMBERS for each answer.",
+              "questions": [
+                {
+                  "title": "18. How tall is Pen Y Fan? {x}",
+                  "answers": [
+                    "886 metres",
+                    "886 Metres",
+                    "eight hundred eighty-six",
+                    "Eight hundred eighty-six",
+                    "886",
+                    "886 m",
+                    "886 m."
+                  ]
+                },
+                {
+                  "title": "19. What river does the 55-mile long trail follow? {x}",
+                  "answers": [
+                    "River Taff",
+                    "river Taff",
+                    "Taff"
+                  ]
+                },
+                {
+                  "title": "20. What is the name of the accommodation? {x}",
+                  "answers": [
+                    "Eco Holidays",
+                    "Ecoholidays",
+                    "Eco holidays"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Part 3: ONLINE WORKING",
+          "description": "",
+          "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t2-l3.jpg",
+          "label": "Reading Part 4",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/E2-3.mp3",
+          "modules": [
+            {
+              "module": "Dropdown",
+              "title": "Part 3, Questions 21-26:",
+              "subtitle": "Select the correct answer (A-D).",
+              "questions": [
+                {
+                  "title": "21. How does Sam feel about working from home? {x}",
+                  "answers": [
+                    "A. He really enjoys it.",
+                    "B. He misses his work friends.",
+                    "C. He finds it quite annoying.",
+                    "D. He thinks it is good for a short time."
+                  ],
+                  "correct": 2
+                },
+                {
+                  "title": "22. Which does Daniel think is NOT an advantage to working at home? {x}",
+                  "answers": [
+                    "A. There is no commute to work.",
+                    "B. You can get housework done.",
+                    "C. The Wifi is faster at home.",
+                    "D. It is more comfortable."
+                  ],
+                  "correct": 2
+                },
+                {
+                  "title": "23. How long was Sam’s commute to work? {x}",
+                  "answers": [
+                    "A. 2 hours long.",
+                    "B. 1 hour long.",
+                    "C. 1 and a half hours.",
+                    "D. Half an hour."
+                  ],
+                  "correct": 2
+                },
+                {
+                  "title": "24. What does Dan mention he would have to do if he worked from home? {x}",
+                  "answers": [
+                    "A. Buy a new computer.",
+                    "B. Bring a monitor from work.",
+                    "C. Keep his kids off of the wifi.",
+                    "D. Work less hours."
+                  ],
+                  "correct": 1
+                },
+                {
+                  "title": "25. On what things did Sam used to spend money when he worked in the office? {x}",
+                  "answers": [
+                    "A. Petrol.",
+                    "B. Lunch.",
+                    "C. Drinks.",
+                    "D. All of the above."
+                  ],
+                  "correct": 3
+                },
+                {
+                  "title": "26.  What does Daniel think is the main difference between working from home or going to the office? {x}",
+                  "answers": [
+                    "A. The amount of working hours.",
+                    "B. The travel time.",
+                    "C. His choice in lunch.",
+                    "D. The wifi."
+                  ],
+                  "correct": 1
+                }
+              ]
+            },
+            {
+              "module": "Dropdown",
+              "label": "Grammar",
+              "title": "Part 3, Questions 27-30:",
+              "subtitle": "Match each person with the right description. {v} How does each person feel about working from home?",
+              "questions": [
+                {
+                  "title": "27. Sam {x}",
+                  "answers": [
+                    "A. Thinks there wouldn't be enough room for computers at home.",
+                    "B. Thinks it is very positive to contribute with housework.",
+                    "C. Feels that it is difficult to keep a schedule.",
+                    "D. Believes that everyone should work from home.",
+                    "E. Does not have an opinion."
+                  ],
+                  "correct": 2
+                },
+                {
+                  "title": "28. Daniel {x}",
+                  "answers": [
+                    "A. Thinks there wouldn't be enough room for computers at home.",
+                    "B. Thinks it is very positive to contribute with housework.",
+                    "C. Feels that it is difficult to keep a schedule.",
+                    "D. Believes that everyone should work from home.",
+                    "E. Does not have an opinion."
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "29. Sam’s wife {x}",
+                  "answers": [
+                    "A. Thinks there wouldn't be enough room for computers at home.",
+                    "B. Thinks it is very positive to contribute with housework.",
+                    "C. Feels that it is difficult to keep a schedule.",
+                    "D. Believes that everyone should work from home.",
+                    "E. Does not have an opinion."
+                  ],
+                  "correct": 1
+                },
+                {
+                  "title": "30. Daniel’s wife {x}",
+                  "answers": [
+                    "A. Thinks there wouldn't be enough room for computers at home.",
+                    "B. Thinks it is very positive to contribute with housework.",
+                    "C. Feels that it is difficult to keep a schedule.",
+                    "D. Believes that everyone should work from home.",
+                    "E. Does not have an opinion."
+                  ],
+                  "correct": 4
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Part 4: HIPSTER - Contemporary Subculture?",
+          "description": "",
+          "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t2-l4.jpg",
+          "label": "Reading Part 4",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/E2-4.mp3",
+          "modules": [
+            {
+              "module": "Matching",
+              "title": "Part 4, Questions 31-35:",
+              "subtitle": "Complete the sentences. Write NO MORE THAN THREE WORDS/NUMBERS for each answer.",
+              "questions": [
+                {
+                  "title": "31. Hipster culture is mainly followed by _____{x} class people.",
+                  "answers": [
+                    "upper middle",
+                    "Upper middle"
+                  ]
+                },
+                {
+                  "title": "32. The term was first used in the _____.{x}",
+                  "answers": [
+                    "1990’s",
+                    "1990s",
+                    "90s",
+                    "90's",
+                    "1990`s",
+                    "90's",
+                    "90´s"
+                  ]
+                },
+                {
+                  "title": "33. In 2003 a book was published called _____{x} by Robert Lanham.",
+                  "answers": [
+                    "The Hipster Handbook",
+                    "Hipster Handbook"
+                  ]
+                },
+                {
+                  "title": "34. The ‘’hipster index’’ details the most hipster cities in the _____.{x}",
+                  "answers": [
+                    "world"
+                  ]
+                },
+                {
+                  "title": "35. Most of the cities on the list are in _____{x}.",
+                  "answers": [
+                    "The United States",
+                    "the United States",
+                    "The USA",
+                    "USA",
+                    "United States",
+                    "the USA"
+                  ]
+                }
+              ]
+            },
+            {
+              "module": "Matching",
+              "title": "Part 4, Questions 36-40:",
+              "subtitle": "Complete the sentences. Write NO MORE THAN THREE WORDS/NUMBERS for each answer.",
+              "questions": [
+                {
+                  "title": "36. Hipster culture has also been seen responsible for the gentrification of _____{x}.",
+                  "answers": [
+                    "neighbourhoods",
+                    "Neighbourhoods"
+                  ]
+                },
+                {
+                  "title": "37. This causes local housing market prices to ____{x} so that local people are unable to afford to live there.",
+                  "answers": [
+                    "Rise",
+                    "rise"
+                  ]
+                },
+                {
+                  "title": "38. Skinny jeans which are characterised as ‘’hipster’’ are now a fashion _____{x}.",
+                  "answers": [
+                    "staple",
+                    "Staple"
+                  ]
+                },
+                {
+                  "title": "39. Another trend made fashionable by Hipster culture is the _____{x} of avocados.",
+                  "answers": [
+                    "consumption",
+                    "Consumption"
+                  ]
+                },
+                {
+                  "title": "40. The hipster _____{x} looks like it will not disappear any time soon.",
+                  "answers": [
+                    "subculture",
+                    "Subculture"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Writing",
+      "exercises": [
+        {
+          "description": "TASK 1 {v} - {v} You should spend about 20 minutes on this task. {v} - {v} INSTRUCTIONS: The bar chart below shows annual deforestation rates from 1950 to 2009 in five-year intervals. {v} Summarise the information by selecting and reporting the main features and make comparisons where relevant.",
+          "label": "Writing Part 4",
+          "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t2-w1.jpg",
+          "questions": [
+            {
+              "title": " Write at least 150 words. {x}"
+            }
+          ]
+        },
+        {
+          "description": "TASK 2 {v} - {v} You should spend about 40 minutes on this task. {v} - {v} Write about the following topic: {v} - {v} Stress that's left unchecked can contribute to many health problems, such as high blood pressure, heart disease, obesity and diabetes. What do you think are the main causes of stress in our modern societies? {v} - {v} Give reasons for your answer and include any relevant examples from your own knowledge or experience. ",
+          "label": "Writing Part 4",
+          "questions": [
+            {
+              "title": " Write at least 250 words {x}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Speaking",
+      "exercises": [
+        {
+          "description": "PART 1 (4 -5 minutes) {v} TIP 1: At the beginning of the test the examiner will ask you your full name and will ask to see your identification. {v} TIP 2: The examiner will ask you some questions about different topics. First some personal questions about yourself then some questions about two specific topics. {v} TIP 3: Try and answer each question in one or two sentences. {v} ",
+          "label": "Speaking Part 1",
+          "recordingTime": 30,
+          "questions": [
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t2-s1.mp3",
+              "title": "EXAMINER´S INSTRUCTIONS: I´m going to ask you some questions about yourself. {v} Where do you live in a town or in a city? {x}"
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t2-s4.mp3",
+              "title": " EXAMINER´S INSTRUCTIONS: Let’s talk about physical exercise. {v} How often do you practice sports?  {x}"
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t2-s5.mp3",
+              "title": " Are there any extreme sports that you would like to try?  {x}"
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t2-s7.mp3",
+              "title": " EXAMINER´S INSTRUCTIONS: Let’s talk about free time activities {v} What do you do in your free time? {x}"
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t2-s9.mp3",
+              "title": "Are there any activities that you used to do but don't do anymore? {x}"
+            }
+          ]
+        },
+        {
+          "description": "PART 2 (3-4 minutes) {v} TIP 1: The examiner will give you a paper, a pencil and a piece of paper with your topic. {v} TIP 2: Once you finish talking normally the examiner will ask you some follow up questions. {v} EXAMINER´S INSTRUCTIONS: You now have one minute to make notes. ",
+          "subtitle": "Describe an interesting hobby that you have or used to have. You should say:",
+          "label": "Speaking Part 1",
+          "recordingTime": 120,
+          "questions": [
+            {
+              "imageUrl": {
+                "images": [
+                  "https://dkmwdxc6g4lk7.cloudfront.net/img/t2-s1.jpg"
+                ]
+              },
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t2-s10.mp3",
+              "title": "I’d like you to describe a movie or a TV series you have recently watched. {x}"
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t2-s11.mp3",
+              "title": " What do you prefer TV series or movies? {x}"
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t2-s12.mp3",
+              "title": " How often do you watch TV? {x}"
+            }
+          ]
+        },
+        {
+          "description": "PART 3 (4-5 minutes) {v} EXAMINER'S INSTRUCTIONS: We’ve been talking about movies or TV series you have recently watched, and I’d now like to ask you some questions related to television programs and cinema in general. {v} TIP: Talk about your opinions and give reasons.",
+          "label": "Speaking Part 1",
+          "recordingTime": 60,
+          "questions": [
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t2-s13.mp3",
+              "title": " Why do you think people like gossip programs? {x}"
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t2-s14.mp3",
+              "title": " Is television one of the best inventions of all times?  {x}"
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t2-s15.mp3",
+              "title": " Does violence on TV influence some young people to engage in violent behaviour? {x}"
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t2-s16.mp3",
+              "title": " In your opinion, is watching TV beneficial and can it have educational purposes? {x}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "title": "Stay Sharp",
+  "description": "From health trends to outdoor adventures — analyze real data, form strong arguments, and level up your critical thinking."
+}

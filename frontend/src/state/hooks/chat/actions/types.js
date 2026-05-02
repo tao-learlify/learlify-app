@@ -1,0 +1,3 @@
+export const CHAT_MESSAGE = 'CHAT_MESSAGE'
+export const CHAT_TYPING = 'CHAT_TYPING'
+export const CHAT_UNREADS = 'CHAT_UNREADS'

@@ -1,0 +1,104 @@
+/* ==========================================================================
+   WelcomeHeader — Dashboard greeting + stat pills
+   ========================================================================== */
+
+/* Uses display: flex so greeting text + pills sit side-by-side on wider screens */
+:export {
+  /* nothing — SCSS-modules side-channel not needed here */
+}
+
+.textBlock {
+  flex: 1;
+  min-width: 0;
+}
+
+.greeting {
+  font-family: var(--font-display);
+  font-size: var(--text-4xl);
+  font-weight: var(--weight-black);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent-blue-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  line-height: var(--leading-tight);
+
+  @media (max-width: 576px) {
+    font-size: var(--text-3xl);
+  }
+}
+
+.sub {
+  font-family: var(--font-base);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-medium);
+  color: var(--color-primary);
+  opacity: 0.85;
+  margin: var(--space-1) 0 0;
+  font-weight: var(--weight-semibold);
+}
+
+/* ── Stat pills ─────────────────────────────────────────────────────────────── */
+.pills {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-shrink: 0;
+}
+
+.pill {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.88));
+  border: 1.5px solid rgba(37, 99, 235, 0.1);
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-2) var(--space-4);
+  transition: all 0.2s ease-out;
+
+  &:hover {
+    border-color: rgba(37, 99, 235, 0.2);
+    box-shadow: 0 12px 32px rgba(37, 99, 235, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    transform: translateY(-2px);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.8));
+    border-color: rgba(59, 130, 246, 0.15);
+  }
+}
+
+.pillIconFire  { color: var(--icon-color-amber);    flex-shrink: 0; }
+.pillIconXP    { color: var(--icon-color-progress);  flex-shrink: 0; }
+.pillIconStar  { color: var(--icon-color-amber);     flex-shrink: 0; }
+
+.pillValue {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-black);
+  color: var(--color-text-primary);
+  line-height: 1;
+  font-weight: var(--weight-bold);
+}
+
+.pillValueAmber {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.pillValueGreen {
+  background: linear-gradient(135deg, #10b981, #059669);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.pillLabel {
+  font-family: var(--font-base);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-secondary);
+}

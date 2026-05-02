@@ -1,0 +1,27 @@
+.custom-border {
+  border: none !important;
+}
+
+.card-t {
+  border-top-left-radius: 20px !important;
+  border-top-right-radius: 20px !important;
+  border: 5px solid #d9d9d9 !important;
+  border-bottom: none !important;
+  border: 20px;
+}
+
+.header-style {
+  background-color: white;
+  color: gray;
+}
+
+.body-style {
+  border: 5px solid #d9d9d9;
+  border-top: 0px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.course-text {
+  font-size: 18px;
+}

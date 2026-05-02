@@ -1,0 +1,72 @@
+/* ==========================================================================
+   Badge — Semantic status/label indicator.
+   Abstracted from: views/settings/components/SubscriptionStatusBadge/ (best existing pattern).
+   ========================================================================== */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 2px var(--space-3);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-base);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  line-height: var(--leading-normal);
+  white-space: nowrap;
+}
+
+/* ── SEMANTIC VARIANTS ────────────────────────────────────────────────────── */
+
+/* active — teal: subscription active, online, connected */
+.active {
+  background-color: var(--color-brand-accent-light);
+  color: var(--color-brand-accent-dark);
+}
+
+/* warning — amber: trial, expiring soon, attention needed */
+.warning {
+  background-color: var(--color-warning-bg);
+  color: var(--color-warning-text);
+}
+
+/* danger — red: expired, error, action required */
+.danger {
+  background-color: var(--color-danger-bg);
+  color: var(--color-danger-text);
+}
+
+/* neutral — gray: inactive, disabled, no status */
+.neutral {
+  background-color: var(--color-bg-muted);
+  color: var(--color-text-secondary);
+}
+
+/* info — blue: informational, pending, in-progress */
+.info {
+  background-color: var(--color-info-bg);
+  color: var(--color-info-text);
+}
+
+/* primary — brand blue: featured, premium, selected */
+.primary {
+  background-color: var(--color-brand-primary-light);
+  color: var(--color-brand-primary);
+}
+
+/* success — green: completed, passed, verified */
+.success {
+  background-color: var(--color-success-bg);
+  color: var(--color-success-text);
+}
+
+/* ── DOT INDICATOR ────────────────────────────────────────────────────────── */
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-pill);
+  background-color: currentColor;
+  flex-shrink: 0;
+}

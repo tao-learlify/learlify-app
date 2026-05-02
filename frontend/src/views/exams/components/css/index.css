@@ -1,0 +1,18 @@
+.valid-bg {
+  background-color: #b8f28b !important;
+  transition: 0.4s ease-in;
+}
+
+.invalid-bg {
+  background-color: #ffc1c1 !important;
+  transition: 0.4s ease-in;
+}
+
+.aptis-button {
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 700;
+  border-radius: 16px;
+  border-color: #afafaf;
+  border-width: 2px 2px 4px;
+}

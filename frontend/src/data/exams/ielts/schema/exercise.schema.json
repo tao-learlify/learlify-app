@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "label": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "modules": {
+      "type": "array",
+      "items": {
+        "$ref": "./module.schema.json"
+      }
+    },
+    "imageUrl": {
+      "type": "string"
+    },
+    "recordingTime": {
+      "type": "integer"
+    },
+    "questions": {
+      "type": "array",
+      "items": {
+        "$ref": "./question.schema.json"
+      }
+    },
+    "module": {
+      "type": "string",
+      "enum": ["Matching"]
+    },
+    "recordingUrl": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "answers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "correct": {
+      "type": "integer"
+    }
+  }
+}

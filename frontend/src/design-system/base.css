@@ -1,0 +1,84 @@
+/* ==========================================================================
+   BASE STYLES — Global resets, typography, focus, theme transitions.
+   Applied after Bootstrap via @layer base (lower specificity than Bootstrap
+   component styles, but provides clean defaults for new DS components).
+   ========================================================================== */
+
+@import './tokens.css';
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+    text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-bg-page);
+    color: var(--color-text-primary);
+    font-family: var(--font-base);
+    line-height: var(--leading-relaxed);
+    font-size: var(--text-base);
+  }
+
+  /* ── FOCUS ────────────────────────────────────────────────────────────── */
+  /* Keyboard-only focus ring — visible and accessible */
+  :focus-visible {
+    outline: 2px solid var(--color-border-focus);
+    outline-offset: 2px;
+    border-radius: var(--radius-xs);
+  }
+
+  /* Remove default browser focus for mouse/pointer users */
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  /* ── TYPOGRAPHY RESET ─────────────────────────────────────────────────── */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-base);
+    font-weight: var(--weight-bold);
+    line-height: var(--leading-tight);
+    color: var(--color-text-primary);
+    margin-top: 0;
+  }
+
+  p {
+    margin-top: 0;
+    line-height: var(--leading-relaxed);
+  }
+
+  a {
+    color: var(--color-text-accent);
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  /* ── THEME TRANSITION ─────────────────────────────────────────────────── */
+  /* Smooth transitions when toggling between light/dark mode.
+     Only background-color and color — avoids janky layout transitions. */
+  *,
+  *::before,
+  *::after {
+    transition-property: background-color, border-color, color, box-shadow;
+    transition-duration: var(--duration-base);
+    transition-timing-function: var(--easing-default);
+  }
+
+  /* Disable transitions during initial page load to avoid flash */
+  .prefers-no-transition,
+  .prefers-no-transition * {
+    transition: none !important;
+  }
+}

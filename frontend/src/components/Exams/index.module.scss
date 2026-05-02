@@ -1,0 +1,140 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 75px);
+  grid-template-rows: repeat(3, 75px);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  align-items: center;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+
+  
+}
+
+.item-1 {
+  grid-area: 2 / 1 / 3 / 2;
+
+  @media (max-width: 768px) {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+}
+.item-2 {
+  grid-area: 2 / 2 / 3 / 3;
+
+  @media (max-width: 768) {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+}
+.item-3 {
+  grid-area: 3 / 2 / 4 / 3;
+  @media (max-width: 768px) {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+}
+.item-4 {
+  grid-area: 2 / 3 / 3 / 4;
+  
+  @media (max-width: 768px) {
+    grid-area: 2 / 3 / 3 / 4;
+  }
+}
+.item-5 {
+  grid-area: 1 / 3 / 2 / 4;
+
+  @media (max-width: 768px) {
+    grid-area: 3 / 1 / 4 / 2;
+    position: relative;
+    left: 45px;
+  }
+}
+.item-6 {
+  grid-area: 2 / 4 / 3 / 5;
+
+  @media (max-width: 768px) {
+    grid-area: 3 / 3 / 4 / 4;
+    position: relative;
+    right: 45px; 
+  }
+}
+.item-7 {
+  grid-area: 3 / 4 / 4 / 5;
+
+  @media (max-width: 768px) {
+    grid-area: 4 / 1 / 5 / 2; 
+  }
+}
+.item-8 {
+  grid-area: 2 / 5 / 3 / 6;
+
+  @media (max-width: 768px) {
+    grid-area: 4 / 2 / 5 / 3;
+  }
+}
+.item-9 {
+  grid-area: 1 / 5 / 2 / 6;
+
+  @media (max-width: 768px) {
+    grid-area: 4 / 3 / 5 / 4;
+  }
+}
+.item-10 {
+  grid-area: 2 / 6 / 3 / 7;
+
+  @media (max-width: 768px) {
+    grid-area: 5 / 2 / 6 / 3; 
+  }
+}
+
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  border-radius: 50px;
+  padding: 16px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.title {
+  font-family: Dunkin;
+  font-weight: lighter;
+}
+
+.subtitle {
+  font-family: Monserrat-Light;
+
+  span {
+    font-family: Monserrat-Bold;
+  }
+}
+
+.blocked {
+  opacity: 0.7;
+  position: relative;
+  top: 15px;
+}
+
+.lock {
+  position: relative;
+  bottom: 60px;
+}

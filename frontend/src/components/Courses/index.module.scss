@@ -1,0 +1,63 @@
+.container {
+  display: flex;
+  background-color: #00CCC6;
+  background-image: url("https://dkmwdxc6g4lk7.cloudfront.net/assets/svg/leaft.svg");
+  background-repeat: no-repeat;
+  background-size: cover ;
+  border-radius: 30px !important;
+  
+  div[about="content"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    div[about="info"] {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      padding: 25px 25px 25px 0px;
+      text-align: center;
+    }
+    div[about="panda"] {
+      svg{
+        width: 100%;
+      }
+
+    }
+  }
+}
+
+.button {
+  margin-top: 20px;
+  display: flex;
+  @media (max-width: 768px){
+    flex-direction: column;
+  }
+}
+.btnLeft{
+  min-width: 135px;
+  margin: 0px 10px 10px 0px;
+  @media (max-width: 768px){
+    margin-right: 0px;
+  }
+}
+.btnRight{
+  min-width: 135px;
+  margin-bottom: 10px;
+}
+.title{
+  font-family: Dunkin;
+  font-size: 3rem;
+  @media (max-width: 768px){
+    font-size: 2rem;
+  }
+}
+.subTitle{
+  font-family: Monserrat-Light;
+  font-size: 2.5rem;
+  @media (max-width: 768px){
+    font-size: 1.5rem;
+  }
+}

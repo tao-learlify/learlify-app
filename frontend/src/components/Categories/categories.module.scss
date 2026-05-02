@@ -1,0 +1,152 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.grid:hover {
+  cursor: pointer;
+}
+
+.item-1 {
+  height: 170px;
+  grid-area: 1 / 1 / 2 / 2;
+  border-top-left-radius: 18px;
+}
+.item-2 {
+  border-top-right-radius: 18px;
+  height: 170px;
+  grid-area: 1 / 2 / 2 / 3;
+}
+.item-3 {
+  height: 170px;
+  grid-area: 2 / 1 / 3 / 2;
+  border-bottom-left-radius: 18px;
+}
+.item-4 {
+  height: 170px;
+  grid-area: 2 / 2 / 3 / 3;
+  border-bottom-right-radius: 18px;
+}
+
+.item-5 {
+  height: 120px;
+  width: 120px;
+  grid-area: 3 / 1 / 4 / 2;
+  position: absolute;
+  transform: rotate(45deg);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  span {
+    transform: rotate(-45deg);
+  }
+}
+
+.icon {
+  bottom: 0px;
+  grid-area: 3 / 2 / 4 / 3;
+  left: 0;
+  position: absolute;
+  right: 0;
+  width: 82px;
+  height: 82px;
+  margin: auto;
+  clear: both;
+}
+
+.flex {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.flex:hover {
+  transition: ease-in-out 1s;
+}
+
+.blue-palette-1 {
+  background-color: #0e63a4;
+}
+
+.blue-palette-2 {
+  background-color: #0069ba;
+}
+
+.blue-palette-3 {
+  background-color: #0b5691;
+}
+
+.blue-palette-4 {
+  background-color: #094675;
+}
+
+.blue-palette-5 {
+  background-color: #0077D2;
+}
+
+.red-palette-1 {
+  background-color: #E33B3B;
+}
+
+.red-palette-2 {
+  background-color: #FF3F3F;
+}
+
+.red-palette-3 {
+  background-color: #CF3434;
+}
+
+.red-palette-4 {
+  background-color: #B83030;
+}
+
+.red-palette-5 {
+  background-color: #FF4A4A;
+}
+
+.turquoise-palette-1 {
+  background-color: #00B2AC;
+}
+
+.turquoise-palette-2 {
+  background-color: #A0D5D0;
+}
+
+.turquoise-palette-3 {
+  background-color: #009994;
+}
+
+.turquoise-palette-4 {
+  background-color: #267774;
+}
+
+.turquoise-palette-5 {
+  background-color: #1AC4BE;
+}
+
+.yellow-palette-1 {
+  background-color: #F2A700;
+}
+
+.yellow-palette-2 {
+  background-color: #FFB208;
+}
+
+.yellow-palette-3 {
+  background-color: #F89103;
+}
+
+.yellow-palette-4 {
+  background-color: #E88905;
+}
+
+.yellow-palette-5 {
+  background-color: #D67A00;
+}

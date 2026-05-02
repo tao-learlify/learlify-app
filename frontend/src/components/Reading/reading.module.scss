@@ -1,0 +1,45 @@
+.order {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background-color: white;
+  cursor: grab;
+}
+
+.margin {
+  margin: 0px 20px;
+  margin-bottom: 0;
+  min-width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.padding {
+  padding-bottom: 100px;
+}
+
+.table {
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+  color: #3c3c3c !important;
+
+  thead {
+    font-family: Dunkin;
+    background-color: #003E6D !important;
+    color: #FFFFFF !important;
+  }
+
+  option {
+    color: #3c3c3c !important;
+  }
+}

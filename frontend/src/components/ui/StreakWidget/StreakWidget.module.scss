@@ -1,0 +1,314 @@
+/* ── StreakWidget ─────────────────────────────────────────────────────────── */
+
+.widget {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  background: var(--color-bg-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-1);
+  padding: var(--space-4) var(--space-5);
+  border: 1.5px solid transparent;
+  transition:
+    border-color var(--duration-base) var(--easing-default),
+    box-shadow var(--duration-base) var(--easing-default);
+
+  &:not(.inactive) {
+    border-color: var(--color-warning-bg);
+    box-shadow: var(--shadow-1), 0 0 0 1px var(--color-warning-bg);
+  }
+}
+
+/* ── Sizes ─────────────────────────────────────────────────────────────────── */
+.sm {
+  padding: var(--space-3) var(--space-4);
+  gap: var(--space-2);
+  border-radius: var(--radius-md);
+
+  .count { font-size: var(--text-2xl); }
+  .flame { width: var(--icon-xl); height: var(--icon-xl); }
+}
+
+.md {
+  .count { font-size: var(--text-5xl); }
+  .flame { width: var(--icon-2xl); height: var(--icon-2xl); }
+}
+
+.lg {
+  padding: var(--space-5) var(--space-6);
+  gap: var(--space-4);
+
+  .count { font-size: var(--text-display); }
+  .flame { width: 48px; height: 48px; }
+}
+
+/* ── Inactive state ─────────────────────────────────────────────────────────── */
+.inactive {
+  opacity: 0.65;
+  filter: grayscale(0.4);
+}
+
+/* ── Flame ──────────────────────────────────────────────────────────────────── */
+.flameWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.flame {
+  display: block;
+  color: var(--color-accent-amber);
+  transition: transform var(--duration-base) var(--easing-bounce);
+}
+
+.flameActive .flame {
+  animation: flamePulse 1.8s ease-in-out infinite;
+}
+
+@keyframes flamePulse {
+  0%, 100% { transform: scale(1)   rotate(-3deg); }
+  50%       { transform: scale(1.15) rotate(3deg);  }
+}
+
+/* ── Content ────────────────────────────────────────────────────────────────── */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.countRow {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+}
+
+.count {
+  font-family: var(--font-display);
+  font-weight: var(--weight-black);
+  color: var(--color-warning);
+  line-height: 1;
+}
+
+.inactive .count {
+  color: var(--color-text-secondary);
+}
+
+.unit {
+  font-family: var(--font-base);
+  font-size: var(--text-base);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-secondary);
+}
+
+.recordBadge {
+  font-size: var(--text-base);
+  margin-left: var(--space-1);
+}
+
+.motivational {
+  font-family: var(--font-base);
+  font-size: var(--text-md);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-primary);
+  margin: 0;
+  white-space: nowrap;
+}
+
+.record {
+  font-family: var(--font-base);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* ── Inactive nudge ─────────────────────────────────────────────────────────── */
+.nudge {
+  margin-left: auto;
+  flex-shrink: 0;
+  font-family: var(--font-base);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-warning-text);
+  background: var(--color-warning-bg);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  margin-top: 10px;
+}
+
+/* ── FEATURED MODE (amber hero card) ────────────────────────────────────────── */
+.featured {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-5);
+  background: var(--color-accent-amber);
+  border: none;
+  box-shadow: var(--shadow-chunky-amber);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-8) var(--space-6);
+}
+
+.featuredInactive {
+  opacity: 0.75;
+  filter: grayscale(0.3);
+}
+
+/* Matches code.html: circular bg icon container, then count + text below */
+.featuredTop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.featuredFlameCircle {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.featuredFlame {
+  color: #ffffff;
+  animation: flamePulse 1.8s ease-in-out infinite;
+}
+
+.featuredCountWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.featuredCount {
+  font-family: var(--font-display);
+  font-weight: var(--weight-black);
+  font-size: var(--text-display);
+  color: #ffffff;
+  line-height: 1;
+}
+
+.featuredUnit {
+  font-family: var(--font-base);
+  font-size: var(--text-md);
+  font-weight: var(--weight-semibold);
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: var(--space-12);
+}
+
+.featuredRecord {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  margin-left: auto;
+  font-family: var(--font-base);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-bold);
+  color: var(--color-accent-amber-dark);
+  background: rgba(255, 255, 255, 0.5);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+}
+
+/* ── Week day tracker ────────────────────────────────────────────────────────── */
+/* Matches code.html: white rounded squares with letter inside */
+.weekRow {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-2);
+  width: 100%;
+}
+
+/* Each square: pending = dashed white outline, done = solid white fill */
+.dayDot {
+  flex: 1;
+  height: 36px;
+  border-radius: var(--radius-xs);
+  background: rgba(255, 255, 255, 0.35);
+  border: 2px dashed rgba(255, 255, 255, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--duration-base), border-color var(--duration-base);
+}
+
+.dayDotDone {
+  background: #ffffff;
+  border-color: #ffffff;
+  border-style: solid;
+}
+
+/* Label inside each square */
+.dayLabel {
+  font-family: var(--font-base);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-black);
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+/* When the day is done, use amber text (matching code.html text-accent-amber) */
+.dayLabelDone {
+  color: var(--color-accent-amber);
+}
+
+/* ── Daily goal ──────────────────────────────────────────────────────────────── */
+.goalSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  width: 100%;
+}
+
+.goalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.goalLabel {
+  font-family: var(--font-base);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.goalValue {
+  font-family: var(--font-base);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-bold);
+  color: #ffffff;
+}
+
+.goalTrack {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+
+.goalFill {
+  height: 100%;
+  background: #ffffff;
+  border-radius: var(--radius-pill);
+  transition: width var(--duration-slow) var(--easing-default);
+}
+
+/* ── Featured nudge ──────────────────────────────────────────────────────────── */
+.featuredNudge {
+  font-family: var(--font-base);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+  text-align: center;
+}

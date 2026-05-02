@@ -1,0 +1,93 @@
+import { Router } from 'express'
+import { Logger } from 'api/logger'
+import { Middleware } from 'middlewares'
+import { authLimiter } from 'middlewares/rateLimit'
+import { pipe } from './authentication.pipe'
+import { AuthenticationController } from './authentication.controller'
+import { isRunningOnProductionOrDevelopment } from 'functions'
+import type { HttpConsumer } from '@types'
+
+export class AuthenticationRouter {
+  private auth: Router
+  private logger = Logger.Service
+  private controller: AuthenticationController
+
+  constructor() {
+    this.auth = Router()
+    this.controller = new AuthenticationController()
+  }
+
+  httpConsumer(): HttpConsumer {
+    if (isRunningOnProductionOrDevelopment()) {
+      this.logger.info('http: /auth')
+    }
+
+    this.auth.post(
+      '/register',
+      [authLimiter, ...pipe.signUp, Middleware.usePipe, Middleware.LanguageGuard],
+      Middleware.secure(this.controller.signUp)
+    )
+
+    this.auth.post(
+      '/login',
+      [authLimiter, ...pipe.signIn, Middleware.usePipe],
+      Middleware.secure(this.controller.signIn)
+    )
+
+    this.auth.post(
+      '/social/google',
+      [authLimiter, ...pipe.googleLogin, Middleware.usePipe, Middleware.LanguageGuard],
+      Middleware.secure(this.controller.googleLogin)
+    )
+
+    this.auth.post(
+      '/social/facebook',
+      [authLimiter, ...pipe.facebookLogin, Middleware.usePipe, Middleware.LanguageGuard],
+      Middleware.secure(this.controller.facebookLogin)
+    )
+
+    this.auth.put(
+      '/verify',
+      [...pipe.verifiy, Middleware.usePipe],
+      Middleware.secure(this.controller.verification)
+    )
+
+    this.auth.post(
+      '/forgot',
+      [authLimiter, ...pipe.forgot, Middleware.usePipe, Middleware.LanguageGuard],
+      Middleware.secure(this.controller.forgot)
+    )
+
+    this.auth.post(
+      '/refresh-token',
+      [
+        Middleware.authenticate,
+        Middleware.noDemoReferrer,
+        ...pipe.refresh,
+        Middleware.usePipe
+      ],
+      Middleware.secure(this.controller.refreshToken)
+    )
+
+    this.auth.put(
+      '/reset',
+      [...pipe.reset, Middleware.usePipe],
+      Middleware.secure(this.controller.resetPassword)
+    )
+
+    this.auth.get('/demo', authLimiter, Middleware.secure(this.controller.demoUser))
+
+    this.auth.post(
+      '/logout',
+      [Middleware.authenticate],
+      Middleware.secure(this.controller.logout)
+    )
+
+    return {
+      route: '/auth',
+      handlers: this.auth
+    }
+  }
+}
+
+export default new AuthenticationRouter().httpConsumer()

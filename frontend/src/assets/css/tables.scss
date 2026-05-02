@@ -1,0 +1,77 @@
+.table-style {
+  border: 2px solid #b2b2b2;
+  border-radius: 20px;
+  border-spacing: 0;
+  border-collapse: separate;
+  min-width: 200px;
+}
+
+.table-style thead tr th {
+  color: white;
+  background: #2e353d;
+}
+
+.table-style-alter thead tr th {
+  color: white;
+  background: transparent;
+}
+
+.table-base th {
+  border-top: none;
+}
+
+/* top-left border-radius */
+table-base tr:first-child th:first-child {
+  border-top-left-radius: 20px;
+}
+
+/* top-right border-radius */
+table-base tr:first-child th:last-child {
+  border-top-right-radius: 20px;
+}
+
+/* bottom-left border-radius */
+table-base tr:last-child td:first-child {
+  border-bottom-left-radius: 206px;
+}
+
+/* bottom-right border-radius */
+table-base tr:last-child td:last-child {
+  border-bottom-right-radius: 20px;
+}
+
+
+.nobullets {
+  list-style-type: none;
+}
+
+.table-fonts{
+  margin-bottom: 2rem;
+}
+
+.table-fonts th{
+  background-color:#f0f0f0;
+}
+.table-fonts td, th{
+  padding: .2rem;
+}
+
+.table-fonts tr{
+  text-align: center;
+}
+
+/* top-right border-radius */
+.table-fonts tr:first-child td:last-child {
+  border-top-right-radius: 20px;
+}
+
+/* bottom-left border-radius */
+.table-fonts tr:last-child th:first-child {
+  border-bottom-left-radius: 20px;
+}
+
+@media screen and (max-width: 420px){
+  .table-fonts th, td{
+    font-size: 14px! important;
+  }
+}

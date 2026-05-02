@@ -1,0 +1,182 @@
+/* ==========================================================================
+   Button — Unified button component.
+   Replaces: components/Button.js (styled-components) + btnPrimary copy-pastes.
+   ========================================================================== */
+
+/* ── BASE ─────────────────────────────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  border: none;
+  font-family: var(--font-base);
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  white-space: nowrap;
+  text-decoration: none;
+  position: relative;
+  min-height: 44px; /* WCAG 2.5.5 minimum touch target */
+  transition:
+    background-color var(--duration-base) var(--easing-default),
+    border-color var(--duration-base) var(--easing-default),
+    color var(--duration-base) var(--easing-default),
+    box-shadow var(--duration-base) var(--easing-default),
+    transform var(--duration-fast) var(--easing-default),
+    opacity var(--duration-fast) var(--easing-default);
+
+  &:focus-visible {
+    outline: 2px solid var(--color-border-focus);
+    outline-offset: 2px;
+  }
+}
+
+/* ── VARIANTS ─────────────────────────────────────────────────────────────── */
+.primary {
+  background-color: var(--color-brand-primary);
+  color: var(--color-text-inverse);
+  border-radius: var(--radius-pill);
+
+  &:hover:not(.disabled):not(:disabled) {
+    background-color: var(--color-brand-primary-dark);
+    box-shadow: var(--shadow-2);
+    transform: translateY(-1px);
+  }
+
+  &:active:not(.disabled):not(:disabled) {
+    transform: translateY(0);
+    box-shadow: var(--shadow-1);
+  }
+}
+
+/* ── CHUNKY — Duolingo-style button (template spec) ────────────────────────── */
+/*
+ * Apply alongside variant: <Button variant="primary" chunky>
+ * Overrides: radius to --radius-lg, adds chunky shadow, press animation.
+ * Use for hero CTAs (RESUME LEARNING, CONTINUE, etc.)
+ */
+.chunky {
+  border-radius: var(--radius-lg) !important; /* rounded-2xl, not pill */
+  font-weight: var(--weight-black) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  transition:
+    transform var(--duration-fast) var(--easing-default),
+    box-shadow var(--duration-fast) var(--easing-default),
+    background-color var(--duration-base) var(--easing-default) !important;
+
+  /* Add bottom chunky shadow based on variant */
+  &.primary {
+    box-shadow: var(--shadow-chunky-primary) !important;
+
+    &:hover:not(.disabled):not(:disabled) {
+      transform: none !important;
+      box-shadow: var(--shadow-chunky-primary) !important;
+    }
+
+    &:active:not(.disabled):not(:disabled) {
+      transform: translateY(4px) !important;
+      box-shadow: none !important;
+    }
+  }
+}
+
+.secondary {
+  background-color: transparent;
+  color: var(--color-brand-primary);
+  border: 1.5px solid var(--color-brand-primary);
+  border-radius: var(--radius-pill);
+
+  &:hover:not(.disabled):not(:disabled) {
+    background-color: var(--color-brand-primary-light);
+  }
+
+  &:active:not(.disabled):not(:disabled) {
+    background-color: var(--color-brand-primary-light);
+  }
+}
+
+.ghost {
+  background-color: transparent;
+  color: var(--color-brand-primary);
+  border-radius: var(--radius-md);
+
+  &:hover:not(.disabled):not(:disabled) {
+    background-color: var(--color-bg-muted);
+  }
+
+  &:active:not(.disabled):not(:disabled) {
+    background-color: var(--color-bg-interactive);
+  }
+}
+
+.danger {
+  background-color: var(--color-danger);
+  color: var(--color-text-inverse);
+  border-radius: var(--radius-pill);
+
+  &:hover:not(.disabled):not(:disabled) {
+    background-color: #b91c1c; /* danger-dark — one step darker */
+    box-shadow: var(--shadow-2);
+    transform: translateY(-1px);
+  }
+
+  &:active:not(.disabled):not(:disabled) {
+    transform: translateY(0);
+  }
+}
+
+/* ── SIZES ────────────────────────────────────────────────────────────────── */
+.sm {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+  min-height: 32px;
+}
+
+.md {
+  padding: var(--space-3) var(--space-6);
+  font-size: var(--text-md);
+}
+
+.lg {
+  padding: var(--space-4) var(--space-10);  /* matches template px-10 py-4 */
+  font-size: var(--text-lg);
+}
+
+/* ── STATES ───────────────────────────────────────────────────────────────── */
+.disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.loading {
+  cursor: wait;
+  pointer-events: none;
+}
+
+.loadingText {
+  visibility: hidden;
+}
+
+.spinner {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: var(--radius-pill);
+  animation: spin 0.6s linear infinite;
+}
+
+/* ── FULL WIDTH ───────────────────────────────────────────────────────────── */
+.fullWidth {
+  width: 100%;
+}
+
+/* ── ANIMATION ────────────────────────────────────────────────────────────── */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

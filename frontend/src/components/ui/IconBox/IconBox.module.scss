@@ -1,0 +1,33 @@
+/* ==========================================================================
+   IconBox — Rounded icon container. Phosphor Icons system.
+   Usage: wrap any icon in <IconBox color="primary" size="md">
+   ========================================================================== */
+
+.box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ── SIZES ─────────────────────────────────────────────────────────────────── */
+.size-sm  { width: var(--icon-box-sm);  height: var(--icon-box-sm);  }
+.size-md  { width: var(--icon-box-md);  height: var(--icon-box-md);  }
+.size-lg  { width: var(--icon-box-lg);  height: var(--icon-box-lg);  }
+.size-xl  { width: var(--icon-box-xl);  height: var(--icon-box-xl);  }
+.size-2xl { width: var(--icon-box-2xl); height: var(--icon-box-2xl); }
+
+/* ── RADIUS ────────────────────────────────────────────────────────────────── */
+.radius-md   { border-radius: var(--radius-md);   }
+.radius-lg   { border-radius: var(--radius-lg);   }
+.radius-xl   { border-radius: var(--radius-xl);   }
+.radius-2xl  { border-radius: var(--radius-2xl);  }
+.radius-full { border-radius: var(--radius-pill);  }
+
+/* ── COLORS ────────────────────────────────────────────────────────────────── */
+.color-primary  { background: var(--icon-bg-primary);  color: var(--icon-color-primary);  }
+.color-accent   { background: var(--icon-bg-accent);   color: var(--icon-color-accent);   }
+.color-amber    { background: var(--icon-bg-amber);    color: var(--icon-color-amber);    }
+.color-teal     { background: var(--icon-bg-teal);     color: var(--icon-color-teal);     }
+.color-progress { background: var(--icon-bg-progress); color: var(--icon-color-progress); }
+.color-muted    { background: var(--icon-bg-muted);    color: var(--icon-color-secondary); }

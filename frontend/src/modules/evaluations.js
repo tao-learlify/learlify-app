@@ -1,0 +1,5 @@
+export const STATUS = {
+  EVALUATED: 'EVALUATED',
+  PENDING: 'PENDING',
+  TAKEN: 'TAKEN'
+}

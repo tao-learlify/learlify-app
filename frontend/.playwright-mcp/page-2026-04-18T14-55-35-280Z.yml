@@ -1,0 +1,56 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - generic [ref=e8]:
+          - generic [ref=e9]: Unit 1
+          - heading "Daily Routines" [level=1] [ref=e10]
+        - generic [ref=e11]:
+          - generic [ref=e12]:
+            - img [ref=e13]
+            - generic [ref=e15]: "0"
+            - generic [ref=e16]: / 250 XP
+          - generic [ref=e17]: 🐼
+      - progressbar [ref=e18]
+  - main [ref=e19]:
+    - generic [ref=e20]:
+      - generic [ref=e66]:
+        - generic [ref=e67]: Block 6 of 27
+        - generic [ref=e68]: 19%
+      - generic [ref=e97]:
+        - generic [ref=e98]:
+          - generic [ref=e99]: 📐
+          - generic [ref=e100]: grammar
+        - generic [ref=e101]: ·
+        - generic [ref=e102]: Practice
+      - generic [ref=e161]:
+        - generic [ref=e162]:
+          - generic [ref=e163]:
+            - paragraph [ref=e164]: Grammar Exercise 2
+            - paragraph [ref=e165]: Continue reading. Complete each gap with the correct verb form.
+          - generic [ref=e167]:
+            - img [ref=e168]
+            - generic [ref=e170]: 10 XP
+        - generic [ref=e172]:
+          - paragraph [ref=e173]: Continue reading. Complete each gap with the correct verb form.
+          - generic [ref=e174]:
+            - generic [ref=e175]:
+              - paragraph [ref=e176]:
+                - generic [ref=e177]: "1"
+                - text: Paul
+                - generic [ref=e178]: · · ·
+                - text: very old trainers, so he
+              - generic [ref=e179]:
+                - button "have" [ref=e180] [cursor=pointer]
+                - button "having" [ref=e181] [cursor=pointer]
+                - button "has" [ref=e182] [cursor=pointer]
+            - generic [ref=e183]:
+              - paragraph [ref=e184]:
+                - generic [ref=e185]: "2"
+                - generic [ref=e186]: · · ·
+                - text: to buy a new pair.
+              - generic [ref=e187]:
+                - button "is wanting" [ref=e188] [cursor=pointer]
+                - button "wants" [ref=e189] [cursor=pointer]
+                - button "is want" [ref=e190] [cursor=pointer]
+          - button "Check answers" [disabled] [ref=e192]

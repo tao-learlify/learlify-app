@@ -1,0 +1,53 @@
+.radio {
+  padding-bottom: 0.5px;
+}
+
+.container {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  padding-bottom: 120px;
+}
+
+.dropdown {
+  margin-top: 6.5px;
+  margin-bottom: 6.5px;
+  position: relative;
+  top: 8px;
+}
+
+.flex {
+  padding-left: 30px;
+}
+
+.listening {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 30px;
+
+  div {
+    margin-right: 15px;
+  } 
+
+  p {
+    margin: 0;
+  }
+}
+
+.padding {
+  padding-left: 30px;
+}
+
+.radios {
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+
+  div {
+    margin-right: 15px;
+  }
+
+  p {
+    margin: 0;
+  }
+}

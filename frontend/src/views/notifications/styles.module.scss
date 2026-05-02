@@ -1,0 +1,35 @@
+.unread {
+  transition: ease-in-out 2s;
+  opacity: 0.8;
+  background-color: #E9ECEF;
+}
+
+.mark {
+  display: flex;
+  justify-content: center;
+}
+
+.uptodate {
+  display: flex;
+  justify-content: center;
+}
+
+.mark:hover {
+  transition: ease-in-out 0.9s;
+  color: #00CCC6 !important;
+  cursor: pointer;
+}
+
+.context {
+  position: absolute;
+  bottom: 1px;
+}
+
+.margin {
+  margin-left: 5px;
+}
+
+.icon {
+  position: relative;
+  bottom: 1px;
+}

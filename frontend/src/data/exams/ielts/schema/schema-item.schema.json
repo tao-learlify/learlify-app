@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "category": {
+      "type": "string",
+      "enum": [
+        "Grammar & Vocabulary",
+        "Reading",
+        "Listening",
+        "Writing",
+        "Speaking"
+      ]
+    },
+    "exercises": {
+      "type": "array",
+      "items": {
+        "$ref": "./exercise.schema.json"
+      }
+    }
+  },
+  "required": ["category", "exercises"]
+}

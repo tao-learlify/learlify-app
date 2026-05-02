@@ -1,0 +1,33 @@
+.container {
+  background-color: #003e6d;
+  color: #FFFFFF !important;
+  border-radius: 30px;
+  padding: 20px;
+  position: relative;
+  height: 100%;
+
+  thead {
+    background-color: #00CCC6;
+
+    th {
+      border: none !important;
+    }
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  height: 93%;
+}
+
+.position {
+  position: absolute;
+  top: 175px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+}

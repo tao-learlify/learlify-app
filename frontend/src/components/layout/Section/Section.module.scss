@@ -1,0 +1,42 @@
+.section {
+  width: 100%;
+}
+
+/* Spacing variants */
+.sm  { padding-bottom: var(--space-6); }
+.md  { padding-bottom: var(--space-8); }
+.lg  { padding-bottom: var(--space-12); }
+
+/* ── Section Header ───────────────────────────────────────────────────────── */
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.headerText {
+  flex: 1;
+  min-width: 0;
+}
+
+.title {
+  font-family: var(--font-base);
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-bold);
+  color: var(--color-text-primary);
+  line-height: var(--leading-tight);
+  margin: 0;
+}
+
+.subtitle {
+  font-size: var(--text-md);
+  color: var(--color-text-secondary);
+  margin-top: var(--space-1);
+  line-height: var(--leading-relaxed);
+}
+
+.action {
+  flex-shrink: 0;
+}

@@ -1,0 +1,10 @@
+node_modules
+build
+dist
+meta.json
+.env.production
+.env.development
+.vscode
+.DS_Store
+config-assets.js
+/cli

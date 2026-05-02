@@ -1,0 +1,387 @@
+[      62ms] [WARNING] [Meta pixel] 334261123905448 is unavailable on this website due to it's traffic permission settings. Go to https://www.facebook.com/business/help/572690630080597 to learn more. @ https://connect.facebook.net/en_US/fbevents.js:181
+[     360ms] [WARNING] The keyword 'slider-vertical' specified to an 'appearance' property is not standardized. It will be removed in the future. Use <input type=range style="writing-mode: vertical-lr; direction: rtl"> instead. @ http://localhost:3000/@vite/client:801
+[     504ms] [WARNING] The object notation for `createSlice.extraReducers` is deprecated, and will be removed in RTK 2.0. Please use the 'builder callback' notation instead: https://redux-toolkit.js.org/api/createSlice @ http://localhost:3000/node_modules/.vite/deps/@reduxjs_toolkit.js?v=5c8c1912:1540
+[     654ms] TypeError: Cannot read properties of null (reading 'isVerified')
+    at http://localhost:3000/src/hocs/index.js?t=1776527003727:10:23
+    at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:11478:26)
+    at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:13654:21)
+    at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:14483:22)
+    at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3901:22)
+    at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3926:24)
+    at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3960:39)
+    at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:17637:15)
+    at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:16861:20)
+    at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:16815:13)
+[     518ms] [ERROR] The above error occurred in one of your React components:
+
+    at http://localhost:3000/src/hocs/index.js?t=1776527003727:9:16
+    at Route2 (http://localhost:3000/node_modules/.vite/deps/chunk-E6C32HRJ.js?v=5c8c1912:1842:33)
+    at Switch2 (http://localhost:3000/node_modules/.vite/deps/chunk-E6C32HRJ.js?v=5c8c1912:1956:33)
+    at Router2 (http://localhost:3000/node_modules/.vite/deps/chunk-E6C32HRJ.js?v=5c8c1912:1700:34)
+    at BrowserRouter2 (http://localhost:3000/node_modules/.vite/deps/chunk-VPCH7UY2.js?v=5c8c1912:107:39)
+    at Root
+    at EventSourceProvider (http://localhost:3000/src/providers/EventSource.js:4:32)
+    at WebSockets (http://localhost:3000/src/providers/WebSockets.js:4:23)
+    at Elements2 (http://localhost:3000/node_modules/.vite/deps/@stripe_react-stripe-js.js?v=5c8c1912:226:28)
+    at Stripe (http://localhost:3000/src/components/Stripe/index.js:8:19)
+    at App (http://localhost:3000/src/App.js?t=1776527522580:17:16)
+    at I18nextProvider (http://localhost:3000/node_modules/.vite/deps/react-i18next.js?v=5c8c1912:788:19)
+    at Provider (http://localhost:3000/node_modules/.vite/deps/react-redux.js?v=5c8c1912:168:20)
+    at Suspense
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries. @ http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:15118
+[     655ms] TypeError: Cannot read properties of null (reading 'isVerified')
+    at http://localhost:3000/src/hocs/index.js?t=1776527003727:10:23
+    at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:11478:26)
+    at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:13654:21)
+    at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:14483:22)
+    at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3901:22)
+    at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3926:24)
+    at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3960:39)
+    at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:17637:15)
+    at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:16861:20)
+    at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:16815:13)
+[     556ms] [WARNING] WebSocket connection to 'ws://localhost:3100/socket.io/?EIO=4&transport=websocket&sid=B2ZC4stOwhzCfQxNAABy' failed: WebSocket is closed before the connection is established. @ http://localhost:3000/node_modules/.vite/deps/socket__io-client.js?v=5c8c1912:1499
+[     556ms] [ERROR] Failed to load resource: the server responded with a status of 429 (Too Many Requests) @ http://localhost:3100/:0
+[     566ms] [WARNING] You may test your Stripe.js integration over HTTP. However, live Stripe.js integrations must use HTTPS. @ https://js.stripe.com/v3:0
+[     698ms] [WARNING] Error while trying to use the following icon from the Manifest: http://localhost:3000/images/icons/icon-144x144.png (Resource size is not correct - typo in the Manifest?) @ http://localhost:3000/dashboard:0
+[   61158ms] [WARNING] [Meta pixel] 334261123905448 is unavailable on this website due to it's traffic permission settings. Go to https://www.facebook.com/business/help/572690630080597 to learn more. @ https://connect.facebook.net/en_US/fbevents.js:181
+[   61471ms] [WARNING] The keyword 'slider-vertical' specified to an 'appearance' property is not standardized. It will be removed in the future. Use <input type=range style="writing-mode: vertical-lr; direction: rtl"> instead. @ http://localhost:3000/@vite/client:801
+[   61556ms] [WARNING] The object notation for `createSlice.extraReducers` is deprecated, and will be removed in RTK 2.0. Please use the 'builder callback' notation instead: https://redux-toolkit.js.org/api/createSlice @ http://localhost:3000/node_modules/.vite/deps/@reduxjs_toolkit.js?v=5c8c1912:1540
+[   61730ms] TypeError: Cannot read properties of null (reading 'isVerified')
+    at http://localhost:3000/src/hocs/index.js?t=1776527003727:10:23
+    at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:11478:26)
+    at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:13654:21)
+    at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:14483:22)
+    at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3901:22)
+    at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3926:24)
+    at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3960:39)
+    at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:17637:15)
+    at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:16861:20)
+    at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:16815:13)
+[   61564ms] [ERROR] The above error occurred in one of your React components:
+
+    at http://localhost:3000/src/hocs/index.js?t=1776527003727:9:16
+    at Route2 (http://localhost:3000/node_modules/.vite/deps/chunk-E6C32HRJ.js?v=5c8c1912:1842:33)
+    at Switch2 (http://localhost:3000/node_modules/.vite/deps/chunk-E6C32HRJ.js?v=5c8c1912:1956:33)
+    at Router2 (http://localhost:3000/node_modules/.vite/deps/chunk-E6C32HRJ.js?v=5c8c1912:1700:34)
+    at BrowserRouter2 (http://localhost:3000/node_modules/.vite/deps/chunk-VPCH7UY2.js?v=5c8c1912:107:39)
+    at Root
+    at EventSourceProvider (http://localhost:3000/src/providers/EventSource.js:4:32)
+    at WebSockets (http://localhost:3000/src/providers/WebSockets.js:4:23)
+    at Elements2 (http://localhost:3000/node_modules/.vite/deps/@stripe_react-stripe-js.js?v=5c8c1912:226:28)
+    at Stripe (http://localhost:3000/src/components/Stripe/index.js:8:19)
+    at App (http://localhost:3000/src/App.js?t=1776527697108:17:16)
+    at I18nextProvider (http://localhost:3000/node_modules/.vite/deps/react-i18next.js?v=5c8c1912:788:19)
+    at Provider (http://localhost:3000/node_modules/.vite/deps/react-redux.js?v=5c8c1912:168:20)
+    at Suspense
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries. @ http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:15118
+[   61731ms] TypeError: Cannot read properties of null (reading 'isVerified')
+    at http://localhost:3000/src/hocs/index.js?t=1776527003727:10:23
+    at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:11478:26)
+    at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:13654:21)
+    at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:14483:22)
+    at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3901:22)
+    at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3926:24)
+    at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3960:39)
+    at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:17637:15)
+    at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:16861:20)
+    at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:16815:13)
+[   61596ms] [ERROR] Failed to load resource: the server responded with a status of 429 (Too Many Requests) @ http://localhost:3100/:0
+[   61596ms] [WARNING] WebSocket connection to 'ws://localhost:3100/socket.io/?EIO=4&transport=websocket&sid=su6G7osDT5IxGzU9AAB0' failed: WebSocket is closed before the connection is established. @ http://localhost:3000/node_modules/.vite/deps/socket__io-client.js?v=5c8c1912:1499
+[   61695ms] [WARNING] You may test your Stripe.js integration over HTTP. However, live Stripe.js integrations must use HTTPS. @ https://js.stripe.com/v3:0
+[   61755ms] [WARNING] Error while trying to use the following icon from the Manifest: http://localhost:3000/images/icons/icon-144x144.png (Resource size is not correct - typo in the Manifest?) @ http://localhost:3000/dashboard:0
+[   66708ms] [WARNING] [Meta pixel] 334261123905448 is unavailable on this website due to it's traffic permission settings. Go to https://www.facebook.com/business/help/572690630080597 to learn more. @ https://connect.facebook.net/en_US/fbevents.js:181
+[   66942ms] [WARNING] The keyword 'slider-vertical' specified to an 'appearance' property is not standardized. It will be removed in the future. Use <input type=range style="writing-mode: vertical-lr; direction: rtl"> instead. @ http://localhost:3000/@vite/client:801
+[   67039ms] [WARNING] The object notation for `createSlice.extraReducers` is deprecated, and will be removed in RTK 2.0. Please use the 'builder callback' notation instead: https://redux-toolkit.js.org/api/createSlice @ http://localhost:3000/node_modules/.vite/deps/@reduxjs_toolkit.js?v=5c8c1912:1540
+[   67227ms] TypeError: Cannot read properties of null (reading 'isVerified')
+    at http://localhost:3000/src/hocs/index.js?t=1776527003727:10:23
+    at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:11478:26)
+    at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:13654:21)
+    at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:14483:22)
+    at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3901:22)
+    at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3926:24)
+    at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3960:39)
+    at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:17637:15)
+    at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:16861:20)
+    at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:16815:13)
+[   67048ms] [ERROR] The above error occurred in one of your React components:
+
+    at http://localhost:3000/src/hocs/index.js?t=1776527003727:9:16
+    at Route2 (http://localhost:3000/node_modules/.vite/deps/chunk-E6C32HRJ.js?v=5c8c1912:1842:33)
+    at Switch2 (http://localhost:3000/node_modules/.vite/deps/chunk-E6C32HRJ.js?v=5c8c1912:1956:33)
+    at Router2 (http://localhost:3000/node_modules/.vite/deps/chunk-E6C32HRJ.js?v=5c8c1912:1700:34)
+    at BrowserRouter2 (http://localhost:3000/node_modules/.vite/deps/chunk-VPCH7UY2.js?v=5c8c1912:107:39)
+    at Root
+    at EventSourceProvider (http://localhost:3000/src/providers/EventSource.js:4:32)
+    at WebSockets (http://localhost:3000/src/providers/WebSockets.js:4:23)
+    at Elements2 (http://localhost:3000/node_modules/.vite/deps/@stripe_react-stripe-js.js?v=5c8c1912:226:28)
+    at Stripe (http://localhost:3000/src/components/Stripe/index.js:8:19)
+    at App (http://localhost:3000/src/App.js?t=1776527702609:17:16)
+    at I18nextProvider (http://localhost:3000/node_modules/.vite/deps/react-i18next.js?v=5c8c1912:788:19)
+    at Provider (http://localhost:3000/node_modules/.vite/deps/react-redux.js?v=5c8c1912:168:20)
+    at Suspense
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries. @ http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:15118
+[   67227ms] TypeError: Cannot read properties of null (reading 'isVerified')
+    at http://localhost:3000/src/hocs/index.js?t=1776527003727:10:23
+    at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:11478:26)
+    at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:13654:21)
+    at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:14483:22)
+    at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3901:22)
+    at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3926:24)
+    at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3960:39)
+    at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:17637:15)
+    at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:16861:20)
+    at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:16815:13)
+[   67061ms] [WARNING] You may test your Stripe.js integration over HTTP. However, live Stripe.js integrations must use HTTPS. @ https://js.stripe.com/v3:0
+[   67072ms] [WARNING] WebSocket connection to 'ws://localhost:3100/socket.io/?EIO=4&transport=websocket&sid=OAl4jaCt9vaz6qdJAAB2' failed: WebSocket is closed before the connection is established. @ http://localhost:3000/node_modules/.vite/deps/socket__io-client.js?v=5c8c1912:1499
+[   67073ms] [ERROR] Failed to load resource: the server responded with a status of 429 (Too Many Requests) @ http://localhost:3100/:0
+[   67249ms] [WARNING] Error while trying to use the following icon from the Manifest: http://localhost:3000/images/icons/icon-144x144.png (Resource size is not correct - typo in the Manifest?) @ http://localhost:3000/dashboard:0
+[  160291ms] [WARNING] [Meta pixel] 334261123905448 is unavailable on this website due to it's traffic permission settings. Go to https://www.facebook.com/business/help/572690630080597 to learn more. @ https://connect.facebook.net/en_US/fbevents.js:181
+[  160532ms] [WARNING] The keyword 'slider-vertical' specified to an 'appearance' property is not standardized. It will be removed in the future. Use <input type=range style="writing-mode: vertical-lr; direction: rtl"> instead. @ http://localhost:3000/@vite/client:801
+[  160617ms] [WARNING] The object notation for `createSlice.extraReducers` is deprecated, and will be removed in RTK 2.0. Please use the 'builder callback' notation instead: https://redux-toolkit.js.org/api/createSlice @ http://localhost:3000/node_modules/.vite/deps/@reduxjs_toolkit.js?v=5c8c1912:1540
+[  160750ms] TypeError: Cannot read properties of null (reading 'isVerified')
+    at http://localhost:3000/src/hocs/index.js?t=1776527003727:10:23
+    at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:11478:26)
+    at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:13654:21)
+    at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:14483:22)
+    at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3901:22)
+    at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3926:24)
+    at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3960:39)
+    at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:17637:15)
+    at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:16861:20)
+    at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:16815:13)
+[  160628ms] [ERROR] The above error occurred in one of your React components:
+
+    at http://localhost:3000/src/hocs/index.js?t=1776527003727:9:16
+    at Route2 (http://localhost:3000/node_modules/.vite/deps/chunk-E6C32HRJ.js?v=5c8c1912:1842:33)
+    at Switch2 (http://localhost:3000/node_modules/.vite/deps/chunk-E6C32HRJ.js?v=5c8c1912:1956:33)
+    at Router2 (http://localhost:3000/node_modules/.vite/deps/chunk-E6C32HRJ.js?v=5c8c1912:1700:34)
+    at BrowserRouter2 (http://localhost:3000/node_modules/.vite/deps/chunk-VPCH7UY2.js?v=5c8c1912:107:39)
+    at Root
+    at EventSourceProvider (http://localhost:3000/src/providers/EventSource.js:4:32)
+    at WebSockets (http://localhost:3000/src/providers/WebSockets.js:4:23)
+    at Elements2 (http://localhost:3000/node_modules/.vite/deps/@stripe_react-stripe-js.js?v=5c8c1912:226:28)
+    at Stripe (http://localhost:3000/src/components/Stripe/index.js:8:19)
+    at App (http://localhost:3000/src/App.js?t=1776527702609:17:16)
+    at I18nextProvider (http://localhost:3000/node_modules/.vite/deps/react-i18next.js?v=5c8c1912:788:19)
+    at Provider (http://localhost:3000/node_modules/.vite/deps/react-redux.js?v=5c8c1912:168:20)
+    at Suspense
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries. @ http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:15118
+[  160750ms] TypeError: Cannot read properties of null (reading 'isVerified')
+    at http://localhost:3000/src/hocs/index.js?t=1776527003727:10:23
+    at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:11478:26)
+    at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:13654:21)
+    at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:14483:22)
+    at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3901:22)
+    at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3926:24)
+    at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3960:39)
+    at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:17637:15)
+    at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:16861:20)
+    at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:16815:13)
+[  160647ms] [ERROR] Failed to load resource: the server responded with a status of 429 (Too Many Requests) @ http://localhost:3100/:0
+[  160648ms] [WARNING] WebSocket connection to 'ws://localhost:3100/socket.io/?EIO=4&transport=websocket&sid=p1TDkAmZCwBBBZY_AAB4' failed: WebSocket is closed before the connection is established. @ http://localhost:3000/node_modules/.vite/deps/socket__io-client.js?v=5c8c1912:1499
+[  160654ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3100/socket.io/?EIO=4&transport=polling&t=is4woree&sid=p1TDkAmZCwBBBZY_AAB4:0
+[  160675ms] [WARNING] You may test your Stripe.js integration over HTTP. However, live Stripe.js integrations must use HTTPS. @ https://js.stripe.com/v3:0
+[  160771ms] [WARNING] Error while trying to use the following icon from the Manifest: http://localhost:3000/images/icons/icon-144x144.png (Resource size is not correct - typo in the Manifest?) @ http://localhost:3000/dashboard:0
+[  638774ms] [WARNING] The keyword 'slider-vertical' specified to an 'appearance' property is not standardized. It will be removed in the future. Use <input type=range style="writing-mode: vertical-lr; direction: rtl"> instead. @ http://localhost:3000/@vite/client:801
+[  638976ms] [WARNING] The object notation for `createSlice.extraReducers` is deprecated, and will be removed in RTK 2.0. Please use the 'builder callback' notation instead: https://redux-toolkit.js.org/api/createSlice @ http://localhost:3000/node_modules/.vite/deps/@reduxjs_toolkit.js?v=5c8c1912:1540
+[  639613ms] TypeError: Cannot read properties of null (reading 'isVerified')
+    at http://localhost:3000/src/hocs/index.js?t=1776527003727:10:23
+    at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:11478:26)
+    at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:13654:21)
+    at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:14483:22)
+    at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3901:22)
+    at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3926:24)
+    at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3960:39)
+    at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:17637:15)
+    at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:16861:20)
+    at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:16815:13)
+[  638998ms] [ERROR] The above error occurred in one of your React components:
+
+    at http://localhost:3000/src/hocs/index.js?t=1776527003727:9:16
+    at Route2 (http://localhost:3000/node_modules/.vite/deps/chunk-E6C32HRJ.js?v=5c8c1912:1842:33)
+    at Switch2 (http://localhost:3000/node_modules/.vite/deps/chunk-E6C32HRJ.js?v=5c8c1912:1956:33)
+    at Router2 (http://localhost:3000/node_modules/.vite/deps/chunk-E6C32HRJ.js?v=5c8c1912:1700:34)
+    at BrowserRouter2 (http://localhost:3000/node_modules/.vite/deps/chunk-VPCH7UY2.js?v=5c8c1912:107:39)
+    at Root
+    at EventSourceProvider (http://localhost:3000/src/providers/EventSource.js:4:32)
+    at WebSockets (http://localhost:3000/src/providers/WebSockets.js:4:23)
+    at Elements2 (http://localhost:3000/node_modules/.vite/deps/@stripe_react-stripe-js.js?v=5c8c1912:226:28)
+    at Stripe (http://localhost:3000/src/components/Stripe/index.js:8:19)
+    at App (http://localhost:3000/src/App.js?t=1776527702609:17:16)
+    at I18nextProvider (http://localhost:3000/node_modules/.vite/deps/react-i18next.js?v=5c8c1912:788:19)
+    at Provider (http://localhost:3000/node_modules/.vite/deps/react-redux.js?v=5c8c1912:168:20)
+    at Suspense
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries. @ http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:15118
+[  639614ms] TypeError: Cannot read properties of null (reading 'isVerified')
+    at http://localhost:3000/src/hocs/index.js?t=1776527003727:10:23
+    at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:11478:26)
+    at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:13654:21)
+    at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:14483:22)
+    at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3901:22)
+    at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3926:24)
+    at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3960:39)
+    at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:17637:15)
+    at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:16861:20)
+    at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:16815:13)
+[  639083ms] [WARNING] [Meta pixel] 334261123905448 is unavailable on this website due to it's traffic permission settings. Go to https://www.facebook.com/business/help/572690630080597 to learn more. @ https://connect.facebook.net/en_US/fbevents.js:181
+[  639104ms] [WARNING] You may test your Stripe.js integration over HTTP. However, live Stripe.js integrations must use HTTPS. @ https://js.stripe.com/v3:0
+[  639105ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3100/:0
+[  639106ms] [WARNING] WebSocket connection to 'ws://localhost:3100/socket.io/?EIO=4&transport=websocket&sid=1BHEKSGMDUGmHy3-AAAA' failed: WebSocket is closed before the connection is established. @ http://localhost:3000/node_modules/.vite/deps/socket__io-client.js?v=5c8c1912:1499
+[  639671ms] [WARNING] Error while trying to use the following icon from the Manifest: http://localhost:3000/images/icons/icon-144x144.png (Resource size is not correct - typo in the Manifest?) @ http://localhost:3000/dashboard:0
+[  685809ms] [WARNING] [Meta pixel] 334261123905448 is unavailable on this website due to it's traffic permission settings. Go to https://www.facebook.com/business/help/572690630080597 to learn more. @ https://connect.facebook.net/en_US/fbevents.js:181
+[  686212ms] [WARNING] The keyword 'slider-vertical' specified to an 'appearance' property is not standardized. It will be removed in the future. Use <input type=range style="writing-mode: vertical-lr; direction: rtl"> instead. @ http://localhost:3000/@vite/client:801
+[  686349ms] [WARNING] The object notation for `createSlice.extraReducers` is deprecated, and will be removed in RTK 2.0. Please use the 'builder callback' notation instead: https://redux-toolkit.js.org/api/createSlice @ http://localhost:3000/node_modules/.vite/deps/@reduxjs_toolkit.js?v=5c8c1912:1540
+[  686578ms] TypeError: Cannot read properties of null (reading 'isVerified')
+    at http://localhost:3000/src/hocs/index.js?t=1776527003727:10:23
+    at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:11478:26)
+    at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:13654:21)
+    at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:14483:22)
+    at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3901:22)
+    at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3926:24)
+    at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3960:39)
+    at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:17637:15)
+    at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:16861:20)
+    at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:16815:13)
+[  686367ms] [ERROR] The above error occurred in one of your React components:
+
+    at http://localhost:3000/src/hocs/index.js?t=1776527003727:9:16
+    at Route2 (http://localhost:3000/node_modules/.vite/deps/chunk-E6C32HRJ.js?v=5c8c1912:1842:33)
+    at Switch2 (http://localhost:3000/node_modules/.vite/deps/chunk-E6C32HRJ.js?v=5c8c1912:1956:33)
+    at Router2 (http://localhost:3000/node_modules/.vite/deps/chunk-E6C32HRJ.js?v=5c8c1912:1700:34)
+    at BrowserRouter2 (http://localhost:3000/node_modules/.vite/deps/chunk-VPCH7UY2.js?v=5c8c1912:107:39)
+    at Root
+    at EventSourceProvider (http://localhost:3000/src/providers/EventSource.js:4:32)
+    at WebSockets (http://localhost:3000/src/providers/WebSockets.js:4:23)
+    at Elements2 (http://localhost:3000/node_modules/.vite/deps/@stripe_react-stripe-js.js?v=5c8c1912:226:28)
+    at Stripe (http://localhost:3000/src/components/Stripe/index.js:8:19)
+    at App (http://localhost:3000/src/App.js?t=1776528321731:17:16)
+    at I18nextProvider (http://localhost:3000/node_modules/.vite/deps/react-i18next.js?v=5c8c1912:788:19)
+    at Provider (http://localhost:3000/node_modules/.vite/deps/react-redux.js?v=5c8c1912:168:20)
+    at Suspense
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries. @ http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:15118
+[  686578ms] TypeError: Cannot read properties of null (reading 'isVerified')
+    at http://localhost:3000/src/hocs/index.js?t=1776527003727:10:23
+    at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:11478:26)
+    at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:13654:21)
+    at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:14483:22)
+    at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3901:22)
+    at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3926:24)
+    at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3960:39)
+    at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:17637:15)
+    at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:16861:20)
+    at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:16815:13)
+[  686409ms] [WARNING] WebSocket connection to 'ws://localhost:3100/socket.io/?EIO=4&transport=websocket&sid=Czq1iXRwgW0hs8RMAAAC' failed: WebSocket is closed before the connection is established. @ http://localhost:3000/node_modules/.vite/deps/socket__io-client.js?v=5c8c1912:1499
+[  686409ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3100/:0
+[  686420ms] [WARNING] You may test your Stripe.js integration over HTTP. However, live Stripe.js integrations must use HTTPS. @ https://js.stripe.com/v3:0
+[  686615ms] [WARNING] Error while trying to use the following icon from the Manifest: http://localhost:3000/images/icons/icon-144x144.png (Resource size is not correct - typo in the Manifest?) @ http://localhost:3000/dashboard:0
+[  694788ms] [WARNING] [Meta pixel] 334261123905448 is unavailable on this website due to it's traffic permission settings. Go to https://www.facebook.com/business/help/572690630080597 to learn more. @ https://connect.facebook.net/en_US/fbevents.js:181
+[  695124ms] [WARNING] The keyword 'slider-vertical' specified to an 'appearance' property is not standardized. It will be removed in the future. Use <input type=range style="writing-mode: vertical-lr; direction: rtl"> instead. @ http://localhost:3000/@vite/client:801
+[  695297ms] [WARNING] The object notation for `createSlice.extraReducers` is deprecated, and will be removed in RTK 2.0. Please use the 'builder callback' notation instead: https://redux-toolkit.js.org/api/createSlice @ http://localhost:3000/node_modules/.vite/deps/@reduxjs_toolkit.js?v=5c8c1912:1540
+[  695753ms] TypeError: Cannot read properties of null (reading 'isVerified')
+    at http://localhost:3000/src/hocs/index.js?t=1776527003727:10:23
+    at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:11478:26)
+    at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:13654:21)
+    at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:14483:22)
+    at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3901:22)
+    at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3926:24)
+    at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3960:39)
+    at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:17637:15)
+    at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:16861:20)
+    at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:16815:13)
+[  695317ms] [ERROR] The above error occurred in one of your React components:
+
+    at http://localhost:3000/src/hocs/index.js?t=1776527003727:9:16
+    at Route2 (http://localhost:3000/node_modules/.vite/deps/chunk-E6C32HRJ.js?v=5c8c1912:1842:33)
+    at Switch2 (http://localhost:3000/node_modules/.vite/deps/chunk-E6C32HRJ.js?v=5c8c1912:1956:33)
+    at Router2 (http://localhost:3000/node_modules/.vite/deps/chunk-E6C32HRJ.js?v=5c8c1912:1700:34)
+    at BrowserRouter2 (http://localhost:3000/node_modules/.vite/deps/chunk-VPCH7UY2.js?v=5c8c1912:107:39)
+    at Root
+    at EventSourceProvider (http://localhost:3000/src/providers/EventSource.js:4:32)
+    at WebSockets (http://localhost:3000/src/providers/WebSockets.js:4:23)
+    at Elements2 (http://localhost:3000/node_modules/.vite/deps/@stripe_react-stripe-js.js?v=5c8c1912:226:28)
+    at Stripe (http://localhost:3000/src/components/Stripe/index.js:8:19)
+    at App (http://localhost:3000/src/App.js?t=1776528330676:17:16)
+    at I18nextProvider (http://localhost:3000/node_modules/.vite/deps/react-i18next.js?v=5c8c1912:788:19)
+    at Provider (http://localhost:3000/node_modules/.vite/deps/react-redux.js?v=5c8c1912:168:20)
+    at Suspense
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries. @ http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:15118
+[  695754ms] TypeError: Cannot read properties of null (reading 'isVerified')
+    at http://localhost:3000/src/hocs/index.js?t=1776527003727:10:23
+    at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:11478:26)
+    at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:13654:21)
+    at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:14483:22)
+    at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3901:22)
+    at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3926:24)
+    at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3960:39)
+    at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:17637:15)
+    at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:16861:20)
+    at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:16815:13)
+[  695341ms] [WARNING] You may test your Stripe.js integration over HTTP. However, live Stripe.js integrations must use HTTPS. @ https://js.stripe.com/v3:0
+[  695378ms] [WARNING] WebSocket connection to 'ws://localhost:3100/socket.io/?EIO=4&transport=websocket&sid=uBFGyUfZdN5I4FdrAAAE' failed: WebSocket is closed before the connection is established. @ http://localhost:3000/node_modules/.vite/deps/socket__io-client.js?v=5c8c1912:1499
+[  695379ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3100/:0
+[  695404ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3100/socket.io/?EIO=4&transport=polling&t=j3liap0s&sid=uBFGyUfZdN5I4FdrAAAE:0
+[  695784ms] [WARNING] Error while trying to use the following icon from the Manifest: http://localhost:3000/images/icons/icon-144x144.png (Resource size is not correct - typo in the Manifest?) @ http://localhost:3000/dashboard:0
+[  711642ms] [WARNING] [Meta pixel] 334261123905448 is unavailable on this website due to it's traffic permission settings. Go to https://www.facebook.com/business/help/572690630080597 to learn more. @ https://connect.facebook.net/en_US/fbevents.js:181
+[  711983ms] [WARNING] The keyword 'slider-vertical' specified to an 'appearance' property is not standardized. It will be removed in the future. Use <input type=range style="writing-mode: vertical-lr; direction: rtl"> instead. @ http://localhost:3000/@vite/client:801
+[  712120ms] [WARNING] The object notation for `createSlice.extraReducers` is deprecated, and will be removed in RTK 2.0. Please use the 'builder callback' notation instead: https://redux-toolkit.js.org/api/createSlice @ http://localhost:3000/node_modules/.vite/deps/@reduxjs_toolkit.js?v=5c8c1912:1540
+[  712495ms] TypeError: Cannot read properties of null (reading 'isVerified')
+    at http://localhost:3000/src/hocs/index.js?t=1776527003727:10:23
+    at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:11478:26)
+    at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:13654:21)
+    at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:14483:22)
+    at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3901:22)
+    at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3926:24)
+    at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3960:39)
+    at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:17637:15)
+    at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:16861:20)
+    at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:16815:13)
+[  712131ms] [ERROR] The above error occurred in one of your React components:
+
+    at http://localhost:3000/src/hocs/index.js?t=1776527003727:9:16
+    at Route2 (http://localhost:3000/node_modules/.vite/deps/chunk-E6C32HRJ.js?v=5c8c1912:1842:33)
+    at Switch2 (http://localhost:3000/node_modules/.vite/deps/chunk-E6C32HRJ.js?v=5c8c1912:1956:33)
+    at Router2 (http://localhost:3000/node_modules/.vite/deps/chunk-E6C32HRJ.js?v=5c8c1912:1700:34)
+    at BrowserRouter2 (http://localhost:3000/node_modules/.vite/deps/chunk-VPCH7UY2.js?v=5c8c1912:107:39)
+    at Root
+    at EventSourceProvider (http://localhost:3000/src/providers/EventSource.js:4:32)
+    at WebSockets (http://localhost:3000/src/providers/WebSockets.js:4:23)
+    at Elements2 (http://localhost:3000/node_modules/.vite/deps/@stripe_react-stripe-js.js?v=5c8c1912:226:28)
+    at Stripe (http://localhost:3000/src/components/Stripe/index.js:8:19)
+    at App (http://localhost:3000/src/App.js?t=1776528330676:17:16)
+    at I18nextProvider (http://localhost:3000/node_modules/.vite/deps/react-i18next.js?v=5c8c1912:788:19)
+    at Provider (http://localhost:3000/node_modules/.vite/deps/react-redux.js?v=5c8c1912:168:20)
+    at Suspense
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries. @ http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:15118
+[  712496ms] TypeError: Cannot read properties of null (reading 'isVerified')
+    at http://localhost:3000/src/hocs/index.js?t=1776527003727:10:23
+    at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:11478:26)
+    at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:13654:21)
+    at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:14483:22)
+    at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3901:22)
+    at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3926:24)
+    at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:3960:39)
+    at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:17637:15)
+    at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:16861:20)
+    at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-34SAPNL5.js?v=5c8c1912:16815:13)
+[  712150ms] [WARNING] You may test your Stripe.js integration over HTTP. However, live Stripe.js integrations must use HTTPS. @ https://js.stripe.com/v3:0
+[  712182ms] [WARNING] WebSocket connection to 'ws://localhost:3100/socket.io/?EIO=4&transport=websocket&sid=s-YVR_MGsxEU15NjAAAG' failed: WebSocket is closed before the connection is established. @ http://localhost:3000/node_modules/.vite/deps/socket__io-client.js?v=5c8c1912:1499
+[  712182ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3100/:0
+[  712197ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3100/socket.io/?EIO=4&transport=polling&t=j3yh2jfy&sid=s-YVR_MGsxEU15NjAAAG:0
+[  712530ms] [WARNING] Error while trying to use the following icon from the Manifest: http://localhost:3000/images/icons/icon-144x144.png (Resource size is not correct - typo in the Manifest?) @ http://localhost:3000/dashboard:0

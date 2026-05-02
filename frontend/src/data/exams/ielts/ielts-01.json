@@ -1,0 +1,1077 @@
+{
+  "$schema": "./schema/exam.schema.json",
+  "name": "Exam 1",
+  "schema": [
+    {
+      "category": "Reading",
+      "exercises": [
+        {
+          "label": "Reading Part 4",
+          "heading": "Part 1: PERSONALITY",
+          "description": "WHAT DOES YOUR PERSONALITY SAY ABOUT YOU?{v} Personality tests are an extremely popular way of finding out what type of person you are. There are several different types of personality tests, a few of which are extremely famous and are even used by companies when deciding who to hire for a job! While different personality tests have special names for each personality type, one of the most popular and simple strategies is to split personalities up into 4 different types: A (the Director), B (the Socializer), C (the Thinker), and D (the Supporter). None of these personality types is better than the next, but each of them has advantages and disadvantages.{v} If you are goal-oriented, want to achieve big things, like to be in charge of your life, and are extremely proactive then you are probably a type A personality. The great thing about this type of person is that they are ambitious and will work hard to pursue their goals. However, there are some downfalls. Type A personalities tend to get stressed easily, especially when they feel like they are not making progress and they almost always have a sense of urgency. This can cause them to be interpreted as aggressive, even though it’s just because they have such high goals. Because they like being in charge, people with a type-A personality are often called control-freaks which makes other people feel uncomfortable around them. Finally, because they are always focused on the big picture, they can easily overlook important details! {v} Everyone has that friend who is extremely outgoing, always full of energy, and seems to live life at an extremely fast pace - that’s what type B personalities are like. This type of person loves to have fun and spend time with people, in fact, they’re really good at connecting with others and are sometimes called “the life of the party”. But while they can be great fun to spend time with, they tend to be attention-seekers, have a very short attention span, and get bored really easily. After all, since they want everyone to like them they have to be as interesting as possible. A primary negative aspect of this personality type is the need for approval, so they place too much value in other people giving them praise. {v} The next personality type, type C, is on the other side of the scale when compared to type A. If you are a very calm person who has no problem taking your type and tolerating people, this might be you. People with a type C personality have a very logical way of thinking and are extremely focused-on detail, many times they’re referred to as perfectionists. One of the great things about this type of person is that they are very reliable and will keep their word, however, sometimes they are very skeptical and have a “glass-half-empty” perspective which means they don’t tend to have very high expectations. Lastly, a lot of type C personalities are so focused on details that they are indecisive, so they’re not the best person when it comes to making a decision. {v} Having a consistent routine and organized schedule can be nice for anyone, but people with type D personalities live for organization. This type of person likes to take things slow and live in a controlled and predictable environment where things are the same every day and they can focus on completing one task after another. They are normally very caring and sincere, but they tend to keep to themselves as they’re not very sociable. A disadvantage to this type of personality is that they can be very sensitive and it’s easy to hurt their feelings or make them uncomfortable by messing with their daily routine. {v} Sometimes, when people are trying to figure out what personality type they are it turns out that they are actually a mix of 2! When someone exhibits half the traits from one personality type and half the traits from another, they are called a type X personality. This name is also used for someone who has bits and pieces from all 4 types, making them like a personality chameleon! Having a type X personality means that they do not belong in a single category, but this is not something typical to find. {v} Each personality type is extremely complex, but normally, by taking a test or paying close attention to what you like and dislike, the type of life you prefer to live, and the way you react to different situations can give you a general idea of what type of personality you are.",
+          "modules": [
+            {
+              "module": "Matching",
+              "title": "Part 1, Section 1:",
+              "subtitle": "Complete the table below. DO NOT USE MORE THAN THREE WORDS/NUMBERS.",
+              "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t1-r1.jpg",
+              "questions": [
+                {
+                  "title": "1. {x}",
+                  "answers": [
+                    "Freak",
+                    "freak"
+                  ]
+                },
+                {
+                  "title": "2. {x}",
+                  "answers": [
+                    "Life",
+                    "life"
+                  ]
+                },
+                {
+                  "title": "3. {x}",
+                  "answers": [
+                    "Skeptical",
+                    "skeptical"
+                  ]
+                },
+                {
+                  "title": "4. {x}",
+                  "answers": [
+                    "Caring",
+                    "caring"
+                  ]
+                },
+                {
+                  "title": "5. {x}",
+                  "answers": [
+                    "Feelings",
+                    "feelings"
+                  ]
+                }
+              ]
+            },
+            {
+              "module": "Dropdown",
+              "label": "Grammar",
+              "title": "Part 1, Section 2:",
+              "subtitle": "Do the following statements agree with the information given in the reading passage?{v} TRUE= If the statement agrees with the information. {v} FALSE= If the statement contradicts the information. {v} NOT GIVEN= If there is no information on this.",
+              "questions": [
+                {
+                  "title": "1. The type X personality is rare. {x}",
+                  "answers": [
+                    "True",
+                    "False",
+                    "Not given"
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "2. The type C personality is the opposite of type A. {x} ",
+                  "answers": [
+                    "True",
+                    "False",
+                    "Not given"
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "3. The type A personality is the most common. {x} ",
+                  "answers": [
+                    "True",
+                    "False",
+                    "Not given"
+                  ],
+                  "correct": 2
+                },
+                {
+                  "title": "4. Personality tests are just taking for fun. {x} ",
+                  "answers": [
+                    "True",
+                    "False",
+                    "Not given"
+                  ],
+                  "correct": 1
+                }
+              ]
+            },
+            {
+              "module": "Dropdown",
+              "label": "Grammar",
+              "title": "Part 1, Section 3:",
+              "subtitle": "Match each item with the correct type of personality. You can use the same item more than once.",
+              "questions": [
+                {
+                  "title": "1. Normally in a hurry. {x}",
+                  "answers": [
+                    "Type A",
+                    "Type B",
+                    "Type C",
+                    "Type D",
+                    "Type X"
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "2. Is energetic. {x}",
+                  "answers": [
+                    "Type A",
+                    "Type B",
+                    "Type C",
+                    "Type D",
+                    "Type X"
+                  ],
+                  "correct": 1
+                },
+                {
+                  "title": "3. Struggles to maintain focus. {x}",
+                  "answers": [
+                    "Type A",
+                    "Type B",
+                    "Type C",
+                    "Type D",
+                    "Type X"
+                  ],
+                  "correct": 1
+                },
+                {
+                  "title": "4. Likes repetition. {x}",
+                  "answers": [
+                    "Type A",
+                    "Type B",
+                    "Type C",
+                    "Type D",
+                    "Type X"
+                  ],
+                  "correct": 3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Part 2: Jobs for Graduates",
+          "description": "PARAGRAPH A. {v} More and more students in the United States are faced with the fact that, while attending a high-tier university may be their dream, it is financially unrealistic. American universities can charge tuition that can sum up to as much as $50,000 a year. For an average, middle-class citizen, these numbers are hard to swallow. Therefore, it is quite logical when students start looking into less financially imposing educational methods. It is true that scholarships are scattered all over the US education system being awarded to students for various achievements such as academic or athletic, but statistics show that only 1.5% of students are able to obtain a full-ride scholarship and 18.8% can secure that half of their tuition is paid for in scholarships. Needless to say, betting one’s chances on a university scholarship may not be the most effective plan of action. {v} PARAGRAPH B. {v}  While some students might choose to take a gap year in which they can save money for the daunting university fees ahead, other students take a more creative approach that still allows for them to advance in their studies while not having to dig themselves into a hole of debt. Community colleges are sometimes frowned upon and viewed as providing students with a lower level of education, however, the fact of the matter is that many extremely successful students have chosen this path. There are many advantages to attending a community college, a big one being the extremely low tuition price. Additionally, most students who enroll at a community college are able to commute every day, which allows them to save money on accommodation costs. It is true that many students wish to complete their university career with the name of a well-known and distinguished university carved onto their diploma. What many students don’t know is that more than half of the community college students are able to transfer to a more prominent university after two years, allowing them to complete their degree with an illustrious-looking diploma. {v} PARAGRAPH C. {v} Having university behind them, students then face the subduing reality that they then have to enter the work world to take everything that they have learned and put it into practice. For some students, this is not challenging at all as they may have interned at a firm or made connections throughout their university career. Those who have chosen to work in the medical field are highly qualified and on-demand when they finally are able to close the books that they’ve had their heads stuck in for years and years. Unfortunately, more than half of college graduates truly struggle to find jobs out of university and many of them end up working a job in a career that they did not major in. Studies have shown that these students do not lack a level of employability but have not been properly trained in what job hunting involves. Connections are everything when it comes to finding a job, and recent graduates must be creative when considering this. On top of that, social media and the world wide web provide students with a plethora of information that can lead them to job vacancies. {v} PARAGRAPH D. {v} Sadly, picking up the pieces that lead to such a large percentage of unemployed recent graduates is not a challenging task. Plunging into the workforce is difficult, but those looking for jobs must put every ounce of their being into preparing. An important factor includes the way they interact with a potential future boss, whether that be during a face-to-face interaction, or simply over email. Recent university graduates are guilty of being too casual, therefore causing the interviewer to believe that they are not serious or cut-out for the job at hand. Furthermore, recent graduates tend to border on the side of being unrealistic about the jobs they can be hired for with minimal experience, or they do not give themselves enough credit and accept the first opportunity they have. Maintaining a balance of these two extremes is necessary to be successful in finding a job that is both appropriate and satisfying. {v} PARAGRAPH E. {v} Being a student does not necessarily have to end the moment the tassel on that graduation cap shifts to the other side. While many individuals choose to jump head first into the working world, others have set a different type of goal for themselves. Higher education is sometimes necessary when it comes to certain careers and some students feel that they want to continue their education in order to further their knowledge and potential in their future careers. However, it is not uncommon for a student to pursue higher education whilst working a job. In fact, many incorporations run programs which allow for their employees to work part-time while pursuing a masters degree, ultimately enhancing their value as an asset for the company itself. No matter the motive behind it, many people find higher education to be both beneficial on an educational level but also allows for further personal growth. {v} PARAGRAPH F. {v} Regardless of the fact that generation after generation have been steered to follow the path of education through a university education, there are other ways to achieve one's career goals while not holding any type of university diploma. Some may scoff at the idea of apprenticeships, but others argue that they are the most practical way to grow into one's dream career from an early age. An apprenticeship is not for those who are unsure of their passion, yet it brings up very solid arguments when it comes to financial figures. Most apprenticeships allow young people to earn money as they are gaining knowledge in their trade of choice. Finally, when they complete their training they can easily transition into the working world, choosing to take that knowledge in whatever direction they choose. Both a university degree and an apprenticeship are ways to achieve one’s career goals, both bringing very different factors to the table.",
+          "label": "Reading Part 4",
+          "modules": [
+            {
+              "module": "Dropdown",
+              "title": "Part 2, Section 1:",
+              "subtitle": "The text has 6 paragraphs, A-F. Which paragraphs contain the following information? You may use any letter more than once. ",
+              "questions": [
+                {
+                  "answers": [
+                    "Paragraph A",
+                    "Paragraph B",
+                    "Paragraph C",
+                    "Paragraph D",
+                    "Paragraph E",
+                    "Paragraph F"
+                  ],
+                  "correct": 3,
+                  "title": "States that some college grades are too hasty when accepting a job offer."
+                },
+                {
+                  "answers": [
+                    "Paragraph A",
+                    "Paragraph B",
+                    "Paragraph C",
+                    "Paragraph D",
+                    "Paragraph E",
+                    "Paragraph F"
+                  ],
+                  "correct": 0,
+                  "title": "Considers the likelihood of students receiving monetary benefits as university students."
+                },
+                {
+                  "answers": [
+                    "Paragraph A",
+                    "Paragraph B",
+                    "Paragraph C",
+                    "Paragraph D",
+                    "Paragraph E",
+                    "Paragraph F"
+                  ],
+                  "correct": 2,
+                  "title": "Emphasises how important it is for students to build relationships throughout university."
+                },
+                {
+                  "answers": [
+                    "Paragraph A",
+                    "Paragraph B",
+                    "Paragraph C",
+                    "Paragraph D",
+                    "Paragraph E",
+                    "Paragraph F"
+                  ],
+                  "correct": 4,
+                  "title": "Mentions a unique opportunity that allows students to continue further education while employed."
+                },
+                {
+                  "answers": [
+                    "Paragraph A",
+                    "Paragraph B",
+                    "Paragraph C",
+                    "Paragraph D",
+                    "Paragraph E",
+                    "Paragraph F"
+                  ],
+                  "correct": 5,
+                  "title": "Mentions a creative method to gain experience and education simultaneously."
+                }
+              ]
+            },
+            {
+              "module": "Matching",
+              "title": "Part 2, Section 2:",
+              "subtitle": "Complete the sentences below. Choose ONE WORD ONLY from the passage for each answer.",
+              "questions": [
+                {
+                  "title": "1. In order to save money, some students may choose to take a _____{x} off.",
+                  "answers": [
+                    "Year",
+                    "year"
+                  ]
+                },
+                {
+                  "title": "2. A common problem employers find with young graduates has to do with the way they _____{x} during formal encounters. ",
+                  "answers": [
+                    "Interact",
+                    "interact"
+                  ]
+                },
+                {
+                  "title": "3. Community colleges tend to accommodate students for a couple years before they _____{x} out to a more distinguished university.",
+                  "answers": [
+                    "Transfer",
+                    "transfer"
+                  ]
+                },
+                {
+                  "title": "4. Less than ¼ of the students who attend university are able to pay for half of their _____{x} through outside sources.. ",
+                  "answers": [
+                    "Tuition",
+                    "tuition"
+                  ]
+                }
+              ]
+            },
+            {
+              "module": "Matching",
+              "title": "Part 2, Section 3:",
+              "subtitle": "Fill in the blanks with a word from the passage.",
+              "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t1-r2.jpg",
+              "questions": [
+                {
+                  "title": "1. {x}",
+                  "answers": [
+                    "Financially",
+                    "financially"
+                  ]
+                },
+                {
+                  "title": "2. {x}",
+                  "answers": [
+                    "Apprenticeship",
+                    "apprenticeship"
+                  ]
+                },
+                {
+                  "title": "3. {x}",
+                  "answers": [
+                    "passion",
+                    "Passion"
+                  ]
+                },
+                {
+                  "title": "4. {x}",
+                  "answers": [
+                    "Hunting",
+                    "hunting"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Part 3: Sports injuries",
+          "description": "PARAGRAPH A.{v} Participation in sports is highly encouraged all around the world as scientific studies lead us to believe that there are numerous health benefits. In the UK, 63% of adult men and 58% of adult women participate in some type of form of exercise on a weekly basis. This could vary from an activity as simple as walking, to team sports like football or basketball and might even extend to some sports that acquire technical training and experience such as fencing. One's participation in sport throughout the adult life hinges greatly upon one's subjection to sports as a child. It is estimated that almost 90% of children in the UK are enrolled or attend an organized sports group or team. Due to this fact, while many individuals choose to reduce their amount of exercise as they age, others maintain this healthy habit throughout their adult life. {v} PARAGRAPH B. {v}While sports do promote a healthy life, they do not come without their fair share of dangers and cautionary tales. Most athletes, of any sort, will experience an injury at one point or another. Sports injuries can be both painful and discouraging, even at a recreational level, as well as causing large hurdles in fitness goals and health. One of the most common injuries found affects the knee and is known as patellofemoral syndrome. This injury takes place when someone falls onto their knee, forcing the patella to shift away from its intended groove. In turn, there is an imbalance of weight distribution which can cause pain or further injury. Another frequent injury occurs in the shoulder area and might arise in the form of a dislocation, misalignment, strain or sprain. This may come about while participating in many sports as the shoulders are considered to be the weakest joint in the upper body. A third injury found in many athletes is that of sciatica. Athletes who suffer from sciatica are those that spend time in a flexed forward position, causing pain to spike down their back and through their legs, sometimes even reaching their feet. {v} PARAGRAPH C. {v} When faced with a sports injury there is a classic procedure that young athletes should be educated in from an early age. An acronym is used to help people remember it: PRICE. Protection is the first step when faced with an injury. If an injury is not appropriately protected, it could worsen, ultimately resulting in something far more serious. An essential factor to recovery is Rest. After an injury, an athlete must take the time to give their body the chance to recover by stopping all activity that might irritate their injury. A general rule of thumb is that an athlete should not participate in any vigorous activity for at least a week after all pain has subsided. Ice should be applied to injuries, even if there is not necessarily visible swelling. Applying the ice directly on the injured area is not recommended so there should be at least a thin cloth between the skin and the ice pack. It is terribly important to apply pressure to the injury, especially if there is possibility of inflammation or swelling. This step goes by the name Compression. Finally, an injured athlete should do their best to Elevate the injury, this forces the fluid to drain away from the damage which can promote the reduction of swelling. {v} PARAGRAPH D.{v} More likely than not, an athlete will feel restless and impatient when dealing with an injury and will either tell themselves they are ready prematurely, or seek out additional ways to speed their recovery. Unfortunately, one cannot rush the body and its healing process, but modern science has provided the option of working with a physical therapist as a way to strengthen one's body even amidst the healing process of an injury. At the end of the day, however, an injury may be just as taxing on the mind as it is on the body whilst impatiently waiting for the human body to work its magic. {v} PARAGRAPH E.{v} Easing back into the sports world after having spent time in recovery can be a difficult and discouraging process. One's body will have lost strength and mobility, causing an athlete to feel weak and dismayed by their lack of level. Additionally, one must deal with mental recovery, which can be just as challenging as any physical recovery. In said situation, one must realize that anguish and frustration are normal parts of recovery and are not things to shove away. However, within these feelings, maintaining a positive attitude is what will push an athlete through to the other side. Unfortunately, many athletes are faced with the “what if” or “if only” situation in which they replay their moment of injury in their head, visualizing a world in which they were never injured at all. This can delay their progress as the only option is to focus on the now and future and never the past. Lastly, consistency is key as recovery depends on slowly easing the body back to where the athlete was before, or even further! {v} PARAGRAPH F.{v}Injuries are a painful and tragic part of being an athlete. Sometimes they may not be the source of a huge roadblock, but in other situations they can change the course of an athletes relationship to their sport. While injury treatment is important to practise, the best type of treatment is reducing the chances of injury in the first place. As a general guideline, stretching and increasing flexibility will reduce the chances of injury and promote the speed of recovery. More and more athletes are recommended to engage in activities such as yoga or pilates to increase their flexibility. Investing in the correct gear that is not only appropriate for the sport, but also suitable for the individual can also promote safety while performing. Finally, learning proper technique with the help of experienced coaches or trainers will not only reduce the likelihood of injury, but allow one to be a better athlete in their target field!",
+          "label": "Reading Part 4",
+          "modules": [
+            {
+              "module": "Dropdown",
+              "label": "Grammar",
+              "title": "Part 3, Section 1:",
+              "subtitle": "Select the correct answer (A-D).",
+              "questions": [
+                {
+                  "title": "1. What point does the writer make about participation in sports? {x}",
+                  "answers": [
+                    "A. It is extremely normal for exercise to reduce with age.",
+                    "B. Those who exercise as a kid will probably continue as they grow older.",
+                    "C. Not even people are exercising on a daily basis.",
+                    "D. There are more benefits to sports that require technical skills."
+                  ],
+                  "correct": 1
+                },
+                {
+                  "title": "2. What does the acronym PRICE stand for? {x} ",
+                  "answers": [
+                    "A. Protect, Rest, Ice, Compress and Elevate",
+                    "B. Protection, Rest, Ice, Compress and Elevation",
+                    "C. Protection, Rest, Ice, Compression and Elevate",
+                    "D. None of the above "
+                  ],
+                  "correct": 2
+                },
+                {
+                  "title": "3. Some athletes may endanger themselves post injury by {x} ",
+                  "answers": [
+                    "A. Thinking they are ready before they are",
+                    "B. Being physical therapy too soon",
+                    "C. Becoming restless and impatient",
+                    "D. Both A and B"
+                  ],
+                  "correct": 3
+                },
+                {
+                  "title": "4.The key factor to recovery is {x} ",
+                  "answers": [
+                    "A. Carefully analyzing the situation that caused the injury so as not to repeat it ",
+                    "B. Learning to push past any anger or frustration that arises",
+                    "C. Keeping up a forward-looking style of thinking",
+                    "D. Listening carefully to the guidelines of those who have had similar experiences"
+                  ],
+                  "correct": 2
+                },
+                {
+                  "title": "5. Which is the best way to avoid injury at the outset? {x} ",
+                  "answers": [
+                    "A. Implement consist stretching exercises into your lifestyle ",
+                    "B. Never forget to warm up and cool down before exercise",
+                    "C. Invest in learning the correct technique for your activities ",
+                    "D. Both A and C"
+                  ],
+                  "correct": 3
+                }
+              ]
+            },
+            {
+              "module": "Dropdown",
+              "label": "Reading Part 1",
+              "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t3-r1.jpg",
+              "title": "Part 3, Section 2:",
+              "subtitle": "Complete the sentences below. Choose ONE WORD from the bank (A-I).",
+              "questions": [
+                {
+                  "title": "1. {x}",
+                  "answers": [
+                    "A. 90%",
+                    "B. 63%",
+                    "C. ice",
+                    "D. heat",
+                    "E. difficult",
+                    "F. taxing",
+                    "G. sciatica",
+                    "H. dislocation",
+                    "I. consistency"
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "2. {x}",
+                  "answers": [
+                    "A. 90%",
+                    "B. 63%",
+                    "C. ice",
+                    "D. heat",
+                    "E. difficult",
+                    "F. taxing",
+                    "G. sciatica",
+                    "H. dislocation",
+                    "I. consistency"
+                  ],
+                  "correct": 2
+                },
+                {
+                  "title": "3. {x}",
+                  "answers": [
+                    "A. 90%",
+                    "B. 63%",
+                    "C. ice",
+                    "D. heat",
+                    "E. difficult",
+                    "F. taxing",
+                    "G. sciatica",
+                    "H. dislocation",
+                    "I. consistency"
+                  ],
+                  "correct": 5
+                },
+                {
+                  "title": "4. {x}",
+                  "answers": [
+                    "A. 90%",
+                    "B. 63%",
+                    "C. ice",
+                    "D. heat",
+                    "E. difficult",
+                    "F. taxing",
+                    "G. sciatica",
+                    "H. dislocation",
+                    "I. consistency"
+                  ],
+                  "correct": 6
+                },
+                {
+                  "title": "5. {x}",
+                  "answers": [
+                    "A. 90%",
+                    "B. 63%",
+                    "C. ice",
+                    "D. heat",
+                    "E. difficult",
+                    "F. taxing",
+                    "G. sciatica",
+                    "H. dislocation",
+                    "I. consistency"
+                  ],
+                  "correct": 8
+                }
+              ]
+            },
+            {
+              "module": "Dropdown",
+              "title": "Part 3, Section 3:",
+              "subtitle": "The text has 6 paragraphs, A-F. Which paragraphs contain the following information? You may use any option more than once. ",
+              "questions": [
+                {
+                  "answers": [
+                    "1.Sports are relevant in order to maintain good health",
+                    "2.The role of sports throughout life",
+                    "3.How to treat a sports injury for kids",
+                    "4.Injury treatment guidelines",
+                    "5.How to handle the aftermath of an injury",
+                    "6.What not to do in recovery",
+                    "7.Getting ahead of the injury",
+                    "8.Most common injuries in sports"
+                  ],
+                  "correct": 1,
+                  "title": " Paragraph A)"
+                },
+                {
+                  "answers": [
+                    "1.Sports are relevant in order to maintain good health",
+                    "2.The role of sports throughout life",
+                    "3.How to treat a sports injury for kids",
+                    "4.Injury treatment guidelines",
+                    "5.How to handle the aftermath of an injury",
+                    "6.What not to do in recovery",
+                    "7.Getting ahead of the injury",
+                    "8.Most common injuries in sports"
+                  ],
+                  "correct": 3,
+                  "title": "Paragraph C)"
+                },
+                {
+                  "answers": [
+                    "1.Sports are relevant in order to maintain good health",
+                    "2.The role of sports throughout life",
+                    "3.How to treat a sports injury for kids",
+                    "4.Injury treatment guidelines",
+                    "5.How to handle the aftermath of an injury",
+                    "6.What not to do in recovery",
+                    "7.Getting ahead of the injury",
+                    "8.Most common injuries in sports"
+                  ],
+                  "correct": 4,
+                  "title": "Paragraph E)"
+                },
+                {
+                  "answers": [
+                    "1.Sports are relevant in order to maintain good health",
+                    "2.The role of sports throughout life",
+                    "3.How to treat a sports injury for kids",
+                    "4.Injury treatment guidelines",
+                    "5.How to handle the aftermath of an injury",
+                    "6.What not to do in recovery",
+                    "7.Getting ahead of the injury",
+                    "8.Most common injuries in sports"
+                  ],
+                  "correct": 6,
+                  "title": "Paragraph F)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Listening",
+      "exercises": [
+        {
+          "heading": "Part 1:JOINING A LANGUAGE SCHOOL",
+          "description": "",
+          "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t5-l1.jpg",
+          "label": "Reading Part 4",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/E5-1.mp3",
+          "modules": [
+            {
+              "module": "Matching",
+              "title": "Part 1, Questions 1-7:",
+              "subtitle": "Answer the questions and fill in the gaps with the correct information. Write NO MORE THAN THREE WORDS/NUMBERS for each answer.",
+              "questions": [
+                {
+                  "title": "1. What language does the student want to learn? {x}",
+                  "answers": [
+                    "French"
+                  ]
+                },
+                {
+                  "title": "2.What skill does the student want to work on? {x}",
+                  "answers": [
+                    "grammar",
+                    "Grammar",
+                    "Speaking",
+                    "speaking"
+                  ]
+                },
+                {
+                  "title": "3. Another skill to work on is ____ {x}",
+                  "answers": [
+                    "speaking",
+                    "Speaking",
+                    "Grammar",
+                    "grammar"
+                  ]
+                },
+                {
+                  "title": "4.How much is the sign-up fee at the language school? {x}",
+                  "answers": [
+                    "£50",
+                    "Fifty pounds",
+                    "50 pounds",
+                    "fifty pounds",
+                    "50",
+                    "fifty",
+                    "Fifty"
+                  ]
+                },
+                {
+                  "title": "5. How long are the classes on Wednesdays? {x}",
+                  "answers": [
+                    "2 Hours",
+                    "2 hours",
+                    "Two hours",
+                    "two hours",
+                    "2h.",
+                    "2h",
+                    "2 h.",
+                    "2 h"
+                  ]
+                },
+                {
+                  "title": "6.What is the student's surname? {x}",
+                  "answers": [
+                    "Arleigh",
+                    "ARLEIGH"
+                  ]
+                },
+                {
+                  "title": "7.How long does the student want to take classes? {x}",
+                  "answers": [
+                    "6 months",
+                    "6 Months",
+                    "six months",
+                    "Six Months"
+                  ]
+                }
+              ]
+            },
+            {
+              "module": "Matching",
+              "title": "Part 1, Questions 8-10:",
+              "subtitle": "Answer the questions and fill in the gaps with the correct information. Write NO MORE THAN THREE WORDS/NUMBERS for each answer.",
+              "questions": [
+                {
+                  "title": "8 Classes are held on _______, Wednesday and Friday{x}.",
+                  "answers": [
+                    "Monday"
+                  ]
+                },
+                {
+                  "title": "9. What time does the morning classes start?{x}",
+                  "answers": [
+                    "9 AM",
+                    "nine AM",
+                    "Nine AM",
+                    "9",
+                    "nine",
+                    "Nine",
+                    "9 a.m.",
+                    "9 A.M.",
+                    "nine a.m.",
+                    "nine A.M",
+                    "9:00"
+                  ]
+                },
+                {
+                  "title": "10. Why does the student want to take language classes? {x}",
+                  "answers": [
+                    "for fun",
+                    "For fun",
+                    "fun",
+                    "Fun"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Part 2: MOVING AROUND LONDON",
+          "description": "",
+          "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t1 l2.jpg",
+          "label": "Reading Part 4",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/E1-2.mp3",
+          "modules": [
+            {
+              "module": "Matching",
+              "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t1--l2.jpg",
+              "title": "Part 2, Questions 11-14:",
+              "subtitle": "Complete the table below. Write NO MORE THAN THREE WORDS for each answer.",
+              "questions": [
+                {
+                  "title": "11. {x}",
+                  "answers": [
+                    "Harry Potter Studios",
+                    "Harry Potter studios"
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "12. {x}",
+                  "answers": [
+                    "Waterloo"
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "13. {x}",
+                  "answers": [
+                    "Piccadilly line",
+                    "Piccadilly Line"
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "14. {x}",
+                  "answers": [
+                    "Central Line",
+                    "Central line"
+                  ],
+                  "correct": 0
+                }
+              ]
+            },
+            {
+              "module": "Matching",
+              "imageUrl": null,
+              "title": "Part 2, Questions 15-20:",
+              "subtitle": "Complete the sentences. Write NO MORE THAN THREE WORDS/NUMBERS for each answer.",
+              "questions": [
+                {
+                  "title": "15. London is home to the royal family and many _____{x} people.",
+                  "answers": [
+                    "famous"
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "16.The tube is the world's first underground railway and opened in _____{x}.",
+                  "answers": [
+                    "1863"
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "17. The underground can get especially hot during the summer because there is no _____{x}.",
+                  "answers": [
+                    "air conditioning"
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "18. You can buy an oyster card at one of these kiosks situated at the _____{x} to the London underground.",
+                  "answers": [
+                    "entrance"
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "19. The London Eye is Europe’s _____{x}wheel.",
+                  "answers": [
+                    "biggest"
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "20. The west end is a famous place for theatre _____{x} to see shows such as cats, the phantom of the opera etc. ",
+                  "answers": [
+                    "lovers"
+                  ],
+                  "correct": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "PART 3: CHOOSING A DEGREE",
+          "description": "",
+          "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t1-l3.png",
+          "label": "Reading Part 4",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/E1-3.mp3",
+          "modules": [
+            {
+              "module": "Matching",
+              "imageUrl": null,
+              "title": "Part 3, Questions 21-27:",
+              "subtitle": "Answer the questions. Write NO MORE THAN THREE WORDS for each answer.",
+              "questions": [
+                {
+                  "title": "21. How does Sarah feel before her conversation with Mrs. Smith?  {x}",
+                  "answers": [
+                    "stressed",
+                    "Stressed"
+                  ]
+                },
+                {
+                  "title": "22. What course would Sarah probably take her first year studying Psychology? {x}",
+                  "answers": [
+                    "Psych 101",
+                    "psych 101"
+                  ]
+                },
+                {
+                  "title": "23.  What does Mrs. Smith tell Sarah she can change even after making a choice? {x} ",
+                  "answers": [
+                    "her mind",
+                    "Her mind"
+                  ]
+                },
+                {
+                  "title": "24.  What is a common career for students who study Psychology?{x} ",
+                  "answers": [
+                    "Social work",
+                    "Teacher",
+                    "teacher",
+                    "social work",
+                    "Social Work",
+                    "social worker",
+                    "Social worker"
+                  ]
+                },
+                {
+                  "title": "25.  Another common career for students who study Psychology is ____{x} ",
+                  "answers": [
+                    "Social work",
+                    "Teacher",
+                    "teacher",
+                    "social work",
+                    "Social Work",
+                    "Social worker",
+                    "social work"
+                  ]
+                },
+                {
+                  "title": "26.  According to Mrs. Smith, what does Sarah have that will help her when applying to university? {x} ",
+                  "answers": [
+                    "good grades",
+                    "Good grades"
+                  ]
+                },
+                {
+                  "title": "27. What does Sarah do every day other than go to school and do homework? {x} ",
+                  "answers": [
+                    "sport",
+                    "Sport",
+                    "play sport",
+                    "Play sport",
+                    "sports",
+                    "Sports",
+                    "Play sports",
+                    "play sports"
+                  ]
+                }
+              ]
+            },
+            {
+              "module": "Dropdown",
+              "title": "Part 3, Questions 28-30:",
+              "subtitle": "What does each person suggest that Sarah study? Multiple Choice, Select the correct answer for each question (A-D).",
+              "questions": [
+                {
+                  "title": "28. Sarah’s Mom. {x}",
+                  "answers": [
+                    "A. Science",
+                    "B. Psychology",
+                    "C. Art",
+                    "D. Social Work"
+                  ],
+                  "correct": 2
+                },
+                {
+                  "title": "29. Sarah’s Dad. {x} ",
+                  "answers": [
+                    "A. Science",
+                    "B. Psychology",
+                    "C. Art",
+                    "D. Social Work"
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "30. Mrs. Smith. {x} ",
+                  "answers": [
+                    "A. Science",
+                    "B. Psychology",
+                    "C. Art",
+                    "D. Social Work"
+                  ],
+                  "correct": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Part 4: ECOLOGICAL HOUSE FOR THE FUTURE",
+          "label": "Reading Part 4",
+          "description": "",
+          "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t1-l4.jpg",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/E1-4.mp3",
+          "modules": [
+            {
+              "module": "Matching",
+              "title": "Part 4, Questions 31-35:",
+              "subtitle": "Answer the questions. Write NO MORE THAN THREE WORDS/NUMBERS for each answer.",
+              "questions": [
+                {
+                  "title": "31. Eco homes are a way to combat lack of resources, the ecological crisis and? {x}",
+                  "answers": [
+                    "Climate change",
+                    "climate change"
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "32. Eco homes are concerned with the amount and type of? {x}",
+                  "answers": [
+                    "Materials",
+                    "materials"
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "33. A more environmentally friendly material to use to build a house is?{x}",
+                  "answers": [
+                    "Wood",
+                    "wood",
+                    "Timber",
+                    "timber"
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "34. One possible way to harness energy rather than using electricity is?{x}",
+                  "answers": [
+                    "Solar",
+                    "solar",
+                    "Wind power",
+                    "wind power"
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "35. A concept that reduces the influx of heat? {x}",
+                  "answers": [
+                    "Roof gardens",
+                    "roof gardens",
+                    "Roof garden",
+                    "roof garden"
+                  ],
+                  "correct": 0
+                }
+              ]
+            },
+            {
+              "module": "Matching",
+              "title": "Part 4, Questions 36-40:",
+              "subtitle": "Answer the questions. Write NO MORE THAN THREE WORDS/NUMBERS for each answer.",
+              "questions": [
+                {
+                  "title": "36. A useful tecnique used which was developed in Germany is called? {x} ",
+                  "answers": [
+                    "Passivhaus",
+                    "passivhaus"
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "37. This technique was developed in which decade? {x} ",
+                  "answers": [
+                    "1970",
+                    "1970`s",
+                    "70`s",
+                    "Seventies",
+                    "seventies",
+                    "1970´s",
+                    "1970´s",
+                    "1970s"
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "38. What system can be used to reduce your water comsumption? {x}",
+                  "answers": [
+                    "Rain harvesting",
+                    "rain harvesting"
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "39. How much water do toilets typically waste?{x}",
+                  "answers": [
+                    "11-26 litres",
+                    "11 26 litres",
+                    "11 to 26",
+                    "11 to 26 litres"
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "40. New eco-friendly techniques will become more? {x}",
+                  "answers": [
+                    "Common",
+                    "common"
+                  ],
+                  "correct": 0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Writing",
+      "exercises": [
+        {
+          "description": "You should spend about 20 minutes on this task. {v} INSTRUCTIONS: The pies below give information on the percentage of imports and exports purchased in Canada during 2019. {v} Summarise the information by selecting and reporting the main features and make comparisons where relevant.",
+          "label": "Writing Part 4",
+          "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t1-w1.png",
+          "questions": [
+            {
+              "title": " Write at least 150 words. {x}"
+            }
+          ]
+        },
+        {
+          "description": "You should spend about 40 minutes on this task. {v} Write about the following topic: {v} {v} INSTRUCTIONS: People tend to think that if there is a well-paid job that it cannot be seen as enjoyable. So they would rather be doing a job which has a low pay than one with high pay but boring. To what extent do you agree or disagree with this opinion? {v} - {v} Give reasons for your answer and include any relevant examples from your own knowledge or experience.",
+          "label": "Writing Part 4",
+          "questions": [
+            {
+              "title": " Write at least 250 words {x}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Speaking",
+      "exercises": [
+        {
+          "description": "PART 1 (4 -5 minutes): {v} TIP 1: At the beginning of the test the examiner will ask you your full name and will ask to see your identification. {v} TIP 2: The examiner will ask you some questions about different topics. First some personal questions about yourself then some questions about two specific topics. {v} TIP 3: Try and answer each question in one or two sentences. {v} ",
+          "label": "Speaking Part 1",
+          "recordingTime": 30,
+          "questions": [
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t1-s1.mp3",
+              "title": " EXAMINER´S INSTRUCTIONS: I´m going to ask you some questions about yourself: {v} What is your profession? {x}"
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t1-s4.mp3",
+              "title": " EXAMINER´S INSTRUCTIONS: Let’s talk about technology {v} How often do you use the Internet?  {x}"
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t1-s5.mp3",
+              "title": " What apps do you normally use?  {x}"
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t1-s8.mp3",
+              "title": " EXAMINER´S INSTRUCTIONS: Let’s talk about books {v} What types of books do you like? {x}"
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t1-s9.mp3",
+              "title": " Do you think reading books can be positive for young people? {x}"
+            }
+          ]
+        },
+        {
+          "description": "PART 2 (3-4 minutes) {v} TIP 1: The examiner will give you a paper, a pencil and a piece of paper with your topic. {v} TIP 2: Once you finish talking normally the examiner will ask you some follow up questions. {v} EXAMINER´S INSTRUCTIONS: You now have one minute to make notes. ",
+          "label": "Speaking Part 1",
+          "recordingTime": 120,
+          "questions": [
+            {
+              "imageUrl": {
+                "images": [
+                  "https://dkmwdxc6g4lk7.cloudfront.net/img/t1-s1.jpg"
+                ]
+              },
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t1-s10.mp3",
+              "title": "Ok, now I’d like you to describe a holiday you really enjoyed. {x}"
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t1-s11.mp3",
+              "title": "  How often do you go on holidays? {x}"
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t1-s12.mp3",
+              "title": " Which places would you like to visit in the future? {x}"
+            }
+          ]
+        },
+        {
+          "description": "PART 3 (4-5 minutes) {v} EXAMINER'S INSTRUCTIONS: We’ve been talking about a holiday you really enjoyed, and I’d now like to ask you some questions related to travelling.",
+          "label": "Speaking Part 1",
+          "recordingTime": 60,
+          "questions": [
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t1-s13.mp3",
+              "title": " What do you think is the difference between travelling to another country and living there? {x}"
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t1-s14.mp3",
+              "title": " Has travelling become safer than in the past?  {x}"
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t1-s15.mp3",
+              "title": " What problems might a person find when travelling abroad? {x}"
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t1-s16.mp3",
+              "title": "How do you think people will  travel in the future? {x}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "title": "Who Are You?",
+  "description": "Explore personality, society, and self-expression — challenge your thinking with topics that go deeper than the surface."
+}

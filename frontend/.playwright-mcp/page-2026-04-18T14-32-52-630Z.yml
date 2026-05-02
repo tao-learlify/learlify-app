@@ -1,0 +1,27 @@
+- main [ref=e4]:
+  - generic [ref=e5]:
+    - img
+    - generic [ref=e6]:
+      - img "Learlify" [ref=e8]
+      - generic [ref=e9]:
+        - heading "Welcome back" [level=1] [ref=e10]
+        - paragraph [ref=e11]: Sign in to continue your learning journey
+      - button "Acceder con Google" [ref=e13] [cursor=pointer]:
+        - img [ref=e15]
+        - generic [ref=e20]: Acceder con Google
+      - generic [ref=e22]: or
+      - form "Sign in form" [ref=e23]:
+        - generic [ref=e24]:
+          - generic [ref=e25]: Correo electrónico:*
+          - textbox "Correo electrónico:" [ref=e26]
+        - generic [ref=e27]:
+          - generic [ref=e28]: Contraseña*
+          - textbox "Contraseña" [ref=e29]
+        - button "¿Olvidaste tu contraseña?" [ref=e31] [cursor=pointer]
+        - button "Iniciar Sesión" [ref=e32] [cursor=pointer]:
+          - generic [ref=e33]: Iniciar Sesión
+      - generic [ref=e34]:
+        - generic [ref=e35]: Don't have an account?
+        - link "Registro" [ref=e36] [cursor=pointer]:
+          - /url: /accounts/signup
+        - button "Acceder sin cuenta" [ref=e37] [cursor=pointer]

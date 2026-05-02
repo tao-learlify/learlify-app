@@ -1,0 +1,54 @@
+.chat {
+  *zoom: 1;
+}
+.chat:before,
+.chat:after {
+  content: '';
+  display: table;
+}
+
+.chat:after {
+  clear: both;
+}
+
+.chat h4 {
+  font-size: 12px;
+  line-height: 1.5em;
+}
+
+.chat h5 {
+  font-size: 10px;
+  line-height: 1.5em;
+	margin: 0;
+}
+
+.chat img {
+  border: 0;
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.chat h4:before {
+	background: #1a8a34;
+	border-radius: 50%;
+	content: "";
+	display: inline-block;
+	height: 8px;
+	margin: 0 8px 0 0;
+	width: 8px;
+}
+
+.chat ::-webkit-input-placeholder {
+  font-size: 9px !important;
+}
+.chat ::-moz-placeholder {
+  font-size: 9px !important;
+}
+.chat :-ms-input-placeholder {
+  font-size: 9px !important;
+}
+
+.chat ::placeholder {
+  font-size: 9px !important;
+}

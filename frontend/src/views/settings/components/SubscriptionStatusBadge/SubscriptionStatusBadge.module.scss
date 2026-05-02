@@ -1,0 +1,30 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 12px;
+  border-radius: 50px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.active {
+  background-color: #e0faf9;
+  color: #00a19b;
+}
+
+.warning {
+  background-color: #fef3cd;
+  color: #c07f00;
+}
+
+.danger {
+  background-color: #fde8e8;
+  color: #c0392b;
+}
+
+.neutral {
+  background-color: #f1f3f5;
+  color: #6c757d;
+}

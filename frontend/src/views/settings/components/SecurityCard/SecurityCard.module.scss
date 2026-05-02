@@ -1,0 +1,6 @@
+.sectionLabel { composes: sectionLabel from '../_shared.module.scss'; }
+.actions      { composes: actions      from '../_shared.module.scss'; }
+
+.formGroup {
+  margin-bottom: var(--space-4);
+}

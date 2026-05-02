@@ -1,0 +1,1556 @@
+{
+  "$schema": "./schema/exam.schema.json",
+  "name": "Exam 3",
+  "schema": [
+    {
+      "category": "Grammar & Vocabulary",
+      "exercises": [
+        {
+          "answers": [
+            "A.he ",
+            "B.she ",
+            "C. I"
+          ],
+          "correct": 2,
+          "description": "None",
+          "label": "Grammar",
+          "title": "1. {x} have two brothers and a sister. "
+        },
+        {
+          "answers": [
+            "A.are there ",
+            "B. there is",
+            "C. is there"
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "2.  How many eggs {x} in the fridge?"
+        },
+        {
+          "answers": [
+            "A. don't",
+            "B.no ",
+            "C. aren´t"
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "3. Unfortunately we {x} go to the cinema very often. "
+        },
+        {
+          "answers": [
+            "A.rained",
+            "B.was raining ",
+            "C.has rained "
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": "4. When I woke up that morning, it {x}. "
+        },
+        {
+          "answers": [
+            "A. going",
+            "B.go ",
+            "C. goes"
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "5. Jane loves {x} for a walk in the evenings. "
+        },
+        {
+          "answers": [
+            "A.after ",
+            "B. ago",
+            "C.before "
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": "6. I saw your brother 2 days {x}. "
+        },
+        {
+          "answers": [
+            "A. come",
+            "B.comes ",
+            "C.coming "
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "7. Will he {x} tomorrow? "
+        },
+        {
+          "answers": [
+            "A.have ",
+            "B.has ",
+            "C.need "
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": "8.  He {x} to tidy his room."
+        },
+        {
+          "answers": [
+            "A.to do ",
+            "B.does ",
+            "C.do "
+          ],
+          "correct": 2,
+          "description": "None",
+          "label": "Grammar",
+          "title": "9. Children should {x} more exercise. "
+        },
+        {
+          "answers": [
+            "A. such a",
+            "B.such ",
+            "C.so "
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "10. It’s {x} nice day today! "
+        },
+        {
+          "answers": [
+            "A.were sleeping ",
+            "B. slept",
+            "C.sleeping "
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "11. You {x}  when I came. "
+        },
+        {
+          "answers": [
+            "A. out",
+            "B. up",
+            "C. with"
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": "12. Where did you grow {x}? "
+        },
+        {
+          "answers": [
+            "A. haven`t been",
+            "B.didn't go ",
+            "C.don't go "
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "13.  I {x} to the cinema since last year. "
+        },
+        {
+          "answers": [
+            "A.a ",
+            "B.some ",
+            "C.a some "
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": "14.  I would like {x} soup. "
+        },
+        {
+          "answers": [
+            "A.would be ",
+            "B. willd be",
+            "C.is going to "
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "15.  He told me he {x} in the park by 6:00. "
+        },
+        {
+          "answers": [
+            "A. was written",
+            "B. wrote",
+            "C.is written "
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "16.  This novel {x} by Jack London in 1909. "
+        },
+        {
+          "answers": [
+            "A.few ",
+            "B. little",
+            "C.plenty "
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": "17. We have very {x} milk left. "
+        },
+        {
+          "answers": [
+            "A.sleeping ",
+            "B.to sleep ",
+            "C.sleep "
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "18.  {x} till noon is what I like most about weekends. "
+        },
+        {
+          "answers": [
+            "A.will ",
+            "B. will be",
+            "C.will have been "
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": "19.  In a month we {x} sunbathing on the beach. "
+        },
+        {
+          "answers": [
+            "A.have finished ",
+            "B.will have finished ",
+            "C. will finished"
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": "20.  I {x} by 7 tomorrow. "
+        },
+        {
+          "answers": [
+            "A.work ",
+            "B.working ",
+            "C.have been working "
+          ],
+          "correct": 2,
+          "description": "None",
+          "label": "Grammar",
+          "title": "21.  By next year Nancy will {x} here for 5 years. "
+        },
+        {
+          "answers": [
+            "A.would have had ",
+            "B.would have ",
+            "C.will have "
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": "22.   If I had studied English better at school, I {x} a better job now."
+        },
+        {
+          "answers": [
+            "A.where ",
+            "B.when ",
+            "C. why"
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "23. {x} is the bus station? "
+        },
+        {
+          "answers": [
+            "A.mustn’t see ",
+            "B. shouldn’t have seen",
+            "C.can’t have seen "
+          ],
+          "correct": 2,
+          "description": "None",
+          "label": "Grammar",
+          "title": "24. You {x} James yesterday, he was out of town. "
+        },
+        {
+          "answers": [
+            "A.could ",
+            "B.must ",
+            "C. might"
+          ],
+          "correct": 2,
+          "description": "None",
+          "label": "Grammar",
+          "title": "25.  I’m not sure about this cardigan. My mum {x} not like the colour. "
+        },
+        {
+          "description": "1.Write the letter (A-K) of the word that is most similar in meaning to a word on the left (1-5). Use each word only once. Write your answers (A-K) on your answer paper. You will not need five of the words (A-K). ",
+          "label": "Vocabulary",
+          "questions": [
+            {
+              "title": "1.begin {x}",
+              "answers": [
+                "H start",
+                "A close"
+              ],
+              "correct": 0
+            },
+            {
+              "title": "2.opportunity {x}",
+              "answers": [
+                "F chance",
+                "D dress"
+              ],
+              "correct": 0
+            },
+            {
+              "title": "3.nice {x}",
+              "answers": [
+                "E good",
+                "G dry"
+              ],
+              "correct": 0
+            },
+            {
+              "title": "4.clean {x}",
+              "answers": [
+                "B clear",
+                "J busy"
+              ],
+              "correct": 0
+            },
+            {
+              "title": "5.believe {x}",
+              "answers": [
+                "C trust",
+                "K answer"
+              ],
+              "correct": 0
+            }
+          ]
+        },
+        {
+          "description": "2. Finish each sentence (6-10) using a word from the list (A-K). Use each word only once. Write your answers (A-K) on your answer paper. You will not need five of the words (A-K).",
+          "label": "Vocabulary",
+          "questions": [
+            {
+              "answers": [
+                "A arrive",
+                "C guilty"
+              ],
+              "correct": 0,
+              "title": "6.To get to a place, especially at the end of a journey is to{x} "
+            },
+            {
+              "answers": [
+                "D sad",
+                "F patient"
+              ],
+              "correct": 0,
+              "title": "7.  To feel unhappy or sorry is to feel{x}. "
+            },
+            {
+              "answers": [
+                "G popular",
+                "H newspaper"
+              ],
+              "correct": 0,
+              "title": "8. To be liked, enjoyed or supported by many people is to be {x}"
+            },
+            {
+              "answers": [
+                "E instruct",
+                "J negotiate"
+              ],
+              "correct": 0,
+              "title": "9. To tell someone how to do something is to {x}"
+            },
+            {
+              "answers": [
+                "B horrible",
+                "K complain"
+              ],
+              "correct": 0,
+              "title": "10.  To be very bad or unpleasant is to be {x}."
+            }
+          ]
+        },
+        {
+          "description": "3.Write the letter of the word on the right (A-K) that matches the definition on the left (11-15). Use each word only once. Write your answers (A-K) on your answer paper. You will not need five of the words (A-K)",
+          "label": "Vocabulary",
+          "questions": [
+            {
+              "answers": [
+                "H ceiling",
+                "A museum"
+              ],
+              "correct": 0,
+              "title": "11.The surface at the top of the room you can see when you look up {x} "
+            },
+            {
+              "answers": [
+                "C cheat",
+                "B menu"
+              ],
+              "correct": 0,
+              "title": "12. To do something dishonest and unfair to get advantage.{x} "
+            },
+            {
+              "answers": [
+                "F lake",
+                "E niece"
+              ],
+              "correct": 0,
+              "title": "13. A large area of water with land around it.{x} "
+            },
+            {
+              "answers": [
+                "G flu",
+                "J blow"
+              ],
+              "correct": 0,
+              "title": "14.An illness like a very bad cold usually with high temperature.{x} "
+            },
+            {
+              "answers": [
+                "D silence",
+                "K mouse"
+              ],
+              "correct": 0,
+              "title": "15.Complete absence of sound.{x}  "
+            }
+          ]
+        },
+        {
+          "description": "4.Finish each sentence (16-20) using a word from the list (A-K). Use each word only once. Write your answers (A-K) on your answer paper. You will not need five of the words (A-K)",
+          "label": "Vocabulary",
+          "questions": [
+            {
+              "answers": [
+                "E resign",
+                "C movie"
+              ],
+              "correct": 0,
+              "title": "16.Jane decided to {x} from her job since it wasn’t well paid. "
+            },
+            {
+              "answers": [
+                "G adventure",
+                "D needle"
+              ],
+              "correct": 0,
+              "title": "17.This trip was an exciting {x} for him. "
+            },
+            {
+              "answers": [
+                "B headache",
+                "F leak"
+              ],
+              "correct": 0,
+              "title": "18. {x} is one the common symptoms. "
+            },
+            {
+              "answers": [
+                "K urgent",
+                "H necessity"
+              ],
+              "correct": 0,
+              "title": "19.This is an {x} situations which needs immediate attention. "
+            },
+            {
+              "answers": [
+                "A mood",
+                "J wild"
+              ],
+              "correct": 0,
+              "title": "20. He’s always in a very good {x} when his team wins. "
+            }
+          ]
+        },
+        {
+          "description": "5.Write the letter of the word on the right (A-K) that is most often used with a word on the left (21-25). Use each word only once. Write your answers (A-K) on your answer paper. You will not need five of the words (A-K).",
+          "label": "Vocabulary",
+          "questions": [
+            {
+              "answers": [
+                "F diet",
+                "A toddler"
+              ],
+              "correct": 0,
+              "title": "21.vegetarian {x}"
+            },
+            {
+              "answers": [
+                "C scholarship",
+                "E projector"
+              ],
+              "correct": 0,
+              "title": "22.gain{x} "
+            },
+            {
+              "answers": [
+                "J wealth",
+                "G bulb"
+              ],
+              "correct": 0,
+              "title": "23.economic {x}"
+            },
+            {
+              "answers": [
+                "D summary",
+                "K banner"
+              ],
+              "correct": 0,
+              "title": "24.brief{x} "
+            },
+            {
+              "answers": [
+                "B career",
+                "H appetite"
+              ],
+              "correct": 0,
+              "title": "25. pursue{x}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Reading",
+      "exercises": [
+        {
+          "heading": "Part 1: All about Whales  ",
+          "description": "Whales are like mythical creatures, they are in animated films and the characters in popular children's books. Seeing a whale is considered to be something incredible. But what is so special about these massive creatures? Whales can be found all over the world's oceans, these magnificent creatures communicate through complex sounds and strange sounds. They are also gigantic and the blue whale can be as big as 100 feet long and weigh up to 200 tons - which is the equivalent of 33 elephants.{v} A common misconception is that whales breathe underwater and although they live in the sea they actually breathe air like humans. They are also like humans in that they are warm blooded creatures who nurse their young. They have a thick layer of fat which is called blubber. This keeps them insulated from the cold ocean waters so they can stay warm. {v} Baleen whales include the blue, right, bowhead, sei, and gray whales. These types of whales have baleen, a structure that helps them get food from the water. Other whales have teeth such as the beluga and sperm whale. {v} WHY ARE WHALES SO IMPORTANT? {v} Whales are at the top of the pyramid and affect the health of the marine environment. They have a big role to play in taking carbon from the atmosphere, therefore are important in the fight against climate change. Each great whale takes in around 33 tons of carbon dioxide during their lifetime which can last up to 200 years after which their carbon filled bodies sink to the bottom of the ocean. {v} Even though they are at the top of the food chain this does not make them exempt from danger. Six out of the 13 great whale species are categorized as endangered or vulnerable unfortunately. This is despite great conservation attempts from charities, NGOS such as WWF, sea life trust and government organisations. The biggest threats to whales are ships, habitat loss and of course commercial finishing. It is estimated that 300,000 whales and dolphins are killed because of fishing. {v} Another issue which has come into the news recently is commercial whaling. Despite the ban on commercial whaling, three countries namely Japan, Iceland and Norway still keep doing it. This accounts for 1,000 whales being killed every year. The blue whale which was the largest animal ever known to have existed was almost exterminated in the 20th century due to commercial whaling. {v} In addition the warming of the planet is also a factor in the decline of whales species. Whales habitats and food sources are affected by the warming of the water and consequently the loss of sea ice, along with other species such as the polar bear. As whales have to migrate further to reach feeding grounds, they have limited time to find food. If that wasn't enough many of the world's busiest shipping routes coincide with whales breeding and feeding grounds. This means that they are more at risk from colliding with ships or being affected by pollution. Unfortunately, politicians are not making the issue a priority and a lack of awareness from the public means there is less pressure to address the issue. {v} Nonetheless there is hope and there are many organizations such as the WWF which are working to protect and converse whales and dolphin species. They have achieved success in terms of banning commercial whaling in 1984 and have whale sanctuaries which prohibits the passing of ships in feeding and breeding grounds. {v} Furthermore they are working with industry to reduce the numbers of species caught in by catch as well as reducing noise pollution which affects whales ability to communicate with one another. Hopefully in the future none of the whale species will be on the endangered or vulnerable list from regional, national and international awareness of the need to protect marine life and the planet. ,",
+          "label": "Reading Part 4",
+          "modules": [
+            {
+              "module": "Matching",
+              "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t1-r3.jpg",
+              "title": "Part 1, Section 1:",
+              "subtitle": "Complete the diagram below. Use NO MORE THAN TWO WORDS/NUMBERS for each answer.",
+              "questions": [
+                {
+                  "title": "1.  {x}",
+                  "answers": [
+                    "Warming",
+                    "warming"
+                  ]
+                },
+                {
+                  "title": "2.  {x}",
+                  "answers": [
+                    "Loss",
+                    "loss"
+                  ]
+                },
+                {
+                  "title": "3. {x}",
+                  "answers": [
+                    "Migrate",
+                    "migrate"
+                  ]
+                },
+                {
+                  "title": "4. {x}",
+                  "answers": [
+                    "Find food",
+                    "find food"
+                  ]
+                }
+              ]
+            },
+            {
+              "module": "Dropdown",
+              "label": "Grammar",
+              "title": "Part 1, Section 2:",
+              "subtitle": "Do the following statements agree with the information given in the reading passage? {v}TRUE= if the statement agrees with the information. {v} FALSE= if the statement contradicts the information. {v} NOT GIVEN= if there is no information on this.",
+              "questions": [
+                {
+                  "title": "1. The writer believes that seeing a whale in nature is a common experience. {x}",
+                  "answers": [
+                    "True",
+                    "False",
+                    "Not given"
+                  ],
+                  "correct": 1
+                },
+                {
+                  "title": "2. Whales make one of the longest annual migrations of any mammal. {x} ",
+                  "answers": [
+                    "True",
+                    "False",
+                    "Not given"
+                  ],
+                  "correct": 2
+                },
+                {
+                  "title": "3. Whales are fish that breathe underwater. {x} ",
+                  "answers": [
+                    "True",
+                    "False",
+                    "Not given"
+                  ],
+                  "correct": 1
+                },
+                {
+                  "title": "4. Japan, Norway and Iceland participate in commercial whaling. {x} ",
+                  "answers": [
+                    "True",
+                    "False",
+                    "Not given"
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "5. There is an international law which prohibits commercial whaling. {x} ",
+                  "answers": [
+                    "True",
+                    "False",
+                    "Not given"
+                  ],
+                  "correct": 0
+                }
+              ]
+            },
+            {
+              "module": "Dropdown",
+              "label": "Grammar",
+              "title": "Part 1, Section 3:",
+              "subtitle": "Select the correct answer (A-C).",
+              "questions": [
+                {
+                  "title": "1. What are the reasons whales are being killed? {x}",
+                  "answers": [
+                    "A. Commercial whaling and fishing routes.",
+                    "B. The impact of climate changes.",
+                    "C. People seeking ivory, meat and body parts."
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "2. Why are whales so important? {x} ",
+                  "answers": [
+                    "A. Whales are full of persistent toxins accumulated in their blubber.",
+                    "B. Whales are necessary for healthy oceans.",
+                    "C. Whales remove carbon dioxide and are at the top of the food pyramid."
+                  ],
+                  "correct": 2
+                },
+                {
+                  "title": "3. What are the effects of commercial fishing? {x} ",
+                  "answers": [
+                    "A. Wild fish populations can get sick and die because of parasites spread through the water.",
+                    "B. Noise pollution and dead dolphins and whales.",
+                    "C. Increasement of in international cooperation and animal welfare charities."
+                  ],
+                  "correct": 1
+                },
+                {
+                  "title": "4.   The problem is being increased by? {x} ",
+                  "answers": [
+                    "A. Lack of public awareness.",
+                    "B. Global warming. ",
+                    "C. The size of the nets and the way boats travel."
+                  ],
+                  "correct": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Part 2: What would we do without satellites?",
+          "description": "PARAGRAPH A.{v} October 4, 1957 marked the start of the space age and, therefore, sparked the beginning of decades of progress for mankind. The name given to the first satellite launched into space by the Soviet Union was ‘Sputnik 1’. Unfortunately, satellites are not built to last forever, and the monumental first manmade machinery in space has already re-entered the atmosphere and is nothing more than a disintegrated piece of archaeology. ‘Sputnik 2’ was launched into space not long after, on November 3, 1957. A unique factor came with this satellite as it transported a live animal into space as a passenger. Laika, a dog, was the first live animal to travel into space, and since then, has gone down in history as such. After years and years of advances, a variety of countries and associations have launched almost 3,000 satellites into space which are now orbiting Earth, some having since then lost function while others are serving a variety of different purposes. {v}PARAGRAPH B.{v} Satellites are useful for a countless amount of things that aid humans in their everyday lives, many of which are unknown to earth's every day citizen. The most obvious answer one might come up with when considering the purpose that satellites serve is that of space science. Without a doubt, satellites provide humanity with the ability to study earth from a distance. However, every day appliances like televisions and telephones rely on signals provided by satellites around earth's orbit. Additionally, satellites allow us to both determine our location and navigate to other locations, a thing that past generations had to use maps to do. Nowadays the gadgets that most people have are highly reliant on the fact that satellites are up and running. Many take for granted the fact that we can look at the weather forecast without realizing that we are privy to that information thanks to the work of satellites. This not only provides convenience for our weekend plans, but it allows for societies to prepare for dangerous changes in the weather as well as predictable natural disasters. In this way satellites provide us with the tools to save lives and communities. {v} PARAGRAPH C.{v} Satellites come in all different shapes and sizes as well as serving for different purposes. Different satellites are assigned distinctive types of orbits, the two possibilities being circular or elliptical. A satellite will take around 12 hours to complete its orbit around the earth, from north to south. Most satellites are set up in space with the intention of pointing at earth, thus allowing their cameras and other equipment to focus on earth and its activity. Some satellites are built for the purpose of facing the other direction, to space, in order to gain data about stars, planets, galaxies or other objects. As mentioned above, different satellites serve different purposes, and they tend to be given names accordingly. The ‘landsat’ satellites, for example, produce images of the earth's surface from a distance. Another satellite, going by the name of the Geostationary Operational Environmental Satellite or GOES spends its days hovering over certain areas in order to track changes in weather or climate, providing scientists with useful data. A third example is the Orbiting Satellite Carrying Amateur Radio or OSCAR which creates a connection between radio stations, allowing for communication. {v} PARAGRAPH D.{v} After a sharp realization of how important satellites are in the world today, it is scary to consider what might happen if satellites ceased to function. The world would not fall apart instantaneously, however there would be slight inconveniences people would pick up on within the first hour. For example, televisions would lose connection or navigation systems would not function well. Over the course of a few hours, however, more important connections like pilots to other planes or radio towers would start to fail, creating serious danger in the air. Drastic decisions would have to be made as many forms of communication would be put in jeopardy and travel might become extremely dangerous, especially due to the lack of knowledge about any imposing weather. Within a day, the world would be turned upside down, forcing humanity to take a step back in time in order to keep systems up and running. {v} PARAGRAPH E.{v} While the possibility of satellites coming to a halt does not seem very likely, it is a scenario that scientists do their best to prepare for. Some satellites are close enough to earth so that astronauts can be sent up on missions in space shuttles to make any repairs that may be necessary. In regards to more distant satellites, most conclusions have space organizations simply saying farewell to many satellites that prove disfunctional or in need of repairs. Recent research has opened the door to the possibility of saving such satellites by using other satellites to complete any needed repairs. In observation of the progress that has been made, this concept does not seem out of reach, however there are many questions that need to be answered with accurate and astute mathematics. The basic question begs to know what the process would be in creating a perfect encounter with a broken satellite in order to make the repairs in the first place. This does not even touch on the programming that would need to be done from a distance. {v} PARAGRAPH F.{v} Advances to save the lives of satellites are a work in making, so this brings along curiosity about what happens to satellites that go out of commission. Sending a hunk of metal into space for scientific purposes seems great at the start, but leaving this metal machinery drifting about in space for an unknown amount of time could be the cause of future problems. As satellites are trackable, scientists are also able to track when they are coming to the ends of their lives, giving the opportunity for them to be pulled closer to earth’s orbit thus causing them to burn up in the atmosphere. While this is a good solution for smaller satellites, larger ones might not be able to disintegrate completely. Solutions for this tend to involve scientists controlling satellites so that any excess debris lands in an area that is not harmful to anyone on earth. At times, scientists may choose to push a satellite further away from earth, especially if its starting distance is quite far already. These satellites are likely to continue orbiting in an obsolete state, commonly referred to as a ‘graveyard orbit’. ",
+          "label": "Reading Part 4",
+          "modules": [
+            {
+              "module": "Dropdown",
+              "label": "Grammar",
+              "title": "Part 2, Section 1:",
+              "subtitle": "Do the following statements agree with the information given in the reading passage? {v}TRUE= if the statement agrees with the information. {v} FALSE= if the statement contradicts the information. {v} NOT GIVEN= if there is no information on this.",
+              "questions": [
+                {
+                  "title": "1.Animals are not commonly launched into space with any type of space crafts. {x}",
+                  "answers": [
+                    "True",
+                    "False",
+                    "Not given"
+                  ],
+                  "correct": 2
+                },
+                {
+                  "title": "2. Satellites can complete an orbit in less than a day's time.  {x} ",
+                  "answers": [
+                    "True",
+                    "False",
+                    "Not given"
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "3. The ‘landsat’ satellites are commonly used for programs that allow people to see the earth in real-time.  {x} ",
+                  "answers": [
+                    "True",
+                    "False",
+                    "Not given"
+                  ],
+                  "correct": 2
+                },
+                {
+                  "title": "4. Nowadays it is common to send satellites up when other systems need to be repaired. {x} ",
+                  "answers": [
+                    "True",
+                    "False",
+                    "Not given"
+                  ],
+                  "correct": 1
+                },
+                {
+                  "title": "5.The remains of a satellite falling to earth could cause potential danger to cities on earth. {x} ",
+                  "answers": [
+                    "True",
+                    "False",
+                    "Not given"
+                  ],
+                  "correct": 0
+                }
+              ]
+            },
+            {
+              "module": "Dropdown",
+              "label": "Grammar",
+              "title": "Part 2, Section 2:",
+              "subtitle": "Match each sentence with its correct ending.",
+              "questions": [
+                {
+                  "title": "1. ‘Sputnik 1’ is famous for being the first satellite launched into space {x}",
+                  "answers": [
+                    "A. according to their mission.",
+                    "B. if we didn´t have satellites close enough to earth.",
+                    "C. and it is of interest for archeologists.",
+                    "D. although it was the second that carried a passenger.",
+                    "E. if provided satellites stopped functioning.",
+                    "F. the fact that they cover a wide variety of our needs from navigation to weather forecast.",
+                    "G. in order to distinguish between those facing the earth and the space."
+                  ],
+                  "correct": 3
+                },
+                {
+                  "title": "2. Satellites play a crucial role in our lives due to {x}",
+                  "answers": [
+                    "A. according to their mission.",
+                    "B. if we didn´t have satellites close enough to earth.",
+                    "C. and it is of interest for archeologists.",
+                    "D. although it was the second that carried a passenger.",
+                    "E. if provided satellites stopped functioning.",
+                    "F. the fact that they cover a wide variety of our needs from navigation to weather forecast.",
+                    "G. in order to distinguish between those facing the earth and the space."
+                  ],
+                  "correct": 5
+                },
+                {
+                  "title": "3. Specific names are given to satellites {x}",
+                  "answers": [
+                    "A. according to their mission.",
+                    "B. if we didn´t have satellites close enough to earth.",
+                    "C. and it is of interest for archeologists.",
+                    "D. although it was the second that carried a passenger.",
+                    "E. if provided satellites stopped functioning.",
+                    "F. the fact that they cover a wide variety of our needs from navigation to weather forecast.",
+                    "G. in order to distinguish between those facing the earth and the space."
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "4. A variety of ways of communication as well as navigation systems would fail {x}",
+                  "answers": [
+                    "A. according to their mission.",
+                    "B. if we didn´t have satellites close enough to earth.",
+                    "C. and it is of interest for archeologists.",
+                    "D. although it was the second that carried a passenger.",
+                    "E. if provided satellites stopped functioning.",
+                    "F. the fact that they cover a wide variety of our needs from navigation to weather forecast.",
+                    "G. in order to distinguish between those facing the earth and the space."
+                  ],
+                  "correct": 4
+                }
+              ]
+            },
+            {
+              "module": "Matching",
+              "title": "Part 2, Section 3:",
+              "subtitle": "Complete the diagram below. DO NOT USE MORE THAN TWO WORDS/NUMBERS.",
+              "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t3-r2.jpg",
+              "questions": [
+                {
+                  "title": "1. {x}",
+                  "answers": [
+                    "Circular",
+                    "circular",
+                    "Elliptical",
+                    "elliptical"
+                  ]
+                },
+                {
+                  "title": "2. {x}",
+                  "answers": [
+                    "12 hours",
+                    "Twelve hours",
+                    "twelve hours"
+                  ]
+                },
+                {
+                  "title": "3.  {x}",
+                  "answers": [
+                    "Landsat",
+                    "landsat",
+                    "the landsat",
+                    "The landsat"
+                  ]
+                },
+                {
+                  "title": "4. {x}",
+                  "answers": [
+                    "To track",
+                    "to track"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Part 3: The Co-operative Food",
+          "description": "PARAGRAPH A.{v} Supermarkets have been essential parts of communities for centuries and have transformed over time into what they are today. While the typical supermarket tends to be a franchise which is stocked with certain products allowing for controlled variety, there are other forms of supermarkets which put the people in control of the goods they are buying. A food co-op is essentially a supermarket that is owned and run by the people who shop at it. In order to be a part of a food co-op one must be a member, which then allows you to reap all the benefits of the system. {v} PARAGRAPH B.{v} Contrary to popular belief, food co-ops are not necessarily a modern idea. The co-operative movement began back in 1844 in a town called Rochdale, in the United Kingdom. The concept created back then still rings true for that of today outlining the idea that a co-op should give people the power to decide on their food while respecting one another and working together. This movement of food co-op spread across the UK throughout the 1900s, it hit some roadblocks over the years, but nowadays are striving and well. Food co-ops are known for focusing on providing eco-friendly options, organic food and fair trade products. Their focus is not only to give power to the people, but to provide environmentally friendly products, therefore promoting practice that is safe for the planet. {v} PARAGRAPH C.{v} From a distance, the core of a food co-op seems quite positive and beneficial to its members. Without a doubt, it has some considerable advantages. For example, all of the costs to maintain the business up and running are shared between all of the members. Instead of it being the responsibility of a certain group of members, each member pays fees to cover essential costs. Additionally, every member plays an equal role in monitoring and maintaining the co-op which means that there is no certain person or group set aside with that task. Even more, the co-op forces the members to have a high level of communication in order to have a successful food co-op. Good communication allows for growth in many aspects and increases the growth of the co-op in the community. {v} PARAGRAPH D.{v} Conversely, there are a series of disadvantages that might be troubling when considering membership of a food co-op. Because the bills of a co-op are shared amongst its members, these groups are unlikely to receive any financial support from other outside sources. This means that in the event of a robbery or accident, those who are responsible to pay for the costs are the members. To continue, making decisions as a shared group can be an advantage, but it can also be time consuming and controversial when meetings don’t amount to a unanimous decision or peaceful solution. Finally, the hours that being a member of a co-op might impose on a member's life can be quite hefty. As a member of a co-op there are certain responsibilities that must be maintained, including putting in your own time and energy both at the co-op and in advertising it to outsiders. {v} PARAGRAPH E.{v} Making a decision on whether or not to join a co-op can actually be quite strenuous. While the actual steps to becoming a member are quite simple, the aftermath is the difficult part. Becoming a member can be done very simply by filling out some paperwork, or even over the internet. There are usually certain fees that must be paid upfront, sometimes being as high as 200 pounds. The real question to consider is whether or not you will be getting out of the co-op more than you are putting in. {v} PARAGRAPH F.{v} Even though food co-ops have survived through different trials over time, the question nowadays is whether or not they will survive into the future. One of the primary reasons for joining a food co-op has to do with the type of products you are given access to and your power in choosing them. However, nowadays large, national groceries stores are providing their shoppers with a large variety of organic, eco-friendly products without having to be a member of their store. This situation begs the question about whether or not food co-ops will be able to survive in the future if other stores are providing the same services in a more convenient way. ",
+          "label": "Reading Part 4",
+          "modules": [
+            {
+              "module": "Dropdown",
+              "title": "Part 3, Section 1:",
+              "subtitle": "Choose the correct heading for each paragraph.",
+              "label": "Reading Part 4",
+              "questions": [
+                {
+                  "answers": [
+                    "1. A food co-op through a magnifying glass.",
+                    "2. Food co-ops in the past.",
+                    "3. The history and growth of food co-ops.",
+                    "4. What is a food co-op?.",
+                    "5. How a co-op can benefit your life.",
+                    "6. reasons to avoid a food co-op.",
+                    "7. Negative aspects of a food co-op.",
+                    "8. The financial aspect of a food co-op.",
+                    "9. Future of the food co-op.",
+                    "10. Joining a co-op."
+                  ],
+                  "correct": 3,
+                  "title": " Paragraph A."
+                },
+                {
+                  "answers": [
+                    "1. A food co-op through a magnifying glass.",
+                    "2. Food co-ops in the past.",
+                    "3. The history and growth of food co-ops.",
+                    "4. What is a food co-op?.",
+                    "5. How a co-op can benefit your life.",
+                    "6. Reasons to avoid a food co-op.",
+                    "7. Negative aspects of a food co-op.",
+                    "8. The financial aspect of a food co-op.",
+                    "9. Future of the food co-op.",
+                    "10. Joining a co-op."
+                  ],
+                  "correct": 2,
+                  "title": " Paragraph B."
+                },
+                {
+                  "answers": [
+                    "1. A food co-op through a magnifying glass.",
+                    "2. Food co-ops in the past.",
+                    "3. The history and growth of food co-ops.",
+                    "4. What is a food co-op?.",
+                    "5. How a co-op can benefit your life.",
+                    "6. reasons to avoid a food co-op.",
+                    "7. Negative aspects of a food co-op.",
+                    "8. The financial aspect of a food co-op.",
+                    "9. Future of the food co-op.",
+                    "10. Joining a co-op."
+                  ],
+                  "correct": 4,
+                  "title": " Paragraph C."
+                },
+                {
+                  "answers": [
+                    "1. A food co-op through a magnifying glass.",
+                    "2. Food co-ops in the past.",
+                    "3. The history and growth of food co-ops.",
+                    "4. What is a food co-op?.",
+                    "5. How a co-op can benefit your life.",
+                    "6. reasons to avoid a food co-op.",
+                    "7. Negative aspects of a food co-op.",
+                    "8. The financial aspect of a food co-op.",
+                    "9. Future of the food co-op.",
+                    "10. Joining a co-op."
+                  ],
+                  "correct": 6,
+                  "title": " Paragraph D."
+                },
+                {
+                  "answers": [
+                    "1. A food co-op through a magnifying glass.",
+                    "2. Food co-ops in the past.",
+                    "3. The history and growth of food co-ops.",
+                    "4. What is a food co-op?.",
+                    "5. How a co-op can benefit your life.",
+                    "6. reasons to avoid a food co-op.",
+                    "7. Negative aspects of a food co-op.",
+                    "8. The financial aspect of a food co-op.",
+                    "9. Future of the food co-op.",
+                    "10. Joining a co-op."
+                  ],
+                  "correct": 8,
+                  "title": " Paragraph F."
+                }
+              ]
+            },
+            {
+              "module": "Dropdown",
+              "label": "Grammar",
+              "title": "Part 3, Section 2:",
+              "subtitle": "Do the following statements agree with the information given in the reading passage? {v} YES= if the statement agrees with the information. {v} NO= if the statement contradicts the information. {v} NOT GIVEN= if there is no information on this.",
+              "questions": [
+                {
+                  "title": "1.Food co-ops are the only type of stores that give members the ability to choose what the store is stocked with. {x}",
+                  "answers": [
+                    "Yes",
+                    "No",
+                    "Not given"
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "2. Shopping as a member at a co-op may be more pricey than going to a franchise supermarket.  {x} ",
+                  "answers": [
+                    "Yes",
+                    "No",
+                    "Not given"
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "3. Some see a membership as a co-op to be similar to a part-time job.  {x} ",
+                  "answers": [
+                    "Yes",
+                    "No",
+                    "Not given"
+                  ],
+                  "correct": 2
+                },
+                {
+                  "title": "4. Food co-ops have a solid history and will therefore face no bumps in the future. {x} ",
+                  "answers": [
+                    "Yes",
+                    "No",
+                    "Not given"
+                  ],
+                  "correct": 1
+                }
+              ]
+            },
+            {
+              "module": "Matching",
+              "title": "Part 3, Section 3:",
+              "subtitle": "Complete the chart. DO NOT USE MORE THAN TWO WORDS/NUMBERS.",
+              "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t3-r3.jpg",
+              "questions": [
+                {
+                  "title": "1.  {x} ",
+                  "answers": [
+                    "membership",
+                    "Membership"
+                  ]
+                },
+                {
+                  "title": "2.  {x}  ",
+                  "answers": [
+                    "Pay",
+                    "pay"
+                  ]
+                },
+                {
+                  "title": "3.  {x} ",
+                  "answers": [
+                    "Tasks",
+                    "tasks",
+                    "Works",
+                    "works"
+                  ]
+                },
+                {
+                  "title": "4. {x}  ",
+                  "answers": [
+                    "Choose",
+                    "choose"
+                  ]
+                },
+                {
+                  "title": "5. {x}  ",
+                  "answers": [
+                    "outsiders",
+                    "Outsiders"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Listening",
+      "exercises": [
+        {
+          "heading": "Part 1: VENICE GONDOLA TOUR",
+          "label": "Reading Part 4",
+          "description": "",
+          "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t3- l1.jpg",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/E3-1.mp3",
+          "modules": [
+            {
+              "module": "Matching",
+              "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t3--l1.jpg",
+              "title": "Part 1, Questions 1-6:",
+              "subtitle": "Complete the table below. Write NO MORE THAN TWO WORDS/NUMBERS for each answer.",
+              "questions": [
+                {
+                  "title": "1. {x}",
+                  "answers": [
+                    "30",
+                    "thirty",
+                    "Thirty"
+                  ]
+                },
+                {
+                  "title": "2. {x}",
+                  "answers": [
+                    "2 hours",
+                    "2 h.",
+                    "2h.",
+                    "2 h",
+                    "2h",
+                    "Two hours",
+                    "two hours"
+                  ]
+                },
+                {
+                  "title": "3. {x}",
+                  "answers": [
+                    "Blue sign",
+                    "blue sign"
+                  ]
+                },
+                {
+                  "title": "4.{x}",
+                  "answers": [
+                    "Plaza",
+                    "plaza"
+                  ]
+                },
+                {
+                  "title": "5. {x}",
+                  "answers": [
+                    "churches",
+                    "Churches"
+                  ]
+                },
+                {
+                  "title": "6. {x}",
+                  "answers": [
+                    "cheese",
+                    "Cheese"
+                  ]
+                }
+              ]
+            },
+            {
+              "module": "Matching",
+              "title": "Part 1, Questions 7-10:",
+              "subtitle": "Answer the questions. Write NO MORE THAN THREE WORDS/NUMBERS for each answer.",
+              "questions": [
+                {
+                  "title": "7. What is another name for the gondolas in Venice? {x}",
+                  "answers": [
+                    "water taxi",
+                    "Water taxi"
+                  ]
+                },
+                {
+                  "title": "8. What have the women arranged for after the tour? {x}",
+                  "answers": [
+                    "Dinner plans",
+                    "dinner plans",
+                    "dinner",
+                    "Dinner"
+                  ]
+                },
+                {
+                  "title": "9. What is the tour guide wearing that makes her easy to identify? {x}",
+                  "answers": [
+                    "Yellow hat",
+                    "yellow hat",
+                    "bright, yellow hat",
+                    "bright yellow hat",
+                    "Bright, yellow hat",
+                    "Bright yellow hat"
+                  ]
+                },
+                {
+                  "title": "10. What is a Venician canal comparable to? {x}",
+                  "answers": [
+                    "a road",
+                    "A road"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Part 2: VOLUNTEERING AT A FESTIVAL",
+          "description": "",
+          "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t3-l2.jpg",
+          "label": "Reading Part 4",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/E3-2.mp3",
+          "modules": [
+            {
+              "module": "Dropdown",
+              "title": "Part 2, Questions 11-13:",
+              "subtitle": "Match the type of volunteering with its description.",
+              "questions": [
+                {
+                  "title": "11. Give people directions. {x}",
+                  "answers": [
+                    "A. Steward",
+                    "B. Toilet Cleaners",
+                    "C. Volunteers",
+                    "D. First aiders",
+                    "E. Litter pickers"
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "12. Have to recycle rubbish. {x}",
+                  "answers": [
+                    "A. Steward",
+                    "B. Toilet Cleaners",
+                    "C. Volunteers",
+                    "D. First aiders",
+                    "E. Litter pickers"
+                  ],
+                  "correct": 4
+                },
+                {
+                  "title": "13. Provide medical care if necessary. {x}",
+                  "answers": [
+                    "A. Steward",
+                    "B. Toilet Cleaners",
+                    "C. Volunteers",
+                    "D. First aiders",
+                    "E. Litter pickers"
+                  ],
+                  "correct": 3
+                }
+              ]
+            },
+            {
+              "module": "Dropdown",
+              "imageUrl": null,
+              "title": "Part 2, Questions 14-17:",
+              "subtitle": "Choose the correct answers (A-C).",
+              "questions": [
+                {
+                  "title": "14. First aiders must have brought their? {x}",
+                  "answers": [
+                    "A. Uniform",
+                    "B. Training",
+                    "C. First aid certificate"
+                  ],
+                  "correct": 2
+                },
+                {
+                  "title": "15. Glastonbury festival is the _____{x}  in the UK?",
+                  "answers": [
+                    "A. Safest",
+                    "B. Cleanest",
+                    "C. Biggest"
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "16. All stewards have a torch and a _____{x}?",
+                  "answers": [
+                    "A. Hat",
+                    "B. Map",
+                    "C. Boots"
+                  ],
+                  "correct": 1
+                },
+                {
+                  "title": "17. Glastonbury festival is the first to be? {x}",
+                  "answers": [
+                    "A. Plastic bottle free",
+                    "B. Electricity free",
+                    "C. Hot water-free"
+                  ],
+                  "correct": 0
+                }
+              ]
+            },
+            {
+              "module": "Matching",
+              "imageUrl": null,
+              "title": "Part 2, Questions 18-20:",
+              "subtitle": "Fill in the gaps. WRITE NO MORE THAN THREE WORDS/NUMBERS for each answer.",
+              "questions": [
+                {
+                  "title": "18. This year marks the ____{x} anniversary of the festival.",
+                  "answers": [
+                    "50th",
+                    "Fiftieth",
+                    "fiftieth"
+                  ]
+                },
+                {
+                  "title": "19. There are over _____{x} people attending this year.",
+                  "answers": [
+                    "250.000",
+                    "250000",
+                    "250 000"
+                  ]
+                },
+                {
+                  "title": "20. The festival is situated at _____{x} farm.",
+                  "answers": [
+                    "Pilton"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Part 3: REPORT ABOUT A FESTIVAL",
+          "description": "",
+          "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t3-l3.jpg",
+          "label": "Reading Part 4",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/E3-3.mp3",
+          "modules": [
+            {
+              "module": "Matching",
+              "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t3--l3.jpg",
+              "title": "Part 3, Questions 21-25:",
+              "subtitle": "Answer the questions. Write NO MORE THAN TWO WORDS/NUMBERS for each answer.",
+              "questions": [
+                {
+                  "title": "21.  {x}",
+                  "answers": [
+                    "the rain",
+                    "The Rain",
+                    "The rain"
+                  ]
+                },
+                {
+                  "title": "22. {x}",
+                  "answers": [
+                    "dance",
+                    "Dance",
+                    "Dance session",
+                    "dance session",
+                    "Dance Session"
+                  ]
+                },
+                {
+                  "title": "23.  {x}",
+                  "answers": [
+                    "cameras",
+                    "Cameras"
+                  ]
+                },
+                {
+                  "title": "24. {x}",
+                  "answers": [
+                    "editing",
+                    "Editing"
+                  ]
+                },
+                {
+                  "title": "25.{x}",
+                  "answers": [
+                    "12 Angry Men",
+                    "Twelve Angry Men"
+                  ]
+                }
+              ]
+            },
+            {
+              "module": "Matching",
+              "imageUrl": null,
+              "title": "Part 3, Questions 26-30:",
+              "subtitle": "Answer the questions. Write NO MORE THAN THREE WORDS/NUMBERS for each answer.",
+              "questions": [
+                {
+                  "title": "26. Who was Karen planning on going to the festival with? {x}",
+                  "answers": [
+                    "Her friends",
+                    "her friends"
+                  ]
+                },
+                {
+                  "title": "27. What type of job was Karen working over the summer? {x}",
+                  "answers": [
+                    "internship",
+                    "Internship"
+                  ]
+                },
+                {
+                  "title": "28.  What is Karen concerned about maintaining at her job? {x}",
+                  "answers": [
+                    "Reputation",
+                    "reputation",
+                    "Good reputation",
+                    "good reputation"
+                  ]
+                },
+                {
+                  "title": "29. What type of pass did Rachel have for the festival? {x}",
+                  "answers": [
+                    "Half-day pass",
+                    "half-day pass",
+                    "Half day pass",
+                    "half day pass",
+                    "morning pass",
+                    "Morning pass",
+                    "half-day",
+                    "Half-day",
+                    "Half day",
+                    "half day",
+                    "Morning",
+                    "morning"
+                  ]
+                },
+                {
+                  "title": "30. Does Karen think that Rachel knows what her essay is going to be about? {x}",
+                  "answers": [
+                    "yes",
+                    "Yes"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Part 4: INVENTION OF THE WHEEL",
+          "label": "Reading Part 4",
+          "description": "",
+          "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t3-l4.jpg",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/E3-4.mp3",
+          "modules": [
+            {
+              "module": "Matching",
+              "title": "Part 4, Questions 31-35:",
+              "subtitle": "Answer the questions. Write NO MORE THAN THREE WORDS/NUMBERS for each answer.",
+              "questions": [
+                {
+                  "title": "31. The first-ever wheel was discovered in? {x}",
+                  "answers": [
+                    "Mesopotamia"
+                  ]
+                },
+                {
+                  "title": "32. It was discovered around _____{x}",
+                  "answers": [
+                    "5,500",
+                    "5500",
+                    "5500 years ago",
+                    "5500 years",
+                    "5.500"
+                  ]
+                },
+                {
+                  "title": "33. The potters wheel was the catalyst for other types of? {x}",
+                  "answers": [
+                    "Technology",
+                    "technology"
+                  ]
+                },
+                {
+                  "title": "34. The wheel was not seen as a complete invention until the_____?{x}",
+                  "answers": [
+                    "Fixed axle",
+                    "fixed axle"
+                  ]
+                },
+                {
+                  "title": "35. The first wheel was made of? {x}",
+                  "answers": [
+                    "Wood",
+                    "wood"
+                  ]
+                }
+              ]
+            },
+            {
+              "module": "Matching",
+              "title": "Part 4, Questions 36-40:",
+              "subtitle": "Complete the sentences. Write NO MORE THAN TWO WORDS/NUMBERS for each answer.",
+              "questions": [
+                {
+                  "title": "36. Modern water mills are used to make? {x}",
+                  "answers": [
+                    "Hydro power",
+                    "Hydro-power",
+                    "hydro power",
+                    "hydro-power"
+                  ]
+                },
+                {
+                  "title": "37. The spinning wheel was created? {x}",
+                  "answers": [
+                    "2,500 years ago",
+                    "2500 years ago"
+                  ]
+                },
+                {
+                  "title": "38. The spinning wheel was used to spin? {x}",
+                  "answers": [
+                    "Thread",
+                    "thread"
+                  ]
+                },
+                {
+                  "title": "39. A gyroscope is used to measure? {x}",
+                  "answers": [
+                    "Direction",
+                    "direction"
+                  ]
+                },
+                {
+                  "title": "40. The wheel on the Indian flag represents? {x}",
+                  "answers": [
+                    "The law",
+                    "the law",
+                    "Law",
+                    "law"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Writing",
+      "exercises": [
+        {
+          "description": "TASK 1 {v} - {v} You should spend about 20 minutes on this task. {v} - {v} INSTRUCTIONS: The line chart shows the labor force participation of women in the USA, 1995-2005. {v} - {v} Summarise the information by selecting and reporting the main features and make comparisons where relevant. ",
+          "label": "Writing Part 4",
+          "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t3-w1.png",
+          "questions": [
+            {
+              "title": " Write at least 150 words.{x}"
+            }
+          ]
+        },
+        {
+          "description": "TASK 2 {v} - {v} You should spend about 40 minutes on this task. {v} - {v} Write about the following topic: {v} - {v} INSTRUCTIONS: Big cities in the world suffer from high air pollution, because people refuse to use the public transport, and preferring to use their own cars.To what extent do you think that this statement is true? {v} - {v} Give reasons for your answer and include any relevant examples from your own knowledge or experience.",
+          "label": "Writing Part 4",
+          "questions": [
+            {
+              "title": " Write at least 250 words. {x}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Speaking",
+      "exercises": [
+        {
+          "description": "PART 1 (4 -5 minutes) {v}TIP 1: At the beginning of the test the examiner will ask you your full name and will ask to see your identification. {v} TIP 2: The examiner will ask you some questions about different topics. First some personal questions about yourself then some questions about two specific topics. {v} TIP 3: Try and answer each question in one or two sentences. {v} ",
+          "label": "Speaking Part 1",
+          "recordingTime": 30,
+          "questions": [
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t3-s3.mp3",
+              "title": " EXAMINER´S INSTRUCTIONS: I´m going to ask you some questions about yourself. {v} Would you like to move to a new house? {x}"
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t3-s4.mp3",
+              "title": " EXAMINER´S INSTRUCTIONS: Let’s talk about pop stars. {v} Which celebrity do you most admire and why?  {x}"
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t3-s6.mp3",
+              "title": "  Do you think being a celebrity automatically means the person is intelligent? Why? Why not? {x}"
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t3-s7.mp3",
+              "title": " EXAMINER´S INSTRUCTIONS: Let’s talk about pets. {v} What animals don’t you like?  {x}"
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t3-s9.mp3",
+              "title": " What can children learn by having a pet? {x}"
+            }
+          ]
+        },
+        {
+          "description": "PART 2 (3-4 minutes) {v}TIP 1: The examiner will give you a paper, a pencil and a piece of paper with your topic. {v} TIP 2: Once you finish talking normally the examiner will ask you some follow up questions. {v} EXAMINER´S INSTRUCTIONS: You now have one minute to make notes. ",
+          "subtitle": "Describe an important member of your family. You should say:",
+          "label": "Speaking Part 1",
+          "recordingTime": 120,
+          "questions": [
+            {
+              "imageUrl": {
+                "images": [
+                  "https://dkmwdxc6g4lk7.cloudfront.net/img/t3-s1.jpg"
+                ]
+              },
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t3-s10.mp3",
+              "title": "I’d like you to describe an important member of your family. {x}"
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t3-s11.mp3",
+              "title": "   How important is your family for you? {x}"
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t3-s12.mp3",
+              "title": " Which activities do you prefer doing with your family rather than with your friends? {x}"
+            }
+          ]
+        },
+        {
+          "description": "PART 3 (4-5 minutes) {v}EXAMINER'S INSTRUCTIONS: We’ve been talking about an important member of your family and I’d now like to ask you some questions related to how families influence us.",
+          "label": "Speaking Part 1",
+          "recordingTime": 60,
+          "questions": [
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t3-s13.mp3",
+              "title": " Why do people get married? {x}"
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t3-s14.mp3",
+              "title": "  Should children help with housework? {x}"
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t3-s15.mp3",
+              "title": "  What is the importance of families in your country? {x}"
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t3-s16.mp3",
+              "title": "  How important are grandparents in a child’s education? {x}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "title": "Big World",
+  "description": "From ocean giants to space exploration — tackle complex reads, interpret charts, and articulate bold ideas with precision."
+}
