@@ -74,7 +74,7 @@ class PackagesTasks {
             ${i18n.__('mails.services.notifyExpiration.html.notify')}
               <a href="${mailConfig.domain}">${
               mailConfig.domain
-            }/account/pricing</a>
+            }/pricing</a>
             ${i18n.__('mails.services.notifyExpiration.html.practice')}
           </div>
         `
@@ -137,7 +137,7 @@ class PackagesTasks {
                 ${i18n.__('mails.services.packageExpiration.html.purchase')} 
                   <a href="${mailConfig.domain}">${
               mailConfig.domain
-            }/account/pricing</a>
+            }/pricing</a>
               </p>
               </strong>AptisGo</strong>
             </div>
