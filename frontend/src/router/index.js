@@ -72,12 +72,12 @@ export const router = {
       },
       {
         component: SignUp,
-        path: '/accounts/signup',
+        path: PATH.SIGN_UP,
         ...defaultRouterConfig
       },
       {
         component: ResetPassword,
-        path: '/accounts/reset-password',
+        path: '/reset-password',
         ...defaultRouterConfig
       },
       {
