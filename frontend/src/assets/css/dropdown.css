@@ -1,0 +1,34 @@
+.dropdown-style {
+  border-radius: 20px;
+  z-index: 30;
+}
+
+.dropdown-style .modal-content {
+  border-radius: 20px;
+}
+
+.dropdown-style > small {
+  white-space: initial;
+}
+
+.dropdown-item.disabled {
+  color: #1d4498;
+}
+
+.dropdown-test .dropup {
+  display: inline;
+}
+
+.dropdown-lg .dropup .dropdown-menu {
+  overflow-y: scroll;
+  height: 150px;
+}
+
+.dropdown-test .dropdown {
+  display: inline;
+}
+
+.dropdown-lg .dropdown .dropdown-menu {
+  overflow-y: scroll;
+  height: 150px;
+}

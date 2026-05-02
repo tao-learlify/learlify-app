@@ -1,0 +1,39 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - generic [ref=e8]:
+          - generic [ref=e9]: Unit 1
+          - heading "Daily Routines" [level=1] [ref=e10]
+        - generic [ref=e11]:
+          - generic [ref=e12]:
+            - img [ref=e13]
+            - generic [ref=e15]: "0"
+            - generic [ref=e16]: / 250 XP
+          - generic [ref=e17]: 🐼
+      - progressbar [ref=e18]
+  - main [ref=e19]:
+    - generic [ref=e20]:
+      - generic [ref=e66]:
+        - generic [ref=e67]: Block 5 of 27
+        - generic [ref=e68]: 19%
+      - generic [ref=e97]:
+        - generic [ref=e98]:
+          - generic [ref=e99]: 📐
+          - generic [ref=e100]: grammar
+        - generic [ref=e101]: ·
+        - generic [ref=e102]: Practice
+      - generic [ref=e104]:
+        - img [ref=e150]
+        - generic [ref=e106]:
+          - generic [ref=e107]:
+            - generic [ref=e108]:
+              - paragraph [ref=e109]: Grammar Exercise 1
+              - paragraph [ref=e110]: Read the text and complete each gap with the correct verb form. (Marc and Paul are looking at trainers in a shop.)
+            - generic [ref=e112]:
+              - img [ref=e113]
+              - generic [ref=e115]: 10 XP
+          - generic [ref=e152]: Exercise completed
+      - button "Continue" [ref=e155] [cursor=pointer]:
+        - text: Continue
+        - img [ref=e156]

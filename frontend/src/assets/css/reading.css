@@ -1,0 +1,26 @@
+.text-scroll {
+  height: 75vh;
+  overflow: auto;
+}
+
+.drag-drop-style {
+  border: 0.8px solid #17a2b8 !important;
+
+  border-radius: 10px;
+  box-shadow: 1.2px 2.8px;
+}
+
+.select-size {
+  width: 100%;
+}
+
+@media (max-width: 575.98px) {
+  .drag-drop-style {
+    font-size: 0.7rem;
+  }
+
+  .text-scroll {
+    height: auto;
+    padding-bottom: 20px;
+  }
+}

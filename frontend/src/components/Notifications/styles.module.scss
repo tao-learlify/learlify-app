@@ -1,0 +1,76 @@
+.notifications {
+  width: 300px;
+  height: auto;
+  opacity: 0.95;
+  position: absolute;
+  top: 70px;
+  right: 60px;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index: 999;
+  h2 {
+    font-size: 18px;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    color: #999 span {
+      color: #f00;
+    }
+  }
+  hr {
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+  }
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  padding: 4px 9px;
+  margin-bottom: 0px;
+  font-family: Monserrat-Light;
+  font-weight: bold;
+}
+
+
+.message {
+  font-size: .800rem;
+  font-weight: normal;
+  text-transform: none;
+}
+
+.date {
+  text-transform: lowercase;
+  font-size: 11px;
+}
+
+.message:hover {
+  color: #999 !important;
+  transition: ease-in-out 0.4s;
+}
+
+.mark:hover {
+  color:  #FF3F3F !important;
+  transition: ease-in 0.3s;
+}
+
+.info {
+  margin-top: 5px;
+}
+
+.pannel {
+  position: relative;
+  bottom: 7.5px;
+  text-transform: none;
+  padding: 6px;
+}
+
+.divisor {
+  margin-right: 5px;
+}
+
+.title {
+  margin-top: 5px;
+  text-transform: capitalize;
+  font-family: Dunkin;
+}

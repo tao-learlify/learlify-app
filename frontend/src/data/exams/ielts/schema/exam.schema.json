@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "title": "Drivers",
+  "description": "Formula 1 drivers",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "schema": {
+      "type": "array",
+      "items": {
+        "$ref": "./schema-item.schema.json"
+      }
+    }
+  },
+  "required": ["name", "schema"]
+}

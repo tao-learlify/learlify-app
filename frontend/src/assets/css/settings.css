@@ -1,0 +1,24 @@
+
+.settings-input {
+  background-color: #003964 !important;
+  border: none;
+}
+
+.settings-input-2 {
+  background-color: #f9f9f9;
+  border: none;
+}
+
+.settings-button {
+  background-color: #003e6d;
+  border: 2px solid white;
+}
+
+.settings-button:hover {
+  background-color: white;
+  color: #003e6d;
+}
+
+.settings-h4 {
+  color: #fff;
+}

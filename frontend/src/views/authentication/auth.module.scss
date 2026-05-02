@@ -1,0 +1,313 @@
+/* ── Auth module — shared styles for all public auth screens ──────────────── */
+/* Used by: Login, SignUp, ResetPassword                                        */
+/* AuthShell owns: full-page background, centering, loading overlay.            */
+/* This module owns: card wrapper, panda, card internals, form patterns.        */
+
+/* ── Card wrapper (panda float pattern) ────────────────────────────────────── */
+.cardWrapper {
+  position: relative;
+  padding-top: 72px;
+  width: 100%;
+  max-width: 440px;
+
+  @media (max-width: 480px) {
+    padding-top: 56px;
+  }
+}
+
+/* ── Panda mascot ───────────────────────────────────────────────────────────── */
+.panda {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 90px;
+  width: auto;
+  pointer-events: none;
+  animation: pandaFloat 3.6s ease-in-out infinite;
+  z-index: var(--z-raised);
+
+  @media (max-width: 480px) {
+    height: 72px;
+  }
+}
+
+@keyframes pandaFloat {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(-6px); }
+}
+
+/* ── Card ───────────────────────────────────────────────────────────────────── */
+.card {
+  background: var(--color-bg-surface);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-2);
+  padding: var(--space-10) var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+
+  @media (max-width: 480px) {
+    padding: var(--space-8) var(--space-6);
+  }
+}
+
+/* ── Branding ───────────────────────────────────────────────────────────────── */
+.brand {
+  display: flex;
+  justify-content: center;
+}
+
+.brandLogo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* ── Header ─────────────────────────────────────────────────────────────────── */
+.header {
+  text-align: center;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-4xl);
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin: 0 0 var(--space-2);
+  line-height: var(--leading-tight);
+}
+
+.subtitle {
+  font-family: var(--font-base);
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+  margin: 0;
+  line-height: var(--leading-relaxed);
+}
+
+/* ── Divider — "or" separator between Google CTA and email form ─────────────── */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--color-text-disabled);
+
+  &::before,
+  &::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--color-border-default);
+  }
+}
+
+.dividerLabel {
+  font-family: var(--font-base);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+/* ── Form ───────────────────────────────────────────────────────────────────── */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+
+  @media (max-width: 400px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Forgot password note (shown when in recovery mode) */
+.forgotNote {
+  font-family: var(--font-base);
+  font-size: var(--text-md);
+  color: var(--color-text-secondary);
+  margin: 0;
+  text-align: center;
+  line-height: var(--leading-relaxed);
+}
+
+/* ── Forgot password link row ───────────────────────────────────────────────── */
+.forgotRow {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: calc(var(--space-2) * -1);
+}
+
+.forgotLink {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: var(--font-base);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-brand-primary);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+
+  &:hover { color: var(--color-brand-primary-dark); }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-border-focus);
+    outline-offset: 2px;
+    border-radius: var(--radius-xs);
+  }
+}
+
+/* ── Terms checkbox row (SignUp) ────────────────────────────────────────────── */
+.termsRow {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+}
+
+.checkbox {
+  /* Native checkbox, visually enhanced */
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  border: 2px solid var(--color-border-strong);
+  border-radius: var(--radius-xs);
+  background: var(--color-bg-surface);
+  cursor: pointer;
+  margin-top: 1px; /* optical align with label first line */
+  transition:
+    background-color var(--duration-base) var(--easing-default),
+    border-color var(--duration-base) var(--easing-default);
+
+  &:checked {
+    background-color: var(--color-brand-primary);
+    border-color: var(--color-brand-primary);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12'%3E%3Cpath fill='white' d='M10 3L5 8.5 2 5.5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-border-focus);
+    outline-offset: 2px;
+    box-shadow: var(--shadow-focus);
+  }
+
+  &:hover:not(:checked) {
+    border-color: var(--color-brand-primary);
+  }
+}
+
+.checkboxLabel {
+  font-family: var(--font-base);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkboxLink {
+  color: var(--color-brand-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+
+  &:hover { color: var(--color-brand-primary-dark); }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-border-focus);
+    outline-offset: 2px;
+    border-radius: var(--radius-xs);
+  }
+}
+
+/* ── Footer ─────────────────────────────────────────────────────────────────── */
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding-top: var(--space-2);
+  text-align: center;
+}
+
+.footerNote {
+  font-family: var(--font-base);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.footerLink {
+  font-family: var(--font-base);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--color-brand-primary);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-border-focus);
+    outline-offset: 2px;
+    border-radius: var(--radius-xs);
+  }
+}
+
+.demoLink {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: var(--font-base);
+  font-size: var(--text-xs);
+  color: var(--color-text-disabled);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  letter-spacing: 0.02em;
+
+  &:hover { color: var(--color-text-secondary); }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-border-focus);
+    outline-offset: 2px;
+    border-radius: var(--radius-xs);
+  }
+}
+
+/* ── Password match feedback (ResetPassword / FormPassword) ─────────────────── */
+.passwordHint {
+  font-family: var(--font-base);
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+  margin: calc(var(--space-2) * -1) 0 0;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.passwordHintMatch {
+  color: var(--color-success);
+}
+
+.passwordHintNoMatch {
+  color: var(--color-danger);
+}

@@ -1,0 +1,37 @@
+.wrapper {
+  max-width: 720px;
+  margin: 3rem auto 2rem;
+  padding: 0 1rem;
+}
+
+.title {
+  font-family: Dunkin, sans-serif;
+  font-size: 1.5rem;
+  color: #003e6d;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.accordion {
+  border-radius: 0.75rem !important;
+  margin-bottom: 8px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07) !important;
+
+  &::before {
+    display: none;
+  }
+}
+
+.question {
+  font-family: Monserrat-Bold, sans-serif !important;
+  font-size: 0.92rem !important;
+  color: #003e6d !important;
+}
+
+.answer {
+  font-family: Monserrat-Light, sans-serif !important;
+  font-size: 0.88rem !important;
+  color: #555 !important;
+  line-height: 1.6 !important;
+}

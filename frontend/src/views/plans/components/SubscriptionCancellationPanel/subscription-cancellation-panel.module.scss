@@ -1,0 +1,24 @@
+.panel {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #f8f8f8;
+  border-radius: 0.75rem;
+  border-left: 4px solid #ccc;
+  text-align: left;
+}
+
+.title {
+  font-family: Monserrat-Bold, sans-serif;
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  font-family: Monserrat-Light, sans-serif;
+  font-size: 0.85rem;
+  color: #777;
+  line-height: 1.5;
+  margin: 0;
+}

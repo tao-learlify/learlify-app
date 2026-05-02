@@ -1,0 +1,73 @@
+@use '../_shared.module' as shared;
+
+/* Re-export shared styles */
+.sectionLabel { composes: sectionLabel from '../_shared.module.scss'; }
+.actions      { composes: actions      from '../_shared.module.scss'; }
+.detailRow    { composes: detailRow    from '../_shared.module.scss'; }
+
+/* ── Plan-specific styles ─────────────────────────────────────────────────── */
+.topRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.planInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.planName {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.priceBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-1);
+  flex-shrink: 0;
+}
+
+.price {
+  font-size: var(--text-3xl);
+  font-weight: var(--weight-bold);
+  color: var(--color-text-primary);
+  line-height: 1;
+}
+
+.perMonth {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-regular);
+  color: var(--color-text-secondary);
+}
+
+.details {
+  border-top: 1px solid var(--color-border-default);
+  padding-top: var(--space-3);
+  margin: 0 0 var(--space-4);
+}
+
+.cancelNotice {
+  font-size: var(--text-sm);
+  color: var(--color-warning-text);
+  background-color: var(--color-warning-bg);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-4);
+}
+
+.legacyDescription {
+  font-size: var(--text-md);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-4);
+}

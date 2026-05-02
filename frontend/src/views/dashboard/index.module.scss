@@ -1,0 +1,61 @@
+.container {
+  margin-top: 15px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 270px 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  
+  @media (max-width: 575.98px) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.banner {
+  position: relative;
+
+  .welcome {
+    font-family: Dunkin;
+    position: absolute;
+    font-weight: normal;
+    top: 55px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    width: 243px;
+    text-rendering: optimizeLegibility;
+    span {
+      font-family: Monserrat-Light;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.table {
+  letter-spacing: 0.3px;
+  font-weight: bold;
+}
+
+.plus {
+  position: relative;
+  bottom: 2.5px;
+}
+
+.prepend {
+  position: relative;
+  bottom: 5px;
+  height: 30px;
+}
+
+.form {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}

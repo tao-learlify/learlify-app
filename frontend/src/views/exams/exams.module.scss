@@ -1,0 +1,12 @@
+.container {
+  margin-top: 35px;
+  padding-bottom: 50px;
+
+  @media (max-width: 768px) {
+    padding-bottom: 0px;
+  }
+}
+
+.next {
+  margin-right: 15px;
+}

@@ -1,0 +1,45 @@
+.input {
+  border: 2px solid #b2b2b2;
+  border-radius: 0px;
+  background-color: #ebebeb;
+  padding: 1.6rem;
+  border-bottom: none;
+}
+
+.input-first {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom: none;
+}
+
+.input-last {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom: 2px solid #b2b2b2;
+}
+
+.input-alone {
+  border-radius: 20px;
+  border-bottom: 2px solid #b2b2b2;
+}
+
+.form-control:focus {
+  border-color: #b2b2b2;
+  box-shadow: none;
+  background-color: #ebebeb;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #878787;
+  box-shadow: #ebebeb;
+  -webkit-box-shadow: 0 0 0px 1000px #ebebeb inset;
+  transition: background-color 5000s ease-in-out 0s;
+}

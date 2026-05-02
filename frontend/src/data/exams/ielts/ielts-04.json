@@ -1,0 +1,1664 @@
+{
+  "$schema": "./schema/exam.schema.json",
+  "name": "Exam 4",
+  "schema": [
+    {
+      "category": "Grammar & Vocabulary",
+      "exercises": [
+        {
+          "answers": [
+            "A. isn’t",
+            "B.doesn’t ",
+            "C.will not "
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "1. He {x} coming to the meeting tomorrow. "
+        },
+        {
+          "answers": [
+            "A.going to do ",
+            "B.do ",
+            "C.going to "
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "2. What are you {x} this weekend?"
+        },
+        {
+          "answers": [
+            "A. many",
+            "B.much ",
+            "C. lot"
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": "3.How {x} money do we have? "
+        },
+        {
+          "answers": [
+            "A.which ",
+            "B.that ",
+            "C.when "
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "4. This book, {x} was written in 1965, wasn’t popular at that time. "
+        },
+        {
+          "answers": [
+            "A.want ",
+            "B.like ",
+            "C.mind "
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": "5. Would you {x} to go to the theatre this Saturday? "
+        },
+        {
+          "answers": [
+            "A.usually ",
+            "B.often ",
+            "C.sometimes "
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": "6. How {x} do you eat out? "
+        },
+        {
+          "answers": [
+            "A.bring",
+            "B.to bring ",
+            "C.bringing "
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "7.  Please {x} me that book tomorrow."
+        },
+        {
+          "answers": [
+            "A. much",
+            "B.many ",
+            "C.lot "
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": "8.  I have moved here recently so I don't have {x} friends. "
+        },
+        {
+          "answers": [
+            "A.have ",
+            "B.has ",
+            "C.was "
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": "9. Amy {x} never been abroad. "
+        },
+        {
+          "answers": [
+            "A.won’t ",
+            "B.will ",
+            "C.get "
+          ],
+          "correct": 2,
+          "description": "None",
+          "label": "Grammar",
+          "title": " 10. If you eat too much, you {x} fat. "
+        },
+        {
+          "answers": [
+            "A. unless",
+            "B.however ",
+            "C. if"
+          ],
+          "correct": 2,
+          "description": "None",
+          "label": "Grammar",
+          "title": "11.  I will go to the concert {x} I have time. "
+        },
+        {
+          "answers": [
+            "A. any",
+            "B. sometimes",
+            "C.ever "
+          ],
+          "correct": 2,
+          "description": "None",
+          "label": "Grammar",
+          "title": "12. He hardly {x} comes to classes. "
+        },
+        {
+          "answers": [
+            "A.used ",
+            "B.would ",
+            "C.usually "
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "13. Jason {x} to go hiking every weekend when he was younger. "
+        },
+        {
+          "answers": [
+            "A.too difficult ",
+            "B.too much difficult ",
+            "C.enough difficult "
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "14. This exercise is {x} for me. "
+        },
+        {
+          "answers": [
+            "A. due to",
+            "B.because ",
+            "C.thanks to "
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": " 15.The flight is delayed {x} the weather conditions "
+        },
+        {
+          "answers": [
+            "A.interesting as ",
+            "B.interesting than ",
+            "C.more interesting than "
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": " 16. The second book is not as {x}  the first one. "
+        },
+        {
+          "answers": [
+            "A.came ",
+            "B.come ",
+            "C.will come "
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "17.   If you {x} to visit me, I would be pleased. "
+        },
+        {
+          "answers": [
+            "A. woke ",
+            "B.has woken ",
+            "C. had woken"
+          ],
+          "correct": 2,
+          "description": "None",
+          "label": "Grammar",
+          "title": "18.  If I {x} up earlier, I wouldn't have missed the train. "
+        },
+        {
+          "answers": [
+            "A.finish ",
+            "B.finished ",
+            "C.be finished "
+          ],
+          "correct": 2,
+          "description": "None",
+          "label": "Grammar",
+          "title": " 19.This project needs to {x} by Friday. "
+        },
+        {
+          "answers": [
+            "A. worked ",
+            "B. been working",
+            "C.working  "
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": "20.Jason had {x} here for 5 years before he got promoted.  "
+        },
+        {
+          "answers": [
+            "A.down",
+            "B.without ",
+            "C.out"
+          ],
+          "correct": 2,
+          "description": "None",
+          "label": "Grammar",
+          "title": " 21.  I’m running {x} of patience, this situation is very annoying!"
+        },
+        {
+          "answers": [
+            "A. I did",
+            "B.to do ",
+            "C.should do "
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": " 22. My doctor advised me {x} more exercise. "
+        },
+        {
+          "answers": [
+            "A.isn’t it ",
+            "B.is it ",
+            "C.doesn’t it "
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "23. The meeting is tomorrow at 8, {x} ? "
+        },
+        {
+          "answers": [
+            "A. had",
+            "B.have ",
+            "C.would have "
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "24.  If only I {x} more time, I’d take up photography. But I’m too busy for that. "
+        },
+        {
+          "answers": [
+            "A.off ",
+            "B. up",
+            "C. out"
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": " 25. Your uncle will pick you {x} after school. "
+        },
+        {
+          "description": "1.Write the letter (A-K) of the word that is most similar in meaning to a word on the left (1-5). Use each word only once. Write your answers (A-K) on your answer paper. You will not need five of the words (A-K). ",
+          "label": "Vocabulary",
+          "questions": [
+            {
+              "title": "1.free {x}",
+              "answers": [
+                "B independant ",
+                "A carry"
+              ],
+              "correct": 0
+            },
+            {
+              "title": "2.decide {x}",
+              "answers": [
+                "E choose",
+                "D electric"
+              ],
+              "correct": 0
+            },
+            {
+              "title": "3.complete {x}",
+              "answers": [
+                "C finish",
+                "G positive"
+              ],
+              "correct": 0
+            },
+            {
+              "title": "4.ask {x}",
+              "answers": [
+                "H consult",
+                "J safe"
+              ],
+              "correct": 0
+            },
+            {
+              "title": "5.correct {x}",
+              "answers": [
+                "F true",
+                "K agree"
+              ],
+              "correct": 0
+            }
+          ]
+        },
+        {
+          "description": "2. Finish each sentence (6-10) using a word from the list (A-K). Use each word only once. Write your answers (A-K) on your answer paper. You will not need five of the words (A-K).",
+          "label": "Vocabulary",
+          "questions": [
+            {
+              "answers": [
+                "G boring",
+                "B curtain"
+              ],
+              "correct": 0,
+              "title": "6.To be not interesting or exciting is to be{x}. "
+            },
+            {
+              "answers": [
+                "J fashion",
+                "E entertain"
+              ],
+              "correct": 0,
+              "title": "7.  The most popular style of clothes is {x}."
+            },
+            {
+              "answers": [
+                "D dictionary",
+                "C empty"
+              ],
+              "correct": 0,
+              "title": "8.A book with a list of words explained or translated into another language is a/an {x}.  "
+            },
+            {
+              "answers": [
+                "A strange",
+                "H efficient"
+              ],
+              "correct": 0,
+              "title": "9.Something unusual, abnormal or difficult to understand is {x} "
+            },
+            {
+              "answers": [
+                "F promise",
+                "K coat"
+              ],
+              "correct": 0,
+              "title": "10. To say that you will definitely do something is to {x}. "
+            }
+          ]
+        },
+        {
+          "description": "3.Write the letter of the word on the right (A-K) that matches the definition on the left (11-15).",
+          "label": "Vocabulary",
+          "questions": [
+            {
+              "answers": [
+                "B interrupt",
+                "C amuse"
+              ],
+              "correct": 0,
+              "title": "11. To stop somebody in the middle of a conversation or an activity.{x} "
+            },
+            {
+              "answers": [
+                "F flavour",
+                "E bump"
+              ],
+              "correct": 0,
+              "title": "12. The taste of a drink or food.{x} "
+            },
+            {
+              "answers": [
+                "D comedy",
+                "G beef"
+              ],
+              "correct": 0,
+              "title": "13.A type of book or film which is mainly funny.{x}  "
+            },
+            {
+              "answers": [
+                "H calendar",
+                "J bicycle"
+              ],
+              "correct": 0,
+              "title": "14. A table which shows days, weeks and months of the year.{x} "
+            },
+            {
+              "answers": [
+                "A irritate",
+                "K basket"
+              ],
+              "correct": 0,
+              "title": "15. To make another person feel angry and annoyed.{x}  "
+            }
+          ]
+        },
+        {
+          "description": "4.Finish each sentence (16-20) using a word from the list (A-K).",
+          "label": "Vocabulary",
+          "questions": [
+            {
+              "answers": [
+                "B fail",
+                "A export"
+              ],
+              "correct": 0,
+              "title": "16. You will  {x} your exam if you don't study. "
+            },
+            {
+              "answers": [
+                "F magic",
+                "D certificate"
+              ],
+              "correct": 0,
+              "title": "17. I saw some new tricks in the  {x} show.  "
+            },
+            {
+              "answers": [
+                "C nightmares",
+                "H sweat"
+              ],
+              "correct": 0,
+              "title": "18. I don't watch horror films, they give me {x}. "
+            },
+            {
+              "answers": [
+                "J enthusiastic",
+                "E spoon"
+              ],
+              "correct": 0,
+              "title": "19. They felt very  {x} about watching this new film. "
+            },
+            {
+              "answers": [
+                "K admire",
+                "G mystery"
+              ],
+              "correct": 0,
+              "title": "20. I  {x} people who do volunteering in poor countries. "
+            }
+          ]
+        },
+        {
+          "description": "5.Write the letter of the word on the right (A-K) that is most often used with a word on the left (21-25). Use each word only once. Write your answers (A-K) on your answer paper. You will not need five of the words (A-K).",
+          "label": "Vocabulary",
+          "questions": [
+            {
+              "answers": [
+                "D wildlife",
+                "C blackmail"
+              ],
+              "correct": 0,
+              "title": "21.preserve {x}"
+            },
+            {
+              "answers": [
+                "A venue",
+                "E earthquake"
+              ],
+              "correct": 0,
+              "title": "22.outdoor{x} "
+            },
+            {
+              "answers": [
+                "H battery",
+                "G fever"
+              ],
+              "correct": 0,
+              "title": "23.recharge {x}"
+            },
+            {
+              "answers": [
+                "F class",
+                "J roadway"
+              ],
+              "correct": 0,
+              "title": "24.working{x} "
+            },
+            {
+              "answers": [
+                "B playground",
+                "K spine"
+              ],
+              "correct": 0,
+              "title": "25.school {x}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Reading",
+      "exercises": [
+        {
+          "heading": "Part 1:Photography",
+          "description": "IS PHOTOGRAPHY AN ART FORM? {v} Photography is all around these days and now that everyone has digital cameras and smartphones, everyone is able to take a good photo without much skill. Nonetheless, photography using film or even with a SLR (single lens reflex) camera does require talent and the question on whether it is an art form has been discussed for a long time. Nowadays people would regard photography as being a form of art, however it wasn't always the case and this art form had to fight for its place to be considered a discipline such as drawing, painting, theatre and dance. {v} ORIGIN OF PHOTOGRAPHY IN THE ARTS? {v} Since photography came about it created a storm in the world of art, much like that of the printing press. Many people argue that photography has changed the way we see the world for example photojournalism has been very influential in capturing events. If we think of the dramatic images captured on the front of a newspaper of world events such as war, terrorist attacks, protests etc, a lot of times these said images are more striking than the words used to describe it. {v} The argument around whether photography should be considered an art form centred on the notion that a mechanical medium had no place amongst traditional expressive forms of art. {v} THE DEBATE OF THE ROLE OF PHOTOGRAPHY IN ART. {v} The discussion regarding this came mainly from England and France, the three main arguments were that since it is a chemical and mechanical process it couldn't be considered art. The second, was that it wasn’t equal in creativity. Lastly it was argued that photography was similar to etching or lithography therefore had a place in the world of art and as well as this could be a beneficial medium for arts and as well as positive influence on general culture. {v} STEPS TOWARDS BEING CONSIDERED FINE ‘ART’. {v} During the 1850s the first photographic societies were created which still exist now such as the ‘’Royal Photographic Society’’. This helped to promote the art form and ensured that exhibition spaces included photography as well as paintings. Nonetheless selection committees were reluctant to host photography prints in exhibitions alongside paintings and they still received much criticism from the press. {v} In order to be taken seriously as an art form, photographers attempted to distort the reality of a photographic image. One way of doing this is called composition. This is where an image is made using two or more photos and layering them, taking out the unwanted detail to then reveal a final photo. This need to be seen as a ‘’high art’’ also brought about the concept of still life photography which is the capturing of a group of small inanimate objects such as food photography. {v} Furthermore, to overcome the sharp definition which was seen as too close to reality to be viewed as art. Photographers would smudge the lens, kick the tripod during exposure or use inferior optical elements. As a result, the image would distort the reality and require more of the use of imagination on the viewers part to understand the image. {v} PHOTOGRAPHY TODAY. {v} Now it is considered its own art discipline, this can be supported by the number of well respected museums which host photographic prints not alongside paintings but as an exhibition or section in itself. Museums such as the Tate Modern in London, and the FOAM in Amsterdam are popular sites to get a glimpse of the most talked about photographic pieces of the moment. {v} In addition,In 2011, German artist Andreas Gursky’s Rhein II was auctioned at Christie's in New york for $4,338,500 which broke the records at the time as the most expensive photograph ever sold. It shows a river scene without people and buildings and has been described as a ‘romantic hymn to the grandeur of the Rhine River’. {v} In conclusion, photography with its myriad of uses and in photojournalism, as art, or a marketable commodity is everywhere and has had an undeniable role to play in society and culture. Not only has it become a fine art discipline which can be taught and studied in prestigious roles and schools but it has also helped define our society and culture, an effect of which should not be understated. ",
+          "label": "Reading Part 4",
+          "modules": [
+            {
+              "module": "Dropdown",
+              "label": "Grammar",
+              "title": "Part 1, Section 1:",
+              "subtitle": "Choose the correct answer.",
+              "questions": [
+                {
+                  "title": "1. Photography has had a huge influence on society just like the____{x}? {x}",
+                  "answers": [
+                    "A. Theatre.",
+                    "B. Printing press.",
+                    "C. Drawing."
+                  ],
+                  "correct": 1
+                },
+                {
+                  "title": "2. Many people did not consider photography to be? {x}",
+                  "answers": [
+                    "A. ‘High art’.",
+                    "B. Pretentious.",
+                    "C. Representing real life."
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "3. Why did artists use the method called composition? {x}",
+                  "answers": [
+                    "A. For fun.",
+                    "B. To make images look realistic.",
+                    "C. To overcome sharp definition."
+                  ],
+                  "correct": 2
+                },
+                {
+                  "title": "4.  The most expensive photograph auctioned _____ {x}",
+                  "answers": [
+                    "A. shows an artist Andreas Gursky.",
+                    "B. shows a watercourse.",
+                    "C. shows some people and houses."
+                  ],
+                  "correct": 1
+                },
+                {
+                  "title": "5.  The Royal Photographic Society _____{x}",
+                  "answers": [
+                    "A. has been promoting art since the 1850s.",
+                    "B. used to promote art in the 1850s.",
+                    "C. used to promote art up to the 1850s."
+                  ],
+                  "correct": 0
+                }
+              ]
+            },
+            {
+              "module": "Dropdown",
+              "label": "Grammar",
+              "title": "Part 1, section 2:",
+              "subtitle": "Select the correct answer (A-D).",
+              "questions": [
+                {
+                  "title": "1. First supports of photography believed it should be considered an art form because of _____{x}",
+                  "answers": [
+                    "A. Distortion.",
+                    "B. Printing press.",
+                    "C. Etching.",
+                    "D. Photojournalism."
+                  ],
+                  "correct": 2
+                },
+                {
+                  "title": "2. The effect on society of photography has been compared to that of the _____{x}",
+                  "answers": [
+                    "A. Printing press.",
+                    "B. Etching.",
+                    "C. Distortion.",
+                    "D. Photojournalism."
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "3. To be taken seriously artists would use _____{x}",
+                  "answers": [
+                    "A. Etching.",
+                    "B. Printing press.",
+                    "C. Distortion.",
+                    "D. Photojournalism."
+                  ],
+                  "correct": 2
+                },
+                {
+                  "title": "4. {x} It has been very effective in retelling the story of world events",
+                  "answers": [
+                    "A. Etching.",
+                    "B. Photojournalism.",
+                    "C. Distortion.",
+                    "D. Printing press."
+                  ],
+                  "correct": 1
+                }
+              ]
+            },
+            {
+              "module": "Dropdown",
+              "label": "Grammar",
+              "title": "Part 1, Section 3:",
+              "subtitle": "Do the following statements agree with the information in the reading passage? {v}TRUE= if the statement agrees with the information.{v} FALSE= if the statement contradicts the information. {v} NOT GIVEN= if there is no information on this.",
+              "questions": [
+                {
+                  "title": "1. Photography shouldn’t be considered an art form because of how common it is? {x}",
+                  "answers": [
+                    "True",
+                    "False",
+                    "Not given"
+                  ],
+                  "correct": 1
+                },
+                {
+                  "title": "2. Photography has played a significant role in highlighting world events? {x}",
+                  "answers": [
+                    "True",
+                    "False",
+                    "Not given"
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "3. Photography can be more powerful than words? {x}",
+                  "answers": [
+                    "True",
+                    "False",
+                    "Not given"
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "4. Gursky occasionally achieves the pattern with the help of digital techniques. {x}",
+                  "answers": [
+                    "True",
+                    "False",
+                    "Not given"
+                  ],
+                  "correct": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Part 2: Bollywood",
+          "description": "WHY IS BOLLYWOOD SUCH A POWERFUL INDUSTRY? {v} PARAGRAPH A. {v} One of India's most financially lucrative industries as well as one of the largest producers of films each year goes by the name of Bollywood. Most people connect this name to a film which portrays a very colourful and romantic storyline featuring scenes of dancing and drama and almost always coming to a happy ending. As its name might suggest, Bollywood is somewhat of a play on Hollywood, the ever so popular cinematic industry in the United States. It took time for Bollywood to get off its feet as it slowly began taking a feather out of the American film industry to revolutionary ideas for its own. In 1931 the first talkie film was released which marked a key point in the production. It was in the mid 1900s when Bollywood began to shape into what it has grown to be today. Films started focusing on lower class situations in India and were strongly influenced by social issues that were going on in the world at that time. Nowadays, most Bollywood films follow the guidelines of the Masala film, which is a style that uses a hodgepodge of genres such as action, drama and comedy. {v} PARAGRAPH B. {v} Many people struggle to understand why it is that Bollywood has gained the level of popularity that it holds today. First of all, Bollywood is profoundly known for the dance numbers that can be seen in practically every single film. The complexity of the choreography as well as the amount of participants is absolutely outstanding and impossible not to admire. This feature is a staple in Bollywood films. Secondly, Bollywood allows viewers to appreciate the change and growth of theatre over time. Many of the actors and actresses who originally starred in Bollywood movies came from Parsi theater tradition in which everything was exaggerated. This concept has still been maintained in current Bollywood features, but not to the extent that makes viewers feel like the movies are too old-style. A third reason is that Bollywood movies realistically address current issues that mainstream cinema may avoid. Bollywood has educated many viewers about what goes on behind the scenes of the picture-perfect life people like to imagine. It is especially educational when it comes to the caste system in India and any social or political struggles the citizens have had to face. {v} PARAGRAPH C. {v} Not only has Bollywood had an impact on Western cultures but it has also had an impact on the Indian culture itself. Fashion has been largely impacted by Bollywood movies as people tend to want to wear what they see on the screen, causing the fashion industry to creatively produce versions of outfits that are seen on TV. Because of these, certain clothing or statements have become relevant in Indian culture. Society itself has been influenced by these movies as it allows directors to bring to light things that may be a challenge in society, therefore forcing people to think about them and take action. Films can have quite a powerful impact on a society and one might say that Bollywood films have allowed the Indian culture to face societal issues throughout time. {v} PARAGRAPH D.{v} Due to the fact that Bollywood is seen as the Indian Hollywood, it’s logical that certain stereotypes about the members of the West and India are formed through this film industry. There are numerous Bollywood films which address this concept by portraying the story of an Indian living in a Western country while maintaining their own Indian culture. On top of that, there are films that look at this role in reverse - a Westerner in Indian culture. It seems that when looking at the Western culture from an Indian perspective, there is little difference between individual cultures. That is to say that the Statue of Liberty might as well be the Big Ben or the Eiffel Tower as long as they are all representations of Western culture. The Indian culture, as seen by Westerns, is filled with strict tradition and different levels of society. These things can be seen in many Bollywood films. {v} PARAGRAPH E.{v} The appeal of a Bollywood film may be controversial to some, but its international success is undeniable when looking at the numbers. A leading reason as to why Bollywood is so popular in the West is because it allows people to fuel their curiosity about life and cultures beyond their own. While other countries do hold their own film industries which portray their culture, none has been able to reach so many crevices of the world as successfully as Bollywood. {v} PARAGRAPH F.{v} Critical thinkers question whether or not Bollywood should take their influence and power to focus less on social issues and more on environmental issues as India itself is in danger of being negatively impacted by things such as climate change. While it may not be the center of focus when observing the environmental decay, it is a fact that film industries do leave a carbon footprint and therefore, should be making people aware of this while taking action to minimize it. More specifically, the heart of Bollywood, Mumbai, is in a risky position as, with climate change, it could be at high risk from sea-level rise. One might argue that in order to save the Bollywood industry, Bollywood must take part in calling for help in saving itself by building awareness and promoting action amongst its fans. ",
+          "label": "Reading Part 4",
+          "modules": [
+            {
+              "module": "Dropdown",
+              "label": "Grammar",
+              "title": "Part 2, Section 1:",
+              "subtitle": "Do the following statements agree with the information given in the reading passage?{v} YES= if the statement agrees with the claim of the writer.{v} NO= if the statement contradicts the claims of the writer.{v} NOT GIVEN= if it is impossible to say what the writer thinks about this.",
+              "questions": [
+                {
+                  "title": "1. The first productions in the indian film industry represent a major influence and have determined the style, which hasn´t suffered any variations during the following decades. {x}",
+                  "answers": [
+                    "Yes",
+                    "No",
+                    "Not given"
+                  ],
+                  "correct": 1
+                },
+                {
+                  "title": "2. The creators of Bollywood films work to expose the truths behind some tragic situations. {x}",
+                  "answers": [
+                    "Yes",
+                    "No",
+                    "Not given"
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "3. Fashion in Western films has a larger influence on Indian fashion than that of Bollywood. {x}",
+                  "answers": [
+                    "Yes",
+                    "No",
+                    "Not given"
+                  ],
+                  "correct": 2
+                },
+                {
+                  "title": "4. Bollywood seems to portray Western culture as a single unit. {x}",
+                  "answers": [
+                    "Yes",
+                    "No",
+                    "Not given"
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "5. Bollywood films that were shot in foreign locations bring in larger revenues. {x}",
+                  "answers": [
+                    "Yes",
+                    "No",
+                    "Not given"
+                  ],
+                  "correct": 2
+                }
+              ]
+            },
+            {
+              "module": "Dropdown",
+              "label": "Grammar",
+              "title": "Part 2, Section 2:",
+              "subtitle": "Match the correct words to the blanks.",
+              "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t2-r3-1.png",
+              "questions": [
+                {
+                  "title": "1.  {x}",
+                  "answers": [
+                    "A. choreography",
+                    "B. dance",
+                    "C. tradition",
+                    "D. ritual",
+                    "E. staple",
+                    "F. strides",
+                    "G. success",
+                    "H. movement",
+                    "I. win"
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "2.  {x}",
+                  "answers": [
+                    "A. choreography",
+                    "B. dance",
+                    "C. tradition",
+                    "D. ritual",
+                    "E. staple",
+                    "F. strides",
+                    "G. success",
+                    "H. movement",
+                    "I. win"
+                  ],
+                  "correct": 2
+                },
+                {
+                  "title": "3.  {x}",
+                  "answers": [
+                    "A. choreography",
+                    "B. dance",
+                    "C. tradition",
+                    "D. ritual",
+                    "E. staple",
+                    "F. strides",
+                    "G. success",
+                    "H. movement",
+                    "I. win"
+                  ],
+                  "correct": 4
+                },
+                {
+                  "title": "4.  {x}",
+                  "answers": [
+                    "A. choreography",
+                    "B. dance",
+                    "C. tradition",
+                    "D. ritual",
+                    "E. staple",
+                    "F. strides",
+                    "G. success",
+                    "H. movement",
+                    "I. win"
+                  ],
+                  "correct": 5
+                },
+                {
+                  "title": "5.  {x}",
+                  "answers": [
+                    "A. choreography",
+                    "B. dance",
+                    "C. tradition",
+                    "D. ritual",
+                    "E. staple",
+                    "F. strides",
+                    "G. success",
+                    "H. movement",
+                    "I. win"
+                  ],
+                  "correct": 6
+                }
+              ]
+            },
+            {
+              "module": "Dropdown",
+              "label": "Grammar",
+              "title": "Part 2, Section 3:",
+              "subtitle": "Choose the correct answer (A-D).",
+              "questions": [
+                {
+                  "title": "1.The key challenge in Mumbai is the development of effective solutions to: {x}",
+                  "answers": [
+                    "A. Environmental issues.",
+                    "B. Social issues.",
+                    "C. Climate change.",
+                    "D. Sea level rise."
+                  ],
+                  "correct": 1
+                },
+                {
+                  "title": "2. Bollywood’s main working line focuses on problems that may influence many citizens within their society related to: {x}",
+                  "answers": [
+                    "A. Societal matters.",
+                    "B. Green issues.",
+                    "C. Ecological problems.",
+                    "D. Social behaviour."
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "3. What is the writer´s opinion? {x}",
+                  "answers": [
+                    "A. Bollywood must reduce the footprint they leave behind.",
+                    "B. Clearly, Bollywood’s impact on climate change outcomes as a high risk of climate change.",
+                    "C. Bollywood must work on the alertness and awareness amongst its fans.",
+                    "D. Bollywood represents a major influence in society and therefore must contribute both on consciousness and on its impact."
+                  ],
+                  "correct": 3
+                },
+                {
+                  "title": "4. According to the writer Bollywood must: {x}",
+                  "answers": [
+                    "A. Reduce emission during production and contribute to a correct mindset of the population regarding pollution in general.",
+                    "B. Save itself by minimizing the carbon footprint.",
+                    "C. Help the population understand the consequences of climate change.",
+                    "D. Take actions referred to local mentality related to climate change."
+                  ],
+                  "correct": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Part 3: Lifelong Learning",
+          "description": "KNOWLEDGE FOR EITHER PERSONAL OR PROFESSIONAL REASONS {v} PARAGRAPH A.{v} Formal education tends to be a government requirement in most parts of the world. Traditional education has been and still is one of the leading forms of education that can be found in schools. Most people will complete their schooling up to a certain level and then go out into the world to work a job. The type of learning found in a school and, later on, in a workplace is quite standard textbook learning and may not push the human mind to mature in different ways. Throughout life, humans develop curiosities about life and the world - questions that cannot be answered in a classroom. The work to discover these answers and take our learning outside the box in sometimes unconventional ways is coined by the term lifelong learning. A lifelong learner is someone who, even outside of their school or workplace, strives to learn more about the world and anything else that might be of interest to them. {v} PARAGRAPH B.{v} Why does anyone need lifelong learning in the first place? If an individual is able to function well without searching outside of their career field, why would lifelong learning be beneficial to them? First of all, in pushing yourself to learn about different fields, you can increase your own value in the workplace, ultimately opening doors for yourself. Secondly, many people struggle with finding satisfaction in their life while working a regular 9-5 job and having a set routine. Being a lifelong learner may reveal to you something that brings more vindication, ultimately bringing joy and meaning to life. Thirdly, lifelong learning is actually proven to enhance one's longevity. Keeping the mind active can be compared to keeping the body active - it is good for our health. Lastly, with the speed at which the world changes, it is important to always be striving to learn in order to keep up with the times. {v} PARAGRAPH C.{v} It’s easy to understand how being a lifelong learner can have a positive impact on our lives, but taking the first step to becoming a lifelong learner is where it gets onerous. People wonder how exactly they can become a lifelong learner if they don’t have time to go out and explore in a hands on way. However, it is important to realize that lifelong learning does not have to be time consuming or extreme. {v} PARAGRAPH D.{v} One of the most essential ways to convert yourself into a lifelong learning is by becoming a reader. Reading is one of the best ways one can learn and allows people to expand their mind without leaving the comfort of their own home. Even spending as much as 30 minutes a day reading a book that gives you insight into a new field can be beneficial. Another point to consider is who you are surrounding yourself with. Keeping company with people who push you to analyze and grow is another way to become a lifelong learner and spark your interest to learn even more! Sometimes it is difficult to keep track of the extra things that you might be interested in, therefore making a list of things that pull at your mind sometimes is a good way to keep things organized. When you have spare time you will then be able to focus directly on something that you know will not only profit your mind, but interest you. {v} PARAGRAPH E.{v} Being a lifelong learner on the whole has its benefits, but there are certain skills that, when developed, are especially applicable. The first is creativity, practicing creative tasks and developing your creativity is something that you can use in many different situations. Creativity comes in all shapes and sizes, so finding your visionary niche is the key. The world is full of problem-solvers and, many times, they are the type of people who push for advancement in society as they look for the solution to all types of dilemmas. Developing this type of skill through lifelong learning will be beneficial not only to you in your life, but to the people who you work and interact with. The importance of communication cannot be stressed enough so looking to learn how to enhance your communication skills cannot harm you. {v} PARAGRAPH F.{v} The concept of lifelong learning is known to have incredible benefits and important figures like Albert Einstein, Henry Ford and Mahatma Gandhi were advocates of lifelong learning. The primary benefit is that it increases your brain health, delaying any health issues that might normally come with age. The brain is ever changing and each time you lose information, you must fill that space with something new. Lifelong learning can not only be salubrious physically, but socially. When looking to learn new things, you will run into people who either have or are searching for that same knowledge as you. This will open doors to connect to new people and influence or be influenced by a larger circle of intellectuals. ",
+          "label": "Reading Part 4",
+          "modules": [
+            {
+              "module": "Dropdown",
+              "title": " Part 3, Section 1:",
+              "subtitle": "Match the information to the correct paragraph.",
+              "label": "Reading Part 4",
+              "questions": [
+                {
+                  "answers": [
+                    "Talks about the legitimacy of the theory that is lifelong learning.",
+                    "Explains the definition of a lifelong learner and what actions define them as such.",
+                    "Points out things that lifelong learners can excel in due to their dedication.",
+                    "Suggests ideas on where to start in the process of becoming a lifelong learner.",
+                    "Delves into the purpose individuals have behind choosing to be a lifelong learning."
+                  ],
+                  "correct": 4,
+                  "title": " Paragraph B)"
+                },
+                {
+                  "answers": [
+                    "Delves into the purpose individuals have behind choosing to be a lifelong learning.",
+                    "Explains the definition of a lifelong learner and what actions define them as such.",
+                    "Talks about the legitimacy of the theory that is lifelong learning.",
+                    "Points out things that lifelong learners can excel in due to their dedication.",
+                    "Suggests ideas on where to start in the process of becoming a lifelong learner."
+                  ],
+                  "correct": 1,
+                  "title": " Paragraph A)"
+                },
+                {
+                  "answers": [
+                    "Suggests ideas on where to start in the process of becoming a lifelong learner.",
+                    "Delves into the purpose individuals have behind choosing to be a lifelong learning.",
+                    "Explains the definition of a lifelong learner and what actions define them as such.",
+                    "Talks about the legitimacy of the theory that is lifelong learning.",
+                    "Points out things that lifelong learners can excel in due to their dedication."
+                  ],
+                  "correct": 3,
+                  "title": " Paragraph F)"
+                },
+                {
+                  "answers": [
+                    "Points out things that lifelong learners can excel in due to their dedication.",
+                    "Delves into the purpose individuals have behind choosing to be a lifelong learning.",
+                    "Explains the definition of a lifelong learner and what actions define them as such.",
+                    "Talks about the legitimacy of the theory that is lifelong learning.",
+                    "Suggests ideas on where to start in the process of becoming a lifelong learner."
+                  ],
+                  "correct": 0,
+                  "title": " Paragraph E)"
+                },
+                {
+                  "answers": [
+                    "Points out things that lifelong learners can excel in due to their dedication.",
+                    "Delves into the purpose individuals have behind choosing to be a lifelong learning.",
+                    "Talks about the legitimacy of the theory that is lifelong learning.",
+                    "Explains the definition of a lifelong learner and what actions define them as such.",
+                    "Suggests ideas on where to start in the process of becoming a lifelong learner."
+                  ],
+                  "correct": 4,
+                  "title": " Paragraph D)"
+                }
+              ]
+            },
+            {
+              "module": "Matching",
+              "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t4-r3.jpg",
+              "title": "Part 3, Section 2:",
+              "subtitle": "Choose one or two words from the passage and complete the blanks.",
+              "questions": [
+                {
+                  "title": "1. {x}",
+                  "answers": [
+                    "Traditional",
+                    "traditional"
+                  ]
+                },
+                {
+                  "title": "2. {x}",
+                  "answers": [
+                    "value",
+                    "Value"
+                  ]
+                },
+                {
+                  "title": "3. {x}",
+                  "answers": [
+                    "Reading",
+                    "reading"
+                  ]
+                },
+                {
+                  "title": "4. {x}",
+                  "answers": [
+                    "dilemmas",
+                    "Dilemmas"
+                  ]
+                },
+                {
+                  "title": "5. {x}",
+                  "answers": [
+                    "brain",
+                    "Brain"
+                  ]
+                }
+              ]
+            },
+            {
+              "module": "Dropdown",
+              "label": "Grammar",
+              "title": "Part 3, Section 3:",
+              "subtitle": "Choose the correct answer (A-C).",
+              "questions": [
+                {
+                  "title": "1. . What does the writes say motivates people to become lifelong learners?{x}",
+                  "answers": [
+                    "A. Lifelong learning allows individuals to change their career entirely.",
+                    "B. Many struggle to find satisfaction in their daily life and therefore may find it in other places.",
+                    "C. The aim is to find a purpose and a path with an economical imperative."
+                  ],
+                  "correct": 1
+                },
+                {
+                  "title": "2.  According to the writer, identify what stimulates individuals when choosing to develop their knowledge throughout their lives.{x} ",
+                  "answers": [
+                    "A. Those looking to live a healthy life may find lifelong learning beneficial to this cause.",
+                    "B. Some choose to participate in lifelong learning because they fear falling behind the times.",
+                    "C. The search for community with those who share their same love."
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "3.  Choose a point that is made by the writer regarding methods of lifelong learning.{x} ",
+                  "answers": [
+                    "A. You must dedicate significant amounts of time in order to see improvement.",
+                    "B. It is important to weed out the people who do not bring you growth.",
+                    "C. Keeping an organized file of things, you want to enhance your knowledge saves time."
+                  ],
+                  "correct": 2
+                },
+                {
+                  "title": "4.  What does the writer suggest that might be a beneficial way of getting started in this long-term engaging process?{x} ",
+                  "answers": [
+                    "A. When unsure of what learning interests you, take a leaf from someone else's book as inspiration.",
+                    "B. Once knowledge is input in your brain, the output is a slow process.",
+                    "C. Increase awareness about what is of interest to you."
+                  ],
+                  "correct": 0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Listening",
+      "exercises": [
+        {
+          "heading": "Part 1: RENTING A SUMMER HOUSE",
+          "description": "",
+          "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t4-l1 .jpg",
+          "label": "Reading Part 4",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/E4-1.mp3",
+          "modules": [
+            {
+              "module": "Matching",
+              "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t4--l1.jpg",
+              "title": "Part 1, Questions 1-7:",
+              "subtitle": "Complete the table below. DO NOT USE more than 3 words/numbers.",
+              "questions": [
+                {
+                  "title": "1. {x}",
+                  "answers": [
+                    "Sofa",
+                    "sofa"
+                  ]
+                },
+                {
+                  "title": "2. {x}",
+                  "answers": [
+                    "Car",
+                    "car"
+                  ]
+                },
+                {
+                  "title": "3. {x}",
+                  "answers": [
+                    "Foot",
+                    "foot"
+                  ]
+                },
+                {
+                  "title": "4. {x}",
+                  "answers": [
+                    "Minutes",
+                    "minutes"
+                  ]
+                },
+                {
+                  "title": "5. {x}",
+                  "answers": [
+                    "Beach",
+                    "beach"
+                  ]
+                },
+                {
+                  "title": "6. {x}",
+                  "answers": [
+                    "500",
+                    "five hundred",
+                    "Five hundred"
+                  ]
+                },
+                {
+                  "title": "7. {x}",
+                  "answers": [
+                    "August",
+                    "august"
+                  ]
+                }
+              ]
+            },
+            {
+              "module": "Matching",
+              "title": "Part 1, Questions 8-10:",
+              "subtitle": "Answer the questions with the correct information. Write NO MORE THAN THREE WORDS/NUMBERS for each answers.",
+              "questions": [
+                {
+                  "title": "8. How long is the family planning on staying at the summer house? {x}",
+                  "answers": [
+                    "A week",
+                    "a week",
+                    "week",
+                    "Week"
+                  ]
+                },
+                {
+                  "title": "9. What type of store is located close to the first house? {x}",
+                  "answers": [
+                    "convenience store",
+                    "Convenience store",
+                    "small convenience store",
+                    "Small convenience store"
+                  ]
+                },
+                {
+                  "title": "10. How long might it take for food to be delivered? {x}",
+                  "answers": [
+                    "An hour",
+                    "an hour",
+                    "1 hour"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Part 2: HOTEL IN ROME",
+          "description": "",
+          "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t4-l2.jpg",
+          "label": "Reading Part 4",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/E4-2.mp3",
+          "modules": [
+            {
+              "module": "Dropdown",
+              "label": "Grammar",
+              "title": "Part 2, Questions 11-14:",
+              "subtitle": "Choose the correct answer (A-D).",
+              "questions": [
+                {
+                  "title": "11. The hotel is located near_____{x}? {x}",
+                  "answers": [
+                    "A. The Spanish Steps",
+                    "B. The Colosseum",
+                    "C. The Jewish quarter",
+                    "D. The River"
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "12. On the second floor hotel guests can find____{x} {x}",
+                  "answers": [
+                    "A. The reception",
+                    "B. The rooftop bar",
+                    "C. The restaurant",
+                    "D. The gym"
+                  ],
+                  "correct": 3
+                },
+                {
+                  "title": "13. In order to check in you need to give your_____{x} {x}",
+                  "answers": [
+                    "A. Luggage",
+                    "B. Driving license",
+                    "C. Passport",
+                    "D. Flight details"
+                  ],
+                  "correct": 2
+                },
+                {
+                  "title": "14. What can you enjoy in the lounge?_____{x} {x}",
+                  "answers": [
+                    "A. Hot food and beverages",
+                    "B. Travel guides",
+                    "C. Watching TV",
+                    "D. Piano player"
+                  ],
+                  "correct": 1
+                }
+              ]
+            },
+            {
+              "module": "Dropdown",
+              "label": "Grammar",
+              "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t4--l2.jpg",
+              "title": "Part 2, questions 15-20",
+              "subtitle": "Label the following rooms in the map below.",
+              "questions": [
+                {
+                  "title": "15. {x}",
+                  "answers": [
+                    "A. Gym",
+                    "B. Lift",
+                    "C. Lounge",
+                    "D. Storage room",
+                    "E. Reception",
+                    "F. Laundry room"
+                  ],
+                  "correct": 4
+                },
+                {
+                  "title": "16. {x}",
+                  "answers": [
+                    "A.  Reception",
+                    "B. Lift",
+                    "C. Lounge",
+                    "D. Storage room",
+                    "E. Gym",
+                    "F. Laundry room"
+                  ],
+                  "correct": 1
+                },
+                {
+                  "title": "17. {x}",
+                  "answers": [
+                    "A.  Reception",
+                    "B. Lift",
+                    "C. Lounge",
+                    "D. Storage room",
+                    "E. Gym",
+                    "F. Laundry room"
+                  ],
+                  "correct": 2
+                },
+                {
+                  "title": "18. {x}",
+                  "answers": [
+                    "A. Storage room",
+                    "B. Lift",
+                    "C. Lounge",
+                    "D. Reception",
+                    "E. Gym",
+                    "F. Laundry room"
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "19. {x}",
+                  "answers": [
+                    "A.  Reception",
+                    "B. Lift",
+                    "C. Lounge",
+                    "D. Gym",
+                    "E. Storage room",
+                    "F. Laundry room"
+                  ],
+                  "correct": 4
+                },
+                {
+                  "title": "20. {x}",
+                  "answers": [
+                    "A.  Reception",
+                    "B. Lift",
+                    "C. Lounge",
+                    "D. Storage room",
+                    "E. Gym",
+                    "F. Laundry room"
+                  ],
+                  "correct": 5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Part 3: RECYCLING PROCESS",
+          "description": "",
+          "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t4-l3.jpg",
+          "label": "Reading Part 4",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/E4-3.mp3",
+          "modules": [
+            {
+              "module": "Matching",
+              "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t4--l3.jpg",
+              "title": "Part 3, Questions 21-25:",
+              "subtitle": "Complete the flow-chart below. DO NOT USE MORE THAN ONE WORD/NUMBER for each answer.",
+              "questions": [
+                {
+                  "title": "21. {x}",
+                  "answers": [
+                    "Separate",
+                    "separate"
+                  ]
+                },
+                {
+                  "title": "22. {x}",
+                  "answers": [
+                    "wash",
+                    "Wash"
+                  ]
+                },
+                {
+                  "title": "23. {x}",
+                  "answers": [
+                    "Chop",
+                    "chop"
+                  ]
+                },
+                {
+                  "title": "24. {x}",
+                  "answers": [
+                    "Shape",
+                    "shape"
+                  ]
+                },
+                {
+                  "title": "25. {x}",
+                  "answers": [
+                    "Melt",
+                    "melt"
+                  ]
+                }
+              ]
+            },
+            {
+              "module": "Matching",
+              "imageUrl": null,
+              "title": "Part 3, Questions 26-30:",
+              "subtitle": "Answer the questions. Write NO MORE THAN THREE WORDS/NUMBERS for each answer.",
+              "questions": [
+                {
+                  "title": "26. What does Nick think about Joe taking an environmental science course? {x}",
+                  "answers": [
+                    "it’s ridiculous",
+                    "It’s ridiculous",
+                    "It is ridiculous",
+                    "it is ridiculous",
+                    "ridiculous",
+                    "Ridiculous"
+                  ]
+                },
+                {
+                  "title": "27. What is Joe’s major? {x}",
+                  "answers": [
+                    "Art",
+                    "art"
+                  ]
+                },
+                {
+                  "title": "28. What information about being environmentally friendly has Joe been taught?{x}",
+                  "answers": [
+                    "the three R’s",
+                    "The three R’s",
+                    "the three r’s",
+                    "The three R´s",
+                    "the three R´s",
+                    "the three r´s",
+                    "The three R`s",
+                    "the three R`s",
+                    "the three r`s"
+                  ]
+                },
+                {
+                  "title": "29. What does Joe do that makes Nick think he is environmentally friendly? {x}",
+                  "answers": [
+                    "rides his bike",
+                    "Rides his bike",
+                    "ride his bike",
+                    "Ride his bike"
+                  ]
+                },
+                {
+                  "title": "30. What type of waste does Joe find the most difficult to understand?{x}.",
+                  "answers": [
+                    "e-waste",
+                    "E-waste",
+                    "e waste",
+                    "E waste"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Part 4: SOCIAL IMPACT OF YOUTUBE",
+          "label": "Reading Part 4",
+          "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t4-l4.jpg",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/E4-4.mp3",
+          "modules": [
+            {
+              "module": "Dropdown",
+              "title": "Part 4, Questions 31-35:",
+              "subtitle": "Complete the sentences with the appropiate word (A-J).",
+              "questions": [
+                {
+                  "title": "31. _____{x} is the world´s largest video hosting site.",
+                  "answers": [
+                    "A. Youtube",
+                    "B. Collaborate",
+                    "C. Institutions",
+                    "D. Campaigns",
+                    "E. Tool",
+                    "F. Banned",
+                    "G. Audiences",
+                    "H. Online",
+                    "I. Beliefs",
+                    "J. Checked"
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "32. It allows users to share and _____{x}.",
+                  "answers": [
+                    "A. Youtube",
+                    "B. Tool",
+                    "C. Institutions",
+                    "D. Campaigns",
+                    "E. Banned",
+                    "F. Collaborate",
+                    "G. Beliefs",
+                    "H. Online",
+                    "I. Audiences",
+                    "J. Checked"
+                  ],
+                  "correct": 5
+                },
+                {
+                  "title": "33. Bridging the gap between users and _____{x}.",
+                  "answers": [
+                    "A. Beliefs",
+                    "B. Collaborate",
+                    "C. Institutions",
+                    "D. Audiences",
+                    "E. Banned",
+                    "F. Tool",
+                    "G. Campaigns",
+                    "H. Online",
+                    "I. Checked",
+                    "J. Youtube"
+                  ],
+                  "correct": 2
+                },
+                {
+                  "title": "34. Has been used in many political _____{x}.",
+                  "answers": [
+                    "A. Institutions",
+                    "B. Collaborate",
+                    "C. Youtube",
+                    "D. Campaigns",
+                    "E. Online",
+                    "F. Checked",
+                    "G. Audiences",
+                    "H. Banned",
+                    "I. Beliefs",
+                    "J. Tool"
+                  ],
+                  "correct": 3
+                },
+                {
+                  "title": "35. It is an effective _____{x}.",
+                  "answers": [
+                    "A. Checked",
+                    "B. Collaborate",
+                    "C. Institutions",
+                    "D. BeliefsCampaigns",
+                    "E. Banned",
+                    "F. Youtube",
+                    "G. Audiences",
+                    "H. Tool",
+                    "I. Campaigns",
+                    "J. Online"
+                  ],
+                  "correct": 7
+                }
+              ]
+            },
+            {
+              "module": "Dropdown",
+              "title": "Part 4, Questions 36-40:",
+              "subtitle": "Complete the sentences with the appropiate word.",
+              "questions": [
+                {
+                  "title": "36. Some countries have _____{x} the website.",
+                  "answers": [
+                    "A. Campaigns",
+                    "B. Collaborate",
+                    "C. Institutions",
+                    "D. Youtube",
+                    "E. Online",
+                    "F. Tool",
+                    "G. Audiences",
+                    "H. Beliefs",
+                    "I. Banned",
+                    "J. Checked"
+                  ],
+                  "correct": 8
+                },
+                {
+                  "title": "37. It is especially used to reach younger _____{x}.",
+                  "answers": [
+                    "A. Collaborate",
+                    "B. Institutions",
+                    "C. Youtube",
+                    "D. Beliefs",
+                    "E. Banned",
+                    "F. Tool",
+                    "G. Audiences",
+                    "H. Online",
+                    "I. Checked",
+                    "J. Campaigns"
+                  ],
+                  "correct": 6
+                },
+                {
+                  "title": "38. The perception of _____{x} education has changed.",
+                  "answers": [
+                    "A. Youtube",
+                    "B. Online",
+                    "C. Tool",
+                    "D. Campaigns",
+                    "E. Banned",
+                    "F. Checked",
+                    "G. Collaborate",
+                    "H. Audiences",
+                    "I. Beliefs",
+                    "J. Institutions"
+                  ],
+                  "correct": 1
+                },
+                {
+                  "title": "39. It can influence our religious and political _____{x}.",
+                  "answers": [
+                    "A. Beliefs",
+                    "B. Collaborate",
+                    "C. Institutions",
+                    "D. Campaigns",
+                    "E. Banned",
+                    "F. Tool",
+                    "G. Audiences",
+                    "H. Online",
+                    "I. Youtube",
+                    "J. Checked"
+                  ],
+                  "correct": 0
+                },
+                {
+                  "title": "40. The information on Youtube should be _____{x}.",
+                  "answers": [
+                    "A. Campaigns",
+                    "B. Collaborate",
+                    "C. Institutions",
+                    "D. Youtube",
+                    "E. Banned",
+                    "F. Checked",
+                    "G. Audiences",
+                    "H. Online",
+                    "I. Beliefs",
+                    "J. Tool"
+                  ],
+                  "correct": 5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Writing",
+      "exercises": [
+        {
+          "description": " TASK 1 {v} - {v}You should spend about 20 minutes on this task. {v} - {v} INSTRUCTIONS: The following diagram shows how wine is produced. {v} - {v} Summarise the information by selecting and reporting the main features and make comparisons where relevant.",
+          "label": "Writing Part 4",
+          "imageUrl": "https://dkmwdxc6g4lk7.cloudfront.net/img/t4-w1.jpg",
+          "questions": [
+            {
+              "title": "Write at least 150 words. {x}",
+              "correct": 0
+            }
+          ]
+        },
+        {
+          "description": "TASK 2 {v} - {v} You should spend about 40 minutes on this task. {v} - {v} Write about the following topic: {v} - {v} INSTRUCTIONS: Teenagers may use social media to find community. However, their mental health is often negatively affected by the culture of comparison. Do the disadvantages of the use of social media outweigh the advantages for teenagers? {v} - {v} Give reasons for your answer and include any relevant examples from your own knowledge or experience.",
+          "label": "Writing Part 4",
+          "questions": [
+            {
+              "title": " Write at least 250 words. {x}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Speaking",
+      "exercises": [
+        {
+          "description": "PART 1 (4 -5 minutes) {v}TIP 1: At the beginning of the test the examiner will ask you your full name and will ask to see your identification. {v} TIP 2: The examiner will ask you some questions about different topics. First some personal questions about yourself then some questions about two specific topics. {v} TIP 3: Try and answer each question in one or two sentences. {v} ",
+          "label": "Speaking Part 1",
+          "recordingTime": 30,
+          "questions": [
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t4-s2.mp3",
+              "title": "EXAMINER´S INSTRUCTIONS: I´m going to ask you some questions about yourself. {v} What was your favourite subject at school? {x}"
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t4-s5.mp3",
+              "title": " EXAMINER´S INSTRUCTIONS: Let’s talk about the weather. {v} Do you enjoy rainy days?  {x}"
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t4-s6.mp3",
+              "title": "  What's the average temperature in your country in the summer? {x}"
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t4-s8.mp3",
+              "title": " EXAMINER´S INSTRUCTIONS: Let’s talk about talents. {v} Who is the most talented person you can think of, and why? {x}"
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t4-s9.mp3",
+              "title": " Which talent do you wish you had? {x}"
+            }
+          ]
+        },
+        {
+          "description": "PART 2 (3-4 minutes) {v} TIP 1: The examiner will give you a paper, a pencil and a piece of paper with your topic. {v} TIP 2: Once you finish talking normally the examiner will ask you some follow up questions. {v} EXAMINER´S INSTRUCTIONS: You now have one minute to make notes. ",
+          "subtitle": "Describe a popular singer. You should say:",
+          "label": "Speaking Part 1",
+          "recordingTime": 120,
+          "questions": [
+            {
+              "imageUrl": {
+                "images": [
+                  "https://dkmwdxc6g4lk7.cloudfront.net/img/t4-s1.jpg"
+                ]
+              },
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t4-s10.mp3",
+              "title": "I’d like you to describe a popular singer. {x}"
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t4-s11.mp3",
+              "title": "  What makes a song popular for you, the lyrics of the song or the melody? {x}"
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t4-s12.mp3",
+              "title": "  Do you prefer to listen to songs in your own language or in another language? Why? {x}"
+            }
+          ]
+        },
+        {
+          "description": "PART 3 (4-5 minutes) {v} EXAMINER'S INSTRUCTIONS: We’ve been talking about singers and I’d now like to ask you some questions related to music.",
+          "label": "Speaking Part 1",
+          "recordingTime": 60,
+          "questions": [
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t4-s13.mp3",
+              "title": " How do you think pop stars influence young people? {x}"
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t4-s14.mp3",
+              "title": "  Do you think people from different cultures react to music in different ways? {x}"
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t4-s15.mp3",
+              "title": "  In your opinion can music calm people or increase their efficiency? {x}"
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/audio/ielts/t4-s16.mp3",
+              "title": "What can schools do to improve the way they teach music? {x}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "title": "Bright Lights",
+  "description": "Explore photography, film, and global culture — argue your perspective, decode visuals, and speak with confidence."
+}

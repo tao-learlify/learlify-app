@@ -1,0 +1,38 @@
+export const authenticationES = {
+  demo: 'Acceder sin cuenta',
+  email: 'Correo electrónico:',
+  error:
+    'Un error se ha producido, te recomendamos intentar iniciando sesion con tus credenciales.',
+  forgot: '¿Olvidaste tu contraseña?',
+  google: 'Entrar con Google',
+  login: 'Iniciar Sesión',
+  password: 'Contraseña',
+  quick: 'Acceso rápido',
+  sign: 'Registro',
+  terms: 'Términos y condiciones',
+  accept: 'Aceptar términos y condiciones',
+  welcome: '¡Bienvenido!',
+  confirm: 'Confirmar Contraseña',
+  firstName: 'Nombre',
+  lastName: 'Apellido',
+  register: 'Registrarme',
+  verify: '¡Tu cuenta ha sido verificada!',
+  validation: {
+    password: 'Su contraseña debe tener al menos 8 caracteres',
+    name: 'El nombre o apellido no es válido',
+    email: 'El correo electrónico no es válido'
+  },
+  continue: 'Para continuar, por favor regístrate',
+  signUp: 'Registrarme',
+  signWithOtherEmail: 'Entrar con otro correo',
+  signWithGoogle: 'Acceder con Google',
+  insertPassword: 'Ingresar contraseña',
+  invalidFormMatching: 'Estimado usuario, el nombre y apellido deben conter un mínimo dos carácteres',
+  invalidEmailMatching: 'Estimado usuario, el correo ingresado ya existe',
+  mustAcceptTerms: 'Debes aceptar los términos para continuar',
+  resetPasswordTitle: 'Restablecer Contraseña',
+  passwordMustMatch: 'Las contraseñas deben coincidir',
+  update: 'Actualizar',
+  updateQuickPassword: 'Su contraseña ha sido actualizada',
+  updateFailedPassword: 'No se ha podido actualizar su contraseña'
+}

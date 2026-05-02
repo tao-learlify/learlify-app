@@ -1,0 +1,94 @@
+/* ==========================================================================
+   Card — Unified card container.
+   Replaces: AptisCard.js, StyledCard (styled-components), Bootstrap Card ad-hoc.
+   ========================================================================== */
+
+/* ── BASE ─────────────────────────────────────────────────────────────────── */
+.card {
+  background-color: var(--color-bg-surface);
+  border: none;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-1);
+  overflow: hidden;
+  transition:
+    box-shadow var(--duration-slow) var(--easing-default),
+    transform var(--duration-slow) var(--easing-default);
+}
+
+/* ── VARIANTS ─────────────────────────────────────────────────────────────── */
+.elevated {
+  box-shadow: var(--shadow-2);
+}
+
+.outlined {
+  box-shadow: var(--shadow-0);
+  border: 1px solid var(--color-border-default);
+}
+
+.interactive {
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: var(--shadow-2);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: var(--shadow-1);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-border-focus);
+    outline-offset: 2px;
+  }
+}
+
+/* "Duo-card" — chunky border + bottom-offset shadow, press effect on active */
+.chunky {
+  border: 2px solid var(--color-border-default);
+  box-shadow: var(--shadow-chunky);
+
+  &:hover {
+    transform: none;
+    box-shadow: var(--shadow-chunky);
+  }
+
+  &:active {
+    transform: translateY(4px);
+    box-shadow: none;
+  }
+}
+
+.chunkyPrimary {
+  border: 2px solid var(--color-brand-primary);
+  box-shadow: var(--shadow-chunky-primary);
+
+  &:active {
+    transform: translateY(4px);
+    box-shadow: none;
+  }
+}
+
+/* ── PADDING VARIANTS ─────────────────────────────────────────────────────── */
+.padNone    { padding: 0; }
+.padSm      { padding: var(--space-4); }
+.padMd      { padding: var(--space-6); }
+.padLg      { padding: var(--space-8); }
+
+/* ── SLOTS ────────────────────────────────────────────────────────────────── */
+.header {
+  padding: var(--space-6) var(--space-6) 0;
+}
+
+.body {
+  padding: var(--space-6);
+}
+
+.footer {
+  padding: var(--space-4) var(--space-6);
+  border-top: 1px solid var(--color-border-default);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}

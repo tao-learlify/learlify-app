@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500.5 375">
+<defs>
+<style>
+  .cls-1 { clip-rule: evenodd; }
+  .cls-clip { clip-path: url(#clip-path); }
+  .cls-4 { fill: #f9f9f9; }
+  .cls-5 { fill: #e5e5e5; }
+  .cls-6 { fill: #fff; fill-rule: evenodd; }
+  .cls-7 { fill-rule: evenodd; }
+  .cls-13 { fill: #282828; fill-rule: evenodd; }
+
+  /* ── SPEAKING ARCS ── */
+  @keyframes speakArc {
+    0%   { opacity: 0;   }
+    20%  { opacity: 1;   }
+    80%  { opacity: 0.8; }
+    100% { opacity: 0;   }
+  }
+  #sarc1 { animation: speakArc 1.6s ease-in-out infinite 0s;    }
+  #sarc2 { animation: speakArc 1.6s ease-in-out infinite 0.45s; }
+  #sarc3 { animation: speakArc 1.6s ease-in-out infinite 0.9s;  }
+
+  /* ── BREATHE + lean toward mic ── */
+  @keyframes breatheLean {
+    0%,  100% { transform: translateY(0px)  rotate(0deg);  }
+    50%        { transform: translateY(-2px) rotate(-1deg); }
+  }
+  #panda-body { animation: breatheLean 3s ease-in-out infinite; transform-origin: 253px 185px; }
+
+  /* ── EAR WIGGLE ── */
+  @keyframes earWiggleL {
+    0%, 80%, 100% { transform: rotate(0deg);  }
+    85%            { transform: rotate(-6deg); }
+    90%            { transform: rotate(3deg);  }
+    95%            { transform: rotate(-1deg); }
+  }
+  @keyframes earWiggleR {
+    0%, 80%, 100% { transform: rotate(0deg); }
+    85%            { transform: rotate(6deg); }
+    90%            { transform: rotate(-3deg); }
+    95%            { transform: rotate(1deg); }
+  }
+  #ear-left  { animation: earWiggleL 5s ease-in-out infinite;       transform-origin: 175px 75px; }
+  #ear-right { animation: earWiggleR 5s ease-in-out infinite 0.35s; transform-origin: 335px 75px; }
+
+  /* ── BLINK ── */
+  @keyframes blink {
+    0%, 85%, 100% { transform: scaleY(1);    }
+    91%            { transform: scaleY(0.06); }
+    94%            { transform: scaleY(1);    }
+  }
+  #eyes-group { animation: blink 4.5s ease-in-out infinite; transform-origin: 253px 163px; }
+
+  /* ── ARM BOB ── */
+  @keyframes armBob {
+    0%,  100% { transform: rotate(0deg);   }
+    50%        { transform: rotate(1.8deg); }
+  }
+  #arm-left  { animation: armBob 3s ease-in-out infinite 0.5s; transform-origin: 130px 265px; }
+  #arm-right { animation: armBob 3s ease-in-out infinite;      transform-origin: 372px 265px; }
+
+  /* ── RECORDING LED ── */
+  @keyframes recLight {
+    0%,  100% { opacity: 1;   }
+    50%        { opacity: 0.1; }
+  }
+  #record-light { animation: recLight 1.2s ease-in-out infinite; }
+</style>
+
+<clipPath id="clip-path">
+  <path class="cls-1" d="M80.9,224.76c0-46-12.37-136.17,31.41-170.52C159.78,17,263.71,37.43,263.71,37.43S363.76,21,411.86,70.52c29.5,30.39,16.5,117.76,16.5,154.24,0,57.65-11.54,105-56.14,124.16-29.63,12.71-84,6.3-122.34,6.3-46,0-90,8.72-119.92-10.14C97.49,324.63,80.9,274.67,80.9,224.76Z"/>
+</clipPath>
+</defs>
+
+<g id="scene">
+
+<!-- ═══════════════════════════════════
+     PANDA  (clipped to body silhouette)
+     ═══════════════════════════════════ -->
+<g class="cls-clip">
+<g id="panda-body">
+
+  <!-- EARS -->
+  <g id="ear-right">
+    <path d="M368.14,78.63c-8.47-26.47-37.2-25.47-37.45-25.45-21.28.5-33.59,18.77-34.1,19.53l-.89,1.35,60.41,51.06,1.17-1.38C373.44,104.6,371.83,90.2,368.14,78.63Z"/>
+  </g>
+  <g id="ear-left">
+    <path d="M138.72,78.63c8.47-26.47,37.2-25.47,37.45-25.45,21.28.5,33.59,18.77,34.10,19.53l.88,1.35-60.4,51.06-1.17-1.38C133.42,104.6,135,90.2,138.72,78.63Z"/>
+  </g>
+
+  <!-- Lower body / dark area -->
+  <path fill="#0c0c0c" d="M355.13,350.54c-5.22-23.14-29.1-46.36-45.06-62.79-5.15-5.3-11.72-14.52-17.53-18.68-9-6.47-30.16-3.42-43.86-2.3-13.7-1.12-34.81-4.17-43.86,2.3-5.81,4.16-12.38,13.38-17.53,18.68-16,16.43-39.84,39.65-45.07,62.79Z"/>
+
+  <!-- Head / face base -->
+  <path class="cls-4" d="M384.09,228.24c-6,19.59-19,33.3-35.19,42.69-13.07,7.6-28.25,12.35-43.52,15.08-21.94,3.92-43.34,7.32-65.65,4.9-23.67-2.59-46.75-8-69.65-14.36-1.42-.4-2.84-.82-4.26-1.25-.41-.13-41.3-13.21-50-53-.25-1.1-5.66-27.09,19.66-51.43l7.7-8.36c1.4-1.51,1-9.84,1.3-11.94A148.6,148.6,0,0,1,150,127.68c10.33-31.53,43.8-55.54,75.66-62.63A31,31,0,0,1,232.27,64c2-.06,2.5-.89,2.65-1.16.65-1.09.49-3.12-.34-5.11a8.25,8.25,0,0,0-.51-1.09c-.77-1.42-2-2.88-2.37-4.45.21.87,3.79,1.44,4.56,1.80a10.49,10.49,0,0,1,3.81,3,16.33,16.33,0,0,1,1.22,2c.43.75.93,1.91,1.92,2s1.9-.8,2.57-1.34a8.54,8.54,0,0,0,3.64-5.78c.29-2.45-.36-4.89-.21-7.33.89.84,1.8,1.66,2.70,2.5s2,1.81,3,2.68c1-.87,2-1.76,3-2.68s1.78-1.75,2.73-2.5c-.33.26,0,3,0,3.49a29.06,29.06,0,0,0,.34,3.72,10.77,10.77,0,0,0,2.84,6.15c2.46,2.36,3.55-.57,5-2.27.69-.83,1.59-1.48,2.35-2.24,1.86-1.81,4.68-2.36,7-3.31-.24,1.63-1.68,3.2-2.43,4.64-.19.36-.36.74-.52,1.09-.81,2-1,4-.34,5.11.17.27.65,1.10,2.65,1.16,20.68.58,42.61,16.31,58.34,28.21,18.8,14.23,24.25,35.13,28.62,57.16,2,10.12,6,14.38,11.23,22.93a87.48,87.48,0,0,1,8,16.43C388.32,201.6,388.11,215.24,384.09,228.24Z"/>
+
+  <!-- Face lower shadow -->
+  <path class="cls-5" d="M383.86,187.91a88.08,88.08,0,0,0-8.05-16.43c-1.22-2-2.36-3.75-3.44-5.41-.11.38-.23.76-.35,1.14a78.32,78.32,0,0,1,5.24,28.07c0,43.9-36.63,80.53-80.53,80.53a78.78,78.78,0,0,1-12.25-1h0q-3.21,1.24-6.54,2.27c-11.68,3.56-24.45,4.26-36.67,4.27a78.86,78.86,0,0,1-29.45-5.74c-1.73.11-3.48.19-5.25.19-43.89,0-80.52-36.63-80.52-80.53a77.86,77.86,0,0,1,1.79-16.59c-16.37,21.48-12.15,41.82-11.93,42.78,8.74,39.81,49.63,52.89,50,53,1.42.43,2.84.85,4.26,1.25,22.9,6.41,46,11.77,69.65,14.36,22.31,2.42,43.71-1,65.66-4.9,15.26-2.73,30.44-7.48,43.51-15.08,16.16-9.39,29.16-23.10,35.20-42.69C388.2,214.43,388.41,200.79,383.86,187.91Z"/>
+
+  <!-- ARMS -->
+  <g id="arm-left">
+    <path d="M129.5,263.73s-38,46.83-2.4,73.53c0,0,29.49,13.36,36.56-15.75,0,0,4.23-13.33-12.65-27.47,0,0-15.4-17.19-12.1-32.14Z"/>
+  </g>
+  <g id="arm-right">
+    <path d="M372.07,263.73s38,46.83,2.4,73.53c0,0-29.49,13.36-36.56-15.75,0,0-4.24-13.33,12.65-27.47,0,0,15.39-17.19,12.09-32.14Z"/>
+  </g>
+
+  <!-- Blush marks -->
+  <ellipse cx="188" cy="204" rx="21" ry="11" fill="rgba(255,120,120,0.32)"/>
+  <ellipse cx="318" cy="204" rx="21" ry="11" fill="rgba(255,120,120,0.32)"/>
+
+  <!-- EYES GROUP (blinks as a unit) -->
+  <g id="eyes-group">
+    <!-- Right eye patch + iris -->
+    <path d="M307.84,124.55l-2.09.33c-16.59,2.87-35,12.44-36.82,30.73a33.18,33.18,0,0,0,.34,8.79c3.34,19.93,27.21,32.57,47.43,32.84a38.75,38.75,0,0,0,7.13-.56c19.6-3.38,32.44-20.69,29.24-39.4C349.83,138.33,327,121.82,307.84,124.55Z"/>
+    <path class="cls-6" d="M292,164.06A19.49,19.49,0,1,1,314.49,180,19.5,19.5,0,0,1,292,164.06Z"/>
+    <path class="cls-7" d="M295.77,163.63A15.22,15.22,0,1,1,313.36,176,15.22,15.22,0,0,1,295.77,163.63Z"/>
+    <path class="cls-6" d="M299,171.23a3.83,3.83,0,1,1,4.42,3.11A3.82,3.82,0,0,1,299,171.23Z"/>
+    <!-- Left eye patch + iris -->
+    <path d="M201.88,124.55l2.08.33c16.59,2.87,35,12.44,36.82,30.73a33.18,33.18,0,0,1-.34,8.79C237.11,184.33,213.23,197,193,197.24a38.75,38.75,0,0,1-7.13-.56c-19.59-3.38-32.44-20.69-29.24-39.4C159.88,138.33,182.71,121.82,201.88,124.55Z"/>
+    <path class="cls-6" d="M217.75,164.06A19.49,19.49,0,1,0,195.22,180,19.49,19.49,0,0,0,217.75,164.06Z"/>
+    <path class="cls-7" d="M213.94,163.63A15.22,15.22,0,1,0,196.36,176,15.22,15.22,0,0,0,213.94,163.63Z"/>
+    <path class="cls-6" d="M211.07,170.48a3.82,3.82,0,1,0-4.42,3.12A3.82,3.82,0,0,0,211.07,170.48Z"/>
+    <!-- Eye-patch bridge -->
+    <path d="M283.43,174.16H272.71c0-8.83-8.6-16-19.17-16s-19.17,7.19-19.17,16H223.65c0-13.77,13.41-25,29.89-25S283.43,160.39,283.43,174.16Z"/>
+  </g>
+
+  <!-- Belly patch -->
+  <path class="cls-4" d="M292.07,350.54A51.56,51.56,0,0,0,279.64,327c-2.6-2.74-5.94-7.52-8.88-9.68-4.55-3.32-15.1-1.8-22-1.2-7-.6-17.51-2.12-22.06,1.2-2.94,2.16-6.27,6.94-8.88,9.68a51.56,51.56,0,0,0-12.43,23.51Z"/>
+
+  <!-- Nose -->
+  <path class="cls-13" d="M257.94,201.59c.77-1.89-4.42-1.84-5.61-1.87-1.41,0-4.76-.24-5.62,1.26-.76,1.33,1.67,2.29,2.62,2.54,2.07.54,6.24.52,7.88-1A2.83,2.83,0,0,0,257.94,201.59Z"/>
+
+</g><!-- /panda-body -->
+
+<!-- FEET -->
+<path fill="#232323" d="M205.72,350.54c-4.87-3.79-10.64-6.51-16.62-6.51,0,0-10.28-2.41-20.33,6.51Z"/>
+<path fill="#232323" d="M329.12,350.54C319.07,341.62,308.8,344,308.8,344c-6,0-11.75,2.72-16.63,6.51Z"/>
+</g><!-- /cls-clip -->
+
+
+<!-- ═══════════════════════════════════════════
+     MICROPHONE STAND  (in front of panda)
+     ═══════════════════════════════════════════ -->
+<g id="microphone-group">
+  <!-- Stand base shadow -->
+  <ellipse cx="253" cy="369" rx="50" ry="6" fill="rgba(0,0,0,0.13)"/>
+  <!-- Stand base -->
+  <ellipse cx="253" cy="365" rx="50" ry="8" fill="#B8B8B8"/>
+  <ellipse cx="253" cy="363" rx="50" ry="8" fill="#D4D4D4"/>
+  <ellipse cx="253" cy="361" rx="44" ry="4" fill="rgba(255,255,255,0.3)"/>
+  <!-- Vertical pole -->
+  <rect x="250" y="292" width="7" height="72" rx="3.5" fill="#B0B0B0"/>
+  <rect x="251" y="292" width="5" height="72" rx="2.5" fill="#D8D8D8"/>
+  <rect x="252" y="295" width="2" height="66" rx="1"   fill="rgba(255,255,255,0.4)"/>
+  <!-- Neck connector -->
+  <rect x="248" y="287" width="10" height="12" rx="5" fill="#999"/>
+  <rect x="249" y="287" width="8"  height="10" rx="4" fill="#BBB"/>
+  <!-- Outer shell -->
+  <rect x="226" y="236" width="54" height="54" rx="27" fill="#DB2777"/>
+  <!-- Grill background -->
+  <rect x="231" y="241" width="44" height="44" rx="22" fill="#E84F8C"/>
+  <!-- Grill mesh lines -->
+  <line x1="241" y1="248" x2="265" y2="248" stroke="rgba(255,255,255,0.22)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="237" y1="254" x2="269" y2="254" stroke="rgba(255,255,255,0.22)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="235" y1="260" x2="271" y2="260" stroke="rgba(255,255,255,0.22)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="235" y1="266" x2="271" y2="266" stroke="rgba(255,255,255,0.22)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="237" y1="272" x2="269" y2="272" stroke="rgba(255,255,255,0.22)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="241" y1="278" x2="265" y2="278" stroke="rgba(255,255,255,0.22)" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Specular highlight -->
+  <ellipse cx="246" cy="246" rx="8" ry="3.5" fill="rgba(255,255,255,0.28)" transform="rotate(-22,246,246)"/>
+  <!-- Accent ring -->
+  <rect x="226" y="282" width="54" height="11" rx="5.5" fill="#FF79C0"/>
+  <rect x="226" y="289" width="54" height="4"  rx="0"   fill="#C4448C" opacity="0.6"/>
+  <!-- Recording LED -->
+  <circle id="record-light" cx="265" cy="287.5" r="3.5" fill="#FF4B4B"/>
+  <circle                    cx="264" cy="286.5" r="1.2" fill="rgba(255,255,255,0.6)"/>
+</g>
+
+<!-- ═══════════════════════════════════════
+     SPEAKING ARCS  (next to panda's nose)
+     Three curved arcs radiating to the right,
+     staggered so they pulse like a speaker icon.
+     ═══════════════════════════════════════ -->
+<g id="speaking-arcs" fill="none" stroke="#DB2777" stroke-linecap="round">
+  <!-- innermost arc -->
+  <path id="sarc1" d="M 288,196 Q 298,204 288,212" stroke-width="3.5"/>
+  <!-- middle arc -->
+  <path id="sarc2" d="M 288,189 Q 305,204 288,219" stroke-width="3"/>
+  <!-- outer arc -->
+  <path id="sarc3" d="M 288,182 Q 314,204 288,226" stroke-width="2.5"/>
+</g>
+
+</g><!-- /scene -->
+</svg>

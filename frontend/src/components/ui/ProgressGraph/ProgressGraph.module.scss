@@ -1,0 +1,231 @@
+/* =============================================================================
+   ProgressGraph — Game-style language level evolution chart
+   ============================================================================= */
+
+/* ── Card shell ─────────────────────────────────────────────────────────────── */
+
+.card {
+  background: var(--color-bg-surface);
+  border: 2px solid var(--color-border-default);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-chunky);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+/* ── Header ─────────────────────────────────────────────────────────────────── */
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.headerIcon {
+  width: var(--icon-box-md);
+  height: var(--icon-box-md);
+  background: var(--icon-bg-progress);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-progress);
+  flex-shrink: 0;
+}
+
+.headerText {
+  flex: 1;
+  min-width: 0;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-black);
+  color: var(--color-text-primary);
+  margin: 0;
+  line-height: var(--leading-tight);
+}
+
+.subtitle {
+  font-family: var(--font-base);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* ── Current level badge ────────────────────────────────────────────────────── */
+
+.levelBadge {
+  margin-left: auto;
+  background: var(--color-progress-light);
+  border: 2px solid var(--color-progress);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-chunky-progress);
+  padding: var(--space-1) var(--space-4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  flex-shrink: 0;
+}
+
+.levelBadgeText {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-black);
+  color: var(--color-progress);
+  line-height: 1;
+}
+
+.levelBadgeLabel {
+  font-family: var(--font-base);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-bold);
+  color: var(--color-progress);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ── Graph wrapper + SVG ────────────────────────────────────────────────────── */
+
+.graphWrap {
+  position: relative;
+  width: 100%;
+  cursor: crosshair;
+  user-select: none;
+}
+
+.svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+
+/* ── SVG text elements (axis labels) ────────────────────────────────────────── */
+
+.axisLabel {
+  font-family: var(--font-base);
+  font-size: 11px;
+  font-weight: 700;
+  fill: var(--color-text-secondary);
+}
+
+/* "B2 ✦" floating above the latest dot */
+.latestLabel {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 900;
+  fill: var(--color-progress);
+  letter-spacing: 0.05em;
+}
+
+/* ── Animated SVG elements ──────────────────────────────────────────────────── */
+
+/* Draw-on line animation — CSS keyframe, no JS needed */
+.line {
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  animation: pgDrawLine 1.4s cubic-bezier(0.4, 0, 0.2, 1) 0.1s forwards;
+}
+
+@keyframes pgDrawLine {
+  to { stroke-dashoffset: 0; }
+}
+
+/* Area fades in after line draws */
+.area {
+  opacity: 0;
+  animation: pgFadeIn 0.6s ease 0.9s forwards;
+}
+
+@keyframes pgFadeIn {
+  to { opacity: 1; }
+}
+
+/* Dots pop in staggered (delay set via --dot-delay inline style) */
+.dot {
+  opacity: 0;
+  transform-origin: center;
+  animation: pgPopIn 0.35s var(--easing-bounce) var(--dot-delay, 1s) forwards;
+  transition: r 0.12s ease;
+}
+
+@keyframes pgPopIn {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Pulsing glow ring on latest dot */
+.glowRing {
+  opacity: 0;
+  animation:
+    pgFadeIn 0.4s ease 1.2s forwards,
+    pgGlow 2.4s ease-in-out 1.6s infinite;
+}
+
+@keyframes pgGlow {
+  0%, 100% { opacity: 0.12; }
+  50%       { opacity: 0.28; }
+}
+
+/* ── Tooltip text inside SVG ────────────────────────────────────────────────── */
+
+.tooltipLevel {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 900;
+  fill: #ffffff;
+}
+
+.tooltipDate {
+  font-family: var(--font-base);
+  font-size: 10px;
+  font-weight: 500;
+  fill: rgba(255, 255, 255, 0.70);
+}
+
+/* ── Legend ─────────────────────────────────────────────────────────────────── */
+
+.legend {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-4) var(--space-6);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-border-default);
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.legendDot {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-pill);
+  flex-shrink: 0;
+}
+
+.legendLabel {
+  font-family: var(--font-base);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-secondary);
+}
+
+/* Legend dot colors per level */
+.legendA2 .legendDot { background: #9ca3af; }
+.legendB1 .legendDot { background: var(--color-brand-primary); }
+.legendB2 .legendDot { background: var(--color-progress); }

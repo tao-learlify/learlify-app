@@ -1,0 +1,146 @@
+/* ==========================================================================
+   ContinueLearningCard — Dashboard hero card (Main Path Card).
+   Visual source of truth: code.html "Main Path Card"
+   Layout: flex-row — teal icon box (left, 192px²) + content (right).
+   Duo-card style: 2px border + 4px bottom chunky shadow + radius-4xl.
+   ========================================================================== */
+
+/* ── CARD SHELL ────────────────────────────────────────────────────────────── */
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-10);
+  padding: var(--space-10);
+  background-color: var(--color-bg-surface);
+  border: 2px solid var(--color-border-default);
+  border-radius: var(--radius-4xl);
+  box-shadow: var(--shadow-chunky);
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-6);
+    padding: var(--space-6);
+    border-radius: var(--radius-3xl);
+  }
+}
+
+/* ── TEAL ICON BOX (left column) ───────────────────────────────────────────── */
+.iconBox {
+  flex-shrink: 0;
+  width: 192px;
+  height: 192px;
+  background-color: var(--color-accent-teal-light);
+  border: 2px solid var(--color-accent-teal-border);
+  border-radius: var(--radius-3xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    width: 80px;
+    height: 80px;
+    border-radius: var(--radius-xl);
+  }
+}
+
+.iconSvg {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+
+  @media (max-width: 768px) {
+    width: 60px;
+  }
+}
+
+/* ── CONTENT (right column) ────────────────────────────────────────────────── */
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+/* ── EYEBROW — "CURRENT UNIT" in teal, uppercase ───────────────────────────── */
+.eyebrow {
+  font-family: var(--font-base);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-black);
+  color: var(--color-accent-teal);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* ── TITLE ─────────────────────────────────────────────────────────────────── */
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: var(--weight-black);
+  color: var(--color-text-primary);
+  margin: 0;
+  line-height: var(--leading-tight);
+}
+
+/* ── SUBTITLE ──────────────────────────────────────────────────────────────── */
+.subtitle {
+  font-family: var(--font-base);
+  font-size: var(--text-md);
+  color: var(--color-text-secondary);
+  margin: 0;
+  line-height: var(--leading-normal);
+}
+
+/* ── PROGRESS SECTION ──────────────────────────────────────────────────────── */
+.progressSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-top: var(--space-1);
+}
+
+.progressHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.progressLabel {
+  font-family: var(--font-base);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-bold);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.progressValue {
+  font-family: var(--font-base);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-black);
+  color: var(--color-progress);
+}
+
+.progressTrack {
+  height: 16px;
+  background-color: var(--color-bg-muted);
+  border-radius: var(--radius-pill);
+  border: 2px solid var(--color-border-default);
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background-color: var(--color-progress);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-chunky-progress);
+  transition: width var(--duration-slow) var(--easing-out);
+}
+
+/* ── CTA BUTTON ────────────────────────────────────────────────────────────── */
+.cta {
+  align-self: flex-start;
+  margin-top: var(--space-2);
+}

@@ -1,0 +1,216 @@
+/* ==========================================================================
+   DESIGN TOKENS — Single source of truth for all visual decisions.
+   Consumed by: Tailwind @theme, SCSS modules via var(), styled-components.
+   ========================================================================== */
+
+:root {
+  /* ── BRAND ──────────────────────────────────────────────────────────────── */
+  --color-brand-primary:        #1a56db;
+  --color-brand-primary-dark:   #1441a8;
+  --color-brand-primary-light:  #eff2ff;
+  --color-brand-accent:         #00b4ae;
+  --color-brand-accent-dark:    #008c88;
+  --color-brand-accent-light:   #e0faf9;
+
+  /* ── ACCENT PALETTE (Duolingo-inspired) ─────────────────────────────────── */
+  /* progress/success green — matches Duolingo #58cc02 */
+  --color-progress:             #58cc02;
+  --color-progress-dark:        #46a302;
+  --color-progress-light:       #e3f9c8;
+  /* reward amber — matches Duolingo gold #ffc800 */
+  --color-accent-amber:         #ffc800;
+  --color-accent-amber-dark:    #cc9f00;
+  --color-accent-amber-text:    #78350f;
+  /* luminous teal accent — #2acef3 */
+  --color-accent-teal:          #2acef3;
+  --color-accent-teal-dark:     #0ab0d8;
+  --color-accent-teal-light:    rgba(42, 206, 243, 0.10);
+  --color-accent-teal-border:   rgba(42, 206, 243, 0.20);
+
+  /* ── SURFACES ───────────────────────────────────────────────────────────── */
+  --color-bg-page:              #f7f8fa;
+  --color-bg-surface:           #ffffff;
+  --color-bg-muted:             #f1f3f5;
+  --color-bg-interactive:       #e9ecef;
+  --color-bg-overlay:           rgba(0, 0, 0, 0.50);
+
+  /* ── TEXT ───────────────────────────────────────────────────────────────── */
+  --color-text-primary:         #111827;
+  --color-text-secondary:       #6b7280;
+  --color-text-disabled:        #9ca3af;
+  --color-text-inverse:         #ffffff;
+  --color-text-accent:          #1a56db;
+
+  /* ── BORDER ─────────────────────────────────────────────────────────────── */
+  --color-border-default:       #e5e7eb;
+  --color-border-strong:        #d1d5db;
+  --color-border-focus:         #1a56db;
+
+  /* ── FEEDBACK ───────────────────────────────────────────────────────────── */
+  --color-success:              #16a34a;
+  --color-success-bg:           #dcfce7;
+  --color-success-text:         #14532d;
+  --color-warning:              #d97706;
+  --color-warning-bg:           #fef3c7;
+  --color-warning-text:         #78350f;
+  --color-danger:               #dc2626;
+  --color-danger-bg:            #fee2e2;
+  --color-danger-text:          #7f1d1d;
+  --color-info:                 #0ea5e9;
+  --color-info-bg:              #e0f2fe;
+  --color-info-text:            #0c4a6e;
+
+  /* ── SPACING (base-8 scale) ─────────────────────────────────────────────── */
+  --space-1:   4px;
+  --space-2:   8px;
+  --space-3:   12px;
+  --space-4:   16px;
+  --space-5:   20px;
+  --space-6:   24px;
+  --space-8:   32px;
+  --space-10:  40px;
+  --space-12:  48px;
+  --space-16:  64px;
+  --space-24:  96px;
+
+  /* ── BORDER RADIUS ──────────────────────────────────────────────────────── */
+  --radius-xs:    4px;
+  --radius-sm:    8px;
+  --radius-md:    12px;
+  --radius-lg:    16px;   /* rounded-2xl equivalent — nav links, buttons */
+  --radius-xl:    20px;
+  --radius-2xl:   24px;   /* rounded-3xl equivalent — profile cards */
+  --radius-3xl:   32px;   /* rounded-[2rem] — course cards, icon containers */
+  --radius-4xl:   40px;   /* rounded-[2.5rem] — hero cards (template spec) */
+  --radius-pill:  9999px;
+
+  /* ── SHADOWS / ELEVATION ────────────────────────────────────────────────── */
+  --shadow-0:              none;
+  --shadow-1:              0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-2:              0 4px 12px rgba(0, 0, 0, 0.10);
+  --shadow-3:              0 8px 24px rgba(0, 0, 0, 0.14);
+  --shadow-focus:          0 0 0 3px rgba(26, 86, 219, 0.25);
+  /* Chunky "Duolingo-style" offset shadow — border + bottom drop */
+  --shadow-chunky:          0 4px 0 0 #e5e5e5;
+  --shadow-chunky-primary:  0 4px 0 0 var(--color-brand-primary-dark);
+  --shadow-chunky-progress: 0 4px 0 0 var(--color-progress-dark);
+  --shadow-chunky-accent:   0 4px 0 0 var(--color-brand-accent-dark);
+  --shadow-chunky-amber:    0 4px 0 0 var(--color-accent-amber-dark);
+  --shadow-chunky-warning:  0 4px 0 0 #cc9f00;
+  --shadow-chunky-teal:     0 4px 0 0 var(--color-accent-teal-dark);
+
+  /* ── TYPOGRAPHY ─────────────────────────────────────────────────────────── */
+  --font-display: 'Dunkin', sans-serif;
+  --font-base:    'Varela Round', sans-serif;
+
+  /* Type scale (8 meaningful steps) */
+  --text-xs:      0.6875rem;   /* 11px */
+  --text-sm:      0.75rem;     /* 12px */
+  --text-md:      0.875rem;    /* 14px */
+  --text-base:    0.9375rem;   /* 15px */
+  --text-lg:      1rem;        /* 16px */
+  --text-xl:      1.125rem;    /* 18px */
+  --text-2xl:     1.25rem;     /* 20px */
+  --text-3xl:     1.5rem;      /* 24px */
+  --text-4xl:     1.875rem;    /* 30px */
+  --text-5xl:     2.25rem;     /* 36px */
+  --text-display: 3rem;        /* 48px */
+
+  /* Font weights */
+  --weight-regular:   400;
+  --weight-medium:    500;
+  --weight-semibold:  600;
+  --weight-bold:      700;
+  --weight-black:     900;  /* true font-black — matches Tailwind font-black */
+
+  /* Line heights */
+  --leading-tight:    1.25;
+  --leading-normal:   1.5;
+  --leading-relaxed:  1.6;
+
+  /* ── Z-INDEX ────────────────────────────────────────────────────────────── */
+  --z-below:    -1;
+  --z-base:      0;
+  --z-raised:   10;
+  --z-dropdown: 100;
+  --z-sticky:   200;
+  --z-overlay:  300;
+  --z-modal:    400;
+  --z-toast:    500;
+
+  /* ── MOTION ─────────────────────────────────────────────────────────────── */
+  --duration-fast:    100ms;
+  --duration-base:    150ms;
+  --duration-slow:    250ms;
+  --duration-slower:  350ms;
+  --easing-default:   ease;
+  --easing-in:        ease-in;
+  --easing-out:       ease-out;
+  --easing-bounce:    cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ── ICON SYSTEM ────────────────────────────────────────────────────────── */
+  /* Phosphor Icons — fill weight throughout */
+  --icon-sm:      16px;
+  --icon-md:      20px;
+  --icon-lg:      24px;
+  --icon-xl:      32px;
+  --icon-2xl:     40px;
+
+  /* Icon container sizes (box that wraps the icon) */
+  --icon-box-sm:  28px;
+  --icon-box-md:  36px;
+  --icon-box-lg:  44px;
+  --icon-box-xl:  56px;
+  --icon-box-2xl: 72px;
+
+  /* Icon semantic colors (use these, never raw colors) */
+  --icon-color-primary:   var(--color-brand-primary);
+  --icon-color-secondary: var(--color-text-secondary);
+  --icon-color-accent:    var(--color-brand-accent);
+  --icon-color-amber:     var(--color-accent-amber-dark);
+  --icon-color-teal:      var(--color-accent-teal);
+  --icon-color-progress:  var(--color-progress);
+  --icon-color-inverse:   var(--color-text-inverse);
+
+  /* Icon background (soft tint containers) */
+  --icon-bg-primary:  var(--color-brand-primary-light);
+  --icon-bg-accent:   var(--color-brand-accent-light);
+  --icon-bg-amber:    rgba(255, 200, 0, 0.15);
+  --icon-bg-teal:     var(--color-accent-teal-light);
+  --icon-bg-progress: var(--color-progress-light);
+  --icon-bg-muted:    var(--color-bg-muted);
+
+  /* ── BREAKPOINTS (reference values — use in @media queries) ─────────────── */
+  /* Usage: @media (min-width: 576px) { ... }                                  */
+  --bp-xs:   375px;
+  --bp-sm:   576px;
+  --bp-md:   768px;
+  --bp-lg:   992px;
+  --bp-xl:   1200px;
+  --bp-2xl:  1400px;
+}
+
+/* ==========================================================================
+   DARK MODE — Toggle by adding data-theme="dark" to <html>
+   ========================================================================== */
+[data-theme="dark"] {
+  /* Surfaces */
+  --color-bg-page:          #0f1117;
+  --color-bg-surface:       #1a1d27;
+  --color-bg-muted:         #252836;
+  --color-bg-interactive:   #2e3248;
+
+  /* Text */
+  --color-text-primary:     #f9fafb;
+  --color-text-secondary:   #9ca3af;
+  --color-text-disabled:    #6b7280;
+
+  /* Border */
+  --color-border-default:   #2e3248;
+  --color-border-strong:    #3d4461;
+
+  /* Elevated shadows need more opacity in dark mode */
+  --shadow-1: 0 1px 3px rgba(0, 0, 0, 0.30);
+  --shadow-2: 0 4px 12px rgba(0, 0, 0, 0.40);
+  --shadow-3: 0 8px 24px rgba(0, 0, 0, 0.50);
+}

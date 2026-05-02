@@ -1,0 +1,1402 @@
+{
+  "name": "Exam 6",
+  "schema": [
+    {
+      "category": "Grammar & Vocabulary",
+      "exercises": [
+        {
+          "answers": [
+            "A.are ",
+            "B.is ",
+            "C.does "
+          ],
+          "correct": 2,
+          "description": "None",
+          "label": "Grammar",
+          "title": "1. Where {x} your brother live? "
+        },
+        {
+          "answers": [
+            "A.are ",
+            "B.is ",
+            "C. does"
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": "2. There {x} enough butter for the cake."
+        },
+        {
+          "answers": [
+            "A.many ",
+            "B.often ",
+            "C. usually"
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": " 3.How {x} do you do sport?"
+        },
+        {
+          "answers": [
+            "A.watch ",
+            "B. watching",
+            "C.see "
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": " 4. I hate {x} news in the morning "
+        },
+        {
+          "answers": [
+            "A. I",
+            "B. we",
+            "C. he"
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": " 5. {x} are very happy to see you! "
+        },
+        {
+          "answers": [
+            "A.lots ",
+            "B. much",
+            "C. many"
+          ],
+          "correct": 2,
+          "description": "None",
+          "label": "Grammar",
+          "title": "6. There aren't {x} apples left. "
+        },
+        {
+          "answers": [
+            "A. who",
+            "B. whom",
+            "C.whose "
+          ],
+          "correct": 2,
+          "description": "None",
+          "label": "Grammar",
+          "title": " 7.This is my friend, {x} father used to work with my uncle. "
+        },
+        {
+          "answers": [
+            "A.off ",
+            "B.down ",
+            "C.of "
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "8. Switch {x} the light when you leave the room. "
+        },
+        {
+          "answers": [
+            "A. you’re",
+            "B. you",
+            "C. are you"
+          ],
+          "correct": 2,
+          "description": "None",
+          "label": "Grammar",
+          "title": " 9. What {x} doing this Saturday morning? "
+        },
+        {
+          "answers": [
+            "A.wouldn’t go ",
+            "B.don’t go ",
+            "C.didn’t go "
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": " 10.When it rains, we {x} running.  "
+        },
+        {
+          "answers": [
+            "A.won’t pass ",
+            "B.will pass",
+            "C.will fail "
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": "11. If I study hard, I {x} the exam "
+        },
+        {
+          "answers": [
+            "A. ever",
+            "B. yet",
+            "C. already"
+          ],
+          "correct": 2,
+          "description": "None",
+          "label": "Grammar",
+          "title": "12.  We have {x} seen this film. "
+        },
+        {
+          "answers": [
+            "A.up ",
+            "B. down",
+            "C.out "
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": " 13.Harry’s car broke {x} last week. "
+        },
+        {
+          "answers": [
+            "A.have you been ",
+            "B.did you go ",
+            "C. you have been"
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": "14. When {x} to Italy? "
+        },
+        {
+          "answers": [
+            "A.is repairing ",
+            "B.is being repaired",
+            "C.is repaired "
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": "15. My laptop {x} at the moment, so I can’t use it. "
+        },
+        {
+          "answers": [
+            "A.listen ",
+            "B.to listen ",
+            "C.listening "
+          ],
+          "correct": 2,
+          "description": "None",
+          "label": "Grammar",
+          "title": "16. Jessica enjoys {x} to music while running. "
+        },
+        {
+          "answers": [
+            "A. if was I",
+            "B.if I was ",
+            "C. was I"
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": "17. She asked me {x} busy that day. "
+        },
+        {
+          "answers": [
+            "A.so ",
+            "B. so much",
+            "C.so many "
+          ],
+          "correct": 2,
+          "description": "None",
+          "label": "Grammar",
+          "title": "18.  I’ve seen {x} beautiful places in Italy! "
+        },
+        {
+          "answers": [
+            "A. a few",
+            "B. a little",
+            "C.many "
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "19.  Only {x} students came to class. "
+        },
+        {
+          "answers": [
+            "A.had been walking ",
+            "B. have been walking",
+            "C. walked"
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "20. We {x} for several hours when we decided to have a break "
+        },
+        {
+          "answers": [
+            "A. on",
+            "B.in ",
+            "C.up "
+          ],
+          "correct": 2,
+          "description": "None",
+          "label": "Grammar",
+          "title": "21.  I thought of taking {x} tennis if I have time."
+        },
+        {
+          "answers": [
+            "A.usually go ",
+            "B.would ",
+            "C.used to go "
+          ],
+          "correct": 2,
+          "description": "None",
+          "label": "Grammar",
+          "title": "22. When I was a kid I {x} cycling every day. "
+        },
+        {
+          "answers": [
+            "A.on paying ",
+            "B.paying ",
+            "C.to pay "
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "23. He insisted {x} for the dinner. "
+        },
+        {
+          "answers": [
+            "A. didn’t sign",
+            "B.wouldn’t sign ",
+            "C.hadn’t signed "
+          ],
+          "correct": 2,
+          "description": "None",
+          "label": "Grammar",
+          "title": "24.  I wish I {x} up for this course. It’s so boring! "
+        },
+        {
+          "answers": [
+            "A. to be",
+            "B. that he's",
+            "C. to was"
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "25. He is believed {x} very generous. "
+        },
+        {
+          "description": "1.Write the letter (A-K) of the word that is most similar in meaning to a word on the left (1-5). Use each word only once. Write your answers (A-K) on your answer paper. You will not need five of the words (A-K).",
+          "label": "Vocabulary",
+          "questions": [
+            {
+              "title": "1.say {x}",
+              "answers": [
+                "F tell",
+                "A choose"
+              ],
+              "correct": 0
+            },
+            {
+              "title": "2.pick {x}",
+              "answers": [
+                "B check",
+                "D radio"
+              ],
+              "correct": 0
+            },
+            {
+              "title": "3.pupil {x}",
+              "answers": [
+                "G student",
+                "E shoe"
+              ],
+              "correct": 0
+            },
+            {
+              "title": "4. beautiful {x}",
+              "answers": [
+                "H pretty",
+                "J  carry"
+              ],
+              "correct": 0
+            },
+            {
+              "title": "5. laptop {x}",
+              "answers": [
+                "C computer",
+                "K single"
+              ],
+              "correct": 0
+            }
+          ]
+        },
+        {
+          "description": "2. Finish each sentence (6-10) using a word from the list (A-K). Use each word only once. Write your answers (A-K) on your answer paper. You will not need five of the words (A-K).",
+          "label": "Vocabulary",
+          "questions": [
+            {
+              "answers": [
+                "B adult",
+                "A domestic"
+              ],
+              "correct": 0,
+              "title": "6.A person who is older than 18 is a/an {x}. "
+            },
+            {
+              "answers": [
+                "K decorate",
+                "D event"
+              ],
+              "correct": 0,
+              "title": "7.  To put different things around something to make it look better is to {x}. "
+            },
+            {
+              "answers": [
+                "E excellent",
+                "G cheer"
+              ],
+              "correct": 0,
+              "title": "8. When something is extremely good, it is {x}.  "
+            },
+            {
+              "answers": [
+                "C article",
+                "H escape"
+              ],
+              "correct": 0,
+              "title": "9. A piece of writing which you can usually read in a magazine or newspaper is a/an {x}. "
+            },
+            {
+              "answers": [
+                "F invite",
+                "J drama"
+              ],
+              "correct": 0,
+              "title": "10.. To offer somebody to go to some place together is to {x} "
+            }
+          ]
+        },
+        {
+          "description": "3. Write the letter of the word on the right (A-K) that matches the definition on the left (11-15). Use each word only once. Write your answers (A-K) on your answer paper. You will not need five of the words (A-K).",
+          "label": "Vocabulary",
+          "questions": [
+            {
+              "answers": [
+                "J frost",
+                "B victory"
+              ],
+              "correct": 0,
+              "title": "11.  Ice on the ground or on the window when the temperature is below freezing.{x}"
+            },
+            {
+              "answers": [
+                "A hairdresser",
+                "C steal"
+              ],
+              "correct": 0,
+              "title": "12. A person who cuts and colours people’s hair. {x} "
+            },
+            {
+              "answers": [
+                "D illustrate",
+                "E soup"
+              ],
+              "correct": 0,
+              "title": "13.To draw a picture for a book.{x} "
+            },
+            {
+              "answers": [
+                "F translate",
+                "G surgeon"
+              ],
+              "correct": 0,
+              "title": "14. To express words of one language in another language.{x} "
+            },
+            {
+              "answers": [
+                "H exit",
+                "K underline"
+              ],
+              "correct": 0,
+              "title": "15. The door people use to leave a building.{x}"
+            }
+          ]
+        },
+        {
+          "description": "4.Finish each sentence (16-20) using a word from the list (A-K). Use each word only once. Write your answers (A-K) on your answer paper. You will not need five of the words (A-K).",
+          "label": "Vocabulary",
+          "questions": [
+            {
+              "answers": [
+                "B underground",
+                "A wardrobe"
+              ],
+              "correct": 0,
+              "title": "16.I prefer to use {x}, it’s so much faster than buses. "
+            },
+            {
+              "answers": [
+                "J uniform",
+                "C talent"
+              ],
+              "correct": 0,
+              "title": "17.My cousin used to wear {x} to school and she hated it. "
+            },
+            {
+              "answers": [
+                "G wallet",
+                "F supermarket"
+              ],
+              "correct": 0,
+              "title": "18. . I left my {x}at home, so I have no money on me. "
+            },
+            {
+              "answers": [
+                "D invent",
+                "H offend"
+              ],
+              "correct": 0,
+              "title": "19.  My father likes to {x} different stories and they are always funny. "
+            },
+            {
+              "answers": [
+                "E congratulate",
+                "K overtake"
+              ],
+              "correct": 0,
+              "title": "20. I would like to {x} you on your marriage! "
+            }
+          ]
+        },
+        {
+          "description": "5.Write the letter of the word on the right (A-K) that is most often used with a word on the left (21-25). Use each word only once. Write your answers (A-K) on your answer paper. You will not need five of the words (A-K).",
+          "label": "Vocabulary",
+          "questions": [
+            {
+              "answers": [
+                "E temperature",
+                "A executive"
+              ],
+              "correct": 0,
+              "title": "21.high{x} "
+            },
+            {
+              "answers": [
+                "H team",
+                "D fabric"
+              ],
+              "correct": 0,
+              "title": "22.baseball {x}"
+            },
+            {
+              "answers": [
+                "C pollution",
+                "F paw"
+              ],
+              "correct": 0,
+              "title": "23.noise{x} "
+            },
+            {
+              "answers": [
+                "B species",
+                "G newsletter"
+              ],
+              "correct": 0,
+              "title": "24.endangered{x} "
+            },
+            {
+              "answers": [
+                "K effect",
+                "J festival"
+              ],
+              "correct": 0,
+              "title": "25. greenhouse{x} "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Reading",
+      "exercises": [
+        {
+          "description": "Choose one word from the list for each gap. ",
+          "label": "Reading Part 1",
+          "questions": [
+            {
+              "title": "Hey Caroline! {v} What happened? The house is a mess! {v} You have to come and {x} the house. Everything is very dirty! {v}",
+              "answers": [
+                "A. change",
+                "B. clean",
+                "C. build"
+              ],
+              "correct": 1
+            },
+            {
+              "title": "All the {x} are in the sink and the toilet is filthy. {v}",
+              "answers": [
+                "A. dishes",
+                "B. pillows",
+                "C. kitchen"
+              ],
+              "correct": 0
+            },
+            {
+              "title": "My parents {x} to visit this weekend {v}",
+              "answers": [
+                "A. will coming",
+                "B. is coming",
+                "C. are coming"
+              ],
+              "correct": 2
+            },
+            {
+              "title": "and it´s {x} turn to clean! {v} Please don´t forget, you know how my parents are….. {v}",
+              "answers": [
+                "A. your",
+                "B. yours ",
+                "C. their"
+              ],
+              "correct": 0
+            },
+            {
+              "title": "{x} you later. {v} Karen {v}",
+              "answers": [
+                "A. Have ",
+                "B. Watch",
+                "C. See"
+              ],
+              "correct": 2
+            }
+          ]
+        },
+        {
+          "description": "Order the sentences (B-G) below to make a story. {v} The first sentence of the story (A) is given for you as an example. {v} A. - Cleopatra was a Greek who was born in 69 B.C. ",
+          "label": "Reading Part 2",
+          "questions": [
+            {
+              "title": "B Cleopatra was also known for her beautiful voice and beauty.",
+              "answers": [
+                "x"
+              ],
+              "orderAs": 3,
+              "correct": 0
+            },
+            {
+              "title": "C She ruled Egypt for 21 years. At first, she ruled with her father, then her two brothers and finally she ruled all by herself.",
+              "answers": [
+                "x"
+              ],
+              "orderAs": 2,
+              "correct": 0
+            },
+            {
+              "title": "D One of the most popular is the drama, Antony and Cleopatra, by William Shakespeare, the popular British dramatist.",
+              "answers": [
+                "x"
+              ],
+              "orderAs": 5,
+              "correct": 0
+            },
+            {
+              "title": "E Several writers and authors have tried to write about her life and rule. ",
+              "answers": [
+                "x"
+              ],
+              "orderAs": 4,
+              "correct": 0
+            },
+            {
+              "title": "F She came from the dynasty of Ptolemy, who was the general under Alexander the Great when he attacked and defeated Egypt. ",
+              "answers": [
+                "x"
+              ],
+              "orderAs": 1,
+              "correct": 0
+            },
+            {
+              "title": "G Films about her have been made in 1934 and 1963.",
+              "answers": [
+                "x"
+              ],
+              "orderAs": 6,
+              "correct": 0
+            }
+          ]
+        },
+        {
+          "description": "The sentences below are from some instructions, Put these sentences in the right order. The first sentences are done for you {v} A. If you are planning to make cookies, please follow these instructions.",
+          "label": "Reading Part 2",
+          "questions": [
+            {
+              "title": "B You can then cut slices of dough, and check if the oven is ready.",
+              "answers": [
+                "x"
+              ],
+              "orderAs": 3,
+              "correct": 0
+            },
+            {
+              "title": "C Next, put them in the oven for 12 minutes.",
+              "answers": [
+                "x"
+              ],
+              "orderAs": 4,
+              "correct": 0
+            },
+            {
+              "title": "D You should preheat the oven to 176°C.",
+              "answers": [
+                "x"
+              ],
+              "orderAs": 2,
+              "correct": 0
+            },
+            {
+              "title": "E Buy a package of pre-made cookie dough.",
+              "answers": [
+                "x"
+              ],
+              "orderAs": 1,
+              "correct": 0
+            },
+            {
+              "title": "F After that, take the cookies out and let them cool down.",
+              "answers": [
+                "x"
+              ],
+              "orderAs": 5,
+              "correct": 0
+            }
+          ]
+        },
+        {
+          "heading": "Food and Restaurants",
+          "description": "Person A {v} Fine dining is something that not everyone knows how to appreciate. A lot of hours of education goes into training people who work at these types of establishments, and those who attend high quality restaurants are expected to get great food and service. I don’t understand why one would want to have a meal at a low quality place with regular food when the option of a good meal is on the table. {v} Person B {v} Everyone should get the opportunity to experience fine dining, just so they know what it’s like. I can’t help but recognize the fact that it really is an art, but some people might feel a bit out of place in a situation like that. I personally enjoy it, but it’s just a financial investment that I can’t be doing all the time so I usually keep my fancy restaurant experiences to celebrate special occasions. {v} Person C {v} I’ve experienced everything from fast food chains to 5 star restaurants and I will always choose the first. When I’m hungry I want something that I can get without having to sit down, wait for and put a napkin on my lap to eat. I once considered working at a fancy restaurant, but I thought my time would be better spent learning another skill that I could use in a variety of places. At the end of the day, food is food, no matter how it’s served. {v} Person D {v} One of my dreams is to get all dressed up and go to one of these fine-dining restaurants where everyone is waiting on me and serving me small dishes with high-quality food. It shocks me how much work can be put into cooking, the presentation of the food and the presentation of the waiters and cooks! If I had the money I would definitely spend it on an experience like that - I think it would be something unforgettable in my life. ",
+          "subtitle": "Four people respond in the comments section of an online magazine article about food and restaurants. Read their comments and answer the questions. {v} ",
+          "label": "Reading Part 4",
+          "questions": [
+            {
+              "answers": [
+                "Person A",
+                "Person B",
+                "Person C",
+                "Person D"
+              ],
+              "correct": 0,
+              "title": "1. Who thinks that a good restaurant is always the best choice?"
+            },
+            {
+              "answers": [
+                "Person A",
+                "Person B",
+                "Person C",
+                "Person D"
+              ],
+              "correct": 1,
+              "title": "2. Who thinks that fine-dining should be considered an art?"
+            },
+            {
+              "answers": [
+                "Person A",
+                "Person B",
+                "Person C",
+                "Person D"
+              ],
+              "correct": 1,
+              "title": "3. Who thinks high-end restaurants are best for unique situations?"
+            },
+            {
+              "answers": [
+                "Person A",
+                "Person B",
+                "Person C",
+                "Person D"
+              ],
+              "correct": 2,
+              "title": "4. Who prefers to eat cheap food than going to a nice restaurant?"
+            },
+            {
+              "answers": [
+                "Person A",
+                "Person B",
+                "Person C",
+                "Person D"
+              ],
+              "correct": 2,
+              "title": "5. Who thinks that going to a fancy restaurant is too much work?"
+            },
+            {
+              "answers": [
+                "Person A",
+                "Person B",
+                "Person C",
+                "Person D"
+              ],
+              "correct": 3,
+              "title": "6. Who has never gone to a high quality restaurant?"
+            },
+            {
+              "answers": [
+                "Person A",
+                "Person B",
+                "Person C",
+                "Person D"
+              ],
+              "correct": 3,
+              "title": "7. Who is impressed by the service at nice restaurants?"
+            }
+          ]
+        },
+        {
+          "description": "Read the text below. Match the headings A-H to the paragraphs 19-25.",
+          "label": "Reading Part 5",
+          "questions": [
+            {
+              "answers": [
+                "C. How to do telepathic impression ",
+                " E.Steps to take to become a mind reader"
+              ],
+              "correct": 0,
+              "title": "19. Telepathic impression is a transfer of thoughts from one mind to the other. The person {v} who is sending the thought, the sender, creates the impression. The person who is {v} receiving the thoughts, the receiver, accepts the impression from the sender. {v} Impressions are one of the most important things in telepathy. Writing down received {v} impressions or thoughts is encouraged, in order to remember them. Senders can verify {v} what the receiver has written down, to confirm that the thoughts match. In order to {v} send and receive impressions, both senders and receivers have to keep a clear mind. {v} Regular practice can improve people’s telepathic powers. It is important to be patient, {v} as one cannot master telepathic impression within a few tries.  "
+            },
+            {
+              "answers": [
+                "F. Mind Reading as a profession "
+              ],
+              "correct": 0,
+              "title": "20. Mind reading involves reading thoughts from a person’s mind without physical or {v} sensory interaction. It’s a form of telepathy. There are professional mind readers, who {v} give readings by observing people. Professionals in this field have been able to {v} develop entire shows that leave audience members and viewers shocked and amazed. {v} Though often simply a series of tricks and well-crafted situations, mind readers, or {v} mentalists as they’re also referred to, use the natural fascination surrounding this topic, {v} as well as their keen insight into the human mind and how it can be manipulated, to {v} create fantastic scenarios that truly give the appearance of mind reading. "
+            },
+            {
+              "answers": [
+                "B. Is traditional mind reading a legitimate practice? "
+              ],
+              "correct": 0,
+              "title": "21. Although mind reading is popular, there are still plenty of skeptics. Many have doubts {v} about its accuracy and fears about what practical uses may be developed if it could {v} indeed be harnessed and used at will. Many in the scientific community say that the {v} validity of mind reading does not have any proven evidence. The practices of mind {v} reading or telepathy in the western world dates back to the 19th century. As of today, {v} mind reading is not believed possible through the limited use of our five senses. {v} However, modern mind reading is performed, to some degree, by using neuroimaging {v} methods. "
+            },
+            {
+              "answers": [
+                "D. Mental communication through telepathy "
+              ],
+              "correct": 0,
+              "title": "22. Mental communication is the interaction of two different minds to exchange thoughts, {v} feelings, and ideas. It is a well-known form of telepathy. Many are concerned about how {v} others think of us. With the techniques of mental communication, it is possible to {v} know what another person is thinking at that time. It is also possible to know what a {v} {v} person is feeling. {v} It can be used as a way of helping people cope with difficulties. {v} Even without speaking a single word, mental communication is possible. "
+            },
+            {
+              "answers": [
+                "A. Talking to animals "
+              ],
+              "correct": 0,
+              "title": "23. Many experts have tried to communicate with animals too. There are those that believe {v} telepathy is, in fact, the main form through which animals communicate to each other. {v} It’s easy to jump to these conclusions when clear signs of communication exist {v} between two or more animals, but often being done without the use of verbal language, {v} as humans are accustomed to in our interactions. Telepathic communication with {v} animals has never been a practice upheld by science, but it has rendered some curious {v} interactions with a range of animals, including dogs, cats, horses, dolphins, rats, and {v} so on.  "
+            },
+            {
+              "answers": [
+                "H. What’s involved in mind control? "
+              ],
+              "correct": 0,
+              "title": "24. Mind control is the process of influencing one’s thoughts; and therefore, their actions. It {v} is a form of telepathy that has been practised for many decades. Mind control is also {v} known by the terms ‘brainwashing’ and ‘thought control.’ There are both positive and {v} negative applications. Because of the potential use for unethical purposes, it’s not {v} widely practiced. However, there may also be use for it in the field of medicine. Methods {v} of mind control provoke the subject to take certain actions, and may also change {v} one’s thought patterns. It can be accomplished through the use of media, like television, {v} Internet, print and radio. Hypnosis has also been proven an effective method of mind {v} control. "
+            },
+            {
+              "answers": [
+                "G. Practical uses of telepathy "
+              ],
+              "correct": 0,
+              "title": "25. The various methods of telepathy can prove to be beneficial in our day-to-day lives. {v} With telepathic powers, we can build new levels of communication. Often, people find it {v} hard to communicate with words alone. Sometimes words are not enough to express {v} what we are feeling. In such scenarios, telepathy can become quite useful. To {v} communicate with people who are deaf, blind and cannot speak, telepathic methods are {v} used. It can bring a new understanding about the mind of one or more individuals. {v} Telepathy can be used by medical professionals and law enforcement to make {v} advances in their particular fields. It can generate better communication between {v} married people, children, and also with mentally ill people. "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Listening",
+      "exercises": [
+        {
+          "answers": [
+            "1. 3:30",
+            "2. 3:00",
+            "3. 5:30"
+          ],
+          "correct": 1,
+          "description": "This is the Aptis Listening Test.",
+          "label": "Listening Part 1",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/C6-1.mp3",
+          "title": "1. Listen to an announcement about today’s work meeting. When will the meeting begin? The meeting will begin at__ {x}"
+        },
+        {
+          "answers": [
+            "1. Paul’s mom",
+            "2. Uncle Lewis",
+            "3. Grandma Lilly"
+          ],
+          "correct": 1,
+          "description": "This is the Aptis Listening Test.",
+          "label": "Listening Part 1",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/C6-2.mp3",
+          "title": "2. Listen to Paul leave a message for his brother, talking about their family. Who won the lottery?  {x}"
+        },
+        {
+          "answers": [
+            "1. It’s not a safe use of your money",
+            "2. It’s better than having a 401K",
+            "3. It’s risky, but worth it when done right"
+          ],
+          "correct": 2,
+          "description": "This is the Aptis Listening Test.",
+          "label": "Listening Part 1",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/C6-3.mp3",
+          "title": "3. Listen to the woman talk about finances. What is her opinion on investment? {x}"
+        },
+        {
+          "answers": [
+            "1. A cat",
+            "2. A puppy",
+            "3. A turtle"
+          ],
+          "correct": 1,
+          "description": "This is the Aptis Listening Test.",
+          "label": "Listening Part 1",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/C6-4.mp3",
+          "title": "4. Listen to Ken and Ana talking in a pet store.  What new pet does Ana want to buy? {x}"
+        },
+        {
+          "answers": [
+            "1. A Phone",
+            "2. A Laptop",
+            "3. A Camera"
+          ],
+          "correct": 0,
+          "description": "This is the Aptis Listening Test.",
+          "label": "Listening Part 1",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/C6-5.mp3",
+          "title": "5. Listen to two friends in a shopping center. Which device does the woman want to buy? {x}"
+        },
+        {
+          "answers": [
+            "1. The mountain painting",
+            "2. The castle painting",
+            "3. The ocean painting"
+          ],
+          "correct": 2,
+          "description": "This is the Aptis Listening Test.",
+          "label": "Listening Part 1",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/C6-6.mp3",
+          "title": "6. You will hear a conversation between Sarah and her friend about buying a painting. What painting will Sarah buy? {x}"
+        },
+        {
+          "answers": [
+            "1. In the park",
+            "2. In the cafe",
+            "3. In the car"
+          ],
+          "correct": 1,
+          "description": "This is the Aptis Listening Test.",
+          "label": "Listening Part 1",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/C6-7.mp3",
+          "title": "7. Listen to Anne talk to his Mother about where his book is. Where did Anne leave his book? {x} "
+        },
+        {
+          "answers": [
+            "1. Giraffes, Zebras and Dolphins",
+            "2. Giraffes, Polar Bears and Penguins",
+            "3. Zebras, Giraffes and Polar Bears"
+          ],
+          "correct": 0,
+          "description": "This is the Aptis Listening Test.",
+          "label": "Listening Part 1",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/C6-8.mp3",
+          "title": "8. Listen to Kate and her friend talk about Kate’s visit to the zoo. Which animals did Kate see at the zoo? {x}"
+        },
+        {
+          "answers": [
+            "1. A hotel",
+            "2. A camp",
+            "3. The beach"
+          ],
+          "correct": 1,
+          "description": "This is the Aptis Listening Test.",
+          "label": "Listening Part 1",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/C6-9.mp3",
+          "title": "9. Listen to a conversation about summer plans. Where does the girl usually do volunteer work in the summer? {x}"
+        },
+        {
+          "answers": [
+            "1. Marilyn Monroe",
+            "2. Elton John",
+            "3. Steve Jobs"
+          ],
+          "correct": 2,
+          "description": "This is the Aptis Listening Test.",
+          "label": "Listening Part 1",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/C6-10.mp3",
+          "title": "10. Noelle is going to read a biography about a famous individual. Whose biography does Noelle choose to read? {x}.    "
+        },
+        {
+          "answers": [
+            "1. Wash the dishes",
+            "2. Vacuum the living room",
+            "3. Set the table"
+          ],
+          "correct": 0,
+          "description": "This is the Aptis Listening Test.",
+          "label": "Listening Part 1",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/C6-11.mp3",
+          "title": "11. Listen to a woman talk about the things she must do when she arrives at her house. What will the woman do when she gets home? {x}"
+        },
+        {
+          "answers": [
+            "1. A hurricane",
+            "2. A fire",
+            " 3. A tornado"
+          ],
+          "correct": 1,
+          "description": "This is the Aptis Listening Test.",
+          "label": "Listening Part 1",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/C6-12.mp3",
+          "title": "12. Listen to two friends talking about something that they read about in the newspaper. What natural disaster did the man read about in the newspaper?  {x}"
+        },
+        {
+          "answers": [
+            "1. 8 days",
+            "2. 4 days",
+            " 3. 9 days"
+          ],
+          "correct": 2,
+          "description": "This is the Aptis Listening Test.",
+          "label": "Listening Part 1",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/C6-13.mp3",
+          "title": "13. Two musicians are talking about the album that they are recording. How long will it take to record the album?  {x} "
+        },
+        {
+          "questions": [
+            {
+              "title": "Speaker A {x}",
+              "answers": [
+                "A. Bought the sixth Book of R.K Bowling .",
+                "B. Wanted to try a different style for the summer.",
+                "C. Wants to know what happens in the new book of R.K Bowling.",
+                "D. Needed a new black belt.",
+                "E. Bought a scarf at half of the original price.",
+                "F. Has and old Coat with holes."
+              ],
+              "correct": 5
+            },
+            {
+              "title": "Speaker B {x}",
+              "answers": [
+                "A. Bought the sixth Book of R.K Bowling .",
+                "B. Wanted to try a different style for the summer.",
+                "C. Wants to know what happens in the new book of R.K Bowling.",
+                "D. Needed a new black belt.",
+                "E. Bought a scarf at half of the original price.",
+                "F. Has and old Coat with holes."
+              ],
+              "correct": 1
+            },
+            {
+              "title": "Speaker C {x}",
+              "answers": [
+                "A. Bought the sixth Book of R.K Bowling .",
+                "B. Wanted to try a different style for the summer.",
+                "C. Wants to know what happens in the new book of R.K Bowling.",
+                "D. Needed a new black belt.",
+                "E. Bought a scarf at half of the original price.",
+                "F. Has and old Coat with holes."
+              ],
+              "correct": 4
+            },
+            {
+              "title": "Speaker D {x}",
+              "answers": [
+                "A. Bought the sixth Book of R.K Bowling .",
+                "B. Wanted to try a different style for the summer.",
+                "C. Wants to know what happens in the new book of R.K Bowling.",
+                "D. Needed a new black belt.",
+                "E. Bought a scarf at half of the original price.",
+                "F. Has and old Coat with holes."
+              ],
+              "correct": 2
+            }
+          ],
+          "description": "This is the Aptis Listening Test.",
+          "label": "Listening Part 2",
+          "part": 2,
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/C6-14.mp3",
+          "title": "14. Four people are talking about shopping. Complete the sentences below. {x} "
+        },
+        {
+          "questions": [
+            {
+              "title": "A lot of the information from the video was new and interesting.  {x}",
+              "answers": [
+                "Man",
+                "Woman",
+                "Both"
+              ],
+              "correct": 2
+            },
+            {
+              "title": "Traditional Chinese Medicine is not as reliable as Western Medicine.{x}",
+              "answers": [
+                "Man",
+                "Woman",
+                "Both"
+              ],
+              "correct": 0
+            },
+            {
+              "title": "Trying Traditional Chinese Medicine could be a good idea.{x}",
+              "answers": [
+                "Man",
+                "Woman",
+                "Both"
+              ],
+              "correct": 1
+            },
+            {
+              "title": "Western Medicine is scientifically better. {x}",
+              "answers": [
+                "Man",
+                "Woman",
+                "Both"
+              ],
+              "correct": 0
+            }
+          ],
+          "description": "This is the Aptis Listening Test.",
+          "label": "Listening Part 2",
+          "part": 2,
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/C6-15.mp3",
+          "title": "15. Listen to a man and a woman talk about a documentary they watched about Western Medicine and Traditional Chinese Medicine. Read the opinions below and decide whose opinion matches the statements made by the man, the woman or both the man and the woman. {x} "
+        },
+        {
+          "questions": [
+            {
+              "title": "Question 1: What is her general opinion on the U.S. healthcare system? {x}",
+              "answers": [
+                "She thinks that there is not enough money spent on the system and therefore it does not function well.",
+                "She thinks that the U.S. healthcare system provides good service when it comes to end-of-life care.",
+                "She thinks that the U.S. healthcare system is comparable to those of many European countries."
+              ],
+              "correct": 1
+            },
+            {
+              "title": "Question 2: What is her opinion on how the U.S. healthcare system can be improved? {x}",
+              "answers": [
+                "She thinks that the U.S. healthcare could improve by giving more citizens access to it.",
+                "She thinks that the U.S. healthcare could improve by enforcing the usage of health insurance.",
+                "She thinks that the U.S. healthcare could improve by investing more money in their facilities."
+              ],
+              "correct": 0
+            }
+          ],
+          "description": "This is the Aptis Listening Test.",
+          "label": "Listening Part 3",
+          "part": 3,
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/C6-16.mp3",
+          "title": "16. Listen to the speaker discuss the positives and negatives of the U.S. Healthcare system and answer the questions below. {x} "
+        },
+        {
+          "questions": [
+            {
+              "title": "Question 1: What does the man think about using tablets in schools? {x}",
+              "answers": [
+                "It is a great way for students to save money on books.",
+                "It can reduce potential health risks that physical textbooks may cause.",
+                "It is not realistic to provide every student with a tablet."
+              ],
+              "correct": 1
+            },
+            {
+              "title": "Question 2: What does the man think about the consequences of using a tablet? {x}",
+              "answers": [
+                "Tablets contain features that prevent students from having any issues with their eyes.",
+                "Tablets may result in the need to spend more money if they break or become defective. ",
+                "Tablets have bright and vivid images which can distract students from the actual learning."
+              ],
+              "correct": 1
+            }
+          ],
+          "description": "This is the Aptis Listening Test.",
+          "label": "Listening Part 3",
+          "part": 3,
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/C6-17.mp3",
+          "title": "17. Listen to a man talk about how tablets can be beneficial to school students and answer the questions below. {x} "
+        }
+      ]
+    },
+    {
+      "category": "Writing",
+      "exercises": [
+        {
+          "description": "You are a member of a football club. You have 5 messages from a member of the club. {v} Write short answers (1-5 words) to each message.",
+          "label": "Writing Part 1",
+          "questions": [
+            {
+              "answers": [
+                "x"
+              ],
+              "title": "How are you today? {x}",
+              "correct": 0
+            },
+            {
+              "answers": [
+                "x"
+              ],
+              "title": "How do you get to a football match? {x}",
+              "correct": 0
+            },
+            {
+              "answers": [
+                "x"
+              ],
+              "title": "Who is your favourite player? {x}",
+              "correct": 0
+            },
+            {
+              "answers": [
+                "x"
+              ],
+              "title": "Can you suggest a good way to practise? {x}",
+              "correct": 0
+            },
+            {
+              "answers": [
+                "x"
+              ],
+              "title": "What is your favourite healthy snack? {x}",
+              "correct": 0
+            }
+          ]
+        },
+        {
+          "description": "You are a member of a football club. Fill in the form. {v} Write sentences. {v} Use 20-30 words. You have seven minutes to do this",
+          "label": "Writing Part 2",
+          "questions": [
+            {
+              "subtitle": "",
+              "title": "Please tell us how often you play football and why you enjoy it. {x}",
+              "answers": [
+                "x"
+              ],
+              "correct": 0
+            }
+          ]
+        },
+        {
+          "description": " You are a member of a football club. You are talking to some members in the football club chat room. {v} Talk to them using sentences. {v} use 30-40 words per answer.",
+          "label": "Writing Part 3",
+          "questions": [
+            {
+              "title": "Joe: Nice to meet you, why did you decide to join the club? {x}",
+              "answers": [
+                "x"
+              ],
+              "correct": 0
+            },
+            {
+              "title": "Mark: Why is football good for being healthy? {x}",
+              "answers": [
+                "x"
+              ],
+              "correct": 0
+            },
+            {
+              "title": "David: Have you ever been to see a football match? {x}",
+              "answers": [
+                "x"
+              ],
+              "correct": 0
+            }
+          ]
+        },
+        {
+          "description": " You are a member of afootball club. You received this e-mail from the club. {v} Dear member, {v}  We are writing to tell you that the next trip of our football club (Barcelona vs Real Madrid) has {v} been cancelled as we did not have enough money to purchase the tickets. We will now {v} go and see a different match (Granada vs Malaga). The deposit that you paid for this {v} trip will be held and used for the substitute match. Please contact the club secretary if you need {v} to change your plans or would like a refund. {v}",
+          "label": "Writing Part 4",
+          "questions": [
+            {
+              "title": "Write an email to your friend. Write about your feelings and what you are planning to do. {v} Write about 50 words. You have 10 minutes. {x}",
+              "answers": [
+                "x"
+              ],
+              "correct": 0
+            },
+            {
+              "title": "Write an email to the secretary of the club. {v} Write about your feelings and what you would like to do. Write 120-150 words. You have 20 minutes. {x}",
+              "answers": [
+                "x"
+              ],
+              "correct": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Speaking",
+      "exercises": [
+        {
+          "description": "Part One. In this part, I’m going to ask you three short questions about yourself and your interests. {v} You will have 30 seconds to reply to each question.",
+          "label": "Speaking Part 1",
+          "recordingTime": 45,
+          "questions": [
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/S6-1-1.mp3",
+              "title": "How often do you watch TV?{x}",
+              "answers": [
+                "x"
+              ],
+              "correct": 0
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/S6-1-2.mp3",
+              "title": "Please tell me something about your family?{x} ",
+              "answers": [
+                "x"
+              ],
+              "correct": 0
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/S6-1-3.mp3",
+              "title": " What can you tell me about your hometown?{x} ",
+              "answers": [
+                "x"
+              ],
+              "correct": 0
+            }
+          ]
+        },
+        {
+          "description": "Part Two. In this part, I’m going to ask you to describe what is happening in a picture. Make sure you answer as fully as possible.",
+          "label": "Speaking Part 2",
+          "recordingTime": 60,
+          "questions": [
+            {
+              "answers": [
+                "x"
+              ],
+              "correct": 0,
+              "imageUrl": {
+                "images": [
+                  "https://dkmwdxc6g4lk7.cloudfront.net/img/p2-t6.jpg"
+                ]
+              },
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/S6-2-1.mp3",
+              "title": "Describe this picture."
+            },
+            {
+              "answers": [
+                "x"
+              ],
+              "correct": 0,
+              "imageUrl": {
+                "images": [
+                  "https://dkmwdxc6g4lk7.cloudfront.net/img/p2-t6.jpg"
+                ]
+              },
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/S6-2-2.mp3",
+              "title": "Tell me about a job you had.{x} "
+            },
+            {
+              "answers": [
+                "x"
+              ],
+              "correct": 0,
+              "imageUrl": {
+                "images": [
+                  "https://dkmwdxc6g4lk7.cloudfront.net/img/p2-t6.jpg"
+                ]
+              },
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/S6-2-3.mp3",
+              "title": "Which job is perfect for students?{x} "
+            }
+          ]
+        },
+        {
+          "description": "Part Three. In this part I’m going to ask you to look at the pictures, then ask you two questions. You will have 60 seconds for each response. Begin speaking when you hear this sound [beep]. Make sure you answer as fully as possible",
+          "label": "Speaking Part 3",
+          "recordingTime": 60,
+          "questions": [
+            {
+              "answers": [
+                "x"
+              ],
+              "correct": 0,
+              "imageUrl": {
+                "images": [
+                  "https://dkmwdxc6g4lk7.cloudfront.net/img/p3-t6.1.jpg",
+                  "https://dkmwdxc6g4lk7.cloudfront.net/img/p3-t6.2.jpg"
+                ]
+              },
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/S6-3-1.mp3",
+              "title": " Compare the photographs{x}"
+            },
+            {
+              "answers": [
+                "x"
+              ],
+              "correct": 0,
+              "imageUrl": {
+                "images": [
+                  "https://dkmwdxc6g4lk7.cloudfront.net/img/p3-t6.1.jpg",
+                  "https://dkmwdxc6g4lk7.cloudfront.net/img/p3-t6.2.jpg"
+                ]
+              },
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/S6-3-2.mp3",
+              "title": "Do you prefer summer or winter and why?{x} "
+            },
+            {
+              "answers": [
+                "x"
+              ],
+              "correct": 0,
+              "imageUrl": {
+                "images": [
+                  "https://dkmwdxc6g4lk7.cloudfront.net/img/p3-t6.1.jpg",
+                  "https://dkmwdxc6g4lk7.cloudfront.net/img/p3-t6.2.jpg"
+                ]
+              },
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/S6-3-3.mp3",
+              "title": "What kind of activities can people enjoy doing in different weather?{x} "
+            }
+          ]
+        },
+        {
+          "description": " Look at the picture and answer the questions below. {v} Think about  your answers before you start speaking. You will have 135 seconds to talk.",
+          "label": "Speaking Part 4",
+          "recordingTime": 120,
+          "questions": [
+            {
+              "answers": [
+                "x"
+              ],
+              "correct": 0,
+              "imageUrl": {
+                "images": "https://dkmwdxc6g4lk7.cloudfront.net/img/p4-t6.jpg"
+              },
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/S6-4-1.mp3",
+              "title": "Tell me about a time you forgot something important.{x} "
+            },
+            {
+              "answers": [
+                "x"
+              ],
+              "correct": 0,
+              "imageUrl": {
+                "images": "https://dkmwdxc6g4lk7.cloudfront.net/img/p4-t6.jpg"
+              },
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/S6-4-2.mp3",
+              "title": " How did you feel?{x}"
+            },
+            {
+              "answers": [
+                "x"
+              ],
+              "correct": 0,
+              "imageUrl": {
+                "images": "https://dkmwdxc6g4lk7.cloudfront.net/img/p4-t6.jpg"
+              },
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/S6-4-3.mp3",
+              "title": " What techniques can people use to not forget things?{x}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "title": "Team Talk",
+  "description": "Manage meetings, coordinate with teammates, and keep the conversation flowing — on and off the field."
+}

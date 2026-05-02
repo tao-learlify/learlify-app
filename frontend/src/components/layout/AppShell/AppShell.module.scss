@@ -1,0 +1,59 @@
+.shell {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--color-bg-page);
+}
+
+.sidebar {
+  width: 240px;
+  flex-shrink: 0;
+  background-color: var(--color-bg-surface);
+  border-right: 1px solid var(--color-border-default);
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  transition: width var(--duration-slow) var(--easing-out),
+              transform var(--duration-slow) var(--easing-out);
+
+  /* Custom scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border-strong) transparent;
+
+  &::-webkit-scrollbar { width: 4px; }
+  &::-webkit-scrollbar-track { background: transparent; }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--color-border-strong);
+    border-radius: var(--radius-pill);
+  }
+}
+
+.sidebarCollapsed {
+  width: 0;
+  overflow: hidden;
+}
+
+.content {
+  flex: 1;
+  min-width: 0; /* Prevent flex child from overflowing */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Mobile: sidebar becomes an overlay */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-overlay);
+    height: 100vh;
+    transform: translateX(0);
+    box-shadow: var(--shadow-3);
+  }
+
+  .sidebarCollapsed {
+    transform: translateX(-100%);
+    width: 240px; /* Keep width, just translate off-screen */
+  }
+}

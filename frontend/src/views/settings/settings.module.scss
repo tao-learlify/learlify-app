@@ -1,0 +1,25 @@
+.row1 {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.row2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.fullRow {
+  margin-bottom: var(--space-4);
+}

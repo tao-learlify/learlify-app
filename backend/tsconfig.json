@@ -1,0 +1,50 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "CommonJS",
+    "lib": ["ES2020"],
+    "outDir": "dist",
+    "rootDir": "src",
+    "strict": true,
+    "allowJs": true,
+    "checkJs": false,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noEmit": true,
+    "baseUrl": "src",
+    "paths": {
+      "api/*": ["api/*"],
+      "config/*": ["config/*"],
+      "utils/*": ["utils/*"],
+      "middlewares/*": ["middlewares/*"],
+      "metadata/*": ["metadata/*"],
+      "common/*": ["common/*"],
+      "gateways/*": ["gateways/*"],
+      "tasks/*": ["tasks/*"],
+      "lib/*": ["lib/*"],
+      "pipe/*": ["pipe/*"],
+      "validation/*": ["validation/*"],
+      "router/*": ["router/*"],
+      "constants/*": ["constants/*"],
+      "core/*": ["core/*"],
+      "scripts/*": ["scripts/*"],
+      "decorators": ["decorators/index.d.ts"],
+      "exceptions": ["exceptions/index.d.ts"],
+      "functions": ["functions/index.ts"],
+      "modules": ["modules/index.ts"],
+      "@types": ["@types/index.d.ts"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "src/migrations",
+    "src/seeds",
+    "src/scripts",
+    "src/__test__"
+  ]
+}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>React Academy - Your Learning Journey</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2463eb",
+                        "secondary": "#58cc02", // Duolingo green
+                        "accent-amber": "#ffc800", // Duolingo gold
+                        "accent-teal": "#2acef3",
+                        "background-light": "#ffffff",
+                        "background-soft": "#f7f7f7",
+                    },
+                    fontFamily: {
+                        "sans": ["Spline Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1.5rem",
+                        "lg": "2rem",
+                        "xl": "2.5rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        'chunky': '0 4px 0 0 rgba(0,0,0,0.1)',
+                        'chunky-primary': '0 4px 0 0 #1a49ad',
+                        'chunky-secondary': '0 4px 0 0 #46a302',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Spline Sans', sans-serif;
+            background-color: #ffffff;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .duo-card {
+            border: 2px solid #e5e5e5;
+            box-shadow: 0 4px 0 0 #e5e5e5;
+        }
+        .btn-chunky {
+            transition: all 0.1s ease;
+        }
+        .btn-chunky:active {
+            transform: translateY(4px);
+            box-shadow: none;
+        }
+    </style>
+</head>
+<body class="bg-background-soft text-slate-800 font-sans">
+<div class="flex min-h-screen">
+<!-- Sidebar -->
+<aside class="w-64 bg-white border-r-2 border-slate-200 flex flex-col fixed h-full z-50">
+<div class="p-8 flex items-center gap-3">
+<div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center text-white shadow-chunky-primary">
+<span class="material-symbols-outlined">school</span>
+</div>
+<h2 class="text-xl font-extrabold tracking-tight text-primary uppercase">React Academy</h2>
+</div>
+<nav class="flex-1 px-4 space-y-3">
+<a class="flex items-center gap-4 px-4 py-3 rounded-2xl bg-primary/10 text-primary font-bold border-2 border-primary/20" href="#">
+<span class="material-symbols-outlined">home</span>
+<span>LEARN</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-2xl text-slate-500 font-bold hover:bg-slate-100 transition-colors" href="#">
+<span class="material-symbols-outlined">emoji_events</span>
+<span>LEADERBOARD</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-2xl text-slate-500 font-bold hover:bg-slate-100 transition-colors" href="#">
+<span class="material-symbols-outlined">extension</span>
+<span>CHALLENGES</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-2xl text-slate-500 font-bold hover:bg-slate-100 transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span>PROFILE</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-2xl text-slate-500 font-bold hover:bg-slate-100 transition-colors" href="#">
+<span class="material-symbols-outlined">more_horiz</span>
+<span>MORE</span>
+</a>
+</nav>
+<div class="p-6 mt-auto">
+<div class="duo-card bg-white rounded-3xl p-5 mb-4 text-center">
+<div class="w-16 h-16 rounded-full bg-slate-100 mx-auto mb-3 overflow-hidden border-2 border-slate-200">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEcckM-gsPk4Ij4bJRT3zuVnqkAjW0wx-k2bgOcW7V57pS3KgmuEQVlavC90Qa6JGburp_i-m-WG0PdzAt7RcRbHETxtbmyhwxnmE2L0VeM6GHYQd3AXDoZ8XYgPf11Q3WGQwSdFNUCydUDYbmQ8rFIOh8H5U-zMTr8paIgQ1yT4s3N4rCdVz7C7CgdtCUnkHsXjEEriqZ_KpFWeEFs88ofomGdEyz_Tl56h2S98YRe3Z9N9viuBGtZ1WSJOODr9sgRorCxL6Jb85n"/>
+</div>
+<p class="font-extrabold text-slate-800">Alex Johnson</p>
+<p class="text-sm font-bold text-slate-400 mb-4">Level 12 Explorer</p>
+<button class="w-full py-3 bg-secondary text-white rounded-2xl text-sm font-black shadow-chunky-secondary btn-chunky uppercase tracking-wider">
+                    UPGRADE TO PRO
+                </button>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 ml-64 p-12 max-w-6xl mx-auto">
+<!-- Header -->
+<header class="flex justify-between items-center mb-12">
+<div>
+<h1 class="text-4xl font-black text-slate-800 mb-2">Welcome back, Alex! 👋</h1>
+<p class="text-slate-500 text-xl font-medium">You're doing great! Ready for today's challenge?</p>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2 bg-white duo-card px-4 py-2 rounded-2xl">
+<span class="material-symbols-outlined text-accent-amber">local_fire_department</span>
+<span class="font-black text-accent-amber">7</span>
+</div>
+<div class="flex items-center gap-2 bg-white duo-card px-4 py-2 rounded-2xl">
+<span class="material-symbols-outlined text-secondary">star</span>
+<span class="font-black text-secondary">1,240</span>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined text-slate-400 text-3xl cursor-pointer hover:text-slate-600">notifications</span>
+<div class="absolute top-0 right-0 w-3 h-3 bg-red-500 border-2 border-white rounded-full"></div>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-10 mb-12">
+<!-- Main Path Card -->
+<div class="lg:col-span-2 bg-white duo-card rounded-[2.5rem] p-10 flex flex-col md:flex-row gap-10 relative overflow-hidden group">
+<div class="w-full md:w-48 h-48 bg-accent-teal/10 rounded-3xl flex items-center justify-center shrink-0 border-2 border-accent-teal/20">
+<span class="material-symbols-outlined text-accent-teal text-7xl">auto_awesome</span>
+</div>
+<div class="flex flex-col justify-center flex-1">
+<span class="text-sm font-black text-accent-teal uppercase tracking-widest mb-2">CURRENT UNIT</span>
+<h3 class="text-3xl font-black text-slate-800 mb-3">Mastering React Hooks</h3>
+<p class="text-slate-500 text-lg font-medium mb-8">Unit 4: Side Effects &amp; Life Cycles</p>
+<div class="mb-8">
+<div class="flex justify-between items-center mb-3">
+<span class="font-black text-slate-400 text-sm uppercase">UNIT PROGRESS</span>
+<span class="font-black text-secondary">85%</span>
+</div>
+<div class="w-full h-4 bg-slate-100 rounded-full border-2 border-slate-200">
+<div class="h-full bg-secondary rounded-full transition-all duration-1000" style="width: 85%"></div>
+</div>
+</div>
+<button class="bg-primary text-white px-10 py-4 rounded-2xl font-black text-lg shadow-chunky-primary btn-chunky uppercase tracking-wider self-start">
+                        RESUME LEARNING
+                    </button>
+</div>
+</div>
+<!-- Streak Widget -->
+<div class="bg-accent-amber duo-card rounded-[2.5rem] p-10 text-white flex flex-col items-center text-center !shadow-[0_4px_0_0_#cc9f00] !border-none">
+<div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-white text-5xl">local_fire_department</span>
+</div>
+<h4 class="font-black text-3xl mb-2">7 Day Streak!</h4>
+<p class="text-white/90 font-bold mb-8">You haven't missed a day all week. Keep it up!</p>
+<div class="flex gap-2 mb-8">
+<div class="w-8 h-10 bg-white rounded-lg flex items-center justify-center font-black text-accent-amber">M</div>
+<div class="w-8 h-10 bg-white rounded-lg flex items-center justify-center font-black text-accent-amber">T</div>
+<div class="w-8 h-10 bg-white rounded-lg flex items-center justify-center font-black text-accent-amber">W</div>
+<div class="w-8 h-10 bg-white rounded-lg flex items-center justify-center font-black text-accent-amber">T</div>
+<div class="w-8 h-10 bg-white rounded-lg flex items-center justify-center font-black text-accent-amber">F</div>
+<div class="w-8 h-10 bg-white rounded-lg flex items-center justify-center font-black text-accent-amber">S</div>
+<div class="w-8 h-10 bg-white/40 border-2 border-dashed border-white/60 rounded-lg flex items-center justify-center font-black text-white">S</div>
+</div>
+<p class="text-sm font-black uppercase tracking-tighter opacity-80 mt-auto">DAILY GOAL: 35/45 MINS</p>
+</div>
+</div>
+<!-- Next Up Grid -->
+<div class="mb-12">
+<div class="flex justify-between items-end mb-8">
+<h2 class="text-2xl font-black text-slate-800">NEXT CHALLENGES</h2>
+<a class="text-primary font-black text-sm hover:underline uppercase tracking-wider" href="#">View all units</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Course Card 1 -->
+<div class="bg-white duo-card rounded-[2rem] p-8 hover:-translate-y-1 transition-transform group cursor-pointer">
+<div class="w-20 h-20 bg-emerald-100 rounded-3xl mb-6 flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-emerald-500 text-4xl">dns</span>
+</div>
+<h4 class="font-black text-xl mb-2">Server Components</h4>
+<p class="text-slate-500 font-medium text-sm mb-6 leading-relaxed">The future of React with RSC and Next.js.</p>
+<div class="flex items-center gap-2">
+<span class="px-3 py-1 bg-slate-100 text-slate-500 rounded-full text-xs font-black uppercase">INTERMEDIATE</span>
+</div>
+</div>
+<!-- Course Card 2 -->
+<div class="bg-white duo-card rounded-[2rem] p-8 hover:-translate-y-1 transition-transform group cursor-pointer">
+<div class="w-20 h-20 bg-orange-100 rounded-3xl mb-6 flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-orange-500 text-4xl">account_tree</span>
+</div>
+<h4 class="font-black text-xl mb-2">Context API</h4>
+<p class="text-slate-500 font-medium text-sm mb-6 leading-relaxed">State management without the headache.</p>
+<div class="flex items-center gap-2">
+<span class="px-3 py-1 bg-slate-100 text-slate-500 rounded-full text-xs font-black uppercase">BEGINNER</span>
+</div>
+</div>
+<!-- Course Card 3 -->
+<div class="bg-white duo-card rounded-[2rem] p-8 hover:-translate-y-1 transition-transform group cursor-pointer">
+<div class="w-20 h-20 bg-purple-100 rounded-3xl mb-6 flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-purple-500 text-4xl">bolt</span>
+</div>
+<h4 class="font-black text-xl mb-2">Concurrency</h4>
+<p class="text-slate-500 font-medium text-sm mb-6 leading-relaxed">Mastering transitions and deferred values.</p>
+<div class="flex items-center gap-2">
+<span class="px-3 py-1 bg-slate-100 text-slate-500 rounded-full text-xs font-black uppercase">ADVANCED</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Progress Stats -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 py-10 border-t-2 border-slate-200">
+<div class="text-center">
+<span class="material-symbols-outlined text-secondary text-4xl mb-2">task_alt</span>
+<p class="text-slate-400 text-xs font-black uppercase tracking-widest mb-1">UNITS DONE</p>
+<p class="text-4xl font-black text-slate-800">12</p>
+</div>
+<div class="text-center">
+<span class="material-symbols-outlined text-primary text-4xl mb-2">timer</span>
+<p class="text-slate-400 text-xs font-black uppercase tracking-widest mb-1">HOURS SPENT</p>
+<p class="text-4xl font-black text-slate-800">148</p>
+</div>
+<div class="text-center">
+<span class="material-symbols-outlined text-accent-amber text-4xl mb-2">workspace_premium</span>
+<p class="text-slate-400 text-xs font-black uppercase tracking-widest mb-1">WORLD RANK</p>
+<p class="text-4xl font-black text-accent-amber">TOP 5%</p>
+</div>
+<div class="text-center">
+<span class="material-symbols-outlined text-accent-teal text-4xl mb-2">military_tech</span>
+<p class="text-slate-400 text-xs font-black uppercase tracking-widest mb-1">BADGES</p>
+<p class="text-4xl font-black text-slate-800">04</p>
+</div>
+</div>
+</main>
+</div>
+</body></html>

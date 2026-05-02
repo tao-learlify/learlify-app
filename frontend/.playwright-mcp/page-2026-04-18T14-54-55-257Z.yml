@@ -1,0 +1,67 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - generic [ref=e8]:
+          - generic [ref=e9]: Unit 1
+          - heading "Daily Routines" [level=1] [ref=e10]
+        - generic [ref=e11]:
+          - generic [ref=e12]:
+            - img [ref=e13]
+            - generic [ref=e15]: "0"
+            - generic [ref=e16]: / 250 XP
+          - generic [ref=e17]: 🐼
+      - progressbar [ref=e18]
+  - main [ref=e19]:
+    - generic [ref=e20]:
+      - generic [ref=e66]:
+        - generic [ref=e67]: Block 5 of 27
+        - generic [ref=e68]: 15%
+      - generic [ref=e97]:
+        - generic [ref=e98]:
+          - generic [ref=e99]: 📐
+          - generic [ref=e100]: grammar
+        - generic [ref=e101]: ·
+        - generic [ref=e102]: Practice
+      - generic [ref=e106]:
+        - generic [ref=e107]:
+          - generic [ref=e108]:
+            - paragraph [ref=e109]: Grammar Exercise 1
+            - paragraph [ref=e110]: Read the text and complete each gap with the correct verb form. (Marc and Paul are looking at trainers in a shop.)
+          - generic [ref=e112]:
+            - img [ref=e113]
+            - generic [ref=e115]: 10 XP
+        - generic [ref=e117]:
+          - paragraph [ref=e118]: Read the text and complete each gap with the correct verb form. (Marc and Paul are looking at trainers in a shop.)
+          - generic [ref=e119]:
+            - generic [ref=e120]:
+              - paragraph [ref=e121]:
+                - generic [ref=e122]: "1"
+                - text: Marc and Paul (1)
+                - generic [ref=e146]: are looking
+                - text: at some brand-name trainers.
+              - generic [ref=e124]:
+                - button "are looking" [ref=e125] [cursor=pointer]
+                - button "look" [ref=e126] [cursor=pointer]
+                - button "is looking" [ref=e127] [cursor=pointer]
+            - generic [ref=e128]:
+              - paragraph [ref=e129]:
+                - generic [ref=e130]: "2"
+                - text: These days, fashionable shoes like these (2)
+                - generic [ref=e147]: cost
+                - text: a lot of money.
+              - generic [ref=e132]:
+                - button "cost" [active] [ref=e133] [cursor=pointer]
+                - button "are costing" [ref=e134] [cursor=pointer]
+                - button "costs" [ref=e135] [cursor=pointer]
+            - generic [ref=e136]:
+              - paragraph [ref=e137]:
+                - generic [ref=e138]: "3"
+                - text: But Marc and Paul (3)
+                - generic [ref=e139]: · · ·
+                - text: their wages every summer and can afford them.
+              - generic [ref=e140]:
+                - button "is saving" [ref=e141] [cursor=pointer]
+                - button "save" [ref=e142] [cursor=pointer]
+                - button "saves" [ref=e143] [cursor=pointer]
+          - button "Check answers" [disabled] [ref=e145]

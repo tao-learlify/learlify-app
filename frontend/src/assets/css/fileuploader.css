@@ -1,0 +1,14 @@
+.upload-area {
+  border: 2px dotted blue;
+  background: lightblue;
+  text-align: center;
+  font-size: 25px;
+  font-weight: lighter;
+}
+
+.file-container input[type="file"]{
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}

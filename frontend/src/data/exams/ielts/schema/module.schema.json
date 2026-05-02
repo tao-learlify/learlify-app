@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "module": {
+      "type": "string",
+      "enum": ["Dropdown", "Matching"]
+    },
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "imageUrl": {
+      "type": ["string", "null"]
+    },
+    "questions": {
+      "type": "array",
+      "items": {
+        "$ref": "./question.schema.json"
+      }
+    }
+  },
+  "required": ["module", "questions"]
+}

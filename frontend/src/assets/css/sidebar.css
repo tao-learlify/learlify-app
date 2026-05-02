@@ -1,0 +1,29 @@
+.sidebar {
+  background-color: #2e353d;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  height: calc(100vh - 62px);
+  overflow: auto;
+  width: 50px;
+}
+
+.sidebar a {
+  padding: 6px;
+  cursor: pointer;
+}
+
+@media (min-width: 576px) {
+  .sidebar {
+    top: 0;
+    position: sticky;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+}

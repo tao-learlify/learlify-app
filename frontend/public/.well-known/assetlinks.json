@@ -1,0 +1,10 @@
+[{
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "org.aptisgo.android",
+      "sha256_cert_fingerprints": [
+        "F6:48:27:65:A3:01:82:AC:FC:D9:EA:D7:E2:10:1F:EE:4A:7B:E5:04:D6:28:EE:0D:DC:EC:60:17:EF:98:7B:75"
+      ]
+    }
+  }]

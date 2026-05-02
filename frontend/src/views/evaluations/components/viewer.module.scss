@@ -1,0 +1,68 @@
+.container {
+  display: flex;
+  justify-content: flex-start;
+  h5 {
+    margin-top: 30px;
+  }
+}
+
+.data {
+  display: flex;
+  flex-direction: column;
+}
+
+.date {
+  margin-left: 5px;
+}
+
+.comments { 
+  padding: 15px;
+  background-color: #003E6D;
+}
+
+.viewer {
+  padding-bottom: 20px;
+}
+
+.row {
+  margin-top: 30px;
+}
+
+.question {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.media {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.emoji {
+  margin-right: 10px;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.editor {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.emoji {
+  margin-right: 10px;
+}
+
+.pannel {
+  margin-left: 10px;
+}
+
+.bandscore {
+  position: relative;
+  top: 5px;
+  float: right;
+}

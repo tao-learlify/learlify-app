@@ -1,0 +1,77 @@
+/* ==========================================================================
+   Progress — Accessible progress bar.
+   New component — no equivalent in the current codebase.
+   ========================================================================== */
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.labelText {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-secondary);
+}
+
+.valueText {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-bold);
+  color: var(--color-text-primary);
+}
+
+/* ── TRACK ────────────────────────────────────────────────────────────────── */
+.track {
+  width: 100%;
+  background-color: var(--color-bg-muted);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+
+/* Size variants */
+.sm  .track { height: 4px; }
+.md  .track { height: 8px; }
+.lg  .track { height: 12px; }
+
+/* ── FILL ─────────────────────────────────────────────────────────────────── */
+.fill {
+  height: 100%;
+  border-radius: var(--radius-pill);
+  transition: width var(--duration-slower) var(--easing-out);
+}
+
+/* Variant colors */
+.default .fill { background-color: var(--color-brand-primary); }
+.success .fill { background-color: var(--color-success); }
+.warning .fill { background-color: var(--color-warning); }
+.accent  .fill { background-color: var(--color-brand-accent); }
+
+/* ── ANIMATED ─────────────────────────────────────────────────────────────── */
+.animated .fill {
+  background-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ── SIZE SHORTHAND (applied on wrapper) ─────────────────────────────────── */
+.sm { }
+.md { }
+.lg { }

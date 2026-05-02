@@ -1,0 +1,100 @@
+.background {
+  background-image: url('https://dkmwdxc6g4lk7.cloudfront.net/assets/svg/materials.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #003E6D;
+}
+
+.flex {
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.padding {
+  padding: 15px 30px;
+
+  @media (max-width: 768px) {
+    padding: 10px 15px;
+  }}
+
+.button {
+  display: flex;
+  justify-content: space-evenly;
+  font-family: Monserrat-Bold;
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.title {
+  font-size: 2.5rem;
+  font-family: Monserrat-Light;
+  font-weight: bold;
+  margin: 0;
+  @media (max-width: 768px) {
+    font-size: 1.8rem;
+  }
+}
+
+.subtitle {
+  font-size: 3rem;
+  font-family: Dunkin;
+  letter-spacing: 2px;
+  margin: 0;
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+.img {
+  position: relative;
+  top: 15px;
+  @media (max-width: 768px) {
+    top: 9px;
+  }
+}
+
+.bold {
+  font-family:  Monserrat-Bold;
+  font-size: 18px;
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+}
+
+.light {
+  font-family: Monserrat-Light;
+  font-size: 18px;
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+}
+
+.button{
+  margin: 12px 0px;
+  .btnLeft{
+    margin-right: 10px;
+    width: 135px;
+    @media (max-width: 768px) {
+      font-size: 13px;
+      margin-bottom: 8px;
+      margin-right: 0px;
+    }
+  }
+  .btnRight{
+    width: 135px;
+    @media (max-width: 768px) {
+      font-size: 13px;
+    }
+  }
+}
+.boxTeacher{
+  @media (max-width: 768px) {
+    position: absolute;
+    right: 14px;
+    bottom: 10px;
+  }
+}

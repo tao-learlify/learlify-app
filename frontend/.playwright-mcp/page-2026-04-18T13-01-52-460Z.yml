@@ -1,0 +1,1058 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - generic [ref=e7]:
+          - paragraph [ref=e8]: Unit 1A2
+          - heading "Daily Routines" [level=1] [ref=e9]
+          - paragraph [ref=e10]: Talking about habits, routines, and leisure time
+        - generic [ref=e11]:
+          - generic [ref=e12]:
+            - img [ref=e13]
+            - generic [ref=e15]: 90m
+          - generic [ref=e16]: 🐼
+      - generic [ref=e17]:
+        - progressbar
+        - generic [ref=e18]:
+          - img [ref=e19]
+          - text: "0"
+          - generic [ref=e21]: / 250 XP
+      - paragraph [ref=e22]:
+        - img [ref=e23]
+        - text: By the end of this unit you will be able to describe daily and weekend routines using Present Simple and Present Continuous, and discuss hobbies, lifestyle vocabulary, and personal preferences.
+  - main [ref=e25]:
+    - generic [ref=e26]:
+      - generic [ref=e28]:
+        - generic [ref=e29]:
+          - generic [ref=e30]:
+            - generic [ref=e31]: Unit 1A2
+            - heading "Daily Routines" [level=2] [ref=e32]
+            - paragraph [ref=e33]: Talking about habits, routines, and leisure time
+          - generic [ref=e34]: 🐼
+        - generic [ref=e35]:
+          - generic [ref=e36]: 📐Grammar
+          - generic [ref=e37]: 📚Vocabulary
+          - generic [ref=e38]: 🎧Listening
+          - generic [ref=e39]: 🎤Speaking
+          - generic [ref=e40]: 📖Reading
+          - generic [ref=e41]: ✏️Writing
+        - generic [ref=e42]:
+          - img [ref=e43]
+          - paragraph [ref=e45]: By the end of this unit you will be able to describe daily and weekend routines using Present Simple and Present Continuous, and discuss hobbies, lifestyle vocabulary, and personal preferences.
+        - generic [ref=e46]:
+          - generic [ref=e47]:
+            - img [ref=e48]
+            - generic [ref=e50]: 90 min
+          - generic [ref=e51]:
+            - img [ref=e52]
+            - text: Up to 250 XP
+        - button "Begin Unit" [ref=e54] [cursor=pointer]:
+          - text: Begin Unit
+          - img [ref=e55]
+      - generic [ref=e57]:
+        - generic [ref=e58]:
+          - generic [ref=e60]: 📐grammar
+          - generic [ref=e62]:
+            - generic [ref=e66]:
+              - generic [ref=e67]:
+                - img [ref=e69]
+                - heading "Present Simple" [level=2] [ref=e72]
+              - generic [ref=e73]:
+                - generic [ref=e74]:
+                  - generic [ref=e75]: Affirmative
+                  - table [ref=e76]:
+                    - rowgroup [ref=e77]:
+                      - row "I, you, we, they swim" [ref=e78]:
+                        - cell "I, you, we, they" [ref=e79]
+                        - cell "swim" [ref=e80]
+                      - row "He, she, it swims" [ref=e81]:
+                        - cell "He, she, it" [ref=e82]
+                        - cell "swims" [ref=e83]
+                - paragraph [ref=e84]:
+                  - text: With most verbs, we add
+                  - strong [ref=e85]: "-s"
+                  - text: to the third person singular (affirmative only).
+                - paragraph [ref=e86]:
+                  - text: When verbs end in
+                  - strong [ref=e87]: o, s, sh, ch or x
+                  - text: we add
+                  - strong [ref=e88]: "-es"
+                  - text: "instead:"
+                  - emphasis [ref=e89]: I watch TV → She watches TV.
+                - paragraph [ref=e90]:
+                  - text: Verbs ending in consonant +
+                  - strong [ref=e91]: "-y"
+                  - text: replace -y with
+                  - strong [ref=e92]: "-ies"
+                  - text: ":"
+                  - emphasis [ref=e93]: I try → She tries.
+                - generic [ref=e94]:
+                  - generic [ref=e95]: Negative
+                  - table [ref=e96]:
+                    - rowgroup [ref=e97]:
+                      - row "I, you, we, they don't swim / do not swim" [ref=e98]:
+                        - cell "I, you, we, they" [ref=e99]
+                        - cell "don't swim / do not swim" [ref=e100]
+                      - row "He, she, it doesn't swim / does not swim" [ref=e101]:
+                        - cell "He, she, it" [ref=e102]
+                        - cell "doesn't swim / does not swim" [ref=e103]
+                - generic [ref=e104]:
+                  - generic [ref=e105]: Interrogative
+                  - table [ref=e106]:
+                    - rowgroup [ref=e107]:
+                      - row "Do I, you, we, they swim?" [ref=e108]:
+                        - cell "Do" [ref=e109]
+                        - cell "I, you, we, they swim?" [ref=e110]
+                      - row "Does he, she, it swim?" [ref=e111]:
+                        - cell "Does" [ref=e112]
+                        - cell "he, she, it swim?" [ref=e113]
+                - generic [ref=e114]:
+                  - generic [ref=e115]: Short answers
+                  - table [ref=e116]:
+                    - rowgroup [ref=e117]:
+                      - row "Yes, I do. No, you don't." [ref=e118]:
+                        - cell "Yes, I do." [ref=e119]
+                        - cell "No, you don't." [ref=e120]
+                      - row "Yes, he does. No, she doesn't." [ref=e121]:
+                        - cell "Yes, he does." [ref=e122]
+                        - cell "No, she doesn't." [ref=e123]
+              - button "Got it ✓" [ref=e125] [cursor=pointer]
+            - generic [ref=e129]:
+              - generic [ref=e130]:
+                - paragraph [ref=e131]: "We use the Present Simple to talk about:"
+                - list [ref=e132]:
+                  - listitem [ref=e133]:
+                    - text: "Daily routines or habits:"
+                    - emphasis [ref=e134]: Every day I get up at 7.30.
+                  - listitem [ref=e135]:
+                    - text: "Timetables:"
+                    - emphasis [ref=e136]: The shops in this country open at 5 o'clock.
+                  - listitem [ref=e137]:
+                    - text: "General truths:"
+                    - emphasis [ref=e138]: The Sun sets in the East.
+                  - listitem [ref=e139]:
+                    - text: "Stative verbs:"
+                    - emphasis [ref=e140]: I know the truth now.
+                  - listitem [ref=e141]:
+                    - text: "Future reference:"
+                    - emphasis [ref=e142]: When I see you tomorrow, I'll tell you the truth.
+                - paragraph [ref=e143]:
+                  - text: "Stative verbs include most verbs of emotion, existence, senses, likes/dislikes, belief and possession:"
+                  - emphasis [ref=e144]: see, taste, hear, hate, like, prefer, fancy, want, love, wish, believe, know, understand, realise, appear, seem, look like, own, belong, have (possession), smell.
+                - paragraph [ref=e145]:
+                  - text: "Common frequency expressions:"
+                  - emphasis [ref=e146]: always, usually, often, sometimes, hardly ever, seldom, never — every day/week/month/year — in the morning/afternoon/evening — once, twice, three times a week.
+                - paragraph [ref=e148]: I'm always late for school.
+                - paragraph [ref=e150]: I catch the train every day.
+                - paragraph [ref=e152]: I usually drink a cup of coffee in the morning.
+                - paragraph [ref=e154]: I go to the gym three times a week but John never goes.
+              - button "Got it ✓" [ref=e156] [cursor=pointer]
+            - generic [ref=e160]:
+              - generic [ref=e161]:
+                - img [ref=e163]
+                - heading "Present Continuous" [level=2] [ref=e166]
+              - generic [ref=e167]:
+                - paragraph [ref=e168]:
+                  - text: We form the Present Continuous using the present tense of
+                  - strong [ref=e169]: be
+                  - text: and the
+                  - strong [ref=e170]: "-ing"
+                  - text: form of the main verb.
+                - generic [ref=e171]:
+                  - generic [ref=e172]: Affirmative
+                  - table [ref=e173]:
+                    - rowgroup [ref=e174]:
+                      - row "I am swimming" [ref=e175]:
+                        - cell "I" [ref=e176]
+                        - cell "am swimming" [ref=e177]
+                      - row "You, we, they are swimming" [ref=e178]:
+                        - cell "You, we, they" [ref=e179]
+                        - cell "are swimming" [ref=e180]
+                      - row "He, she, it is swimming" [ref=e181]:
+                        - cell "He, she, it" [ref=e182]
+                        - cell "is swimming" [ref=e183]
+                - heading "Negative Form" [level=3] [ref=e184]
+                - paragraph [ref=e185]:
+                  - text: We add
+                  - strong [ref=e186]: not
+                  - text: after
+                  - strong [ref=e187]: be
+                  - text: "and before the -ing verb. Contractions:"
+                  - strong [ref=e188]: I'm not / aren't / isn't.
+                - generic [ref=e189]:
+                  - generic [ref=e190]: Negative
+                  - table [ref=e191]:
+                    - rowgroup [ref=e192]:
+                      - row "I am not swimming / I'm not swimming" [ref=e193]:
+                        - cell "I" [ref=e194]
+                        - cell "am not swimming / I'm not swimming" [ref=e195]
+                      - row "You, we, they are not swimming / aren't swimming" [ref=e196]:
+                        - cell "You, we, they" [ref=e197]
+                        - cell "are not swimming / aren't swimming" [ref=e198]
+                      - row "He, she, it is not swimming / isn't swimming" [ref=e199]:
+                        - cell "He, she, it" [ref=e200]
+                        - cell "is not swimming / isn't swimming" [ref=e201]
+                - heading "Interrogative" [level=3] [ref=e202]
+                - paragraph [ref=e203]:
+                  - text: To form the interrogative, put
+                  - strong [ref=e204]: be
+                  - text: "before the subject:"
+                - generic [ref=e205]:
+                  - generic [ref=e206]: Interrogative
+                  - table [ref=e207]:
+                    - rowgroup [ref=e208]:
+                      - row "Am I swimming?" [ref=e209]:
+                        - cell "Am I" [ref=e210]
+                        - cell "swimming?" [ref=e211]
+                      - row "Are you, we, they swimming?" [ref=e212]:
+                        - cell "Are you, we, they" [ref=e213]
+                        - cell "swimming?" [ref=e214]
+                      - row "Is he, she, it swimming?" [ref=e215]:
+                        - cell "Is he, she, it" [ref=e216]
+                        - cell "swimming?" [ref=e217]
+                - generic [ref=e218]:
+                  - generic [ref=e219]: Short answers
+                  - table [ref=e220]:
+                    - rowgroup [ref=e221]:
+                      - row "Yes, I am. No, I am not." [ref=e222]:
+                        - cell "Yes, I am." [ref=e223]
+                        - cell "No, I am not." [ref=e224]
+                      - row "Yes, he is. No, he isn't." [ref=e225]:
+                        - cell "Yes, he is." [ref=e226]
+                        - cell "No, he isn't." [ref=e227]
+                      - row "Yes, they are. No, they aren't." [ref=e228]:
+                        - cell "Yes, they are." [ref=e229]
+                        - cell "No, they aren't." [ref=e230]
+              - button "Got it ✓" [ref=e232] [cursor=pointer]
+            - generic [ref=e236]:
+              - generic [ref=e237]:
+                - img [ref=e239]
+                - paragraph [ref=e242]: Spelling Rules
+              - generic [ref=e243]:
+                - list [ref=e244]:
+                  - listitem [ref=e245]:
+                    - text: Verbs ending in
+                    - strong [ref=e246]: "-e"
+                    - text: "drop the -e when adding -ing:"
+                    - strong [ref=e247]: Write → Writing.
+                  - listitem [ref=e248]:
+                    - text: Verbs ending in
+                    - strong [ref=e249]: "-l"
+                    - text: "double the l when adding -ing:"
+                    - strong [ref=e250]: Travel → Travelling.
+                  - listitem [ref=e251]:
+                    - text: "Consonant + vowel + consonant verbs double the final consonant:"
+                    - strong [ref=e252]: Sit → Sitting, Trip → Tripping, Run → Running, Stop → Stopping.
+                - heading "Use — when to use the Present Continuous" [level=2] [ref=e253]
+                - list [ref=e254]:
+                  - listitem [ref=e255]:
+                    - text: "Actions happening right now:"
+                    - emphasis [ref=e256]: Right now, I am writing. / I am studying English.
+                  - listitem [ref=e257]:
+                    - text: "Future arrangements (fixed plans with a time reference):"
+                    - emphasis [ref=e258]: I am meeting her tonight. / I am going to France next week.
+                  - listitem [ref=e259]:
+                    - text: "Temporary situations:"
+                    - emphasis [ref=e260]: Marc is at university. He is studying maths. / John is unemployed. He is looking for a job.
+              - button "Got it ✓" [ref=e262] [cursor=pointer]
+          - generic [ref=e263]:
+            - generic [ref=e265]: ✏️Now let's practise
+            - generic [ref=e266]:
+              - generic [ref=e270]:
+                - generic [ref=e271]:
+                  - generic [ref=e272]:
+                    - paragraph [ref=e273]: Grammar Exercise 1
+                    - paragraph [ref=e274]: Read the text and complete each gap with the correct verb form. (Marc and Paul are looking at trainers in a shop.)
+                  - generic [ref=e276]:
+                    - img [ref=e277]
+                    - generic [ref=e279]: 10 XP
+                - generic [ref=e280]:
+                  - paragraph [ref=e281]: Read the text and complete each gap with the correct verb form. (Marc and Paul are looking at trainers in a shop.)
+                  - generic [ref=e282]:
+                    - generic [ref=e283]:
+                      - paragraph [ref=e284]: 1Marc and Paul (1) ___ at some brand-name trainers.
+                      - generic [ref=e285]:
+                        - button "are looking" [ref=e286] [cursor=pointer]
+                        - button "look" [ref=e287] [cursor=pointer]
+                        - button "is looking" [ref=e288] [cursor=pointer]
+                    - generic [ref=e289]:
+                      - paragraph [ref=e290]: 2These days, fashionable shoes like these (2) ___ a lot of money.
+                      - generic [ref=e291]:
+                        - button "cost" [ref=e292] [cursor=pointer]
+                        - button "are costing" [ref=e293] [cursor=pointer]
+                        - button "costs" [ref=e294] [cursor=pointer]
+                    - generic [ref=e295]:
+                      - paragraph [ref=e296]: 3But Marc and Paul (3) ___ their wages every summer and can afford them.
+                      - generic [ref=e297]:
+                        - button "is saving" [ref=e298] [cursor=pointer]
+                        - button "save" [ref=e299] [cursor=pointer]
+                        - button "saves" [ref=e300] [cursor=pointer]
+                  - button "Check answers" [disabled] [ref=e302]
+              - generic [ref=e306]:
+                - generic [ref=e307]:
+                  - generic [ref=e308]:
+                    - paragraph [ref=e309]: Grammar Exercise 2
+                    - paragraph [ref=e310]: Continue reading. Complete each gap with the correct verb form.
+                  - generic [ref=e312]:
+                    - img [ref=e313]
+                    - generic [ref=e315]: 10 XP
+                - generic [ref=e316]:
+                  - paragraph [ref=e317]: Continue reading. Complete each gap with the correct verb form.
+                  - generic [ref=e318]:
+                    - generic [ref=e319]:
+                      - paragraph [ref=e320]: 1Paul ___ very old trainers, so he
+                      - generic [ref=e321]:
+                        - button "have" [ref=e322] [cursor=pointer]
+                        - button "having" [ref=e323] [cursor=pointer]
+                        - button "has" [ref=e324] [cursor=pointer]
+                    - generic [ref=e325]:
+                      - paragraph [ref=e326]: 2___ to buy a new pair.
+                      - generic [ref=e327]:
+                        - button "is wanting" [ref=e328] [cursor=pointer]
+                        - button "wants" [ref=e329] [cursor=pointer]
+                        - button "is want" [ref=e330] [cursor=pointer]
+                  - button "Check answers" [disabled] [ref=e332]
+              - generic [ref=e336]:
+                - generic [ref=e337]:
+                  - generic [ref=e338]:
+                    - paragraph [ref=e339]: Grammar Exercise 3
+                    - paragraph [ref=e340]: Continue reading. Complete each gap with the correct verb form.
+                  - generic [ref=e342]:
+                    - img [ref=e343]
+                    - generic [ref=e345]: 10 XP
+                - generic [ref=e346]:
+                  - paragraph [ref=e347]: Continue reading. Complete each gap with the correct verb form.
+                  - generic [ref=e348]:
+                    - generic [ref=e349]:
+                      - paragraph [ref=e350]: 1Right now, he ___ a pair of Nike trainers.
+                      - generic [ref=e351]:
+                        - button "is trying on" [ref=e352] [cursor=pointer]
+                        - button "try on" [ref=e353] [cursor=pointer]
+                        - button "trying on" [ref=e354] [cursor=pointer]
+                    - generic [ref=e355]:
+                      - paragraph [ref=e356]: 2They ___ very trendy, but at least they
+                      - generic [ref=e357]:
+                        - button "doesn't look" [ref=e358] [cursor=pointer]
+                        - button "don't look" [ref=e359] [cursor=pointer]
+                        - button "look" [ref=e360] [cursor=pointer]
+                    - generic [ref=e361]:
+                      - paragraph [ref=e362]: 3___ reasonably priced.
+                      - generic [ref=e363]:
+                        - button "is" [ref=e364] [cursor=pointer]
+                        - button "are" [ref=e365] [cursor=pointer]
+                        - button "was" [ref=e366] [cursor=pointer]
+                  - button "Check answers" [disabled] [ref=e368]
+              - generic [ref=e372]:
+                - generic [ref=e373]:
+                  - generic [ref=e374]:
+                    - paragraph [ref=e375]: Grammar Exercise 4
+                    - paragraph [ref=e376]: Continue reading. Complete each gap with the correct verb form.
+                  - generic [ref=e378]:
+                    - img [ref=e379]
+                    - generic [ref=e381]: 10 XP
+                - generic [ref=e382]:
+                  - paragraph [ref=e383]: Continue reading. Complete each gap with the correct verb form.
+                  - generic [ref=e384]:
+                    - generic [ref=e385]:
+                      - paragraph [ref=e386]: 1Marc says, 'These trainers ___ very well,
+                      - generic [ref=e387]:
+                        - button "don't fit" [ref=e388] [cursor=pointer]
+                        - button "aren't fitting" [ref=e389] [cursor=pointer]
+                        - button "don't fitting" [ref=e390] [cursor=pointer]
+                    - generic [ref=e391]:
+                      - paragraph [ref=e392]: 2they ___ my feet.
+                      - generic [ref=e393]:
+                        - button "is hurting" [ref=e394] [cursor=pointer]
+                        - button "hurt" [ref=e395] [cursor=pointer]
+                        - button "hurting" [ref=e396] [cursor=pointer]
+                    - generic [ref=e397]:
+                      - paragraph [ref=e398]: 3I think I ___ a smaller size.
+                      - generic [ref=e399]:
+                        - button "needing" [ref=e400] [cursor=pointer]
+                        - button "need" [ref=e401] [cursor=pointer]
+                        - button "are needing" [ref=e402] [cursor=pointer]
+                    - generic [ref=e403]:
+                      - paragraph [ref=e404]: 4What ___?'
+                      - generic [ref=e405]:
+                        - button "do you think" [ref=e406] [cursor=pointer]
+                        - button "does you think" [ref=e407] [cursor=pointer]
+                        - button "think you" [ref=e408] [cursor=pointer]
+                  - button "Check answers" [disabled] [ref=e410]
+              - generic [ref=e414]:
+                - generic [ref=e415]:
+                  - generic [ref=e416]:
+                    - paragraph [ref=e417]: Grammar Exercise 5
+                    - paragraph [ref=e418]: Continue reading. Complete each gap with the correct verb form.
+                  - generic [ref=e420]:
+                    - img [ref=e421]
+                    - generic [ref=e423]: 10 XP
+                - generic [ref=e424]:
+                  - paragraph [ref=e425]: Continue reading. Complete each gap with the correct verb form.
+                  - generic [ref=e426]:
+                    - generic [ref=e427]:
+                      - paragraph [ref=e428]: 1Paul agrees, 'Try on another pair.' 'Great!', Marc says, 'These ones really ___ me.
+                      - generic [ref=e429]:
+                        - button "suitting" [ref=e430] [cursor=pointer]
+                        - button "suiting" [ref=e431] [cursor=pointer]
+                        - button "suit" [ref=e432] [cursor=pointer]
+                    - generic [ref=e433]:
+                      - paragraph [ref=e434]: 2How much ___?'
+                      - generic [ref=e435]:
+                        - button "they do cost" [ref=e436] [cursor=pointer]
+                        - button "are costing" [ref=e437] [cursor=pointer]
+                        - button "do they cost" [ref=e438] [cursor=pointer]
+                  - button "Check answers" [disabled] [ref=e440]
+              - generic [ref=e444]:
+                - generic [ref=e445]:
+                  - generic [ref=e446]:
+                    - paragraph [ref=e447]: Grammar Exercise 6
+                    - paragraph [ref=e448]: Continue reading. Complete each gap with the correct verb form.
+                  - generic [ref=e450]:
+                    - img [ref=e451]
+                    - generic [ref=e453]: 10 XP
+                - generic [ref=e454]:
+                  - paragraph [ref=e455]: Continue reading. Complete each gap with the correct verb form.
+                  - generic [ref=e456]:
+                    - generic [ref=e457]:
+                      - paragraph [ref=e458]: 1While Marc ___ for his shoes,
+                      - generic [ref=e459]:
+                        - button "is paying" [ref=e460] [cursor=pointer]
+                        - button "pay" [ref=e461] [cursor=pointer]
+                        - button "is pay" [ref=e462] [cursor=pointer]
+                    - generic [ref=e463]:
+                      - paragraph [ref=e464]: 2Paul ___ a pair of shoes he really likes
+                      - generic [ref=e465]:
+                        - button "find" [ref=e466] [cursor=pointer]
+                        - button "finds" [ref=e467] [cursor=pointer]
+                        - button "are finding" [ref=e468] [cursor=pointer]
+                    - generic [ref=e469]:
+                      - paragraph [ref=e470]: 3and ___ them.
+                      - generic [ref=e471]:
+                        - button "buy" [ref=e472] [cursor=pointer]
+                        - button "is buying" [ref=e473] [cursor=pointer]
+                        - button "buys" [ref=e474] [cursor=pointer]
+                  - button "Check answers" [disabled] [ref=e476]
+        - generic [ref=e477]:
+          - generic [ref=e479]: 📚vocabulary
+          - generic [ref=e481]:
+            - generic [ref=e485]:
+              - generic [ref=e486]:
+                - img [ref=e488]
+                - heading "Hobbies" [level=2] [ref=e491]
+              - img "Illustrated vocabulary card showing common hobbies" [ref=e492]
+              - button "Got it ✓" [ref=e494] [cursor=pointer]
+            - generic [ref=e498]:
+              - generic [ref=e499]:
+                - img [ref=e501]
+                - heading "Hobbies" [level=2] [ref=e504]
+              - img "Illustrated vocabulary card showing more hobbies" [ref=e505]
+              - button "Got it ✓" [ref=e507] [cursor=pointer]
+          - generic [ref=e508]:
+            - generic [ref=e510]: ✏️Now let's practise
+            - generic [ref=e511]:
+              - generic [ref=e515]:
+                - generic [ref=e516]:
+                  - generic [ref=e517]:
+                    - paragraph [ref=e518]: Vocabulary Exercise 1
+                    - paragraph [ref=e519]: Complete each sentence (1–10) using a word from the box. Do not use the same word twice.
+                  - generic [ref=e521]:
+                    - img [ref=e522]
+                    - generic [ref=e524]: 10 XP
+                - generic [ref=e525]:
+                  - paragraph [ref=e526]: Complete each sentence (1–10) using a word from the box. Do not use the same word twice.
+                  - generic [ref=e527]:
+                    - generic [ref=e528]:
+                      - paragraph [ref=e529]: 11. You should pay ___ to the details.
+                      - generic [ref=e530]:
+                        - button "able" [ref=e531] [cursor=pointer]
+                        - button "attention" [ref=e532] [cursor=pointer]
+                        - button "sadly" [ref=e533] [cursor=pointer]
+                        - button "risks" [ref=e534] [cursor=pointer]
+                        - button "homework" [ref=e535] [cursor=pointer]
+                        - button "sour" [ref=e536] [cursor=pointer]
+                        - button "up" [ref=e537] [cursor=pointer]
+                        - button "know" [ref=e538] [cursor=pointer]
+                    - generic [ref=e539]:
+                      - paragraph [ref=e540]: 22. ___, the rate of unemployment is high in the region.
+                      - generic [ref=e541]:
+                        - button "able" [ref=e542] [cursor=pointer]
+                        - button "attention" [ref=e543] [cursor=pointer]
+                        - button "sadly" [ref=e544] [cursor=pointer]
+                        - button "risks" [ref=e545] [cursor=pointer]
+                        - button "homework" [ref=e546] [cursor=pointer]
+                        - button "sour" [ref=e547] [cursor=pointer]
+                        - button "up" [ref=e548] [cursor=pointer]
+                        - button "know" [ref=e549] [cursor=pointer]
+                    - generic [ref=e550]:
+                      - paragraph [ref=e551]: 33. Let me ___ as soon as possible.
+                      - generic [ref=e552]:
+                        - button "able" [ref=e553] [cursor=pointer]
+                        - button "attention" [ref=e554] [cursor=pointer]
+                        - button "sadly" [ref=e555] [cursor=pointer]
+                        - button "risks" [ref=e556] [cursor=pointer]
+                        - button "homework" [ref=e557] [cursor=pointer]
+                        - button "sour" [ref=e558] [cursor=pointer]
+                        - button "up" [ref=e559] [cursor=pointer]
+                        - button "know" [ref=e560] [cursor=pointer]
+                    - generic [ref=e561]:
+                      - paragraph [ref=e562]: 44. Cheesecake is sweet but lemons are ___.
+                      - generic [ref=e563]:
+                        - button "able" [ref=e564] [cursor=pointer]
+                        - button "attention" [ref=e565] [cursor=pointer]
+                        - button "sadly" [ref=e566] [cursor=pointer]
+                        - button "risks" [ref=e567] [cursor=pointer]
+                        - button "homework" [ref=e568] [cursor=pointer]
+                        - button "sour" [ref=e569] [cursor=pointer]
+                        - button "up" [ref=e570] [cursor=pointer]
+                        - button "know" [ref=e571] [cursor=pointer]
+                    - generic [ref=e572]:
+                      - paragraph [ref=e573]: 55. No matter how much he tries, he is not ___ to pass his driving test.
+                      - generic [ref=e574]:
+                        - button "able" [ref=e575] [cursor=pointer]
+                        - button "attention" [ref=e576] [cursor=pointer]
+                        - button "sadly" [ref=e577] [cursor=pointer]
+                        - button "risks" [ref=e578] [cursor=pointer]
+                        - button "homework" [ref=e579] [cursor=pointer]
+                        - button "sour" [ref=e580] [cursor=pointer]
+                        - button "up" [ref=e581] [cursor=pointer]
+                        - button "know" [ref=e582] [cursor=pointer]
+                    - generic [ref=e583]:
+                      - paragraph [ref=e584]: 66. He is unemployed and on the ___.
+                      - generic [ref=e585]:
+                        - button "reply" [ref=e586] [cursor=pointer]
+                        - button "blockbuster" [ref=e587] [cursor=pointer]
+                        - button "booming" [ref=e588] [cursor=pointer]
+                        - button "opportunity" [ref=e589] [cursor=pointer]
+                        - button "dole" [ref=e590] [cursor=pointer]
+                        - button "house" [ref=e591] [cursor=pointer]
+                        - button "answering" [ref=e592] [cursor=pointer]
+                        - button "prison" [ref=e593] [cursor=pointer]
+                    - generic [ref=e594]:
+                      - paragraph [ref=e595]: 77. Burglars broke into her ___.
+                      - generic [ref=e596]:
+                        - button "reply" [ref=e597] [cursor=pointer]
+                        - button "blockbuster" [ref=e598] [cursor=pointer]
+                        - button "booming" [ref=e599] [cursor=pointer]
+                        - button "opportunity" [ref=e600] [cursor=pointer]
+                        - button "dole" [ref=e601] [cursor=pointer]
+                        - button "house" [ref=e602] [cursor=pointer]
+                        - button "answering" [ref=e603] [cursor=pointer]
+                        - button "prison" [ref=e604] [cursor=pointer]
+                    - generic [ref=e605]:
+                      - paragraph [ref=e606]: 88. The new film is a ___.
+                      - generic [ref=e607]:
+                        - button "reply" [ref=e608] [cursor=pointer]
+                        - button "blockbuster" [ref=e609] [cursor=pointer]
+                        - button "booming" [ref=e610] [cursor=pointer]
+                        - button "opportunity" [ref=e611] [cursor=pointer]
+                        - button "dole" [ref=e612] [cursor=pointer]
+                        - button "house" [ref=e613] [cursor=pointer]
+                        - button "answering" [ref=e614] [cursor=pointer]
+                        - button "prison" [ref=e615] [cursor=pointer]
+                    - generic [ref=e616]:
+                      - paragraph [ref=e617]: 99. Don't miss this fantastic ___, you might not get another one.
+                      - generic [ref=e618]:
+                        - button "reply" [ref=e619] [cursor=pointer]
+                        - button "blockbuster" [ref=e620] [cursor=pointer]
+                        - button "booming" [ref=e621] [cursor=pointer]
+                        - button "opportunity" [ref=e622] [cursor=pointer]
+                        - button "dole" [ref=e623] [cursor=pointer]
+                        - button "house" [ref=e624] [cursor=pointer]
+                        - button "answering" [ref=e625] [cursor=pointer]
+                        - button "prison" [ref=e626] [cursor=pointer]
+                    - generic [ref=e627]:
+                      - paragraph [ref=e628]: 1010. I look forward to your ___.
+                      - generic [ref=e629]:
+                        - button "reply" [ref=e630] [cursor=pointer]
+                        - button "blockbuster" [ref=e631] [cursor=pointer]
+                        - button "booming" [ref=e632] [cursor=pointer]
+                        - button "opportunity" [ref=e633] [cursor=pointer]
+                        - button "dole" [ref=e634] [cursor=pointer]
+                        - button "house" [ref=e635] [cursor=pointer]
+                        - button "answering" [ref=e636] [cursor=pointer]
+                        - button "prison" [ref=e637] [cursor=pointer]
+                  - button "Check answers" [disabled] [ref=e639]
+              - generic [ref=e643]:
+                - generic [ref=e644]:
+                  - generic [ref=e645]:
+                    - paragraph [ref=e646]: Vocabulary Exercise 2
+                    - paragraph [ref=e647]: Write the letter of the word on the right (A–H) that best collocates with the word on the left (11–15). Do not use the same word twice.
+                  - generic [ref=e649]:
+                    - img [ref=e650]
+                    - generic [ref=e652]: 10 XP
+                - generic [ref=e653]:
+                  - paragraph [ref=e654]: Write the letter of the word on the right (A–H) that best collocates with the word on the left (11–15). Do not use the same word twice.
+                  - generic [ref=e655]:
+                    - generic [ref=e656]:
+                      - paragraph [ref=e657]: 111. hustle and ___
+                      - generic [ref=e658]:
+                        - button "minded" [ref=e659] [cursor=pointer]
+                        - button "fish" [ref=e660] [cursor=pointer]
+                        - button "bustle" [ref=e661] [cursor=pointer]
+                        - button "analysis" [ref=e662] [cursor=pointer]
+                        - button "part" [ref=e663] [cursor=pointer]
+                        - button "log" [ref=e664] [cursor=pointer]
+                        - button "cats" [ref=e665] [cursor=pointer]
+                        - button "air" [ref=e666] [cursor=pointer]
+                    - generic [ref=e667]:
+                      - paragraph [ref=e668]: 212. take ___
+                      - generic [ref=e669]:
+                        - button "minded" [ref=e670] [cursor=pointer]
+                        - button "fish" [ref=e671] [cursor=pointer]
+                        - button "bustle" [ref=e672] [cursor=pointer]
+                        - button "analysis" [ref=e673] [cursor=pointer]
+                        - button "part" [ref=e674] [cursor=pointer]
+                        - button "log" [ref=e675] [cursor=pointer]
+                        - button "cats" [ref=e676] [cursor=pointer]
+                        - button "air" [ref=e677] [cursor=pointer]
+                    - generic [ref=e678]:
+                      - paragraph [ref=e679]: 313. raw ___
+                      - generic [ref=e680]:
+                        - button "minded" [ref=e681] [cursor=pointer]
+                        - button "fish" [ref=e682] [cursor=pointer]
+                        - button "bustle" [ref=e683] [cursor=pointer]
+                        - button "analysis" [ref=e684] [cursor=pointer]
+                        - button "part" [ref=e685] [cursor=pointer]
+                        - button "log" [ref=e686] [cursor=pointer]
+                        - button "cats" [ref=e687] [cursor=pointer]
+                        - button "air" [ref=e688] [cursor=pointer]
+                    - generic [ref=e689]:
+                      - paragraph [ref=e690]: 414. narrow ___
+                      - generic [ref=e691]:
+                        - button "minded" [ref=e692] [cursor=pointer]
+                        - button "fish" [ref=e693] [cursor=pointer]
+                        - button "bustle" [ref=e694] [cursor=pointer]
+                        - button "analysis" [ref=e695] [cursor=pointer]
+                        - button "part" [ref=e696] [cursor=pointer]
+                        - button "log" [ref=e697] [cursor=pointer]
+                        - button "cats" [ref=e698] [cursor=pointer]
+                        - button "air" [ref=e699] [cursor=pointer]
+                    - generic [ref=e700]:
+                      - paragraph [ref=e701]: 515. cabin ___
+                      - generic [ref=e702]:
+                        - button "minded" [ref=e703] [cursor=pointer]
+                        - button "fish" [ref=e704] [cursor=pointer]
+                        - button "bustle" [ref=e705] [cursor=pointer]
+                        - button "analysis" [ref=e706] [cursor=pointer]
+                        - button "part" [ref=e707] [cursor=pointer]
+                        - button "log" [ref=e708] [cursor=pointer]
+                        - button "cats" [ref=e709] [cursor=pointer]
+                        - button "air" [ref=e710] [cursor=pointer]
+                  - button "Check answers" [disabled] [ref=e712]
+        - generic [ref=e713]:
+          - generic [ref=e715]: 🎧listening
+          - generic [ref=e717]:
+            - generic [ref=e721]:
+              - generic [ref=e722]:
+                - generic [ref=e723]:
+                  - paragraph [ref=e724]: Listening Exercise 1
+                  - paragraph [ref=e725]: You will hear a short recording twice. Listen to Pete and Dale talk about Pete's trip to Peru. What surprised Pete most?
+                - generic [ref=e727]:
+                  - img [ref=e728]
+                  - generic [ref=e730]: 10 XP
+              - generic [ref=e731]:
+                - generic [ref=e732]:
+                  - generic [ref=e733]:
+                    - img [ref=e734]
+                    - text: Listen carefully
+                  - generic [ref=e736]:
+                    - generic [ref=e737]:
+                      - button "Play audio" [ref=e739] [cursor=pointer]:
+                        - img [ref=e740]
+                      - generic [ref=e742]:
+                        - slider "Audio progress"
+                        - generic [ref=e743]: 0:000:52
+                    - paragraph [ref=e745]:
+                      - generic [ref=e746]:
+                        - text: Press
+                        - img [ref=e747]
+                        - text: to begin
+                - generic [ref=e750]:
+                  - paragraph [ref=e752]: What surprised Pete most on his trip to Peru?
+                  - radiogroup "What surprised Pete most on his trip to Peru?" [ref=e753]:
+                    - radio "AThe people" [disabled] [ref=e754] [cursor=pointer]
+                    - radio "BThe nature" [disabled] [ref=e755] [cursor=pointer]
+                    - radio "CThe boat trip" [disabled] [ref=e756] [cursor=pointer]
+                    - radio "DThe food" [disabled] [ref=e757] [cursor=pointer]
+                - button "Check answer" [disabled] [ref=e759]
+            - generic [ref=e763]:
+              - generic [ref=e764]:
+                - generic [ref=e765]:
+                  - paragraph [ref=e766]: Listening Exercise 2
+                  - paragraph [ref=e767]: You will hear a short recording twice. Listen to the man talking about tonight's party. What activity will he do first to prepare?
+                - generic [ref=e769]:
+                  - img [ref=e770]
+                  - generic [ref=e772]: 10 XP
+              - generic [ref=e773]:
+                - generic [ref=e774]:
+                  - generic [ref=e775]:
+                    - img [ref=e776]
+                    - text: Listen carefully
+                  - generic [ref=e778]:
+                    - generic [ref=e779]:
+                      - button "Play audio" [ref=e781] [cursor=pointer]:
+                        - img [ref=e782]
+                      - generic [ref=e784]:
+                        - slider "Audio progress"
+                        - generic [ref=e785]: 0:000:49
+                    - paragraph [ref=e787]:
+                      - generic [ref=e788]:
+                        - text: Press
+                        - img [ref=e789]
+                        - text: to begin
+                - generic [ref=e792]:
+                  - paragraph [ref=e794]: What activity will he do first to prepare for the party?
+                  - radiogroup "What activity will he do first to prepare for the party?" [ref=e795]:
+                    - radio "AGo shopping" [disabled] [ref=e796] [cursor=pointer]
+                    - radio "BCook" [disabled] [ref=e797] [cursor=pointer]
+                    - radio "CSet up games" [disabled] [ref=e798] [cursor=pointer]
+                    - radio "DClean" [disabled] [ref=e799] [cursor=pointer]
+                - button "Check answer" [disabled] [ref=e801]
+        - generic [ref=e802]:
+          - generic [ref=e804]: 🎤speaking
+          - generic [ref=e810]:
+            - generic [ref=e811]:
+              - img [ref=e813]
+              - heading "Daily Routines Verbs" [level=2] [ref=e816]
+            - img "Illustration of daily routine activities" [ref=e817]
+            - generic [ref=e818]:
+              - heading "Morning & Weekday Routine" [level=3] [ref=e819]
+              - list [ref=e820]:
+                - listitem [ref=e821]: wake up
+                - listitem [ref=e822]: get up
+                - listitem [ref=e823]: have a shower
+                - listitem [ref=e824]: have breakfast
+                - listitem [ref=e825]: brush my teeth
+                - listitem [ref=e826]: leave home
+                - listitem [ref=e827]: go to school / work
+                - listitem [ref=e828]: go home
+                - listitem [ref=e829]: have lunch
+                - listitem [ref=e830]: have a nap / siesta
+                - listitem [ref=e831]: do the housework
+                - listitem [ref=e832]: take the bus / underground
+                - listitem [ref=e833]: go to English / painting class
+                - listitem [ref=e834]: do sport / go to the gym
+                - listitem [ref=e835]: go for a walk
+                - listitem [ref=e836]: study
+                - listitem [ref=e837]: play computer games or browse the internet
+                - listitem [ref=e838]: have dinner
+                - listitem [ref=e839]: walk the dog
+                - listitem [ref=e840]: have a bath
+                - listitem [ref=e841]: watch TV
+                - listitem [ref=e842]: relax on the couch
+                - listitem [ref=e843]: switch off the lights
+                - listitem [ref=e844]: go to bed
+              - heading "Weekend Activities" [level=3] [ref=e845]
+              - list [ref=e846]:
+                - listitem [ref=e847]: go out with friends
+                - listitem [ref=e848]: hang out with friends
+                - listitem [ref=e849]: go to the cinema
+                - listitem [ref=e850]: play football
+                - listitem [ref=e851]: go for a walk
+                - listitem [ref=e852]: eat out
+                - listitem [ref=e853]: meet up with my friends
+            - button "Got it ✓" [ref=e855] [cursor=pointer]
+          - generic [ref=e856]:
+            - generic [ref=e858]: 🎯Ready for a challenge?
+            - generic [ref=e859]:
+              - generic [ref=e863]:
+                - generic [ref=e864]:
+                  - generic [ref=e865]:
+                    - paragraph [ref=e866]: Speaking Part 2
+                    - paragraph [ref=e867]: In this part, I'm going to ask you three short questions about yourself and your interests. You will have 30 seconds to reply to each question.
+                  - generic [ref=e868]:
+                    - generic [ref=e869]:
+                      - img [ref=e870]
+                      - generic [ref=e872]: 25 XP
+                    - generic [ref=e873]:
+                      - img [ref=e874]
+                      - text: AI + Human review
+                - generic [ref=e876]:
+                  - generic [ref=e877]:
+                    - paragraph [ref=e878]: Question 1 of 3
+                    - paragraph [ref=e879]: What are you doing this weekend?
+                  - 'img "Image prompt: weekend activities" [ref=e880]'
+                  - generic [ref=e882]:
+                    - button "Start recording" [ref=e883] [cursor=pointer]:
+                      - img [ref=e884]
+                    - paragraph [ref=e886]: Tap to record (max 30s)
+                  - button "Next" [disabled] [ref=e888]:
+                    - text: Next
+                    - img [ref=e889]
+              - generic [ref=e894]:
+                - generic [ref=e895]:
+                  - generic [ref=e896]:
+                    - paragraph [ref=e897]: Speaking Practice
+                    - paragraph [ref=e898]: Answer each question. You will have 30 seconds to reply.
+                  - generic [ref=e899]:
+                    - generic [ref=e900]:
+                      - img [ref=e901]
+                      - generic [ref=e903]: 25 XP
+                    - generic [ref=e904]:
+                      - img [ref=e905]
+                      - text: AI + Human review
+                - generic [ref=e907]:
+                  - generic [ref=e908]:
+                    - paragraph [ref=e909]: Question 1 of 5
+                    - paragraph [ref=e910]: What's your favourite animal?
+                  - generic [ref=e911]:
+                    - button "Start recording" [ref=e912] [cursor=pointer]:
+                      - img [ref=e913]
+                    - paragraph [ref=e915]: Tap to record (max 30s)
+                  - button "Next" [disabled] [ref=e917]:
+                    - text: Next
+                    - img [ref=e918]
+              - generic [ref=e923]:
+                - generic [ref=e924]:
+                  - generic [ref=e925]:
+                    - paragraph [ref=e926]: More Speaking Practice
+                    - paragraph [ref=e927]: Answer each question. You will have 30 seconds to reply.
+                  - generic [ref=e928]:
+                    - generic [ref=e929]:
+                      - img [ref=e930]
+                      - generic [ref=e932]: 25 XP
+                    - generic [ref=e933]:
+                      - img [ref=e934]
+                      - text: AI + Human review
+                - generic [ref=e936]:
+                  - generic [ref=e937]:
+                    - paragraph [ref=e938]: Question 1 of 5
+                    - paragraph [ref=e939]: Is time more valuable than money?
+                  - generic [ref=e940]:
+                    - button "Start recording" [ref=e941] [cursor=pointer]:
+                      - img [ref=e942]
+                    - paragraph [ref=e944]: Tap to record (max 30s)
+                  - button "Next" [disabled] [ref=e946]:
+                    - text: Next
+                    - img [ref=e947]
+              - generic [ref=e952]:
+                - generic [ref=e953]:
+                  - generic [ref=e954]:
+                    - paragraph [ref=e955]: More Speaking Practice
+                    - paragraph [ref=e956]: Answer each question. You will have 30 seconds to reply.
+                  - generic [ref=e957]:
+                    - generic [ref=e958]:
+                      - img [ref=e959]
+                      - generic [ref=e961]: 25 XP
+                    - generic [ref=e962]:
+                      - img [ref=e963]
+                      - text: AI + Human review
+                - generic [ref=e965]:
+                  - generic [ref=e966]:
+                    - paragraph [ref=e967]: Question 1 of 6
+                    - paragraph [ref=e968]: Do you have a large family?
+                  - generic [ref=e969]:
+                    - button "Start recording" [ref=e970] [cursor=pointer]:
+                      - img [ref=e971]
+                    - paragraph [ref=e973]: Tap to record (max 30s)
+                  - button "Next" [disabled] [ref=e975]:
+                    - text: Next
+                    - img [ref=e976]
+        - generic [ref=e978]:
+          - generic [ref=e980]: 📖reading
+          - generic [ref=e986]:
+            - generic [ref=e987]:
+              - img [ref=e989]
+              - generic [ref=e991]:
+                - heading "In the morning" [level=2] [ref=e992]
+                - paragraph [ref=e993]: A day in the life of a teenager
+            - generic [ref=e994]:
+              - paragraph [ref=e995]: Hello there,
+              - paragraph [ref=e996]: Let me introduce myself. My name is Raphael and I live in Durham, in the north-east of England.
+              - paragraph [ref=e997]: On weekdays, I get up at 7:30am and make my bed quickly. After getting dressed, I go downstairs and prepare my breakfast. I like to have a bowl of cereal, toast with butter and a mug of hot milk. Mind you, when it starts getting warmer I switch to cold milk or a milkshake.
+              - paragraph [ref=e998]: You know what? I have a pet canary. My mum has taught me to clean out its cage every morning. I need to get the dirt out. Also, I have to clean up the mess outside. Like most birds, he throws the husks out of his cage. Husks must be cleaned, otherwise Mum gets upset.
+              - paragraph [ref=e999]: I say goodbye to Bartol, my canary, and I grab my backpack. After checking everything I need for the day is inside, I head to school. I needn't take the bus since my home is just round the corner from the school. I'm really lucky that way. If I lived a long way from school, I'd have to wake up much earlier, which I am not too fond of!
+              - paragraph [ref=e1000]: School is hard work but I'm proud of being part of such an excellent institution. It was awarded a prize last year for being rated 'excellent' and top of the list of schools in the area in terms of quality and students' grades.
+              - paragraph [ref=e1001]: At school, I have a break at 10.30am. I go out into the playground and have some fun with my mates. We like to play either marbles or catch. The day goes quickly and before we know it we are packing up our books and tidying our desks at 3.00pm, ready to go home.
+            - button "Got it ✓" [ref=e1003] [cursor=pointer]
+          - generic [ref=e1004]:
+            - generic [ref=e1006]: ✏️Now let's practise
+            - generic [ref=e1011]:
+              - generic [ref=e1012]:
+                - generic [ref=e1013]:
+                  - paragraph [ref=e1014]: Reading Exercise 1
+                  - paragraph [ref=e1015]: Read the text carefully and say if the following statements are true or false.
+                - generic [ref=e1017]:
+                  - img [ref=e1018]
+                  - generic [ref=e1020]: 10 XP
+              - generic [ref=e1021]:
+                - paragraph [ref=e1022]: Read the text carefully and say if the following statements are true or false.
+                - generic [ref=e1023]:
+                  - generic [ref=e1024]:
+                    - paragraph [ref=e1025]: 11. Raphael has breakfast in the kitchen next to his bedroom.
+                    - generic [ref=e1026]:
+                      - button "True" [ref=e1027] [cursor=pointer]
+                      - button "False" [ref=e1028] [cursor=pointer]
+                  - generic [ref=e1029]:
+                    - paragraph [ref=e1030]: 22. He always has a glass of hot milk.
+                    - generic [ref=e1031]:
+                      - button "True" [ref=e1032] [cursor=pointer]
+                      - button "False" [ref=e1033] [cursor=pointer]
+                  - generic [ref=e1034]:
+                    - paragraph [ref=e1035]: 33. His bird doesn't eat many husks.
+                    - generic [ref=e1036]:
+                      - button "True" [ref=e1037] [cursor=pointer]
+                      - button "False" [ref=e1038] [cursor=pointer]
+                  - generic [ref=e1039]:
+                    - paragraph [ref=e1040]: 44. He is glad he lives so close to school.
+                    - generic [ref=e1041]:
+                      - button "True" [ref=e1042] [cursor=pointer]
+                      - button "False" [ref=e1043] [cursor=pointer]
+                  - generic [ref=e1044]:
+                    - paragraph [ref=e1045]: 55. His school has a rating of 'good'.
+                    - generic [ref=e1046]:
+                      - button "True" [ref=e1047] [cursor=pointer]
+                      - button "False" [ref=e1048] [cursor=pointer]
+                  - generic [ref=e1049]:
+                    - paragraph [ref=e1050]: 66. Raphael and his friends like to play basketball during their break.
+                    - generic [ref=e1051]:
+                      - button "True" [ref=e1052] [cursor=pointer]
+                      - button "False" [ref=e1053] [cursor=pointer]
+                - button "Submit answers" [disabled] [ref=e1055]
+          - generic [ref=e1056]:
+            - generic [ref=e1058]: 📖A bit more to read
+            - generic [ref=e1063]:
+              - generic [ref=e1064]:
+                - img [ref=e1066]
+                - generic [ref=e1068]:
+                  - heading "In the afternoon and evening" [level=2] [ref=e1069]
+                  - paragraph [ref=e1070]: A day in the life of a teenager
+              - generic [ref=e1071]:
+                - paragraph [ref=e1072]: Dinner is usually waiting for me at home. I also help Mum with the housework. My job is to empty the dishwasher and put the plates away.
+                - paragraph [ref=e1073]: After that, I do my homework. My best friend Tom usually struggles with maths and science in class, so he needs to have a private tutor. This means that he doesn't go out on Mondays and Wednesdays after school. However, on the other weekdays we meet up and play football with a local club.
+                - paragraph [ref=e1074]: We are really into football. Our coach has always talked us into doing our best. Tom is a goalkeeper and I play midfield. We want to be professional football players. Time will tell, I guess.
+                - paragraph [ref=e1075]: I'm back home by around 8p.m. I have a shower and put on my pyjamas. Before going to bed I play computer games for an hour. I set my alarm clock, get into bed and usually sleep like a log.
+              - button "Got it ✓" [ref=e1077] [cursor=pointer]
+          - generic [ref=e1078]:
+            - generic [ref=e1080]: ✏️Now let's practise
+            - generic [ref=e1085]:
+              - generic [ref=e1086]:
+                - generic [ref=e1087]:
+                  - paragraph [ref=e1088]: Reading Exercise 2
+                  - paragraph [ref=e1089]: "Choose the correct option: A, B, C, or D."
+                - generic [ref=e1091]:
+                  - img [ref=e1092]
+                  - generic [ref=e1094]: 10 XP
+              - generic [ref=e1095]:
+                - paragraph [ref=e1096]: "Choose the correct option: A, B, C, or D."
+                - generic [ref=e1097]:
+                  - generic [ref=e1098]:
+                    - paragraph [ref=e1099]: 11. Before doing his homework...
+                    - generic [ref=e1100]:
+                      - button "Raphael does all of the housework" [ref=e1101] [cursor=pointer]
+                      - button "Raphael washes the dishes" [ref=e1102] [cursor=pointer]
+                      - button "Raphael helps his Mum with the washing" [ref=e1103] [cursor=pointer]
+                      - button "Raphael puts the plates in the cupboards" [ref=e1104] [cursor=pointer]
+                  - generic [ref=e1105]:
+                    - paragraph [ref=e1106]: 22. Raphael's football coach...
+                    - generic [ref=e1107]:
+                      - button "forces him to train really hard" [ref=e1108] [cursor=pointer]
+                      - button "told him that he needs to improve his skills" [ref=e1109] [cursor=pointer]
+                      - button "convinced him to do his best" [ref=e1110] [cursor=pointer]
+                      - button "wants him to become a famous footballer" [ref=e1111] [cursor=pointer]
+                - button "Submit answers" [disabled] [ref=e1113]
+        - generic [ref=e1114]:
+          - generic [ref=e1116]: ✏️writing
+          - generic [ref=e1118]:
+            - generic [ref=e1122]:
+              - generic [ref=e1123]:
+                - generic [ref=e1124]:
+                  - paragraph [ref=e1125]: Writing Part 1
+                  - paragraph [ref=e1126]: You are joining a pet owners club. Fill in the form. (1–5 words per field)
+                - generic [ref=e1127]:
+                  - generic [ref=e1128]:
+                    - img [ref=e1129]
+                    - generic [ref=e1131]: 10 XP
+                  - generic [ref=e1132]:
+                    - img [ref=e1133]
+                    - text: Human review
+              - generic [ref=e1135]:
+                - generic [ref=e1136]:
+                  - generic [ref=e1137]:
+                    - generic [ref=e1138]: "1"
+                    - paragraph [ref=e1139]: Name
+                  - generic [ref=e1140]:
+                    - textbox "Write your answer here…" [ref=e1141]
+                    - paragraph [ref=e1142]: 0 words · 1–5 words
+                - generic [ref=e1143]:
+                  - generic [ref=e1144]:
+                    - generic [ref=e1145]: "2"
+                    - paragraph [ref=e1146]: Surname
+                  - generic [ref=e1147]:
+                    - textbox "Write your answer here…" [ref=e1148]
+                    - paragraph [ref=e1149]: 0 words · 1–5 words
+                - generic [ref=e1150]:
+                  - generic [ref=e1151]:
+                    - generic [ref=e1152]: "3"
+                    - paragraph [ref=e1153]: Address
+                  - generic [ref=e1154]:
+                    - textbox "Write your answer here…" [ref=e1155]
+                    - paragraph [ref=e1156]: 0 words · 1–5 words
+                - generic [ref=e1157]:
+                  - generic [ref=e1158]:
+                    - generic [ref=e1159]: "4"
+                    - paragraph [ref=e1160]: Town / City
+                  - generic [ref=e1161]:
+                    - textbox "Write your answer here…" [ref=e1162]
+                    - paragraph [ref=e1163]: 0 words · 1–5 words
+                - generic [ref=e1164]:
+                  - generic [ref=e1165]:
+                    - generic [ref=e1166]: "5"
+                    - paragraph [ref=e1167]: State / Country
+                  - generic [ref=e1168]:
+                    - textbox "Write your answer here…" [ref=e1169]
+                    - paragraph [ref=e1170]: 0 words · 1–5 words
+                - generic [ref=e1171]:
+                  - generic [ref=e1172]:
+                    - generic [ref=e1173]: "6"
+                    - paragraph [ref=e1174]: Email
+                  - generic [ref=e1175]:
+                    - textbox "Write your answer here…" [ref=e1176]
+                    - paragraph [ref=e1177]: 0 words · 1–5 words
+                - generic [ref=e1178]:
+                  - generic [ref=e1179]:
+                    - generic [ref=e1180]: "7"
+                    - paragraph [ref=e1181]: What's your favourite pet?
+                  - generic [ref=e1182]:
+                    - textbox "Write your answer here…" [ref=e1183]
+                    - paragraph [ref=e1184]: 0 words · 1–5 words
+                - generic [ref=e1185]:
+                  - generic [ref=e1186]:
+                    - generic [ref=e1187]: "8"
+                    - paragraph [ref=e1188]: How many pets do you have?
+                  - generic [ref=e1189]:
+                    - textbox "Write your answer here…" [ref=e1190]
+                    - paragraph [ref=e1191]: 0 words · 1–5 words
+                - generic [ref=e1192]:
+                  - generic [ref=e1193]:
+                    - generic [ref=e1194]: "9"
+                    - paragraph [ref=e1195]: Why are pets important to you?
+                  - generic [ref=e1196]:
+                    - textbox "Write your answer here…" [ref=e1197]
+                    - paragraph [ref=e1198]: 0 words · 1–5 words
+                - button "Submit writing" [disabled] [ref=e1200]:
+                  - img [ref=e1201]
+                  - text: Submit writing
+            - generic [ref=e1206]:
+              - generic [ref=e1207]:
+                - generic [ref=e1208]:
+                  - paragraph [ref=e1209]: Writing Part 2
+                  - paragraph [ref=e1210]: Tell us what days and times the meetings suit you best.
+                - generic [ref=e1211]:
+                  - generic [ref=e1212]:
+                    - img [ref=e1213]
+                    - generic [ref=e1215]: 20 XP
+                  - generic [ref=e1216]:
+                    - img [ref=e1217]
+                    - text: Human review
+              - generic [ref=e1219]:
+                - generic [ref=e1220]:
+                  - generic [ref=e1221]:
+                    - generic [ref=e1222]: "1"
+                    - paragraph
+                  - generic [ref=e1223]:
+                    - textbox "Write your answer here…" [ref=e1224]
+                    - paragraph [ref=e1225]: 0 words · 20–30 words
+                - button "Submit writing" [disabled] [ref=e1227]:
+                  - img [ref=e1228]
+                  - text: Submit writing

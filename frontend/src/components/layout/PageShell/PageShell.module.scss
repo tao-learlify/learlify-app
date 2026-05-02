@@ -1,0 +1,16 @@
+.page {
+  flex: 1;
+  width: 100%;
+  padding: var(--space-8) var(--space-6);
+
+  @media (max-width: 576px) {
+    padding: var(--space-4);
+  }
+}
+
+/* Max-width variants */
+.sm  { max-width: 640px;  margin-left: auto; margin-right: auto; }
+.md  { max-width: 768px;  margin-left: auto; margin-right: auto; }
+.lg  { max-width: 1024px; margin-left: auto; margin-right: auto; }
+.xl  { max-width: 1280px; margin-left: auto; margin-right: auto; }
+.full { /* no max-width constraint */ }

@@ -1,0 +1,1016 @@
+// ── Shell ──────────────────────────────────────────────────────────────────────
+// Rose/pink theme — distinct from Grammar (blue), Vocab (amber), Listening (violet),
+// Reading (emerald). Premium voice exercise feel.
+.root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  background: linear-gradient(180deg, #FFF1F2 0%, #FFFFFF 32%);
+  font-family: inherit;
+}
+
+// ── Body ───────────────────────────────────────────────────────────────────────
+.body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-2) var(--space-5);
+  gap: var(--space-3);
+  max-width: 560px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+// ── Top row ────────────────────────────────────────────────────────────────────
+.topRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.skillLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 14px;
+  border-radius: var(--radius-full);
+  background: #FCE7F3;
+  border: 1.5px solid #F9A8D4;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #9D174D;
+}
+
+.xpBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  background: #FFFBEB;
+  border: 1.5px solid #FCD34D;
+  color: #92400E;
+  font-size: var(--text-xs);
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+// ── Instruction ────────────────────────────────────────────────────────────────
+.instruction {
+  margin: 0;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: #475569;
+  text-align: center;
+  animation: instrFade 0.25s ease both;
+}
+
+@keyframes instrFade {
+  from { opacity: 0; transform: translateY(-3px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+// ── Panda ──────────────────────────────────────────────────────────────────────
+.pandaWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  // Reserve headspace so speech bubble never overlaps instruction text above
+  padding-top: 46px;
+  gap: 6px;
+}
+
+// Speech bubble — sits inside the padding-top zone, tail points down to panda
+.speechBubble {
+  position: absolute;
+  top: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  padding: 7px 16px;
+  border-radius: 22px;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  animation: bubblePop 0.3s var(--easing-bounce) both;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-width: 6px;
+    border-bottom: none;
+  }
+
+  &[data-mood='idle'] {
+    background: #FFF1F2;
+    color: #9D174D;
+    border: 1.5px solid #FECDD3;
+    &::after { border-top-color: #FECDD3; }
+  }
+
+  &[data-mood='happy'] {
+    background: #F0FDF4;
+    color: #15803D;
+    border: 1.5px solid #86EFAC;
+    &::after { border-top-color: #86EFAC; }
+  }
+
+  &[data-mood='oops'] {
+    background: #FEF3C7;
+    color: #92400E;
+    border: 1.5px solid #FCD34D;
+    &::after { border-top-color: #FCD34D; }
+  }
+}
+
+@keyframes bubblePop {
+  from { opacity: 0; transform: translateX(-50%) scale(0.75) translateY(-4px); }
+  to   { opacity: 1; transform: translateX(-50%) scale(1)    translateY(0); }
+}
+
+// Radial glow — sits behind the panda, breathes in sync with float
+.pandaGlow {
+  position: absolute;
+  top: 46px; // aligns with panda after padding-top
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 80px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  animation: glowBreath 3.2s ease-in-out infinite;
+
+  &[data-mood='idle']  { background: radial-gradient(ellipse, rgba(219, 39, 119, 0.13) 0%, transparent 68%); }
+  &[data-mood='happy'] { background: radial-gradient(ellipse, rgba(22, 163, 74, 0.14)  0%, transparent 68%); }
+  &[data-mood='oops']  { background: radial-gradient(ellipse, rgba(245, 158, 11, 0.12) 0%, transparent 68%); }
+}
+
+@keyframes glowBreath {
+  0%, 100% { transform: translateX(-50%) scale(1);    opacity: 0.7; }
+  50%       { transform: translateX(-50%) scale(1.22); opacity: 1; }
+}
+
+// Panda image — 110px, drop-shadow glow, floats above the glow layer
+.pandaDecor {
+  width: 110px;
+  height: auto;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  filter:
+    drop-shadow(0 8px 22px rgba(219, 39, 119, 0.20))
+    drop-shadow(0 2px 5px rgba(0, 0, 0, 0.08));
+}
+
+.pandaIdle  { animation: pandaFloat  3.2s ease-in-out infinite; }
+.pandaHappy { animation: pandaBounce 0.7s var(--easing-bounce) forwards; }
+.pandaOops  { animation: pandaShake  0.5s ease-in-out forwards; }
+
+@keyframes pandaFloat {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-9px); }  // slightly more travel for larger size
+}
+@keyframes pandaBounce {
+  0%   { transform: scale(1)    translateY(0); }
+  25%  { transform: scale(1.15) translateY(-16px); }
+  55%  { transform: scale(0.94) translateY(-4px); }
+  75%  { transform: scale(1.06) translateY(-9px); }
+  100% { transform: scale(1)    translateY(0); }
+}
+@keyframes pandaShake {
+  0%,100% { transform: translateX(0) rotate(0deg); }
+  20%     { transform: translateX(-9px) rotate(-4deg); }
+  40%     { transform: translateX(9px)  rotate(4deg); }
+  60%     { transform: translateX(-6px) rotate(-2deg); }
+  80%     { transform: translateX(6px)  rotate(2deg); }
+}
+
+// Downward chevron pair — guides eye from panda to mic button below
+.pandaArrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  margin-top: 4px;
+  animation: arrowBounce 1.4s ease-in-out infinite;
+
+  span {
+    display: block;
+    width: 11px;
+    height: 11px;
+    border-right: 2.5px solid rgba(219, 39, 119, 0.55);
+    border-bottom: 2.5px solid rgba(219, 39, 119, 0.55);
+    transform: rotate(45deg);
+    border-radius: 1px;
+  }
+
+  span:first-child { opacity: 0.35; }
+  span:last-child  { opacity: 0.72; }
+}
+
+@keyframes arrowBounce {
+  0%, 100% { transform: translateY(0); }
+  55%       { transform: translateY(7px); }
+}
+
+// ── Phrase card ─────────────────────────────────────────────────────────────────
+.phraseCard {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 14px;
+  background: #fff;
+  border: 2px solid #FCE7F3;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-shadow: 0 2px 0 0 #FCE7F3;
+}
+
+.topicBadge {
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #DB2777;
+}
+
+.phrase {
+  margin: 0;
+  font-size: var(--text-lg);
+  font-weight: 800;
+  color: #0F172A;
+  line-height: 1.4;
+}
+
+.translation {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: #64748B;
+  font-style: italic;
+}
+
+// ── Main interaction card ──────────────────────────────────────────────────────
+// This card morphs visually for each phase — the recording state is dark/cinematic.
+.card {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+
+  &[data-phase='listen'] {
+    background: #fff;
+    border: 2px solid #FCE7F3;
+    padding: 20px 20px 24px;
+  }
+
+  &[data-phase='countdown'] {
+    background: #fff;
+    border: 2px solid #FECDD3;
+    padding: 20px;
+  }
+
+  // RECORDING: light base with a whisper of rose tint — red lives only in the elements
+  &[data-phase='recording'] {
+    background: #FFFBFB;
+    border: 2px solid rgba(244, 63, 94, 0.22);
+    box-shadow: 0 0 0 4px rgba(244, 63, 94, 0.06);
+    padding: 20px 20px 16px;
+  }
+
+  &[data-phase='processing'] {
+    background: #fff;
+    border: 2px solid #FCE7F3;
+    padding: 20px;
+  }
+
+  &[data-phase='review'] {
+    background: #fff;
+    border: 2px solid #E2E8F0;
+    padding: 20px;
+  }
+}
+
+// ── LISTEN zone ────────────────────────────────────────────────────────────────
+.listenZone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 4px;
+}
+
+// ── Idle decorative waveform (CSS-only, no JS) ─────────────────────────────────
+.idleWave {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  width: 100%;
+  height: 32px;
+}
+
+.idleBar {
+  flex: 1;
+  border-radius: 3px;
+  min-height: 3px;
+  background: linear-gradient(to top, #F9A8D4, #FECDD3);
+  animation: idleWave 2.2s ease-in-out infinite;
+  animation-delay: calc(var(--bar-idx) * 72ms);
+  max-width: 6px;
+}
+
+@keyframes idleWave {
+  0%, 100% { height: 3px;  opacity: 0.5; }
+  50%       { height: 22px; opacity: 1;   }
+}
+
+// ── Mic hero — the primary CTA ─────────────────────────────────────────────────
+.micHeroWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 130px;
+  flex-shrink: 0; // prevent parent flex from compressing either axis
+}
+
+// Three expanding rings — staggered pulse
+.pulseRing {
+  position: absolute;
+  width: 92px;
+  height: 92px;
+  aspect-ratio: 1 / 1;   // stays a circle if any layout edge case tries to resize it
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 2px solid rgba(219, 39, 119, 0.35);
+  animation: ringPulse 2.1s ease-out infinite;
+  animation-delay: var(--ring-delay, 0ms);
+  pointer-events: none;
+}
+
+@keyframes ringPulse {
+  from { transform: scale(1);   opacity: 0.65; }
+  to   { transform: scale(2);   opacity: 0; }
+}
+
+.micHeroBtn {
+  position: relative;
+  z-index: 1;
+  // Belt-and-suspenders circle enforcement:
+  // 1. equal explicit dimensions
+  width: 90px;
+  height: 90px;
+  // 2. aspect-ratio locks 1:1 if anything tries to stretch one axis
+  aspect-ratio: 1 / 1;
+  // 3. border-box so border/padding can't expand the box beyond 90px
+  box-sizing: border-box;
+  // 4. zero out browser default button padding (common oval cause)
+  padding: 0;
+  // 5. prevent parent flex from shrinking either axis independently
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(145deg, #EC4899, #DB2777);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  // All shadows are perfectly symmetric — no offset axis breaks the circle
+  box-shadow:
+    0 0 0 6px rgba(219, 39, 119, 0.12),
+    0 0 32px rgba(219, 39, 119, 0.40);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover:not(:disabled) {
+    transform: scale(1.07);
+    box-shadow:
+      0 0 0 12px rgba(219, 39, 119, 0.13),
+      0 0 48px rgba(219, 39, 119, 0.52);
+  }
+
+  &:active:not(:disabled) {
+    transform: scale(0.93);
+    box-shadow:
+      0 0 0 4px rgba(219, 39, 119, 0.10),
+      0 0 16px rgba(219, 39, 119, 0.30);
+    transition-duration: 0.08s;
+  }
+
+  &:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+    // Pause pulse rings on parent when disabled
+    & ~ .pulseRing { animation-play-state: paused; }
+  }
+
+  &:focus-visible { outline: 3px solid #DB2777; outline-offset: 8px; }
+}
+
+// ── Mic copy ───────────────────────────────────────────────────────────────────
+.micCopyWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+
+.micCopy {
+  margin: 0;
+  font-size: var(--text-base);
+  font-weight: 800;
+  color: #1E293B;
+  text-align: center;
+}
+
+.micSub {
+  margin: 0;
+  font-size: var(--text-xs);
+  font-weight: 500;
+  color: #94A3B8;
+  text-align: center;
+}
+
+.nativeBtn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 14px;
+  border: 2px solid #F9A8D4;
+  background: #FFF1F2;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, transform 0.1s, box-shadow 0.15s;
+
+  &:hover {
+    background: #FCE7F3;
+    border-color: #F472B6;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(219, 39, 119, 0.12);
+  }
+
+  &:active { transform: scale(0.98); }
+  &:focus-visible { outline: 2px solid #DB2777; outline-offset: 2px; }
+}
+
+.nativeBtnIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #DB2777;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 0 0 #BE185D, 0 6px 16px rgba(219, 39, 119, 0.3);
+  transition: box-shadow 0.1s;
+}
+
+.nativeBtnText {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 1px;
+
+  strong {
+    font-size: var(--text-sm);
+    font-weight: 800;
+    color: #9D174D;
+    line-height: 1.2;
+  }
+
+  small {
+    font-size: var(--text-xs);
+    font-weight: 500;
+    color: #DB2777;
+    opacity: 0.7;
+  }
+}
+
+.readyHint {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  color: #16A34A;
+  margin: 0;
+  animation: hintIn 0.3s ease-out both;
+
+  svg { color: #16A34A; }
+}
+
+@keyframes hintIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.noRefHint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: var(--space-3) 0;
+  text-align: center;
+
+  p {
+    margin: 0;
+    font-size: var(--text-sm);
+    color: #64748B;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+}
+
+.noRefIcon { color: #F9A8D4; }
+
+.micError {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #FEF2F2;
+  border: 1.5px solid #FCA5A5;
+  color: #DC2626;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  width: 100%;
+  animation: hintIn 0.3s ease-out both;
+}
+
+// ── COUNTDOWN zone ─────────────────────────────────────────────────────────────
+.countdownZone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: var(--space-4) 0;
+}
+
+.countdownNum {
+  font-size: 72px;
+  font-weight: 900;
+  line-height: 1;
+  color: #DB2777;
+  animation: countPop 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  display: block;
+}
+
+@keyframes countPop {
+  from { opacity: 0; transform: scale(0.4); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.countdownSub {
+  margin: 0;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: #BE185D;
+  opacity: 0.8;
+}
+
+// ── RECORDING zone ─────────────────────────────────────────────────────────────
+.recordingZone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+// "● REC" indicator
+.recIndicator {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.recDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #F43F5E;
+  animation: recPulse 1.1s ease-in-out infinite;
+}
+
+@keyframes recPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.4; transform: scale(0.75); }
+}
+
+.recLabel {
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  color: #F43F5E;
+}
+
+// Timer ring + stop button
+.timerWrap {
+  position: relative;
+  width: 88px;
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timerSvg {
+  position: absolute;
+  inset: 0;
+}
+
+.stopBtn {
+  position: relative;
+  z-index: 1;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
+  background: #F43F5E;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 0 0 3px rgba(244, 63, 94, 0.25), 0 4px 16px rgba(244, 63, 94, 0.4);
+  transition: transform 0.1s, box-shadow 0.1s;
+
+  &:hover  { transform: scale(1.08); box-shadow: 0 0 0 6px rgba(244, 63, 94, 0.2), 0 6px 20px rgba(244, 63, 94, 0.5); }
+  &:active { transform: scale(0.94); }
+  &:focus-visible { outline: 2px solid #F43F5E; outline-offset: 4px; }
+}
+
+.timeLeft {
+  font-size: var(--text-base);
+  font-weight: 900;
+  color: #94A3B8;
+  letter-spacing: 0.04em;
+}
+
+// Live waveform bars — heights updated by AnalyserNode in JS
+.waveformBars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  width: 100%;
+  height: 52px;
+}
+
+.waveBar {
+  flex: 1;
+  border-radius: 3px;
+  min-height: 4px;
+  height: 7%;
+  background: linear-gradient(to top, #BE185D, #FB7185);
+  transition: height 0.06s ease-out;
+  max-width: 7px;
+}
+
+// ── PROCESSING zone ────────────────────────────────────────────────────────────
+.processingZone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: var(--space-3) 0;
+}
+
+.processingBars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  width: 100%;
+  height: 48px;
+}
+
+.procBar {
+  flex: 1;
+  border-radius: 3px;
+  min-height: 4px;
+  background: linear-gradient(to top, #DB2777, #F9A8D4);
+  animation: procWave 0.8s ease-in-out infinite;
+  animation-delay: calc(var(--bar-idx) * 40ms);
+  max-width: 7px;
+}
+
+@keyframes procWave {
+  0%, 100% { height: 15%; }
+  50%       { height: 65%; }
+}
+
+.processingLabel {
+  margin: 0;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: #DB2777;
+  animation: processingDot 1.2s ease-in-out infinite;
+}
+
+@keyframes processingDot {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.5; }
+}
+
+// ── REVIEW zone ────────────────────────────────────────────────────────────────
+.reviewZone {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  animation: reviewIn 0.35s var(--easing-bounce) both;
+}
+
+@keyframes reviewIn {
+  from { opacity: 0; transform: translateY(12px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0)    scale(1); }
+}
+
+// "Response submitted" pill badge
+.submittedBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  background: #F0FDF4;
+  border: 1.5px solid #86EFAC;
+  color: #15803D;
+  font-size: var(--text-xs);
+  font-weight: 800;
+  align-self: flex-start;
+  animation: submittedIn 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+@keyframes submittedIn {
+  from { opacity: 0; transform: scale(0.7) translateY(-6px); }
+  to   { opacity: 1; transform: scale(1)   translateY(0); }
+}
+
+// 3-step progress stepper
+.stepper {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  padding: 2px 0;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.stepDot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #F1F5F9;
+  border: 2px solid #E2E8F0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #CBD5E1;
+  flex-shrink: 0;
+
+  &[data-done='true'] {
+    background: #16A34A;
+    border-color: #16A34A;
+    color: #fff;
+  }
+
+  &[data-active='true'] {
+    background: #FFF1F2;
+    border-color: #DB2777;
+  }
+}
+
+.stepPulse {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #DB2777;
+  animation: stepPulseAnim 1.4s ease-in-out infinite;
+}
+
+@keyframes stepPulseAnim {
+  0%, 100% { transform: scale(1);   opacity: 1; }
+  50%       { transform: scale(0.6); opacity: 0.4; }
+}
+
+.stepLine {
+  flex: 1;
+  height: 2px;
+  background: #E2E8F0;
+  margin-top: 13px; // aligns to center of 28px dot
+}
+
+.stepLabel {
+  font-size: 9px;
+  font-weight: 700;
+  color: #94A3B8;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.stepLabelDone   { color: #16A34A; }
+.stepLabelActive { color: #DB2777; }
+
+// Instructor message card
+.reviewMsg {
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: #F8FAFC;
+  border: 1.5px solid #E2E8F0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  animation: reviewMsgIn 0.4s ease-out 0.1s both;
+}
+
+@keyframes reviewMsgIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.reviewMsgTitle {
+  margin: 0;
+  font-size: var(--text-sm);
+  font-weight: 800;
+  color: #1E293B;
+}
+
+.reviewMsgSub {
+  margin: 0;
+  font-size: var(--text-xs);
+  color: #64748B;
+  line-height: 1.55;
+}
+
+// Criteria chip list
+.criteriaBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  animation: reviewMsgIn 0.4s ease-out 0.2s both;
+}
+
+.criteriaTitle {
+  margin: 0;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #94A3B8;
+}
+
+.criteriaList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.criteriaItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  background: #F0FDF4;
+  border: 1.5px solid #BBF7D0;
+  color: #15803D;
+  font-size: var(--text-xs);
+  font-weight: 700;
+
+  svg { color: #16A34A; }
+}
+
+// Mini replay button for recorded audio
+.replayRecBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: 1.5px solid #E2E8F0;
+  background: #F8FAFC;
+  color: #475569;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, transform 0.1s;
+
+  &:hover { background: #F1F5F9; border-color: #CBD5E1; transform: translateY(-1px); }
+  &:active { transform: scale(0.97); }
+}
+
+
+// ── Footer ─────────────────────────────────────────────────────────────────────
+.footer {
+  padding: var(--space-3) var(--space-5) var(--space-5);
+  max-width: 560px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+// ── Start speaking button ──────────────────────────────────────────────────────
+.startBtn {
+  width: 100%;
+  min-height: 52px;
+  border-radius: 14px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  font-size: var(--text-base);
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.12s, box-shadow 0.12s;
+
+  &:disabled {
+    background: #F1F5F9;
+    color: #94A3B8;
+    box-shadow: 0 4px 0 0 #E2E8F0;
+    cursor: not-allowed;
+  }
+
+  &:not(:disabled) {
+    background: #DB2777;
+    color: #fff;
+    box-shadow: 0 5px 0 0 #BE185D;
+
+    &:hover  { transform: translateY(-1px); box-shadow: 0 6px 0 0 #BE185D; }
+    &:active { transform: scale(0.97); box-shadow: 0 2px 0 0 #BE185D; transition-duration: 0.08s; }
+    &:focus-visible { outline: 2px solid #DB2777; outline-offset: 3px; }
+  }
+}
+
+// ── Review footer actions ──────────────────────────────────────────────────────
+.reviewActions {
+  display: flex;
+  gap: 10px;
+}
+
+.retryBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  flex: 1;
+  min-height: 50px;
+  border-radius: 14px;
+  border: 2.5px solid #E2E8F0;
+  background: #fff;
+  color: #475569;
+  font-size: var(--text-sm);
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 0 0 #E2E8F0;
+  transition: transform 0.1s, box-shadow 0.1s, border-color 0.15s;
+
+  &:hover  { border-color: #CBD5E1; transform: translateY(-1px); }
+  &:active { transform: translateY(2px); box-shadow: 0 1px 0 0 #E2E8F0; transition-duration: 0.08s; }
+  &:focus-visible { outline: 2px solid #94A3B8; outline-offset: 2px; }
+}
+
+.continueBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  flex: 2;
+  min-height: 50px;
+  border-radius: 14px;
+  border: none;
+  background: #16A34A;
+  color: #fff;
+  font-size: var(--text-base);
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 5px 0 0 #15803D;
+  transition: transform 0.1s, box-shadow 0.1s;
+
+  &:hover  { transform: translateY(-1px); box-shadow: 0 6px 0 0 #15803D; }
+  &:active { transform: translateY(3px);  box-shadow: 0 2px 0 0 #15803D; transition-duration: 0.08s; }
+  &:focus-visible { outline: 2px solid #16A34A; outline-offset: 3px; }
+}

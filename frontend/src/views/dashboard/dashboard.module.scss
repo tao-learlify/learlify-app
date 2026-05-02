@@ -1,0 +1,317 @@
+/* ==========================================================================
+   Dashboard — UserView layout.
+   Full replacement of index.module.scss + Bootstrap Row/Col composition.
+
+   Mirrors code.html:
+     1. WelcomeHeader
+     2. heroGrid (ContinueLearningCard 2/3 + StreakWidget 1/3)
+     3. Meeting alert
+     4. Practice Tests section (Exams)
+     5. Next Challenges section (Courses)
+     6. 2-col: Classes + Evaluations
+     7. Stats row
+     8. Subscription banner (demoted)
+
+   Domain component reset: all .border Bootstrap divs inside .domainBlock
+   get their visual identity overridden via scoped CSS — no internal rewrites.
+   ========================================================================== */
+
+/* ── Page wrapper ───────────────────────────────────────────────────────────── */
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  padding: var(--space-8) var(--space-8) var(--space-16);
+  background: linear-gradient(
+    135deg,
+    var(--color-bg-page) 0%,
+    rgba(37, 99, 235, 0.03) 50%,
+    rgba(59, 130, 246, 0.02) 100%
+  );
+  min-height: 100%;
+  position: relative;
+
+  @media (max-width: 768px) {
+    padding: var(--space-5) var(--space-4) var(--space-12);
+    gap: var(--space-5);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background: linear-gradient(
+      135deg,
+      var(--color-bg-page) 0%,
+      rgba(59, 130, 246, 0.05) 50%,
+      rgba(37, 99, 235, 0.03) 100%
+    );
+  }
+}
+
+/* ── Welcome header ─────────────────────────────────────────────────────────── */
+.welcomeHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+
+  @media (max-width: 576px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ── Hero grid: secondary support row — compact to not compete with path ─────── */
+.heroGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--space-5);
+  align-items: stretch;
+  opacity: 1;
+
+  & > * {
+    transition: all 0.3s ease-out;
+
+    &:hover {
+      transform: translateY(-4px);
+    }
+  }
+
+  @media (max-width: 960px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Meeting alert section ──────────────────────────────────────────────────── */
+/* Meeting renders Bootstrap Alert or null — we just give it breathing room */
+.meetingSection {
+  /* Bootstrap Alert inherits fine — just ensure no extra wrapper margin */
+
+  /* Override Bootstrap alert to use DS colors */
+  :global(.alert-success) {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(5, 150, 105, 0.05));
+    border: 1.5px solid rgba(16, 185, 129, 0.2);
+    color: var(--color-success-text);
+    border-radius: var(--radius-lg);
+    font-weight: var(--weight-semibold);
+    box-shadow: 0 4px 16px rgba(16, 185, 129, 0.08);
+  }
+
+}
+
+/* ── Generic section wrapper ────────────────────────────────────────────────── */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+/* ── Section header: title + "View all" link ────────────────────────────────── */
+/* Matches code.html: flex justify-between items-end mb-8 */
+.sectionHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-black);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent-blue-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+/* Matches code.html: text-primary font-black text-sm uppercase tracking-wider */
+.sectionLink {
+  font-family: var(--font-base);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-bold);
+  color: var(--color-primary);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-lg);
+  transition: all 0.2s ease-out;
+  position: relative;
+
+  &:hover {
+    background: rgba(37, 99, 235, 0.1);
+    text-decoration: none;
+    transform: translateX(2px);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+}
+
+/* ── Domain block — Bootstrap component container reset ─────────────────────── */
+/*
+ * Domain components (Exams, Stats, Courses, Classes, Evaluations, Banner) use
+ * Bootstrap's "border" utility class internally. Rather than rewriting them,
+ * we scope overrides to .domainBlock so they look like DS Cards.
+ *
+ * Specificity note: using :global so these can target Bootstrap classes.
+ */
+.domainBlock {
+  /* Give the block its own DS card shell with gradient and shadow */
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.5));
+  border: 1px solid rgba(37, 99, 235, 0.08);
+  box-shadow: 0 8px 32px rgba(37, 99, 235, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    border-color: rgba(37, 99, 235, 0.12);
+    box-shadow: 0 12px 48px rgba(37, 99, 235, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.6), rgba(15, 23, 42, 0.5));
+    border-color: rgba(59, 130, 246, 0.1);
+  }
+
+  /* ── Bootstrap .border reset inside domain components ─── */
+  :global(.border) {
+    border-color: transparent !important;
+    border-radius: var(--radius-xl) !important;
+    background: transparent;
+    overflow: hidden;
+  }
+
+  /* ── Bootstrap card internals ─── */
+  :global(.card) {
+    border-color: transparent;
+    border-radius: var(--radius-lg);
+    background: transparent;
+  }
+
+  /* ── Bootstrap table ─── */
+  :global(.table) {
+    color: var(--color-text-primary);
+  }
+
+  /* ── Anchors inside domain blocks ─── */
+  :global(a) {
+    color: var(--color-primary);
+    font-weight: var(--weight-semibold);
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--color-accent-blue-dark);
+    }
+  }
+}
+
+/* ── Main section wrapper ────────────────────────────────────────────────────── */
+.mainSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+/* ── Main 2-column grid: cards (left, 30%) + path (right, 70%) ──────────────── */
+.mainGrid {
+  display: grid;
+  grid-template-columns: 1.3fr 3fr;
+  gap: var(--space-8);
+  align-items: start;
+
+  @media (max-width: 1100px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Right column — "journey" area: path on top, level graph below */
+.mainLeft {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  min-width: 0;
+}
+
+/*
+ * ProgressGraph inside the journey column.
+ * Constrained to the same max-width as the path canvas (520px)
+ * and centered — creates visual alignment with the serpentine path above.
+ */
+.pathProgressGraph {
+  max-width: 520px;
+  width: 100%;
+  align-self: center;
+  position: relative;
+}
+
+/* Left column (cards) — visually secondary, compact and sticky */
+.mainRight {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  position: sticky;
+  top: var(--space-6);
+  min-width: 0;
+  /* Slight scale + opacity reduction — cards feel supportive, not competing */
+  font-size: 0.93em;
+  opacity: 0.88;
+  transition: opacity 200ms ease-out;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+/* ── Legacy aliases (kept for other views that may still reference them) ─────── */
+.challengesGrid {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: var(--space-8);
+  align-items: start;
+
+  @media (max-width: 960px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.challengesRight {
+  position: sticky;
+  top: var(--space-8);
+}
+
+/* ── Two-column content row ─────────────────────────────────────────────────── */
+.contentRow {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: var(--space-6);
+  align-items: start;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Stats section (bottom — matches code.html border-t py-10 grid) ─────────── */
+.statsSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding-top: var(--space-5);
+  border-top: 2px solid var(--color-border-default);
+}
+
+/* ── Subscription banner (demoted — subtle, at the very bottom) ─────────────── */
+.bannerSection {
+  /* Softly separated from the rest */
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border-default);
+  opacity: 0.9;
+}

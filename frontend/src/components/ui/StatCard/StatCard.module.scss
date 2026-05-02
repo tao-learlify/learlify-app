@@ -1,0 +1,111 @@
+/* ── StatCard ─────────────────────────────────────────────────────────────── */
+
+.card {
+  background: var(--color-bg-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-1);
+  padding: var(--space-5) var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  transition:
+    transform var(--duration-base) var(--easing-default),
+    box-shadow var(--duration-base) var(--easing-default);
+}
+
+/* ── Elevations ─────────────────────────────────────────────────────────────── */
+.elevated {
+  box-shadow: var(--shadow-2);
+}
+
+.interactive {
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-2);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-border-focus);
+    outline-offset: 2px;
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: var(--shadow-1);
+  }
+}
+
+/* ── Icon slot ──────────────────────────────────────────────────────────────── */
+.iconSlot {
+  font-size: var(--text-3xl);
+  line-height: 1;
+  margin-bottom: var(--space-2);
+  display: block;
+}
+
+/* ── Metric row ─────────────────────────────────────────────────────────────── */
+.metricRow {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+}
+
+.metric {
+  font-family: var(--font-display);
+  font-size: var(--text-5xl);
+  font-weight: var(--weight-black);
+  line-height: 1;
+  color: var(--color-text-primary);
+}
+
+/* ── Trend indicator ────────────────────────────────────────────────────────── */
+.trend {
+  font-family: var(--font-base);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-secondary);
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-muted);
+  white-space: nowrap;
+}
+
+.trendUp {
+  color: var(--color-success-text);
+  background: var(--color-success-bg);
+}
+
+.trendDown {
+  color: var(--color-danger-text);
+  background: var(--color-danger-bg);
+}
+
+/* ── Labels ─────────────────────────────────────────────────────────────────── */
+.label {
+  font-family: var(--font-base);
+  font-size: var(--text-base);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-primary);
+  margin: 0;
+  line-height: var(--leading-tight);
+}
+
+.sublabel {
+  font-family: var(--font-base);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* ── Color variants (metric text accent) ───────────────────────────────────── */
+.default  .metric { color: var(--color-text-primary); }
+
+.accent   .metric { color: var(--color-brand-primary); }
+
+.success  .metric { color: var(--color-success); }
+
+.warning  .metric { color: var(--color-warning); }
+
+.danger   .metric { color: var(--color-danger); }

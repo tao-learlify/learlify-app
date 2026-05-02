@@ -1,0 +1,1402 @@
+{
+  "name": "Exam 9",
+  "schema": [
+    {
+      "category": "Grammar & Vocabulary",
+      "exercises": [
+        {
+          "answers": [
+            "A. studies",
+            "B.study  ",
+            "C.studying  "
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": "1. James doesn't usually {x} on Sundays. "
+        },
+        {
+          "answers": [
+            "A.do there ",
+            "B.there is ",
+            "C.are there "
+          ],
+          "correct": 2,
+          "description": "None",
+          "label": "Grammar",
+          "title": " 2.How many chairs {x} in the room? "
+        },
+        {
+          "answers": [
+            "A.what ",
+            "B.which ",
+            "C.how "
+          ],
+          "correct": 2,
+          "description": "None",
+          "label": "Grammar",
+          "title": "3. {x} many languages can you speak?"
+        },
+        {
+          "answers": [
+            "A.during ",
+            "B.have to ",
+            "C.will have "
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "4.  I don’t see my friends {x} the week because I need to study. "
+        },
+        {
+          "answers": [
+            "A.have ",
+            "B.have to ",
+            "C.will have"
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": " 5. I {x} finish this project by Monday "
+        },
+        {
+          "answers": [
+            "A.should sleep ",
+            "B.shouldn’t sleep ",
+            "C.sleep "
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": " 6.You look tired. You {x} more. "
+        },
+        {
+          "answers": [
+            "A.such ",
+            "B.so  ",
+            "C.so much "
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": "7. Thomas is {x} sad today! "
+        },
+        {
+          "answers": [
+            "A.drove ",
+            "B.am driving ",
+            "C.was driving "
+          ],
+          "correct": 2,
+          "description": "None",
+          "label": "Grammar",
+          "title": " 8. I {x} when I saw her. "
+        },
+        {
+          "answers": [
+            "A.off ",
+            "B.in ",
+            "C.on "
+          ],
+          "correct": 2,
+          "description": "None",
+          "label": "Grammar",
+          "title": " 9. Get {x} the bus; it’s about to leave! "
+        },
+        {
+          "answers": [
+            "A.he ",
+            "B.him ",
+            "C.his "
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": "10.  Could you give {x} a glass of water? "
+        },
+        {
+          "answers": [
+            "A.read ",
+            "B.didn't read ",
+            "C.have read "
+          ],
+          "correct": 2,
+          "description": "None",
+          "label": "Grammar",
+          "title": " 11. I {x} this article twice. "
+        },
+        {
+          "answers": [
+            "A.to not give ",
+            "B.to don’t give ",
+            "C. not to give"
+          ],
+          "correct": 2,
+          "description": "None",
+          "label": "Grammar",
+          "title": "12. She told me {x} any food to the cat because he’s very fat."
+        },
+        {
+          "answers": [
+            "A.didn’t need to hurry ",
+            "B.needn’t have hurried ",
+            "C.mustn’t have hurried "
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": " 13.We {x} ! Look, the train hasn’t arrived yet!"
+        },
+        {
+          "answers": [
+            "A.has  ",
+            "B.have ",
+            "C.has been "
+          ],
+          "correct": 2,
+          "description": "None",
+          "label": "Grammar",
+          "title": " 14. My bike {x} stolen!"
+        },
+        {
+          "answers": [
+            "A.passing ",
+            "B.to pass ",
+            "C.pass "
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": "15.  It’s important for me {x} this exam. "
+        },
+        {
+          "answers": [
+            "A.a bit ",
+            "B.many ",
+            "C.much "
+          ],
+          "correct": 2,
+          "description": "None",
+          "label": "Grammar",
+          "title": "16. We don’t have {x} time before the flight. "
+        },
+        {
+          "answers": [
+            "A.will be",
+            "B.will",
+            "C.are "
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": " 17. The theatre {x} increasing prices later this season."
+        },
+        {
+          "answers": [
+            "A.wait ",
+            "B.waits ",
+            "C.waiting "
+          ],
+          "correct": 2,
+          "description": "None",
+          "label": "Grammar",
+          "title": " 18. Nobody likes {x} for the bus when it rains. "
+        },
+        {
+          "answers": [
+            "A.have started ",
+            "B.be started ",
+            "C.be started "
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "19. The film will {x} by 9 o’clock. "
+        },
+        {
+          "answers": [
+            "A. be running ",
+            "B.run ",
+            "C.have been running "
+          ],
+          "correct": 2,
+          "description": "None",
+          "label": "Grammar",
+          "title": " 20. The marathon started an hour ago. By the time they finish they will {x} for 2 hours. "
+        },
+        {
+          "answers": [
+            "A.had  ",
+            "B.has ",
+            "C.had had "
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": " 21.When I was 7 and I {x} a best friend called Daniel. "
+        },
+        {
+          "answers": [
+            "A.won’t ",
+            "B.didn’t ",
+            "C.isn’t "
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": " 22. I think it {x} rain this weekend. "
+        },
+        {
+          "answers": [
+            "A.would buy ",
+            "B.will buy ",
+            "C.would have bought "
+          ],
+          "correct": 2,
+          "description": "None",
+          "label": "Grammar",
+          "title": "23.  If I had more money, I {x} you those shoes you liked yesterday. "
+        },
+        {
+          "answers": [
+            "A.must have been ",
+            "B.must be ",
+            "C.must been "
+          ],
+          "correct": 0,
+          "description": "None",
+          "label": "Grammar",
+          "title": "24. Donna {x} very excited when she found out she won that competition."
+        },
+        {
+          "answers": [
+            "A.a ",
+            "B.--- ",
+            "C.the "
+          ],
+          "correct": 1,
+          "description": "None",
+          "label": "Grammar",
+          "title": "25.  I don’t like tea with {x} sugar. "
+        },
+        {
+          "description": "1.Write the letter (A-K) of the word that is most similar in meaning to a word on the left (1-5). Use each word only once. Write your answers (A-K) on your answer paper. You will not need five of the words (A-K).",
+          "label": "Vocabulary",
+          "questions": [
+            {
+              "title": "1.hear{x}  ",
+              "answers": [
+                "J listen",
+                "A body"
+              ],
+              "correct": 0
+            },
+            {
+              "title": "2.cup{x}  ",
+              "answers": [
+                "C mug",
+                "D collect"
+              ],
+              "correct": 0
+            },
+            {
+              "title": "3.money {x}",
+              "answers": [
+                "F cash",
+                "E box"
+              ],
+              "correct": 0
+            },
+            {
+              "title": "4.draw {x} ",
+              "answers": [
+                " B paint",
+                "G cook"
+              ],
+              "correct": 0
+            },
+            {
+              "title": "5.house {x} ",
+              "answers": [
+                "H home",
+                "K city"
+              ],
+              "correct": 0
+            }
+          ]
+        },
+        {
+          "description": " 2.Finish each sentence (6-10) using a word from the list (A-K). Use each word only once. Write your answers (A-K) on your answer paper. You will not need five of the words (A-K).",
+          "label": "Vocabulary",
+          "questions": [
+            {
+              "answers": [
+                "D crowd",
+                "B airline"
+              ],
+              "correct": 0,
+              "title": "6. A big group of people in one place is a/an .{x}"
+            },
+            {
+              "answers": [
+                "A diet",
+                "C cycle"
+              ],
+              "correct": 0,
+              "title": "7.Food or drinks somebody usually has is a/an .{x} "
+            },
+            {
+              "answers": [
+                "K enormous",
+                "H brave"
+              ],
+              "correct": 0,
+              "title": "8.Something extremely big is .{x} "
+            },
+            {
+              "answers": [
+                "F fix",
+                "H brave"
+              ],
+              "correct": 0,
+              "title": "9.  To repair something is to .{x}"
+            },
+            {
+              "answers": [
+                "G toy",
+                "J castle"
+              ],
+              "correct": 0,
+              "title": "10.A thing children play with a/an .{x} "
+            }
+          ]
+        },
+        {
+          "description": "3.Write the letter of the word on the right (A-K) that matches the definition on the left (11-15). Use each word only once. Write your answers (A-K) on your answer paper. You will not need five of the words (A-K).",
+          "label": "Vocabulary",
+          "questions": [
+            {
+              "answers": [
+                "B coin",
+                "A desert"
+              ],
+              "correct": 0,
+              "title": "11.A round piece of metal which we use as money.{x} "
+            },
+            {
+              "answers": [
+                "K lazy",
+                "D cushion"
+              ],
+              "correct": 0,
+              "title": "12. Somebody who doesn't want to work or do anything.{x}"
+            },
+            {
+              "answers": [
+                "C borrow",
+                "G frequent"
+              ],
+              "correct": 0,
+              "title": "13.To take something from another person and give it back later.{x} "
+            },
+            {
+              "answers": [
+                "F win",
+                "H behave"
+              ],
+              "correct": 0,
+              "title": "14. To get a first prize in the competition.{x} "
+            },
+            {
+              "answers": [
+                "E pill",
+                "J arrest"
+              ],
+              "correct": 0,
+              "title": "15. A small and usually round piece of medicine you take with water.{x} "
+            }
+          ]
+        },
+        {
+          "description": "4.Finish each sentence (16-20) using a word from the list (A-K). Use each word only once. Write your answers (A-K) on your answer paper. You will not need five of the words (A-K).",
+          "label": "Vocabulary",
+          "questions": [
+            {
+              "answers": [
+                "D horror",
+                "B honey"
+              ],
+              "correct": 0,
+              "title": "16.Jessica is too young to watch {x} films, she gets really scared. "
+            },
+            {
+              "answers": [
+                "J mix",
+                "E escort"
+              ],
+              "correct": 0,
+              "title": "17. If you {x} red and blue, you´ll get purple. "
+            },
+            {
+              "answers": [
+                "H jam",
+                "F dye"
+              ],
+              "correct": 0,
+              "title": "18.Sorry I'm late, I was stuck in a terrible traffic {x}.  "
+            },
+            {
+              "answers": [
+                "A save",
+                "G drum"
+              ],
+              "correct": 0,
+              "title": "19.I´d like to {x} enough money to buy a car. "
+            },
+            {
+              "answers": [
+                "C dish",
+                "K glove"
+              ],
+              "correct": 0,
+              "title": "20.We don't have the ingredients to cook this {x}. "
+            }
+          ]
+        },
+        {
+          "description": "5. Write the letter of the word on the right (A-K) that is most often used with a word on the left (21-25). Use each word only once. Write your answers (A-K) on your answer paper. You will not need five of the words (A-K).",
+          "label": "Vocabulary",
+          "questions": [
+            {
+              "answers": [
+                "B salary",
+                "A mist"
+              ],
+              "correct": 0,
+              "title": "21.low{x} "
+            },
+            {
+              "answers": [
+                "F experience",
+                "C pottery"
+              ],
+              "correct": 0,
+              "title": "22. gain {x}"
+            },
+            {
+              "answers": [
+                "E school",
+                "D obstacle"
+              ],
+              "correct": 0,
+              "title": "23.state {x} "
+            },
+            {
+              "answers": [
+                "H pitch",
+                "G hostage"
+              ],
+              "correct": 0,
+              "title": "24.football {x} "
+            },
+            {
+              "answers": [
+                "K maker",
+                "J junk"
+              ],
+              "correct": 0,
+              "title": "25.holiday {x} "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Reading",
+      "exercises": [
+        {
+          "description": "Choose one word from the list for each gap.",
+          "label": "Reading Part 1",
+          "questions": [
+            {
+              "title": "Hi Linda, {v} I just received your letter. {v} I´m so excited, {x} you are coming to visit me next week! {v}",
+              "answers": [
+                "A. because ",
+                "B. for ",
+                "C. to"
+              ],
+              "correct": 0
+            },
+            {
+              "title": "There are so {x} things I want to do with you. {v}",
+              "answers": [
+                "A. a lot ",
+                "B. much ",
+                "C. many"
+              ],
+              "correct": 2
+            },
+            {
+              "title": "First, I want us to go to the local art {x}. {v}",
+              "answers": [
+                "A. museum",
+                "B. police station ",
+                "C. town hall"
+              ],
+              "correct": 0
+            },
+            {
+              "title": "After we can go for {x} to a lovely restaurant I know in the city centre. {v}",
+              "answers": [
+                "A. lunch ",
+                "B. dinner ",
+                "C. breakfast "
+              ],
+              "correct": 0
+            },
+            {
+              "title": "{x} the evening there is a concert of my favourite band that I would love to go. {v}Love Agnes. {v}",
+              "answers": [
+                "A. On",
+                "B. In",
+                "C. At"
+              ],
+              "correct": 1
+            }
+          ]
+        },
+        {
+          "description": "Order the sentences (B-G) below to make a story. {v} The first sentence of the story (A) is given for you as an example. {v} A.-Game of Thrones is an American fantasy television series created by David Benioff and D. B. Weiss.",
+          "label": "Reading Part 2",
+          "questions": [
+            {
+              "title": " B The series started on HBO in the United States on April 17, 2011.",
+              "answers": [
+                "x"
+              ],
+              "orderAs": 3,
+              "correct": 0
+            },
+            {
+              "title": "C It is an adaptation of A Song of Ice and Fire, George R. R. Martin's series of fantasy novels, the first of which is A Game of Thrones. ",
+              "answers": [
+                "x"
+              ],
+              "orderAs": 1,
+              "correct": 0
+            },
+            {
+              "title": "D It concluded on May 19, 2019, with 73 episodes and eight seasons.",
+              "answers": [
+                "x"
+              ],
+              "orderAs": 5,
+              "correct": 0
+            },
+            {
+              "title": "E The final episode of 'Game of Thrones' was watched by 19.3 million viewers.",
+              "answers": [
+                "x"
+              ],
+              "orderAs": 6,
+              "correct": 0
+            },
+            {
+              "title": "F The show was both produced and filmed in Belfast and in the United Kingdom. ",
+              "answers": [
+                "x"
+              ],
+              "orderAs": 2,
+              "correct": 0
+            },
+            {
+              "title": "G Other filming locations also included Canada, Croatia, Iceland, Malta, Morocco and Spain. ",
+              "answers": [
+                "x"
+              ],
+              "orderAs": 4,
+              "correct": 0
+            }
+          ]
+        },
+        {
+          "description": "The sentences below are from some instructions, Put these sentences in the right order. The first sentences are done for you {v} A. If IKEA is planning to build a table, they must follow these instructions.",
+          "label": "Reading Part 2",
+          "questions": [
+            {
+              "title": "B Then they transport the wood to the fabric.",
+              "answers": [
+                "x"
+              ],
+              "orderAs": 2,
+              "correct": 0
+            },
+            {
+              "title": "C Transport the table to the store and sell it.",
+              "answers": [
+                "x"
+              ],
+              "orderAs": 5,
+              "correct": 0
+            },
+            {
+              "title": "D After that, they can cut the wood and make the pieces of the table.",
+              "answers": [
+                "x"
+              ],
+              "orderAs": 3,
+              "correct": 0
+            },
+            {
+              "title": "E Next, they ensemble the pieces.",
+              "answers": [
+                "x"
+              ],
+              "orderAs": 4,
+              "correct": 0
+            },
+            {
+              "title": "F Buy enough wood for the table.",
+              "answers": [
+                "x"
+              ],
+              "orderAs": 1,
+              "correct": 0
+            }
+          ]
+        },
+        {
+          "heading": "Transport",
+          "description": "Person A {v} I’ve always found the topic of traffic to be interesting as it varies in different cities. I think that it’s a topic that requires a lot more attention from the government because, with some simple changes, it could really be improved. Living in Madrid for many years has allowed me to figure out the tricks of avoiding such traffic, but sometimes even leaving home or work just one minute too late can lengthen my commute by thirty minutes or so which leaves me alone with my music. {v} Person B {v} Recently it has made more sense for me to take the metro to work every day instead of driving my car. Traffic was really making my commute extremely long, not to mention that finding a place to leave my car could sometimes take forever. Maybe not so much in smaller cities, but in big cities like Sevilla, we as a community should be giving this a little more thought and find ways to make everyones lives a little bit easier. {v} Person C {v} I have always felt happy about living in an outer suburb of Madrid where I can easily get to and from work using the Renfe or even cycling if I wanted to. Because of this, although I try to empathize with the people who sit in traffic for hours every day, I don’t totally understand how this is. The only experiences I’ve had with big traffic were travelling experiences, and even then I found the best way to pass the time was to turn up the radio and wait. {v} Person D {v} Punctuality is something I live by and so I am always on top of making sure to choose the best form of transportation for the time and time of day. I find that in Barcelona, if I walk out my door at a certain time, I can take my car without a problem. However, if I walk out my door at least five minutes later, my only solution is to hop on the metro. People might think this is a stressful way to live, but I enjoy the constant change.  ",
+          "subtitle": "Four people respond to an article about traffic caused by transportation in cities. Read their comments and answer the questions.",
+          "label": "Reading Part 4",
+          "questions": [
+            {
+              "answers": [
+                "Person A",
+                "Person B",
+                "Person C",
+                "Person D"
+              ],
+              "correct": 0,
+              "title": "1. Who thinks that there should be more focus on solving the traffic problem in cities?"
+            },
+            {
+              "answers": [
+                "Person A",
+                "Person B",
+                "Person C",
+                "Person D"
+              ],
+              "correct": 0,
+              "title": "2. Who explains that a small amount of time can make their drive a lot longer?"
+            },
+            {
+              "answers": [
+                "Person A",
+                "Person B",
+                "Person C",
+                "Person D"
+              ],
+              "correct": 1,
+              "title": "3. Who prefers to take public transportation because of difficulty parking?"
+            },
+            {
+              "answers": [
+                "Person A",
+                "Person B",
+                "Person C",
+                "Person D"
+              ],
+              "correct": 1,
+              "title": "4. Who thinks that traffic is only a problem in large cities?"
+            },
+            {
+              "answers": [
+                "Person A",
+                "Person B",
+                "Person C",
+                "Person D"
+              ],
+              "correct": 2,
+              "title": "5. Who thinks that the best way to handle traffic stress is by listening to music?"
+            },
+            {
+              "answers": [
+                "Person A",
+                "Person B",
+                "Person C",
+                "Person D"
+              ],
+              "correct": 3,
+              "title": "6. Who has no problem using different forms of transportation each day?"
+            },
+            {
+              "answers": [
+                "Person A",
+                "Person B",
+                "Person C",
+                "Person D"
+              ],
+              "correct": 3,
+              "title": "7. Who makes sure to arrive to work on time every day?"
+            }
+          ]
+        },
+        {
+          "description": "Read the text below. Match the headings A-H to the paragraphs 19-25.",
+          "label": "Reading Part 5",
+          "questions": [
+            {
+              "answers": [
+                "H. The results of too much carbon dioxide in water ",
+                "B. What people are doing to reduce marine pollution "
+              ],
+              "correct": 0,
+              "title": "19. Acidification is a type of marine pollution that is caused when the amount of carbon dioxide (CO2) {v} in bodies of water increases. Even though a slight percentage of carbon dioxide is from the {v} environment itself, a higher percentage is contributed by human activities. Over time, the {v} presence of extra carbon dioxide in water leads to increasing the acidity of the water. This results {v} in harming the marine organisms. If acidification is not stopped, it ultimately goes on to {v} negatively affect the food chains that are connected with the water bodies. Coral and plankton do {v} not survive in water that is highly acidic. "
+            },
+            {
+              "answers": [
+                "E. The effects of excess nutrients "
+              ],
+              "correct": 0,
+              "title": "20. When water has too many nutrients, the process is known as eutrophication or hypertrophication. {v} This process encourages the growth of algae and plants in water leading to the reduction of {v} oxygen in water. Shellfish, fish and other aquatic animals find it difficult to survive in water that {v} does not have the appropriate oxygen level. This process is generally caused by the release {v} of fertilizers, detergents containing specific salts, or sewage into the water bodies. The rate at {v} which these nutrients find their way into lakes, seas, or oceans is increasing due to the activities {v} of humans. According to the World Resources Institute, there are 375 coastal zones in the {v} world that are affected by eutrophication. "
+            },
+            {
+              "answers": [
+                "A. Plastic: the worst cause of marine pollution "
+              ],
+              "correct": 0,
+              "title": "21. Plastic is increasingly finding its way into the water bodies. The problem is that plastic never goes {v} away. Moreover, plastic is not only harmful for the life under water, it is a threat to wildlife. {v} Thousands of sea turtles, seals, seabirds and other marine mammals get killed as they eat plastic {v} or get trapped in it. The concentration of plastic pollution is a serious issue for the world’s major {v} oceans - the Atlantic, the Pacific and the Indian ocean. If there is no quick action taken against {v} plastic pollution, it is going to affect the entire marine ecosystem, along with the economy. "
+            },
+            {
+              "answers": [
+                "F. How plastic waste directly affects humans "
+              ],
+              "correct": 0,
+              "title": "22. Additionally, plastic is also harmful to people. Since plastic floats on the surface, it is dangerous {v} for swimmers or surfers. Microplastics are also a threat to humans. They range from the size {v} of a grain of rice to a microscopic sliver, undetectable by the human eye. Thanks to pollution, {v} microplastics find their way into the digestive system of fish and other marine life, and then {v} eventually end up in our food. These plastics, though small, when ingested by humans can have {v} negative effects on our health. They release harmful chemicals into our systems, and though {v} it may be tiny amounts, if enough is ingested over time, it can have serious effects. "
+            },
+            {
+              "answers": [
+                "C. How dirty water affects more than just fish "
+              ],
+              "correct": 0,
+              "title": "23. Toxins, especially those present in industrial waste-water, are one of the main causes of marine {v} pollution. Toxins can also come from agricultural farms and urban areas and they can cause {v} erosion. As toxins enter the water, they lower the level of oxygen content in the water. As most {v} of the toxins easily dissolve with water, it is difficult to separate the toxic waters. With time, the {v} toxins enter the food chain and when humans eat fish from such water, they get ill. Also, there {v} are some animals that feed on fish and they too can be affected by the harmful toxins. "
+            },
+            {
+              "answers": [
+                "G. What causes underwater noise pollution "
+              ],
+              "correct": 0,
+              "title": "24.Underwater noise is generally created by humans and their activities, such as experiments, use {v} of explosives, ship traffic, underwater construction, air guns, and other activities. Though the {v} passage of sound underwater is a topic that humans have studied for centuries, the negative {v} effect of noise on marine life is only recently being discovered, since about the 1990s. And {v} {v} because noise travels very fast in water, scientists are now seeing that the problem of {v} underwater noise pollution for marine life is far greater than that of regular noise pollution on land {v} animals. Marine animals are very sensitive to noise, and studies have shown that certain {v} species will die within a few hours after they have been subjected to a lot of noise pollution. "
+            },
+            {
+              "answers": [
+                "D. What damage is done by noise pollution "
+              ],
+              "correct": 0,
+              "title": "25. Specifically, due to noise pollution from ships, the populations of dolphins and whales have {v} decreased significantly. Squid, cuttlefish, and octopi are also threatened by human-created noise {v} pollution. Thousands of confused, stranded, and injured giant squids turned up in the coastal {v} areas of Spain both in 2001 and 2003, thanks to the use of air guns sending sound across the {v} ocean floor, searching for petroleum. The frequency of the blasts damages, or even fully {v} destroys, the animals’ mechanism that allows them to navigate and maintain balance, both {v} {v} essential for survival. The study of the dead squids confirmed for scientists that noise pollution is {v} a very serious problem that needs to be addressed quickly. "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Listening",
+      "exercises": [
+        {
+          "answers": [
+            "1. Short and black",
+            "2. Short and blonde",
+            "3. Long and black"
+          ],
+          "correct": 0,
+          "description": "This is the Aptis Listening Test.",
+          "label": "Listening Part 1",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/C9-1.mp3",
+          "title": "1. Craig rings to tell you about a friend. What type of hair does his friend have? {x}"
+        },
+        {
+          "answers": [
+            "1. Serious and hardworking.",
+            "2. Funny and adventurous.",
+            "3. Talkative and fearful"
+          ],
+          "correct": 1,
+          "description": "This is the Aptis Listening Test.",
+          "label": "Listening Part 1",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/C9-2.mp3",
+          "title": "2. Listen to a woman describing her best friend. What kind of personality does the best friend have?  {x}"
+        },
+        {
+          "answers": [
+            "1. Participates in car sharing",
+            "2. Recycles",
+            "3. Tries to use less electricity"
+          ],
+          "correct": 1,
+          "description": "This is the Aptis Listening Test.",
+          "label": "Listening Part 1",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/C9-3.mp3",
+          "title": "3. Listen to Sara talk about a conference that he just attended about the environment. What does Sara do to help the environment?  {x}"
+        },
+        {
+          "answers": [
+            "1. World War I",
+            "2. World War I and World War II",
+            "3. World War II and the American Civil War"
+          ],
+          "correct": 1,
+          "description": "This is the Aptis Listening Test.",
+          "label": "Listening Part 1",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/C9-4.mp3",
+          "title": "4. You will hear a girl talking about what her history class. What is the girl learning about in history class?  {x}"
+        },
+        {
+          "answers": [
+            "1. Sports camp",
+            "2. Music camp",
+            "3. Science camp"
+          ],
+          "correct": 0,
+          "description": "This is the Aptis Listening Test.",
+          "label": "Listening Part 1",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/C9-5.mp3",
+          "title": "5. You will hear a conversation between a mother and daughter about the summer. What activity does the Mom want her daughter to do this summer? {x}"
+        },
+        {
+          "answers": [
+            "1. Science",
+            "2. History",
+            "3. Mathematics"
+          ],
+          "correct": 2,
+          "description": "This is the Aptis Listening Test.",
+          "label": "Listening Part 1",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/C9-6.mp3",
+          "title": "6. Listen to the boy talk about his classes in school. Which is the boy’s favourite class? {x}"
+        },
+        {
+          "answers": [
+            "1. Scary",
+            "2. Sad",
+            "3. Entertaining"
+          ],
+          "correct": 1,
+          "description": "This is the Aptis Listening Test.",
+          "label": "Listening Part 1",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/C9-7.mp3",
+          "title": "7. Listen to Amanda discuss a film with her friend. What did Amanda think of the film? {x} "
+        },
+        {
+          "answers": [
+            "1. It’s best to start small, otherwise you’ll get overwhelmed",
+            "2. Offering donations is better than volunteering time",
+            "3. Any amount of contribution is worth it, even if it doesn’t seem much"
+          ],
+          "correct": 2,
+          "description": "This is the Aptis Listening Test.",
+          "label": "Listening Part 1",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/C9-8.mp3",
+          "title": "8. Listen to a person talking about charity. What is their overall view on charity? {x}"
+        },
+        {
+          "answers": [
+            "1. He thinks voting really matters",
+            "2. He isn't happy with the results",
+            "3. He was to stressed out to vote"
+          ],
+          "correct": 1,
+          "description": "This is the Aptis Listening Test.",
+          "label": "Listening Part 1",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/C9-9.mp3",
+          "title": "9. Listen to the person talking about politics. What does he think about the recent elections? {x}"
+        },
+        {
+          "answers": [
+            "1. Buy a safe to store their valuables in",
+            "2. Move to a new house",
+            "3. Put more locks on the doors"
+          ],
+          "correct": 1,
+          "description": "This is the Aptis Listening Test.",
+          "label": "Listening Part 1",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/C9-10.mp3",
+          "title": "10. Listen to the person talking about the time their house was broken into. What is one thing they did not do as a result?  {x}.    "
+        },
+        {
+          "answers": [
+            "1. Hopeful, but not overly confident",
+            "2. Overwhelmed by the amount of support they’re receiving",
+            "3. Attacked by their opponents"
+          ],
+          "correct": 0,
+          "description": "This is the Aptis Listening Test.",
+          "label": "Listening Part 1",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/C9-11.mp3",
+          "title": "11. A politician is speaking to a radio host about the upcoming election. How are they feeling about their approval ratings? {x}"
+        },
+        {
+          "answers": [
+            "1. 4.30",
+            "2. 7.30",
+            " 3. 8.00"
+          ],
+          "correct": 1,
+          "description": "This is the Aptis Listening Test.",
+          "label": "Listening Part 1",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/C9-12.mp3",
+          "title": "12. Listen to a man talk about a basketball match. What time will the match start? {x}"
+        },
+        {
+          "answers": [
+            "1. I-95",
+            "2. Exit 3",
+            " 3. Exit 23"
+          ],
+          "correct": 1,
+          "description": "This is the Aptis Listening Test.",
+          "label": "Listening Part 1",
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/C9-13.mp3",
+          "title": "13. A TV announcer is talking about a recent car accident. Where did the car accident take place? The car accident took place on: {x} "
+        },
+        {
+          "questions": [
+            {
+              "title": "Speaker A {x}",
+              "answers": [
+                "A. Wants to go to the park.",
+                "B. Will play frisbee at the park.",
+                "C. Prefers to play alone.",
+                "D. Loves team sports.",
+                "E. Respects and admires her sister.",
+                "F. Was amazed by the comeback."
+              ],
+              "correct": 3
+            },
+            {
+              "title": "Speaker B {x}",
+              "answers": [
+                "A. Wants to go to the park.",
+                "B. Will play frisbee at the park.",
+                "C. Prefers to play alone.",
+                "D. Loves team sports.",
+                "E. Respects and admires her sister.",
+                "F. Was amazed by the comeback."
+              ],
+              "correct": 4
+            },
+            {
+              "title": "Speaker C {x}",
+              "answers": [
+                "A. Wants to go to the park.",
+                "B. Will play frisbee at the park.",
+                "C. Prefers to play alone.",
+                "D. Loves team sports.",
+                "E. Respects and admires her sister.",
+                "F. Was amazed by the comeback."
+              ],
+              "correct": 5
+            },
+            {
+              "title": "Speaker D {x}",
+              "answers": [
+                "A. Wants to go to the park.",
+                "B. Will play frisbee at the park.",
+                "C. Prefers to play alone.",
+                "D. Loves team sports.",
+                "E. Respects and admires her sister.",
+                "F. Was amazed by the comeback."
+              ],
+              "correct": 0
+            }
+          ],
+          "description": "This is the Aptis Listening Test.",
+          "label": "Listening Part 2",
+          "part": 2,
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/C9-14.mp3",
+          "title": "14. Four people are talking about sports. Complete the sentences below. {x}"
+        },
+        {
+          "questions": [
+            {
+              "title": "Money is not the key to happiness. {x}",
+              "answers": [
+                "Man",
+                "Woman",
+                "Both"
+              ],
+              "correct": 0
+            },
+            {
+              "title": "Money is a good way to be happy. {x}",
+              "answers": [
+                "Man",
+                "Woman",
+                "Both"
+              ],
+              "correct": 1
+            },
+            {
+              "title": "Too much work can cause problems in your life. {x}",
+              "answers": [
+                "Man",
+                "Woman",
+                "Both"
+              ],
+              "correct": 0
+            },
+            {
+              "title": "Sometimes it’s smart to take a break from work.{x}",
+              "answers": [
+                "Man",
+                "Woman",
+                "Both"
+              ],
+              "correct": 1
+            }
+          ],
+          "description": "This is the Aptis Listening Test.",
+          "label": "Listening Part 2",
+          "part": 2,
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/C9-15.mp3",
+          "title": "15. Listen to a man and a woman discuss the relation between happiness and money. Read the opinions below and decide whose opinion matches the statements made by the man, the woman or both the man and the woman. {x} "
+        },
+        {
+          "questions": [
+            {
+              "title": "Question 1: What is his opinion on the life of celebrity? {x}",
+              "answers": [
+                "It is not safe to be a celebrity as most celebrities lack privacy and have aggressive fans.",
+                "It can be a difficult lifestyle but the fans make it rewarding in the end.",
+                "It is everyone's dream to be a celebrity and live a life of fame."
+              ],
+              "correct": 1
+            },
+            {
+              "title": "Question 2: What is his opinion on how fans act towards celebrities? {x}",
+              "answers": [
+                "He thinks that fans are always a positive and encouraging part of a celebrities life.",
+                "He thinks that fans play a big role in how famous a celebrity is.",
+                "He thinks that fans make it difficult for celebrities to have their own privacy."
+              ],
+              "correct": 2
+            }
+          ],
+          "description": "This is the Aptis Listening Test.",
+          "label": "Listening Part 3",
+          "part": 3,
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/C9-16.mp3",
+          "title": "16. Listen to a reporter talk about the good and bad things that come with being famous and answer the questions below. {x} "
+        },
+        {
+          "questions": [
+            {
+              "title": "Question 1: What does the woman think about zoos in general? {x}",
+              "answers": [
+                "She thinks they are safe, enjoyable areas for both animals and humans.",
+                "She thinks that animals receive all their basic needs while living in a zoo.",
+                "She thinks that it is difficult for zoo animals to feel the freedom they would outside the zoo. "
+              ],
+              "correct": 2
+            },
+            {
+              "title": "Question 2: What does the woman think it would be like to be a zoo animal? {x}",
+              "answers": [
+                "It would be a relaxing and safe lifestyle.",
+                "It would be a stressful and difficult lifestyle.",
+                "It would be an easy yet unfulfilling lifestyle."
+              ],
+              "correct": 2
+            }
+          ],
+          "description": "This is the Aptis Listening Test.",
+          "label": "Listening Part 3",
+          "part": 3,
+          "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/C9-17.mp3",
+          "title": "17. Listen to a woman give a talk on the life of a zoo animal and answer the questions below. {x} "
+        }
+      ]
+    },
+    {
+      "category": "Writing",
+      "exercises": [
+        {
+          "description": "You are a member of a TV club. {v} Write short answers (1-5 words) to each message.",
+          "label": "Writing Part 1",
+          "questions": [
+            {
+              "answers": [
+                "x"
+              ],
+              "title": "How are you today? {x}",
+              "correct": 0
+            },
+            {
+              "answers": [
+                "x"
+              ],
+              "title": "What type of series do you like? {x}",
+              "correct": 0
+            },
+            {
+              "answers": [
+                "x"
+              ],
+              "title": "Who do you usually watch TV with? {x}",
+              "correct": 0
+            },
+            {
+              "answers": [
+                "x"
+              ],
+              "title": "What is your favourite time of the day to watch TV? {x}",
+              "correct": 0
+            },
+            {
+              "answers": [
+                "x"
+              ],
+              "title": "What is your favourite food/drink to eat during a TV show? {x}",
+              "correct": 0
+            }
+          ]
+        },
+        {
+          "description": "You are a member of the TV club. Fill in the form. {v} Write sentences. {v} Use 20-30 words. You have seven minutes to do this",
+          "label": "Writing Part 2",
+          "questions": [
+            {
+              "subtitle": "",
+              "title": "Please tell us how often you watch series and why you enjoy them. {x}",
+              "answers": [
+                "x"
+              ],
+              "correct": 0
+            }
+          ]
+        },
+        {
+          "description": "You are a member of a TV club. You are talking to some members in the music club chat room. {v} Talk to them using sentences. {v} use 30-40 words per answer.",
+          "label": "Writing Part 3",
+          "questions": [
+            {
+              "title": "A: Hello, welcome to the club, can you remember the first TV programme you saw? {x}",
+              "answers": [
+                "x"
+              ],
+              "correct": 0
+            },
+            {
+              "title": "B:  What are some of your favourite series? Why? {x}",
+              "answers": [
+                "x"
+              ],
+              "correct": 0
+            },
+            {
+              "title": "C: Apparently the club is going to start posting members’ time spent watching TV on the website.  {x}",
+              "answers": [
+                "x"
+              ],
+              "correct": 0
+            }
+          ]
+        },
+        {
+          "description": " You are a member of a TV club. You received this e-mail from the club. {v} Dear member, {v} We are writing that we will not be able to purchase the new televisions from Sumsang {v} at the reduced price as previously thought. The TV’s were advertised as £200 each but in the end {v} they will cost £300. If you would like us to refund your money, please contact the club secretary.  {v}",
+          "label": "Writing Part 4",
+          "questions": [
+            {
+              "title": "Write an email to your friend. Write about your feelings and what you are planning to do. {v} Write about 50 words. You have 10 minutes. {x}",
+              "answers": [
+                "x"
+              ],
+              "correct": 0
+            },
+            {
+              "title": "Write an email to the secretary of the club. Write about your feelings and what you would like to do. {v} Write 120-150 words. You have 20 minutes. {x}",
+              "answers": [
+                "x"
+              ],
+              "correct": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Speaking",
+      "exercises": [
+        {
+          "description": "Part One. In this part, I’m going to ask you three short questions about yourself and your interests. {v} You will have 30 seconds to reply to each question.",
+          "label": "Speaking Part 1",
+          "recordingTime": 45,
+          "questions": [
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/S9-1-1.mp3",
+              "title": "Can you tell me what you like doing during the summer?{x} ",
+              "answers": [
+                "x"
+              ],
+              "correct": 0
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/S9-1-2.mp3",
+              "title": "What type of music do you like?{x} ",
+              "answers": [
+                "x"
+              ],
+              "correct": 0
+            },
+            {
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/S9-1-3.mp3",
+              "title": "Do you like reading? ",
+              "answers": [
+                "x"
+              ],
+              "correct": 0
+            }
+          ]
+        },
+        {
+          "description": "Part Two. In this part, I’m going to ask you to describe what is happening in a picture. Make sure you answer as fully as possible.",
+          "label": "Speaking Part 2",
+          "recordingTime": 60,
+          "questions": [
+            {
+              "answers": [
+                "x"
+              ],
+              "correct": 0,
+              "imageUrl": {
+                "images": [
+                  "https://dkmwdxc6g4lk7.cloudfront.net/img/p2-t9.jpg"
+                ]
+              },
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/S9-2-1.mp3",
+              "title": "Describe this picture."
+            },
+            {
+              "answers": [
+                "x"
+              ],
+              "correct": 0,
+              "imageUrl": {
+                "images": [
+                  "https://dkmwdxc6g4lk7.cloudfront.net/img/p2-t9.jpg"
+                ]
+              },
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/S9-2-2.mp3",
+              "title": " Tell me about the last time you went to the cinema.{x}"
+            },
+            {
+              "answers": [
+                "x"
+              ],
+              "correct": 0,
+              "imageUrl": {
+                "images": [
+                  "https://dkmwdxc6g4lk7.cloudfront.net/img/p2-t9.jpg"
+                ]
+              },
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/S9-2-3.mp3",
+              "title": " What kinds of films are most popular in your country?{x}"
+            }
+          ]
+        },
+        {
+          "description": "Part Three. In this part I’m going to ask you to look at the pictures, then ask you two questions. You will have 60 seconds for each response. Begin speaking when you hear this sound [beep]. Make sure you answer as fully as possible",
+          "label": "Speaking Part 3",
+          "recordingTime": 60,
+          "questions": [
+            {
+              "answers": [
+                "x"
+              ],
+              "correct": 0,
+              "imageUrl": {
+                "images": [
+                  "https://dkmwdxc6g4lk7.cloudfront.net/img/p3-t9.1.jpg",
+                  "https://dkmwdxc6g4lk7.cloudfront.net/img/p3-t9.2.jpg"
+                ]
+              },
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/S9-3-1.mp3",
+              "title": "Compare the photographs{x} "
+            },
+            {
+              "answers": [
+                "x"
+              ],
+              "correct": 0,
+              "imageUrl": {
+                "images": [
+                  "https://dkmwdxc6g4lk7.cloudfront.net/img/p3-t9.1.jpg",
+                  "https://dkmwdxc6g4lk7.cloudfront.net/img/p3-t9.2.jpg"
+                ]
+              },
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/S9-3-2.mp3",
+              "title": " How important is seeing a doctor in these situations?{x}"
+            },
+            {
+              "answers": [
+                "x"
+              ],
+              "correct": 0,
+              "imageUrl": {
+                "images": [
+                  "https://dkmwdxc6g4lk7.cloudfront.net/img/p3-t9.1.jpg",
+                  "https://dkmwdxc6g4lk7.cloudfront.net/img/p3-t9.2.jpg"
+                ]
+              },
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/S9-3-3.mp3",
+              "title": "What should people do to stay healthy?{x} "
+            }
+          ]
+        },
+        {
+          "description": " Look at the picture and answer the questions below. {v} Think about  your answers before you start speaking. You will have 135 seconds to talk.",
+          "label": "Speaking Part 4",
+          "recordingTime": 120,
+          "questions": [
+            {
+              "answers": [
+                "x"
+              ],
+              "correct": 0,
+              "imageUrl": {
+                "images": "https://dkmwdxc6g4lk7.cloudfront.net/img/p4-t9.jpg"
+              },
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/S9-4-1.mp3",
+              "title": "What are the apps you use the most?{x} "
+            },
+            {
+              "answers": [
+                "x"
+              ],
+              "correct": 0,
+              "imageUrl": {
+                "images": "https://dkmwdxc6g4lk7.cloudfront.net/img/p4-t9.jpg"
+              },
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/S9-4-2.mp3",
+              "title": " How would you feel if you forgot your phone at home?{x}"
+            },
+            {
+              "answers": [
+                "x"
+              ],
+              "correct": 0,
+              "imageUrl": {
+                "images": "https://dkmwdxc6g4lk7.cloudfront.net/img/p4-t9.jpg"
+              },
+              "recordingUrl": "https://dkmwdxc6g4lk7.cloudfront.net/S9-4-3.mp3",
+              "title": " How have mobile phones changed our lives?"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "title": "Now Streaming",
+  "description": "Share opinions, describe the people you know, and talk about what you love watching — like a real conversation, not a textbook."
+}
