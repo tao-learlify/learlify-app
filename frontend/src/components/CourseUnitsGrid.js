@@ -14,6 +14,7 @@ import React, { memo } from 'react'
 import { useHistory } from 'react-router-dom'
 import clsx from 'clsx'
 import { CheckCircle, Lock, Play } from '@phosphor-icons/react'
+import { buildUnitPath } from 'utils/courseParams'
 import styles from './CourseUnitsGrid.module.scss'
 
 const CourseUnitsGrid = memo(function CourseUnitsGrid({ units = [], courseId = 1, compact = false }) {
@@ -23,7 +24,7 @@ const CourseUnitsGrid = memo(function CourseUnitsGrid({ units = [], courseId = 1
     if (unit.state !== 'locked' || unit.type === 'challenge-premium') {
       // Navigate to the unit if not locked (or premium locked)
       if (unit.unitOrder) {
-        history.push(`/courses/${courseId}/units/${unit.unitOrder}`)
+        history.push(buildUnitPath(courseId, unit.unitOrder))
       } else if (unit.examId) {
         history.push(`/exam/${unit.examId}`)
       }

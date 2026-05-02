@@ -25,6 +25,7 @@ import WelcomeHeader from './components/WelcomeHeader'
 
 import { fetchEvaluationsThunk } from 'store/@thunks/evaluations'
 
+import { buildUnitPath } from 'utils/courseParams'
 import styles from './dashboard.module.scss'
 import { LearningPath, ProgressGraph, ExamQueue } from 'components/ui'
 
@@ -114,7 +115,8 @@ const UserView = () => {
                   units={pathUnits}
                   streak={streak ?? 7}
                   totalXP={user?.profile?.xp ?? 420}
-                  onUnitClick={unit => history.push(`/courses/${pathCourseId ?? 1}/units/${unit.id}`)}
+                  onUnitClick={unit => history.push(buildUnitPath(pathCourseId ?? 1, unit.unitOrder ?? unit.id))}
+                  onLockedUnitClick={() => history.push('/plans')}
                 />
               </div>
             </div>

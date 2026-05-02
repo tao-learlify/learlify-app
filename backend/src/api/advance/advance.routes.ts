@@ -25,8 +25,14 @@ class AdvanceRouter {
 
     this.advance.get(
       '/',
-      [Middleware.authenticate, pipe.create, Middleware.usePipe] as RequestHandler[],
+      [Middleware.authenticate, pipe.getOne, Middleware.usePipe] as RequestHandler[],
       Middleware.secure(this.controller.getAll) as RequestHandler
+    )
+
+    this.advance.get(
+      '/unit/:unitId',
+      [Middleware.authenticate] as RequestHandler[],
+      Middleware.secure(this.controller.getByUnit) as RequestHandler
     )
 
     this.advance.post(
