@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
-import { Badge, NavDropdown, Nav } from 'react-bootstrap'
+import { NavDropdown, Nav } from 'react-bootstrap'
+import { Badge } from 'components/ui'
 import { Link, useHistory } from 'react-router-dom'
 import { ic_more_vert } from 'react-icons-kit/md/ic_more_vert'
 import { signOut } from 'react-icons-kit/fa/signOut'

@@ -1,5 +1,5 @@
 import React, { memo } from 'react'
-import { Badge } from 'react-bootstrap'
+import { Badge } from 'components/ui'
 
 import Text from './Text'
 

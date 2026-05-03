@@ -1,6 +1,7 @@
 import React, { memo, useRef, useReducer } from 'react'
 import PropTypes from 'prop-types'
-import { Row, Col, Button } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
+import { Button } from 'components/ui'
 import Icon from 'react-icons-kit'
 import classNames from 'clsx'
 

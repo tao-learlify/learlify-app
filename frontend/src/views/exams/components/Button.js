@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'clsx'
-import { Button } from 'react-bootstrap'
+import { Button } from 'components/ui'
 import './css/index.css'
 
 const AptisButton = ({ children, className, disabled, onClick, type }) => (

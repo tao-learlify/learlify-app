@@ -28,9 +28,10 @@ const Badge = memo(function Badge({
   dot = false,
   className,
   children,
+  ...rest
 }) {
   return (
-    <span className={clsx(styles.badge, styles[variant], className)}>
+    <span className={clsx(styles.badge, styles[variant], className)} {...rest}>
       {dot && <span className={styles.dot} aria-hidden="true" />}
       {children}
     </span>

@@ -1,7 +1,7 @@
 import React, { memo } from 'react'
 import { withRouter } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
-import { Button } from 'react-bootstrap'
+import { Button } from 'components/ui'
 import { compose } from 'redux'
 import { Animated } from 'react-animated-css'
 

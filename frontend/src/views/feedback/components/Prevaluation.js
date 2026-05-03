@@ -2,7 +2,7 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { useHistory } from 'react-router-dom'
 
-import { Button } from 'react-bootstrap'
+import { Button } from 'components/ui'
 import Confetti from 'react-confetti'
 
 import useFeedback from 'hooks/useFeedback'

@@ -1,5 +1,6 @@
 import React, { memo, useCallback } from 'react'
-import { Button, Form } from 'react-bootstrap'
+import { Form } from 'react-bootstrap'
+import { Button } from 'components/ui'
 import { useTranslation } from 'react-i18next'
 import { ic_person_add } from 'react-icons-kit/md/ic_person_add'
 import { ic_block } from 'react-icons-kit/md/ic_block'

@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import { useDispatch } from 'react-redux'
 import { useHistory, useLocation } from 'react-router-dom'
 import { ToastsStore } from 'react-toasts'
-import { Button } from 'react-bootstrap'
+import { Button } from 'components/ui'
 import { useTranslation } from 'react-i18next'
 
 import { CORE, GRAMMAR, SPEAKING, WRITING } from 'constant/labels'

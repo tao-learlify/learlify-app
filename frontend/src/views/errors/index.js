@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
-import { Container, Button, FormGroup } from 'react-bootstrap'
+import { Container, FormGroup } from 'react-bootstrap'
+import { Button } from 'components/ui'
 
 import Animate from 'components/Animate'
 import Emoji from 'components/Emoji'

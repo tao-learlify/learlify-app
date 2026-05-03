@@ -1,7 +1,8 @@
 import React, { useLayoutEffect } from 'react'
 import { useHistory } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { Button, Col, Row } from 'react-bootstrap'
+import { Col, Row } from 'react-bootstrap'
+import { Button } from 'components/ui'
 
 import Template from 'components/Template'
 import Text from 'components/Text'

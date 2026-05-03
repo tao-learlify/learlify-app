@@ -1,5 +1,6 @@
 import React, { useCallback, memo } from 'react'
-import { Button, Form } from 'react-bootstrap'
+import { Form } from 'react-bootstrap'
+import { Button } from 'components/ui'
 import { warning } from 'react-icons-kit/fa/warning'
 import Icon from 'react-icons-kit'
 

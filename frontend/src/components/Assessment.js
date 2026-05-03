@@ -1,5 +1,5 @@
 import React, { memo } from 'react'
-import { Button } from 'react-bootstrap'
+import { Button } from 'components/ui'
 import { heart } from 'react-icons-kit/fa/heart'
 import Icon from 'react-icons-kit'
 

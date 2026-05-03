@@ -1,5 +1,6 @@
 import React, { memo } from 'react'
-import { Row, Col, ProgressBar } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
+import { Progress } from 'components/ui'
 import PropTypes from 'prop-types'
 
 import Text from 'components/Text'
@@ -22,7 +23,7 @@ const Presentation = ({
             </Text>
           </Col>
           <Col md={8}>
-            <ProgressBar />
+            <Progress />
           </Col>
         </React.Fragment>
       )}

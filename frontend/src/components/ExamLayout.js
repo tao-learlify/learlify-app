@@ -1,5 +1,6 @@
 import React, { memo } from 'react'
-import { Row, Col, ProgressBar } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
+import { Progress } from 'components/ui'
 import { ic_clear } from 'react-icons-kit/md/ic_clear'
 import Icon from 'react-icons-kit'
 import clsx from 'clsx'
@@ -55,9 +56,9 @@ const ExamLayout = ({
               onClick={onLeave}
             />
           )}
-          <ProgressBar
-            className="w-100 bg-progress"
-            now={calcProgress(progress.value + 1, progress.limit)}
+          <Progress
+            className="w-100"
+            value={calcProgress(progress.value + 1, progress.limit)}
             label={over(progress.value, progress.limit)}
           />
         </div>
