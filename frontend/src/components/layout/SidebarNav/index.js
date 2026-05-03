@@ -8,7 +8,8 @@ import {
   Trophy,
   CreditCard,
   GearSix,
-  Bell
+  Bell,
+  Notepad
 } from '@phosphor-icons/react'
 
 import useAuthProvider from 'hooks/useAuthProvider'
@@ -35,6 +36,12 @@ const NAV_ITEMS = [
     path: PATH.COURSES,
     Icon: Books,
     labelKey: 'NAVIGATION.courses'
+  },
+  {
+    key: 'exams',
+    path: PATH.EXAMS,
+    Icon: Notepad,
+    labelKey: 'NAVIGATION.exam'
   },
   {
     key: 'stats',
