@@ -5,14 +5,10 @@ import CalendarToday from '@material-ui/icons/CalendarToday'
 import IconButton from '@material-ui/core/IconButton'
 import { withStyles } from '@material-ui/core/styles'
 import classNames from 'clsx'
-import styled from 'styled-components'
 
-const WrapperOpenButton = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding-right: 15px;
-`
+function WrapperOpenButton({ children }) {
+  return <div className="tw:w-full tw:flex tw:justify-center tw:pr-4">{children}</div>
+}
 
 const styles = ({ spacing }) => ({
   textButton: {

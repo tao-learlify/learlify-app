@@ -4,7 +4,6 @@ import { user as user_alt } from 'react-icons-kit/fa/user'
 import { ic_account_circle } from 'react-icons-kit/md/ic_account_circle'
 import { ic_verified_user } from 'react-icons-kit/md/ic_verified_user'
 import Icon from 'react-icons-kit'
-import styled from 'styled-components'
 
 import useAuthProvider from 'hooks/useAuthProvider'
 
@@ -17,10 +16,9 @@ const props = {
   color: 'muted'
 }
 
-const StyledIcon = styled(Icon)`
-  position: relative;
-  bottom: 2.5px;
-`
+function StyledIcon(props) {
+  return <Icon {...props} style={{ position: 'relative', bottom: 2.5 }} />
+}
 
 const Profile = () => {
   const { profile: user } = useAuthProvider()

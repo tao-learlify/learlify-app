@@ -4,7 +4,6 @@ import { useDispatch } from 'react-redux'
 import { Button } from 'react-bootstrap'
 import { compose } from 'redux'
 import { Animated } from 'react-animated-css'
-import styled from 'styled-components'
 
 import useEventListener from 'hooks/useEventListener'
 import useSettings from 'hooks/useSettings'
@@ -36,17 +35,9 @@ const offlineStatus = {
   type: OFFLINE_EVENT
 }
 
-const NetworkStatusOverlay = styled.div`
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 2;
-`
+function NetworkStatusOverlay({ children }) {
+  return <div className="tw:fixed tw:inset-0 tw:bg-black/50 tw:z-[2]">{children}</div>
+}
 
 /**
  * @type {React.FunctionComponent<NetworkStatusProps>}
