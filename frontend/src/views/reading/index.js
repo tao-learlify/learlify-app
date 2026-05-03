@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import { ReadingExerciseView } from 'components/ui'
-import pandaImg from 'assets/img/panda.svg'
+import pandaImg from 'assets/illustrations/pandas/panda.svg'
 
 // ── Sample exercises ────────────────────────────────────────────────────────────
 // Each exercise has items (shuffled display order) and correct (correct id order).

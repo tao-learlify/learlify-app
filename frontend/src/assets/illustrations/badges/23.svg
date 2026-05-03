@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="98.663" viewBox="0 0 96 98.663">
+  <g id="_23" data-name="23">
+    <circle cx="48" cy="48" r="48" fill="#00ccc6"/>
+    <!-- Leaf stem -->
+    <path d="M48,72 C48,72 46,58 48,48" fill="none" stroke="#174d4b" stroke-width="3" stroke-linecap="round"/>
+    <!-- Leaf body -->
+    <path d="M48,26 C48,26 72,32 72,52 C72,66 58,68 48,58 C38,68 24,66 24,52 C24,32 48,26 48,26 Z" fill="#009994"/>
+    <!-- Leaf right half -->
+    <path d="M48,26 C48,26 72,32 72,52 C72,66 58,68 48,58 Z" fill="#40d5d0"/>
+    <!-- Leaf veins -->
+    <path d="M48,30 L48,58" fill="none" stroke="#174d4b" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M48,38 L36,46" fill="none" stroke="#174d4b" stroke-width="1" stroke-linecap="round"/>
+    <path d="M48,38 L60,46" fill="none" stroke="#009994" stroke-width="1" stroke-linecap="round"/>
+    <path d="M48,46 L38,52" fill="none" stroke="#174d4b" stroke-width="1" stroke-linecap="round"/>
+    <path d="M48,46 L58,52" fill="none" stroke="#009994" stroke-width="1" stroke-linecap="round"/>
+    <!-- Dewdrop -->
+    <ellipse cx="56" cy="42" rx="3" ry="4" fill="#eaeaea" opacity="0.5"/>
+    <!-- Sparkle -->
+    <path d="M78,36 l.355.649a3.85,3.85,0,0,0,1.534,1.534l.65.356a.958.958,0,0,1,0,1.681l-.65.355a3.857,3.857,0,0,0-1.534,1.534l-.355.649a.958.958,0,0,1-1.681,0l-.355-.649a3.857,3.857,0,0,0-1.534-1.534l-.649-.355a.958.958,0,0,1,0-1.681l.649-.356a3.857,3.857,0,0,0,1.534-1.534l.355-.649a.958.958,0,0,1,1.681,0Z" fill="#eaeaea"/>
+    <!-- Bottom badge -->
+    <path d="M72.125,89.5a48.052,48.052,0,0,1-48.25.01,26.726,26.726,0,0,1,48.25-.01Z" fill="#009994"/>
+  </g>
+</svg>

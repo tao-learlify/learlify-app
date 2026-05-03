@@ -13,7 +13,7 @@ import FlexContainer from './FlexContainer'
 import Stopwatch from './Stopwatch'
 import Text from './Text'
 
-import VoiceRecorder from 'assets/img/voice.png'
+import VoiceRecorder from 'assets/illustrations/pandas/panda-speaking.svg'
 import { Animated } from 'react-animated-css'
 
 /**

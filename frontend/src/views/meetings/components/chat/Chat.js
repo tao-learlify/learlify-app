@@ -34,7 +34,7 @@ import {
 import Text from 'components/Text'
 import LinkThrough from 'components/LinkThrough'
 import FileUploader from 'components/FileUploader'
-import MaleImage from 'assets/img/user-male.png'
+import MaleImage from 'assets/illustrations/pandas/panda.svg'
 import ErrorHandler from 'views/errors'
 import { ellipsis, isHyperLink } from 'utils/functions'
 

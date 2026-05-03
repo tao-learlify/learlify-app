@@ -18,7 +18,7 @@ import ModalDialog from 'components/ModalDialog'
 import Details from './components/Details'
 import FlexContainer from 'components/FlexContainer'
 
-import creditCard from 'assets/img/credit-card.png'
+import creditCard from 'assets/illustrations/badges/gold.svg'
 import { select } from 'store/@reducers/plans'
 import { createSubscriptionThunk } from 'store/@thunks/subscriptions'
 import { getFullName } from 'utils/functions'

@@ -17,11 +17,11 @@ import Text from 'components/Text'
 import { withModels } from 'hocs'
 
 import styles from '../styles.module.scss'
-import { img } from 'assets/img'
+import { img } from 'assets/compat'
 import { Button } from 'styled'
 import { BLUE, TURQUOISE } from 'assets/colors'
 
-import AptisTeacherPanda from 'assets/img/aptis-teacher.png'
+import AptisTeacherPanda from 'assets/illustrations/pandas/panda-speaking.svg'
 
 const useStyles = makeStyles(theme => ({
   root: {

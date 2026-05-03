@@ -20,7 +20,7 @@ import { DisplayContainer } from './styles'
 import { GRAMMAR, VOCABULARY } from 'constant/labels'
 
 import styles from './core.module.scss'
-import { img } from 'assets/img'
+import { img } from 'assets/compat'
 
 /**
  * @type {React.FunctionComponent<CoreProps>}

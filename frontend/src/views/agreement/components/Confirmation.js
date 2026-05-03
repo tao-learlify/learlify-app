@@ -10,7 +10,7 @@ import {
   Check
 } from './styles'
 
-import { img } from 'assets/img'
+import { img } from 'assets/compat'
 
 const Checked = () => {
   return <Check src={img['check-mark']} alt="check" />

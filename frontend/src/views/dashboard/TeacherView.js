@@ -26,7 +26,7 @@ import FlexContainer from 'components/FlexContainer'
 import PATH from 'utils/path'
 import Pagination from 'components/Pagination'
 
-import { img } from 'assets/img'
+import { img } from 'assets/compat'
 import { getFullName } from 'utils/functions'
 
 import { APTIS } from 'constant/models'

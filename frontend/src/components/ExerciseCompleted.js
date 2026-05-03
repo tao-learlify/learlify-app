@@ -9,7 +9,7 @@ import Animate from './Animate'
 import TableRow from 'components/TableRow'
 
 import { completedExerciseLang } from './lang'
-import { img } from 'assets/img'
+import { img } from 'assets/compat'
 
 export const answersRows = ['Answer', 'Passed']
 

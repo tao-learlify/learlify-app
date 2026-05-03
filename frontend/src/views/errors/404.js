@@ -7,7 +7,7 @@ import Template from 'components/Template'
 import Text from 'components/Text'
 
 
-import { img } from 'assets/img'
+import { img } from 'assets/compat'
 import { BLUE, WHITE } from 'assets/colors'
 import 'assets/css/error404.css'
 import PATH from 'utils/path'

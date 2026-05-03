@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="98.663" viewBox="0 0 96 98.663">
+  <g id="_19" data-name="19">
+    <circle cx="48" cy="48" r="48" fill="#00ccc6"/>
+    <!-- Music note head 1 -->
+    <ellipse cx="36" cy="62" rx="7" ry="5.5" transform="rotate(-20 36 62)" fill="#174d4b"/>
+    <!-- Music note head 2 -->
+    <ellipse cx="58" cy="56" rx="7" ry="5.5" transform="rotate(-20 58 56)" fill="#174d4b"/>
+    <!-- Stems -->
+    <rect x="42" y="28" width="3" height="36" fill="#174d4b"/>
+    <rect x="64" y="22" width="3" height="36" fill="#174d4b"/>
+    <!-- Beam -->
+    <path d="M42,28 L67,22 L67,30 L42,36 Z" fill="#009994"/>
+    <path d="M42,34 L67,28 L67,34 L42,40 Z" fill="#40d5d0"/>
+    <!-- Music dots -->
+    <circle cx="22" cy="40" r="2.5" fill="#eaeaea"/>
+    <circle cx="78" cy="44" r="2" fill="#eaeaea"/>
+    <circle cx="18" cy="56" r="1.5" fill="#eaeaea"/>
+    <!-- Sparkle -->
+    <path d="M76,62 l.355.649a3.85,3.85,0,0,0,1.534,1.534l.65.356a.958.958,0,0,1,0,1.681l-.65.355a3.857,3.857,0,0,0-1.534,1.534l-.355.649a.958.958,0,0,1-1.681,0l-.355-.649a3.857,3.857,0,0,0-1.534-1.534l-.649-.355a.958.958,0,0,1,0-1.681l.649-.356a3.857,3.857,0,0,0,1.534-1.534l.355-.649a.958.958,0,0,1,1.681,0Z" fill="#eaeaea"/>
+    <!-- Bottom badge -->
+    <path d="M72.125,89.5a48.052,48.052,0,0,1-48.25.01,26.726,26.726,0,0,1,48.25-.01Z" fill="#009994"/>
+  </g>
+</svg>

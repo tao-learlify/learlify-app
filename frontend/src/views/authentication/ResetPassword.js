@@ -15,8 +15,8 @@ import useToggler from 'hooks/useToggler'
 
 import api from 'api'
 import PATH from 'utils/path'
-import Panda from 'assets/img/panda.svg'
-import brandLogo from 'assets/img/brand.png'
+import Panda from 'assets/illustrations/pandas/panda.svg'
+import brandLogo from 'assets/illustrations/brand/logo.svg'
 
 import styles from './auth.module.scss'
 

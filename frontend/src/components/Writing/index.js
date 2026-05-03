@@ -21,7 +21,7 @@ import {
 import { WRITING_PART_4 } from 'constant/labels'
 
 import styles from './styles.module.scss'
-import { img } from 'assets/img'
+import { img } from 'assets/compat'
 
 
 

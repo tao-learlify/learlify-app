@@ -10,7 +10,7 @@ import { setScore } from 'store/@reducers/evaluations'
 import Text from 'components/Text'
 import Range from 'components/Range'
 
-import { img } from 'assets/img'
+import { img } from 'assets/compat'
 
 import roles from 'utils/roles'
 import styles from './viewer.module.scss'

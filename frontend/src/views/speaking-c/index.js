@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import { SpeakingImageView } from 'components/ui'
-import pandaImg from 'assets/img/panda.svg'
+import pandaImg from 'assets/illustrations/pandas/panda.svg'
 
 // ── Sample exercises ──────────────────────────────────────────────────────────
 // Replace `image` values with actual assets (e.g. import img1 from 'assets/img/...')

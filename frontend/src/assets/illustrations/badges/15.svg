@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="98.663" viewBox="0 0 96 98.663">
+  <g id="_15" data-name="15">
+    <circle cx="48" cy="48" r="48" fill="#00ccc6"/>
+    <!-- Compass outer ring -->
+    <circle cx="48" cy="48" r="24" fill="#009994" stroke="#174d4b" stroke-width="2"/>
+    <circle cx="48" cy="48" r="20" fill="#40d5d0"/>
+    <!-- Compass rose - North -->
+    <path d="M48,28 L52,48 L48,44 L44,48 Z" fill="#eaeaea"/>
+    <!-- Compass rose - South -->
+    <path d="M48,68 L44,48 L48,52 L52,48 Z" fill="#174d4b"/>
+    <!-- Compass rose - East -->
+    <path d="M68,48 L48,44 L52,48 L48,52 Z" fill="#174d4b"/>
+    <!-- Compass rose - West -->
+    <path d="M28,48 L48,52 L44,48 L48,44 Z" fill="#eaeaea"/>
+    <!-- Center dot -->
+    <circle cx="48" cy="48" r="3" fill="#eaeaea"/>
+    <circle cx="48" cy="48" r="1.5" fill="#174d4b"/>
+    <!-- Cardinal marks -->
+    <circle cx="48" cy="26" r="2" fill="#eaeaea"/>
+    <circle cx="48" cy="70" r="2" fill="#eaeaea"/>
+    <circle cx="26" cy="48" r="2" fill="#eaeaea"/>
+    <circle cx="70" cy="48" r="2" fill="#eaeaea"/>
+    <!-- Sparkle -->
+    <path d="M18,30 l.355.649a3.85,3.85,0,0,0,1.534,1.534l.65.356a.958.958,0,0,1,0,1.681l-.65.355a3.857,3.857,0,0,0-1.534,1.534l-.355.649a.958.958,0,0,1-1.681,0l-.355-.649a3.857,3.857,0,0,0-1.534-1.534l-.649-.355a.958.958,0,0,1,0-1.681l.649-.356a3.857,3.857,0,0,0,1.534-1.534l.355-.649a.958.958,0,0,1,1.681,0Z" fill="#eaeaea"/>
+    <!-- Bottom badge -->
+    <path d="M72.125,89.5a48.052,48.052,0,0,1-48.25.01,26.726,26.726,0,0,1,48.25-.01Z" fill="#009994"/>
+  </g>
+</svg>

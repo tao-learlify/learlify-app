@@ -7,7 +7,7 @@ import useMedia from 'hooks/useMedia'
 
 import Text from 'components/Text'
 
-import { img } from 'assets/img'
+import { img } from 'assets/compat'
 import { Button, TextContainer } from 'styled'
 import { BLUE, TURQUOISE, WHITE } from 'assets/colors'
 

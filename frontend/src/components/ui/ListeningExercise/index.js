@@ -11,7 +11,7 @@ import {
   XCircleIcon,
   ArrowRightIcon,
 } from '@phosphor-icons/react'
-import pandaImg from 'assets/img/listening-new.svg'
+import pandaImg from 'assets/illustrations/skills/listening.svg'
 import { ExerciseHeader } from 'components/ui/GrammarExercise'
 import styles from './ListeningExercise.module.scss'
 

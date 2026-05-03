@@ -11,7 +11,7 @@ import {
   SpeakerHighIcon,
   WarningIcon,
 } from '@phosphor-icons/react'
-import pandaImg from 'assets/img/speaking-panda.svg'
+import pandaImg from 'assets/illustrations/pandas/panda-speaking.svg'
 import { ExerciseHeader } from 'components/ui/GrammarExercise'
 import { SpeakingReviewZone } from '../SpeakingReviewZone'
 import styles from './SpeakingExercise.module.scss'

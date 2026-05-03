@@ -38,7 +38,7 @@ import { WHITE } from 'assets/colors'
 import { fetchClassRoomThunk } from 'store/@thunks/classes'
 import { endClassRoomConnection } from 'store/@reducers/classes'
 import { fetchOutgoingClassThunk } from 'store/@thunks/schedules'
-import { img } from 'assets/img'
+import { img } from 'assets/compat'
 import { GET } from 'providers/http'
 
 /**

@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 import Text from './Text'
 import Display from './Display'
 
-import { img } from 'assets/img'
+import { img } from 'assets/compat'
 import { Animated } from 'react-animated-css'
 
 const CompletedUnit = () => {

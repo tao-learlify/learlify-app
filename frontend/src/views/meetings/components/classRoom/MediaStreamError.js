@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 import Text from 'components/Text'
 
 import FlexContainer from 'components/FlexContainer'
-import { img } from 'assets/img'
+import { img } from 'assets/compat'
 
 const MediaStreamError = () => {
   const { t } = useTranslation()

@@ -11,7 +11,7 @@ import Text from './Text'
 import animations from 'utils/animations'
 import TableRow from 'components/TableRow'
 
-import { img } from 'assets/img'
+import { img } from 'assets/compat'
 
 const data = {
   rows: ['Opción', 'Evaluación', 'Correcta']

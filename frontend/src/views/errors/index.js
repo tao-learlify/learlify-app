@@ -11,7 +11,7 @@ import OverlayMessage from 'components/OverlayMessage'
 import animations from 'utils/animations'
 
 import PATH from 'utils/path'
-import { img } from 'assets/img'
+import { img } from 'assets/compat'
 
 const wrap = {
   whiteSpace: 'pre-wrap'

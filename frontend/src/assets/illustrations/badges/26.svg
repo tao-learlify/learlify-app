@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="98.663" viewBox="0 0 96 98.663">
+  <g id="_26" data-name="26">
+    <circle cx="48" cy="48" r="48" fill="#ff3f3f"/>
+    <!-- Target outer ring -->
+    <circle cx="48" cy="48" r="24" fill="#802020"/>
+    <circle cx="48" cy="48" r="20" fill="#ff8c8c"/>
+    <circle cx="48" cy="48" r="14" fill="#802020"/>
+    <circle cx="48" cy="48" r="10" fill="#ff8c8c"/>
+    <circle cx="48" cy="48" r="5" fill="#c33"/>
+    <!-- Arrow -->
+    <line x1="62" y1="34" x2="50" y2="46" stroke="#693e02" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Arrow head -->
+    <path d="M48,48 L52,42 L50,46 L54,44 Z" fill="#e88905"/>
+    <!-- Arrow fletching -->
+    <path d="M62,34 L66,32 L64,36 Z" fill="#eaeaea"/>
+    <path d="M62,34 L60,30 L58,34 Z" fill="#eaeaea" opacity="0.7"/>
+    <!-- Impact mark -->
+    <circle cx="48" cy="48" r="2" fill="#ffe205"/>
+    <!-- Sparkle -->
+    <path d="M20,28 l.534.977a5.8,5.8,0,0,0,2.308,2.307l.977.535a1.442,1.442,0,0,1,0,2.529l-.977.534a5.8,5.8,0,0,0-2.308,2.308l-.534.976a1.441,1.441,0,0,1-2.529,0l-.534-.976a5.8,5.8,0,0,0-2.308-2.308l-.976-.534a1.441,1.441,0,0,1,0-2.529l.976-.535a5.8,5.8,0,0,0,2.308-2.307l.534-.977a1.442,1.442,0,0,1,2.529,0Z" fill="#eaeaea"/>
+    <!-- Bottom badge -->
+    <path d="M72.125,89.5a48.052,48.052,0,0,1-48.25.01,26.726,26.726,0,0,1,48.25-.01Z" fill="#ff8c8c"/>
+  </g>
+</svg>

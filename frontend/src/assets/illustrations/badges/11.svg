@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="98.663" viewBox="0 0 96 98.663">
+  <g id="_11" data-name="11" transform="translate(0 0)">
+    <circle id="Elipse_70" data-name="Elipse 70" cx="48" cy="48" r="48" fill="#00ccc6"/>
+    <!-- Shield body -->
+    <path id="Trazado_1100" data-name="Trazado 1100" d="M48,26 C48,26 28,32 28,32 C28,32 28,54 28,54 C28,68 48,80 48,80 C48,80 68,68 68,54 C68,54 68,32 68,32 Z" fill="#009994"/>
+    <!-- Shield inner -->
+    <path id="Trazado_1101" data-name="Trazado 1101" d="M48,31 C48,31 33,36 33,36 C33,36 33,53 33,53 C33,64 48,74 48,74 C48,74 63,64 63,53 C63,53 63,36 63,36 Z" fill="#40d5d0"/>
+    <!-- Shield highlight -->
+    <path id="Trazado_1102" data-name="Trazado 1102" d="M48,31 C48,31 33,36 33,36 C33,36 33,53 33,53 C33,64 48,74 48,74 L48,31 Z" fill="#174d4b" opacity="0.3"/>
+    <!-- Star on shield -->
+    <path id="Trazado_1103" data-name="Trazado 1103" d="M48,40 L50.5,47.5 L58,47.5 L52,52.5 L54,60 L48,55.5 L42,60 L44,52.5 L38,47.5 L45.5,47.5 Z" fill="#eaeaea"/>
+    <!-- Shield top accent left -->
+    <path id="Trazado_1104" data-name="Trazado 1104" d="M36,29 C36,29 32,30.5 28,32 C30,28 33,26 36,25 Z" fill="#174d4b"/>
+    <!-- Shield top accent right -->
+    <path id="Trazado_1105" data-name="Trazado 1105" d="M60,29 C60,29 64,30.5 68,32 C66,28 63,26 60,25 Z" fill="#174d4b"/>
+    <!-- Sparkle left -->
+    <path id="Trazado_1106" data-name="Trazado 1106" d="M24,44 l.355.649a3.85,3.85,0,0,0,1.534,1.534l.65.356a.958.958,0,0,1,0,1.681l-.65.355a3.857,3.857,0,0,0-1.534,1.534l-.355.649a.958.958,0,0,1-1.681,0l-.355-.649a3.857,3.857,0,0,0-1.534-1.534l-.649-.355a.958.958,0,0,1,0-1.681l.649-.356a3.857,3.857,0,0,0,1.534-1.534l.355-.649a.958.958,0,0,1,1.681,0Z" fill="#eaeaea"/>
+    <!-- Sparkle right -->
+    <path id="Trazado_1107" data-name="Trazado 1107" d="M74,38 l.534.977a5.8,5.8,0,0,0,2.308,2.307l.977.535a1.442,1.442,0,0,1,0,2.529l-.977.534a5.8,5.8,0,0,0-2.308,2.308l-.534.976a1.441,1.441,0,0,1-2.529,0l-.534-.976a5.8,5.8,0,0,0-2.308-2.308l-.976-.534a1.441,1.441,0,0,1,0-2.529l.976-.535a5.8,5.8,0,0,0,2.308-2.307l.534-.977a1.442,1.442,0,0,1,2.529,0Z" fill="#eaeaea"/>
+    <!-- Bottom badge -->
+    <path id="Trazado_1108" data-name="Trazado 1108" d="M72.125,89.5a48.052,48.052,0,0,1-48.25.01,26.726,26.726,0,0,1,48.25-.01Z" fill="#009994"/>
+
+  </g>
+</svg>

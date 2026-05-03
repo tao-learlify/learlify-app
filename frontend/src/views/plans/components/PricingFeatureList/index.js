@@ -1,6 +1,6 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { img } from 'assets/img'
+import { img } from 'assets/compat'
 import styles from './pricing-feature-list.module.scss'
 
 /**

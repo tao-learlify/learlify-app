@@ -33,7 +33,7 @@ import {
 } from 'styled'
 
 import PATH from 'utils/path'
-import { img } from 'assets/img'
+import { img } from 'assets/compat'
 
 import styles from './navigation.module.scss'
 import 'assets/css/navbar.css'
