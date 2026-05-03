@@ -37,9 +37,11 @@ interface UnitViewProps {
   skipIntro?: boolean;
   /** Saved v2 block-level progress to hydrate state on resume */
   savedProgress?: SavedV2Progress;
+  /** Called when user confirms Start Over — parent should clear backend v2 */
+  onStartOver?: () => void;
 }
 
-export function UnitView({ unit, onComplete, onNextUnit, onBackToCourse, onProgressUpdate, onSectionComplete, skipIntro = false, savedProgress }: UnitViewProps) {
+export function UnitView({ unit, onComplete, onNextUnit, onBackToCourse, onProgressUpdate, onSectionComplete, skipIntro = false, savedProgress, onStartOver }: UnitViewProps) {
   const progress = useUnitProgress(unit, savedProgress);
 
   // XP feedback state
@@ -145,6 +147,7 @@ export function UnitView({ unit, onComplete, onNextUnit, onBackToCourse, onProgr
             onNextUnit={onNextUnit}
             onBackToCourse={onBackToCourse}
             skipIntro={skipIntro}
+            onStartOver={onStartOver}
           />
         </main>
 

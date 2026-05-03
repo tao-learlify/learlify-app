@@ -2,14 +2,17 @@
  * UnitIntroCard — the mission entry point.
  *
  * Sits at the top of UnitFlow, always in the DOM.
- * On a fresh visit: the user sees this first and clicks "Begin".
- * On a returning visit: the page auto-scrolls past it to the current block.
+ *
+ * Entry states:
+ *   fresh     → "Begin Unit"
+ *   resume    → "Resume" + compact progress + "Start over" (secondary)
+ *   completed → "Review unit" + optional "Next unit"
  *
  * Design: generous spacing, accent gradient, skill tag row, objective callout.
  * Not childish. Duolingo clarity + Linear/Notion spacing quality.
  */
-import React from 'react';
-import { Clock, Lightning, ArrowRight, BookOpen } from '@phosphor-icons/react';
+import React, { useState } from 'react';
+import { Clock, Lightning, ArrowRight, BookOpen, ArrowCounterClockwise, CheckCircle } from '@phosphor-icons/react';
 import type { Unit } from '../../../../schemas/course/hierarchy';
 import { MascotWidget } from './MascotWidget';
 import { useUnitProgressContext } from '../hooks/UnitProgressContext';
@@ -31,12 +34,26 @@ interface UnitIntroCardProps {
   unit: Unit;
   accent: string;
   onBegin: () => void;
+  /** Called when user confirms "Start over" — parent resets progress */
+  onStartOver?: () => void;
 }
 
-export function UnitIntroCard({ unit, accent, onBegin }: UnitIntroCardProps) {
-  const { earnedXP, totalXP, progress } = useUnitProgressContext();
+export function UnitIntroCard({ unit, accent, onBegin, onStartOver }: UnitIntroCardProps) {
+  const { earnedXP, totalXP, isUnitComplete, completedBlockCount } = useUnitProgressContext();
+  const [confirmReset, setConfirmReset] = useState(false);
 
-  const hasProgress = progress > 0;
+  // Block count is always correct (restored from completedBlockIds).
+  // XP-based progress is 0 on restore (xpRecord not persisted), so derive
+  // the display percentage from blocks instead.
+  const totalBlockCount = unit.sections
+    .flatMap(s => s.blocks)
+    .filter(b => b.type !== 'divider').length;
+  const blockProgressPercent = totalBlockCount > 0
+    ? Math.round((completedBlockCount / totalBlockCount) * 100)
+    : 0;
+
+  const hasProgress = completedBlockCount > 0;
+  const entryType = isUnitComplete ? 'completed' : hasProgress ? 'resume' : 'fresh';
 
   // Unique skills from sections (preserve order, dedupe)
   const skills = Array.from(
@@ -144,19 +161,17 @@ export function UnitIntroCard({ unit, accent, onBegin }: UnitIntroCardProps) {
               style={{ color: accent }}
             >
               <Lightning size={13} weight="fill" />
-              <span>
-                {hasProgress ? `${earnedXP} / ${totalXP} XP` : `Up to ${totalXP} XP`}
-              </span>
+              <span>Up to {totalXP} XP</span>
             </div>
           )}
         </div>
 
-        {/* Progress bar (only when in-progress) */}
+        {/* Progress bar (resume / completed) */}
         {hasProgress && (
           <div className="tw:mb-4">
             <div className="tw:flex tw:justify-between tw:text-[11px] tw:text-text-secondary tw:mb-1.5">
-              <span>Progress</span>
-              <span>{progress}%</span>
+              <span>{isUnitComplete ? 'Completed' : 'Progress'}</span>
+              <span>{isUnitComplete ? '100' : blockProgressPercent}%</span>
             </div>
             <div
               className="tw:h-1.5 tw:rounded-pill tw:overflow-hidden"
@@ -164,25 +179,89 @@ export function UnitIntroCard({ unit, accent, onBegin }: UnitIntroCardProps) {
             >
               <div
                 className="tw:h-full tw:rounded-pill tw:transition-all tw:duration-500"
-                style={{ width: `${progress}%`, backgroundColor: accent }}
+                style={{
+                  width: `${isUnitComplete ? 100 : blockProgressPercent}%`,
+                  backgroundColor: isUnitComplete ? '#22C55E' : accent,
+                }}
               />
             </div>
           </div>
         )}
 
-        {/* CTA */}
-        <button
-          type="button"
-          className="tw:flex tw:items-center tw:gap-2 tw:px-5 tw:py-3 tw:rounded-xl tw:text-sm tw:font-bold tw:text-white tw:transition-all tw:duration-150 tw:hover:opacity-90 tw:cursor-pointer tw:border-0"
-          style={{
-            backgroundColor: accent,
-            boxShadow: `0 4px 0 0 ${accent}80`,
-          }}
-          onClick={onBegin}
-        >
-          {hasProgress ? 'Continue' : 'Begin Unit'}
-          <ArrowRight size={15} weight="bold" />
-        </button>
+        {/* Resume context banner */}
+        {entryType === 'resume' && (
+          <div
+            className="tw:flex tw:items-center tw:gap-2 tw:px-3 tw:py-2.5 tw:rounded-xl tw:mb-4 tw:text-xs"
+            style={{ backgroundColor: `${accent}10`, color: accent }}
+          >
+            <ArrowRight size={13} weight="bold" className="tw:shrink-0" />
+            <span className="tw:font-medium">
+              Continue where you left off — {blockProgressPercent}% through this unit
+            </span>
+          </div>
+        )}
+
+        {/* Completed banner */}
+        {entryType === 'completed' && (
+          <div
+            className="tw:flex tw:items-center tw:gap-2 tw:px-3 tw:py-2.5 tw:rounded-xl tw:mb-4 tw:text-xs"
+            style={{ backgroundColor: '#22C55E15', color: '#16A34A' }}
+          >
+            <CheckCircle size={13} weight="fill" className="tw:shrink-0" />
+            <span className="tw:font-medium">You've completed this unit!</span>
+          </div>
+        )}
+
+        {/* CTAs */}
+        <div className="tw:flex tw:flex-wrap tw:items-center tw:gap-2">
+          {/* Primary CTA */}
+          <button
+            type="button"
+            className="tw:flex tw:items-center tw:gap-2 tw:px-5 tw:py-3 tw:rounded-xl tw:text-sm tw:font-bold tw:text-white tw:transition-all tw:duration-150 tw:hover:opacity-90 tw:cursor-pointer tw:border-0"
+            style={{
+              backgroundColor: entryType === 'completed' ? '#22C55E' : accent,
+              boxShadow: `0 4px 0 0 ${entryType === 'completed' ? '#16A34A' : accent}80`,
+            }}
+            onClick={onBegin}
+          >
+            {entryType === 'fresh' && <>Begin Unit <ArrowRight size={15} weight="bold" /></>}
+            {entryType === 'resume' && <>Resume <ArrowRight size={15} weight="bold" /></>}
+            {entryType === 'completed' && <>Review unit <ArrowRight size={15} weight="bold" /></>}
+          </button>
+
+          {/* Start Over — only when progress exists */}
+          {hasProgress && onStartOver && !confirmReset && (
+            <button
+              type="button"
+              className="tw:flex tw:items-center tw:gap-1.5 tw:px-4 tw:py-3 tw:rounded-xl tw:text-sm tw:font-medium tw:text-text-secondary tw:hover:text-text-primary tw:transition-colors tw:cursor-pointer tw:border-0 tw:bg-transparent"
+              onClick={() => setConfirmReset(true)}
+            >
+              <ArrowCounterClockwise size={14} />
+              Start over
+            </button>
+          )}
+
+          {/* Inline confirmation */}
+          {confirmReset && (
+            <div className="tw:flex tw:items-center tw:gap-2 tw:text-xs tw:text-text-secondary">
+              <span>Reset all progress?</span>
+              <button
+                type="button"
+                className="tw:px-3 tw:py-1.5 tw:rounded-lg tw:text-xs tw:font-bold tw:text-white tw:bg-red-500 tw:border-0 tw:cursor-pointer tw:hover:bg-red-600"
+                onClick={() => { setConfirmReset(false); onStartOver?.(); }}
+              >
+                Yes, reset
+              </button>
+              <button
+                type="button"
+                className="tw:px-3 tw:py-1.5 tw:rounded-lg tw:text-xs tw:font-medium tw:text-text-secondary tw:border-0 tw:bg-transparent tw:cursor-pointer tw:hover:text-text-primary"
+                onClick={() => setConfirmReset(false)}
+              >
+                Cancel
+              </button>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

@@ -221,20 +221,31 @@ export default function ConnectedUnitView() {
   // Restore saved v2 block-level progress (completedBlockIds, xpRecord, currentBlockId)
   const savedProgress = useMemo(() => {
     const content = advance?.data?.[0]?.content
+    console.log('[resume-debug] advance.data[0]:', advance?.data?.[0])
+    console.log('[resume-debug] content:', content, '| unitKey:', String(unitOrderNum))
     if (!content) return undefined
     const unitEntry = content[String(unitOrderNum)]
+    console.log('[resume-debug] unitEntry:', unitEntry, '| v2:', unitEntry?.v2)
     if (!unitEntry?.v2) return undefined
     return unitEntry.v2
   }, [advance, unitOrderNum])
 
   // Progress is non-blocking: if hooks fail (e.g. no courseId yet), unit still renders.
-  const { updateProgress, completeSection, flush } = useProgressTracking(actualCourseId, currentSectionIndex)
+  // Always track against unitOrderNum (the unit currently being viewed), NOT currentSectionIndex
+  // (which reflects the last-accessed unit in advance data and would be wrong for units 2+).
+  const { updateProgress, completeSection, resetProgress, flush } = useProgressTracking(actualCourseId, unitOrderNum)
   useProgressPolling(actualCourseId, 5000)
 
   // Save any pending debounced progress when the user leaves this page
   useEffect(() => () => flush(), [flush])
 
   const handleBack = () => history.push(PATH.COURSES)
+
+  /**
+   * Reset block-level progress for the current unit.
+   * Clears v2 from advance.content[unit] on the backend.
+   */
+  const handleStartOver = () => resetProgress()
 
   // ── Unit resolution: sample wins over backend in dev ─────────────────────
   const unit = sampleUnit || backendUnit
@@ -245,12 +256,12 @@ export default function ConnectedUnitView() {
       <UnitView
         unit={unit}
         onBackToCourse={handleBack}
-        skipIntro={hasStarted}
         savedProgress={savedProgress}
         onProgressUpdate={(xp, exercisesCompleted, progressPercent, v2) =>
           updateProgress(xp, exercisesCompleted, progressPercent, v2)
         }
         onSectionComplete={(finalXp, examScore) => completeSection(finalXp, examScore)}
+        onStartOver={handleStartOver}
       />
     )
   }
