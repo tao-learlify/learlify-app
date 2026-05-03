@@ -1,29 +1,13 @@
 import React, { memo, useRef } from 'react'
 import Markdown from 'react-markdown'
-import styled from 'styled-components'
+import clsx from 'clsx'
 import Text from 'components/Text'
 import { htmlParser } from 'constant'
 
-const Images = styled.img`
-  max-width: 100%;
-  margin-bottom: 1rem;
-  @media screen and (max-width: 420px) {
-    width: 100%;
-  }
-`
+function Images({ src, alt, className, ...rest }) {
+  return <img className={clsx('tw:max-w-full tw:mb-4 max-[420px]:tw:w-full', className)} src={src} alt={alt} {...rest} />
+}
 
-/**
- * @typedef {Object} TheoryProps
- * @property {string} heading
- * @property {string []} imageUrl
- * @property {string} subheading
- * @property {string} title
- * @property {'Core' | 'Reading' | 'Speaking' | 'Writing'}
- */
-
-/**
- * @type {React.FunctionComponent<TheoryProps>}
- */
 const Theory = ({ heading, imageUrl, subheading, title }) => {
   const markdown = useRef([htmlParser])
 
@@ -33,7 +17,7 @@ const Theory = ({ heading, imageUrl, subheading, title }) => {
         imageUrl.images.map((image, index) => (
           <Images
             alt="infographic"
-            className="border rounded"
+            className="tw:border tw:rounded"
             loading="lazy"
             key={index}
             src={image}

@@ -1,71 +1,24 @@
-import styled from 'styled-components';
+import React from 'react'
+import clsx from 'clsx'
 
-export const ScheduleContainer = styled.div`
-    display: flex;
-`
-
-export const ProgressBarContainer = styled.div`
-    display: flex;
-    padding: 20px 20px;
-    @media (min-width: 701px) {
-        padding: 20px 40px;
-    }
-`
-
-export const StreamingContainer = styled.div`
-    padding: 10px 20px;
-    @media (min-width: 701px) {
-        padding: 10px 40px;
-    }
-`
-
-export const ButtonsContainer = styled.div`
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 20px;
-    @media (min-width: 701px) {
-        padding: 20px 40px;
-    }
-`
-
-export const ButtonContainer = styled.div`
-    margin-top: 20px;
-    padding-top: 20px;
-`
-
-export const Button = styled.div`
-    display: flex;
-    width: fit-content;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    font-size: 2.3vw;
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
-    font-weight: 700;
-    border-radius: 16px;
-    border: 2px solid#afafaf;
-    background-color: #e5e5e5;
-    color: #afafaf;
-    padding: 10px;
-    @media (min-width: 601px) {
-        font-size: 18px;
-    }
-
-    &:hover {
-        background-color: #989898;
-        border-color: #989898;
-    }
-`
-
-export const Title = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgb(60, 60, 60);
-    font-size: 4vw;
-    font-weight: bold;
-    @media (min-width: 601px) {
-        font-size: 24px;
-    }
-`
+export function ScheduleContainer({ children, className, ...rest }) {
+  return <div className={clsx('tw:flex', className)} {...rest}>{children}</div>
+}
+export function ProgressBarContainer({ children, className, ...rest }) {
+  return <div className={clsx('tw:flex tw:px-5 tw:py-5 md:tw:px-10 md:tw:py-5', className)} {...rest}>{children}</div>
+}
+export function StreamingContainer({ children, className, ...rest }) {
+  return <div className={clsx('tw:px-5 tw:py-2.5 md:tw:px-10 md:tw:py-2.5', className)} {...rest}>{children}</div>
+}
+export function ButtonsContainer({ children, className, ...rest }) {
+  return <div className={clsx('tw:flex tw:justify-between tw:px-5 tw:py-5 md:tw:px-10 md:tw:py-5', className)} {...rest}>{children}</div>
+}
+export function ButtonContainer({ children, className, ...rest }) {
+  return <div className={clsx('tw:mt-5 tw:pt-5', className)} {...rest}>{children}</div>
+}
+export function Button({ children, className, ...rest }) {
+  return <div className={clsx('tw:flex tw:w-fit tw:justify-center tw:items-center tw:cursor-pointer tw:uppercase tw:tracking-[0.8px] tw:font-bold tw:rounded-2xl tw:border-2 tw:border-[#afafaf] tw:bg-[#e5e5e5] tw:text-[#afafaf] tw:px-2.5 tw:py-2.5 tw:text-[2.3vw] md:tw:text-lg hover:tw:bg-[#989898] hover:tw:border-[#989898]', className)} {...rest}>{children}</div>
+}
+export function Title({ children, className, ...rest }) {
+  return <div className={clsx('tw:flex tw:justify-center tw:items-center tw:text-[#3c3c3c] tw:font-bold tw:text-[4vw] md:tw:text-2xl', className)} {...rest}>{children}</div>
+}
