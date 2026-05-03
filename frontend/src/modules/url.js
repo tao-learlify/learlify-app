@@ -5,7 +5,7 @@
  * @param {{}} history 
  * 
  * @example
- * createNavigationPath('/account/billing', { stats: true }) => '/account/billing?stats=true'
+ * createNavigationPath('/billing', { stats: true }) => '/billing?stats=true'
  */
 export const createNavigationPath = (path, history) => {
   const url = new URLSearchParams()
