@@ -1,19 +1,18 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import aptisSvg from 'assets/illustrations/decorative/aptis.svg'
+import b1 from 'assets/illustrations/badges/1.svg'
+import b2 from 'assets/illustrations/badges/2.svg'
+import b3 from 'assets/illustrations/badges/3.svg'
+import b4 from 'assets/illustrations/badges/4.svg'
+import b5 from 'assets/illustrations/badges/5.svg'
+import b6 from 'assets/illustrations/badges/6.svg'
+import b7 from 'assets/illustrations/badges/7.svg'
+import b8 from 'assets/illustrations/badges/8.svg'
+import b9 from 'assets/illustrations/badges/9.svg'
+import b10 from 'assets/illustrations/badges/10.svg'
 
-const BADGE_IMPORTS = {
-  1: () => import('assets/illustrations/badges/1.svg'),
-  2: () => import('assets/illustrations/badges/2.svg'),
-  3: () => import('assets/illustrations/badges/3.svg'),
-  4: () => import('assets/illustrations/badges/4.svg'),
-  5: () => import('assets/illustrations/badges/5.svg'),
-  6: () => import('assets/illustrations/badges/6.svg'),
-  7: () => import('assets/illustrations/badges/7.svg'),
-  8: () => import('assets/illustrations/badges/8.svg'),
-  9: () => import('assets/illustrations/badges/9.svg'),
-  10: () => import('assets/illustrations/badges/10.svg'),
-}
+const BADGES = { 1: b1, 2: b2, 3: b3, 4: b4, 5: b5, 6: b6, 7: b7, 8: b8, 9: b9, 10: b10 }
 
 const TOTAL_EXAMS = 10
 
@@ -116,7 +115,8 @@ export default function ExamSelector() {
                 e.currentTarget.style.boxShadow = '0 4px 0 0 var(--color-border-default)'
               }}
             >
-              <BadgeImg num={num} />
+              <img src={BADGES[num]} alt={`Exam ${num}`} aria-hidden="true"
+                style={{ width: 32, height: 'auto', marginBottom: 4 }} />
               <span style={{
                 fontSize: 'var(--text-2xl)', fontWeight: 800,
                 color: 'var(--color-text-primary)',
