@@ -1,14 +1,18 @@
-// ── Shell ──────────────────────────────────────────────────────────────────────
+// ==========================================================================
+// GrammarExercise — Duolingo-style exercise UI.
+// Colours: Duolingo Green #58CC02 / Success #58A700 / Error #EA2B2B
+// ==========================================================================
+
+// ── Shell ────────────────────────────────────────────────────────────────────
 .root {
   display: flex;
   flex-direction: column;
   min-height: 100dvh;
-  // Subtle blue sky gradient — just enough warmth at the top
-  background: linear-gradient(180deg, #EBF4FF 0%, #FFFFFF 28%);
+  background: #FFFFFF;
   font-family: inherit;
 }
 
-// ── Header ─────────────────────────────────────────────────────────────────────
+// ── Header ───────────────────────────────────────────────────────────────────
 .header {
   display: flex;
   align-items: center;
@@ -16,7 +20,7 @@
   padding: var(--space-3) var(--space-5);
   position: sticky;
   top: 0;
-  background: transparent;
+  background: #FFFFFF;
   z-index: 10;
 }
 
@@ -24,10 +28,10 @@
   flex-shrink: 0;
   width: 36px;
   height: 36px;
-  border-radius: var(--radius-full);
+  border-radius: 9999px;
   border: none;
   background: transparent;
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -48,44 +52,30 @@
 .progressTrack {
   flex: 1;
   height: 14px;
-  background: #E2E8F0;
-  border-radius: var(--radius-full);
+  background: #E5E5E5;
+  border-radius: 9999px;
   overflow: hidden;
 }
 
 .progressFill {
   height: 100%;
-  background: linear-gradient(90deg, #3B82F6 0%, #60A5FA 100%);
-  border-radius: var(--radius-full);
-  transition: width 0.5s var(--easing-standard);
+  background: var(--color-brand-primary);
+  border-radius: 9999px;
+  transition: width 0.5s ease;
   position: relative;
   min-width: 16px;
-
-  // Shimmer sweep
-  &::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.35) 50%, transparent 100%);
-    animation: shimmer 2.2s ease-in-out infinite;
-  }
-}
-
-@keyframes shimmer {
-  0%   { transform: translateX(-100%); }
-  100% { transform: translateX(200%); }
 }
 
 .counter {
   flex-shrink: 0;
   font-size: var(--text-sm);
   font-weight: 800;
-  color: #64748B;
+  color: var(--color-text-secondary);
   min-width: 3.5ch;
   text-align: right;
 }
 
-// ── Body ───────────────────────────────────────────────────────────────────────
+// ── Body ─────────────────────────────────────────────────────────────────────
 .body {
   flex: 1;
   display: flex;
@@ -93,30 +83,29 @@
   align-items: center;
   justify-content: center;
   padding: var(--space-4) var(--space-5);
-  // Reduced from --space-10: individual blocks no longer need huge breathing room
   gap: var(--space-5);
   max-width: 560px;
   width: 100%;
   margin: 0 auto;
 }
 
-// Mode badge — branded, not a technical tag
+// ── Skill label ──────────────────────────────────────────────────────────────
 .skillLabel {
   display: inline-flex;
   align-items: center;
   gap: 5px;
   padding: 5px 14px;
-  border-radius: var(--radius-full);
-  background: #EFF6FF;
-  border: 1.5px solid #BFDBFE;
+  border-radius: 9999px;
+  background: var(--color-brand-primary-light);
+  border: 1.5px solid rgba(88, 204, 2, 0.4);
   font-size: 11px;
   font-weight: 900;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #2563EB;
+  color: var(--color-brand-primary-dark);
 }
 
-// ── Meta row: XP badge + instruction ──────────────────────────────────────────
+// ── Meta row ─────────────────────────────────────────────────────────────────
 .metaRow {
   display: flex;
   align-items: center;
@@ -130,10 +119,10 @@
   align-items: center;
   gap: 4px;
   padding: 4px 10px;
-  border-radius: var(--radius-full);
-  background: #F0FDF4;
-  border: 1.5px solid #86EFAC;
-  color: #15803D;
+  border-radius: 9999px;
+  background: #FFF8E1;
+  border: 1.5px solid #FCD34D;
+  color: #92400E;
   font-size: var(--text-xs);
   font-weight: 800;
   white-space: nowrap;
@@ -143,11 +132,11 @@
 .instruction {
   font-size: var(--text-sm);
   font-weight: 600;
-  color: #475569;
+  color: var(--color-text-secondary);
   text-align: center;
 }
 
-// ── Panda companion ────────────────────────────────────────────────────────────
+// ── Panda companion ──────────────────────────────────────────────────────────
 .pandaWrapper {
   display: flex;
   flex-direction: column;
@@ -168,7 +157,6 @@
   font-weight: 700;
   animation: bubblePop 0.3s var(--easing-bounce) both;
 
-  // Arrow pointing down
   &::after {
     content: '';
     position: absolute;
@@ -181,23 +169,19 @@
   }
 
   &[data-mood='happy'] {
-    background: #DCFCE7;
-    color: #15803D;
-    border: 1.5px solid #86EFAC;
+    background: var(--color-success-bg);
+    color: var(--color-success-text);
+    border: 1.5px solid rgba(88, 167, 0, 0.3);
 
-    &::after {
-      border-top-color: #86EFAC;
-    }
+    &::after { border-top-color: rgba(88, 167, 0, 0.3); }
   }
 
   &[data-mood='oops'] {
-    background: #FEF3C7;
-    color: #92400E;
-    border: 1.5px solid #FCD34D;
+    background: var(--color-error-bg);
+    color: var(--color-error-text);
+    border: 1.5px solid rgba(234, 43, 43, 0.3);
 
-    &::after {
-      border-top-color: #FCD34D;
-    }
+    &::after { border-top-color: rgba(234, 43, 43, 0.3); }
   }
 }
 
@@ -212,17 +196,9 @@
   flex-shrink: 0;
 }
 
-.pandaIdle {
-  animation: pandaFloat 3.5s ease-in-out infinite;
-}
-
-.pandaHappy {
-  animation: pandaBounce 0.7s var(--easing-bounce) forwards;
-}
-
-.pandaOops {
-  animation: pandaShake 0.5s ease-in-out forwards;
-}
+.pandaIdle  { animation: pandaFloat 3.5s ease-in-out infinite; }
+.pandaHappy { animation: pandaBounce 0.7s var(--easing-bounce) forwards; }
+.pandaOops  { animation: pandaShake 0.5s ease-in-out forwards; }
 
 @keyframes pandaFloat {
   0%, 100% { transform: translateY(0); }
@@ -245,19 +221,18 @@
   80%      { transform: translateX(6px)  rotate(2deg); }
 }
 
-// ── Sentence ───────────────────────────────────────────────────────────────────
+// ── Sentence ─────────────────────────────────────────────────────────────────
 .sentence {
   display: block;
   margin: 0;
   font-size: clamp(1.1rem, 3vw, 1.45rem);
   font-weight: 800;
   line-height: 1.75;
-  // Deep navy — more presence than slate-800, avoids pure black harshness
-  color: #0F172A;
+  color: var(--color-text-primary);
   text-align: center;
 }
 
-// ── Gap slot ───────────────────────────────────────────────────────────────────
+// ── Gap slot ─────────────────────────────────────────────────────────────────
 .gap {
   display: inline-flex;
   align-items: center;
@@ -270,58 +245,49 @@
   font-size: 0.88em;
   white-space: nowrap;
   vertical-align: middle;
-  transition: background 0.22s var(--easing-standard),
-              border-color 0.22s var(--easing-standard),
-              color 0.22s var(--easing-standard),
-              transform 0.25s var(--easing-bounce),
-              box-shadow 0.22s;
+  transition: background 0.22s, border-color 0.22s, color 0.22s, transform 0.25s var(--easing-bounce), box-shadow 0.22s;
 
-  // ── Empty ──────────────────────────────────────────────────────────────────
   &[data-state='empty'] {
-    border: 2.5px dashed #93C5FD;
-    background: #EFF6FF;
-    color: #93C5FD;
-    // subtle pulse to draw attention
+    border: 2.5px dashed #A5D6A7;
+    background: var(--color-brand-primary-light);
+    color: var(--color-brand-primary);
     animation: gapPulse 2.4s ease-in-out infinite;
   }
 
-  // ── Filled (selected, not yet checked) ────────────────────────────────────
   &[data-state='filled'] {
-    border: 2.5px solid #2563EB;
-    background: #2563EB;
+    border: 2.5px solid var(--color-brand-primary);
+    background: var(--color-brand-primary);
     color: #fff;
     transform: scale(1.08);
-    box-shadow: 0 4px 16px rgba(37,99,235,0.30);
+    box-shadow: 0 4px 16px rgba(88, 204, 2, 0.30);
     animation: none;
   }
 
-  // ── Correct ────────────────────────────────────────────────────────────────
   &[data-state='correct'] {
-    border: 2.5px solid #16A34A;
-    background: #16A34A;
+    border: 2.5px solid var(--color-success);
+    background: var(--color-success);
     color: #fff;
     transform: scale(1.08);
-    box-shadow: 0 4px 16px rgba(22,163,74,0.30);
+    box-shadow: 0 4px 16px rgba(88, 167, 0, 0.30);
     animation: none;
   }
 
-  // ── Incorrect ──────────────────────────────────────────────────────────────
   &[data-state='incorrect'] {
-    border: 2.5px solid #DC2626;
-    background: #FEE2E2;
-    color: #DC2626;
+    border: 2.5px solid var(--color-error);
+    background: var(--color-error-bg);
+    color: var(--color-error);
     text-decoration: line-through;
-    text-decoration-color: #DC2626;
+    text-decoration-color: var(--color-error);
     animation: none;
   }
 }
 
 @keyframes gapPulse {
-  0%, 100% { box-shadow: 0 0 0 0   rgba(147,197,253,0); }
-  50%       { box-shadow: 0 0 0 5px rgba(147,197,253,0.35); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(88, 204, 2, 0); }
+  50%       { box-shadow: 0 0 0 5px rgba(88, 204, 2, 0.25); }
 }
 
-// ── Options list (single column, A / B / C) ───────────────────────────────────
+// ── Options list ─────────────────────────────────────────────────────────────
 .options {
   display: flex;
   flex-direction: column;
@@ -336,109 +302,89 @@
   padding: 10px var(--space-4);
   min-height: 50px;
   border-radius: 14px;
-  border: 2px solid #CBD5E1;
+  border: 2px solid var(--color-border-default);
   background: #FFFFFF;
-  // Deeper slate so text reads with authority
-  color: #1E293B;
+  color: var(--color-text-primary);
   font-size: var(--text-base);
   font-weight: 700;
   cursor: pointer;
   text-align: left;
   user-select: none;
-  // Separate transition durations — colors fast, motion slightly slower
-  transition:
-    border-color  0.18s ease-out,
-    background    0.18s ease-out,
-    color         0.18s ease-out,
-    box-shadow    0.18s ease-out,
-    transform     0.12s ease-out;
-  box-shadow: 0 2px 0 0 #E2E8F0;
+  transition: border-color 0.18s, background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.12s;
+  box-shadow: 0 2px 0 0 var(--color-border-default);
 
-  // ── Hover ─────────────────────────────────────────────────────────────────
   &:hover:not(:disabled) {
-    border-color: #93C5FD;
-    background: #F8FAFF;
-    color: #1D4ED8;
+    border-color: var(--color-brand-primary);
+    background: var(--color-brand-primary-light);
+    color: var(--color-brand-primary-dark);
     transform: translateY(-2px);
-    // Layered: ambient glow + bottom line
-    box-shadow:
-      0 6px 18px rgba(59, 130, 246, 0.11),
-      0 2px 0 0  #BFDBFE;
+    box-shadow: 0 6px 18px rgba(88, 204, 2, 0.11), 0 2px 0 0 rgba(88, 204, 2, 0.3);
 
     .optionLetter {
-      border-color: #93C5FD;
-      background: #EFF6FF;
-      color: #2563EB;
+      border-color: var(--color-brand-primary);
+      background: var(--color-brand-primary-light);
+      color: var(--color-brand-primary-dark);
       transform: scale(1.06);
     }
   }
 
-  // ── Press (active) ────────────────────────────────────────────────────────
   &:active:not(:disabled) {
     transform: scale(0.98);
-    box-shadow: 0 1px 0 0 #E2E8F0;
-    // Instant feel on press, spring back handled by transition
+    box-shadow: 0 1px 0 0 var(--color-border-default);
     transition-duration: 0.08s;
   }
 
   &:focus-visible {
-    outline: 2px solid #3B82F6;
+    outline: 2px solid var(--color-brand-primary);
     outline-offset: 2px;
   }
 
-  // ── Selected ──────────────────────────────────────────────────────────────
+  // Selected
   &[data-state='selected'] {
-    border-color: #2563EB;
-    background: #EFF6FF;
-    color: #1D4ED8;
-    box-shadow:
-      0 0 0 3px rgba(37, 99, 235, 0.12),
-      0 3px 0 0  #BFDBFE;
+    border-color: var(--color-brand-primary);
+    background: var(--color-brand-primary-light);
+    color: var(--color-brand-primary-dark);
+    box-shadow: 0 0 0 3px rgba(88, 204, 2, 0.12), 0 3px 0 0 rgba(88, 204, 2, 0.3);
 
     .optionLetter {
-      background: #2563EB;
-      border-color: #2563EB;
+      background: var(--color-brand-primary);
+      border-color: var(--color-brand-primary);
       color: #fff;
       transform: scale(1.14);
     }
   }
 
-  // ── Correct ───────────────────────────────────────────────────────────────
+  // Correct
   &[data-state='correct'] {
-    border-color: #16A34A;
-    background: #F0FDF4;
-    color: #15803D;
-    box-shadow:
-      0 0 0 3px rgba(22, 163, 74, 0.10),
-      0 3px 0 0  #86EFAC;
+    border-color: var(--color-success);
+    background: var(--color-success-bg);
+    color: var(--color-success-text);
+    box-shadow: 0 0 0 3px rgba(88, 167, 0, 0.10), 0 3px 0 0 rgba(88, 167, 0, 0.3);
     animation: optionPop 0.38s cubic-bezier(0.34, 1.56, 0.64, 1) both;
 
     .optionLetter {
-      background: #16A34A;
-      border-color: #16A34A;
+      background: var(--color-success);
+      border-color: var(--color-success);
       color: #fff;
       transform: scale(1.14);
     }
   }
 
-  // ── Incorrect ─────────────────────────────────────────────────────────────
+  // Incorrect
   &[data-state='incorrect'] {
-    border-color: #DC2626;
-    background: #FFF5F5;
-    color: #B91C1C;
-    box-shadow:
-      0 0 0 3px rgba(220, 38, 38, 0.08),
-      0 3px 0 0  #FECACA;
+    border-color: var(--color-error);
+    background: var(--color-error-bg);
+    color: var(--color-error-text);
+    box-shadow: 0 0 0 3px rgba(234, 43, 43, 0.08), 0 3px 0 0 rgba(234, 43, 43, 0.3);
     animation: optionShake 0.42s ease-out both;
 
     .optionLetter {
-      background: #DC2626;
-      border-color: #DC2626;
+      background: var(--color-error);
+      border-color: var(--color-error);
       color: #fff;
     }
   }
 
-  // Unchosen options dim after answer is submitted
   &:disabled {
     cursor: default;
     pointer-events: none;
@@ -470,28 +416,22 @@
   width: 32px;
   height: 32px;
   border-radius: 8px;
-  // Indigo tint idle — branded from the start, not a neutral placeholder
-  border: 2px solid #C7D2FE;
-  background: #EEF2FF;
-  color: #4338CA;
+  border: 2px solid var(--color-border-default);
+  background: var(--color-bg-muted);
+  color: var(--color-text-secondary);
   font-size: var(--text-sm);
   font-weight: 900;
   display: flex;
   align-items: center;
   justify-content: center;
-  // Spring easing for the scale pop on select
-  transition:
-    background   0.18s ease-out,
-    color        0.18s ease-out,
-    border-color 0.18s ease-out,
-    transform    0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: background 0.18s, color 0.18s, border-color 0.18s, transform 0.22s var(--easing-bounce);
 }
 
 .optionText {
   flex: 1;
 }
 
-// ── Footer ─────────────────────────────────────────────────────────────────────
+// ── Footer ───────────────────────────────────────────────────────────────────
 .footer {
   padding: var(--space-3) var(--space-5) var(--space-5);
   max-width: 560px;
@@ -499,7 +439,7 @@
   margin: 0 auto;
 }
 
-// ── Check button ───────────────────────────────────────────────────────────────
+// ── Check button (Duolingo chunky green) ─────────────────────────────────────
 .checkBtn {
   width: 100%;
   min-height: 52px;
@@ -509,48 +449,40 @@
   font-weight: 800;
   letter-spacing: 0.01em;
   cursor: pointer;
-  // All four properties transition so disabled → active morphs visibly
-  transition:
-    background  0.2s  ease-out,
-    color       0.2s  ease-out,
-    box-shadow  0.2s  ease-out,
-    transform   0.12s ease-out;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.12s;
 
-  // ── Disabled (no option chosen) ───────────────────────────────────────────
   &:disabled {
     background: #F1F5F9;
-    color: #94A3B8;
+    color: var(--color-text-disabled);
     box-shadow: 0 4px 0 0 #E2E8F0;
     cursor: not-allowed;
     transform: none;
   }
 
-  // ── Ready (option chosen) ──────────────────────────────────────────────────
   &:not(:disabled) {
-    background: #2563EB;
+    background: var(--color-brand-primary);
     color: #fff;
-    box-shadow: 0 5px 0 0 #1D4ED8;
+    box-shadow: 0 5px 0 0 var(--color-brand-primary-dark);
 
     &:hover {
       transform: translateY(-1px);
-      box-shadow: 0 6px 0 0 #1D4ED8;
+      box-shadow: 0 6px 0 0 var(--color-brand-primary-dark);
     }
 
-    // Scale press — feels more natural than translateY for a full-width btn
     &:active {
-      transform: scale(0.97);
-      box-shadow: 0 2px 0 0 #1D4ED8;
+      transform: translateY(4px);
+      box-shadow: 0 1px 0 0 var(--color-brand-primary-dark);
       transition-duration: 0.08s;
     }
 
     &:focus-visible {
-      outline: 2px solid #2563EB;
+      outline: 2px solid var(--color-brand-primary);
       outline-offset: 3px;
     }
   }
 }
 
-// ── Feedback banner ────────────────────────────────────────────────────────────
+// ── Feedback banner ──────────────────────────────────────────────────────────
 .feedback {
   border-radius: 16px;
   padding: var(--space-4);
@@ -560,15 +492,13 @@
   animation: feedbackSlideIn 0.3s var(--easing-bounce) both;
 
   &[data-correct='true'] {
-    // Neutral white-ish so green doesn't stack on green icon + green button
     background: #F8FFFE;
-    border: 2px solid #BBF7D0;
+    border: 2px solid var(--color-success-bg);
   }
 
   &[data-correct='false'] {
-    // Near-neutral — red lives in the icon and button, not the card
     background: #FAFAFA;
-    border: 2px solid #FEE2E2;
+    border: 2px solid var(--color-error-bg);
   }
 }
 
@@ -586,27 +516,22 @@
 .feedbackIcon {
   width: 34px;
   height: 34px;
-  border-radius: var(--radius-full);
+  border-radius: 9999px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 
   &[data-correct='true'] {
-    background: #16A34A;
+    background: var(--color-success);
     color: #fff;
-    // Outer glow + inset shadow = soft depth without border
-    box-shadow:
-      0 2px 10px rgba(22, 163, 74, 0.35),
-      inset 0 -2px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 10px rgba(88, 167, 0, 0.35), inset 0 -2px 0 rgba(0,0,0,0.12);
   }
 
   &[data-correct='false'] {
-    background: #DC2626;
+    background: var(--color-error);
     color: #fff;
-    box-shadow:
-      0 2px 10px rgba(220, 38, 38, 0.30),
-      inset 0 -2px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 10px rgba(234, 43, 43, 0.30), inset 0 -2px 0 rgba(0,0,0,0.12);
   }
 }
 
@@ -614,7 +539,7 @@
   margin: 0 0 var(--space-1);
   font-size: var(--text-sm);
   font-weight: 800;
-  color: #1E293B;
+  color: var(--color-text-primary);
 }
 
 .feedbackXp {
@@ -623,14 +548,13 @@
   gap: 4px;
   margin-top: 6px;
   padding: 3px 10px;
-  border-radius: var(--radius-full);
-  // Amber/gold — breaks the green-on-green monotony, reads as "reward"
+  border-radius: 9999px;
   background: #FFFBEB;
   border: 1.5px solid #FCD34D;
   color: #92400E;
   font-size: var(--text-xs);
   font-weight: 800;
-  animation: xpPop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s both;
+  animation: xpPop 0.4s var(--easing-bounce) 0.2s both;
 }
 
 @keyframes xpPop {
@@ -638,21 +562,14 @@
   to   { opacity: 1; transform: scale(1); }
 }
 
-.feedbackCorrect {
-  margin: 0 0 var(--space-1);
-  font-size: var(--text-base);
-  font-weight: 700;
-  color: #15803D;
-}
-
 .feedbackDesc {
   margin: 0;
   font-size: var(--text-sm);
-  color: #64748B;
+  color: var(--color-text-secondary);
   line-height: 1.55;
 }
 
-// ── Continue button ────────────────────────────────────────────────────────────
+// ── Continue button ──────────────────────────────────────────────────────────
 .continueBtn {
   display: flex;
   align-items: center;
@@ -668,20 +585,18 @@
   transition: transform 0.1s, box-shadow 0.1s;
 
   &[data-correct='true'] {
-    background: #16A34A;
+    background: var(--color-success);
     color: #fff;
-    box-shadow: 0 5px 0 0 #15803D;
+    box-shadow: 0 5px 0 0 var(--color-success-text);
   }
 
   &[data-correct='false'] {
-    background: #DC2626;
+    background: var(--color-error);
     color: #fff;
-    box-shadow: 0 5px 0 0 #B91C1C;
+    box-shadow: 0 5px 0 0 var(--color-error-text);
   }
 
-  &:hover {
-    transform: translateY(-2px);
-  }
+  &:hover { transform: translateY(-2px); }
 
   &:active {
     transform: translateY(3px);
