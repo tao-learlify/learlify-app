@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
-import pandaImg from 'assets/illustrations/pandas/panda.svg'
+import aptisSvg from 'assets/illustrations/decorative/aptis.svg'
+import badgeSvg from 'assets/illustrations/badges/diamond.svg'
 
 const TOTAL_EXAMS = 10
 
@@ -24,7 +25,7 @@ const SKILL_ROUTES = {
 
 export default function ExamSelector() {
   const history = useHistory()
-  const [step, setStep] = useState('exam') // 'exam' | 'skill'
+  const [step, setStep] = useState('exam')
   const [selectedExam, setSelectedExam] = useState(null)
 
   const handleExamSelect = (num) => {
@@ -38,40 +39,38 @@ export default function ExamSelector() {
     history.push(`${path}?exam=${examId}`)
   }
 
-  const handleClose = () => history.goBack()
-
   return (
     <div style={{
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      minHeight: '100dvh',
-      background: '#FFFFFF',
-      padding: 32,
+      display: 'flex', flexDirection: 'column', alignItems: 'center',
+      justifyContent: 'center', minHeight: '100dvh',
+      background: '#FFFFFF', padding: 32,
     }}>
-      {/* Panda */}
-      <img
-        src={pandaImg}
-        alt=""
-        aria-hidden="true"
-        style={{ width: 120, height: 'auto', marginBottom: 32 }}
-      />
+      {/* Aptis badge */}
+      <div style={{
+        display: 'flex', alignItems: 'center', gap: 16,
+        background: 'var(--color-brand-primary-light)',
+        border: '2px solid rgba(88, 204, 2, 0.3)',
+        borderRadius: 'var(--radius-xl)', padding: '12px 24px',
+        marginBottom: 32,
+        boxShadow: '0 4px 0 0 rgba(88, 204, 2, 0.2)',
+      }}>
+        <img src={aptisSvg} alt="" aria-hidden="true"
+          style={{ width: 48, height: 'auto' }} />
+        <span style={{
+          fontSize: 'var(--text-lg)', fontWeight: 800,
+          color: 'var(--color-brand-primary-dark)',
+        }}>Aptis Exam Preparation</span>
+      </div>
 
       <h1 style={{
-        fontSize: 'var(--text-4xl)',
-        fontWeight: 800,
-        color: 'var(--color-text-primary)',
-        margin: '0 0 8px',
-        textAlign: 'center',
+        fontSize: 'var(--text-4xl)', fontWeight: 800,
+        color: 'var(--color-text-primary)', margin: '0 0 8px', textAlign: 'center',
       }}>
         {step === 'exam' ? 'Choose your exam' : 'Pick a skill'}
       </h1>
       <p style={{
-        fontSize: 'var(--text-base)',
-        color: 'var(--color-text-secondary)',
-        margin: '0 0 32px',
-        textAlign: 'center',
+        fontSize: 'var(--text-base)', color: 'var(--color-text-secondary)',
+        margin: '0 0 32px', textAlign: 'center',
       }}>
         {step === 'exam'
           ? 'Select an exam from the 10 available'
@@ -80,27 +79,17 @@ export default function ExamSelector() {
 
       {step === 'exam' && (
         <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(5, 1fr)',
-          gap: 12,
-          maxWidth: 600,
-          width: '100%',
+          display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)',
+          gap: 16, maxWidth: 560, width: '100%',
         }}>
           {Array.from({ length: TOTAL_EXAMS }, (_, i) => i + 1).map(num => (
-            <button
-              key={num}
-              onClick={() => handleExamSelect(num)}
+            <button key={num} onClick={() => handleExamSelect(num)}
               style={{
-                aspectRatio: '1',
-                borderRadius: 'var(--radius-lg)',
+                aspectRatio: '1', borderRadius: 'var(--radius-lg)',
                 border: '2px solid var(--color-border-default)',
-                background: '#FFFFFF',
-                cursor: 'pointer',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: 4,
+                background: '#FFFFFF', cursor: 'pointer',
+                display: 'flex', flexDirection: 'column',
+                alignItems: 'center', justifyContent: 'center', gap: 6,
                 transition: 'all 0.15s',
                 boxShadow: '0 4px 0 0 var(--color-border-default)',
               }}
@@ -115,16 +104,12 @@ export default function ExamSelector() {
                 e.currentTarget.style.boxShadow = '0 4px 0 0 var(--color-border-default)'
               }}
             >
+              <img src={badgeSvg} alt="" aria-hidden="true"
+                style={{ width: 32, height: 'auto', marginBottom: 4 }} />
               <span style={{
-                fontSize: 'var(--text-2xl)',
-                fontWeight: 800,
+                fontSize: 'var(--text-2xl)', fontWeight: 800,
                 color: 'var(--color-text-primary)',
               }}>{String(num).padStart(2, '0')}</span>
-              <span style={{
-                fontSize: 'var(--text-xs)',
-                color: 'var(--color-text-secondary)',
-                fontWeight: 600,
-              }}>Exam</span>
             </button>
           ))}
         </div>
@@ -132,43 +117,24 @@ export default function ExamSelector() {
 
       {step === 'skill' && (
         <>
-          <button
-            onClick={() => setStep('exam')}
-            style={{
-              background: 'none',
-              border: 'none',
-              color: 'var(--color-brand-primary)',
-              fontWeight: 700,
-              fontSize: 'var(--text-sm)',
-              cursor: 'pointer',
-              marginBottom: 24,
-              padding: '8px 16px',
-              borderRadius: 'var(--radius-pill)',
-            }}
-          >
-            ← Back to exam selection
-          </button>
+          <button onClick={() => setStep('exam')} style={{
+            background: 'none', border: 'none',
+            color: 'var(--color-brand-primary)', fontWeight: 700,
+            fontSize: 'var(--text-sm)', cursor: 'pointer',
+            marginBottom: 24, padding: '8px 16px',
+            borderRadius: 'var(--radius-pill)',
+          }}>← Back to exam selection</button>
           <div style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: 12,
-            maxWidth: 400,
-            width: '100%',
+            display: 'flex', flexDirection: 'column',
+            gap: 12, maxWidth: 400, width: '100%',
           }}>
             {SKILLS.map(({ key, label, icon }) => (
-              <button
-                key={key}
-                onClick={() => handleSkillSelect(key)}
+              <button key={key} onClick={() => handleSkillSelect(key)}
                 style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: 16,
-                  padding: '16px 24px',
-                  borderRadius: 'var(--radius-lg)',
+                  display: 'flex', alignItems: 'center', gap: 16,
+                  padding: '16px 24px', borderRadius: 'var(--radius-lg)',
                   border: '2px solid var(--color-border-default)',
-                  background: '#FFFFFF',
-                  cursor: 'pointer',
-                  textAlign: 'left',
+                  background: '#FFFFFF', cursor: 'pointer', textAlign: 'left',
                   transition: 'all 0.15s',
                   boxShadow: '0 4px 0 0 var(--color-border-default)',
                 }}
@@ -185,8 +151,7 @@ export default function ExamSelector() {
               >
                 <span style={{ fontSize: 28 }}>{icon}</span>
                 <span style={{
-                  fontSize: 'var(--text-lg)',
-                  fontWeight: 700,
+                  fontSize: 'var(--text-lg)', fontWeight: 700,
                   color: 'var(--color-text-primary)',
                 }}>{label}</span>
               </button>
