@@ -1,8 +1,8 @@
 import React, { memo } from 'react'
 import { Row, Col, ProgressBar } from 'react-bootstrap'
 import { ic_clear } from 'react-icons-kit/md/ic_clear'
-import styled from 'styled-components'
 import Icon from 'react-icons-kit'
+import clsx from 'clsx'
 
 import Emoji from './Emoji'
 import Text from './Text'
@@ -11,9 +11,9 @@ import FlexContainer from './FlexContainer'
 import { over } from 'utils/functions'
 import { calcProgress } from 'utils/progress'
 
-const RowContainer = styled.div`
-  margin-top: 10px;
-`
+function RowContainer({ children, className, ...rest }) {
+  return <div className={clsx('tw:mt-2.5', className)} {...rest}>{children}</div>
+}
 
 /**
  * @typedef {Object} ExamLayoutProps

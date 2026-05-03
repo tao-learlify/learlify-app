@@ -1,16 +1,15 @@
 import React, { memo } from 'react'
 import { Col, Row } from 'react-bootstrap'
-import styled from 'styled-components'
+import clsx from 'clsx'
 
 import Emoji from './Emoji'
 import Text from './Text'
 import Dropdown from './Dropdown'
 import DropdownItem from './DropdownItem'
 
-const PickerContainer = styled.div`
-  margin-bottom: 15px;
-  padding-bottom: 15px;
-`
+function PickerContainer({ children, className, ...rest }) {
+  return <div className={clsx('tw:mb-4 tw:pb-4', className)} {...rest}>{children}</div>
+}
 
 /**
  * @typedef {Object} PickerProps

@@ -1,27 +1,24 @@
 import React, { memo } from 'react'
-import styled from 'styled-components'
+import clsx from 'clsx'
 
-const SelectContainer = styled.select`
-  border-radius: 5px;
-`
-
-const Select = ({ disabled, className, onPick, options, optionKeyName, value }) => {
-  const classNames = 'select-css '.concat(className)
-
+const Select = ({ disabled, className, onPick, options, optionKeyName = 'name', value = '' }) => {
   return (
-    <SelectContainer disabled={disabled} className={classNames} onChange={onPick} value={value.trim()}>
+    <select
+      disabled={disabled}
+      className={clsx('select-css tw:rounded-[5px]', className)}
+      onChange={onPick}
+      value={value?.trim?.() ?? value}
+    >
       {options.map((option, index) => (
         <option
-          className={
-            option[optionKeyName].trim() === value.trim() ? 'text-primary' : 'text-muted'
-          }
+          className={option[optionKeyName]?.trim?.() === value?.trim?.() ? 'text-primary' : 'text-muted'}
           key={index}
-          disabled={option[optionKeyName].trim() === value.trim()}
+          disabled={option[optionKeyName]?.trim?.() === value?.trim?.()}
         >
           {option[optionKeyName]}
         </option>
       ))}
-    </SelectContainer>
+    </select>
   )
 }
 

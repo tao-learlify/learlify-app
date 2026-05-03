@@ -6,7 +6,7 @@ import { v4 as uuid } from 'uuid'
 import { sendO as send } from 'react-icons-kit/fa/sendO'
 import { minus as hide } from 'react-icons-kit/fa/minus'
 import Icon from 'react-icons-kit'
-import styled from 'styled-components'
+import clsx from 'clsx'
 import Text from './Text'
 import moment from 'moment'
 
@@ -17,66 +17,49 @@ import FileUploader from './FileUploader'
 import { img } from 'assets/compat'
 import { ellipsis } from 'utils/functions'
 
-const Container = styled.div`
-  bottom: 0;
-  font-size: 12px;
-  right: 24px;
-  position: fixed;
-  width: 300px;
-`
+function Container({ children, className, ...rest }) {
+  return <div className={clsx('tw:fixed tw:bottom-0 tw:right-6 tw:w-[300px] tw:text-xs', className)} {...rest}>{children}</div>
+}
 
-const Header = styled.header`
-  background: #293239;
-  border-radius: 5px 5px 0 0;
-  color: #fff;
-  cursor: pointer;
-  padding: 11px 22px;
-`
+function Header({ children, className, ...rest }) {
+  return <header className={clsx('tw:bg-[#293239] tw:rounded-t-[5px] tw:text-white tw:cursor-pointer tw:px-[22px] tw:py-[11px]', className)} {...rest}>{children}</header>
+}
 
-const ChatBody = styled.div`
-  z-index: 40;
-  background: #fff;
-`
+function ChatBody({ children, className, ...rest }) {
+  return <div className={clsx('tw:z-40 tw:bg-white', className)} {...rest}>{children}</div>
+}
 
-const ChatScreen = styled.div`
-  height: 260px;
-  padding: 8px 24px;
-  overflow-y: scroll;
-`
+function ChatScreen({ children, className, ...rest }) {
+  return <div className={clsx('tw:h-[260px] tw:overflow-y-scroll tw:px-6 tw:py-2', className)} {...rest}>{children}</div>
+}
 
-const MessageContainer = styled.div`
-  margin: 16px 0;
-`
+function MessageContainer({ children, className, ...rest }) {
+  return <div className={clsx('tw:my-4', className)} {...rest}>{children}</div>
+}
 
-const ChatAvatar = styled.img`
-  border-radius: 50%;
-  float: left;
-`
+function ChatAvatar({ className, ...rest }) {
+  return <img className={clsx('tw:rounded-full tw:float-left', className)} {...rest} />
+}
 
-const Content = styled.div`
-  margin-left: 56px;
-`
+function Content({ children, className, ...rest }) {
+  return <div className={clsx('tw:ml-14', className)} {...rest}>{children}</div>
+}
 
-const TextDate = styled.span`
-  float: right;
-  font-size: 9.5px;
-`
+function TextDate({ children, className, ...rest }) {
+  return <span className={clsx('tw:float-right tw:text-[9.5px]', className)} {...rest}>{children}</span>
+}
 
-const ChatMessage = styled.p`
-  margin: 0;
-  margin-bottom: 5px;
-  font-size: 11px;
-`
+function ChatMessage({ children, className, ...rest }) {
+  return <p className={clsx('tw:m-0 tw:mb-1.5 tw:text-[11px]', className)} {...rest}>{children}</p>
+}
 
-const ChatAction = styled.p`
-  font-size: 10px;
-  font-style: italic;
-  margin: 0 0 0 80px;
-`
+function ChatAction({ children, className, ...rest }) {
+  return <p className={clsx('tw:text-[10px] tw:italic tw:m-0 tw:ml-20', className)} {...rest}>{children}</p>
+}
 
-const ChatFormContainer = styled.div`
-  padding: 24px;
-`
+function ChatFormContainer({ children, className, ...rest }) {
+  return <div className={clsx('tw:p-6', className)} {...rest}>{children}</div>
+}
 
 const ChatDivisor = styled.hr`
   margin-top: 4px;
