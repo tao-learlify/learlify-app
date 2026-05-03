@@ -6,17 +6,16 @@ import React, {
   useContext,
   useEffect
 } from 'react'
-import styled from 'styled-components'
+
 
 import Emoji from 'components/Emoji'
 import RangeComponent from 'components/Range'
 
 import { EvaluationContext } from 'store/context'
 
-const RangeText = styled.span`
+export function RangeText({ children, ...rest }) { return <span className="tw:text-[10.5px] !tw:text-[#56bbb3]" {...rest}>{children}</span> }
   font-size: 10.5px;
   color: #56bbb3 !important;
-`
 
 const Range = ({ index, questions }) => {
   const evaluation = useContext(EvaluationContext)

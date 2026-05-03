@@ -1,12 +1,10 @@
-import styled from 'styled-components'
+import React from 'react'
+import clsx from 'clsx'
 
-export const WrapperTable = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 20px;
-    @media (min-width: 701px) {
-        padding: 10px 40px;
-    }
-`
+export function WrapperTable({ children, className, ...rest }) {
+  return (
+    <div className={clsx('tw:flex tw:flex-col tw:justify-center tw:items-center tw:px-5 tw:py-2.5 md:tw:px-10 md:tw:py-2.5', className)} {...rest}>
+      {children}
+    </div>
+  )
+}
