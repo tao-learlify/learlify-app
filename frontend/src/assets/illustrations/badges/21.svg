@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="98.663" viewBox="0 0 96 98.663">
+  <g id="_21" data-name="21">
+    <circle cx="48" cy="48" r="48" fill="#003e6d"/>
+    <!-- Moon crescent -->
+    <circle cx="48" cy="48" r="20" fill="#3882ba"/>
+    <circle cx="56" cy="42" r="16" fill="#003e6d"/>
+    <!-- Stars -->
+    <path d="M64,52 L65.5,56 L70,56 L66.5,58.5 L68,63 L64,60.5 L60,63 L61.5,58.5 L58,56 L62.5,56 Z" fill="#eaeaea"/>
+    <path d="M70,36 L71,39 L74,39 L71.5,40.5 L72.5,44 L70,42 L67.5,44 L68.5,40.5 L66,39 L69,39 Z" fill="#eaeaea"/>
+    <path d="M58,28 L59,30 L61,30 L59.5,31.5 L60,33.5 L58,32 L56,33.5 L56.5,31.5 L55,30 L57,30 Z" fill="#eaeaea" opacity="0.7"/>
+    <!-- Small dots as distant stars -->
+    <circle cx="72" cy="28" r="1" fill="#eaeaea" opacity="0.5"/>
+    <circle cx="78" cy="48" r="1.2" fill="#eaeaea" opacity="0.6"/>
+    <circle cx="66" cy="68" r="1" fill="#eaeaea" opacity="0.4"/>
+    <circle cx="76" cy="58" r="0.8" fill="#eaeaea" opacity="0.5"/>
+    <!-- Sparkle -->
+    <path d="M22,64 l.534.977a5.8,5.8,0,0,0,2.308,2.307l.977.535a1.442,1.442,0,0,1,0,2.529l-.977.534a5.8,5.8,0,0,0-2.308,2.308l-.534.976a1.441,1.441,0,0,1-2.529,0l-.534-.976a5.8,5.8,0,0,0-2.308-2.308l-.976-.534a1.441,1.441,0,0,1,0-2.529l.976-.535a5.8,5.8,0,0,0,2.308-2.307l.534-.977a1.442,1.442,0,0,1,2.529,0Z" fill="#eaeaea"/>
+    <!-- Bottom badge -->
+    <path d="M72.125,89.5a48.052,48.052,0,0,1-48.25.01,26.726,26.726,0,0,1,48.25-.01Z" fill="#285d86"/>
+  </g>
+</svg>

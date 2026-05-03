@@ -35,15 +35,15 @@ import { selectModel } from 'store/@reducers/models'
 
 import like from 'modules/words'
 
-import Aptis from 'assets/logos/aptis.png'
-import B1B2 from 'assets/logos/b1b2.png'
-import IELTS from 'assets/logos/ielts.png'
+import Aptis from 'assets/illustrations/decorative/aptis.svg'
+import B1B2 from 'assets/illustrations/brand/logo.svg'
+import IELTS from 'assets/illustrations/decorative/go.svg'
 
 import FetchError from 'views/errors/FetchError'
 import PATH from 'utils/path'
 
 import { withVerification as WV } from 'hocs'
-import { svg } from 'assets/svg'
+import { svg } from 'assets/compat'
 
 const Models = () => {
   const ls = useLocalStorage()

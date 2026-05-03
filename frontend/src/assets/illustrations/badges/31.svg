@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="98.663" viewBox="0 0 96 98.663">
+  <g id="_31" data-name="31">
+    <circle cx="48" cy="48" r="48" fill="#00ccc6"/>
+    <!-- Gear outer -->
+    <path d="M48,24 L52,24 L54,28 L58,26 L61,29 L59,33 L63,35 L63,39 L59,41 L61,45 L58,48 L54,46 L52,50 L48,50 L46,46 L42,48 L39,45 L41,41 L37,39 L37,35 L41,33 L39,29 L42,26 L46,28 Z" fill="#009994" transform="translate(0,11) scale(1.15) translate(-7,-5)"/>
+    <!-- Gear inner circle -->
+    <circle cx="48" cy="48" r="10" fill="#40d5d0"/>
+    <circle cx="48" cy="48" r="6" fill="#009994"/>
+    <!-- Gear center dot -->
+    <circle cx="48" cy="48" r="3" fill="#174d4b"/>
+    <!-- Small gear -->
+    <circle cx="68" cy="34" r="8" fill="#174d4b"/>
+    <circle cx="68" cy="34" r="5" fill="#40d5d0"/>
+    <circle cx="68" cy="34" r="2.5" fill="#174d4b"/>
+    <!-- Gear teeth small -->
+    <rect x="66" y="24" width="4" height="4" rx="1" fill="#174d4b"/>
+    <rect x="66" y="40" width="4" height="4" rx="1" fill="#174d4b"/>
+    <rect x="58" y="32" width="4" height="4" rx="1" fill="#174d4b"/>
+    <rect x="74" y="32" width="4" height="4" rx="1" fill="#174d4b"/>
+    <!-- Sparkle -->
+    <path d="M20,64 l.534.977a5.8,5.8,0,0,0,2.308,2.307l.977.535a1.442,1.442,0,0,1,0,2.529l-.977.534a5.8,5.8,0,0,0-2.308,2.308l-.534.976a1.441,1.441,0,0,1-2.529,0l-.534-.976a5.8,5.8,0,0,0-2.308-2.308l-.976-.534a1.441,1.441,0,0,1,0-2.529l.976-.535a5.8,5.8,0,0,0,2.308-2.307l.534-.977a1.442,1.442,0,0,1,2.529,0Z" fill="#eaeaea"/>
+    <!-- Bottom badge -->
+    <path d="M72.125,89.5a48.052,48.052,0,0,1-48.25.01,26.726,26.726,0,0,1,48.25-.01Z" fill="#009994"/>
+  </g>
+</svg>

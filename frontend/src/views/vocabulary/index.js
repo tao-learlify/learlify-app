@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import { Megaphone, Fire, Question, Gear, Leaf } from '@phosphor-icons/react'
 import { VocabularyExerciseView } from 'components/ui'
-import pandaImg from 'assets/img/panda.svg'
+import pandaImg from 'assets/illustrations/pandas/panda.svg'
 
 // ── Vocabulary questions ────────────────────────────────────────────────────────
 // icon: ReactNode — passed into WordRow's icon badge (optional, purely decorative)

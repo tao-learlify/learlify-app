@@ -23,13 +23,13 @@ import LinkThrough from 'components/LinkThrough'
 
 import PATH from 'utils/path'
 
-import { svg } from 'assets/svg'
+import { svg } from 'assets/compat'
 import { splitContextFromSection } from '../utils'
 
 import styles from '../styles.module.scss'
 import { APTIS, IELTS } from 'constant/models'
 
-import Background from 'assets/img/sidebar-logo.png'
+import Background from 'assets/illustrations/brand/logo.svg'
 import FlexContainer from 'components/FlexContainer'
 
 /**

@@ -62,7 +62,7 @@ import like from 'modules/words'
 
 import styles from './exams.module.scss'
 import { syncCache } from 'store/@reducers/exams'
-import { img } from 'assets/img'
+import { img } from 'assets/compat'
 
 const Exercise = () => {
   const categories = useCategories()

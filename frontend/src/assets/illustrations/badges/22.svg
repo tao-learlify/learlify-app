@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="98.663" viewBox="0 0 96 98.663">
+  <g id="_22" data-name="22">
+    <circle cx="48" cy="48" r="48" fill="#ff3f3f"/>
+    <!-- Potion bottle body -->
+    <path d="M36,50 C30,56 30,68 36,74 C40,78 56,78 60,74 C66,68 66,56 60,50 L58,48 L58,36 L38,36 L38,48 Z" fill="#c33"/>
+    <!-- Potion liquid -->
+    <path d="M36,56 C32,62 33,70 38,74 C42,78 54,78 58,74 C63,70 64,62 60,56 L56,52 L40,52 Z" fill="#ff8c8c"/>
+    <!-- Bottle neck -->
+    <rect x="42" y="28" width="12" height="10" rx="1" fill="#802020"/>
+    <!-- Bottle cork -->
+    <rect x="43" y="24" width="10" height="6" rx="2" fill="#e88905"/>
+    <!-- Liquid bubbles -->
+    <circle cx="44" cy="62" r="3" fill="#eaeaea" opacity="0.4"/>
+    <circle cx="52" cy="66" r="2" fill="#eaeaea" opacity="0.3"/>
+    <circle cx="48" cy="58" r="1.5" fill="#eaeaea" opacity="0.35"/>
+    <!-- Bottle shine -->
+    <path d="M40,50 L40,62 C38,58 38,54 40,50 Z" fill="#eaeaea" opacity="0.2"/>
+    <!-- Sparkle -->
+    <path d="M72,32 l.534.977a5.8,5.8,0,0,0,2.308,2.307l.977.535a1.442,1.442,0,0,1,0,2.529l-.977.534a5.8,5.8,0,0,0-2.308,2.308l-.534.976a1.441,1.441,0,0,1-2.529,0l-.534-.976a5.8,5.8,0,0,0-2.308-2.308l-.976-.534a1.441,1.441,0,0,1,0-2.529l.976-.535a5.8,5.8,0,0,0,2.308-2.307l.534-.977a1.442,1.442,0,0,1,2.529,0Z" fill="#eaeaea"/>
+    <!-- Bottom badge -->
+    <path d="M72.125,89.5a48.052,48.052,0,0,1-48.25.01,26.726,26.726,0,0,1,48.25-.01Z" fill="#ff8c8c"/>
+  </g>
+</svg>

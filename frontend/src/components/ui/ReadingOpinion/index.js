@@ -8,7 +8,7 @@ import {
   BookOpenIcon,
   ArrowsClockwiseIcon,
 } from '@phosphor-icons/react'
-import pandaImg from 'assets/img/panda.svg'
+import pandaImg from 'assets/illustrations/pandas/panda.svg'
 import { ExerciseHeader } from 'components/ui/GrammarExercise'
 import styles from './ReadingOpinion.module.scss'
 

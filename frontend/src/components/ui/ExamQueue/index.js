@@ -14,7 +14,7 @@ import {
   Clock,
   Lightning
 } from '@phosphor-icons/react'
-import pandaImg from 'assets/img/learning-panda-01.png'
+import pandaImg from 'assets/illustrations/pandas/panda.svg'
 import styles from './ExamQueue.module.scss'
 
 /* ── Skill metadata ─────────────────────────────────────────────────────────── */

@@ -20,8 +20,8 @@ import Subscribe from 'components/Subscribe'
 import styles from './index.module.scss'
 import plugins from './plugins'
 
-import Right from 'assets/svg/previous.svg'
-import Left from 'assets/svg/next.svg'
+import Right from 'assets/illustrations/decorative/go.svg'
+import Left from 'assets/illustrations/decorative/go.svg'
 import { fetchYoutubeVideosThunk } from 'store/@thunks/settings'
 
 const Videos = () => {

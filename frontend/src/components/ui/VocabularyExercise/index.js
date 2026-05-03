@@ -1,7 +1,7 @@
 import React, { useState, useCallback, useMemo, useRef, useEffect } from 'react'
 import clsx from 'clsx'
 import { Check, XCircle, ArrowRight, Lightning, Sparkle, ArrowsClockwise, HourglassIcon } from '@phosphor-icons/react'
-import pandaImg from 'assets/img/panda.svg'
+import pandaImg from 'assets/illustrations/pandas/panda.svg'
 import { ExerciseHeader } from 'components/ui/GrammarExercise'
 import styles from './VocabularyExercise.module.scss'
 

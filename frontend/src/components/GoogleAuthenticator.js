@@ -8,7 +8,7 @@ import lang from 'lang'
 import config from 'config'
 
 
-import { img } from 'assets/img'
+import { img } from 'assets/compat'
 /**
  * @typedef {Object} GoogleAuthenticatorProps
  * @property {string} className

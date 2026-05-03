@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import { ReadingOpinionView } from 'components/ui'
-import pandaImg from 'assets/img/panda.svg'
+import pandaImg from 'assets/illustrations/pandas/panda.svg'
 
 // ── Sample exercises ──────────────────────────────────────────────────────────
 // Each exercise: 4 people give opinions, user matches 7 questions to persons.

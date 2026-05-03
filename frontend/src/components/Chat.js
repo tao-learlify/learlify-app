@@ -14,7 +14,7 @@ import useAuthProvider from 'hooks/useAuthProvider'
 import useForm from 'hooks/useForm'
 import FileUploader from './FileUploader'
 
-import { img } from 'assets/img'
+import { img } from 'assets/compat'
 import { ellipsis } from 'utils/functions'
 
 const Container = styled.div`

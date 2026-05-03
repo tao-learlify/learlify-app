@@ -18,8 +18,8 @@ import useNotifications from 'hooks/useNotifications'
 import { Button } from 'components/ui/Button'
 
 import PATH from 'utils/path'
-import brandLogo from 'assets/img/brand.png'
-import { img } from 'assets/img'
+import brandLogo from 'assets/illustrations/brand/logo.svg'
+import { img } from 'assets/compat'
 
 import styles from './SidebarNav.module.scss'
 

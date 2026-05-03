@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="98.663" viewBox="0 0 96 98.663">
+  <g id="_29" data-name="29">
+    <circle cx="48" cy="48" r="48" fill="#003e6d"/>
+    <!-- Telescope tube -->
+    <rect x="30" y="42" width="36" height="12" rx="3" fill="#3882ba" transform="rotate(-25 48 48)"/>
+    <!-- Telescope wide end -->
+    <rect x="22" y="46" width="14" height="16" rx="3" fill="#285d86" transform="rotate(-25 29 54)"/>
+    <!-- Telescope narrow end -->
+    <rect x="60" y="38" width="10" height="8" rx="2" fill="#285d86" transform="rotate(-25 65 42)"/>
+    <!-- Lens shine -->
+    <ellipse cx="26" cy="56" rx="4" ry="5" fill="#eaeaea" opacity="0.3" transform="rotate(-25 26 56)"/>
+    <!-- Tripod legs -->
+    <line x1="44" y1="56" x2="34" y2="76" stroke="#00213b" stroke-width="3" stroke-linecap="round"/>
+    <line x1="48" y1="56" x2="54" y2="76" stroke="#00213b" stroke-width="3" stroke-linecap="round"/>
+    <line x1="46" y1="56" x2="46" y2="78" stroke="#00213b" stroke-width="3" stroke-linecap="round"/>
+    <!-- Stars -->
+    <circle cx="74" cy="26" r="2" fill="#eaeaea"/>
+    <circle cx="80" cy="38" r="1.5" fill="#eaeaea" opacity="0.7"/>
+    <circle cx="70" cy="20" r="1" fill="#eaeaea" opacity="0.5"/>
+    <circle cx="84" cy="30" r="1" fill="#eaeaea" opacity="0.6"/>
+    <!-- Sparkle -->
+    <path d="M78,48 l.534.977a5.8,5.8,0,0,0,2.308,2.307l.977.535a1.442,1.442,0,0,1,0,2.529l-.977.534a5.8,5.8,0,0,0-2.308,2.308l-.534.976a1.441,1.441,0,0,1-2.529,0l-.534-.976a5.8,5.8,0,0,0-2.308-2.308l-.976-.534a1.441,1.441,0,0,1,0-2.529l.976-.535a5.8,5.8,0,0,0,2.308-2.307l.534-.977a1.442,1.442,0,0,1,2.529,0Z" fill="#eaeaea"/>
+    <!-- Bottom badge -->
+    <path d="M72.125,89.5a48.052,48.052,0,0,1-48.25.01,26.726,26.726,0,0,1,48.25-.01Z" fill="#285d86"/>
+  </g>
+</svg>

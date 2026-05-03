@@ -10,7 +10,7 @@ import Text from 'components/Text'
 
 import styles from './styles.module.scss'
 
-import { img } from 'assets/img'
+import { img } from 'assets/compat'
 import { clearAsyncError } from 'store/@actions'
 
 import PATH from 'utils/path'

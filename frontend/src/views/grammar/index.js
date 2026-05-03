@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useHistory, useLocation } from 'react-router-dom'
 import { GrammarExerciseView } from 'components/ui'
-import pandaImg from 'assets/img/panda.svg'
+import pandaImg from 'assets/illustrations/pandas/panda.svg'
 
 // ── Load real exam data ────────────────────────────────────────────────────────
 // Falls back through exam-01 → exam-02 as needed.

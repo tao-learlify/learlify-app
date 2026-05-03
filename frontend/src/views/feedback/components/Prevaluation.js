@@ -11,7 +11,7 @@ import useWindowSize from 'hooks/useWindowSize'
 import Flex from 'components/FlexContainer'
 import Text from 'components/Text'
 
-import { img } from 'assets/img'
+import { img } from 'assets/compat'
 import PATH from 'utils/path'
 
 /**

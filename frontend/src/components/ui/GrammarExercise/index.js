@@ -13,7 +13,7 @@ import {
   ArrowRightIcon,
   SparkleIcon
 } from '@phosphor-icons/react'
-import pandaImg from 'assets/img/panda.svg'
+import pandaImg from 'assets/illustrations/pandas/panda.svg'
 import styles from './GrammarExercise.module.scss'
 
 // ── Phase constants ────────────────────────────────────────────────────────────

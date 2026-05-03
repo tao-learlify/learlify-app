@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import { WritingExerciseView } from 'components/ui'
-import pandaImg from 'assets/img/panda.svg'
+import pandaImg from 'assets/illustrations/pandas/panda.svg'
 
 // ── Sample exercises ──────────────────────────────────────────────────────────
 // Each exercise has a shared context + two tasks (informal + formal).

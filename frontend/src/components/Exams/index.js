@@ -20,7 +20,7 @@ import ModalDialog from 'components/ModalDialog'
 import { getItemStyle } from './utils'
 import { Hover } from 'styled'
 
-import Arrow from 'assets/svg/flecha.svg'
+import Arrow from 'assets/illustrations/decorative/go.svg'
 import styles from './index.module.scss'
 import path from 'utils/path'
 

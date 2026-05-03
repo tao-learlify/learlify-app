@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import { ReadingHeadingView } from 'components/ui'
-import pandaImg from 'assets/img/panda.svg'
+import pandaImg from 'assets/illustrations/pandas/panda.svg'
 
 // ── Sample exercises ──────────────────────────────────────────────────────────
 // Each exercise: 8 headings (A–H), 7 paragraphs (19–25), 1 heading is a distractor.

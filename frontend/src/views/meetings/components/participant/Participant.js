@@ -72,7 +72,7 @@ import httpClient from 'utils/httpClient'
 import { ClassContext } from '../classRoom/ClassRoom'
 import { LocalTracksContext } from 'store/context'
 import { InputDivisor } from '../chat/styles'
-import MaleImage from 'assets/img/user-male.png'
+import MaleImage from 'assets/illustrations/pandas/panda.svg'
 
 const TRACK = {
   audio: 'audio',

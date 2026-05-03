@@ -10,7 +10,7 @@ import useModels from 'hooks/useModels'
 
 import Text from 'components/Text'
 
-import Panda from 'assets/svg/courses.svg'
+import Panda from 'assets/illustrations/decorative/courses.svg'
 import styles from './index.module.scss'
 
 import { Button } from 'styled'

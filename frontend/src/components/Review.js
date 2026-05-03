@@ -10,7 +10,7 @@ import FlexContainer from './FlexContainer'
 
 import animations from 'utils/animations'
 
-import { img } from 'assets/img'
+import { img } from 'assets/compat'
 
 export const review = ['Opción', 'Evaluación', 'Correcta']
 

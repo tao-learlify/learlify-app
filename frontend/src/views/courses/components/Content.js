@@ -24,7 +24,7 @@ import { calcProgress } from 'utils/progress'
 import { over } from 'utils/functions'
 
 import { splitContextFromSection } from '../utils'
-import { img } from 'assets/img'
+import { img } from 'assets/compat'
 
 import { Button as CommonButton } from 'styled'
 import { TURQUOISE } from 'assets/colors'

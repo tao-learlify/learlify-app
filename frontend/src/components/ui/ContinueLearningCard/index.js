@@ -1,5 +1,5 @@
 import React, { memo } from 'react'
-import diamondSrc from 'assets/svg/diamond.svg'
+import diamondSrc from 'assets/illustrations/badges/diamond.svg'
 import styles from './ContinueLearningCard.module.scss'
 import clsx from 'clsx'
 import { Button } from 'components/ui/Button'

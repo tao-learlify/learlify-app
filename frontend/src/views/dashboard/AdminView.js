@@ -38,7 +38,7 @@ import { select } from 'store/@reducers/plans'
 
 import styles from './index.module.scss'
 import PATH from 'utils/path'
-import { img } from 'assets/img'
+import { img } from 'assets/compat'
 
 import { fetchModelsThunk } from 'store/@thunks/models'
 import Meeting from 'components/Meeting'

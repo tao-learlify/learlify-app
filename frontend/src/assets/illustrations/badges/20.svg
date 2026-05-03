@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="98.663" viewBox="0 0 96 98.663">
+  <g id="_20" data-name="20">
+    <circle cx="48" cy="48" r="48" fill="#ffb208"/>
+    <!-- Key handle (ring) -->
+    <circle cx="38" cy="38" r="12" fill="#e88905" stroke="#693e02" stroke-width="2.5"/>
+    <circle cx="38" cy="38" r="7" fill="#ffb208"/>
+    <!-- Key shaft -->
+    <rect x="48" y="36" width="26" height="5" rx="2" fill="#e88905"/>
+    <rect x="48" y="36" width="26" height="2.5" rx="1" fill="#ffe205"/>
+    <!-- Key teeth -->
+    <path d="M70,41 L70,50 L66,50 L66,45 L62,45 L62,50 L58,50 L58,45 L56,45 L56,41" fill="#e88905"/>
+    <path d="M70,41 L70,48 L67,48 L67,44 L63,44 L63,48 L59,48 L59,44 L57,44 L57,41" fill="#693e02"/>
+    <!-- Key ring shine -->
+    <path d="M32,32 C30,34 29,37 30,40" fill="none" stroke="#ffe205" stroke-width="2" stroke-linecap="round"/>
+    <!-- Sparkles -->
+    <path d="M22,58 l.534.977a5.8,5.8,0,0,0,2.308,2.307l.977.535a1.442,1.442,0,0,1,0,2.529l-.977.534a5.8,5.8,0,0,0-2.308,2.308l-.534.976a1.441,1.441,0,0,1-2.529,0l-.534-.976a5.8,5.8,0,0,0-2.308-2.308l-.976-.534a1.441,1.441,0,0,1,0-2.529l.976-.535a5.8,5.8,0,0,0,2.308-2.307l.534-.977a1.442,1.442,0,0,1,2.529,0Z" fill="#eaeaea"/>
+    <!-- Bottom badge -->
+    <path d="M72.125,89.5a48.052,48.052,0,0,1-48.25.01,26.726,26.726,0,0,1,48.25-.01Z" fill="#e88905"/>
+  </g>
+</svg>

@@ -17,8 +17,8 @@ import useQuery from 'hooks/useQuery'
 import useToggler from 'hooks/useToggler'
 
 import PATH from 'utils/path'
-import Panda from 'assets/img/panda.svg'
-import brandLogo from 'assets/img/brand.png'
+import Panda from 'assets/illustrations/pandas/panda.svg'
+import brandLogo from 'assets/illustrations/brand/logo.svg'
 
 import links from './config/ref'
 import like from 'modules/words'

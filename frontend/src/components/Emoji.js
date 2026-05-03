@@ -1,34 +1,24 @@
 import React from 'react'
 
-import Student from 'assets/img/student.png'
-import Done from 'assets/img/done.png'
-import Evaluation from 'assets/img/evaluation.png'
-import Chat from 'assets/img/chat.png'
-import Test from 'assets/img/test.png'
-import Shocked from 'assets/img/shocked.png'
-import Microphone from 'assets/img/microphone.png'
-import Next from 'assets/img/right.png'
-import Wav from 'assets/img/wav.png'
-import Play from 'assets/img/play.png'
-import Image from 'assets/img/image.png'
-import Listening from 'assets/img/listening.png'
-import Reading from 'assets/img/studying.png'
-import Speaking from 'assets/img/speaking.png'
-import Writing from 'assets/img/writing.png'
-import Professor from 'assets/img/teacher.png'
-import Love from 'assets/img/love.png'
-import Gift from 'assets/img/gift-card.png'
-import Learning from 'assets/img/online-learning.png'
-import Homework from 'assets/img/homework.png'
-
-import Report from 'assets/img/report.png'
-import Send from 'assets/img/send.png'
-import Megaphone from 'assets/img/megaphone.png'
-import Checked from 'assets/img/checked.png'
-import Unchecked from 'assets/img/unchecked.png'
-import Arrow from 'assets/img/arrow.png'
-import Teacher from 'assets/img/teacher.png'
-import Language from 'assets/img/course.png'
+import {
+  Panda,
+  PandaSpeaking,
+  SkillGrammarVocabulary,
+  SkillListening,
+  SkillReading,
+  SkillSpeaking,
+  BadgeCompleted,
+  BadgeDiamond,
+  BadgeGold,
+  BadgeMaster,
+  BadgeRuby,
+  BadgeSilver,
+  DecDialog,
+  DecGo,
+  DecGreen,
+  DecBlue,
+  AnimWaiting,
+} from 'assets/illustrations'
 
 /**
  * @typedef {Object} EmojiProps
@@ -40,34 +30,34 @@ import Language from 'assets/img/course.png'
  */
 
 const emojiMap = new Map([
-  ['Comment', { src: Chat, alt: 'comment' }],
-  ['Student', { src: Student, alt: 'Student' }],
-  ['Done', { src: Done, alt: 'Done' }],
-  ['Evaluation', { src: Evaluation, alt: 'Evaluation ' }],
-  ['Test', { src: Test, alt: 'Test' }],
-  ['Shocked', { src: Shocked, alt: 'shocked' }],
-  ['Micro', { src: Microphone, alt: 'Microphone ' }],
-  ['Next', { src: Next, alt: 'Next' }],
-  ['Wav', { src: Wav, alt: 'Wav' }],
-  ['Play', { src: Play, alt: 'Play' }],
-  ['Image', { src: Image, alt: 'Image' }],
-  ['Listening', { src: Listening, alt: 'Listening' }],
-  ['Reading', { src: Reading, alt: 'Reading' }],
-  ['Speaking', { src: Speaking, alt: 'Speaking' }],
-  ['Writing', { src: Writing, alt: 'Writing' }],
-  ['Professor', { src: Professor, alt: 'Professor' }],
-  ['Love', { src: Love, alt: 'love' }],
-  ['Gift', { src: Gift, alt: 'gift' }],
-  ['Learning', { src: Learning, alt: 'learning' }],
-  ['Homework', { src: Homework, alt: 'homework' }],
-  ['Report', { src: Report, alt: 'report' }],
-  ['Send', { src: Send, alt: 'send' }],
-  ['Megaphone', { src: Megaphone, alt: 'megaphone' }],
-  ['Checked', { src: Checked, alt: 'checked' }],
-  ['Unchecked', { src: Unchecked, alt: 'unchecked' }],
-  ['Arrow', { src: Arrow, alt: 'arrow' }],
-  ['Teacher', { src: Teacher, alt: 'teacher' }],
-  ['Language', { src: Language, alt: 'language ' }]
+  ['Comment', { src: DecDialog, alt: 'comment' }],
+  ['Student', { src: Panda, alt: 'Student' }],
+  ['Done', { src: BadgeCompleted, alt: 'Done' }],
+  ['Evaluation', { src: BadgeMaster, alt: 'Evaluation' }],
+  ['Test', { src: BadgeGold, alt: 'Test' }],
+  ['Shocked', { src: Panda, alt: 'shocked' }],
+  ['Micro', { src: PandaSpeaking, alt: 'Microphone' }],
+  ['Next', { src: DecGo, alt: 'Next' }],
+  ['Wav', { src: AnimWaiting, alt: 'Wav' }],
+  ['Play', { src: DecGo, alt: 'Play' }],
+  ['Image', { src: DecGreen, alt: 'Image' }],
+  ['Listening', { src: SkillListening, alt: 'Listening' }],
+  ['Reading', { src: SkillReading, alt: 'Reading' }],
+  ['Speaking', { src: SkillSpeaking, alt: 'Speaking' }],
+  ['Writing', { src: SkillGrammarVocabulary, alt: 'Writing' }],
+  ['Professor', { src: Panda, alt: 'Professor' }],
+  ['Love', { src: BadgeRuby, alt: 'love' }],
+  ['Gift', { src: BadgeDiamond, alt: 'gift' }],
+  ['Learning', { src: BadgeCompleted, alt: 'learning' }],
+  ['Homework', { src: BadgeSilver, alt: 'homework' }],
+  ['Report', { src: BadgeDiamond, alt: 'report' }],
+  ['Send', { src: DecGo, alt: 'send' }],
+  ['Megaphone', { src: PandaSpeaking, alt: 'megaphone' }],
+  ['Checked', { src: BadgeCompleted, alt: 'checked' }],
+  ['Unchecked', { src: DecBlue, alt: 'unchecked' }],
+  ['Arrow', { src: DecGo, alt: 'arrow' }],
+  ['Teacher', { src: Panda, alt: 'teacher' }],
+  ['Language', { src: SkillGrammarVocabulary, alt: 'language' }]
 ])
 
 /**

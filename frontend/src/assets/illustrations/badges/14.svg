@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="98.663" viewBox="0 0 96 98.663">
+  <g id="_14" data-name="14">
+    <circle cx="48" cy="48" r="48" fill="#ff3f3f"/>
+    <!-- Heart -->
+    <path d="M48,72 C48,72 24,54 24,40 C24,32 30,26 38,26 C43,26 46,29 48,32 C50,29 53,26 58,26 C66,26 72,32 72,40 C72,54 48,72 48,72 Z" fill="#c33"/>
+    <path d="M48,68 C48,68 28,52 28,40 C28,34 32,29 38,29 C43,29 46,32 48,35 C50,32 53,29 58,29 C64,29 68,34 68,40 C68,52 48,68 48,68 Z" fill="#ff8c8c"/>
+    <!-- Heart shine -->
+    <path d="M38,32 C34,32 31,35 31,40 C31,42 32,44 33,46" fill="none" stroke="#eaeaea" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Pulse lines -->
+    <path d="M16,48 L22,48 L24,42 L27,54 L30,48 L34,48" fill="none" stroke="#802020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M62,48 L66,48 L69,42 L72,54 L74,48 L80,48" fill="none" stroke="#802020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Bottom badge -->
+    <path d="M72.125,89.5a48.052,48.052,0,0,1-48.25.01,26.726,26.726,0,0,1,48.25-.01Z" fill="#ff8c8c"/>
+  </g>
+</svg>

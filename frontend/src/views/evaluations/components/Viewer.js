@@ -41,7 +41,7 @@ import { Button } from 'styled'
 import { getFullName } from 'utils/functions'
 import { SPEAKING, WRITING } from 'constant/labels'
 import { TURQUOISE, WHITE, RED } from 'assets/colors'
-import { img } from 'assets/img'
+import { img } from 'assets/compat'
 
 import roles from 'utils/roles'
 import { STATUS } from 'modules/evaluations'

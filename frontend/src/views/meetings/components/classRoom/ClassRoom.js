@@ -44,7 +44,7 @@ import {
 
 import useQuery from 'hooks/useQuery'
 import useSVG from 'hooks/useSVG'
-import { svg } from 'assets/svg'
+import { svg } from 'assets/compat'
 
 
 /**

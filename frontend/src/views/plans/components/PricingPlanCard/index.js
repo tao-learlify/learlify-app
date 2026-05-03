@@ -6,9 +6,9 @@ import { formatPrice } from 'utils/pricing'
 import PricingFeatureList from '../PricingFeatureList'
 import styles from './pricing-plan-card.module.scss'
 
-import pandaReading from 'assets/img/learning-panda-01.png'
-import pandaColor from 'assets/img/panda-color.png'
-import pandaKing from 'assets/img/panda-king.png'
+import pandaReading from 'assets/illustrations/pandas/panda.svg'
+import pandaColor from 'assets/illustrations/pandas/panda.svg'
+import pandaKing from 'assets/illustrations/pandas/panda.svg'
 
 const PLAN_PANDAS = {
   exam_essentials: { src: pandaReading, alt: 'Exam Essentials Panda', top: 28, height: 100 },

@@ -17,7 +17,7 @@ import useExamConsumer from 'hooks/useExamConsumer'
 
 import { isModular, removeMatch } from 'utils/functions'
 
-import { img } from 'assets/img'
+import { img } from 'assets/compat'
 import styles from './styles.module.scss'
 import AsyncComponent from 'components/AsyncComponent'
 import AudioPlayer from 'components/AudioPlayer'

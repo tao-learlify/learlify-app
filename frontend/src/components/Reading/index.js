@@ -24,7 +24,7 @@ import Selection from 'components/Selection'
 import ScrollView from 'components/ScrollView'
 import RegExpIntercept from 'components/RegExpIntercept'
 
-import { img } from 'assets/img'
+import SkillReading from 'assets/illustrations/skills/reading.svg'
 
 import {
   AnswerContainer,
@@ -105,7 +105,7 @@ const ReadingPartOne = () => {
     <div className={css.padding}>
       <br />
       <Text dunkin bold color="blue" tag="h5">
-        {description} <img alt="book" src={img.reading} width={35} />
+        {description} <img alt="book" src={SkillReading} width={35} />
       </Text>
       <hr />
       <div className="ml-3">
@@ -181,7 +181,7 @@ const ReadingPartTwo = () => {
     <div className={css.padding} ref={nodeRef}>
       <br />
       <Text dunkin color="blue" tag="h3">
-        Order the sentences <img alt="books" src={img.reading} width={40} />
+        Order the sentences <img alt="books" src={SkillReading} width={40} />
       </Text>
       <hr />
       <br />
@@ -292,7 +292,7 @@ const ReadingPartFour = () => {
         <Text dunkin color="blue" tag="h5">
           {connected || (
             <>
-              Reading <img alt="reading" lazy="true" src={img.reading} width={32} />
+              Reading <img alt="reading" lazy="true" src={SkillReading} width={32} />
             </>
           )}
         </Text>
@@ -366,7 +366,7 @@ const ReadingPartFour = () => {
       <Text dunkin color="blue" tag="h5">
         {connected || (
           <>
-            Reading <img alt="reading" src={img.reading} width={32} />
+            Reading <img alt="reading" src={SkillReading} width={32} />
           </>
         )}
       </Text>
@@ -501,7 +501,7 @@ const ReadingPartFive = () => {
     <div className={css.padding}>
       <br />
       <Text dunkin color="blue" tag="h5">
-        {description} <img alt="reading" src={img.reading} width={32} />
+        {description} <img alt="reading" src={SkillReading} width={32} />
       </Text>
       <hr />
       <Row>

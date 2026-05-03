@@ -6,7 +6,7 @@ import { TitleContainer } from './styles'
 import useModels from 'hooks/useModels'
 import Text from 'components/Text'
 import FlexContainer from 'components/FlexContainer'
-import { img } from 'assets/img'
+import { img } from 'assets/compat'
 
 const Primary = () => {
   const { model } = useModels()

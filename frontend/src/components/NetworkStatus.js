@@ -17,7 +17,7 @@ import ViewContent from './ViewContent'
 import animations from 'utils/animations'
 import status from 'utils/status'
 
-import { img } from 'assets/img'
+import { img } from 'assets/compat'
 
 export const ONLINE_EVENT = 'ONLINE_EVENT'
 export const OFFLINE_EVENT = 'OFFLINE_EVENT'

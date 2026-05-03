@@ -19,7 +19,7 @@ import reducer, {
   setRecordingEnable
 } from 'state/speakings'
 
-import Microphone from 'assets/img/microphone.png'
+import Microphone from 'assets/illustrations/pandas/panda-speaking.svg'
 
 import AudioPlayer from 'components/AudioPlayer'
 import Stepper from './Stepper'

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="98.663" viewBox="0 0 96 98.663">
+  <g id="_28" data-name="28">
+    <circle cx="48" cy="48" r="48" fill="#ffb208"/>
+    <!-- Trophy cup -->
+    <path d="M34,32 L34,50 C34,60 40,66 48,66 C56,66 62,60 62,50 L62,32 Z" fill="#ffe205"/>
+    <path d="M34,32 L34,50 C34,60 40,66 48,66 L48,32 Z" fill="#e88905"/>
+    <!-- Trophy rim -->
+    <rect x="32" y="30" width="32" height="5" rx="2" fill="#693e02"/>
+    <!-- Trophy handles -->
+    <path d="M34,38 C28,38 24,42 24,48 C24,54 28,56 34,54" fill="none" stroke="#693e02" stroke-width="3" stroke-linecap="round"/>
+    <path d="M62,38 C68,38 72,42 72,48 C72,54 68,56 62,54" fill="none" stroke="#693e02" stroke-width="3" stroke-linecap="round"/>
+    <!-- Trophy base -->
+    <rect x="44" y="66" width="8" height="6" fill="#693e02"/>
+    <rect x="38" y="72" width="20" height="4" rx="2" fill="#693e02"/>
+    <!-- Trophy star -->
+    <path d="M48,40 L50,46 L56,46 L51,49 L53,55 L48,51 L43,55 L45,49 L40,46 L46,46 Z" fill="#eaeaea"/>
+    <!-- Sparkle -->
+    <path d="M78,30 l.355.649a3.85,3.85,0,0,0,1.534,1.534l.65.356a.958.958,0,0,1,0,1.681l-.65.355a3.857,3.857,0,0,0-1.534,1.534l-.355.649a.958.958,0,0,1-1.681,0l-.355-.649a3.857,3.857,0,0,0-1.534-1.534l-.649-.355a.958.958,0,0,1,0-1.681l.649-.356a3.857,3.857,0,0,0,1.534-1.534l.355-.649a.958.958,0,0,1,1.681,0Z" fill="#eaeaea"/>
+    <!-- Bottom badge -->
+    <path d="M72.125,89.5a48.052,48.052,0,0,1-48.25.01,26.726,26.726,0,0,1,48.25-.01Z" fill="#e88905"/>
+  </g>
+</svg>

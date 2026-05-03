@@ -12,8 +12,8 @@ import { BLUE, YELLOW, WHITE, TURQUOISE } from 'assets/colors'
 
 import { motion } from 'framer-motion'
 
-import bubble from 'assets/img/bubble.png'
-import logo from 'assets/img/brand.png'
+import bubble from 'assets/illustrations/decorative/dialog.svg'
+import logo from 'assets/illustrations/brand/logo.svg'
 
 
 export const TextContainer = styled.div`

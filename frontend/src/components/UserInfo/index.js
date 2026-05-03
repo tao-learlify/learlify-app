@@ -34,7 +34,7 @@ import FallbackMode from 'components/FallbackMode'
 import { GET } from 'providers/http'
 import { getFullName } from 'utils/functions'
 
-import { img } from 'assets/img'
+import { img } from 'assets/compat'
 import { BLUE } from 'assets/colors'
 import FlexContainer from 'components/FlexContainer'
 

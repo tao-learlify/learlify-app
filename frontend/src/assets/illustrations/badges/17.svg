@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="98.663" viewBox="0 0 96 98.663">
+  <g id="_17" data-name="17">
+    <circle cx="48" cy="48" r="48" fill="#003e6d"/>
+    <!-- Book body -->
+    <rect x="28" y="30" width="40" height="44" rx="3" fill="#285d86"/>
+    <!-- Book spine -->
+    <rect x="28" y="30" width="8" height="44" rx="2" fill="#00213b"/>
+    <!-- Book cover -->
+    <rect x="32" y="32" width="34" height="40" rx="2" fill="#3882ba"/>
+    <!-- Book pages -->
+    <rect x="36" y="35" width="26" height="34" rx="1" fill="#eaeaea"/>
+    <!-- Book lines -->
+    <line x1="40" y1="42" x2="58" y2="42" stroke="#285d86" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="40" y1="47" x2="56" y2="47" stroke="#285d86" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="40" y1="52" x2="54" y2="52" stroke="#285d86" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="40" y1="57" x2="52" y2="57" stroke="#285d86" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- Magic glow from book -->
+    <path d="M74,30 l.534.977a5.8,5.8,0,0,0,2.308,2.307l.977.535a1.442,1.442,0,0,1,0,2.529l-.977.534a5.8,5.8,0,0,0-2.308,2.308l-.534.976a1.441,1.441,0,0,1-2.529,0l-.534-.976a5.8,5.8,0,0,0-2.308-2.308l-.976-.534a1.441,1.441,0,0,1,0-2.529l.976-.535a5.8,5.8,0,0,0,2.308-2.307l.534-.977a1.442,1.442,0,0,1,2.529,0Z" fill="#eaeaea"/>
+    <path d="M20,60 l.355.649a3.85,3.85,0,0,0,1.534,1.534l.65.356a.958.958,0,0,1,0,1.681l-.65.355a3.857,3.857,0,0,0-1.534,1.534l-.355.649a.958.958,0,0,1-1.681,0l-.355-.649a3.857,3.857,0,0,0-1.534-1.534l-.649-.355a.958.958,0,0,1,0-1.681l.649-.356a3.857,3.857,0,0,0,1.534-1.534l.355-.649a.958.958,0,0,1,1.681,0Z" fill="#eaeaea"/>
+    <!-- Bookmark -->
+    <path d="M54,30 L54,40 L57,37 L60,40 L60,30" fill="#ff3f3f"/>
+    <!-- Bottom badge -->
+    <path d="M72.125,89.5a48.052,48.052,0,0,1-48.25.01,26.726,26.726,0,0,1,48.25-.01Z" fill="#285d86"/>
+  </g>
+</svg>

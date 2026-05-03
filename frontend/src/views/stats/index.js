@@ -14,7 +14,7 @@ import Stats from 'components/Stats'
 
 import { fetchEvaluationsThunk, fetchLatestEvaluationsThunk } from 'store/@thunks/evaluations'
 import Text from 'components/Text'
-import { img } from 'assets/img'
+import { img } from 'assets/compat'
 
 const StatsView = () => {
   const dispatch = useDispatch()

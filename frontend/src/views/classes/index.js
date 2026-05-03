@@ -45,7 +45,7 @@ import { fetchClassRoomsThunk } from 'store/@thunks/classes'
 import { classesTourProvider } from 'providers/tour'
 import { createNavigationPath } from 'modules/url'
 
-import { img } from 'assets/img'
+import { img } from 'assets/compat'
 
 import { getClassTicket } from 'utils/packages'
 import moment from 'moment'
