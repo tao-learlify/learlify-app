@@ -1,9 +1,14 @@
-import styled from 'styled-components'
+import React from 'react'
+import clsx from 'clsx'
 
-const Avatar = styled.img`
-	width: 46px;
-	height: 46px;
-	border-radius: 50%;
-`
-
-export default Avatar
+export default function Avatar({ src, alt, className, size = 46, ...rest }) {
+  return (
+    <img
+      src={src}
+      alt={alt}
+      className={clsx('tw:rounded-full tw:object-cover', className)}
+      style={{ width: size, height: size }}
+      {...rest}
+    />
+  )
+}

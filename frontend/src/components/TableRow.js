@@ -1,5 +1,6 @@
-import styled from 'styled-components'
+import React from 'react'
+import clsx from 'clsx'
 
-export default styled.tr`
-  text-align: center;
-`
+export default function TableRow({ children, className, ...rest }) {
+  return <tr className={clsx('tw:text-center', className)} {...rest}>{children}</tr>
+}

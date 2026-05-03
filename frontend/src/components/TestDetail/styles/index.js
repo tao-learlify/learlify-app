@@ -1,17 +1,15 @@
-import styled from 'styled-components'
+import React from 'react'
+import clsx from 'clsx'
 
-export const TextInitialContainer = styled.div`
-  width: 40%;
-`
-export const TextContentContainer = styled.span`
-  margin-left: 4px;
-  margin-top: 4px;
-`
-
-export const IconContainer = styled.div`
-  margin-left: 7.5px;
-`
-
-export const Container = styled.div`
-  padding: 7.5px;
-`
+export function TextInitialContainer({ children, className, ...rest }) {
+  return <div className={clsx('tw:w-[40%]', className)} {...rest}>{children}</div>
+}
+export function TextContentContainer({ children, className, ...rest }) {
+  return <span className={clsx('tw:ml-1 tw:mt-1', className)} {...rest}>{children}</span>
+}
+export function IconContainer({ children, className, ...rest }) {
+  return <div className={clsx('tw:ml-2', className)} {...rest}>{children}</div>
+}
+export function Container({ children, className, ...rest }) {
+  return <div className={clsx('tw:p-2', className)} {...rest}>{children}</div>
+}
