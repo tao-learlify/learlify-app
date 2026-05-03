@@ -13,7 +13,7 @@
 import React, { useState, useCallback } from 'react';
 import type { Unit } from '../../../schemas/course/hierarchy';
 import { UnitProgressContext } from './hooks/UnitProgressContext';
-import { useUnitProgress }     from './hooks/useUnitProgress';
+import { useUnitProgress, type SavedV2Progress } from './hooks/useUnitProgress';
 import { UnitHeader }          from './UnitHeader';
 import { UnitFlow }            from './UnitFlow';
 import { XPFeedback }          from './ui/XPFeedback';
@@ -26,14 +26,21 @@ interface UnitViewProps {
   onNextUnit?: () => void;
   /** Called when user clicks "Back to course" in the completion card */
   onBackToCourse?: () => void;
-  /** Called when progress is made (exercise completed, XP earned) */
-  onProgressUpdate?: (xp: number, exercisesCompleted: number, progressPercent: number) => void;
+  /**
+   * Called when progress is made (exercise completed, XP earned).
+   * v2 carries the full block-level state for persistence.
+   */
+  onProgressUpdate?: (xp: number, exercisesCompleted: number, progressPercent: number, v2: SavedV2Progress) => void;
   /** Called when the section is fully completed (exam passed) */
   onSectionComplete?: (finalXp: number, examScore: number) => void;
+  /** Skip the intro card and jump directly to the first block (unit already started) */
+  skipIntro?: boolean;
+  /** Saved v2 block-level progress to hydrate state on resume */
+  savedProgress?: SavedV2Progress;
 }
 
-export function UnitView({ unit, onComplete, onNextUnit, onBackToCourse, onProgressUpdate, onSectionComplete }: UnitViewProps) {
-  const progress = useUnitProgress(unit);
+export function UnitView({ unit, onComplete, onNextUnit, onBackToCourse, onProgressUpdate, onSectionComplete, skipIntro = false, savedProgress }: UnitViewProps) {
+  const progress = useUnitProgress(unit, savedProgress);
 
   // XP feedback state
   const [feedbackXP, setFeedbackXP] = useState(0);
@@ -49,21 +56,43 @@ export function UnitView({ unit, onComplete, onNextUnit, onBackToCourse, onProgr
   const handleXP = useCallback((xp: number) => {
     setFeedbackXP(xp);
     setFeedbackVisible(true);
-    
-    // Report progress to backend
-    if (onProgressUpdate) {
-      const totalSections = unit.sections?.length || 1;
-      const completedSections = progress.completedSectionIds?.length || 0;
-      const progressPercent = completedSections / totalSections;
-      const exercisesCompleted = completedSections;
-      
-      onProgressUpdate(xp, exercisesCompleted, progressPercent);
-    }
-  }, [onProgressUpdate, unit.sections, progress.completedSectionIds]);
+    // Progress reporting with v2 is handled by the completedBlockCount effect below.
+  }, []);
 
   const dismissFeedback = useCallback(() => {
     setFeedbackVisible(false);
   }, []);
+
+  // Report progress on every block completion (covers 0-XP theory "Got it" blocks too).
+  // Single source of truth for v2 — always has up-to-date completedBlockIds.
+  const lastReportedBlockCount = React.useRef(0);
+  React.useEffect(() => {
+    if (progress.completedBlockCount === lastReportedBlockCount.current) return;
+    lastReportedBlockCount.current = progress.completedBlockCount;
+
+    if (onProgressUpdate) {
+      const totalSections = unit.sections?.length || 1;
+      const completedSections = progress.completedSectionIds?.length || 0;
+      const progressPercent = completedSections / totalSections;
+
+      // Build v2 — we need completedBlockIds from the unit's block list
+      const allBlockIds = unit.sections
+        .flatMap(s => s.blocks)
+        .filter(b => b.type !== 'divider')
+        .map(b => b.id);
+      const completedBlockIds = allBlockIds.filter(
+        id => progress.getBlockUIState({ id } as never) === 'completed'
+      );
+
+      onProgressUpdate(progress.earnedXP, completedSections, progressPercent, {
+        completedBlockIds,
+        xpRecord: {},          // xpRecord not exposed by progress API yet — safe default
+        currentBlockId: progress.currentBlockId,
+        updatedAt: new Date().toISOString(),
+      });
+    }
+  }, [progress.completedBlockCount, progress.completedSectionIds, progress.earnedXP,
+      progress.currentBlockId, progress.getBlockUIState, unit.sections, onProgressUpdate]);
 
   // Report section completion to backend
   React.useEffect(() => {
@@ -115,6 +144,7 @@ export function UnitView({ unit, onComplete, onNextUnit, onBackToCourse, onProgr
             onXP={handleXP}
             onNextUnit={onNextUnit}
             onBackToCourse={onBackToCourse}
+            skipIntro={skipIntro}
           />
         </main>
 

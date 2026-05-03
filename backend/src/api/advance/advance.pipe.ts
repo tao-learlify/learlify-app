@@ -1,6 +1,16 @@
 import { checkSchema } from 'express-validator'
 
 export class AdvancePipe {
+  get getOne(): ReturnType<typeof checkSchema> {
+    return checkSchema({
+      courseId: {
+        in: 'query',
+        isNumeric: true,
+        toInt: true,
+      }
+    })
+  }
+
   get create(): ReturnType<typeof checkSchema> {
     return checkSchema({
       courseId: {

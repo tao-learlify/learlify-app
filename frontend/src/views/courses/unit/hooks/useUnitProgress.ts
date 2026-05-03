@@ -105,11 +105,31 @@ function getAllBlocks(unit: Unit): Block[] {
 }
 
 // ─────────────────────────────────────────────────────────────
+// Saved v2 progress shape (what is persisted in advance.content[unit].v2)
+// ─────────────────────────────────────────────────────────────
+
+export interface SavedV2Progress {
+  completedBlockIds: string[];
+  xpRecord: Record<string, number>;
+  currentBlockId: string | null;
+  updatedAt?: string;
+}
+
+// ─────────────────────────────────────────────────────────────
 // Hook
 // ─────────────────────────────────────────────────────────────
 
-export function useUnitProgress(unit: Unit) {
-  const [state, dispatch] = useReducer(reducer, initialState);
+export function useUnitProgress(unit: Unit, initialProgress?: SavedV2Progress) {
+  const [state, dispatch] = useReducer(
+    reducer,
+    initialProgress
+      ? {
+          completedBlockIds: initialProgress.completedBlockIds ?? [],
+          xpRecord: initialProgress.xpRecord ?? {},
+          currentBlockId: initialProgress.currentBlockId ?? null,
+        }
+      : initialState,
+  );
 
   const completedSectionIds = useMemo(
     () => computeCompletedSectionIds(unit, state.completedBlockIds),
@@ -181,6 +201,7 @@ export function useUnitProgress(unit: Unit) {
     currentBlockId: state.currentBlockId,
     nextAvailableBlockId,
     completedSectionIds,
+    completedBlockCount: state.completedBlockIds.length,
     isUnitComplete,
   };
 }

@@ -6,28 +6,27 @@ import useCourses from 'hooks/useCourses'
 import useAdvance from 'hooks/useAdvance'
 import useProgressTracking from 'hooks/useProgressTracking'
 import useProgressPolling from 'hooks/useProgressPolling'
+import { parseCourseParam, resolveCourse, parseUnitParam } from 'utils/courseParams'
 import PATH from 'utils/path'
 
 /**
  * Load unit from samples (schemas/course/samples/unit-N.ts)
- * Used during migration before all units are on backend.
- * 
- * @param {number} unitOrder - Unit number (1-15)
- * @returns {Promise<Unit|null>}
+ * Only used in development during the schema migration phase.
+ *
+ * @param {number} unitOrder - 1-based unit number
+ * @returns {Promise<import('schemas/course/hierarchy').Unit|null>}
  */
 async function loadSampleUnit(unitOrder) {
   if (process.env.NODE_ENV !== 'development') return null
-  
   try {
-    const module = await import(`schemas/course/samples/index`)
-    const unit = await module.getCourseUnit(unitOrder)
-    return unit || null
+    const module = await import('schemas/course/samples/index')
+    return (await module.getCourseUnit(unitOrder)) || null
   } catch {
     return null
   }
 }
 
-// ── Loading skeleton ───────────────────────────────────────────
+// ── Loading skeleton ──────────────────────────────────────────
 
 function LoadingSkeleton() {
   return (
@@ -60,9 +59,31 @@ function LoadingSkeleton() {
   )
 }
 
-// ── Error state ───────────────────────────────────────────────
+// ── Shared action button ──────────────────────────────────────
 
-function ErrorState({ message, onBack }) {
+function ActionButton({ onClick, children }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      style={{
+        padding: '10px 24px',
+        borderRadius: '8px',
+        border: 'none',
+        background: 'var(--color-brand-primary, #6c63ff)',
+        color: '#fff',
+        cursor: 'pointer',
+        fontSize: '14px'
+      }}
+    >
+      {children}
+    </button>
+  )
+}
+
+// ── Terminal states ───────────────────────────────────────────
+
+function ErrorState({ message, onRetry, onBack }) {
   return (
     <div
       style={{
@@ -79,21 +100,57 @@ function ErrorState({ message, onBack }) {
       <p style={{ color: 'var(--color-error, #e53e3e)', fontSize: '16px', textAlign: 'center', maxWidth: '420px' }}>
         {message || 'Failed to load unit content. Please try again.'}
       </p>
-      <button
-        type="button"
-        onClick={onBack}
-        style={{
-          padding: '10px 24px',
-          borderRadius: '8px',
-          border: 'none',
-          background: 'var(--color-brand-primary, #6c63ff)',
-          color: '#fff',
-          cursor: 'pointer',
-          fontSize: '14px'
-        }}
-      >
-        Back to courses
-      </button>
+      <div style={{ display: 'flex', gap: '12px' }}>
+        {onRetry && <ActionButton onClick={onRetry}>Try again</ActionButton>}
+        <ActionButton onClick={onBack}>Back to courses</ActionButton>
+      </div>
+    </div>
+  )
+}
+
+function TimeoutState({ onRetry, onBack }) {
+  return (
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        minHeight: '100vh',
+        flexDirection: 'column',
+        gap: '16px',
+        padding: '32px',
+        background: 'var(--color-bg-page, #f9f9f9)'
+      }}
+    >
+      <p style={{ color: 'var(--color-text-muted, #888)', fontSize: '16px', textAlign: 'center', maxWidth: '420px' }}>
+        This is taking longer than expected. Check your connection and try again.
+      </p>
+      <div style={{ display: 'flex', gap: '12px' }}>
+        <ActionButton onClick={onRetry}>Try again</ActionButton>
+        <ActionButton onClick={onBack}>Back to courses</ActionButton>
+      </div>
+    </div>
+  )
+}
+
+function EmptyState({ onBack }) {
+  return (
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        minHeight: '100vh',
+        flexDirection: 'column',
+        gap: '16px',
+        padding: '32px',
+        background: 'var(--color-bg-page, #f9f9f9)'
+      }}
+    >
+      <p style={{ color: 'var(--color-text-muted, #888)', fontSize: '16px', textAlign: 'center', maxWidth: '420px' }}>
+        This unit is not available yet.
+      </p>
+      <ActionButton onClick={onBack}>Back to courses</ActionButton>
     </div>
   )
 }
@@ -101,123 +158,117 @@ function ErrorState({ message, onBack }) {
 // ── ConnectedUnitView ─────────────────────────────────────────
 
 /**
- * ConnectedUnitView — the connection layer between API/CDN and UnitView.
- *
- * Architecture role:
- *
- *   API/CDN payload
- *     → useConnectedUnit (fetch + adapt)
- *       → adaptLegacyCourse (schema boundary)
- *         → Unit v2 object
- *           → UnitView (schema-first runtime)
- *
- * Migration strategy (unit-1 through unit-15):
- *   1. Try to load from schemas/course/samples/unit-N.ts (development only)
- *   2. Fall back to API/CDN fetch
- *   3. Show error state if both fail
+ * ConnectedUnitView — connection layer between API/CDN and UnitView.
  *
  * Route params:
- *   :courseId  — optional; falls back to first available course
- *   :unitOrder — 1-based unit index within the course (defaults to 1)
+ *   :courseSlug  — opaque course param (e.g. "c1") or real slug
+ *   :unitSlug    — opaque unit param (e.g. "u3") or real slug
+ *
+ * Status contract — this component ALWAYS resolves to one of:
+ *   ready   → renders <UnitView>
+ *   empty   → renders EmptyState
+ *   error   → renders ErrorState with retry
+ *   timeout → renders TimeoutState with retry
+ *
+ * Progress loading is non-blocking. If progress fails, unit still renders
+ * from an empty state — the user can study without prior progress data.
  */
 export default function ConnectedUnitView() {
   const history = useHistory()
-  const { courseId, unitOrder } = useParams()
-  const unitOrderNum = unitOrder ? parseInt(unitOrder, 10) : 1
+  const { courseSlug, unitSlug } = useParams()
 
-  // Get courses and advance data for progress tracking
+  // ── Sample unit (dev migration phase, non-blocking) ──────────────────────
+  const parsedUnit = parseUnitParam(unitSlug)
+  const unitOrderNum = parsedUnit?.order ?? 1
+
+  const [sampleUnit, setSampleUnit] = useState(null)
+
+  useEffect(() => {
+    loadSampleUnit(unitOrderNum).then(u => setSampleUnit(u || null)).catch(() => null)
+  }, [unitOrderNum])
+
+  // ── Backend unit ─────────────────────────────────────────────────────────
+  const { unit: backendUnit, status, error, retry } = useConnectedUnit(courseSlug, unitSlug)
+
+  // ── Progress — resolved course ID for tracking ───────────────────────────
   const { data: coursesData } = useCourses()
   const advance = useAdvance()
 
-  // Determine actual courseId (from params or first available course)
-  // useParams() returns strings — parse to integer for backend validation
-  const actualCourseId = courseId ? parseInt(courseId, 10) : (coursesData[0]?.id)
-  
-  // Get current section index from advance (1-based)
-  // API returns content = { "1": { completed, general, last }, ... }
-  // Find the section with last: true
+  const actualCourseId = useMemo(() => {
+    const parsedCourse = parseCourseParam(courseSlug)
+    // Fast path: opaque slug already encodes the ID (e.g. "c1" → 1)
+    if (parsedCourse?.id) return parsedCourse.id
+    // Fallback: look up by real slug when courses data is available
+    const course = resolveCourse(parsedCourse, coursesData)
+    return course?.id ?? null
+  }, [courseSlug, coursesData])
+
   const currentSectionIndex = useMemo(() => {
     const content = advance?.data?.[0]?.content
     if (!content) return 1
-
-    const lastSection = Object.keys(content).find(key => content[key]?.last === true)
-    return lastSection ? parseInt(lastSection, 10) : 1
+    const lastKey = Object.keys(content).find(k => content[k]?.last === true)
+    return lastKey ? parseInt(lastKey, 10) : 1
   }, [advance])
 
-  // Initialize progress tracking hooks
-  // ✅ Now using existing PUT /advance API endpoint
-  const {
-    updateProgress,
-    completeSection,
-    localProgress,
-    localXp,
-    loading: progressLoading,
-    error: progressError
-  } = useProgressTracking(actualCourseId, currentSectionIndex)
+  // Skip the intro if this unit has already been started (has an advance content entry)
+  const hasStarted = useMemo(() => {
+    const content = advance?.data?.[0]?.content
+    if (!content) return false
+    const unitKey = String(unitOrderNum)
+    return !!content[unitKey]
+  }, [advance, unitOrderNum])
 
-  // Poll backend every 5s to keep learning path graph in sync
+  // Restore saved v2 block-level progress (completedBlockIds, xpRecord, currentBlockId)
+  const savedProgress = useMemo(() => {
+    const content = advance?.data?.[0]?.content
+    if (!content) return undefined
+    const unitEntry = content[String(unitOrderNum)]
+    if (!unitEntry?.v2) return undefined
+    return unitEntry.v2
+  }, [advance, unitOrderNum])
+
+  // Progress is non-blocking: if hooks fail (e.g. no courseId yet), unit still renders.
+  const { updateProgress, completeSection, flush } = useProgressTracking(actualCourseId, currentSectionIndex)
   useProgressPolling(actualCourseId, 5000)
 
-  // Try to load sample unit first (migration phase)
-  const [sampleUnit, setSampleUnit] = useState(null)
-  const [sampleLoading, setSampleLoading] = useState(true)
-  const [sampleError, setSampleError] = useState(null)
-
-  useEffect(() => {
-    loadSampleUnit(unitOrderNum)
-      .then((unit) => {
-        setSampleUnit(unit)
-        setSampleLoading(false)
-      })
-      .catch((err) => {
-        setSampleError(err)
-        setSampleLoading(false)
-      })
-  }, [unitOrderNum])
-
-  // Fetch from backend (always, will be skipped if sample loads first)
-  const { unit: backendUnit, status, error } = useConnectedUnit(
-    courseId || null,
-    unitOrderNum
-  )
+  // Save any pending debounced progress when the user leaves this page
+  useEffect(() => () => flush(), [flush])
 
   const handleBack = () => history.push(PATH.COURSES)
 
-  // Use sample unit if available, otherwise use backend unit
+  // ── Unit resolution: sample wins over backend in dev ─────────────────────
   const unit = sampleUnit || backendUnit
 
-  // Loading states
-  if ((sampleLoading && !unit) || status === 'idle' || status === 'loading_courses' || status === 'loading_unit') {
-    return <LoadingSkeleton />
+  // ── Ready: we have a unit — render immediately regardless of status ───────
+  if (unit) {
+    return (
+      <UnitView
+        unit={unit}
+        onBackToCourse={handleBack}
+        skipIntro={hasStarted}
+        savedProgress={savedProgress}
+        onProgressUpdate={(xp, exercisesCompleted, progressPercent, v2) =>
+          updateProgress(xp, exercisesCompleted, progressPercent, v2)
+        }
+        onSectionComplete={(finalXp, examScore) => completeSection(finalXp, examScore)}
+      />
+    )
   }
 
-  // Error handling
-  if (!unit) {
-    const errorMsg = sampleError?.message || error?.message || 'Failed to load unit'
+  // ── Terminal states ───────────────────────────────────────────────────────
+  if (status === 'timeout') return <TimeoutState onRetry={retry} onBack={handleBack} />
+  if (status === 'empty') return <EmptyState onBack={handleBack} />
+  if (status === 'error') {
     return (
       <ErrorState
-        message={errorMsg}
+        message={error?.message}
+        onRetry={retry}
         onBack={handleBack}
       />
     )
   }
 
-  // Adapted unit is ready — pass to runtime unchanged
-  if (status === 'ready' && unit) {
-    return (
-      <UnitView
-        unit={unit}
-        onBackToCourse={handleBack}
-        onProgressUpdate={(xp, exercisesCompleted, progressPercent) => {
-          updateProgress(xp, exercisesCompleted, progressPercent)
-        }}
-        onSectionComplete={(finalXp, examScore) => {
-          completeSection(finalXp, examScore)
-        }}
-      />
-    )
-  }
-
-  // Fallback guard (should not reach in normal operation)
+  // ── Loading (idle / loading) ──────────────────────────────────────────────
   return <LoadingSkeleton />
 }
+

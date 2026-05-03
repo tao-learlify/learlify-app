@@ -33,7 +33,7 @@ const PATH = Object.freeze({
   NOTIFICATIONS: '/notifications',
   STATS: '/stats',
   UNIT_1: '/unit-1',
-  CONNECTED_UNIT: '/courses/:courseId/units/:unitOrder',
+  CONNECTED_UNIT: '/courses/:courseSlug/units/:unitSlug',
   GRAMMAR: '/grammar',
   VOCABULARY: '/vocabulary',
   LISTENING: '/listening',
