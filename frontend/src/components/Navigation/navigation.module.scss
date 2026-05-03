@@ -1,3 +1,7 @@
+/* Navigation — Duo-design migration.
+   Replaces styled-components (Navbar, Logo, NavbarLink, RouterLink, etc.)
+   with plain CSS classes + design tokens. */
+
 .vert {
   position: relative !important;
   right: 50px;
@@ -12,4 +16,58 @@
   color: #FFFFFF;
   position: relative !important;
   right: 50px;
+}
+
+/* ── Migrated from styled/index.js ──────────────────────────────────────── */
+
+.navbarContainer {
+  padding: 0;
+}
+
+.navbar {
+  background-color: #003E6D; /* legacy BLUE — keep until full rebrand */
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.logo {
+  width: 67px;
+  height: 67px;
+  border-radius: 50px;
+  position: absolute;
+  left: -4px;
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.routerLink {
+  color: #FFFFFF !important; /* WHITE */
+  text-decoration: none;
+  transition: ease-in-out;
+  transition-duration: 0.7s;
+
+  &:hover {
+    color: #FFB208 !important; /* YELLOW */
+    text-decoration: none;
+  }
+}
+
+.navbarLink {
+  color: #FFFFFF !important;
+  text-decoration: none;
+  padding: 0 1.5rem !important;
+  text-transform: uppercase;
+}
+
+.avatarContainer {
+  margin-right: 25px;
+}
+
+.iconContainer {
+  margin-left: 2.5px;
+  color: #FFFFFF;
 }

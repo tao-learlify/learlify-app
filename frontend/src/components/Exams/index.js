@@ -18,7 +18,17 @@ import Text from 'components/Text'
 import ModalDialog from 'components/ModalDialog'
 
 import { getItemStyle } from './utils'
-import { Hover } from 'styled'
+import { motion } from 'framer-motion'
+
+/* migrated from styled/index.js — framer-motion hover wrapper */
+const Hover = (props) => (
+  <motion.div
+    style={{ border: 'none', background: 'transparent', cursor: 'pointer' }}
+    whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.9 }}
+    {...props}
+  />
+)
 
 import Arrow from 'assets/illustrations/decorative/go.svg'
 import styles from './index.module.scss'

@@ -8,7 +8,7 @@ import useMedia from 'hooks/useMedia'
 import Text from 'components/Text'
 
 import { img } from 'assets/compat'
-import { Button, TextContainer } from 'styled'
+import { Button } from 'components/ui'
 import { BLUE, TURQUOISE, WHITE } from 'assets/colors'
 
 import styles from './index.module.scss'
@@ -26,7 +26,7 @@ const Classes = () => {
   return (
     <div className={classNames(styles.flex, styles.background, 'border')}>
       <div className={classNames(isResponsive && 'text-left', styles.padding)}>
-        <TextContainer>
+        <div style={{ marginTop: 25, marginBottom: 10 }}>
           <Text className={styles.title} tag="h4" color="white">
             <Trans i18nKey="DASHBOARD.classes.online" />
           </Text>
@@ -37,7 +37,7 @@ const Classes = () => {
           >
             <Trans i18nKey="DASHBOARD.classes.classes" />
           </Text>
-        </TextContainer>
+        </div>
         <Text
           className={classNames('font-weight-light lead m-0', styles.light)}
           color="white"

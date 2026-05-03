@@ -151,7 +151,7 @@ function useConnectedUnit(courseSlug, unitSlug) {
         const result = safeAdaptLegacyCourse(raw, unitIndex)
 
         if (!result.ok) {
-          if (process.env.NODE_ENV === 'development') {
+          if (import.meta.env.DEV) {
             console.error('[useConnectedUnit] Adapter error:', result.error)
           }
           setStatus('error')
@@ -165,7 +165,7 @@ function useConnectedUnit(courseSlug, unitSlug) {
         clearTimeout(timeoutId)
         if (err?.name === 'AbortError') return // Handled by timeout branch above
         const wrapped = err instanceof Error ? err : new Error(String(err))
-        if (process.env.NODE_ENV === 'development') {
+        if (import.meta.env.DEV) {
           console.error('[useConnectedUnit] Fetch error:', wrapped)
         }
         setStatus('error')

@@ -36,11 +36,32 @@ const Button = memo(forwardRef(function Button(
     onClick,
     className,
     children,
+    /* ── backward compat: styled/index.js Button props ── */
+    background,
+    color,
+    border,
+    hoverBackgroundColor,
+    block,
     ...rest
   },
   ref
 ) {
   const isDisabled = disabled || loading
+
+  /* Build inline overrides for legacy styled-Button colour props */
+  const inlineStyle = {}
+  if (background) inlineStyle.backgroundColor = background
+  if (color) inlineStyle.color = color
+  if (border) inlineStyle.borderColor = border
+  if (hoverBackgroundColor) {
+    inlineStyle['--btn-hover-bg'] = hoverBackgroundColor
+  }
+
+  /* Map legacy Bootstrap props */
+  const resolvedVariant =
+    variant === 'outline-info' ? 'secondary' :
+    variant === 'dark' ? 'primary' :
+    variant
 
   return (
     <button
@@ -48,14 +69,15 @@ const Button = memo(forwardRef(function Button(
       type={type}
       disabled={isDisabled}
       onClick={onClick}
+      style={Object.keys(inlineStyle).length > 0 ? inlineStyle : undefined}
       className={clsx(
         styles.btn,
-        styles[variant],
+        styles[resolvedVariant],
         styles[size],
         chunky && styles.chunky,
         loading && styles.loading,
         disabled && styles.disabled,
-        fullWidth && styles.fullWidth,
+        (fullWidth || block) && styles.fullWidth,
         className
       )}
       aria-disabled={isDisabled}

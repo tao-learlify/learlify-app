@@ -22,18 +22,10 @@ import Avatar from 'components/Avatar'
 import Notifications from 'components/Notifications'
 import Text from 'components/Text'
 
-import {
-  AvatarContainer,
-  NavbarContainer,
-  Navbar,
-  NavbarLink,
-  IconContainer,
-  Logo,
-  RouterLink
-} from 'styled'
-
 import PATH from 'utils/path'
 import { img } from 'assets/compat'
+
+import logo from 'assets/illustrations/brand/logo.svg'
 
 import styles from './navigation.module.scss'
 import 'assets/css/navbar.css'
@@ -62,24 +54,31 @@ const Navigation = () => {
   }
 
   const ref = useRef(
-    <IconContainer>
+    <span className={styles.iconContainer}>
       <Icon className="hovered" icon={ic_more_vert} size={24} />
-    </IconContainer>
+    </span>
   )
 
   return (
     user.isLoggedIn && (
-      <NavbarContainer>
-        <Navbar>
+      <div className={styles.navbarContainer}>
+        <nav className={styles.navbar}>
           {isResponsive ||
             (model && !history.location.pathname.includes(PATH.MODELS) ? (
-              <Logo
-                color={model.color}
-                src={model.logo}
+              <div
+                className={styles.logo}
+                style={{
+                  backgroundColor: model.color || undefined,
+                  backgroundImage: `url(${model.logo || logo})`
+                }}
                 onClick={handleClickLogo}
               />
             ) : (
-              <Logo onClick={handleClickLogo} />
+              <div
+                className={styles.logo}
+                style={{ backgroundImage: `url(${logo})` }}
+                onClick={handleClickLogo}
+              />
             ))}
           <Nav
             className={classNames(
@@ -88,26 +87,30 @@ const Navigation = () => {
             )}
           >
             {isResponsive || (
-              <RouterLink
-                className={classNames('nav-link', styles.uppercase)}
+              <Link
+                className={classNames('nav-link', styles.uppercase, styles.routerLink)}
                 to={PATH.COURSES}
               >
                 {t('NAVIGATION.courses')}
-              </RouterLink>
+              </Link>
             )}
             {isResponsive ||
               routes.map(route => (
-                <RouterLink
+                <Link
                   key={route.href}
-                  className={classNames('nav-link', styles.uppercase)}
+                  className={classNames('nav-link', styles.uppercase, styles.routerLink)}
                   to={route.href}
                 >
                   {route.name}
-                </RouterLink>
+                </Link>
               ))}
             <div className="nav-item">
-              <NavbarLink>
-                <AvatarContainer>
+              <a
+                className={styles.navbarLink}
+                href="#!"
+                onClick={e => e.preventDefault()}
+              >
+                <div className={styles.avatarContainer}>
                   <Notifications
                     open={notificationsOpen}
                     onNavigate={notificationsToggle}
@@ -130,8 +133,8 @@ const Navigation = () => {
                       }
                     />
                   )}
-                </AvatarContainer>
-              </NavbarLink>
+                </div>
+              </a>
             </div>
             <NavDropdown
               className={classNames('no-arrow', styles.vert)}
@@ -172,8 +175,8 @@ const Navigation = () => {
               </Text>
             </Link>
           </Nav>
-        </Navbar>
-      </NavbarContainer>
+        </nav>
+      </div>
     )
   )
 }

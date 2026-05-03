@@ -1,5 +1,5 @@
 import React, { memo, useCallback } from 'react'
-import { ProgressBar } from 'react-bootstrap'
+import { Progress } from 'components/ui'
 import classNames from 'clsx'
 
 import useExamConsumer from 'hooks/useExamConsumer'
@@ -26,7 +26,7 @@ import { over } from 'utils/functions'
 import { splitContextFromSection } from '../utils'
 import { img } from 'assets/compat'
 
-import { Button as CommonButton } from 'styled'
+import { Button as CommonButton } from 'components/ui'
 import { TURQUOISE } from 'assets/colors'
 import Text from 'components/Text'
 
@@ -157,9 +157,9 @@ const Content = ({
               <>
                 <div className={styles.context}>
                   <div className={classNames(flex, alignItemsCenter)}>
-                    <ProgressBar
+                    <Progress
                       className="w-75"
-                      now={calcProgress(current + 1, total)}
+                      value={calcProgress(current + 1, total)}
                       label={over(current, total, true)}
                     />
                   </div>

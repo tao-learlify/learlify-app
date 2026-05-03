@@ -6,7 +6,7 @@ import BreaklineText from 'components/BreaklineText'
 import FlexContainer from 'components/FlexContainer'
 
 
-import { Button } from 'styled'
+import { Button } from 'components/ui'
 import { YELLOW } from 'assets/colors'
 
 import styles from './styles.module.scss'

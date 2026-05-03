@@ -40,13 +40,13 @@
 
   &:hover:not(.disabled):not(:disabled) {
     background-color: var(--color-brand-primary-dark);
-    box-shadow: var(--shadow-2);
+    box-shadow: var(--shadow-md);
     transform: translateY(-1px);
   }
 
   &:active:not(.disabled):not(:disabled) {
     transform: translateY(0);
-    box-shadow: var(--shadow-1);
+    box-shadow: var(--shadow-sm);
   }
 }
 
@@ -68,11 +68,11 @@
 
   /* Add bottom chunky shadow based on variant */
   &.primary {
-    box-shadow: var(--shadow-chunky-primary) !important;
+    box-shadow: var(--shadow-button-brand) !important;
 
     &:hover:not(.disabled):not(:disabled) {
       transform: none !important;
-      box-shadow: var(--shadow-chunky-primary) !important;
+      box-shadow: var(--shadow-button-brand) !important;
     }
 
     &:active:not(.disabled):not(:disabled) {
@@ -112,7 +112,7 @@
 }
 
 .danger {
-  background-color: var(--color-danger);
+  background-color: var(--color-error);
   color: var(--color-text-inverse);
   border-radius: var(--radius-pill);
 

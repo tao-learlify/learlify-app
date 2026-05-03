@@ -37,7 +37,7 @@ import ModalDialog from 'components/ModalDialog'
 import Speaking from 'components/Prototype/Speaking'
 import Writing from 'components/Prototype/Writing'
 
-import { Button } from 'styled'
+import { Button } from 'components/ui'
 import { getFullName } from 'utils/functions'
 import { SPEAKING, WRITING } from 'constant/labels'
 import { TURQUOISE, WHITE, RED } from 'assets/colors'

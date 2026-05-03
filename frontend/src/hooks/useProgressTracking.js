@@ -216,7 +216,7 @@ function useProgressTracking(courseId, sectionIndex, totalExercises = 10) {
         setLocalXp(0)
         setLocalProgress(0)
       } catch (err) {
-        if (process.env.NODE_ENV === 'development') {
+        if (import.meta.env.DEV) {
           console.error('[useProgressTracking] completeSection failed:', err)
         }
         setError(err?.message ?? 'Failed to save progress')
@@ -260,7 +260,7 @@ function useProgressTracking(courseId, sectionIndex, totalExercises = 10) {
         setLocalXp(0)
         setLocalProgress(0)
       } catch (err) {
-        if (process.env.NODE_ENV === 'development') {
+        if (import.meta.env.DEV) {
           console.error('[useProgressTracking] resetProgress failed:', err)
         }
       }
