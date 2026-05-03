@@ -1,7 +1,19 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import aptisSvg from 'assets/illustrations/decorative/aptis.svg'
-import badgeSvg from 'assets/illustrations/badges/diamond.svg'
+
+const BADGE_IMPORTS = {
+  1: () => import('assets/illustrations/badges/1.svg'),
+  2: () => import('assets/illustrations/badges/2.svg'),
+  3: () => import('assets/illustrations/badges/3.svg'),
+  4: () => import('assets/illustrations/badges/4.svg'),
+  5: () => import('assets/illustrations/badges/5.svg'),
+  6: () => import('assets/illustrations/badges/6.svg'),
+  7: () => import('assets/illustrations/badges/7.svg'),
+  8: () => import('assets/illustrations/badges/8.svg'),
+  9: () => import('assets/illustrations/badges/9.svg'),
+  10: () => import('assets/illustrations/badges/10.svg'),
+}
 
 const TOTAL_EXAMS = 10
 
@@ -104,8 +116,7 @@ export default function ExamSelector() {
                 e.currentTarget.style.boxShadow = '0 4px 0 0 var(--color-border-default)'
               }}
             >
-              <img src={badgeSvg} alt="" aria-hidden="true"
-                style={{ width: 32, height: 'auto', marginBottom: 4 }} />
+              <BadgeImg num={num} />
               <span style={{
                 fontSize: 'var(--text-2xl)', fontWeight: 800,
                 color: 'var(--color-text-primary)',
