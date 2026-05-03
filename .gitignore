@@ -1,32 +1,65 @@
-# Environment
+# Environment — NEVER commit .env files
 .env
 .env.*
+.env.*.local
+.env.local
+.env.development
+.env.production
+.env.staging
+.env.test
 !.env.example
+!.env.docker.example
 
 # Dependencies
 node_modules/
+.pnpm-store/
 
 # Build output
 dist/
 build/
+.next/
+out/
 
 # OS
 .DS_Store
 Thumbs.db
+*.bak
 
 # IDE
 .vscode/
 .idea/
 *.swp
 *.swo
+*~
 
 # Logs
 *.log
+logs/
 src/[Ll]ogs/*
 
 # Coverage
 coverage/
+.nyc_output/
 
-# Secrets
+# Secrets & keys (also caught by .env rules, but belt and braces)
+*.pem
+*.key
+*.crt
 cert.pem
 key.pem
+credentials.json
+service-account*.json
+
+# Database
+*.sql.gz
+*.sql.bak
+*.dump
+*.sql
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Misc
+.turbo
