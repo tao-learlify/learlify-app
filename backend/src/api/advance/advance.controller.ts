@@ -138,7 +138,9 @@ export class AdvanceController {
 
       // Build the new unit entry, preserving any existing v2 block-level progress.
       // v2 from the request body takes precedence; fall back to whatever was saved.
-      const incomingV2 = (data as Record<string, unknown>).v2 ?? existingUnit?.v2 ?? undefined
+      // Explicit undefined check: null means "clear v2"; undefined means "keep existing".
+      const dataV2 = (data as Record<string, unknown>).v2
+      const incomingV2 = dataV2 !== undefined ? dataV2 : (existingUnit?.v2 ?? undefined)
 
       const newUnitEntry: Record<string, unknown> = {
         completed: data.completed

@@ -1,7 +1,9 @@
-import { useCallback, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import api from 'api'
 import { fetchAdvanceThunk } from 'store/@thunks/courses'
+import config from 'config'
+import { getSessionToken } from 'utils/localStorage'
 
 const DEBOUNCE_MS = 1500
 const MAX_RETRIES = 2
@@ -115,6 +117,35 @@ function useProgressTracking(courseId, sectionIndex, totalExercises = 10) {
   }, [_syncToBackend])
 
   /**
+   * Flush via fetch keepalive on hard refresh / tab close.
+   * navigator.sendBeacon only supports POST, so we use fetch with keepalive:true.
+   */
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      if (!pendingPayload.current) return
+      const payload = pendingPayload.current
+      pendingPayload.current = null
+      try {
+        fetch(`${config.API_URL}/api/v1/advance`, {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: getSessionToken() ?? ''
+          },
+          body: JSON.stringify(payload),
+          keepalive: true
+        })
+      } catch {
+        // Best-effort — cannot throw in beforeunload
+      }
+    }
+
+    window.addEventListener('beforeunload', handleBeforeUnload)
+    return () => window.removeEventListener('beforeunload', handleBeforeUnload)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  /**
    * Update progress mid-section. UI updates immediately; backend is debounced.
    * @param {number} xp
    * @param {number} exercisesCompleted
@@ -196,9 +227,51 @@ function useProgressTracking(courseId, sectionIndex, totalExercises = 10) {
     [numericCourseId, numericSectionIndex, dispatch, flush, _syncToBackend]
   )
 
+  /**
+   * Reset progress for the current unit — clears v2 block state on the backend.
+   * Used when the user confirms "Start over" in the intro card.
+   */
+  const resetProgress = useCallback(
+    async () => {
+      console.log('[progress] resetProgress called — courseId:', numericCourseId, 'section:', numericSectionIndex)
+      if (!numericCourseId || !numericSectionIndex) {
+        console.warn('[progress] resetProgress aborted — missing courseId or sectionIndex')
+        return
+      }
+
+      // Cancel any pending debounced save first
+      if (debounceTimer.current) {
+        clearTimeout(debounceTimer.current)
+        debounceTimer.current = null
+      }
+      pendingPayload.current = null
+
+      const payload = {
+        courseId: numericCourseId,
+        unit: numericSectionIndex,
+        last: 0,
+        completed: false,
+        v2: null
+      }
+
+      try {
+        await _syncToBackend(payload)
+        dispatch(fetchAdvanceThunk(numericCourseId))
+        setLocalXp(0)
+        setLocalProgress(0)
+      } catch (err) {
+        if (process.env.NODE_ENV === 'development') {
+          console.error('[useProgressTracking] resetProgress failed:', err)
+        }
+      }
+    },
+    [numericCourseId, numericSectionIndex, dispatch, _syncToBackend]
+  )
+
   return {
     updateProgress,
     completeSection,
+    resetProgress,
     flush,
     localProgress,
     localXp,

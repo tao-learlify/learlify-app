@@ -1,4 +1,4 @@
-import { useReducer, useCallback, useMemo } from 'react';
+import { useReducer, useCallback, useMemo, useEffect } from 'react';
 import type { Unit } from '../../../../schemas/course/hierarchy';
 import type { Block } from '../../../../schemas/course/blocks';
 import type { UnlockRule } from '../../../../schemas/course/primitives';
@@ -21,6 +21,7 @@ interface ProgressState {
 type ProgressAction =
   | { type: 'START_BLOCK'; blockId: string }
   | { type: 'COMPLETE_BLOCK'; blockId: string; xpEarned: number }
+  | { type: 'HYDRATE'; progress: SavedV2Progress }
   | { type: 'RESET' };
 
 // ─────────────────────────────────────────────────────────────
@@ -56,6 +57,21 @@ function reducer(state: ProgressState, action: ProgressAction): ProgressState {
 
     case 'RESET':
       return initialState;
+
+    case 'HYDRATE':
+      // Only hydrate if there is real saved progress and the reducer is still empty.
+      // Guards against accidentally wiping progress the user has already made in this session.
+      if (
+        action.progress.completedBlockIds.length > 0 &&
+        state.completedBlockIds.length === 0
+      ) {
+        return {
+          completedBlockIds: action.progress.completedBlockIds,
+          xpRecord: action.progress.xpRecord ?? {},
+          currentBlockId: action.progress.currentBlockId ?? null,
+        };
+      }
+      return state;
 
     default:
       return state;
@@ -130,6 +146,15 @@ export function useUnitProgress(unit: Unit, initialProgress?: SavedV2Progress) {
         }
       : initialState,
   );
+
+  // Late hydration: savedProgress may arrive after mount (advance loads async from Redux).
+  // If the reducer is still empty when initialProgress becomes available, seed it now.
+  useEffect(() => {
+    console.log('[resume-debug] HYDRATE effect — initialProgress:', initialProgress, '| state.completedBlockIds.length:', state.completedBlockIds.length);
+    if (!initialProgress || initialProgress.completedBlockIds.length === 0) return;
+    dispatch({ type: 'HYDRATE', progress: initialProgress });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [initialProgress]);
 
   const completedSectionIds = useMemo(
     () => computeCompletedSectionIds(unit, state.completedBlockIds),

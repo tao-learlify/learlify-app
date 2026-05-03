@@ -94,6 +94,7 @@ function buildLearningPathWithSchema(advanceSections, currentSectionIdx, schemaU
       state,
       xp: sectionData.xp || 0,
       completed: sectionData.completed || false,
+      progressPercent: sectionData.progressPercent || 0,
       lastAccessedAt: sectionData.lastAccessedAt || null,
       lastAccessed: sectionData.lastAccessed || false
     }
@@ -203,8 +204,15 @@ function useLearningPathWithSchema(exams = []) {
       sections[sectionIndex] = {
         xp: sectionData.general || 0,
         completed: sectionData.completed || false,
-        progressPercent: sectionData.completed ? 1 : 0, // Can calculate from xp if needed
-        lastAccessedAt: null // API doesn't provide this
+        // Show progress ring on the dashboard node when the user has started a unit.
+        // Exact fraction requires knowing totalBlocks — use completed/15 as a rough proxy
+        // (typical unit has ~15 blocks). Falls back to 0 if no v2 state exists.
+        progressPercent: sectionData.completed
+          ? 1
+          : sectionData.v2?.completedBlockIds?.length > 0
+            ? Math.min(sectionData.v2.completedBlockIds.length / 15, 0.95)
+            : 0,
+        lastAccessedAt: null
       }
 
       // Find current section (marked with last: true)

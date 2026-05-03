@@ -43,6 +43,8 @@ interface UnitFlowProps {
   onBackToCourse?: () => void;
   /** When true, skip the intro card and go directly to the first block */
   skipIntro?: boolean;
+  /** Called after local progress is reset — parent should also clear backend v2 */
+  onStartOver?: () => void;
 }
 
 export function UnitFlow({
@@ -52,6 +54,7 @@ export function UnitFlow({
   onNextUnit,
   onBackToCourse,
   skipIntro = false,
+  onStartOver,
 }: UnitFlowProps) {
   const progress = useUnitProgressContext();
 
@@ -143,12 +146,27 @@ export function UnitFlow({
   // ── Handlers ───────────────────────────────────────────────
 
   const handleBegin = () => {
-    const firstId = progress.nextAvailableBlockId;
-    if (firstId) {
-      progress.startBlock(firstId);
-      setDisplayBlockId(firstId);
+    // On resume: prefer the saved currentBlockId (mid-block), then the first
+    // incomplete block, then the very first block (fresh start).
+    const resumeId =
+      progress.currentBlockId
+      ?? progress.nextAvailableBlockId
+      ?? (allBlocks.length > 0 ? allBlocks[0].id : null);
+    if (resumeId) {
+      progress.startBlock(resumeId);
+      setDisplayBlockId(resumeId);
     }
     setShowIntro(false);
+  }
+
+  // Reset all local progress and return to intro screen.
+  // Parent is responsible for clearing backend v2 state.
+  const handleStartOver = () => {
+    progress.reset();
+    setShowIntro(true);
+    setShowCompletion(false);
+    setDisplayBlockId(null);
+    onStartOver?.();
   };
 
   const handleContinue = () => {
@@ -167,7 +185,7 @@ export function UnitFlow({
   if (showIntro) {
     return (
       <div className="tw:max-w-2xl tw:mx-auto tw:px-4 tw:py-6 tw:pb-32">
-        <UnitIntroCard unit={unit} accent={accent} onBegin={handleBegin} />
+        <UnitIntroCard unit={unit} accent={accent} onBegin={handleBegin} onStartOver={handleStartOver} />
       </div>
     );
   }
