@@ -17,7 +17,7 @@ import { CheckCircle, Lock, Play } from '@phosphor-icons/react'
 import { buildUnitPath } from 'utils/courseParams'
 import styles from './CourseUnitsGrid.module.scss'
 
-const CourseUnitsGrid = memo(function CourseUnitsGrid({ units = [], courseId = 1, compact = false }) {
+const CourseUnitsGrid = memo(function CourseUnitsGrid({ units = [], courseId = 1, compact = false, onLockedUnitClick }) {
   const history = useHistory()
 
   const handleUnitClick = (unit) => {
@@ -28,9 +28,8 @@ const CourseUnitsGrid = memo(function CourseUnitsGrid({ units = [], courseId = 1
       } else if (unit.examId) {
         history.push(`/exam/${unit.examId}`)
       }
-    } else {
-      // Locked unit — redirect to pricing page
-      history.push('/plans')
+    } else if (onLockedUnitClick) {
+      onLockedUnitClick(unit)
     }
   }
 
