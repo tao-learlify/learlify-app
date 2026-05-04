@@ -15,9 +15,13 @@ import { ArrowLeft, X } from '@phosphor-icons/react'
 import useLearningPathWithSchema from 'hooks/useLearningPathWithSchema'
 import useExams from 'hooks/useExams'
 import useAuthProvider from 'hooks/useAuthProvider'
+import usePricing from 'hooks/usePricing'
 import Template from 'components/Template'
 import FallbackMode from 'components/FallbackMode'
 import CourseUnitsGrid from 'components/CourseUnitsGrid'
+import BillingCycleToggle from 'views/plans/components/BillingCycleToggle'
+import PricingPlanCard from 'views/plans/components/PricingPlanCard'
+import PricingLegalNotice from 'views/plans/components/PricingLegalNotice'
 
 import styles from './CoursesOverview.module.scss'
 
@@ -25,6 +29,7 @@ const CoursesOverview = () => {
   const history = useHistory()
   const user = useAuthProvider()
   const { data: exams } = useExams()
+  const pricing = usePricing({ preload: true })
 
   const {
     units = [],
@@ -32,6 +37,7 @@ const CoursesOverview = () => {
     courseId,
     totalSections,
     completedSections,
+    loading,
     error
   } = useLearningPathWithSchema(exams)
 
@@ -122,53 +128,63 @@ const CoursesOverview = () => {
         ) : null}
       </div>
 
-      {/* Upgrade Modal */}
+      {/* Upgrade Modal — same experience as /plans, without FAQ */}
       {showUpgradeModal && (
-        <div className="tw:fixed tw:inset-0 tw:z-50 tw:flex tw:items-center tw:justify-center tw:bg-black/50">
-          <div className="tw:bg-white tw:rounded-2xl tw:shadow-2xl tw:max-w-lg tw:w-full tw:mx-4 tw:p-8 tw:relative">
+        <div className="tw:fixed tw:inset-0 tw:z-50 tw:flex tw:items-start tw:justify-center tw:pt-20 tw:bg-black/50 tw:overflow-y-auto" onClick={() => setShowUpgradeModal(false)}>
+          <div className="tw:bg-white tw:rounded-2xl tw:shadow-2xl tw:max-w-5xl tw:w-full tw:mx-4 tw:p-8 tw:relative" onClick={e => e.stopPropagation()}>
             <button
               onClick={() => setShowUpgradeModal(false)}
-              className="tw:absolute tw:top-4 tw:right-4 tw:p-2 tw:rounded-full hover:tw:bg-gray-100 tw:cursor-pointer"
+              className="tw:absolute tw:top-4 tw:right-4 tw:p-2 tw:rounded-full hover:tw:bg-gray-100 tw:cursor-pointer tw:z-10"
             >
               <X size={20} weight="bold" />
             </button>
 
-            <div className="tw:text-center tw:mb-6">
-              <span className="tw:text-4xl tw:mb-2 tw:block">🔒</span>
-              <h2 className="tw:text-2xl tw:font-extrabold tw:text-gray-900">
-                Upgrade to Access This Unit
-              </h2>
-              <p className="tw:text-gray-500 tw:mt-2">
-                Subscribe to unlock all 15 units and get unlimited access to all course content, exams, and progress tracking.
+            {/* Pricing Hero */}
+            <div className="tw:text-center tw:mb-8">
+              <h1 className="tw:text-3xl tw:font-extrabold tw:text-gray-900">
+                Unlock All Course Content
+              </h1>
+              <p className="tw:text-gray-500 tw:mt-2 tw:max-w-xl tw:mx-auto">
+                Choose the plan that fits your learning goals. Get unlimited access to all 15 units, exams, and personalised feedback.
               </p>
             </div>
 
-            <div className="tw:space-y-3 tw:mb-6">
-              {[
-                { name: 'Go', price: '€15', desc: 'Basic access to all units' },
-                { name: 'Silver', price: '€24', desc: 'Full course + exams + reviews' },
-                { name: 'Gold', price: '€29', desc: 'All features + speaking/writing feedback' },
-              ].map((plan) => (
-                <div key={plan.name} className="tw:flex tw:items-center tw:justify-between tw:p-4 tw:rounded-xl tw:border tw:border-gray-200 hover:tw:border-[#58CC02] hover:tw:shadow-md tw:transition-all tw:cursor-pointer" onClick={() => { setShowUpgradeModal(false); history.push('/plans') }}>
-                  <div>
-                    <h3 className="tw:font-bold tw:text-gray-900">{plan.name}</h3>
-                    <p className="tw:text-sm tw:text-gray-500">{plan.desc}</p>
-                  </div>
-                  <span className="tw:text-xl tw:font-extrabold tw:text-[#58CC02]">{plan.price}<span className="tw:text-sm tw:font-normal">/mo</span></span>
-                </div>
-              ))}
+            {/* Billing Cycle Toggle */}
+            <div className="tw:flex tw:justify-center tw:mb-8">
+              <BillingCycleToggle
+                selected={pricing.selectedBillingCycle}
+                onChange={pricing.setBillingCycle}
+              />
             </div>
 
-            <button
-              onClick={() => { setShowUpgradeModal(false); history.push('/plans') }}
-              className="tw:w-full tw:py-3 tw:px-6 tw:rounded-xl tw:bg-[#58CC02] tw:text-white tw:font-bold tw:text-lg hover:tw:bg-[#46A302] tw:transition-colors tw:cursor-pointer"
-            >
-              View All Plans
-            </button>
+            {/* Pricing Plan Cards */}
+            <div className="tw:grid tw:grid-cols-1 md:tw:grid-cols-3 tw:gap-6 tw:mb-8">
+              {[...pricing.data]
+                .sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0))
+                .slice(0, 3)
+                .map(plan => (
+                  <PricingPlanCard
+                    key={plan.code || plan.id}
+                    plan={plan}
+                    selectedCycle={pricing.selectedBillingCycle}
+                    popular={plan.code === 'aptis_pro'}
+                    onSelect={() => { setShowUpgradeModal(false); history.push('/plans') }}
+                  />
+                ))}
+            </div>
 
-            <p className="tw:text-center tw:text-xs tw:text-gray-400 tw:mt-4">
-              Cancel anytime. No commitment required.
-            </p>
+            {/* Legal Notice */}
+            <PricingLegalNotice />
+
+            {/* View all link */}
+            <div className="tw:text-center">
+              <button
+                onClick={() => { setShowUpgradeModal(false); history.push('/plans') }}
+                className="tw:text-[#58CC02] tw-font-bold hover:tw:underline tw:cursor-pointer"
+              >
+                View all plans and details →
+              </button>
+            </div>
           </div>
         </div>
       )}
