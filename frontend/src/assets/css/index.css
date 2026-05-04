@@ -9,8 +9,8 @@ body {
 }
 
 .page-item.active .page-link {
-  background-color: #00ccc6 !important;
-  border-color: #00ccc6 !important;
+  background-color: #58CC02 !important;
+  border-color: #58CC02 !important;
 }
 
 .page-link:hover {
@@ -82,7 +82,7 @@ body .bg-color {
 }
 
 .text-turquoise {
-  color: #00ccc6 !important;
+  color: #58CC02 !important;
 }
 
 .text-dark {
@@ -90,7 +90,7 @@ body .bg-color {
 }
 
 .text-blue {
-  color: #003e6d !important;
+  color: #042C60 !important;
 }
 
 /** Icon Styles */
@@ -142,7 +142,7 @@ body .bg-color {
 .btn-primary:not(:disabled):not(.disabled).active,
 .btn-primary:not(:disabled):not(.disabled):active,
 .show > .btn-primary.dropdown-toggle {
-  color: #003e6d !important;
+  color: #042C60 !important;
 }
 
 .hovered:hover {
@@ -196,7 +196,7 @@ th {
 }
 
 .progress-bar {
-  background-color: #00ccc6 !important;
+  background-color: #58CC02 !important;
   border-radius: 50px !important;
 }
 
@@ -239,11 +239,11 @@ th {
 
 .select-css:focus {
   outline: none;
-  border: 1px solid #00ccc6;
+  border: 1px solid #58CC02;
 }
 
 .select-css option {
-  color: #003e6d;
+  color: #042C60;
   font-family: Monserrat-Light;
 }
 
@@ -579,11 +579,11 @@ li {
 }
 
 .MuiStepIcon-root.MuiStepIcon-completed {
-  color: #00ccc6 !important;
+  color: #58CC02 !important;
 }
 
 .MuiStepIcon-root.MuiStepIcon-active {
-  color: #00ccc6 !important;
+  color: #58CC02 !important;
 }
 
 
@@ -599,7 +599,7 @@ li {
 }
 
 .pro-icon-wrapper {
-  background-color: #003e6d !important;
+  background-color: #042C60 !important;
   color: #ffffff;
 }
 
@@ -609,7 +609,7 @@ li {
 }
 
 .pro-inner-item:hover {
-  color: #003e6d !important;
+  color: #042C60 !important;
   transition: ease-in-out 0.5s;
 }
 

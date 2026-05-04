@@ -10,13 +10,13 @@
 }
 
 .settings-button {
-  background-color: #003e6d;
+  background-color: #042C60;
   border: 2px solid white;
 }
 
 .settings-button:hover {
   background-color: white;
-  color: #003e6d;
+  color: #042C60;
 }
 
 .settings-h4 {

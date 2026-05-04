@@ -4,14 +4,14 @@
 export const YELLOW = '#FFB208'
 
 /**
- * @see https://colorpeek.com/#003E6D
+ * @see https://colorpeek.com/#042C60
  */
-export const BLUE = '#003E6D'
+export const BLUE = '#042C60'
 
 /**
- * @see https://colorpeek.com/#00CCC6
+ * @see https://colorpeek.com/#58CC02
  */
-export const TURQUOISE = '#00CCC6'
+export const TURQUOISE = '#58CC02'
 
 /**
  * @see https://colorpeek.com/#FF3F3F

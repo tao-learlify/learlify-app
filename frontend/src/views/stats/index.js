@@ -59,24 +59,23 @@ const StatsView = () => {
       view
       withLoader={loading}
     >
-      <Text center color="blue" dunkin tag="h4">
-        {t('STATS.title')} <img alt="stats" src={img.review} width={35} />
-      </Text>
-      <hr />
-      <br />
-      <div className="flex flex-wrap -mx-3">
-        <div className="w-full md:w-1/2 px-3">
+      <div className="tw:text-center tw:mb-4">
+        <Text center color="blue" dunkin tag="h4">
+          {t('STATS.title')} <img alt="stats" src={img.review} width={35} />
+        </Text>
+        <hr />
+      </div>
+      <div className="tw:flex tw:flex-wrap tw:-mx-3">
+        <div className="tw:w-full lg:tw:w-1/2 tw:px-3 tw:mb-4">
           <Evaluations onRenderPage={EP.handleSet} />
         </div>
-        <div className="w-full md:w-1/2 px-3">
+        <div className="tw:w-full lg:tw:w-1/2 tw:px-3 tw:mb-4">
           <Stats show={false} />
         </div>
-        <div className="w-full md:w-1/2 px-3">
-        <br />
+        <div className="tw:w-full lg:tw:w-1/2 tw:px-3">
           <Evaluations onRenderPage={LP.handleSet} latest />
         </div>
-        <div className="w-full md:w-1/2 px-3">
-          <br />
+        <div className="tw:w-full lg:tw:w-1/2 tw:px-3">
           {/* <Stats categories show={false} /> */}
         </div>
       </div>
