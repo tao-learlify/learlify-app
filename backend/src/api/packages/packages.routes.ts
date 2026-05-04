@@ -71,6 +71,16 @@ class PackageRouter {
       Middleware.secure(this.controller.update)
     )
 
+    this.packages.delete(
+      '/:id',
+      [
+        Middleware.authenticate,
+        pipe.cancel,
+        Middleware.usePipe
+      ] as RequestHandler[],
+      Middleware.secure(this.controller.cancel)
+    )
+
     return this.consumer
   }
 }

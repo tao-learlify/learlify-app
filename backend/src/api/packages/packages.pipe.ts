@@ -32,6 +32,12 @@ class PackagesPipe {
       active: { in: ['query'], isBoolean: true, toBoolean: true }
     } as Schema)
   }
+
+  get cancel(): ReturnType<typeof checkSchema> {
+    return checkSchema({
+      id: { in: ['params'], toInt: true, isNumeric: true }
+    } as Schema)
+  }
 }
 
 export const pipe = new PackagesPipe()
