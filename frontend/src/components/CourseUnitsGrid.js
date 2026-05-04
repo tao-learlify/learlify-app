@@ -28,6 +28,9 @@ const CourseUnitsGrid = memo(function CourseUnitsGrid({ units = [], courseId = 1
       } else if (unit.examId) {
         history.push(`/exam/${unit.examId}`)
       }
+    } else {
+      // Locked unit — redirect to pricing page
+      history.push('/plans')
     }
   }
 
@@ -92,7 +95,6 @@ function UnitCard({ unit, onClick, courseId }) {
         isLocked && styles.unitCardLocked
       )}
       onClick={onClick}
-      disabled={isLocked}
       style={{
         '--accent-color': accentColor,
         '--bg-color': backgroundColor,
