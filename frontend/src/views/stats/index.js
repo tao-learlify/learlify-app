@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
-import { Row, Col } from 'react-bootstrap'
+
 import { useTranslation } from 'react-i18next'
 
 import useModels from 'hooks/useModels'
@@ -64,22 +64,22 @@ const StatsView = () => {
       </Text>
       <hr />
       <br />
-      <Row>
-        <Col md={6}>
+      <div className="flex flex-wrap -mx-3">
+        <div className="w-full md:w-1/2 px-3">
           <Evaluations onRenderPage={EP.handleSet} />
-        </Col>
-        <Col md={6}>
+        </div>
+        <div className="w-full md:w-1/2 px-3">
           <Stats show={false} />
-        </Col>
-        <Col md={6}>
+        </div>
+        <div className="w-full md:w-1/2 px-3">
         <br />
           <Evaluations onRenderPage={LP.handleSet} latest />
-        </Col>
-        <Col md={6}>
+        </div>
+        <div className="w-full md:w-1/2 px-3">
           <br />
           {/* <Stats categories show={false} /> */}
-        </Col>
-      </Row>
+        </div>
+      </div>
     </Template>
   )
 }

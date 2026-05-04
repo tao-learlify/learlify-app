@@ -1,5 +1,5 @@
 import React, { memo } from 'react'
-import { Tab, Tabs as TabsBootstrap } from 'react-bootstrap'
+import { Tabs as TabsUI } from 'components/ui'
 
 /**
  * @typedef {Object} ContentProperty
@@ -18,26 +18,26 @@ import { Tab, Tabs as TabsBootstrap } from 'react-bootstrap'
 /**
  * @type {React.FunctionComponent<TabsProps>}
  */
-const Tabs = ({ content, defaultKey, onChange }) => {
+const TabsComponent = ({ content, defaultKey, onChange }) => {
 
   return (
-    <TabsBootstrap activeKey={defaultKey} onSelect={onChange}>
+    <TabsUI activeKey={defaultKey} onSelect={onChange}>
       {content.map(properties => (
-        <Tab
+        <TabsUI.Tab
           key={properties.eventKey}
           eventKey={properties.eventKey}
           title={properties.title}
         >
           {properties.component}
-        </Tab>
+        </TabsUI.Tab>
       ))}
-    </TabsBootstrap>
+    </TabsUI>
   )
 }
 
-Tabs.defaultProps = {
+TabsComponent.defaultProps = {
   content: [],
   onChange: () => null
 }
 
-export default memo(Tabs)
+export default memo(TabsComponent)

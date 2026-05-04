@@ -1,5 +1,5 @@
 import React, { memo, useCallback } from 'react'
-import { Form } from 'react-bootstrap'
+
 import { Button } from 'components/ui'
 import { useTranslation } from 'react-i18next'
 import { ic_person_add } from 'react-icons-kit/md/ic_person_add'
@@ -55,76 +55,72 @@ const AddUserForm = ({ disabled, buttonCreateName, onSubmit }) => {
   )
 
   return (
-    <Form onSubmit={handleSubmit}>
-      <Form.Group>
-        <Form.Label>
+    <form onSubmit={handleSubmit} className="space-y-4">
+      <div className="mb-3">
+        <label className="block mb-1">
           <Text tag="small" color="muted">
             {t('AUTHENTICATION.firstName')}
           </Text>
-        </Form.Label>
-        <Form.Control
+        </label>
+        <input
           disabled={disabled}
           name="firstName"
           onChange={onChange}
           type="text"
           value={form.firstName}
-          isInvalid={!validateName(form.firstName)}
-          isValid={validateName(form.firstName)}
           placeholder={t('AUTHENTICATION.firstName')}
+          className={`w-full p-2 rounded-lg border text-sm bg-white text-[var(--color-text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-border-focus)] ${!validateName(form.firstName) && form.firstName ? 'border-red-300' : validateName(form.firstName) ? 'border-green-300' : 'border-gray-200'}`}
         />
-      </Form.Group>
-      <Form.Group>
-        <Form.Label>
+      </div>
+      <div className="mb-3">
+        <label className="block mb-1">
           <Text tag="small" color="muted">
             {t('AUTHENTICATION.lastName')}
           </Text>
-        </Form.Label>
-        <Form.Control
+        </label>
+        <input
           disabled={disabled}
           name="lastName"
           onChange={onChange}
           type="text"
           value={form.lastName}
-          isInvalid={!validateName(form.lastName)}
-          isValid={validateName(form.lastName)}
           placeholder={t('AUTHENTICATION.lastName')}
+          className={`w-full p-2 rounded-lg border text-sm bg-white text-[var(--color-text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-border-focus)] ${!validateName(form.lastName) && form.lastName ? 'border-red-300' : validateName(form.lastName) ? 'border-green-300' : 'border-gray-200'}`}
         />
-      </Form.Group>
-      <Form.Group>
-        <Form.Label>
+      </div>
+      <div className="mb-3">
+        <label className="block mb-1">
           <Text tag="small" color="muted">
             {t('AUTHENTICATION.email')}
           </Text>
-        </Form.Label>
-        <Form.Control
+        </label>
+        <input
           disabled={disabled}
           name="email"
           onChange={onChange}
           type="email"
           value={form.email}
-          isValid={validateEmail(form.email)}
-          isInvalid={!validateEmail(form.email)}
           placeholder={t('AUTHENTICATION.email')}
+          className={`w-full p-2 rounded-lg border text-sm bg-white text-[var(--color-text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-border-focus)] ${validateEmail(form.email) ? 'border-green-300' : !validateEmail(form.email) && form.email ? 'border-red-300' : 'border-gray-200'}`}
         />
-      </Form.Group>
+      </div>
       {demo && (
-        <Form.Group>
-          <Form.Label>
+        <div className="mb-3">
+          <label className="block mb-1">
             <Text tag="small" color="muted">
               {t('AUTHENTICATION.password')}
             </Text>
-          </Form.Label>
-          <Form.Control
+          </label>
+          <input
             disabled={disabled}
             name="password"
             onChange={onChange}
             type="password"
             value={form.password}
-            isValid={validatePassword(form.password)}
-            isInvalid={!validatePassword(form.password)}
             placeholder={t('AUTHENTICATION.insertPassword')}
+            className={`w-full p-2 rounded-lg border text-sm bg-white text-[var(--color-text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-border-focus)] ${validatePassword(form.password) ? 'border-green-300' : !validatePassword(form.password) && form.password ? 'border-red-300' : 'border-gray-200'}`}
           />
-        </Form.Group>
+        </div>
       )}
       <FlexContainer>
         <Button disabled={disabled} size="md" className="orange-primary" type="submit">
@@ -139,7 +135,7 @@ const AddUserForm = ({ disabled, buttonCreateName, onSubmit }) => {
           <Icon icon={ic_block} /> Reset
         </Button>
       </FlexContainer>
-    </Form>
+    </form>
   )
 }
 

@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useRef, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { unwrapResult } from '@reduxjs/toolkit'
 import { ToastsStore } from 'react-toasts'
-import { FormControl, FormGroup } from 'react-bootstrap'
+
 import { Button } from 'components/ui'
 import { SphereSpinner as Spinner } from 'react-spinners-kit'
 import { v4 as UUID } from 'uuid'
@@ -401,44 +401,50 @@ const AdminSchedule = () => {
               <Text bold center color="blue" tag="p">
                 Lista de profesores
               </Text>
-              <FormGroup>
-                <FormControl as="select" onChange={handleSelectTeacher}>
+              <div className="mb-3">
+                <select
+                  className="w-full p-2 rounded-lg border border-gray-200 text-sm font-medium bg-white text-[var(--color-text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-border-focus)]"
+                  onChange={handleSelectTeacher}
+                >
                   {teachers.data.map(user => (
                     <option key={user.id} value={user.firstName}>
                       {getFullName(user.firstName, user.lastName)}
                     </option>
                   ))}
-                </FormControl>
-              </FormGroup>
+                </select>
+              </div>
               <br />
-              <FormGroup>
+              <div className="mb-3">
                 <Button
-                  block
+                  fullWidth
                   size="sm"
                   variant="success"
                   onClick={handleClickContinue}
                 >
                   Seleccionar
                 </Button>
-              </FormGroup>
+              </div>
             </>
           ) : (
             <>
               <Text bold center color="blue" tag="p">
                 Lista de Lenguajes
               </Text>
-              <FormGroup>
-                <FormControl as="select" onChange={handleChangeLanguage}>
+              <div className="mb-3">
+                <select
+                  className="w-full p-2 rounded-lg border border-gray-200 text-sm font-medium bg-white text-[var(--color-text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-border-focus)]"
+                  onChange={handleChangeLanguage}
+                >
                   {languages.data.map(language => (
                     <option key={language.id} value={language.lang}>
                       {language.lang}
                     </option>
                   ))}
-                </FormControl>
-              </FormGroup>
-              <FormGroup>
+                </select>
+              </div>
+              <div className="mb-3">
                 <Button onClick={setModal}>Aplicar</Button>
-              </FormGroup>
+              </div>
             </>
           ))}
       </ModalDialog>

@@ -1,5 +1,4 @@
 import React, { memo, useMemo, useRef } from 'react'
-import { Col, Row, FormControl } from 'react-bootstrap'
 import { ic_drag_handle } from 'react-icons-kit/md/ic_drag_handle'
 
 import Module from 'common'
@@ -297,8 +296,8 @@ const ReadingPartFour = () => {
           )}
         </Text>
         <hr />
-        <Row>
-          <Col xs={12} sm={8}>
+        <div className="tw:flex tw:flex-wrap">
+          <div className="tw:w-full md:tw:w-8/12 tw:px-4">
             <ContentContainer>
               {heading && (
                 <BreaklineText
@@ -355,8 +354,8 @@ const ReadingPartFour = () => {
                 </AnswerContainer>
               ))}
             </ContentContainer>
-          </Col>
-        </Row>
+          </div>
+        </div>
       </div>
     )
   }
@@ -371,8 +370,8 @@ const ReadingPartFour = () => {
         )}
       </Text>
       <hr />
-      <Row>
-        <Col xs={12} sm={6}>
+      <div className="tw:flex tw:flex-wrap">
+        <div className="tw:w-full md:tw:w-6/12 tw:px-4">
           <ContentContainer>
             <ScrollView>
               {heading && (
@@ -411,8 +410,8 @@ const ReadingPartFour = () => {
               )}
             </ScrollView>
           </ContentContainer>
-        </Col>
-        <Col xs={12} sm={6}>
+        </div>
+        <div className="tw:w-full md:tw:w-6/12 tw:px-4">
           {context.title && (
             <BreaklineText
               bold
@@ -477,8 +476,8 @@ const ReadingPartFour = () => {
             </AnswerContainer>
           ))}
           <br />
-        </Col>
-      </Row>
+        </div>
+      </div>
     </div>
   )
 }
@@ -504,8 +503,8 @@ const ReadingPartFive = () => {
         {description} <img alt="reading" src={SkillReading} width={32} />
       </Text>
       <hr />
-      <Row>
-        <Col xs={12} md={7}>
+      <div className="tw:flex tw:flex-wrap">
+        <div className="tw:w-full md:tw:w-7/12 tw:px-4">
           <ScrollView>
             {questions.map(question => (
               <Text lighter color="dark" key={question.title} tag="p">
@@ -513,8 +512,8 @@ const ReadingPartFive = () => {
               </Text>
             ))}
           </ScrollView>
-        </Col>
-        <Col xs={12} md={5}>
+        </div>
+        <div className="tw:w-full md:tw:w-5/12 tw:px-4">
           <div className="rounded">
             <Management
               border={false}
@@ -526,7 +525,7 @@ const ReadingPartFive = () => {
                 <TableRow key={question.title}>
                   <TableHeader value={getNumberOf(question.title)} />
                   <TableHeader>
-                    <FormControl
+                    <select className="form-control tw:rounded-lg tw:border tw:border-gray-300 tw:p-1"
                       as="select"
                       value={selections[index]}
                       style={readonlyStyles}
@@ -546,14 +545,14 @@ const ReadingPartFive = () => {
                           {answer}
                         </option>
                       ))}
-                    </FormControl>
+                    </select>
                   </TableHeader>
                 </TableRow>
               ))}
             </Management>
           </div>
-        </Col>
-      </Row>
+        </div>
+      </div>
     </div>
   )
 }

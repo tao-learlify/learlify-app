@@ -1,5 +1,4 @@
 import React, { memo, useCallback } from 'react'
-import { Form } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next'
 
 import Dropup from 'components/Dropup'
@@ -48,11 +47,11 @@ const Dynamic = props => {
       return (
         <div className={props.className}>
           <TextInput className="text-muted">{props.placeholder}</TextInput>
-          <Form.Control
+          <input
+            className="w-full p-2 rounded-lg border border-gray-200 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[var(--color-border-focus)]"
             onChange={handleEventForm}
             placeholder={i18next.t('ALL.MATCH')}
             value={props.value || ''}
-            isValid={isValid}
           />
         </div>
       )

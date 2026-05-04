@@ -1,7 +1,7 @@
 import React, { memo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Animated } from 'react-animated-css'
-import { Alert } from 'react-bootstrap'
+import { Alert } from 'components/ui'
 import { Link } from 'react-router-dom'
 
 import useAuthProvider from 'hooks/useAuthProvider'

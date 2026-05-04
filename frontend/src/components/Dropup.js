@@ -1,29 +1,22 @@
 import React, { memo } from 'react'
-import { Dropdown as DropdownButton } from 'react-bootstrap'
+import { Dropdown } from 'components/ui'
 
 const space = '\xa0'.repeat(20)
 
-const Dropdown = ({ children, className, disabled, id, name }) => {
+const Dropup = ({ children, className, disabled, id, name }) => {
   return (
-    <DropdownButton alignRight drop="up">
-      <DropdownButton.Toggle
-        disabled={disabled}
-        size="sm"
-        id={id}
-        drop="left"
-        className={className}
-      >
-        <small>{name === '' ? space : name}</small>
-      </DropdownButton.Toggle>
-      <DropdownButton.Menu className="scrollbar">
-        {children}
-      </DropdownButton.Menu>
-    </DropdownButton>
+    <Dropdown
+      title={name === '' ? space : name}
+      className={`dropup ${className}`}
+      align="start"
+    >
+      {children}
+    </Dropdown>
   )
 }
 
-Dropdown.defaultProps = {
+Dropup.defaultProps = {
   className: 'btn-secondary text-light'
 }
 
-export default memo(Dropdown)
+export default memo(Dropup)

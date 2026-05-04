@@ -1,5 +1,5 @@
 import React, { memo } from 'react'
-import { Accordion, Card } from 'react-bootstrap'
+import { Accordion } from 'components/ui'
 import 'assets/css/accordion.css'
 
 /**
@@ -22,7 +22,7 @@ const AptisAccordion = ({ children, title, eventKey, styleJsx, bodystyle }) => {
         {title}
       </Accordion.Toggle>
       <Accordion.Collapse eventKey={eventKey}>
-        <Card.Body className={bodystyle}>{children}</Card.Body>
+        <div className={bodystyle}>{children}</div>
       </Accordion.Collapse>
     </div>
   )

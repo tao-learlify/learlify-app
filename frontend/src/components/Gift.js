@@ -1,6 +1,5 @@
 import React, { memo, useCallback } from 'react'
 import { useDispatch, useSelector, shallowEqual } from 'react-redux'
-import { Form } from 'react-bootstrap'
 
 import { CHANGE_GIFT_EMAIL } from '../store/actions/types'
 import { validateEmail } from '../views/settings/validation'
@@ -25,15 +24,13 @@ const Gift = () => {
 
   return (
     <React.Fragment>
-      <Form.Control
-        size="sm"
+      <input
+        className="form-control tw:w-full tw:rounded-lg tw:border tw:border-gray-300 tw:p-2 focus:tw:border-[#58CC02] focus:tw:ring-1 focus:tw:ring-[#58CC02]"
         type="email"
         placeholder="Correo electrónico"
         value={giftEmail}
         onChange={onChange}
         required
-        isValid={validateEmail(giftEmail)}
-        isInvalid={!validateEmail(giftEmail)}
       />
     </React.Fragment>
   )

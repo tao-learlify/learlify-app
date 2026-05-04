@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect } from 'react'
-import { Col, Row } from 'react-bootstrap'
+
 import { useHistory } from 'react-router'
 import { useDispatch } from 'react-redux'
 import { ToastsStore } from 'react-toasts'
@@ -226,8 +226,8 @@ const TeacherView = () => {
       <CountOverview {...count.data} />
       <hr />
       <Meeting />
-      <Row>
-        <Col md={6}>
+      <div className="flex flex-wrap -mx-3">
+        <div className="w-full md:w-1/2 px-3">
           <FlexContainer>
             <Text center tag="p" color="blue">
               Evaluaciones disponibles
@@ -273,8 +273,8 @@ const TeacherView = () => {
               <Pagination {...pagination} onClick={evaluations.handleSet} />
             </FlexContainer>
           )}
-        </Col>
-        <Col md={6}>
+        </div>
+        <div className="w-full md:w-1/2 px-3">
           <FlexContainer>
             <Text center tag="p" color="blue">
               Mis evaluaciones
@@ -343,8 +343,8 @@ const TeacherView = () => {
               <Pagination {...owns.pagination} onClick={own.handleSet} />
             </FlexContainer>
           )}
-        </Col>
-      </Row>
+        </div>
+      </div>
     </Template>
   )
 }

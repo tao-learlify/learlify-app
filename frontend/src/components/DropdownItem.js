@@ -1,6 +1,5 @@
 import React from 'react'
 import Icon from 'react-icons-kit'
-import { Dropdown } from 'react-bootstrap'
 
 import Text from './Text'
 
@@ -18,16 +17,20 @@ import Text from './Text'
  */
 const DropdownItem = ({ disabled, icon, onClick, value, color }) => {
   return (
-    <Dropdown.Item disabled={disabled} onClick={onClick}>
+    <button
+      className="dropdown-item tw:w-full tw:text-left tw:px-4 tw:py-2 hover:tw:bg-gray-100"
+      disabled={disabled}
+      onClick={onClick}
+    >
       {icon && <Icon icon={icon} className="icon mr-2 text-blue" />}
       <Text lighter tag="small" color={color}>
         {value}
       </Text>
-    </Dropdown.Item>
+    </button>
   )
 }
 
-Dropdown.defaultProps = {
+DropdownItem.defaultProps = {
   color: 'gray'
 }
 

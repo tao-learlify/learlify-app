@@ -1,5 +1,4 @@
 import React, { useCallback, memo } from 'react'
-import { Form } from 'react-bootstrap'
 import { Button } from 'components/ui'
 import { warning } from 'react-icons-kit/fa/warning'
 import Icon from 'react-icons-kit'
@@ -96,22 +95,22 @@ const Report = ({ context, enabled, onClose, onSuccess }) => {
         textHeader="Reportar"
         onCloseRequest={onClose}
       >
-        <Form.Group>
+        <div className="form-group">
           <WordsCounter
             maximum={FORM_MAX_LENGTH}
             message="Envíanos un reporte con el error que has encontrado"
             value={form.report}
           />
-          <Form.Control
-            as="textarea"
+          <textarea
+            className="form-control tw:w-full tw:rounded-lg tw:border tw:border-gray-300 tw:p-3 focus:tw:border-[#58CC02] focus:tw:ring-1 focus:tw:ring-[#58CC02]"
             name="report"
             onChange={onChange}
             value={form.report}
             placeholder="..."
             maxLength={FORM_MAX_LENGTH}
           />
-        </Form.Group>
-        <Form.Group>
+        </div>
+        <div className="form-group">
           <Button
             disabled={loading}
             onClick={onReport}
@@ -120,7 +119,7 @@ const Report = ({ context, enabled, onClose, onSuccess }) => {
           >
             Subir Reporte <Icon icon={warning} className="icon" />
           </Button>
-        </Form.Group>
+        </div>
       </ModalDialog>
     </React.Fragment>
   )

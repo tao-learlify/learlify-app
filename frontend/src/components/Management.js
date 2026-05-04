@@ -1,7 +1,6 @@
 import React from 'react'
 import classNames from 'clsx'
-import { Table } from 'react-bootstrap'
-
+import { Table } from 'components/ui'
 
 import Text from './Text'
 import 'assets/css/tables.scss' 

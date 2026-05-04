@@ -2,7 +2,6 @@ import React, { memo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { ToastsStore } from 'react-toasts'
 import { useDispatch } from 'react-redux'
-import { Container } from 'react-bootstrap'
 import { Button } from 'components/ui'
 import { ic_email } from 'react-icons-kit/md/ic_email'
 import Icon from 'react-icons-kit'
@@ -127,7 +126,7 @@ const Register = ({ enabled, onClose, onComplete }) => {
           />
         </Animate>
       ) : (
-        <Container>
+        <div className="container mx-auto px-4">
           <FlexContainer>
             <Button
               className="rounded border"
@@ -142,7 +141,7 @@ const Register = ({ enabled, onClose, onComplete }) => {
           <FlexContainer>
             <GoogleAuthenticator disabled={loading} onSuccess={handleSuccess} />
           </FlexContainer>
-        </Container>
+        </div>
       )}
     </ModalDialog>
   )

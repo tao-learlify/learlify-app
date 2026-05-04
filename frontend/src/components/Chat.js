@@ -1,7 +1,6 @@
 import React, { memo, useState } from 'react'
 import 'assets/css/chat.css'
 import { Animated } from 'react-animated-css'
-import { Form, InputGroup } from 'react-bootstrap'
 import { Button } from 'components/ui'
 import { v4 as uuid } from 'uuid'
 import { sendO as send } from 'react-icons-kit/fa/sendO'
@@ -265,10 +264,10 @@ const Chat = ({
                   {Boolean(attach) && ellipsis(attach.name, 0, 30)}
                 </Text>
               </FileUpload>
-              <Form encType="multipart/form-data" inline onSubmit={handleSubmitMessage}>
-                <InputGroup>
-                  <Form.Control
-                    className="w-50 rounded chat"
+            <form encType="multipart/form-data" className="tw:flex tw:flex-wrap tw:items-center" onSubmit={handleSubmitMessage}>
+                <div className="input-group tw:flex tw:items-center">
+                  <input
+                    className="form-control tw:w-1/2 tw:rounded-lg tw:border tw:border-gray-300 tw:p-1.5 tw:text-xs chat focus:tw:border-[#58CC02]"
                     name="message"
                     onChange={onChange}
                     onKeyPress={handleTyping}
@@ -292,8 +291,8 @@ const Chat = ({
                   >
                     <Icon icon={send} />
                   </Button>
-                </InputGroup>
-              </Form>
+                </div>
+              </form>
             </ChatFormContainer>
           </Animated>
         )}

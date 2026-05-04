@@ -1,5 +1,4 @@
 import React from 'react'
-import { Container } from 'react-bootstrap'
 
 import Feedback from 'components/Feedback'
 
@@ -17,7 +16,7 @@ import Feedback from 'components/Feedback'
 const Section = ({ children, level,  feedback }) => {
   return (
     <>
-      <Container>
+      <div className="container mx-auto px-4">
         {Array.isArray(feedback) && feedback.length > 0 ? (
            <Feedback 
               results={feedback[level]}
@@ -25,7 +24,7 @@ const Section = ({ children, level,  feedback }) => {
         ) : (
           children
         )}
-      </Container>
+      </div>
     </>
   )
 }

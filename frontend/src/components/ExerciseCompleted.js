@@ -1,5 +1,4 @@
 import React, { memo } from 'react'
-import { Container } from 'react-bootstrap'
 
 import FlexContainer from './FlexContainer'
 import Text from './Text'
@@ -19,11 +18,11 @@ export const answersRows = ['Answer', 'Passed']
 const ExerciseCompleted = ({ evaluations }) => {
   return (
     <Animate type="rotateIn">
-      <Container>
+      <div className="container mx-auto px-4">
         <Text bold center color="muted" tag="h1">
           {completedExerciseLang.review} <img src={img.review} alt="review" />
         </Text>
-      </Container>
+      </div>
       <FlexContainer>
         <Management rows={answersRows}>
           {evaluations.map((evaluation, index) => (

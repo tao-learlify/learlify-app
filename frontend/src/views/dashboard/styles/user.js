@@ -1,9 +1,8 @@
 import React from 'react'
-import { Col } from 'react-bootstrap'
 import clsx from 'clsx'
 
 export function StyledCol({ children, className, ...rest }) {
-  return <Col className={clsx('tw:mt-2.5', className)} {...rest}>{children}</Col>
+  return <div className={clsx('tw:mt-2.5 tw:px-4', className)} {...rest}>{children}</div>
 }
 
 export function PlanContainer({ children, className, ...rest }) {

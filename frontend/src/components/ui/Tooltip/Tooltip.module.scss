@@ -1,0 +1,40 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   Tooltip — Hover tooltip.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.tooltip {
+  z-index: var(--z-tooltip, 1050);
+  max-width: 200px;
+  padding: var(--space-2) var(--space-3);
+  background-color: var(--color-text-primary);
+  color: var(--color-text-inverse);
+  font-family: var(--font-base);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-tight);
+  border-radius: var(--radius-sm);
+  text-align: center;
+  word-wrap: break-word;
+  pointer-events: none;
+  animation: tooltipIn var(--duration-base) var(--easing-out);
+}
+
+/* Arrow indicators via pseudo-element */
+.top {
+  transform: translateY(-100%);
+}
+
+.bottom {
+  transform: none;
+}
+
+@keyframes tooltipIn {
+  from {
+    opacity: 0;
+    transform: translateY(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

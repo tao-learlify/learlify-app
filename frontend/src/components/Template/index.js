@@ -1,7 +1,6 @@
 import React from 'react'
 import clsx from 'clsx'
 import { GooSpinner } from 'react-spinners-kit'
-import { Container } from 'react-bootstrap'
 import { useDispatch } from 'react-redux'
 import { Animated } from 'react-animated-css'
 import classNames from 'clsx'
@@ -75,7 +74,7 @@ const Template = ({
     <NetworkStatus>
       {withNavbar && <Navigation color={color} />}
       {withLoader ? (
-        <Container className={styles.loading}>
+        <div className={styles.loading}>
           <Animated animationIn="fadeIn">
             <FlexContainer>
               <GooSpinner size={120} color={GRAY} />
@@ -84,17 +83,18 @@ const Template = ({
               {loaderIndicatorName}
             </Text>
           </Animated>
-        </Container>
+        </div>
       ) : view ? (
         <Animated animationIn="fadeIn">
-          <Container
+          <div
             className={classNames(
+              'container mx-auto px-4',
               view && styles.view,
               withoutSpace && styles.withoutSpace
             )}
           >
             {children}
-          </Container>
+          </div>
           {withVideos && !withLoader && (
             <>
               <br />

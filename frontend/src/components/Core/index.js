@@ -1,5 +1,5 @@
 import React, { memo, useState, useEffect } from 'react'
-import { Col, Container, Row, ListGroup } from 'react-bootstrap'
+
 import { ModuleRegExp } from 'common/module.regexp'
 
 import Dropdown from 'components/Dropdown'
@@ -110,9 +110,9 @@ const Vocabulary = ({ chained }) => {
         {description} <img lazy="true" alt="core" width={30} height={30} src={img.core} />
       </Text>
       <hr />
-      <Container>
-        <Row>
-          <Col md={12}>
+      <div className="container mx-auto px-4">
+        <div className="tw:flex tw:flex-wrap">
+          <div className="tw:w-full tw:px-4">
             <Management alternative rows={['Word', 'Meaning']}>
               {questions.map(
                 (question, qIndex) =>
@@ -172,18 +172,18 @@ const Vocabulary = ({ chained }) => {
                   )
               )}
             </Management>
-          </Col>
-          <Col md={12}>
-            <ListGroup className="list-group-horizontal-sm">
+          </div>
+          <div className="tw:w-full tw:px-4">
+            <ul className="tw:flex tw:flex-wrap tw:gap-2 tw:list-none tw:p-0">
               {schema.map(answer => (
-                <ListGroup.Item key={answer} className="p-2 flex-fill shadow">
+                <li key={answer} className="tw:flex-1 tw:p-2 tw:rounded-lg tw:shadow tw:bg-white">
                   {removeMatch(answer)}
-                </ListGroup.Item>
+                </li>
               ))}
-            </ListGroup>
-          </Col>
-        </Row>
-      </Container>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

@@ -1,7 +1,7 @@
 import React, { useLayoutEffect } from 'react'
 import { useHistory } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { Col, Row } from 'react-bootstrap'
+
 import { Button } from 'components/ui'
 
 import Template from 'components/Template'
@@ -34,26 +34,26 @@ const Error404 = () => {
   return (
     <Template withNavbar={false} view>
       <hr />
-      <Row>
-        <Col>
-          <div className="d-flex justify-content-center">
+      <div className="flex flex-wrap -mx-3">
+        <div className="w-full md:w-1/2 px-3">
+          <div className="flex justify-center">
             <img alt="alien" src={img.alien} />
           </div>
           <br />
           <br />
-          <div className="d-flex justify-content-center">
-            <Button size="lg" variant="warning" onClick={() => history.push(PATH.DASHBOARD)}>
+          <div className="flex justify-center">
+            <Button size="lg" onClick={() => history.push(PATH.DASHBOARD)}>
               {goToDashboardMessage}
             </Button>
           </div>
-        </Col>
-        <Col className="d-flex justify-content-center align-items-center text-white">
+        </div>
+        <div className="w-full md:w-1/2 px-3 flex justify-center items-center text-white">
           <Text center tag="h4">
             {pageNotFoundMessage} :(
           </Text>
           <br />
-        </Col>
-      </Row>
+        </div>
+      </div>
     </Template>
   )
 }

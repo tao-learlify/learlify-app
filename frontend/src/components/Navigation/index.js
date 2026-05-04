@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import { NavDropdown, Nav } from 'react-bootstrap'
+import { Dropdown } from 'components/ui'
 import { Badge } from 'components/ui'
 import { Link, useHistory } from 'react-router-dom'
 import { ic_more_vert } from 'react-icons-kit/md/ic_more_vert'
@@ -81,10 +81,11 @@ const Navigation = () => {
                 onClick={handleClickLogo}
               />
             ))}
-          <Nav
+          <nav
             className={classNames(
               isResponsive ? 'mr-auto' : 'ml-auto',
-              'align-items-center'
+              'align-items-center',
+              'tw:flex tw:items-center'
             )}
           >
             {isResponsive || (
@@ -137,7 +138,7 @@ const Navigation = () => {
                 </div>
               </a>
             </div>
-            <NavDropdown
+            <Dropdown
               className={classNames('no-arrow', styles.vert)}
               title={ref.current}
             >
@@ -159,7 +160,7 @@ const Navigation = () => {
                   {t('COMPONENTS.NAVIGATION.exam')}
                 </Text>
               </Link>
-              <NavDropdown.Item
+              <Dropdown.Item
                 className="text-blue text-center"
                 href={PATH.LOGOUT}
               >
@@ -167,15 +168,15 @@ const Navigation = () => {
                 <Text color="blue" tag="small">
                   {t('COMPONENTS.NAVIGATION.logout')}
                 </Text>
-              </NavDropdown.Item>
-            </NavDropdown>
+              </Dropdown.Item>
+            </Dropdown>
             <Link className={classNames('d-block d-sm-none', styles.dashboard)}>
               <Text dunkin color="white" tag="small">
                 DASHBOARD
                 <Icon size={15} icon={ic_dashboard} />
               </Text>
             </Link>
-          </Nav>
+          </nav>
         </nav>
       </div>
     )

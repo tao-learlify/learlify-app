@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import { Container } from 'react-bootstrap'
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
@@ -99,12 +98,12 @@ const Classes = () => {
                 <div className={styles.boxedTitle}>{t('CLASSES.history')}</div>
                 {Array.isArray(history.data) && history.data.length > 0 ? (
                   history.data.map(classHistory => (
-                    <Container key={classHistory.id}>
+                    <div key={classHistory.id} className="container mx-auto px-4">
                       <div className={`${styles.boxedText} font-weight-bold`}>
                         {renderClassText(classHistory)} (
                         {classHistory.schedule.teacher.firstName}){' '}
                       </div>
-                    </Container>
+                    </div>
                   ))
                 ) : (
                   <div className={styles.boxedText}>{t('CLASSES.unavailableHistory')}</div>
@@ -116,7 +115,7 @@ const Classes = () => {
                     <div className={styles.boxedTitle}>{t('CLASSES.subscriptions')}</div>
                     {classes.data.length > 0 ? (
                       classes.data.map(classRoom => (
-                        <Container key={classRoom.id}>
+                        <div key={classRoom.id} className="container mx-auto px-4">
                           <div className={`${styles.boxedText} text-small`}>
                             <img
                               className="mr-1"
@@ -142,7 +141,7 @@ const Classes = () => {
                               </div>
                             </Link>
                           )}
-                        </Container>
+                        </div>
                       ))
                     ) : (
                       <div className={styles.boxedText}>

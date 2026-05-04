@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Badge, Col, Row } from 'react-bootstrap'
+
 import { useTranslation } from 'react-i18next'
 import { useDispatch } from 'react-redux'
 import Markdown from 'react-markdown'
@@ -476,9 +476,9 @@ const Viewer = ({ edit, latest, onEditMode }) => {
             </React.Fragment>
           </div>
         </div>
-        <Row className={styles.row}>
-          <Col md={edit ? 6 : 8}>{getPrototypeComponent()}</Col>
-          <Col md={edit ? 6 : 4}>
+        <div className={`flex flex-wrap -mx-3 ${styles.row}`}>
+          <div className={`w-full md:w-${edit ? '1/2' : '2/3'} px-3`}>{getPrototypeComponent()}</div>
+          <div className={`w-full md:w-${edit ? '1/2' : '1/3'} px-3`}>
             {edit ? (
               <>
                 <MarkdownEditor
@@ -592,8 +592,8 @@ const Viewer = ({ edit, latest, onEditMode }) => {
                 )}
               </div>
             )}
-          </Col>
-        </Row>
+          </div>
+        </div>
       </div>
     )
   )

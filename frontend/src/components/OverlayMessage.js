@@ -1,5 +1,5 @@
-import React, { memo, useMemo } from 'react'
-import { Tooltip, OverlayTrigger } from 'react-bootstrap'
+import React, { memo } from 'react'
+import { Tooltip } from 'components/ui'
 
 /**
  * @typedef {Object} OverlayMessageProps
@@ -10,18 +10,10 @@ import { Tooltip, OverlayTrigger } from 'react-bootstrap'
  * @type {React.FunctionComponent<OverlayMessageProps>}
  */
 const OverlayMessage = ({ children, message }) => {
-  const content = useMemo(() => {
-    return (
-      <Tooltip id="overlay-message">
-        {message}
-      </Tooltip>
-    )
-  }, [message])
-
   return (
-    <OverlayTrigger overlay={content}>
+    <Tooltip text={message} placement="top">
       {children}
-    </OverlayTrigger>
+    </Tooltip>
   )
 }
 

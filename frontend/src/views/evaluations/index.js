@@ -12,7 +12,6 @@ import {
   fetchEvaluationThunk,
   fetchLatestThunk
 } from 'store/@thunks/evaluations'
-import { Container } from 'react-bootstrap'
 import useQuery from 'hooks/useQuery'
 import ErrorHandler from 'views/errors'
 
@@ -45,11 +44,11 @@ const Evaluations = () => {
 
   return (
     <Template withLoader={evaluations.loading}>
-      <Container>
+      <div className="container mx-auto px-4">
         <ErrorHandler>
           <Viewer latest={latest} edit={editMode} onEditMode={setEditMode} />
         </ErrorHandler>
-      </Container>
+      </div>
     </Template>
   )
 }

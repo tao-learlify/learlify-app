@@ -7,7 +7,7 @@ import React, {
 } from 'react'
 import { useDispatch } from 'react-redux'
 import { useTranslation } from 'react-i18next'
-import { Container } from 'react-bootstrap'
+
 import { schedule } from 'common/module.schedule'
 import { unwrapResult } from '@reduxjs/toolkit'
 import { ToastsStore } from 'react-toasts'
@@ -441,13 +441,13 @@ const Agreement = ({ history }) => {
       <Template view withLoader={packages.loading}>
         <br /> <br />
         <Confirmation />
-        <Container>
+        <div className="container mx-auto px-4">
           <ButtonContainer float>
             <AptisButton onClick={() => history.push(PATH.DASHBOARD)}>
               Dashboard
             </AptisButton>
           </ButtonContainer>
-        </Container>
+        </div>
       </Template>
     )
   }

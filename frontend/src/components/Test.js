@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import { Jumbotron, Container, Button } from 'react-bootstrap'
 import { navigate } from '@reach/router'
 
+import { Button } from 'components/ui'
 import { getQuestion } from '../actions/tests'
 
 import Answers from './Answers'
@@ -26,11 +26,11 @@ function Dashboard(props) {
   }, 1000)
 
   return (
-    <Container>
-      <Jumbotron>
+    <div className="container mx-auto px-4">
+      <div className="tw:py-16 tw:px-8 tw:mb-8 tw:bg-[#58CC02]/10 tw:rounded-2xl">
         <h1>{question.title}</h1>
         <p>Time left: {timeLeft}</p>
-      </Jumbotron>
+      </div>
       <Answers data={answers} />
       <Button
         onClick={() =>
@@ -39,7 +39,7 @@ function Dashboard(props) {
       >
         Submit
       </Button>
-    </Container>
+    </div>
   )
 }
 
