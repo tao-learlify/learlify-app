@@ -1,6 +1,4 @@
-/* Navigation — Duo-design migration.
-   Replaces styled-components (Navbar, Logo, NavbarLink, RouterLink, etc.)
-   with plain CSS classes + design tokens. */
+/* Navigation — Duolingo Design */
 
 .vert {
   position: relative !important;
@@ -9,7 +7,9 @@
 
 .uppercase {
   text-transform: uppercase;
-  font-family: Dunkin;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.5px;
 }
 
 .dashboard {
@@ -18,56 +18,75 @@
   right: 50px;
 }
 
-/* ── Migrated from styled/index.js ──────────────────────────────────────── */
-
 .navbarContainer {
   padding: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .navbar {
-  background-color: #042C60; /* legacy BLUE — keep until full rebrand */
-  border-radius: 50px;
+  background-color: #FFFFFF;
+  border-radius: 16px;
   display: flex;
   align-items: center;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.5rem;
+  margin: 1rem 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #E5E7EB;
+  max-width: 1200px;
+  width: 100%;
 }
 
 .logo {
-  width: 67px;
-  height: 67px;
-  border-radius: 50px;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
   position: absolute;
-  left: -4px;
-  background-size: 70px;
+  left: 6px;
+  background-size: 44px;
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
+  transition: transform 0.15s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 .routerLink {
-  color: #FFFFFF !important; /* WHITE */
+  color: #4B4B4B !important;
   text-decoration: none;
-  transition: ease-in-out;
-  transition-duration: 0.7s;
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem !important;
+  border-radius: 12px;
+  transition: all 0.15s;
 
   &:hover {
-    color: #FFB208 !important; /* YELLOW */
+    color: #58CC02 !important;
+    background-color: rgba(88, 204, 2, 0.08);
     text-decoration: none;
   }
 }
 
 .navbarLink {
-  color: #FFFFFF !important;
+  color: #4B4B4B !important;
   text-decoration: none;
-  padding: 0 1.5rem !important;
-  text-transform: uppercase;
+  padding: 0 1rem !important;
+  font-weight: 600;
+  font-size: 0.875rem;
 }
 
 .avatarContainer {
-  margin-right: 25px;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
 }
 
 .iconContainer {
   margin-left: 2.5px;
-  color: #FFFFFF;
+  color: #4B4B4B;
 }

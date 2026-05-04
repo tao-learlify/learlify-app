@@ -83,14 +83,13 @@ const Navigation = () => {
             ))}
           <nav
             className={classNames(
-              isResponsive ? 'mr-auto' : 'ml-auto',
-              'align-items-center',
-              'tw:flex tw:items-center'
+              isResponsive ? 'tw:mr-auto' : 'tw:ml-auto',
+              'tw:flex tw:items-center tw:gap-1'
             )}
           >
             {isResponsive || (
               <Link
-                className={classNames('nav-link', styles.uppercase, styles.routerLink)}
+                className={classNames(styles.uppercase, styles.routerLink)}
                 to={PATH.COURSES}
               >
                 {t('NAVIGATION.courses')}
@@ -100,13 +99,13 @@ const Navigation = () => {
               routes.map(route => (
                 <Link
                   key={route.href}
-                  className={classNames('nav-link', styles.uppercase, styles.routerLink)}
+                  className={classNames(styles.uppercase, styles.routerLink)}
                   to={route.href}
                 >
                   {route.name}
                 </Link>
               ))}
-            <div className="nav-item">
+            <div className="">
               <a
                 className={styles.navbarLink}
                 href="#!"
@@ -139,11 +138,11 @@ const Navigation = () => {
               </a>
             </div>
             <Dropdown
-              className={classNames('no-arrow', styles.vert)}
+              className={classNames(styles.vert)}
               title={ref.current}
             >
               <Link
-                className="dropdown-item text-blue text-center"
+                className="tw:block tw:px-4 tw:py-2 tw:text-[#58CC02] tw:text-center hover:tw:bg-gray-50 tw:no-underline"
                 to={PATH.SETTINGS}
               >
                 <Icon icon={cog} />{' '}
@@ -152,7 +151,7 @@ const Navigation = () => {
                 </Text>
               </Link>
               <Link
-                className="dropdown-item text-blue text-center"
+                className="tw:block tw:px-4 tw:py-2 tw:text-[#58CC02] tw:text-center hover:tw:bg-gray-50 tw:no-underline"
                 to={PATH.MODELS}
               >
                 <Icon icon={ic_apps} />{' '}
@@ -161,7 +160,7 @@ const Navigation = () => {
                 </Text>
               </Link>
               <Dropdown.Item
-                className="text-blue text-center"
+                className="tw:text-[#58CC02] tw:text-center"
                 href={PATH.LOGOUT}
               >
                 <Icon icon={signOut} />{' '}
