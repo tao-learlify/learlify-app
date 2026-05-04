@@ -18,7 +18,7 @@ const PATH = Object.freeze({
   MEETINGS: '/meetings',
   MODELS: '/models',
   PASSWORD: '/dashboard/settings/password',
-  PAYMENTS: '/pricing',
+  PAYMENTS: '/plans',
   QUALITY: '/quality',
   REQUIRED: '/required',
   RESET: '/reset',

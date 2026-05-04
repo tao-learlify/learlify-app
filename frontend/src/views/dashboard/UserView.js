@@ -102,7 +102,7 @@ const UserView = () => {
               <div className={styles.mainRight}>
                 <ExamQueue
                   onStart={exam => history.push(`/exam/${exam.examId}`)}
-                  onUnlock={_exam => history.push('/pricing')}
+                  onUnlock={_exam => history.push('/plans')}
                 />
                 <ProgressGraph className={styles.pathProgressGraph} />
               </div>
