@@ -23,6 +23,8 @@ import BillingCycleToggle from 'views/plans/components/BillingCycleToggle'
 import PricingPlanCard from 'views/plans/components/PricingPlanCard'
 import PricingLegalNotice from 'views/plans/components/PricingLegalNotice'
 
+import PATH from 'utils/path'
+
 import styles from './CoursesOverview.module.scss'
 
 const CoursesOverview = () => {
@@ -168,7 +170,7 @@ const CoursesOverview = () => {
                     plan={plan}
                     selectedCycle={pricing.selectedBillingCycle}
                     popular={plan.code === 'aptis_pro'}
-                    onSelect={() => { setShowUpgradeModal(false); history.push('/plans') }}
+                    onSelect={() => { setShowUpgradeModal(false); history.push(PATH.PAYMENTS) }}
                   />
                 ))}
             </div>
@@ -179,7 +181,7 @@ const CoursesOverview = () => {
             {/* View all link */}
             <div className="tw:text-center">
               <button
-                onClick={() => { setShowUpgradeModal(false); history.push('/plans') }}
+                onClick={() => { setShowUpgradeModal(false); history.push(PATH.PAYMENTS) }}
                 className="tw:text-[#58CC02] tw-font-bold hover:tw:underline tw:cursor-pointer"
               >
                 View all plans and details →
