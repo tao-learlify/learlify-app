@@ -104,7 +104,8 @@ class PlansService {
 
     return (plans as unknown as Array<Record<string, unknown>>).map((plan, index) => {
       const price = Number(plan.price) || 0
-      const yearlyPrice = Math.round(price * 10) // 2 months free
+      const monthlyPriceCents = Math.round(price / 12 * 100)
+      const annualPriceCents = price * 100 // 2 months free
 
       return {
         id: plan.id,
@@ -122,9 +123,9 @@ class PlansService {
             plan_id: plan.id,
             billing_cycle: 'monthly',
             currency: 'EUR',
-            base_price: price,
+            base_price: monthlyPriceCents,
             discount_percentage: 0,
-            final_price: price,
+            final_price: monthlyPriceCents,
             active: true
           },
           {
@@ -132,9 +133,9 @@ class PlansService {
             plan_id: plan.id,
             billing_cycle: 'yearly',
             currency: 'EUR',
-            base_price: yearlyPrice,
+            base_price: annualPriceCents,
             discount_percentage: 17,
-            final_price: Math.round(yearlyPrice * 0.83),
+            final_price: Math.round(annualPriceCents * 0.83),
             active: true
           }
         ]
