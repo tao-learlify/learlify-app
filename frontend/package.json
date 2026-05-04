@@ -93,6 +93,7 @@
     "@babel/preset-env": "^7.29.0",
     "@babel/preset-react": "^7.28.5",
     "@eslint/js": "^9.24.0",
+    "@playwright/test": "^1.59.1",
     "@testing-library/react": "^12.1.5",
     "@types/jwt-decode": "^3.1.0",
     "@types/react": "^17.0.83",

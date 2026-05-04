@@ -16,6 +16,10 @@ const links = [
   {
     ref: 'courses',
     route: path.COURSES
+  },
+  {
+    ref: 'exams',
+    route: path.EXAMS
   }
 ]
 
