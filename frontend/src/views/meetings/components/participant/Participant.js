@@ -7,7 +7,7 @@ import React, {
   useContext,
   useMemo
 } from 'react'
-import { Button } from 'react-bootstrap'
+import { Button } from 'components/ui'
 import { ToastsStore } from 'react-toasts'
 import { Icon } from 'react-icons-kit'
 import { ic_more_vert } from 'react-icons-kit/md/ic_more_vert'

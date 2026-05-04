@@ -1,165 +1,85 @@
-import styled from 'styled-components'
-import colors from 'colors'
+import React from 'react'
+import clsx from 'clsx'
 
-export const ChatContainer = styled.div`
-  @keyframes showIn {
-    from {
-      opacity: 0;
-      right: -300px;
-    }
-    to {
-      opacity: 1;
-      right: 0;
-    }
-  }
-  font-size: 12px;
-  height: calc(100% - 80px);
-  width: calc(40% - 80px);
-  max-width: 320px;
-  position: fixed;
-  right: 0px;
-  bottom: 0;
-  background: ${colors.DARKBLUE};
-  box-shadow: 2px 0px 10px #a1a1a1;
-  animation: showIn 0.2s ease-in forwards;
-  @media (max-width: 880px) {
-    max-width: 300px;
-  }
-  @media (max-width: 772px) {
-    @keyframes showIn {
-      from {
-        opacity: 0;
-        bottom: -300px;
-      }
-      to {
-        opacity: 1;
-        bottom: 0;
-      }
-    }
-    width: 100%;
-    max-width: 100%;
-    padding-bottom: 30px;
-    animation: showIn 0.2s ease-in forwards;
-  }
-`
+export function ChatContainer({ children, className, ...rest }) {
+  return (
+    <div
+      className={clsx(
+        'tw:text-xs tw:h-[calc(100%-80px)] tw:w-[calc(40%-80px)] tw:max-w-[320px] tw:fixed tw:right-0 tw:bottom-0 tw:bg-[#2C3E50] tw:shadow-lg tw:animate-[showInChat_0.2s_ease-in_forwards]',
+        'max-md:tw:max-w-[300px] max-sm:tw:w-full max-sm:tw:max-w-full max-sm:tw:pb-[30px]',
+        className
+      )}
+      {...rest}
+    >
+      <style>{`
+        @keyframes showInChat { from { opacity:0; right:-300px } to { opacity:1; right:0 } }
+        @media (max-width:772px) { @keyframes showInChat { from { opacity:0; bottom:-300px } to { opacity:1; bottom:0 } } }
+      `}</style>
+      {children}
+    </div>
+  )
+}
 
-export const Header = styled.header`
-  background: #333;
-  color: #fff;
-  cursor: pointer;
-  padding: 11px 0px 5px 22px;
-`
+export function Header({ children, className, ...rest }) {
+  return <header className={clsx('tw:bg-[#333] tw:text-white tw:cursor-pointer tw:px-[22px] tw:py-[11px] tw:pt-[11px]', className)} {...rest}>{children}</header>
+}
 
-export const ChatBody = styled.div`
-  z-index: 1;
-  background: ${colors.DARKBLUE};
-  height: 80%;
-  display: flex;
-  flex-direction: column;
-`
+export function ChatBody({ children, className, ...rest }) {
+  return <div className={clsx('tw:z-[1] tw:bg-[#2C3E50] tw:h-4/5 tw:flex tw:flex-col', className)} {...rest}>{children}</div>
+}
 
-export const ChatScreen = styled.div`
-  padding: 8px 24px;
-  overflow-y: scroll;
-  height: 100%;
-  align-items: center;
-  ::-webkit-scrollbar {
-    width: 8px;
-  }
-`
+export function ChatScreen({ children, className, ...rest }) {
+  return <div className={clsx('tw:px-6 tw:py-2 tw:overflow-y-scroll tw:h-full tw:items-center', className)} {...rest}>{children}</div>
+}
 
-export const MessageContainer = styled.div`
-  margin: 16px 0;
-`
+export function MessageContainer({ children, className, ...rest }) {
+  return <div className={clsx('tw:my-4', className)} {...rest}>{children}</div>
+}
 
-export const ChatAvatar = styled.img`
-  border-radius: 50%;
-  float: left;
-`
+export function ChatAvatar({ className, ...rest }) {
+  return <img className={clsx('tw:rounded-full tw:float-left', className)} {...rest} />
+}
 
-export const Content = styled.div`
-  margin-left: 56px;
-`
+export function Content({ children, className, ...rest }) {
+  return <div className={clsx('tw:ml-14', className)} {...rest}>{children}</div>
+}
 
-export const TextDate = styled.span`
-  float: right;
-  font-size: 9.5px;
-  color: ${colors.PRIMARY}
-`
+export function TextDate({ children, className, ...rest }) {
+  return <span className={clsx('tw:float-right tw:text-[9.5px] tw:text-[#58CC02]', className)} {...rest}>{children}</span>
+}
 
-export const ChatMessage = styled.p`
-  margin: 0;
-  margin-bottom: 5px;
-  font-size: 11px;
-`
+export function ChatMessage({ children, className, ...rest }) {
+  return <p className={clsx('tw:m-0 tw:mb-[5px] tw:text-[11px]', className)} {...rest}>{children}</p>
+}
 
-export const ChatAction = styled.p`
-  font-size: 10px;
-  font-style: italic;
-  margin: 0 0 0 80px;
-`
+export function ChatAction({ children, className, ...rest }) {
+  return <p className={clsx('tw:text-[10px] tw:italic tw:m-0 tw:ml-20', className)} {...rest}>{children}</p>
+}
 
-export const ChatFormContainer = styled.div`
-  padding: 0 24px;
-  background-color: ${colors.DARKBLUE};
-  & .input-group {
-    width: 100%;
-    & > label {
-      margin: unset;
-    }
-  }
-`
+export function ChatFormContainer({ children, className, ...rest }) {
+  return <div className={clsx('tw:px-6 tw:bg-[#2C3E50]', className)} {...rest}>{children}</div>
+}
 
-export const ChatDivisor = styled.hr`
-  margin-top: 4px;
-  background: #e9e9e9;
-  border: 0;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 1px;
-  margin: 0;
-  min-height: 1px;
-`
+export function ChatDivisor({ className, ...rest }) {
+  return <hr className={clsx('tw:mt-1 tw:bg-[#e9e9e9] tw:border-0 tw:h-px tw:m-0', className)} {...rest} />
+}
 
-export const InputDivisor = styled.span`
-  margin-left: 5px;
-  margin-right: 5px;
-`
+export function InputDivisor({ className, ...rest }) {
+  return <span className={clsx('tw:mx-[5px]', className)} {...rest} />
+}
 
-export const Close = styled.span`
-  color: #fff;
-  display: block;
-  float: right;
-  font-size: 10px;
-  height: 16px;
-  line-height: 16px;
-  margin: 2px 0 0 0;
-  text-align: center;
-  width: 16px;
-`
+export function Close({ children, className, ...rest }) {
+  return <span className={clsx('tw:text-white tw:block tw:float-right tw:text-[10px] tw:h-4 tw:leading-4 tw:mt-0.5 tw:text-center tw:w-4', className)} {...rest}>{children}</span>
+}
 
-export const UnreadMessages = styled.span`
-  background: #e62727;
-  border: 1px solid #fff;
-  border-radius: 50%;
-  display: none;
-  font-size: 12px;
-  font-weight: bold;
-  height: 28px;
-  left: 0;
-  line-height: 28px;
-  margin: -15px 0 0 -15px;
-  position: absolute;
-  text-align: center;
-  top: 0;
-  width: 28px;
-`
+export function UnreadMessages({ children, className, ...rest }) {
+  return <span className={clsx('tw:bg-[#e62727] tw:border tw:border-white tw:rounded-full tw:hidden tw:text-xs tw:font-bold tw:h-7 tw:leading-7 tw:absolute tw:text-center tw:top-0 tw:w-7 tw:left-0 tw:-mt-[15px] tw:-ml-[15px]', className)} {...rest}>{children}</span>
+}
 
-export const FileUpload = styled.div`
-  margin-top: 7.5px;
-  margin-bottom: 7.5px;
-  display: flex;
-  justify-content: center;
-`
+export function FileUpload({ children, className, ...rest }) {
+  return <div className={clsx('tw:mt-[7.5px] tw:mb-[7.5px] tw:flex tw:justify-center', className)} {...rest}>{children}</div>
+}
 
-export const FileDownload = styled.a``
+export function FileDownload(props) {
+  return <a {...props} />
+}

@@ -1,204 +1,94 @@
-import styled, { css } from 'styled-components'
-import colors from 'colors'
+import React from 'react'
+import clsx from 'clsx'
 
-export const ButtonsControlContainer = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-`
+export function ButtonsControlContainer({ children, className, ...rest }) {
+  return <div className={clsx('tw:flex tw:items-center tw:justify-center tw:mt-[10px]', className)} {...rest}>{children}</div>
+}
 
-export const ButtonControl = styled.button`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: unset;
-    border: none;
-    &:focus {
-        outline:none;
-    }
-`
+export function ButtonControl({ children, className, ...rest }) {
+  return <button className={clsx('tw:flex tw:flex-col tw:items-center tw:justify-center tw:bg-transparent tw:border-none focus:tw:outline-none', className)} {...rest}>{children}</button>
+}
 
-export const ButtonFigure = styled.figure`
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin: 0;
-    position: relative;
-    ${({ settings }) => settings && css`
-        flex-direction: row;
-        & > i { margin-right: 5px; }
-    `};
-`
+export function ButtonFigure({ children, className, settings, ...rest }) {
+  return (
+    <figure className={clsx('tw:flex tw:flex-col tw:items-center tw:m-0 tw:relative', settings && 'tw:flex-row', className)} {...rest}>
+      {children}
+    </figure>
+  )
+}
 
-export const IconContainer = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    height: 48px;
-    border-radius: 30%;
-    background: ${colors.ORANGE};
-    color: white;
-    ${({ state }) => !state && css`
-        background: #f26b4d;`};
-`
+export function IconContainer({ children, className, state, ...rest }) {
+  return (
+    <div
+      className={clsx(
+        'tw:flex tw:items-center tw:justify-center tw:w-12 tw:h-12 tw:rounded-[30%] tw:text-white',
+        state ? 'tw:bg-[#FF9800]' : 'tw:bg-[#f26b4d]',
+        className
+      )}
+      {...rest}
+    >
+      {children}
+    </div>
+  )
+}
 
-export const IconContainerName = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 24px;
-    height: 24px;
-    border-radius: 30%;
-    background: #f26b4d;
-`
+export function IconContainerName({ children, className, ...rest }) {
+  return <div className={clsx('tw:flex tw:items-center tw:justify-center tw:w-6 tw:h-6 tw:rounded-[30%] tw:bg-[#f26b4d]', className)} {...rest}>{children}</div>
+}
 
-export const ButtonFigCaption = styled.figcaption`
-    font-size: 12px;
-    line-height: 14px;
-    font-weight: 400;
-    width: 100%;
-    text-align: center;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-    margin-top: 8px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 48px;
-    ${({ settings }) => settings && css`
-        margin-top: unset;
-        text-overflow: unset;
-        overflow: unset;
-        max-width: unset;
-        line-height: 40px;
-    `};
-`
+export function ButtonFigCaption({ children, className, settings, ...rest }) {
+  return (
+    <figcaption className={clsx(
+      'tw:text-xs tw:leading-[14px] tw:font-normal tw:w-full tw:text-center tw:select-none tw:mt-2 tw:whitespace-nowrap tw:overflow-hidden tw:text-ellipsis tw:max-w-[48px]',
+      settings && 'tw:mt-0 tw:text-ellipsis-[unset] tw:overflow-visible tw:max-w-none tw:leading-10',
+      className
+    )} {...rest}>{children}</figcaption>
+  )
+}
 
-export const VideoContainer = styled.div`
-    position: relative;
-    background-color: black;
-    border-radius: 10px;
-    margin: 5px;
-`
+export function VideoContainer({ children, className, ...rest }) {
+  return <div className={clsx('tw:relative tw:bg-black tw:rounded-[10px] tw:m-[5px]', className)} {...rest}>{children}</div>
+}
 
-export const Video = styled.video`
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    border-radius: 10px;
-    max-height: 418px;
-    min-height: 418px;
-    ${({ isSharing }) => isSharing || css`
-        transform: scaleX(-1);
-    `}
-    ${({ priorizeScreenShare }) => priorizeScreenShare && css ``}
-`
+export function Video({ children, className, isSharing, priorizeScreenShare, ...rest }) {
+  return (
+    <video
+      className={clsx(
+        'tw:flex tw:items-center tw:flex-col tw:w-full tw:rounded-[10px] tw:max-h-[418px] tw:min-h-[418px]',
+        !isSharing && 'tw:scale-x-[-1]',
+        className
+      )}
+      {...rest}
+    >
+      {children}
+    </video>
+  )
+}
 
-export const VideoSlash = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    background-color: #ebebeb;
-    font-size: 3vw;
-    border-radius: 10px;
-    position: relative;
-`
+export function VideoSlash({ children, className, ...rest }) {
+  return <div className={clsx('tw:flex tw:items-center tw:justify-center tw:h-full tw:w-full tw:bg-[#ebebeb] tw:text-[3vw] tw:rounded-[10px] tw:relative', className)} {...rest}>{children}</div>
+}
 
-export const VideoChatOptionsContainer = styled.div`
-    position: relative;
-`
-export const VideoChatOptions = styled.div`
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: auto;
-`
+export function VideoChatOptionsContainer({ children, className, ...rest }) {
+  return <div className={clsx('tw:relative', className)} {...rest}>{children}</div>
+}
 
-export const NameText = styled.div` 
-    display: flex; 
-    left: 0;
-    bottom: 4px;
-    padding: 4px 0;
-    position: absolute;
-    margin: 0 4px;
-    background-color: rgba(0,0,0,0.56);
-    color: #fff;
-    border-radius: 10px;
-    font-size: 14px;
-    line-height: 22px;
-    overflow: hidden;
-    padding: 0 4px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-    width: fit-content;
-    padding: 5px;
-    align-items: center;
-`
+export function VideoChatOptions({ children, className, ...rest }) {
+  return <div className={clsx('tw:absolute tw:left-0 tw:right-0 tw:h-auto', className)} {...rest}>{children}</div>
+}
 
-export const SettingsIconContainer = styled.div` 
-    display: flex; 
-    right: 0;
-    top: 0;
-    padding: 4px 0;
-    position: absolute;
-    margin: 4px;
-    background-color: rgba(0,0,0,0.56);
-    color: #fff;
-    border-radius: 10px;
-    font-size: 14px;
-    line-height: 22px;
-    overflow: hidden;
-    padding: 0 4px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-    width: fit-content;
-    padding: 5px;
-    align-items: center;
-    justify-content: flex-end;
-    cursor: pointer;
-`
+export function NameText({ children, className, ...rest }) {
+  return <div className={clsx('tw:flex tw:left-0 tw:bottom-1 tw:py-1 tw:absolute tw:mx-1 tw:bg-black/56 tw:text-white tw:rounded-[10px] tw:text-sm tw:leading-[22px] tw:overflow-hidden tw:text-ellipsis tw:whitespace-nowrap tw:select-none tw:w-fit tw:px-[5px] tw:items-center', className)} {...rest}>{children}</div>
+}
 
-export const SettingsContainer = styled.div` 
-    display: flex; 
-    right: 0;
-    top: 3px;
-    padding: 4px 0;
-    position: absolute;
-    margin: 4px;
-    background-color: white;
-    border-radius: 10px;
-    font-size: 14px;
-    line-height: 22px;
-    overflow: hidden;
-    padding: 0 4px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-    width: fit-content;
-    padding: 5px;
-    align-items: flex-start;
-    flex-direction: column;
-`
+export function SettingsIconContainer({ children, className, ...rest }) {
+  return <div className={clsx('tw:flex tw:right-0 tw:top-0 tw:py-1 tw:absolute tw:m-1 tw:bg-black/56 tw:text-white tw:rounded-[10px] tw:text-sm tw:leading-[22px] tw:overflow-hidden tw:text-ellipsis tw:whitespace-nowrap tw:select-none tw:w-fit tw:px-[5px] tw:items-center tw:justify-end tw:cursor-pointer', className)} {...rest}>{children}</div>
+}
 
+export function SettingsContainer({ children, className, ...rest }) {
+  return <div className={clsx('tw:flex tw:right-0 tw:top-[3px] tw:py-1 tw:absolute tw:m-1 tw:bg-white tw:rounded-[10px] tw:text-sm tw:leading-[22px] tw:overflow-hidden tw:select-none tw:w-fit tw:px-[5px] tw:items-start tw:flex-col', className)} {...rest}>{children}</div>
+}
 
-export const UnreadMessage = styled.div`
-    color: white;
-    padding: 5px 5px;
-    font-size: 10px;
-    position: absolute;
-    top: 0;
-    right: 0;
-`
+export function UnreadMessage({ children, className, ...rest }) {
+  return <div className={clsx('tw:text-white tw:px-[5px] tw:text-[10px] tw:absolute tw:top-0 tw:right-0', className)} {...rest}>{children}</div>
+}

@@ -1,6 +1,6 @@
 import React, { memo, useState, useRef, useEffect } from 'react'
 import 'assets/css/chat.css'
-import { Form, Button, InputGroup } from 'react-bootstrap'
+import { Button } from 'components/ui'
 import { v4 as uuid } from 'uuid'
 import { sendO as send } from 'react-icons-kit/fa/sendO'
 import { minus as hide } from 'react-icons-kit/fa/minus'
@@ -194,32 +194,31 @@ const Chat = ({
               {attach && ellipsis(attach.name, 0, 30)}
             </Text>
           </FileUpload>
-          <Form
-            encType="multipart/form-data"
-            inline
-            onSubmit={handleSubmitMessage}
-          >
-            <InputGroup>
-              <Form.Control
-                className="w-50 rounded chat"
-                name="message"
-                onChange={onChange}
-                onKeyPress={handleTyping}
-                onKeyDown={handleTyping}
-                placeholder="Escribe un mensaje..."
-                size="sm"
-                value={form.message}
-                required
-                ref={inputRef}
-              />
+            <form
+              encType="multipart/form-data"
+              className="tw:flex tw:flex-wrap tw:items-center"
+              onSubmit={handleSubmitMessage}
+            >
+              <div className="input-group tw:flex tw:items-center tw:w-full">
+                <input
+                  className="tw:w-1/2 tw:rounded-lg tw:border tw:border-gray-300 tw:p-1.5 tw:text-xs chat focus:tw:border-[#58CC02]"
+                  name="message"
+                  onChange={onChange}
+                  onKeyPress={handleTyping}
+                  onKeyDown={handleTyping}
+                  placeholder="Escribe un mensaje..."
+                  value={form.message}
+                  required
+                  ref={inputRef}
+                />
               <InputDivisor />
               <FileUploader onChange={handleAttachFile} renderEncType={false} />
               <InputDivisor />
               <Button className="rounded" type="submit" size="sm">
                 <Icon icon={send} />
               </Button>
-            </InputGroup>
-          </Form>
+              </div>
+            </form>
         </ChatFormContainer>
       </ChatContainer>
     </ErrorHandler>
