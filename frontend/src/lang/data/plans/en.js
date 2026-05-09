@@ -39,7 +39,8 @@ export const plansEN = {
     },
     CANCEL_MODAL: {
       title: "We're sad to see you go 😔",
-      accessUntil: 'Your {{planName}} access will remain active until {{date}}.',
+      accessUntil:
+        'Your {{planName}} access will remain active until {{date}}.',
       loseAccess:
         'After that date, your subscription will not renew automatically and you will lose access to premium features, speaking reviews, writing reviews, and future evaluations.',
       canReactivate:

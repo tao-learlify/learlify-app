@@ -42,7 +42,12 @@ const CancelSubscriptionModal = ({
             <Button variant="ghost" onClick={onClose} disabled={loading}>
               {t('PLANS.PRICING.REACTIVATE_MODAL.notNow')}
             </Button>
-            <Button variant="primary" onClick={onConfirm} disabled={loading} loading={loading}>
+            <Button
+              variant="primary"
+              onClick={onConfirm}
+              disabled={loading}
+              loading={loading}
+            >
               {t('PLANS.PRICING.REACTIVATE_MODAL.confirm')}
             </Button>
           </div>
@@ -66,7 +71,12 @@ const CancelSubscriptionModal = ({
       title={t('PLANS.PRICING.CANCEL_MODAL.title')}
       footer={
         <div className={styles.footer}>
-          <Button variant="ghost" onClick={onConfirm} disabled={loading} loading={loading}>
+          <Button
+            variant="ghost"
+            onClick={onConfirm}
+            disabled={loading}
+            loading={loading}
+          >
             {t('PLANS.PRICING.CANCEL_MODAL.confirm')}
           </Button>
           <Button variant="primary" onClick={onClose} disabled={loading}>
