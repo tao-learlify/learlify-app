@@ -58,6 +58,14 @@ export interface FacebookLoginBody {
   imageUrl?: string
 }
 
+export interface TelegramLoginBody {
+  id_token: string
+  firstName: string
+  lastName?: string
+  username?: string
+  imageUrl?: string
+}
+
 export interface RefreshTokenBody {
   token: string
 }

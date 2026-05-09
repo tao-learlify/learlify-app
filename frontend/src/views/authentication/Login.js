@@ -8,7 +8,9 @@ import { unwrapResult } from '@reduxjs/toolkit'
 
 import { Button, Input } from 'components/ui'
 import { GoogleLoginButton } from 'components/ui/GoogleLoginButton'
+import { TelegramLoginButton } from 'components/ui/TelegramLoginButton'
 import { AuthShell } from 'components/layout/AuthShell'
+import config from 'config'
 
 import useAuthProvider from 'hooks/useAuthProvider'
 import useForm from 'hooks/useForm'
@@ -26,7 +28,8 @@ import {
   demoThunk,
   forgotPasswordThunk,
   loginThunk,
-  socialThunk
+  socialThunk,
+  telegramThunk
 } from 'store/@thunks/auth'
 
 import { selectModel } from 'store/@reducers/models'
@@ -109,6 +112,27 @@ const Login = () => {
     ToastsStore.error(t('AUTHENTICATION.error'))
   }
 
+  const handleTelegramSuccess = useCallback(
+    ({ id_token, user: tgUser }) => {
+      dispatch(telegramThunk({
+        id_token,
+        firstName: tgUser?.first_name || 'Telegram',
+        lastName: tgUser?.last_name || '',
+        username: tgUser?.username || '',
+        imageUrl: tgUser?.photo_url || ''
+      }))
+        .then(unwrapResult)
+        .catch(({ message }) => ToastsStore.warning(message))
+    },
+    [dispatch]
+  )
+
+  const handleTelegramError = (error) => {
+    if (error) {
+      ToastsStore.error(error)
+    }
+  }
+
   const handleDemoSession = () => {
     dispatch(demoThunk())
       .then(unwrapResult)
@@ -160,14 +184,21 @@ const Login = () => {
             </p>
           </header>
 
-          {/* ── Google Login — primary CTA ────────────────── */}
+          {/* ── Social CTAs — Google + Telegram ──────────── */}
           {!forgot && (
-            <div className={styles.googleCta}>
+            <div className={styles.socialCtas}>
               <GoogleLoginButton
                 onSuccess={handleGoogleSuccess}
                 onFailure={handleGoogleError}
                 disabled={user.loading}
               />
+              {config.TELEGRAM_CLIENT_ID && (
+                <TelegramLoginButton
+                  onSuccess={handleTelegramSuccess}
+                  onFailure={handleTelegramError}
+                  disabled={user.loading}
+                />
+              )}
             </div>
           )}
 

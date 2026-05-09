@@ -76,6 +76,7 @@ export default defineConfig(({ mode }) => {
       host: '0.0.0.0',
       port: devServerPort,
       strictPort: true,
+      allowedHosts: ['mauve-evil-police.ngrok-free.dev'],
       proxy: {
         '/api': {
           target: proxyTarget,

@@ -42,7 +42,8 @@ const config = {
     'https://aptisgo.b1b2.es',
     'https://b1b2.online',
     'https://b1b2.top/play',
-    'http://localhost:3000'
+    'http://localhost:3000',
+    'https://mauve-evil-police.ngrok-free.dev'
   ],
   S3: {
     BUCKET: enviroment === MODE.development ? 'aptispruebas' : 'aptisgo'

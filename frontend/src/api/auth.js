@@ -1,4 +1,5 @@
 import httpClient, { GET, POST, PUT } from 'providers/http'
+import config from 'config'
 
 /**
  * @typedef {Object} Credentials
@@ -31,6 +32,17 @@ export function loginSocial(user, provider) {
     body: user,
     endpoint: '/api/v1/auth/social',
     params: [provider],
+    method: POST
+  })
+}
+
+/**
+ * @param {{ id_token: string, firstName?: string, lastName?: string, username?: string, imageUrl?: string }} telegramData
+ */
+export function telegramLogin(telegramData) {
+  return httpClient({
+    body: telegramData,
+    endpoint: '/api/v1/auth/social/telegram',
     method: POST
   })
 }

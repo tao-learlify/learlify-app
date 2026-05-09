@@ -34,6 +34,7 @@ const config = freeze({
   API_URL: import.meta.env.VITE_API_URL,
   FACEBOOK_APP_ID: import.meta.env.VITE_FACEBOOK_APP_ID,
   GOOGLE_CLIENT_ID: import.meta.env.VITE_GOOGLE_CLIENT_ID,
+  TELEGRAM_CLIENT_ID: import.meta.env.VITE_TELEGRAM_CLIENT_ID,
   STRIPE_API_KEY: import.meta.env.VITE_STRIPE,
   CLOUDFRONT: import.meta.env.VITE_CLOUDFRONT,
   FALLBACK_LANGUAGE: import.meta.env.VITE_FALLBACK_LANGUAGE,

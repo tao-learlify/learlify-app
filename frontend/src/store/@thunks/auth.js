@@ -43,6 +43,19 @@ export const socialThunk = createAsyncThunk(
   }
 )
 
+export const telegramThunk = createAsyncThunk(
+  'auth/telegram',
+  async (telegramData, { rejectWithValue }) => {
+    try {
+      const service = await api.auth.telegramLogin(telegramData)
+
+      return service
+    } catch (err) {
+      return rejectWithValue(err)
+    }
+  }
+)
+
 export const forgotPasswordThunk = createAsyncThunk(
   'auth/forgot',
   async ({ email}, { rejectWithValue }) => {

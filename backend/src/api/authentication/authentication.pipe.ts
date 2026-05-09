@@ -115,6 +115,36 @@ class Auth {
     })
   }
 
+  get telegramLogin(): ValidationChain[] {
+    const { nameOptions } = this.configService
+
+    return checkSchema({
+      id_token: {
+        in: 'body',
+        errorMessage: 'id_token is required',
+        isString: true
+      },
+      firstName: {
+        in: 'body',
+        errorMessage: 'firstName is required',
+        isString: true,
+        isLength: { options: nameOptions }
+      },
+      lastName: {
+        in: 'body',
+        errorMessage: 'lastName should be a valid string',
+        isString: true,
+        optional: true
+      },
+      imageUrl: {
+        in: 'body',
+        errorMessage: 'imageUrl should be a valid string',
+        isString: true,
+        optional: true
+      }
+    })
+  }
+
   get verifiy(): ValidationChain[] {
     return checkSchema({
       code: {

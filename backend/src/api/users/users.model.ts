@@ -27,6 +27,7 @@ class User extends Model {
   stripeCustomerId?: string
   googleId?: string
   facebookId?: string
+  telegramId?: string
   tour?: string
   createdAt?: string
   updatedAt?: string

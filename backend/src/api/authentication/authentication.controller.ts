@@ -16,11 +16,13 @@ import { mailConfig } from 'api/mails'
 import { Logger } from 'api/logger'
 import { Bind } from 'decorators'
 import moment from 'moment'
+import { importJWK, jwtVerify } from 'jose'
 import type {
   SignUpBody,
   SignInBody,
   GoogleLoginBody,
   FacebookLoginBody,
+  TelegramLoginBody,
   RefreshTokenBody,
   ResetPasswordBody
 } from './authentication.types'
@@ -591,6 +593,140 @@ export class AuthenticationController {
       response: {
         token
       },
+      statusCode: 200
+    })
+  }
+
+  @Bind
+  async telegramLogin(req: Request, res: Response): Promise<Response> {
+    const body = req.body as TelegramLoginBody
+
+    // ── Telegram OIDC JWT verification ────────────────────────────────────
+    const TELEGRAM_CLIENT_ID = process.env.TELEGRAM_CLIENT_ID || ''
+    const TELEGRAM_JWKS_URI = 'https://oauth.telegram.org/.well-known/jwks.json'
+    const TELEGRAM_ISS = 'https://oauth.telegram.org'
+
+    if (!TELEGRAM_CLIENT_ID) {
+      throw new BadRequestException('Telegram Login not configured')
+    }
+
+    // Fetch Telegram's JWKS and verify the id_token
+    const jwksResp = await fetch(TELEGRAM_JWKS_URI)
+    if (!jwksResp.ok) {
+      throw new BadRequestException('Failed to fetch Telegram JWKS')
+    }
+    const jwksBody = (await jwksResp.json()) as { keys: Array<Record<string, unknown>> }
+    const keys = jwksBody.keys || []
+
+    let telegramClaims: Record<string, unknown> | null = null
+    for (const jwk of keys) {
+      try {
+        const publicKey = await importJWK(jwk, 'RS256')
+        const { payload } = await jwtVerify(body.id_token, publicKey, {
+          issuer: TELEGRAM_ISS,
+          audience: TELEGRAM_CLIENT_ID,
+        })
+        telegramClaims = payload as unknown as Record<string, unknown>
+        break
+      } catch {
+        // Try next key
+      }
+    }
+
+    if (!telegramClaims) {
+      throw new BadRequestException('Invalid Telegram id_token')
+    }
+
+    const telegramId = String(telegramClaims.sub || '')
+    if (!telegramId) {
+      throw new BadRequestException('Telegram id_token missing sub claim')
+    }
+
+    // Use the Telegram username as email suffix since Telegram may not share email
+    const telegramUsername =
+      (telegramClaims.preferred_username as string) ||
+      body.username ||
+      `telegram_${telegramId}`
+    const email = (telegramClaims.email as string) || `${telegramUsername}@telegram.learlify.com`
+    const firstName = body.firstName || (telegramClaims.name as string) || 'Telegram'
+    const lastName = body.lastName || 'User'
+
+    // ── Find or create user ───────────────────────────────────────────────
+    let user = await this.userService.getOne({
+      telegramId
+    })
+
+    if (user) {
+      // Existing Telegram user — update last login
+      await this.userService.updateOne({
+        id: user.id,
+        imageUrl: body.imageUrl || user.imageUrl,
+        lastLogin: moment().format('YYYY-MM-DD')
+      })
+    } else {
+      // Check if a user with this Telegram email already exists
+      const existingUser = await this.userService.getOne({ email })
+
+      if (existingUser) {
+        // Link Telegram ID to existing account
+        const updated = await this.userService.updateOne({
+          id: existingUser.id,
+          telegramId,
+          imageUrl: body.imageUrl || existingUser.imageUrl,
+          isVerified: true,
+          lastLogin: moment().format('YYYY-MM-DD')
+        })
+        user = updated
+      } else {
+        // Create new user from Telegram data
+        const password = await this.authService.generateRandomPassword({
+          useHash: true
+        })
+
+        const role = await this.rolesService.findOne({ name: Roles.User })
+
+        const createdUser = await this.userService.create({
+          email,
+          firstName,
+          lastName,
+          telegramId,
+          imageUrl: body.imageUrl || '',
+          isVerified: true,
+          lang: req.locale,
+          password: password.hash ?? undefined,
+          roleId: role.id,
+          lastLogin: moment().format('YYYY-MM-DD')
+        })
+
+        await this.mailService.sendMail({
+          to: createdUser.email,
+          from: this.configService.provider.SES_FROM_EMAIL,
+          subject: res.__('mails.services.googleSignUp.subject'),
+          text: res.__('mails.services.googleSignUp.text', {
+            user: createdUser.firstName,
+            locale: req.locale
+          }),
+          html: `
+            <div>
+              <p>Welcome to Learlify! You signed up using Telegram.</p>
+              <p>Your temporary password is: <strong style="color: red;">${password.value}</strong></p>
+              <p>You can change it in your profile settings.</p>
+            </div>
+          `
+        })
+
+        user = createdUser
+      }
+    }
+
+    const token = this.authService.encrypt(
+      { ...user, role: user.role },
+      { clientConfig: true }
+    )
+
+    return res.status(200).json({
+      message: 'Login successfully',
+      response: { token },
       statusCode: 200
     })
   }
