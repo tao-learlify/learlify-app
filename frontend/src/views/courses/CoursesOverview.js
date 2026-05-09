@@ -1,6 +1,6 @@
 /**
  * CoursesOverview
- * 
+ *
  * Main course navigation view showing all units with progress
  * Combines:
  *   - useLearningPathWithSchema hook (enriched progress + schema data)
@@ -48,7 +48,10 @@ const CoursesOverview = () => {
   const displayCourseTitle = courseTitle || 'English Path'
   const displayCourseId = courseId || 1
   const displayCompletedSections = completedSections || 0
-  const progressPercent = displayTotalSections > 0 ? Math.round((displayCompletedSections / displayTotalSections) * 100) : 0
+  const progressPercent =
+    displayTotalSections > 0
+      ? Math.round((displayCompletedSections / displayTotalSections) * 100)
+      : 0
 
   const [showUpgradeModal, setShowUpgradeModal] = useState(false)
 
@@ -58,12 +61,15 @@ const CoursesOverview = () => {
 
   if (error) {
     return (
-      <Template withNavbar>
+      <Template>
         <div className={styles.container}>
           <div className={styles.error}>
             <h2>Error Loading Courses</h2>
             <p>Unable to load course data. Please try again later.</p>
-            <button onClick={() => history.goBack()} className={styles.backButton}>
+            <button
+              onClick={() => history.goBack()}
+              className={styles.backButton}
+            >
               ← Go Back
             </button>
           </div>
@@ -73,7 +79,7 @@ const CoursesOverview = () => {
   }
 
   return (
-    <Template withNavbar withLoader={loading}>
+    <Template withLoader={loading}>
       <div className={styles.container}>
         {/* Header */}
         <header className={styles.header}>
@@ -89,13 +95,16 @@ const CoursesOverview = () => {
             <div className={styles.titleGroup}>
               <h1 className={styles.pageTitle}>{displayCourseTitle}</h1>
               <p className={styles.subtitle}>
-                {displayCompletedSections} of {displayTotalSections} units completed
+                {displayCompletedSections} of {displayTotalSections} units
+                completed
               </p>
             </div>
 
             {user && (
               <div className={styles.userInfo}>
-                <span className={styles.userName}>{user.profile?.firstName}</span>
+                <span className={styles.userName}>
+                  {user.profile?.firstName}
+                </span>
                 <span className={styles.xpBadge}>
                   {user.profile?.xp || 0} XP
                 </span>
@@ -117,7 +126,11 @@ const CoursesOverview = () => {
 
         {/* Main Content */}
         {units.length > 0 ? (
-          <CourseUnitsGrid units={units} courseId={displayCourseId} onLockedUnitClick={handleLockedUnitClick} />
+          <CourseUnitsGrid
+            units={units}
+            courseId={displayCourseId}
+            onLockedUnitClick={handleLockedUnitClick}
+          />
         ) : !loading ? (
           <FallbackMode
             title="No Units Available"
@@ -132,8 +145,14 @@ const CoursesOverview = () => {
 
       {/* Upgrade Modal — same experience as /plans, without FAQ */}
       {showUpgradeModal && (
-        <div className="tw:fixed tw:inset-0 tw:z-50 tw:flex tw:items-start tw:justify-center tw:pt-20 tw:bg-black/50 tw:overflow-y-auto" onClick={() => setShowUpgradeModal(false)}>
-          <div className="tw:bg-white tw:rounded-2xl tw:shadow-2xl tw:max-w-5xl tw:w-full tw:mx-4 tw:p-8 tw:relative" onClick={e => e.stopPropagation()}>
+        <div
+          className="tw:fixed tw:inset-0 tw:z-50 tw:flex tw:items-start tw:justify-center tw:pt-20 tw:bg-black/50 tw:overflow-y-auto"
+          onClick={() => setShowUpgradeModal(false)}
+        >
+          <div
+            className="tw:bg-white tw:rounded-2xl tw:shadow-2xl tw:max-w-5xl tw:w-full tw:mx-4 tw:p-8 tw:relative"
+            onClick={e => e.stopPropagation()}
+          >
             <button
               onClick={() => setShowUpgradeModal(false)}
               className="tw:absolute tw:top-4 tw:right-4 tw:p-2 tw:rounded-full hover:tw:bg-gray-100 tw:cursor-pointer tw:z-10"
@@ -147,7 +166,8 @@ const CoursesOverview = () => {
                 Unlock All Course Content
               </h1>
               <p className="tw:text-gray-500 tw:mt-2 tw:max-w-xl tw:mx-auto">
-                Choose the plan that fits your learning goals. Get unlimited access to all 15 units, exams, and personalised feedback.
+                Choose the plan that fits your learning goals. Get unlimited
+                access to all 15 units, exams, and personalised feedback.
               </p>
             </div>
 
@@ -170,7 +190,10 @@ const CoursesOverview = () => {
                     plan={plan}
                     selectedCycle={pricing.selectedBillingCycle}
                     popular={plan.code === 'aptis_pro'}
-                    onSelect={() => { setShowUpgradeModal(false); history.push(PATH.PAYMENTS) }}
+                    onSelect={() => {
+                      setShowUpgradeModal(false)
+                      history.push(PATH.PAYMENTS)
+                    }}
                   />
                 ))}
             </div>
@@ -181,7 +204,10 @@ const CoursesOverview = () => {
             {/* View all link */}
             <div className="tw:text-center">
               <button
-                onClick={() => { setShowUpgradeModal(false); history.push(PATH.PAYMENTS) }}
+                onClick={() => {
+                  setShowUpgradeModal(false)
+                  history.push(PATH.PAYMENTS)
+                }}
                 className="tw:text-[#58CC02] tw-font-bold hover:tw:underline tw:cursor-pointer"
               >
                 View all plans and details →

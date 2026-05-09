@@ -12,9 +12,12 @@ function createRedisClient(): Redis | null {
     maxRetriesPerRequest: null,
     enableReadyCheck: false,
     lazyConnect: true,
-    retryStrategy(times): number {
-      const delay = Math.min(times * 100, 3000)
-      return delay
+    retryStrategy(times): number | null {
+      if (times >= 5) {
+        logger.warn('redis.retries.exhausted')
+        return null
+      }
+      return Math.min(times * 500, 3000)
     }
   })
 

@@ -13,15 +13,15 @@ import {
 import styles from './LearningPath.module.scss'
 
 // ── Layout constants ──────────────────────────────────────────────────────────
-const DESIGN_W    = 520  // SVG coordinate space width — must match .pathArea CSS width
-const NODE_R      = 32   // Node radius (px) → 64px diameter (was 44 → 88px)
-const NODE_STEP   = 130  // Vertical distance between consecutive nodes (was 175)
-const MILESTONE_H = 80   // Vertical space consumed by each milestone (was 112)
-const SECTION_SIZE = 5   // Units per section
+const DESIGN_W = 520 // SVG coordinate space width — must match .pathArea CSS width
+const NODE_R = 32 // Node radius (px) → 64px diameter (was 44 → 88px)
+const NODE_STEP = 130 // Vertical distance between consecutive nodes (was 175)
+const MILESTONE_H = 80 // Vertical space consumed by each milestone (was 112)
+const SECTION_SIZE = 5 // Units per section
 
 // Zig-zag x positions as fraction of DESIGN_W (repeats every SECTION_SIZE)
 // More dramatic spread: far-left → center → far-right → center → far-left
-const SECTION_X = [0.15, 0.50, 0.85, 0.50, 0.15]
+const SECTION_X = [0.15, 0.5, 0.85, 0.5, 0.15]
 
 // ── Build layout ──────────────────────────────────────────────────────────────
 function buildItems(units, sectionMilestones = []) {
@@ -79,13 +79,21 @@ function buildSegments(items) {
       d: `M ${from.x} ${from.y} C ${from.x} ${midY}, ${to.x} ${midY}, ${to.x} ${to.y}`,
       done: i < currentItemIdx,
       active: i === currentItemIdx - 1,
-      isChallengeSeg,
+      isChallengeSeg
     }
   })
 }
 
 // ── PathHeader ────────────────────────────────────────────────────────────────
-function PathHeader({ title, description, completed, total, streak, xp, compact }) {
+function PathHeader({
+  title,
+  description,
+  completed,
+  total,
+  streak,
+  xp,
+  compact
+}) {
   const pct = total > 0 ? Math.round((completed / total) * 100) : 0
 
   return (
@@ -145,11 +153,11 @@ const PathNode = memo(function PathNode({ item, onUnitClick }) {
   const { state, title, Icon: UnitIcon } = unit
   const type = unit.type ?? 'lesson'
 
-  const isCompleted  = state === 'completed'
-  const isCurrent    = state === 'current'
-  const isLocked     = state === 'locked'
-  const isChallenge  = type === 'challenge' || type === 'challenge-premium'
-  const isPremium    = type === 'challenge-premium'
+  const isCompleted = state === 'completed'
+  const isCurrent = state === 'current'
+  const isLocked = state === 'locked'
+  const isChallenge = type === 'challenge' || type === 'challenge-premium'
+  const isPremium = type === 'challenge-premium'
 
   // Premium locked nodes are still clickable → parent shows unlock modal
   const isDisabled = isLocked && !isPremium
@@ -157,19 +165,22 @@ const PathNode = memo(function PathNode({ item, onUnitClick }) {
   const ariaLabel =
     `${isPremium ? 'Premium Challenge' : isChallenge ? 'Challenge' : 'Unit'} ` +
     `${unitIndex + 1}: ${title}` +
-    (isPremium && isLocked ? ' — unlock to access' : isLocked ? ' — locked' : '')
+    (isPremium && isLocked
+      ? ' — unlock to access'
+      : isLocked
+        ? ' — locked'
+        : '')
 
   return (
     <div className={styles.nodeWrapper}>
-
       {/* ── Challenge / Premium badge — floats ABOVE the node ─────────── */}
       {isChallenge && (
         <span
           className={clsx(
             styles.challengeBadge,
-            isPremium          && styles.challengeBadgePremium,
-            isCompleted        && styles.challengeBadgeDone,
-            isLocked && !isPremium && styles.challengeBadgeLocked,
+            isPremium && styles.challengeBadgePremium,
+            isCompleted && styles.challengeBadgeDone,
+            isLocked && !isPremium && styles.challengeBadgeLocked
           )}
           aria-hidden="true"
         >
@@ -183,13 +194,15 @@ const PathNode = memo(function PathNode({ item, onUnitClick }) {
           styles.node,
           // Lesson-only state classes (challenge nodes use data-attr styles)
           !isChallenge && isCompleted && styles.nodeCompleted,
-          !isChallenge && isCurrent   && styles.nodeCurrent,
-          !isChallenge && isLocked    && styles.nodeLocked,
+          !isChallenge && isCurrent && styles.nodeCurrent,
+          !isChallenge && isLocked && styles.nodeLocked
         )}
         data-type={type}
         data-state={state}
         style={{
-          '--progress-percent': unit.progressPercent ? `${unit.progressPercent * 100}%` : '0%'
+          '--progress-percent': unit.progressPercent
+            ? `${unit.progressPercent * 100}%`
+            : '0%'
         }}
         onClick={isDisabled ? undefined : () => onUnitClick?.(unit, unitIndex)}
         disabled={isDisabled}
@@ -224,18 +237,18 @@ const PathNode = memo(function PathNode({ item, onUnitClick }) {
         {/* Pulse rings: regular current (blue) */}
         {isCurrent && !isChallenge && (
           <>
-            <span className={styles.nodePulse}  aria-hidden="true" />
+            <span className={styles.nodePulse} aria-hidden="true" />
             <span className={styles.nodePulse2} aria-hidden="true" />
-            <span className={styles.nodeShine}  aria-hidden="true" />
+            <span className={styles.nodeShine} aria-hidden="true" />
           </>
         )}
 
         {/* Pulse rings: challenge current (amber) */}
         {isCurrent && isChallenge && !isPremium && (
           <>
-            <span className={styles.nodePulseChallenge}  aria-hidden="true" />
+            <span className={styles.nodePulseChallenge} aria-hidden="true" />
             <span className={styles.nodePulseChallenge2} aria-hidden="true" />
-            <span className={styles.nodeShine}           aria-hidden="true" />
+            <span className={styles.nodeShine} aria-hidden="true" />
           </>
         )}
 
@@ -243,32 +256,41 @@ const PathNode = memo(function PathNode({ item, onUnitClick }) {
         {isCurrent && isPremium && (
           <>
             <span className={styles.nodePulsePremium} aria-hidden="true" />
-            <span className={styles.nodeShine}        aria-hidden="true" />
+            <span className={styles.nodeShine} aria-hidden="true" />
           </>
         )}
 
         {/* ── Icons ──────────────────────────────────────────────────── */}
         <span className={styles.nodeIconWrap} aria-hidden="true">
-
           {/* Lesson — 64px node → 26px icon; 80px current → 30px icon */}
-          {!isChallenge && isCompleted && <CheckCircle weight="fill" size={26} />}
-          {!isChallenge && isCurrent && (
-            UnitIcon ? <UnitIcon weight="fill" size={30} /> : <BookOpen weight="fill" size={30} />
+          {!isChallenge && isCompleted && (
+            <CheckCircle weight="fill" size={26} />
           )}
+          {!isChallenge &&
+            isCurrent &&
+            (UnitIcon ? (
+              <UnitIcon weight="fill" size={30} />
+            ) : (
+              <BookOpen weight="fill" size={30} />
+            ))}
           {!isChallenge && isLocked && <Lock weight="fill" size={20} />}
 
           {/* Challenge (free) — 72px node → 26px; 86px current → 30px */}
-          {isChallenge && !isPremium && (isCompleted
-            ? <CheckCircle weight="fill" size={26} />
-            : <Star weight="fill" size={isCurrent ? 30 : 24} />
-          )}
+          {isChallenge &&
+            !isPremium &&
+            (isCompleted ? (
+              <CheckCircle weight="fill" size={26} />
+            ) : (
+              <Star weight="fill" size={isCurrent ? 30 : 24} />
+            ))}
 
           {/* Challenge (premium) — same scale */}
-          {isPremium && (isCompleted
-            ? <CheckCircle weight="fill" size={26} />
-            : <Crown weight="fill" size={isCurrent ? 28 : 22} />
-          )}
-
+          {isPremium &&
+            (isCompleted ? (
+              <CheckCircle weight="fill" size={26} />
+            ) : (
+              <Crown weight="fill" size={isCurrent ? 28 : 22} />
+            ))}
         </span>
       </button>
 
@@ -278,14 +300,15 @@ const PathNode = memo(function PathNode({ item, onUnitClick }) {
       </span>
 
       {/* Label */}
-      <span className={clsx(
-        styles.nodeLabel,
-        !isChallenge && isLocked && styles.nodeLabelLocked,
-        isChallenge && styles.nodeLabelChallenge,
-      )}>
+      <span
+        className={clsx(
+          styles.nodeLabel,
+          !isChallenge && isLocked && styles.nodeLabelLocked,
+          isChallenge && styles.nodeLabelChallenge
+        )}
+      >
         {title}
       </span>
-
     </div>
   )
 })
@@ -357,8 +380,10 @@ const LearningPath = memo(function LearningPath({
   streak,
   totalXP,
   showHeader = true,
+  loading = false,
   onUnitClick,
-  className,
+  onLockedUnitClick,
+  className
 }) {
   const completedCount = useMemo(
     () => units.filter(u => u.state === 'completed').length,
@@ -374,6 +399,36 @@ const LearningPath = memo(function LearningPath({
 
   const nodeItems = items.filter(it => it.type === 'node')
   const milestoneItems = items.filter(it => it.type === 'milestone')
+
+  if (loading) {
+    return (
+      <div className={clsx(styles.root, className)}>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 16,
+            padding: '16px 0'
+          }}
+        >
+          {Array.from({ length: 5 }).map((_, i) => (
+            <div
+              key={i}
+              style={{
+                height: 64,
+                borderRadius: 16,
+                background:
+                  'linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%)',
+                backgroundSize: '200% 100%',
+                animation: 'shimmer 1.5s infinite',
+                opacity: 1 - i * 0.15
+              }}
+            />
+          ))}
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className={clsx(styles.root, className)}>
@@ -422,7 +477,7 @@ const LearningPath = memo(function LearningPath({
                     strokeLinecap="round"
                     className={clsx(
                       styles.pathFill,
-                      seg.isChallengeSeg && styles.pathFillChallenge,
+                      seg.isChallengeSeg && styles.pathFillChallenge
                     )}
                   />
                 )}

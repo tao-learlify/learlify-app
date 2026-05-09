@@ -42,7 +42,12 @@ const UserView = () => {
   const { model } = useModels()
   const user = useAuthProvider()
 
-  const { units: pathUnits, courseTitle: pathCourseTitle, courseId: pathCourseId, loading: pathLoading } = useLearningPathWithSchema(exams.data)
+  const {
+    units: pathUnits,
+    courseTitle: pathCourseTitle,
+    courseId: pathCourseId,
+    loading: pathLoading
+  } = useLearningPathWithSchema(exams.data)
 
   useEffect(fetchOffers, [fetchOffers])
   useEffect(fetchExams, [fetchExams])
@@ -63,6 +68,22 @@ const UserView = () => {
   const firstName = user?.profile?.firstName
   const streak = user?.profile?.streak ?? stats?.data?.streak
 
+  // ── DEBUG ────────────────────────────────────────────────────────────────
+  console.group('[Dashboard] render')
+  console.log('model:', model)
+  console.log('user.profile:', user?.profile)
+  console.log('stats  :', { loading: stats.loading, data: stats.data })
+  console.log('exams  :', { loading: exams.loading, data: exams.data?.length })
+  console.log('offers :', {
+    loading: offers.loading,
+    data: offers.data?.length
+  })
+  console.log('evals  :', { loading: evaluations.loading })
+  console.log('cats   :', { loading: categories.loading })
+  console.log('path   :', { loading: pathLoading, units: pathUnits?.length })
+  console.groupEnd()
+  // ────────────────────────────────────────────────────────────────────────
+
   return (
     /*
      * Template is kept ONLY for:
@@ -76,12 +97,7 @@ const UserView = () => {
     <Template
       withNavbar={false}
       withLoader={
-        stats.loading ||
-        exams.loading ||
-        categories.loading ||
-        evaluations.loading ||
-        offers.loading ||
-        pathLoading
+        stats.loading || exams.loading || evaluations.loading || offers.loading
       }
       withVideos
     >
@@ -113,9 +129,17 @@ const UserView = () => {
                   showHeader={false}
                   courseTitle={pathCourseTitle}
                   units={pathUnits}
+                  loading={pathLoading}
                   streak={streak ?? 7}
                   totalXP={user?.profile?.xp ?? 420}
-                  onUnitClick={unit => history.push(buildUnitPath(pathCourseId ?? 1, unit.unitOrder ?? unit.id))}
+                  onUnitClick={unit =>
+                    history.push(
+                      buildUnitPath(
+                        pathCourseId ?? 1,
+                        unit.unitOrder ?? unit.id
+                      )
+                    )
+                  }
                   onLockedUnitClick={() => history.push('/plans')}
                 />
               </div>

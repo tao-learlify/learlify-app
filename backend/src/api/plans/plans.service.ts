@@ -2,6 +2,7 @@ import { Bind } from 'decorators'
 import { Logger } from 'api/logger'
 import { convert } from 'exchange-rates-api'
 import Plan from './plans.model'
+import PlanPrice from 'api/plan-prices/plan-prices.model'
 
 import taxes from 'core/plans.json'
 import currencies from 'core/currencies.json'
@@ -38,7 +39,12 @@ class PlansService {
   }
 
   @Bind
-  async getAll({ names, currency, available = true, ...options }: GetAllParams) {
+  async getAll({
+    names,
+    currency,
+    available = true,
+    ...options
+  }: GetAllParams) {
     const filters = {
       ...options,
       available
@@ -53,7 +59,10 @@ class PlansService {
         .select(this.clientAttributes)
         .withGraphFetched(this.relation)
 
-      const isIELTS = plans.find(({ model }) => (model as unknown as Record<string, unknown>)?.name === 'IELTS')
+      const isIELTS = plans.find(
+        ({ model }) =>
+          ((model as unknown) as Record<string, unknown>)?.name === 'IELTS'
+      )
 
       if (currency) {
         if ((currencies as string[]).includes(currency) === false) {
@@ -61,13 +70,19 @@ class PlansService {
 
           const conversion = plans.map(plan => {
             return Object.assign(plan, {
-              price: isIELTS ? (taxes as Record<string, Record<string, number>>)[currency as string][plan.name as string] : plan.price
+              price: isIELTS
+                ? (taxes as Record<string, Record<string, number>>)[
+                    currency as string
+                  ][plan.name as string]
+                : plan.price
             })
           })
 
           for (const plan of conversion) {
             const taxe = await convert(
-              (taxes as Record<string, Record<string, number>>)[currency as string][plan.name as string] || 0,
+              (taxes as Record<string, Record<string, number>>)[
+                currency as string
+              ][plan.name as string] || 0,
               currency as string,
               'USD'
             )
@@ -75,7 +90,7 @@ class PlansService {
             this.logger.info('taxe', { taxe })
 
             Object.assign(plan, {
-              taxe: parseInt(taxe as unknown as string)
+              taxe: parseInt((taxe as unknown) as string)
             })
           }
 
@@ -86,61 +101,26 @@ class PlansService {
       return plans
     }
 
-    return Plan.query()
-      .where(filters)
-      .withGraphJoined(this.relation)
+    return Plan.query().where(filters).withGraphJoined(this.relation)
   }
 
   async getCatalog({ modelId }: { modelId?: number }) {
+    return this.getAllWithPrices(modelId)
+  }
+
+  @Bind
+  async getAllWithPrices(modelId?: number) {
     const query = Plan.query().where({ available: true })
 
     if (modelId) {
       query.where({ modelId })
     }
 
-    const plans = await query.select([
-      'id', 'name', 'description', 'price', 'writing', 'speaking', 'feature', 'modelId'
-    ])
-
-    return (plans as unknown as Array<Record<string, unknown>>).map((plan, index) => {
-      const price = Number(plan.price) || 0
-      const monthlyPriceCents = Math.round(price / 12 * 100)
-      const annualPriceCents = price * 100 // 2 months free
-
-      return {
-        id: plan.id,
-        code: String(plan.name).toLowerCase().replace(/\s+/g, '_'),
-        name: plan.name,
-        description: plan.description || null,
-        includes_course: plan.feature === 'COURSES',
-        included_exams: null,
-        included_speaking_reviews: Number(plan.speaking) || 0,
-        included_writing_reviews: Number(plan.writing) || 0,
-        sort_order: index,
-        prices: [
-          {
-            id: (plan.id as number) * 10 + 1,
-            plan_id: plan.id,
-            billing_cycle: 'monthly',
-            currency: 'EUR',
-            base_price: monthlyPriceCents,
-            discount_percentage: 0,
-            final_price: monthlyPriceCents,
-            active: true
-          },
-          {
-            id: (plan.id as number) * 10 + 2,
-            plan_id: plan.id,
-            billing_cycle: 'yearly',
-            currency: 'EUR',
-            base_price: annualPriceCents,
-            discount_percentage: 17,
-            final_price: Math.round(annualPriceCents * 0.83),
-            active: true
-          }
-        ]
-      }
-    })
+    return query
+      .whereNotNull('code')
+      .whereRaw('code NOT LIKE ?', ['legacy_%'])
+      .withGraphFetched({ prices: true, access: true })
+      .orderBy('sort_order', 'asc')
   }
 
   getOne(plan: PlanSource | null, id?: number) {
@@ -161,6 +141,10 @@ class PlansService {
 
   remove(id: number) {
     return Plan.query().deleteById(id)
+  }
+
+  getPlanPrice(id: number) {
+    return PlanPrice.query().findById(id).withGraphFetched({ plan: true })
   }
 }
 

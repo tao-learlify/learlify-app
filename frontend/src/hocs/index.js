@@ -18,7 +18,7 @@ import FallbackMode from 'components/FallbackMode'
 const withVerification = Component => props => {
   const user = useAuthProvider()
 
-  return user.profile.isVerified ? <Component {...props} /> : <Checkpoint />
+  return user.profile?.isVerified ? <Component {...props} /> : <Checkpoint />
 }
 
 /**
@@ -50,7 +50,7 @@ const withAdmin = Component => props => {
 /**
  * @description
  * Until models are load, this component wraps in a conditional.
- * @param {React.Component} Compoonent 
+ * @param {React.Component} Compoonent
  * @returns {React.Component}
  */
 const withModels = Compoonent => props => {

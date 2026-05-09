@@ -6,11 +6,8 @@ import { Animated } from 'react-animated-css'
 import classNames from 'clsx'
 import lang from 'lang'
 
-
-
 import 'assets/css/template.scss'
 import 'react-pro-sidebar/dist/css/styles.css'
-
 
 import FlexContainer from 'components/FlexContainer'
 import Navigation from 'components/Navigation'
@@ -26,7 +23,11 @@ import { updateNetwork } from 'store/@reducers/settings'
 import styles from './template.module.scss'
 
 export function TextSpinnerContainer({ children, className, ...rest }) {
-  return <div className={clsx('tw:mt-8 tw:ml-6', className)} {...rest}>{children}</div>
+  return (
+    <div className={clsx('tw:mt-8 tw:ml-6', className)} {...rest}>
+      {children}
+    </div>
+  )
 }
 
 /**
@@ -119,7 +120,7 @@ const Template = ({
 
 Template.defaultProps = {
   withSocket: true,
-  withNavbar: true,
+  withNavbar: false,
   withSidebar: false,
   withLoader: false,
   WithNetworkHandler: true,

@@ -1,56 +1,28 @@
-import Main from 'views'
-import Agreement from 'views/agreement'
-import AdminSchedule from 'views/classes/AdminSchedule'
-import Classes from 'views/classes'
 import Exams from 'views/exams'
-import Evaluations from 'views/evaluations'
-import Exchange from 'views/exchange'
-import Error402 from 'views/errors/402'
-import Verification from 'views/mails/Verification'
 import SignUp from 'views/authentication/SignUp'
 import Dashboard from 'views/dashboard/Dashboard'
-import FetchError from 'views/errors/FetchError'
-import Exercise from 'views/exams/Exercise'
-import Settings from 'views/settings/Settings'
-import Feedback from 'views/feedback'
 import Login from 'views/authentication/Login'
-import Logout from 'views/authentication/Logout'
 import ResetPassword from 'views/authentication/ResetPassword'
-import Meetings from 'views/meetings'
-import SettingsPassword from 'views/settings/SettingsPassword'
-import Courses from 'views/courses'
-import Quality from 'views/quality'
 import Plans from 'views/plans'
-import Gifts from 'views/gifts'
-import Models from 'views/models'
-import LatestEvaluation from 'views/latest'
-import Testing from 'views/testing'
-import Demo from 'views/courses/Demo'
 import Unit1View from 'views/courses/Unit1View'
 import ConnectedUnitView from 'views/courses/ConnectedUnitView'
 import CoursesOverview from 'views/courses/CoursesOverview'
 import GrammarView from 'views/grammar'
 import VocabularyView from 'views/vocabulary'
 import ListeningView from 'views/listening'
-import ReadingView   from 'views/reading'
-import ReadingBView  from 'views/reading-b'
-import ReadingCView  from 'views/reading-c'
-import SpeakingView  from 'views/speaking'
+import ReadingView from 'views/reading'
+import ReadingBView from 'views/reading-b'
+import ReadingCView from 'views/reading-c'
+import SpeakingView from 'views/speaking'
 import SpeakingCView from 'views/speaking-c'
-import WritingView   from 'views/writing'
+import WritingView from 'views/writing'
 
 import PATH from 'utils/path'
-import addParameters from './utils'
-import NotificationsView from 'views/notifications'
-import Stats from 'views/stats'
-
 const defaultRouterConfig = {
   disableNavigationTour: false,
   injectModelsBeforeRender: false,
   exact: true
 }
-
-const defaultParams = ['id']
 
 /**
  * @typedef {Object} RouteParameters
@@ -149,15 +121,14 @@ export const router = {
         component: ConnectedUnitView,
         path: PATH.CONNECTED_UNIT,
         ...defaultRouterConfig
-      }
-    ],
-    private: [
+      },
       {
         component: Plans,
         path: '/plans',
         ...defaultRouterConfig
       }
     ],
+    private: [],
     development: []
   }
 }

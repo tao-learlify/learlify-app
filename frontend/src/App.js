@@ -28,10 +28,17 @@ const App = () => {
   useEffect(() => {
     if (user.isLoggedIn) {
       dispatch(fetchModelsThunk()).then(action => {
+        console.log('[App] fetchModelsThunk result:', action)
+        console.log('[App] user.profile.model:', user.profile?.model)
         if (user.profile.model) {
           dispatch(selectModel(user.profile.model))
         } else if (action?.payload?.response?.length > 0) {
           dispatch(selectModel(action.payload.response[0]))
+        } else {
+          console.warn(
+            '[App] No model available — model stays null. Backend running?',
+            action?.payload
+          )
         }
       })
     }
