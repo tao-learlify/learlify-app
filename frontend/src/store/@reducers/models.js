@@ -53,9 +53,11 @@ const models = createSlice({
     [fetchModelsThunk.pending]: fetchModelsPendingController,
     [fetchModelsThunk.rejected]: fetchModelsRejectedController,
     [patchModelThunk.fulfilled]: (state) => {
-      state.loading = false
+      state.models.loading = false
     },
-    [patchModelThunk.rejected]: fetchModelsRejectedController,
+    [patchModelThunk.rejected]: (state) => {
+      state.models.loading = false
+    },
     [patchModelThunk.pending]: fetchModelsPendingController
 
   }

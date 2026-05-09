@@ -21,6 +21,7 @@ import { activeSubscriptionSelector } from 'store/@selectors/subscriptions'
 import { fetchSubscriptionsThunk } from 'store/@thunks/subscriptions'
 
 import { Button } from 'components/ui/Button'
+import { PracticeModelBadge } from 'components/ui'
 
 import PATH from 'utils/path'
 import brandLogo from 'assets/illustrations/brand/logo.svg'
@@ -140,6 +141,7 @@ const SidebarNav = memo(function SidebarNav({ className }) {
             />
           </div>
           <p className={styles.profileName}>{user?.profile?.firstName}</p>
+          {model && <PracticeModelBadge model={model} />}
           {activeSubscription ? (
             <>
               <span className={styles.proBadge}>

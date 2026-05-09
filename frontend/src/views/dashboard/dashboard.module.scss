@@ -60,6 +60,13 @@
   }
 }
 
+/* ── Practice model selector row ────────────────────────────────────────────── */
+.modelSelectorRow {
+  display: flex;
+  align-items: center;
+  margin-top: calc(var(--space-8) * -1 + var(--space-2)); /* pull up closer to header */
+}
+
 /* ── Hero grid: secondary support row — compact to not compete with path ─────── */
 .heroGrid {
   display: grid;

@@ -16,6 +16,7 @@ const { getOne } = new UsersService() as unknown as {
     firstName: string
     lastName: string
     role: string
+    isVerified: boolean
     googleId?: string
     facebookId?: string
     stripeCustomerId?: string
@@ -55,6 +56,7 @@ const JsonWebTokenGuard = new Strategy(
           lastName: user.lastName,
           role: user.role,
           id: user.id,
+          isVerified: user.isVerified,
           googleId: user.googleId,
           facebookId: user.facebookId,
           stripeCustomerId: user.stripeCustomerId,

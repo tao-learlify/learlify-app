@@ -157,11 +157,8 @@ function useLearningPathWithSchema(exams = []) {
   const [schemaLoading, setSchemaLoading] = useState(true)
 
   // ── Step 1: Ensure courses are loaded ──────────────
+  const prevModelNameRef = useRef(null)
   useEffect(() => {
-    // Don't fetch if already dispatched, already have data, or currently loading
-    if (fetchDispatchedRef.current || coursesData.length > 0 || coursesLoading)
-      return
-
     // Don't fetch if model is not ready or doesn't have valid name
     const modelName = model?.name || model?.model
     if (
@@ -171,9 +168,19 @@ function useLearningPathWithSchema(exams = []) {
     )
       return
 
+    // Reset fetch guard when model changes so IELTS courses are fetched
+    // after an APTIS session (and vice-versa)
+    if (prevModelNameRef.current !== null && prevModelNameRef.current !== modelName) {
+      fetchDispatchedRef.current = false
+    }
+    prevModelNameRef.current = modelName
+
+    // Don't fetch if already dispatched for this model or currently loading
+    if (fetchDispatchedRef.current || coursesLoading) return
+
     fetchDispatchedRef.current = true
     dispatch(fetchCoursesThunk({ model: modelName, demo: demo || false }))
-  }, [coursesData.length, coursesLoading])
+  }, [coursesLoading, model])
 
   // ── Step 2: Load schema units once ───────────────────
   useEffect(() => {
