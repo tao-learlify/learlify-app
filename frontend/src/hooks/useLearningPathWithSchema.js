@@ -162,14 +162,16 @@ function useLearningPathWithSchema(exams = []) {
     if (schemaLoadingRef.current || schemaUnitsRef.current !== null) return
 
     schemaLoadingRef.current = true
+    console.log('[useLearningPath] loading schema units...')
     loadAllSchemaUnits()
       .then(units => {
+        console.log('[useLearningPath] schema units loaded:', units.length)
         schemaUnitsRef.current = units
         setSchemaUnits(units)
         setSchemaLoading(false)
       })
       .catch(error => {
-        console.error('Failed to load schema units:', error)
+        console.error('[useLearningPath] Failed to load schema units:', error)
         schemaUnitsRef.current = []
         setSchemaUnits([])
         setSchemaLoading(false)
@@ -272,6 +274,7 @@ function useLearningPathWithSchema(exams = []) {
     return { units: builtUnits, completedSections: completed }
   }, [schemaUnits, adaptedData, currentSectionIndex, exams, unlockedUnits])
 
+  console.log('[useLearningPath] state →', { coursesLoading, schemaLoading, advanceLoading: advance.loading, schemaUnitsCount: schemaUnits.length, coursesCount: coursesData.length })
   return {
     units,
     courseTitle,

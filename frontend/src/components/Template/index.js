@@ -119,7 +119,7 @@ const Template = ({
 
 Template.defaultProps = {
   withSocket: true,
-  withNavbar: true,
+  withNavbar: false,
   withSidebar: false,
   withLoader: false,
   WithNetworkHandler: true,

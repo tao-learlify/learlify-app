@@ -18,7 +18,7 @@ import FallbackMode from 'components/FallbackMode'
 const withVerification = Component => props => {
   const user = useAuthProvider()
 
-  return user.profile.isVerified ? <Component {...props} /> : <Checkpoint />
+  return user.profile?.isVerified ? <Component {...props} /> : <Checkpoint />
 }
 
 /**

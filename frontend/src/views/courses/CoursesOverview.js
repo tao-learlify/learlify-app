@@ -58,7 +58,7 @@ const CoursesOverview = () => {
 
   if (error) {
     return (
-      <Template withNavbar>
+      <Template>
         <div className={styles.container}>
           <div className={styles.error}>
             <h2>Error Loading Courses</h2>
@@ -73,7 +73,7 @@ const CoursesOverview = () => {
   }
 
   return (
-    <Template withNavbar withLoader={loading}>
+    <Template withLoader={loading}>
       <div className={styles.container}>
         {/* Header */}
         <header className={styles.header}>

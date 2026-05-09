@@ -76,7 +76,7 @@ const Plans = () => {
 
   return (
     <>
-      <Template withLoader={pricing.loading} view>
+      <Template view>
         <PricingHero />
 
         <BillingCycleToggle

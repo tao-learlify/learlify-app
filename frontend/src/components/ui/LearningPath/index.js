@@ -357,7 +357,9 @@ const LearningPath = memo(function LearningPath({
   streak,
   totalXP,
   showHeader = true,
+  loading = false,
   onUnitClick,
+  onLockedUnitClick,
   className,
 }) {
   const completedCount = useMemo(
@@ -374,6 +376,28 @@ const LearningPath = memo(function LearningPath({
 
   const nodeItems = items.filter(it => it.type === 'node')
   const milestoneItems = items.filter(it => it.type === 'milestone')
+
+  if (loading) {
+    return (
+      <div className={clsx(styles.root, className)}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 16, padding: '16px 0' }}>
+          {Array.from({ length: 5 }).map((_, i) => (
+            <div
+              key={i}
+              style={{
+                height: 64,
+                borderRadius: 16,
+                background: 'linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%)',
+                backgroundSize: '200% 100%',
+                animation: 'shimmer 1.5s infinite',
+                opacity: 1 - i * 0.15,
+              }}
+            />
+          ))}
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className={clsx(styles.root, className)}>
