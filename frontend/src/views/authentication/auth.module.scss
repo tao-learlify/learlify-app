@@ -311,3 +311,10 @@
 .passwordHintNoMatch {
   color: var(--color-danger);
 }
+
+/* ── Social CTA gap (between Google and Telegram buttons) ──────────────────── */
+.socialCtas {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}

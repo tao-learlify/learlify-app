@@ -13,7 +13,8 @@ export const CorsMiddleware = {
     'http://localhost:3000',
     'http://localhost:3100',
     'https://aptisgo.b1b2.es',
-    'https://b1b2.online'
+    'https://b1b2.online',
+    'https://mauve-evil-police.ngrok-free.dev'
   ],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Accept-Language', 'Authorization']

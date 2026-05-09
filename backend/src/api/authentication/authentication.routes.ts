@@ -46,6 +46,12 @@ export class AuthenticationRouter {
       Middleware.secure(this.controller.facebookLogin)
     )
 
+    this.auth.post(
+      '/social/telegram',
+      [authLimiter, ...pipe.telegramLogin, Middleware.usePipe, Middleware.LanguageGuard],
+      Middleware.secure(this.controller.telegramLogin)
+    )
+
     this.auth.put(
       '/verify',
       [...pipe.verifiy, Middleware.usePipe],
