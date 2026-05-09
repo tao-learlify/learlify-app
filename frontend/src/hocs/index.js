@@ -50,7 +50,7 @@ const withAdmin = Component => props => {
 /**
  * @description
  * Until models are load, this component wraps in a conditional.
- * @param {React.Component} Compoonent 
+ * @param {React.Component} Compoonent
  * @returns {React.Component}
  */
 const withModels = Compoonent => props => {

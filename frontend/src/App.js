@@ -35,7 +35,10 @@ const App = () => {
         } else if (action?.payload?.response?.length > 0) {
           dispatch(selectModel(action.payload.response[0]))
         } else {
-          console.warn('[App] No model available — model stays null. Backend running?', action?.payload)
+          console.warn(
+            '[App] No model available — model stays null. Backend running?',
+            action?.payload
+          )
         }
       })
     }

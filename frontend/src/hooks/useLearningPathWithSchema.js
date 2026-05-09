@@ -1,14 +1,14 @@
 /**
  * useLearningPathWithSchema
- * 
+ *
  * Combines course progress data with schema v2 unit definitions to create
  * a rich learning path visualization.
- * 
+ *
  * Maps:
  *   - Section indices from Redux advance → Schema unitOrder (1-15)
  *   - Progress data (xp, completed, lastAccessed) → Unit metadata
  *   - Exam challenges from exams array
- * 
+ *
  * Returns units with:
  *   - title: "Unit 1 — Daily Routines" (from schema)
  *   - subtitle: "Talking about habits..."
@@ -47,8 +47,18 @@ async function loadAllSchemaUnits() {
 /**
  * Build learning path units combining schema + progress
  */
-function buildLearningPathWithSchema(advanceSections, currentSectionIdx, schemaUnits, exams = [], unlockedUnits = []) {
-  if (!advanceSections || Object.keys(advanceSections).length === 0 || schemaUnits.length === 0) {
+function buildLearningPathWithSchema(
+  advanceSections,
+  currentSectionIdx,
+  schemaUnits,
+  exams = [],
+  unlockedUnits = []
+) {
+  if (
+    !advanceSections ||
+    Object.keys(advanceSections).length === 0 ||
+    schemaUnits.length === 0
+  ) {
     return []
   }
 
@@ -72,7 +82,8 @@ function buildLearningPathWithSchema(advanceSections, currentSectionIdx, schemaU
     // Determine state using unlockedUnits from backend
     // If unit is not in unlockedUnits → locked (paywall)
     // Otherwise use progress to determine completed/current
-    const isUnlocked = unlockedUnits.length === 0 || unlockedUnits.includes(sectionKey)
+    const isUnlocked =
+      unlockedUnits.length === 0 || unlockedUnits.includes(sectionKey)
     let state = 'locked'
     if (isUnlocked) {
       if (sectionKey < currentSectionIdx) state = 'completed'
@@ -136,7 +147,8 @@ function useLearningPathWithSchema(exams = []) {
   const { data: coursesData, loading: coursesLoading } = useCourses()
   const advance = useAdvance()
   const unlockedUnits = useSelector(unlockedUnitsSelector)
-  const { model } = useModels(); const { demo } = useAuthProvider()
+  const { model } = useModels()
+  const { demo } = useAuthProvider()
 
   const fetchDispatchedRef = useRef(false)
   const schemaUnitsRef = useRef(null)
@@ -147,12 +159,18 @@ function useLearningPathWithSchema(exams = []) {
   // ── Step 1: Ensure courses are loaded ──────────────
   useEffect(() => {
     // Don't fetch if already dispatched, already have data, or currently loading
-    if (fetchDispatchedRef.current || coursesData.length > 0 || coursesLoading) return
-    
+    if (fetchDispatchedRef.current || coursesData.length > 0 || coursesLoading)
+      return
+
     // Don't fetch if model is not ready or doesn't have valid name
     const modelName = model?.name || model?.model
-    if (!modelName || typeof modelName !== 'string' || modelName.startsWith('[object')) return
-    
+    if (
+      !modelName ||
+      typeof modelName !== 'string' ||
+      modelName.startsWith('[object')
+    )
+      return
+
     fetchDispatchedRef.current = true
     dispatch(fetchCoursesThunk({ model: modelName, demo: demo || false }))
   }, [coursesData.length, coursesLoading])
@@ -185,7 +203,7 @@ function useLearningPathWithSchema(exams = []) {
   const courseId = courseData?.id || null
   const courseTitle = courseData?.name || 'English Path'
   const totalSections = courseData?.totalSections || 15
-  
+
   // ✨ Adapt API structure to expected format
   // API returns: content = { "1": { completed, general, last }, ... }
   // Code expects: currentSectionIndex (number), sections (object)
@@ -236,12 +254,13 @@ function useLearningPathWithSchema(exams = []) {
     }
 
     const advanceSections = adaptedData.sections || {}
-    
+
     // If no progress data, show all 15 units with first as current
     if (Object.keys(advanceSections).length === 0) {
       const defaultUnits = schemaUnits.map((schemaUnit, index) => {
         const unitNumber = index + 1
-        const isUnlocked = unlockedUnits.length === 0 || unlockedUnits.includes(unitNumber)
+        const isUnlocked =
+          unlockedUnits.length === 0 || unlockedUnits.includes(unitNumber)
         return {
           id: unitNumber,
           unitOrder: unitNumber,
@@ -251,7 +270,11 @@ function useLearningPathWithSchema(exams = []) {
           difficulty: schemaUnit.difficulty,
           theme: schemaUnit.theme,
           estimatedDurationMin: schemaUnit.estimatedDurationMin,
-          state: !isUnlocked ? 'locked' : unitNumber === 1 ? 'current' : 'available',
+          state: !isUnlocked
+            ? 'locked'
+            : unitNumber === 1
+              ? 'current'
+              : 'available',
           xp: 0,
           completed: false,
           lastAccessedAt: null,
@@ -274,7 +297,13 @@ function useLearningPathWithSchema(exams = []) {
     return { units: builtUnits, completedSections: completed }
   }, [schemaUnits, adaptedData, currentSectionIndex, exams, unlockedUnits])
 
-  console.log('[useLearningPath] state →', { coursesLoading, schemaLoading, advanceLoading: advance.loading, schemaUnitsCount: schemaUnits.length, coursesCount: coursesData.length })
+  console.log('[useLearningPath] state →', {
+    coursesLoading,
+    schemaLoading,
+    advanceLoading: advance.loading,
+    schemaUnitsCount: schemaUnits.length,
+    coursesCount: coursesData.length
+  })
   return {
     units,
     courseTitle,
