@@ -42,10 +42,26 @@ export const componentsEN = {
     action: 'Make payment',
     content: 'See details',
     details: 'Do you wish to buy the package {{plan}}?',
-    invoice: 'Generating receipt..',
+    invoice: 'Processing your payment…',
     placeholder: 'Insert your credit card details',
     processing: 'Payment in process {{model}}',
-    subscribe: 'Subscribe to see your results'
+    subscribe: 'Subscribe to see your results',
+    // Redesigned premium modal
+    proTitle: 'Unlock Aptis Pro ✨',
+    proSubtitle:
+      'Join thousands of learners who passed Aptis with our complete preparation suite.',
+    benefitsLabel: 'What you get with Aptis Pro',
+    benefit_speaking: 'AI + human speaking review',
+    benefit_writing: 'Expert writing feedback',
+    benefit_simulations: 'Full Aptis simulations',
+    benefit_progress: 'Smart progress tracking',
+    benefit_unlimited: 'Unlimited practice sessions',
+    cardLabel: 'Card details',
+    ctaLabel: 'Unlock Aptis Pro ✨',
+    notNow: 'Not now',
+    secure: 'Secure payment',
+    cancelAnytime: 'Cancel anytime',
+    instantAccess: 'Instant access after purchase'
   },
   chat: {
     isWriting: '{user} is writing..',

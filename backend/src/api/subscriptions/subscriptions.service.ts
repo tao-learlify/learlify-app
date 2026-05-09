@@ -3,13 +3,16 @@ import PlanPrice from 'api/plan-prices/plan-prices.model'
 import Package from 'api/packages/packages.model'
 import User from 'api/users/users.model'
 import { StripeService } from 'api/stripe/stripe.service'
+import { ConflictException } from 'exceptions'
 import { Bind } from 'decorators'
 import { Logger } from 'api/logger'
 import moment from 'moment-timezone'
 import type {
   CreateSubscriptionInput,
   CancelSubscriptionInput,
-  SubscriptionRow
+  ReactivateSubscriptionInput,
+  SubscriptionRow,
+  MySubscriptionResult
 } from './subscriptions.types'
 import type { BillingCycle } from 'metadata/plans'
 
@@ -101,6 +104,25 @@ class SubscriptionsService {
       throw new Error('Plan not found')
     }
 
+    // Prevent duplicate active purchase for the same plan
+    const [activeSub, activePkg] = await Promise.all([
+      Subscription.query().findOne({
+        user_id: input.userId,
+        plan_id: plan.id,
+        status: 'active'
+      }),
+      Package.query().findOne({
+        userId: input.userId,
+        planId: plan.id,
+        isActive: true
+      })
+    ])
+    if (activeSub || activePkg) {
+      throw new ConflictException(
+        'You already have an active package for this plan'
+      )
+    }
+
     const user = ((await User.query().findById(input.userId)) as unknown) as {
       id: number
       email: string
@@ -168,9 +190,9 @@ class SubscriptionsService {
         plan_price_id: planPrice.id,
         status: 'active',
         billing_cycle: planPrice.billing_cycle,
-        started_at: now.toISOString(),
-        current_period_start: periodStart.toISOString(),
-        current_period_end: periodEnd.toISOString(),
+        started_at: now.format('YYYY-MM-DD HH:mm:ss'),
+        current_period_start: periodStart.format('YYYY-MM-DD HH:mm:ss'),
+        current_period_end: periodEnd.format('YYYY-MM-DD HH:mm:ss'),
         cancel_at_period_end: false,
         stripe_charge_id: intent.id,
         stripe_customer_id: stripeCustomerId,
@@ -218,7 +240,7 @@ class SubscriptionsService {
     if (input.immediately) {
       await Subscription.query().patchAndFetchById(subscription.id, {
         status: 'canceled',
-        canceled_at: moment.utc().toISOString()
+        canceled_at: moment.utc().format('YYYY-MM-DD HH:mm:ss')
       })
 
       await Package.query()
@@ -242,7 +264,7 @@ class SubscriptionsService {
 
   @Bind
   async expireOverdue(): Promise<number> {
-    const now = moment.utc().toISOString()
+    const now = moment.utc().format('YYYY-MM-DD HH:mm:ss')
 
     const rows = await Subscription.query()
       .where('status', 'active')
@@ -261,6 +283,127 @@ class SubscriptionsService {
 
     this.logger.info('subscriptions.expireOverdue', { expired: rows.length })
     return rows.length
+  }
+
+  @Bind
+  async getMine(userId: number): Promise<MySubscriptionResult | null> {
+    const subscription = ((await Subscription.query()
+      .where({ user_id: userId, status: 'active' })
+      .withGraphFetched({ plan: true, price: true })
+      .orderBy('created_at', 'desc')
+      .first()) as unknown) as SubscriptionRow | undefined
+
+    if (!subscription) return null
+
+    const pkg = ((await Package.query().findOne({
+      userId,
+      stripeChargeId: subscription.stripe_charge_id,
+      isActive: true
+    })) as unknown) as
+      | {
+          isActive: boolean
+          expirationDate: string
+          speakings: number
+          writings: number
+          classes: number
+        }
+      | undefined
+
+    const cancelAtEnd = Boolean(subscription.cancel_at_period_end)
+    const canCancel = !cancelAtEnd
+    const canReactivate = cancelAtEnd
+
+    const periodEnd = subscription.current_period_end
+    const dateLabel = periodEnd
+      ? new Date(periodEnd).toLocaleDateString('es-ES', {
+          day: 'numeric',
+          month: 'long',
+          year: 'numeric'
+        })
+      : ''
+
+    const description = cancelAtEnd
+      ? `Tu plan finalizará el ${dateLabel}`
+      : `Tu plan se renovará el ${dateLabel}`
+
+    return {
+      subscription: {
+        ...subscription,
+        canCancel,
+        canReactivate,
+        canUpdatePaymentMethod: true
+      },
+      package: pkg
+        ? {
+            isActive: pkg.isActive,
+            expirationDate: pkg.expirationDate,
+            credits: {
+              speaking: pkg.speakings ?? 0,
+              writing: pkg.writings ?? 0,
+              classes: pkg.classes ?? 0
+            }
+          }
+        : null,
+      ui: {
+        primaryLabel: 'Plan actual',
+        description,
+        showUpgrade: false,
+        purchaseDisabled: true
+      }
+    }
+  }
+
+  @Bind
+  async cancelAtPeriodEnd(
+    subscriptionId: number,
+    userId: number
+  ): Promise<SubscriptionRow> {
+    const subscription = await Subscription.query().findOne({
+      id: subscriptionId,
+      user_id: userId,
+      status: 'active'
+    })
+
+    if (!subscription) {
+      throw new Error('Active subscription not found')
+    }
+
+    await Subscription.query().patchAndFetchById(subscriptionId, {
+      cancel_at_period_end: true
+    })
+
+    return (Subscription.query()
+      .findById(subscriptionId)
+      .withGraphFetched({ plan: true, price: true }) as unknown) as Promise<
+      SubscriptionRow
+    >
+  }
+
+  @Bind
+  async reactivate(
+    input: ReactivateSubscriptionInput
+  ): Promise<SubscriptionRow> {
+    const subscription = await Subscription.query().findOne({
+      id: input.subscriptionId,
+      user_id: input.userId,
+      status: 'active',
+      cancel_at_period_end: true
+    })
+
+    if (!subscription) {
+      throw new Error('No cancellable subscription found to reactivate')
+    }
+
+    await Subscription.query().patchAndFetchById(input.subscriptionId, {
+      cancel_at_period_end: false,
+      canceled_at: null
+    })
+
+    return (Subscription.query()
+      .findById(input.subscriptionId)
+      .withGraphFetched({ plan: true, price: true }) as unknown) as Promise<
+      SubscriptionRow
+    >
   }
 
   @Bind

@@ -1,4 +1,4 @@
-import httpClient, { GET, POST, DELETE } from 'providers/http'
+import httpClient, { GET, POST, DELETE, PATCH } from 'providers/http'
 
 // ---------------------------------------------------------------------------
 // Adapters — snake_case (backend) → camelCase (frontend)
@@ -108,6 +108,47 @@ export function cancelSubscription(subscriptionId, dto) {
     body: {
       immediately: Boolean(dto.immediately)
     },
+    requiresAuth: true
+  })
+}
+
+/**
+ * Get the authenticated user's active subscription with plan management data.
+ * @returns {Promise<{ response: import('@types/subscriptions').MySubscription | null }>}
+ */
+export function getMySubscription() {
+  return httpClient({
+    endpoint: '/api/v1/subscriptions/me',
+    method: GET,
+    requiresAuth: true
+  })
+}
+
+/**
+ * Cancel subscription at period end (keeps access until currentPeriodEnd).
+ * @param {number} subscriptionId
+ * @returns {Promise<{ response: import('@types/subscriptions').Subscription }>}
+ */
+export function patchCancelAtPeriodEnd(subscriptionId) {
+  return httpClient({
+    endpoint: '/api/v1/subscriptions/me/cancel',
+    method: PATCH,
+    body: { subscriptionId },
+    requiresAuth: true
+  })
+}
+
+/**
+ * Reactivate a subscription that was set to cancel at period end.
+ * Does NOT charge immediately — re-enables auto-renewal.
+ * @param {number} subscriptionId
+ * @returns {Promise<{ response: import('@types/subscriptions').Subscription }>}
+ */
+export function patchReactivate(subscriptionId) {
+  return httpClient({
+    endpoint: '/api/v1/subscriptions/me/reactivate',
+    method: PATCH,
+    body: { subscriptionId },
     requiresAuth: true
   })
 }

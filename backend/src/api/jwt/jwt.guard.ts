@@ -9,18 +9,24 @@ import { isTokenBlocked } from './jwt.blocklist'
 type JwtUserPayload = JwtPayload & { id: number }
 
 const { provider } = new ConfigService()
-const { getOne } = new UsersService() as unknown as {
-  getOne: (opts: { id: number }) => Promise<{
+const { getOne } = (new UsersService() as unknown) as {
+  getOne: (opts: {
     id: number
-    email: string
-    firstName: string
-    lastName: string
-    role: string
-    googleId?: string
-    facebookId?: string
-    stripeCustomerId?: string
-    lastLogin?: string
-  } | undefined>
+  }) => Promise<
+    | {
+        id: number
+        email: string
+        firstName: string
+        lastName: string
+        role: string
+        isVerified: boolean
+        googleId?: string
+        facebookId?: string
+        stripeCustomerId?: string
+        lastLogin?: string
+      }
+    | undefined
+  >
 }
 
 const extractor = ExtractJwt.fromAuthHeaderAsBearerToken()
@@ -55,6 +61,7 @@ const JsonWebTokenGuard = new Strategy(
           lastName: user.lastName,
           role: user.role,
           id: user.id,
+          isVerified: user.isVerified,
           googleId: user.googleId,
           facebookId: user.facebookId,
           stripeCustomerId: user.stripeCustomerId,

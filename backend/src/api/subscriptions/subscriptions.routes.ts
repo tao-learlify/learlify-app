@@ -45,6 +45,24 @@ class SubscriptionsRouter {
       Middleware.secure(this.controller.create)
     )
 
+    this.subscriptions.get(
+      '/me',
+      [Middleware.authenticate] as RequestHandler[],
+      Middleware.secure(this.controller.getMine)
+    )
+
+    this.subscriptions.patch(
+      '/me/cancel',
+      [Middleware.authenticate, Middleware.noDemoReferrer] as RequestHandler[],
+      Middleware.secure(this.controller.cancelAtPeriodEnd)
+    )
+
+    this.subscriptions.patch(
+      '/me/reactivate',
+      [Middleware.authenticate, Middleware.noDemoReferrer] as RequestHandler[],
+      Middleware.secure(this.controller.reactivateSubscription)
+    )
+
     this.subscriptions.delete(
       '/:id',
       [

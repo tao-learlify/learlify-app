@@ -45,3 +45,30 @@ export const cancelSubscriptionThunk = createAsyncThunk(
     }
   }
 )
+
+export const cancelAtPeriodEndThunk = createAsyncThunk(
+  'subscriptions/cancelAtPeriodEnd',
+  async ({ subscriptionId }, { dispatch, rejectWithValue }) => {
+    try {
+      const result =
+        await api.subscriptions.patchCancelAtPeriodEnd(subscriptionId)
+      dispatch(fetchSubscriptionsThunk())
+      return { response: adaptSubscription(result.response) }
+    } catch (err) {
+      return rejectWithValue(err)
+    }
+  }
+)
+
+export const reactivateSubscriptionThunk = createAsyncThunk(
+  'subscriptions/reactivate',
+  async ({ subscriptionId }, { dispatch, rejectWithValue }) => {
+    try {
+      const result = await api.subscriptions.patchReactivate(subscriptionId)
+      dispatch(fetchSubscriptionsThunk())
+      return { response: adaptSubscription(result.response) }
+    } catch (err) {
+      return rejectWithValue(err)
+    }
+  }
+)

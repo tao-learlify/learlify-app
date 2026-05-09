@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { useTranslation } from 'react-i18next'
 import { useHistory } from 'react-router-dom'
 import { ToastsStore } from 'react-toasts'
@@ -13,6 +13,8 @@ import Template from 'components/Template'
 import Payment from 'components/Payment'
 
 import { select } from 'store/@reducers/plans'
+import { fetchSubscriptionsThunk } from 'store/@thunks/subscriptions'
+import { activeSubscriptionSelector } from 'store/@selectors/subscriptions'
 
 import PATH from 'utils/path'
 
@@ -33,6 +35,12 @@ const Plans = () => {
   const { t } = useTranslation()
 
   const pricing = usePricing({ preload: true })
+
+  const activeSubscription = useSelector(activeSubscriptionSelector)
+
+  useEffect(() => {
+    dispatch(fetchSubscriptionsThunk())
+  }, [dispatch])
 
   const [checkout, setCheckout] = useToggler()
 
@@ -93,6 +101,7 @@ const Plans = () => {
               popular={isPopular(plan)}
               onSelect={handleSelectPlan}
               disabled={checkout}
+              activeSubscription={activeSubscription}
             />
           ))}
         </div>

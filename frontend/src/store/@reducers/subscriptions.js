@@ -2,7 +2,9 @@ import { createSlice } from '@reduxjs/toolkit'
 import {
   fetchSubscriptionsThunk,
   createSubscriptionThunk,
-  cancelSubscriptionThunk
+  cancelSubscriptionThunk,
+  cancelAtPeriodEndThunk,
+  reactivateSubscriptionThunk
 } from 'store/@thunks/subscriptions'
 import {
   fetchSubscriptionsPendingController,
@@ -13,7 +15,13 @@ import {
   createSubscriptionRejectedController,
   cancelSubscriptionPendingController,
   cancelSubscriptionFulfilledController,
-  cancelSubscriptionRejectedController
+  cancelSubscriptionRejectedController,
+  cancelAtPeriodEndPendingController,
+  cancelAtPeriodEndFulfilledController,
+  cancelAtPeriodEndRejectedController,
+  reactivatePendingController,
+  reactivateFulfilledController,
+  reactivateRejectedController
 } from 'store/@controllers/subscriptions'
 
 /**
@@ -68,7 +76,15 @@ const subscriptions = createSlice({
 
     [cancelSubscriptionThunk.pending]: cancelSubscriptionPendingController,
     [cancelSubscriptionThunk.fulfilled]: cancelSubscriptionFulfilledController,
-    [cancelSubscriptionThunk.rejected]: cancelSubscriptionRejectedController
+    [cancelSubscriptionThunk.rejected]: cancelSubscriptionRejectedController,
+
+    [cancelAtPeriodEndThunk.pending]: cancelAtPeriodEndPendingController,
+    [cancelAtPeriodEndThunk.fulfilled]: cancelAtPeriodEndFulfilledController,
+    [cancelAtPeriodEndThunk.rejected]: cancelAtPeriodEndRejectedController,
+
+    [reactivateSubscriptionThunk.pending]: reactivatePendingController,
+    [reactivateSubscriptionThunk.fulfilled]: reactivateFulfilledController,
+    [reactivateSubscriptionThunk.rejected]: reactivateRejectedController
   }
 })
 

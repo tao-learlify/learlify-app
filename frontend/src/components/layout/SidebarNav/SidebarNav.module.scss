@@ -14,8 +14,12 @@
 
   scrollbar-width: thin;
   scrollbar-color: var(--color-border-default) transparent;
-  &::-webkit-scrollbar       { width: 4px; }
-  &::-webkit-scrollbar-track { background: transparent; }
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
   &::-webkit-scrollbar-thumb {
     background: var(--color-border-strong);
     border-radius: var(--radius-pill);
@@ -78,7 +82,9 @@
     background: var(--color-bg-muted);
     color: var(--color-text-primary);
 
-    svg { opacity: 1; }
+    svg {
+      opacity: 1;
+    }
   }
 
   &:focus-visible {
@@ -94,7 +100,9 @@
   border: 2px solid rgba(26, 86, 219, 0.2);
   padding: calc(var(--space-3) - 2px) calc(var(--space-4) - 2px);
 
-  svg { opacity: 1; }
+  svg {
+    opacity: 1;
+  }
 
   &:hover {
     background: var(--color-brand-primary-light);
@@ -199,4 +207,39 @@
   font-size: var(--text-xs) !important;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+
+/* ── PRO badge — shown in profile card when user has active subscription ─────── */
+.proBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  margin-top: var(--space-2);
+  padding: var(--space-1) var(--space-3);
+  background: var(--color-brand-accent);
+  color: #5c3a00;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-base);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  box-shadow:
+    0 2px 0 var(--color-brand-accent-dark),
+    0 0 12px rgba(255, 200, 0, 0.35);
+  user-select: none;
+
+  .proBadgeIcon {
+    font-size: 0.85em;
+    line-height: 1;
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.6));
+  }
+}
+
+.proBadgePlan {
+  font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-secondary);
+  text-align: center;
+  margin: 0;
 }

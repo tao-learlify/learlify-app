@@ -27,7 +27,12 @@ import { fetchEvaluationsThunk } from 'store/@thunks/evaluations'
 
 import { buildUnitPath } from 'utils/courseParams'
 import styles from './dashboard.module.scss'
-import { LearningPath, ProgressGraph, ExamQueue } from 'components/ui'
+import {
+  LearningPath,
+  ProgressGraph,
+  ExamQueue,
+  PracticeModelSelector
+} from 'components/ui'
 
 const UserView = () => {
   const history = useHistory()
@@ -110,6 +115,13 @@ const UserView = () => {
             totalXP={user?.profile?.xp}
             className={styles.welcomeHeader}
           />
+
+          {/* ── 1b. Practice model selector row ─────────────────────── */}
+          {model && (
+            <div className={styles.modelSelectorRow}>
+              <PracticeModelSelector />
+            </div>
+          )}
 
           {/* ── 2. Main 2-column layout ───────────────────────────── */}
           <section className={styles.mainSection}>

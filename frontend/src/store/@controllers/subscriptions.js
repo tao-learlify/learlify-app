@@ -79,3 +79,37 @@ export const cancelSubscriptionRejectedController = (state, action) => {
   state.canceling.loading = false
   state.canceling.error = action.payload || true
 }
+
+export const cancelAtPeriodEndPendingController = state => {
+  state.canceling.loading = true
+  state.canceling.error = null
+}
+
+export const cancelAtPeriodEndFulfilledController = (state, action) => {
+  state.canceling.loading = false
+  const updated = action.payload.response
+  const idx = state.subscriptions.data.findIndex(s => s.id === updated.id)
+  if (idx !== -1) state.subscriptions.data[idx] = updated
+}
+
+export const cancelAtPeriodEndRejectedController = (state, action) => {
+  state.canceling.loading = false
+  state.canceling.error = action.payload || true
+}
+
+export const reactivatePendingController = state => {
+  state.canceling.loading = true
+  state.canceling.error = null
+}
+
+export const reactivateFulfilledController = (state, action) => {
+  state.canceling.loading = false
+  const updated = action.payload.response
+  const idx = state.subscriptions.data.findIndex(s => s.id === updated.id)
+  if (idx !== -1) state.subscriptions.data[idx] = updated
+}
+
+export const reactivateRejectedController = (state, action) => {
+  state.canceling.loading = false
+  state.canceling.error = action.payload || true
+}

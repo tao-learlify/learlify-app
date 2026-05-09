@@ -25,6 +25,39 @@ export const plansES = {
     popular: 'Más popular',
     subscribe: 'Suscribirme',
     currentPlan: 'Tu plan actual',
+    planActive: 'Tu plan está activo',
+    renewsOn: 'Tu plan se renovará el {{date}}',
+    endsOn: 'Tu plan finalizará el {{date}}',
+    credits: 'Créditos disponibles',
+    cancelSubscription: 'Cancelar suscripción',
+    reactivateSubscription: 'Reactivar suscripción',
+    reactivatePlan: 'Volver a activar plan',
+    cancelledUntil: 'Cancelado — activo hasta {{date}}',
+    statusBadge: {
+      active: 'Activo',
+      endingSoon: 'Finalizará pronto',
+      expired: 'Expirado'
+    },
+    CANCEL_MODAL: {
+      title: 'Nos da pena verte ir 😔',
+      accessUntil: 'Tu acceso a {{planName}} seguirá activo hasta el {{date}}.',
+      loseAccess:
+        'Después de esa fecha, tu suscripción no se renovará automáticamente y perderás acceso a las funciones premium, revisiones de speaking, revisiones de writing y evaluaciones futuras.',
+      canReactivate:
+        'Puedes reactivar tu suscripción en cualquier momento antes de que finalice el periodo sin volver a pagar.',
+      confirm: 'Confirmar cancelación',
+      keep: 'Mantener mi suscripción',
+      speakingReviews: '{{count}} revisión de speaking',
+      speakingReviews_other: '{{count}} revisiones de speaking',
+      writingReviews: '{{count}} revisión de writing',
+      writingReviews_other: '{{count}} revisiones de writing'
+    },
+    REACTIVATE_MODAL: {
+      title: '¡Bienvenido de vuelta! ✨',
+      body: 'Tu suscripción {{planName}} está programada para finalizar el {{date}}. Reactívala ahora y continúa renovándose automáticamente — sin cargo hoy.',
+      confirm: 'Reactivar suscripción',
+      notNow: 'Ahora no'
+    },
     legalNotice:
       'Las suscripciones se renuevan automáticamente al final de cada período. Puedes cancelar en cualquier momento.'
   },

@@ -24,6 +24,40 @@ export const plansEN = {
     popular: 'Most popular',
     subscribe: 'Get started',
     currentPlan: 'Your current plan',
+    planActive: 'Your plan is active',
+    renewsOn: 'Your plan renews on {{date}}',
+    endsOn: 'Your plan ends on {{date}}',
+    credits: 'Available credits',
+    cancelSubscription: 'Cancel subscription',
+    reactivateSubscription: 'Reactivate subscription',
+    reactivatePlan: 'Reactivate plan',
+    cancelledUntil: 'Cancelled — active until {{date}}',
+    statusBadge: {
+      active: 'Active',
+      endingSoon: 'Ending Soon',
+      expired: 'Expired'
+    },
+    CANCEL_MODAL: {
+      title: "We're sad to see you go 😔",
+      accessUntil:
+        'Your {{planName}} access will remain active until {{date}}.',
+      loseAccess:
+        'After that date, your subscription will not renew automatically and you will lose access to premium features, speaking reviews, writing reviews, and future evaluations.',
+      canReactivate:
+        'You can reactivate your subscription anytime before the end of your billing period without paying again.',
+      confirm: 'Confirm cancellation',
+      keep: 'Keep my subscription',
+      speakingReviews: '{{count}} speaking review',
+      speakingReviews_other: '{{count}} speaking reviews',
+      writingReviews: '{{count}} writing review',
+      writingReviews_other: '{{count}} writing reviews'
+    },
+    REACTIVATE_MODAL: {
+      title: 'Welcome back ✨',
+      body: 'Your {{planName}} subscription is scheduled to end on {{date}}. Reactivate now and continue renewing automatically — no charge today.',
+      confirm: 'Reactivate subscription',
+      notNow: 'Not now'
+    },
     legalNotice:
       'Subscriptions renew automatically at the end of each period. You can cancel at any time.'
   },

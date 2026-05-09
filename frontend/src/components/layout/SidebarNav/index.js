@@ -1,6 +1,7 @@
 import React, { memo } from 'react'
 import { NavLink, useHistory } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { useDispatch, useSelector } from 'react-redux'
 import clsx from 'clsx'
 import {
   House,
@@ -16,7 +17,11 @@ import useAuthProvider from 'hooks/useAuthProvider'
 import useModels from 'hooks/useModels'
 import useNotifications from 'hooks/useNotifications'
 
+import { activeSubscriptionSelector } from 'store/@selectors/subscriptions'
+import { fetchSubscriptionsThunk } from 'store/@thunks/subscriptions'
+
 import { Button } from 'components/ui/Button'
+import { PracticeModelBadge } from 'components/ui'
 
 import PATH from 'utils/path'
 import brandLogo from 'assets/illustrations/brand/logo.svg'
@@ -77,9 +82,15 @@ const NAV_ITEMS = [
 const SidebarNav = memo(function SidebarNav({ className }) {
   const { t } = useTranslation()
   const history = useHistory()
+  const dispatch = useDispatch()
   const user = useAuthProvider()
   const { model } = useModels()
   const { unreads } = useNotifications()
+  const activeSubscription = useSelector(activeSubscriptionSelector)
+
+  React.useEffect(() => {
+    dispatch(fetchSubscriptionsThunk())
+  }, [dispatch])
 
   const avatarSrc = user?.profile?.imageUrl || img?.astronaut
 
@@ -130,15 +141,25 @@ const SidebarNav = memo(function SidebarNav({ className }) {
             />
           </div>
           <p className={styles.profileName}>{user?.profile?.firstName}</p>
-          <Button
-            variant="primary"
-            size="sm"
-            fullWidth
-            className={styles.upgradeBtn}
-            onClick={() => history.push(PATH.PAYMENTS)}
-          >
-            {t('NAVIGATION.upgrade', { defaultValue: 'UPGRADE TO PRO' })}
-          </Button>
+          {model && <PracticeModelBadge model={model} />}
+          {activeSubscription ? (
+            <>
+              <span className={styles.proBadge}>
+                <span className={styles.proBadgeIcon}>⚡</span>
+                {activeSubscription.plan?.name ?? 'Pro'}
+              </span>
+            </>
+          ) : (
+            <Button
+              variant="primary"
+              size="sm"
+              fullWidth
+              className={styles.upgradeBtn}
+              onClick={() => history.push(PATH.PAYMENTS)}
+            >
+              {t('NAVIGATION.upgrade', { defaultValue: 'UPGRADE TO PRO' })}
+            </Button>
+          )}
         </div>
       </div>
     </nav>

@@ -45,10 +45,26 @@ export const componentsES = {
     action: 'Realizar Pago',
     content: 'Ver detalles',
     details: '¿Desea realizar la compra del paquete {{plan}}?',
-    invoice: 'Generando recibo..',
+    invoice: 'Procesando tu pago…',
     placeholder: 'Inserta los datos de tu tarjeta de crédito',
     processing: 'Se está procesando el pago para {{model}}',
-    subscribe: 'Subscribete para ver resultados'
+    subscribe: 'Subscribete para ver resultados',
+    // Modal premium rediseñado
+    proTitle: 'Desbloquea Aptis Pro ✨',
+    proSubtitle:
+      'Únete a miles de estudiantes que aprobaron el Aptis con nuestra suite completa de preparación.',
+    benefitsLabel: 'Lo que obtienes con Aptis Pro',
+    benefit_speaking: 'Revisión oral con IA + humanos',
+    benefit_writing: 'Feedback de redacción experto',
+    benefit_simulations: 'Simulacros completos de Aptis',
+    benefit_progress: 'Seguimiento inteligente de progreso',
+    benefit_unlimited: 'Práctica ilimitada',
+    cardLabel: 'Datos de tarjeta',
+    ctaLabel: 'Desbloquear Aptis Pro ✨',
+    notNow: 'Ahora no',
+    secure: 'Pago seguro',
+    cancelAnytime: 'Cancela cuando quieras',
+    instantAccess: 'Acceso inmediato tras el pago'
   },
   chat: {
     isWriting: '{user} is writing..',
