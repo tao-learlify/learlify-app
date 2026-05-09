@@ -3,12 +3,14 @@ import type { Request, Response } from 'express'
 import Stripe from 'stripe'
 import { Logger } from 'api/logger'
 import db from 'config/db'
+import { SubscriptionsService } from 'api/subscriptions/subscriptions.service'
 
 const router = express.Router()
 
 const logger = Logger.Service
+const subscriptionsService = new SubscriptionsService()
 
-const stripe = new (Stripe as unknown as new (key: string) => Stripe)(
+const stripe = new ((Stripe as unknown) as new (key: string) => Stripe)(
   process.env.STRIPE_API_KEY!
 )
 
@@ -30,12 +32,14 @@ router.post(
     try {
       event = stripe.webhooks.constructEvent(req.body, sig, WEBHOOK_SECRET)
     } catch (err) {
-      logger.error('stripe.webhook.signature', { message: (err as Error).message })
-      return res
-        .status(400)
-        .json({
-          error: `Webhook signature verification failed: ${(err as Error).message}`
-        })
+      logger.error('stripe.webhook.signature', {
+        message: (err as Error).message
+      })
+      return res.status(400).json({
+        error: `Webhook signature verification failed: ${
+          (err as Error).message
+        }`
+      })
     }
 
     let alreadyProcessed
@@ -45,8 +49,12 @@ router.post(
         .where({ event_id: event.id })
         .first()
     } catch (err) {
-      logger.error('stripe.webhook.db.read', { message: (err as Error).message })
-      return res.status(500).json({ error: 'Database error processing webhook' })
+      logger.error('stripe.webhook.db.read', {
+        message: (err as Error).message
+      })
+      return res
+        .status(500)
+        .json({ error: 'Database error processing webhook' })
     }
 
     if (alreadyProcessed) {
@@ -63,17 +71,29 @@ router.post(
       logger.info('stripe.webhook.received', { type: event.type, id: event.id })
 
       switch (event.type) {
-        case 'payment_intent.succeeded':
+        case 'payment_intent.succeeded': {
+          const intent = event.data.object as Stripe.PaymentIntent
           logger.info('stripe.webhook.payment_intent.succeeded', {
-            id: (event.data.object as Stripe.PaymentIntent).id
+            id: intent.id
           })
+          try {
+            await subscriptionsService.activateByChargeId(intent.id)
+          } catch (handlerErr) {
+            logger.error('stripe.webhook.payment_intent.succeeded.handler', {
+              message: (handlerErr as Error).message,
+              intentId: intent.id
+            })
+          }
           break
+        }
 
-        case 'payment_intent.payment_failed':
+        case 'payment_intent.payment_failed': {
+          const intent = event.data.object as Stripe.PaymentIntent
           logger.warn('stripe.webhook.payment_intent.failed', {
-            id: (event.data.object as Stripe.PaymentIntent).id
+            id: intent.id
           })
           break
+        }
 
         case 'customer.subscription.deleted':
           logger.info('stripe.webhook.subscription.deleted', {

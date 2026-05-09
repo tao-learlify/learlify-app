@@ -26,6 +26,7 @@ import Schedules from 'api/schedule/schedule.routes'
 import Stats from 'api/stats/stats.routes'
 import Users from 'api/users/users.routes'
 import Youtube from 'api/youtube/youtube.routes'
+import Subscriptions from 'api/subscriptions/subscriptions.routes'
 
 const controllers = new ApplicationInterfaceService({
   controllers: [
@@ -54,7 +55,8 @@ const controllers = new ApplicationInterfaceService({
     Schedules,
     Stats,
     Users,
-    Youtube
+    Youtube,
+    Subscriptions
   ]
 })
 

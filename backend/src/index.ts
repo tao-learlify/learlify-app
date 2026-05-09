@@ -32,6 +32,7 @@ import ScheduleTasks from 'tasks/schedule.tasks'
 import PackagesTasks from 'tasks/packages.tasks'
 import UsersTasks from 'tasks/users.tasks'
 import NotificationsTasks from 'tasks/notifications.task'
+import SubscriptionsTasks from 'tasks/subscriptions.tasks'
 
 /**
  * Sockets Module.
@@ -118,7 +119,8 @@ const CronScheduler = new Scheduler({
     [UsersTasks, TASKS.users],
     [ScheduleTasks, TASKS.schedule],
     [PackagesTasks, TASKS.packages],
-    [NotificationsTasks, TASKS.notifications]
+    [NotificationsTasks, TASKS.notifications],
+    [SubscriptionsTasks, TASKS.subscriptions]
   ]
 })
 

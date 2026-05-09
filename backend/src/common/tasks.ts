@@ -10,5 +10,6 @@ export const TASKS = {
     // 'deleteInactive',
     'verifyUnverified'
   ],
-  notifications: ['deleteExpired']
+  notifications: ['deleteExpired'],
+  subscriptions: ['expireOverdue']
 }
