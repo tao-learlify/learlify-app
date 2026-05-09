@@ -18,6 +18,7 @@ export const modelsES = {
     cancel: 'Cancelar',
     save: 'Guardar cambios',
     successToast: 'Modelo de práctica actualizado',
-    errorToast: 'No se pudo actualizar el modelo de práctica. Por favor, inténtalo de nuevo.'
+    errorToast:
+      'No se pudo actualizar el modelo de práctica. Por favor, inténtalo de nuevo.'
   }
 }

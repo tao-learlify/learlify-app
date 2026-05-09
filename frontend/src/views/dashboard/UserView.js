@@ -27,7 +27,12 @@ import { fetchEvaluationsThunk } from 'store/@thunks/evaluations'
 
 import { buildUnitPath } from 'utils/courseParams'
 import styles from './dashboard.module.scss'
-import { LearningPath, ProgressGraph, ExamQueue, PracticeModelSelector } from 'components/ui'
+import {
+  LearningPath,
+  ProgressGraph,
+  ExamQueue,
+  PracticeModelSelector
+} from 'components/ui'
 
 const UserView = () => {
   const history = useHistory()

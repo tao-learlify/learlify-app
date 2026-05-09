@@ -70,11 +70,11 @@
   background: var(--color-bg-surface);
   box-shadow: var(--shadow-sm);
 
-  &[data-model="Aptis"] {
+  &[data-model='Aptis'] {
     border-color: var(--color-success);
   }
 
-  &[data-model="IELTS"] {
+  &[data-model='IELTS'] {
     border-color: var(--color-info-text);
   }
 }
@@ -113,7 +113,7 @@
 }
 
 /* ── Dark mode ──────────────────────────────────────────────────────────────── */
-[data-theme="dark"] {
+[data-theme='dark'] {
   .modelOption {
     background: var(--color-bg-muted);
   }

@@ -11,7 +11,9 @@
   padding: 0;
   cursor: pointer;
   border-radius: var(--radius-pill);
-  transition: opacity 0.15s ease, transform 0.15s ease;
+  transition:
+    opacity 0.15s ease,
+    transform 0.15s ease;
 
   &:hover {
     opacity: 0.8;

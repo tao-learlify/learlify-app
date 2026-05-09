@@ -170,7 +170,10 @@ function useLearningPathWithSchema(exams = []) {
 
     // Reset fetch guard when model changes so IELTS courses are fetched
     // after an APTIS session (and vice-versa)
-    if (prevModelNameRef.current !== null && prevModelNameRef.current !== modelName) {
+    if (
+      prevModelNameRef.current !== null &&
+      prevModelNameRef.current !== modelName
+    ) {
       fetchDispatchedRef.current = false
     }
     prevModelNameRef.current = modelName

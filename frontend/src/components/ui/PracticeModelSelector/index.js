@@ -6,7 +6,10 @@ import { unwrapResult } from '@reduxjs/toolkit'
 import { ToastsStore } from 'react-toasts'
 
 import { Modal, Badge } from 'components/ui'
-import { PracticeModelBadge, PRACTICE_MODEL_META } from 'components/ui/PracticeModelBadge'
+import {
+  PracticeModelBadge,
+  PRACTICE_MODEL_META
+} from 'components/ui/PracticeModelBadge'
 import { Button } from 'components/ui/Button'
 import useModels from 'hooks/useModels'
 import useLocalStorage from 'hooks/useLocalStorage'
@@ -27,7 +30,9 @@ import styles from './PracticeModelSelector.module.scss'
  *
  * @param {{ className?: string }} props
  */
-const PracticeModelSelector = memo(function PracticeModelSelector({ className }) {
+const PracticeModelSelector = memo(function PracticeModelSelector({
+  className
+}) {
   const { t } = useTranslation()
   const dispatch = useDispatch()
   const ls = useLocalStorage()
@@ -40,7 +45,12 @@ const PracticeModelSelector = memo(function PracticeModelSelector({ className })
   // Guard: prevent state updates after unmount (triggered when selectModel
   // causes a re-render chain that unmounts this component mid-async).
   const mountedRef = useRef(true)
-  useEffect(() => () => { mountedRef.current = false }, [])
+  useEffect(
+    () => () => {
+      mountedRef.current = false
+    },
+    []
+  )
 
   const open = useCallback(() => {
     setPendingModel(currentModel)
@@ -61,13 +71,17 @@ const PracticeModelSelector = memo(function PracticeModelSelector({ className })
 
     setSaving(true)
     try {
-      const result = await dispatch(patchModelThunk(pendingModel.name)).then(unwrapResult)
+      const result = await dispatch(patchModelThunk(pendingModel.name)).then(
+        unwrapResult
+      )
       // Update token + global Redux state first — these don't touch local state
       ls.setItem(result.response.token)
       dispatch(selectModel(pendingModel))
       // Toast is fire-and-forget, safe outside the mounted guard
       ToastsStore.success(
-        t('MODELS.SELECTOR.successToast', { defaultValue: 'Practice model updated' }),
+        t('MODELS.SELECTOR.successToast', {
+          defaultValue: 'Practice model updated'
+        }),
         TOAST_EXPIRATION
       )
       // selectModel() may re-render the tree and unmount this component;
@@ -78,7 +92,9 @@ const PracticeModelSelector = memo(function PracticeModelSelector({ className })
       }
     } catch {
       ToastsStore.error(
-        t('MODELS.SELECTOR.errorToast', { defaultValue: 'Could not update practice model. Please try again.' }),
+        t('MODELS.SELECTOR.errorToast', {
+          defaultValue: 'Could not update practice model. Please try again.'
+        }),
         TOAST_EXPIRATION
       )
     } finally {
@@ -108,15 +124,12 @@ const PracticeModelSelector = memo(function PracticeModelSelector({ className })
         isOpen={isOpen}
         onClose={close}
         size="sm"
-        title={t('MODELS.SELECTOR.title', { defaultValue: 'Choose your practice model' })}
+        title={t('MODELS.SELECTOR.title', {
+          defaultValue: 'Choose your practice model'
+        })}
         footer={
           <div className={styles.footer}>
-            <Button
-              variant="ghost"
-              size="md"
-              onClick={close}
-              disabled={saving}
-            >
+            <Button variant="ghost" size="md" onClick={close} disabled={saving}>
               {t('MODELS.SELECTOR.cancel', { defaultValue: 'Cancel' })}
             </Button>
             <Button
@@ -139,7 +152,11 @@ const PracticeModelSelector = memo(function PracticeModelSelector({ className })
             })}
           </p>
 
-          <ul className={styles.modelList} role="listbox" aria-label="Practice models">
+          <ul
+            className={styles.modelList}
+            role="listbox"
+            aria-label="Practice models"
+          >
             {availableModels.map(m => {
               const meta = PRACTICE_MODEL_META[m.name]
               if (!meta) return null
@@ -163,7 +180,9 @@ const PracticeModelSelector = memo(function PracticeModelSelector({ className })
                       </Badge>
                       {isCurrent && (
                         <span className={styles.currentTag}>
-                          {t('MODELS.SELECTOR.current', { defaultValue: 'Current' })}
+                          {t('MODELS.SELECTOR.current', {
+                            defaultValue: 'Current'
+                          })}
                         </span>
                       )}
                     </div>

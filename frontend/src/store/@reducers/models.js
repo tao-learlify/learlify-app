@@ -4,14 +4,12 @@ import { fetchModelsThunk, patchModelThunk } from 'store/@thunks/models'
 import {
   fetchModelsFullfiledController,
   fetchModelsPendingController,
-  fetchModelsRejectedController,
+  fetchModelsRejectedController
 } from 'store/@controllers/models'
 
 import { clearErrorController } from 'store/@controllers'
 
-
 import * as localStorageHydrate from 'utils/localStorage'
-
 
 /**
  * @typedef {Object} ModelEntity
@@ -35,15 +33,14 @@ const initialState = {
     data: [],
     loading: false,
     selected: localStorageHydrate.getModelSession()
-  },
+  }
 }
-
 
 const models = createSlice({
   name: 'models',
   initialState,
   reducers: {
-    selectModel (state, action) {
+    selectModel(state, action) {
       state.models.selected = action.payload
     }
   },
@@ -52,19 +49,16 @@ const models = createSlice({
     [fetchModelsThunk.fulfilled]: fetchModelsFullfiledController,
     [fetchModelsThunk.pending]: fetchModelsPendingController,
     [fetchModelsThunk.rejected]: fetchModelsRejectedController,
-    [patchModelThunk.fulfilled]: (state) => {
+    [patchModelThunk.fulfilled]: state => {
       state.models.loading = false
     },
-    [patchModelThunk.rejected]: (state) => {
+    [patchModelThunk.rejected]: state => {
       state.models.loading = false
     },
     [patchModelThunk.pending]: fetchModelsPendingController
-
   }
 })
 
-
 export const { selectModel } = models.actions
-
 
 export default models.reducer
