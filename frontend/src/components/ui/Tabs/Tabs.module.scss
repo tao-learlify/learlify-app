@@ -1,0 +1,59 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   Tabs — Duolingo-style tab switcher.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.tabs {
+  width: 100%;
+}
+
+.tabList {
+  display: flex;
+  gap: var(--space-1);
+  border-bottom: 2px solid var(--color-border-default);
+  margin-bottom: var(--space-6);
+  overflow-x: auto;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.tab {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-3) var(--space-5);
+  border: none;
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-family: var(--font-base);
+  font-size: var(--text-base);
+  font-weight: var(--weight-semibold);
+  cursor: pointer;
+  white-space: nowrap;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  position: relative;
+  transition:
+    color var(--duration-base) var(--easing-default),
+    border-color var(--duration-base) var(--easing-default);
+
+  &:hover {
+    color: var(--color-text-primary);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-border-focus);
+    outline-offset: -2px;
+    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  }
+}
+
+.tabActive {
+  color: var(--color-brand-primary);
+  border-bottom-color: var(--color-brand-primary);
+}
+
+.tabPanel {
+  min-height: 0;
+}

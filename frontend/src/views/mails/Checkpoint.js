@@ -1,5 +1,5 @@
 import React from 'react'
-import { Alert, Col, Row } from 'react-bootstrap'
+import { Alert } from 'components/ui'
 import { useTranslation } from 'react-i18next'
 
 import Template from 'components/Template'
@@ -18,15 +18,13 @@ const Checkpoint = () => {
 
   return (
     <Template withAnimationType="fadeIn">
-      <Row>
-        <Col className="mx-auto" md={12} xl={12} sm={12} xs={12}>
-          <FlexContainer>
-            <Alert variant="warning" className="text-center">
-              {t('MAILS.checkpoint')}
-            </Alert>
-          </FlexContainer>
-        </Col>
-      </Row>
+      <div className="flex justify-center">
+        <div className="w-full max-w-xl mx-auto">
+          <Alert variant="warning" className="text-center">
+            {t('MAILS.checkpoint')}
+          </Alert>
+        </div>
+      </div>
     </Template>
   )
 }

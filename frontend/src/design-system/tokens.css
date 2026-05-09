@@ -1,66 +1,67 @@
 /* ==========================================================================
-   DESIGN TOKENS — Single source of truth for all visual decisions.
-   Consumed by: Tailwind @theme, SCSS modules via var(), styled-components.
+   DUO-DESIGN TOKENS — Full Duolingo design system.
+   Single source of truth. Consumed by Tailwind @theme and var() references.
    ========================================================================== */
 
 :root {
-  /* ── BRAND ──────────────────────────────────────────────────────────────── */
-  --color-brand-primary:        #1a56db;
-  --color-brand-primary-dark:   #1441a8;
-  --color-brand-primary-light:  #eff2ff;
-  --color-brand-accent:         #00b4ae;
-  --color-brand-accent-dark:    #008c88;
-  --color-brand-accent-light:   #e0faf9;
+  /* ── BRAND (Duolingo Green) ──────────────────────────────────────────────── */
+  --color-brand-primary:        #58CC02;
+  --color-brand-primary-dark:   #46A302;
+  --color-brand-primary-light:  #E3F9C8;
+  --color-brand-primary-hover:  #4CB002;
 
-  /* ── ACCENT PALETTE (Duolingo-inspired) ─────────────────────────────────── */
-  /* progress/success green — matches Duolingo #58cc02 */
-  --color-progress:             #58cc02;
-  --color-progress-dark:        #46a302;
-  --color-progress-light:       #e3f9c8;
-  /* reward amber — matches Duolingo gold #ffc800 */
-  --color-accent-amber:         #ffc800;
-  --color-accent-amber-dark:    #cc9f00;
-  --color-accent-amber-text:    #78350f;
-  /* luminous teal accent — #2acef3 */
-  --color-accent-teal:          #2acef3;
-  --color-accent-teal-dark:     #0ab0d8;
-  --color-accent-teal-light:    rgba(42, 206, 243, 0.10);
-  --color-accent-teal-border:   rgba(42, 206, 243, 0.20);
+  /* ── ACCENT (Duolingo Gold) ──────────────────────────────────────────────── */
+  --color-accent:               #FFC800;
+  --color-accent-dark:          #CC9F00;
+  --color-accent-light:         #FFF3C4;
+  /* Aliases used by existing components */
+  --color-brand-accent:         #FFC800;
+  --color-brand-accent-dark:    #CC9F00;
+  --color-brand-accent-light:   #FFF3C4;
 
-  /* ── SURFACES ───────────────────────────────────────────────────────────── */
-  --color-bg-page:              #f7f8fa;
-  --color-bg-surface:           #ffffff;
-  --color-bg-muted:             #f1f3f5;
-  --color-bg-interactive:       #e9ecef;
+  /* ── NAVY (Hero text, secondary brand) ───────────────────────────────────── */
+  --color-navy:                 #042C60;
+  --color-navy-light:           #0E4B8F;
+
+  /* ── SURFACES ────────────────────────────────────────────────────────────── */
+  --color-bg-page:              #FFFFFF;
+  --color-bg-surface:           #FFFFFF;
+  --color-bg-muted:             #F7F7F7;
+  --color-bg-interactive:       #F0F0F0;
   --color-bg-overlay:           rgba(0, 0, 0, 0.50);
 
-  /* ── TEXT ───────────────────────────────────────────────────────────────── */
-  --color-text-primary:         #111827;
-  --color-text-secondary:       #6b7280;
-  --color-text-disabled:        #9ca3af;
-  --color-text-inverse:         #ffffff;
-  --color-text-accent:          #1a56db;
+  /* ── TEXT (Duolingo greys) ───────────────────────────────────────────────── */
+  --color-text-primary:         #4B4B4B;
+  --color-text-body:            #3C3C3C;
+  --color-text-secondary:       #777777;
+  --color-text-disabled:        #AFAFAF;
+  --color-text-inverse:         #FFFFFF;
+  --color-text-link:            #1CB0F6;
 
-  /* ── BORDER ─────────────────────────────────────────────────────────────── */
-  --color-border-default:       #e5e7eb;
-  --color-border-strong:        #d1d5db;
-  --color-border-focus:         #1a56db;
+  /* ── BORDER ──────────────────────────────────────────────────────────────── */
+  --color-border-default:       #E5E5E5;
+  --color-border-strong:        #D1D5DB;
+  --color-border-focus:         #58CC02;
 
-  /* ── FEEDBACK ───────────────────────────────────────────────────────────── */
-  --color-success:              #16a34a;
-  --color-success-bg:           #dcfce7;
-  --color-success-text:         #14532d;
-  --color-warning:              #d97706;
-  --color-warning-bg:           #fef3c7;
-  --color-warning-text:         #78350f;
-  --color-danger:               #dc2626;
-  --color-danger-bg:            #fee2e2;
-  --color-danger-text:          #7f1d1d;
-  --color-info:                 #0ea5e9;
-  --color-info-bg:              #e0f2fe;
-  --color-info-text:            #0c4a6e;
+  /* ── FEEDBACK (Duolingo semantic) ────────────────────────────────────────── */
+  --color-success:              #58A700;
+  --color-success-bg:           #E3F9C8;
+  --color-success-text:         #3D6E00;
+  --color-error:                #EA2B2B;
+  --color-error-bg:             #FDE8E8;
+  --color-error-text:           #B91C1C;
+  --color-warning:              #FFC800;
+  --color-warning-bg:           #FFF8E1;
+  --color-warning-text:         #78350F;
+  /* Info (informational badges) */
+  --color-info-bg:              #E0F2FE;
+  --color-info-text:            #0369A1;
+  /* Danger aliases */
+  --color-danger:               #EA2B2B;
+  --color-danger-bg:            #FDE8E8;
+  --color-danger-text:          #B91C1C;
 
-  /* ── SPACING (base-8 scale) ─────────────────────────────────────────────── */
+  /* ── SPACING (base-8 scale) ──────────────────────────────────────────────── */
   --space-1:   4px;
   --space-2:   8px;
   --space-3:   12px;
@@ -73,62 +74,68 @@
   --space-16:  64px;
   --space-24:  96px;
 
-  /* ── BORDER RADIUS ──────────────────────────────────────────────────────── */
-  --radius-xs:    4px;
+  /* ── BORDER RADIUS (Duolingo: 12-16px buttons, 24px cards) ───────────────── */
+  --radius-xs:    6px;
   --radius-sm:    8px;
   --radius-md:    12px;
-  --radius-lg:    16px;   /* rounded-2xl equivalent — nav links, buttons */
+  --radius-lg:    16px;
   --radius-xl:    20px;
-  --radius-2xl:   24px;   /* rounded-3xl equivalent — profile cards */
-  --radius-3xl:   32px;   /* rounded-[2rem] — course cards, icon containers */
-  --radius-4xl:   40px;   /* rounded-[2.5rem] — hero cards (template spec) */
+  --radius-2xl:   24px;
+  --radius-3xl:   28px;
+  --radius-4xl:   32px;
   --radius-pill:  9999px;
+  --radius-full:  9999px;  /* alias for pill */
 
-  /* ── SHADOWS / ELEVATION ────────────────────────────────────────────────── */
-  --shadow-0:              none;
-  --shadow-1:              0 1px 3px rgba(0, 0, 0, 0.08);
-  --shadow-2:              0 4px 12px rgba(0, 0, 0, 0.10);
-  --shadow-3:              0 8px 24px rgba(0, 0, 0, 0.14);
-  --shadow-focus:          0 0 0 3px rgba(26, 86, 219, 0.25);
-  /* Chunky "Duolingo-style" offset shadow — border + bottom drop */
-  --shadow-chunky:          0 4px 0 0 #e5e5e5;
-  --shadow-chunky-primary:  0 4px 0 0 var(--color-brand-primary-dark);
-  --shadow-chunky-progress: 0 4px 0 0 var(--color-progress-dark);
-  --shadow-chunky-accent:   0 4px 0 0 var(--color-brand-accent-dark);
-  --shadow-chunky-amber:    0 4px 0 0 var(--color-accent-amber-dark);
-  --shadow-chunky-warning:  0 4px 0 0 #cc9f00;
-  --shadow-chunky-teal:     0 4px 0 0 var(--color-accent-teal-dark);
+  /* ── SHADOWS ─────────────────────────────────────────────────────────────── */
+  --shadow-none:          none;
+  --shadow-0:             none;  /* alias */
+  --shadow-1:             0 1px 2px rgba(0, 0, 0, 0.06);  /* alias for sm */
+  --shadow-sm:            0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-2:             0 4px 12px rgba(0, 0, 0, 0.10);  /* alias for md */
+  --shadow-md:            0 4px 12px rgba(0, 0, 0, 0.10);
+  --shadow-3:             0 8px 24px rgba(0, 0, 0, 0.14);  /* alias for lg */
+  --shadow-lg:            0 8px 24px rgba(0, 0, 0, 0.14);
+  --shadow-focus:         0 0 0 3px rgba(88, 204, 2, 0.30);
+  /* Duolingo "pushed-down" button shadow */
+  --shadow-button:        0 4px 0 0 #E5E5E5;
+  --shadow-button-active: 0 1px 0 0 #E5E5E5;
+  --shadow-button-brand:  0 4px 0 0 #46A302;
+  /* Chunky shadows (for Duolingo-style hero cards/buttons) */
+  --shadow-chunky:         0 4px 0 0 #E5E5E5;
+  --shadow-chunky-primary: 0 4px 0 0 #46A302;
+  --shadow-chunky-progress: 0 4px 0 0 #46A302;
+  --shadow-chunky-amber:   0 4px 0 0 #D97706;
 
-  /* ── TYPOGRAPHY ─────────────────────────────────────────────────────────── */
+  /* ── TYPOGRAPHY ──────────────────────────────────────────────────────────── */
   --font-display: 'Dunkin', sans-serif;
   --font-base:    'Varela Round', sans-serif;
 
-  /* Type scale (8 meaningful steps) */
+  /* Type scale (Duolingo: 15-19px body, 24px H2, 36px H1) */
   --text-xs:      0.6875rem;   /* 11px */
-  --text-sm:      0.75rem;     /* 12px */
+  --text-sm:      0.8125rem;   /* 13px */
   --text-md:      0.875rem;    /* 14px */
-  --text-base:    0.9375rem;   /* 15px */
-  --text-lg:      1rem;        /* 16px */
-  --text-xl:      1.125rem;    /* 18px */
-  --text-2xl:     1.25rem;     /* 20px */
-  --text-3xl:     1.5rem;      /* 24px */
-  --text-4xl:     1.875rem;    /* 30px */
-  --text-5xl:     2.25rem;     /* 36px */
-  --text-display: 3rem;        /* 48px */
+  --text-base:    0.9375rem;   /* 15px — body */
+  --text-lg:      1.0625rem;   /* 17px — buttons, radio labels */
+  --text-xl:      1.1875rem;   /* 19px — H2, cookie H2 */
+  --text-2xl:     1.5rem;      /* 24px */
+  --text-3xl:     1.875rem;    /* 30px */
+  --text-4xl:     2.25rem;     /* 36px — H1 */
+  --text-5xl:     2.75rem;     /* 44px */
+  --text-display: 3rem;        /* 48px — hero */
 
   /* Font weights */
   --weight-regular:   400;
   --weight-medium:    500;
   --weight-semibold:  600;
   --weight-bold:      700;
-  --weight-black:     900;  /* true font-black — matches Tailwind font-black */
+  --weight-black:     900;
 
   /* Line heights */
   --leading-tight:    1.25;
   --leading-normal:   1.5;
   --leading-relaxed:  1.6;
 
-  /* ── Z-INDEX ────────────────────────────────────────────────────────────── */
+  /* ── Z-INDEX ─────────────────────────────────────────────────────────────── */
   --z-below:    -1;
   --z-base:      0;
   --z-raised:   10;
@@ -138,7 +145,7 @@
   --z-modal:    400;
   --z-toast:    500;
 
-  /* ── MOTION ─────────────────────────────────────────────────────────────── */
+  /* ── MOTION ──────────────────────────────────────────────────────────────── */
   --duration-fast:    100ms;
   --duration-base:    150ms;
   --duration-slow:    250ms;
@@ -148,69 +155,67 @@
   --easing-out:       ease-out;
   --easing-bounce:    cubic-bezier(0.34, 1.56, 0.64, 1);
 
-  /* ── ICON SYSTEM ────────────────────────────────────────────────────────── */
-  /* Phosphor Icons — fill weight throughout */
-  --icon-sm:      16px;
-  --icon-md:      20px;
-  --icon-lg:      24px;
-  --icon-xl:      32px;
-  --icon-2xl:     40px;
+  /* ── AMBER (for streaks, learning paths) ─────────────────────────────────── */
+  --color-accent-amber:       #F59E0B;
+  --color-accent-amber-dark:  #D97706;
 
-  /* Icon container sizes (box that wraps the icon) */
-  --icon-box-sm:  28px;
-  --icon-box-md:  36px;
-  --icon-box-lg:  44px;
+  /* ── TEAL (for continue learning card) ───────────────────────────────────── */
+  --color-accent-teal:         #0EA5E9;
+  --color-accent-teal-light:   #E0F2FE;
+  --color-accent-teal-border:  #7DD3FC;
+
+  /* ── PROGRESS (for progress bars, graphs) ────────────────────────────────── */
+  --color-progress:        #58CC02;
+  --color-progress-light:  #E3F9C8;
+  --color-progress-dark:   #46A302;
+
+  /* ── ICON SIZES ──────────────────────────────────────────────────────────── */
+  --icon-sm:  16px;
+  --icon-md:  24px;
+  --icon-lg:  32px;
+  --icon-xl:  48px;
+  --icon-2xl: 64px;
+
+  /* ── ICON BOX SIZES (with padding) ───────────────────────────────────────── */
+  --icon-box-sm:  32px;
+  --icon-box-md:  40px;
+  --icon-box-lg:  48px;
   --icon-box-xl:  56px;
   --icon-box-2xl: 72px;
 
-  /* Icon semantic colors (use these, never raw colors) */
-  --icon-color-primary:   var(--color-brand-primary);
-  --icon-color-secondary: var(--color-text-secondary);
-  --icon-color-accent:    var(--color-brand-accent);
-  --icon-color-amber:     var(--color-accent-amber-dark);
-  --icon-color-teal:      var(--color-accent-teal);
-  --icon-color-progress:  var(--color-progress);
-  --icon-color-inverse:   var(--color-text-inverse);
+  /* ── ICON BACKGROUNDS ────────────────────────────────────────────────────── */
+  --icon-bg-primary:  #E3F9C8;
+  --icon-bg-accent:   #FFF3C4;
+  --icon-bg-amber:    #FEF3C7;
+  --icon-bg-teal:     #E0F2FE;
+  --icon-bg-muted:    #F7F7F7;
+  --icon-bg-progress: #E3F9C8;
 
-  /* Icon background (soft tint containers) */
-  --icon-bg-primary:  var(--color-brand-primary-light);
-  --icon-bg-accent:   var(--color-brand-accent-light);
-  --icon-bg-amber:    rgba(255, 200, 0, 0.15);
-  --icon-bg-teal:     var(--color-accent-teal-light);
-  --icon-bg-progress: var(--color-progress-light);
-  --icon-bg-muted:    var(--color-bg-muted);
+  /* ── ICON COLORS ─────────────────────────────────────────────────────────── */
+  --icon-color-amber:   #D97706;
+  --icon-color-progress: #58CC02;
 
-  /* ── BREAKPOINTS (reference values — use in @media queries) ─────────────── */
-  /* Usage: @media (min-width: 576px) { ... }                                  */
-  --bp-xs:   375px;
+  /* ── BREAKPOINTS ─────────────────────────────────────────────────────────── */
   --bp-sm:   576px;
   --bp-md:   768px;
   --bp-lg:   992px;
   --bp-xl:   1200px;
-  --bp-2xl:  1400px;
 }
 
 /* ==========================================================================
-   DARK MODE — Toggle by adding data-theme="dark" to <html>
+   DARK MODE
    ========================================================================== */
 [data-theme="dark"] {
-  /* Surfaces */
-  --color-bg-page:          #0f1117;
-  --color-bg-surface:       #1a1d27;
+  --color-bg-page:          #0F1117;
+  --color-bg-surface:       #1A1D27;
   --color-bg-muted:         #252836;
-  --color-bg-interactive:   #2e3248;
-
-  /* Text */
-  --color-text-primary:     #f9fafb;
-  --color-text-secondary:   #9ca3af;
-  --color-text-disabled:    #6b7280;
-
-  /* Border */
-  --color-border-default:   #2e3248;
-  --color-border-strong:    #3d4461;
-
-  /* Elevated shadows need more opacity in dark mode */
-  --shadow-1: 0 1px 3px rgba(0, 0, 0, 0.30);
-  --shadow-2: 0 4px 12px rgba(0, 0, 0, 0.40);
-  --shadow-3: 0 8px 24px rgba(0, 0, 0, 0.50);
+  --color-bg-interactive:   #2E3248;
+  --color-text-primary:     #F9FAFB;
+  --color-text-body:        #D1D5DB;
+  --color-text-secondary:   #9CA3AF;
+  --color-text-disabled:    #6B7280;
+  --color-border-default:   #2E3248;
+  --color-border-strong:    #3D4461;
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.40);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.50);
 }

@@ -1,15 +1,15 @@
 import React from 'react'
-import { Card, Form } from 'react-bootstrap'
+import { Card } from 'components/ui'
 
 const AptisForm = ({ children, headerText, onSubmit }) => {
 
   return (
-    <Card className='card-sigin my-5 p-2 bg-dark'>
+    <Card className="my-5 p-2 bg-dark rounded-2xl">
       <Card.Body>
-        <Card.Title className="text-center">{headerText}</Card.Title>
-        <Form className="form-signin" onSubmit={onSubmit}>
+        <h3 className="text-center font-bold text-lg mb-4">{headerText}</h3>
+        <form className="form-signin" onSubmit={onSubmit}>
           {children}
-        </Form>
+        </form>
       </Card.Body>
     </Card>
   )

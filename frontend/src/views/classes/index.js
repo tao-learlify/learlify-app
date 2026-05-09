@@ -1,30 +1,10 @@
 import React, { useEffect } from 'react'
-import { Container } from 'react-bootstrap'
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
 import Icon from 'react-icons-kit'
 import { group } from 'react-icons-kit/fa/group'
-
-import {
-  BoxedBehind,
-  BoxedButton,
-  BoxedDescription,
-  BoxedReservations,
-  BoxedText,
-  BoxedTitle,
-  ClassText,
-  Description,
-  DescriptionReservations,
-  DescriptionTitle,
-  Img,
-  KeyPoint,
-  PriceText,
-  TitleContainer,
-  WrapperClasses,
-  WrapperContent
-} from 'styled'
 
 import { withVerification } from 'hocs'
 
@@ -49,7 +29,9 @@ import { img } from 'assets/compat'
 
 import { getClassTicket } from 'utils/packages'
 import moment from 'moment'
-  
+
+import styles from './classes.module.scss'
+
 
 const Classes = () => {
   const { tour, loading } = useAppTour({ draft: 'classes' })
@@ -99,42 +81,42 @@ const Classes = () => {
         }
         withSocket={false}
       >
-        <WrapperClasses>
-          <TitleContainer>{t('CLASSES.title')}</TitleContainer>
-          <WrapperContent>
-            <DescriptionReservations>
-              <BoxedDescription>
-                <BoxedTitle>{t('CLASSES.counter')}</BoxedTitle>
-                <BoxedText className="text-center">
+        <div className={styles.wrapper}>
+          <div className={styles.title}>{t('CLASSES.title')}</div>
+          <div className={styles.content}>
+            <div className={styles.descReservations}>
+              <div className={styles.boxedDesc}>
+                <div className={styles.boxedTitle}>{t('CLASSES.counter')}</div>
+                <div className={`${styles.boxedText} text-center`}>
                   {t('CLASSES.available')}:{' '}
                   {getActiveWithClass() ? getActiveWithClass().classes : '0'}
-                </BoxedText>
+                </div>
                 <Link to={path.PAYMENTS}>
-                  <BoxedButton>{t('CLASSES.purchase')}</BoxedButton>
+                  <div className={styles.boxedButton}>{t('CLASSES.purchase')}</div>
                 </Link>
                 <br />
-                <BoxedTitle>{t('CLASSES.history')}</BoxedTitle>
+                <div className={styles.boxedTitle}>{t('CLASSES.history')}</div>
                 {Array.isArray(history.data) && history.data.length > 0 ? (
                   history.data.map(classHistory => (
-                    <Container key={classHistory.id}>
-                      <BoxedText className="font-weight-bold">
+                    <div key={classHistory.id} className="container mx-auto px-4">
+                      <div className={`${styles.boxedText} font-weight-bold`}>
                         {renderClassText(classHistory)} (
                         {classHistory.schedule.teacher.firstName}){' '}
-                      </BoxedText>
-                    </Container>
+                      </div>
+                    </div>
                   ))
                 ) : (
-                  <BoxedText>{t('CLASSES.unavailableHistory')}</BoxedText>
+                  <div className={styles.boxedText}>{t('CLASSES.unavailableHistory')}</div>
                 )}
-              </BoxedDescription>
-              <BoxedReservations>
+              </div>
+              <div className={styles.boxedReservations}>
                 <TourTarget tour="2">
-                  <BoxedBehind>
-                    <BoxedTitle>{t('CLASSES.subscriptions')}</BoxedTitle>
+                  <div className={styles.boxedBehind}>
+                    <div className={styles.boxedTitle}>{t('CLASSES.subscriptions')}</div>
                     {classes.data.length > 0 ? (
                       classes.data.map(classRoom => (
-                        <Container key={classRoom.id}>
-                          <BoxedText className="text-small">
+                        <div key={classRoom.id} className="container mx-auto px-4">
+                          <div className={`${styles.boxedText} text-small`}>
                             <img
                               className="mr-1"
                               width={20}
@@ -146,7 +128,7 @@ const Classes = () => {
                             {classRoom.schedule.streaming || (
                               <Icon className="ml-2" icon={group} />
                             )}
-                          </BoxedText>
+                          </div>
                           {classRoom.schedule.streaming && (
                             <Link
                               className="ml-3 badge bg-success badge-pill rounded border"
@@ -154,20 +136,18 @@ const Classes = () => {
                                 token: classRoom.name
                               })}
                             >
-                              <BoxedText>
+                              <div className={styles.boxedText}>
                                 {t('CLASSES.activeMeeting')}
-                              </BoxedText>
+                              </div>
                             </Link>
                           )}
-                        </Container>
+                        </div>
                       ))
-                    ) : ( 
-                      
-                      <BoxedText>
+                    ) : (
+                      <div className={styles.boxedText}>
                         {/* {t('CLASSES.unavailableSubscriptions')} */}
-                      </BoxedText>
-                      
-                    )} 
+                      </div>
+                    )}
                     {/*
                     <TourTarget tour="1">
                       <Link to={path.AGREEMENT}>
@@ -180,58 +160,58 @@ const Classes = () => {
                     {/*
                       Temporary solution of the booking classes problem
                     */}
-                    <BoxedText>
+                    <div className={styles.boxedText}>
                         {t('CLASSES.unavailableSchedules')}
-                    </BoxedText>
+                    </div>
                     <br />
-                  </BoxedBehind>
+                  </div>
                 </TourTarget>
-              </BoxedReservations>
-            </DescriptionReservations>
+              </div>
+            </div>
 
-            <Description>
-              <DescriptionTitle>
+            <div className={styles.description}>
+              <div className={styles.descTitle}>
                 {t('CLASSES.DESCRIPTION.title')}
-              </DescriptionTitle>
-              <KeyPoint>
-                <Img alt="icon1" src={img['1icon']} />
+              </div>
+              <div className={styles.keyPoint}>
+                <img className={styles.dotImg} alt="icon1" src={img['1icon']} />
                 {t('CLASSES.DESCRIPTION.confirm')}
-              </KeyPoint>
+              </div>
               {model && (
-                <KeyPoint>
-                  <Img alt="icon2" src={img['2icon']} />
+                <div className={styles.keyPoint}>
+                  <img className={styles.dotImg} alt="icon2" src={img['2icon']} />
                   {t('CLASSES.DESCRIPTION.teacher', { model: model.name })}
-                </KeyPoint>
+                </div>
               )}
-              <KeyPoint>
-                <Img alt="icon3" src={img['3icon']} />
+              <div className={styles.keyPoint}>
+                <img className={styles.dotImg} alt="icon3" src={img['3icon']} />
                 {t('CLASSES.DESCRIPTION.customize')}
-              </KeyPoint>
-              <KeyPoint>
-                <Img alt="icon4" src={img['4icon']} />
+              </div>
+              <div className={styles.keyPoint}>
+                <img className={styles.dotImg} alt="icon4" src={img['4icon']} />
                 {t('CLASSES.DESCRIPTION.prepare')}
-              </KeyPoint>
-              <KeyPoint>
-                <Img alt="icon5" src={img['5icon']} />
+              </div>
+              <div className={styles.keyPoint}>
+                <img className={styles.dotImg} alt="icon5" src={img['5icon']} />
                 {t('CLASSES.DESCRIPTION.guide')}
-              </KeyPoint>
-              <KeyPoint>
-                <Img alt="icon6" src={img['6icon']} />
+              </div>
+              <div className={styles.keyPoint}>
+                <img className={styles.dotImg} alt="icon6" src={img['6icon']} />
                 {t('CLASSES.DESCRIPTION.payments')}
-              </KeyPoint>
-              <KeyPoint>
-                <Img alt="icon7" src={img['7icon']} />
+              </div>
+              <div className={styles.keyPoint}>
+                <img className={styles.dotImg} alt="icon7" src={img['7icon']} />
                 {t('CLASSES.DESCRIPTION.review')}
-              </KeyPoint>
-              <PriceText>{t('CLASSES.DESCRIPTION.minutes')}</PriceText>
-              <ClassText>
+              </div>
+              <div className={styles.priceText}>{t('CLASSES.DESCRIPTION.minutes')}</div>
+              <div className={styles.classText}>
                 13 EUR
                 <img alt="tarjeta" src={img.tarjeta} width={150} />{' '}
                 <img alt="gato" src={img.gato} width={120} />
-              </ClassText>
-            </Description>
-          </WrapperContent>
-        </WrapperClasses>
+              </div>
+            </div>
+          </div>
+        </div>
       </Template>
       {tour.classes || loading || (
         <TourIndicator indications={classesTourProvider} />

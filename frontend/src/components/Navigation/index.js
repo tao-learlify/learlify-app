@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
-import { Badge, NavDropdown, Nav } from 'react-bootstrap'
+import { Dropdown } from 'components/ui'
+import { Badge } from 'components/ui'
 import { Link, useHistory } from 'react-router-dom'
 import { ic_more_vert } from 'react-icons-kit/md/ic_more_vert'
 import { signOut } from 'react-icons-kit/fa/signOut'
@@ -22,18 +23,10 @@ import Avatar from 'components/Avatar'
 import Notifications from 'components/Notifications'
 import Text from 'components/Text'
 
-import {
-  AvatarContainer,
-  NavbarContainer,
-  Navbar,
-  NavbarLink,
-  IconContainer,
-  Logo,
-  RouterLink
-} from 'styled'
-
 import PATH from 'utils/path'
 import { img } from 'assets/compat'
+
+import logo from 'assets/illustrations/brand/logo.svg'
 
 import styles from './navigation.module.scss'
 import 'assets/css/navbar.css'
@@ -62,52 +55,63 @@ const Navigation = () => {
   }
 
   const ref = useRef(
-    <IconContainer>
+    <span className={styles.iconContainer}>
       <Icon className="hovered" icon={ic_more_vert} size={24} />
-    </IconContainer>
+    </span>
   )
 
   return (
     user.isLoggedIn && (
-      <NavbarContainer>
-        <Navbar>
+      <div className={styles.navbarContainer}>
+        <nav className={styles.navbar}>
           {isResponsive ||
             (model && !history.location.pathname.includes(PATH.MODELS) ? (
-              <Logo
-                color={model.color}
-                src={model.logo}
+              <div
+                className={styles.logo}
+                style={{
+                  backgroundColor: model.color || undefined,
+                  backgroundImage: `url(${model.logo || logo})`
+                }}
                 onClick={handleClickLogo}
               />
             ) : (
-              <Logo onClick={handleClickLogo} />
+              <div
+                className={styles.logo}
+                style={{ backgroundImage: `url(${logo})` }}
+                onClick={handleClickLogo}
+              />
             ))}
-          <Nav
+          <nav
             className={classNames(
-              isResponsive ? 'mr-auto' : 'ml-auto',
-              'align-items-center'
+              isResponsive ? 'tw:mr-auto' : 'tw:ml-auto',
+              'tw:flex tw:items-center tw:gap-1'
             )}
           >
             {isResponsive || (
-              <RouterLink
-                className={classNames('nav-link', styles.uppercase)}
+              <Link
+                className={classNames(styles.uppercase, styles.routerLink)}
                 to={PATH.COURSES}
               >
                 {t('NAVIGATION.courses')}
-              </RouterLink>
+              </Link>
             )}
             {isResponsive ||
               routes.map(route => (
-                <RouterLink
+                <Link
                   key={route.href}
-                  className={classNames('nav-link', styles.uppercase)}
+                  className={classNames(styles.uppercase, styles.routerLink)}
                   to={route.href}
                 >
                   {route.name}
-                </RouterLink>
+                </Link>
               ))}
-            <div className="nav-item">
-              <NavbarLink>
-                <AvatarContainer>
+            <div className="">
+              <a
+                className={styles.navbarLink}
+                href="#!"
+                onClick={e => e.preventDefault()}
+              >
+                <div className={styles.avatarContainer}>
                   <Notifications
                     open={notificationsOpen}
                     onNavigate={notificationsToggle}
@@ -130,15 +134,15 @@ const Navigation = () => {
                       }
                     />
                   )}
-                </AvatarContainer>
-              </NavbarLink>
+                </div>
+              </a>
             </div>
-            <NavDropdown
-              className={classNames('no-arrow', styles.vert)}
+            <Dropdown
+              className={classNames(styles.vert)}
               title={ref.current}
             >
               <Link
-                className="dropdown-item text-blue text-center"
+                className="tw:block tw:px-4 tw:py-2 tw:text-[#58CC02] tw:text-center hover:tw:bg-gray-50 tw:no-underline"
                 to={PATH.SETTINGS}
               >
                 <Icon icon={cog} />{' '}
@@ -147,7 +151,7 @@ const Navigation = () => {
                 </Text>
               </Link>
               <Link
-                className="dropdown-item text-blue text-center"
+                className="tw:block tw:px-4 tw:py-2 tw:text-[#58CC02] tw:text-center hover:tw:bg-gray-50 tw:no-underline"
                 to={PATH.MODELS}
               >
                 <Icon icon={ic_apps} />{' '}
@@ -155,25 +159,25 @@ const Navigation = () => {
                   {t('COMPONENTS.NAVIGATION.exam')}
                 </Text>
               </Link>
-              <NavDropdown.Item
-                className="text-blue text-center"
+              <Dropdown.Item
+                className="tw:text-[#58CC02] tw:text-center"
                 href={PATH.LOGOUT}
               >
                 <Icon icon={signOut} />{' '}
                 <Text color="blue" tag="small">
                   {t('COMPONENTS.NAVIGATION.logout')}
                 </Text>
-              </NavDropdown.Item>
-            </NavDropdown>
+              </Dropdown.Item>
+            </Dropdown>
             <Link className={classNames('d-block d-sm-none', styles.dashboard)}>
               <Text dunkin color="white" tag="small">
                 DASHBOARD
                 <Icon size={15} icon={ic_dashboard} />
               </Text>
             </Link>
-          </Nav>
-        </Navbar>
-      </NavbarContainer>
+          </nav>
+        </nav>
+      </div>
     )
   )
 }

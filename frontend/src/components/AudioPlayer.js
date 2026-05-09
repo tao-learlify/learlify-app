@@ -1,6 +1,6 @@
 import React, { memo, useRef, useReducer } from 'react'
 import PropTypes from 'prop-types'
-import { Row, Col, Button } from 'react-bootstrap'
+import { Button } from 'components/ui'
 import Icon from 'react-icons-kit'
 import classNames from 'clsx'
 
@@ -98,7 +98,7 @@ const AudioPlayer = ({ url, defaultStyles }) => {
   }
 
   return (
-    <Row className={classNames(defaultStyles && 'audio-player')}>
+    <div className={classNames(defaultStyles && 'audio-player', 'tw:flex tw:flex-wrap')}>
       <audio
         onEnded={handleEndedAudio}
         onTimeUpdate={handleChange}
@@ -108,7 +108,7 @@ const AudioPlayer = ({ url, defaultStyles }) => {
         src={url}
       />
 
-      <Col xs={2} className="play-btn">
+      <div className="tw:w-2/12 play-btn">
         <Button block variant="link">
           <Icon
             size={state.isPlaying ? 24 : 20}
@@ -116,9 +116,9 @@ const AudioPlayer = ({ url, defaultStyles }) => {
             onClick={handlePlay}
           ></Icon>
         </Button>
-      </Col>
+      </div>
 
-      <Col xs={8} className="controls">
+      <div className="tw:w-8/12 controls">
         <Text tag="span">{state.currentTimer}</Text>
         <div className="control-slider slider" data-direction="horizontal">
           <div className="control-progress gap-progress">
@@ -129,9 +129,9 @@ const AudioPlayer = ({ url, defaultStyles }) => {
           </div>
         </div>
         <Text tag="span">{state.maxDuration}</Text>
-      </Col>
+      </div>
 
-      <Col xs={2} className="volume">
+      <div className="tw:w-2/12 volume">
         <div className="volume-btn">
           <Icon
             icon={state.controls ? volumeOff : volumeUp}
@@ -158,8 +158,8 @@ const AudioPlayer = ({ url, defaultStyles }) => {
             />
           </div>
         </div>
-      </Col>
-    </Row>
+      </div>
+    </div>
   )
 }
 

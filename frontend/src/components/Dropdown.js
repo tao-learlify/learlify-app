@@ -1,5 +1,6 @@
-import React, { memo } from 'react'
-import { Dropdown as DropdownButton } from 'react-bootstrap'
+import React, { memo, useState } from 'react'
+import clsx from 'clsx'
+import { Dropdown as DropdownUI } from 'components/ui'
 
 const space = '\xa0'.repeat(20)
 
@@ -15,19 +16,16 @@ const space = '\xa0'.repeat(20)
  * @type {React.FunctionComponent<DropdownProps>}
  */
 const Dropdown = ({ children, className, disabled, id, name }) => {
+  const [open, setOpen] = useState(false)
+  const displayName = name === '' ? space : name
+
   return (
-    <DropdownButton alignRight>
-      <DropdownButton.Toggle
-        disabled={disabled}
-        size="sm"
-        id={id}
-        drop="left"
-        className={className}
-      >
-        <small>{name === '' ? space : name}</small>
-      </DropdownButton.Toggle>
-      <DropdownButton.Menu>{children}</DropdownButton.Menu>
-    </DropdownButton>
+    <DropdownUI
+      title={<small>{displayName}</small>}
+      className={className}
+    >
+      {children}
+    </DropdownUI>
   )
 }
 

@@ -1,8 +1,6 @@
-import styled from 'styled-components'
+import React from 'react'
+import clsx from 'clsx'
 
-export default styled.div`
-  margin-top: 5px;
-  padding-top: 5px;
-  display: flex;
-  justify-content: center;
-`
+export default function ScheduleContainer({ children, className, ...rest }) {
+  return <div className={clsx('tw:mt-1.5 tw:pt-1.5 tw:flex tw:justify-center', className)} {...rest}>{children}</div>
+}

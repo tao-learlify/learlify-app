@@ -1,3 +1,5 @@
+/* Navigation — Duolingo Design */
+
 .vert {
   position: relative !important;
   right: 50px;
@@ -5,11 +7,86 @@
 
 .uppercase {
   text-transform: uppercase;
-  font-family: Dunkin;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.5px;
 }
 
 .dashboard {
   color: #FFFFFF;
   position: relative !important;
   right: 50px;
+}
+
+.navbarContainer {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.navbar {
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1.5rem;
+  margin: 1rem 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #E5E7EB;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  position: absolute;
+  left: 6px;
+  background-size: 44px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  transition: transform 0.15s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.routerLink {
+  color: #4B4B4B !important;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem !important;
+  border-radius: 12px;
+  transition: all 0.15s;
+
+  &:hover {
+    color: #58CC02 !important;
+    background-color: rgba(88, 204, 2, 0.08);
+    text-decoration: none;
+  }
+}
+
+.navbarLink {
+  color: #4B4B4B !important;
+  text-decoration: none;
+  padding: 0 1rem !important;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.avatarContainer {
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.iconContainer {
+  margin-left: 2.5px;
+  color: #4B4B4B;
 }

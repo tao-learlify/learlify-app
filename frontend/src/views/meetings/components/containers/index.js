@@ -1,6 +1,6 @@
-import styled from 'styled-components'
+import React from 'react'
+import clsx from 'clsx'
 
-export const ChatContainer = styled.div`
-  margin-top: 10px;
-  padding-top: 10px
-`
+export function ChatContainer({ children, className, ...rest }) {
+  return <div className={clsx('tw:mt-[10px] tw:pt-[10px]', className)} {...rest}>{children}</div>
+}

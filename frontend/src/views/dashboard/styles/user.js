@@ -1,31 +1,18 @@
-import styled from 'styled-components'
-import { Col } from 'react-bootstrap'
+import React from 'react'
+import clsx from 'clsx'
 
-import { BLUE } from 'assets/colors'
- 
-export const StyledCol = styled(Col)`
-  margin-top: 10px;
-`
+export function StyledCol({ children, className, ...rest }) {
+  return <div className={clsx('tw:mt-2.5 tw:px-4', className)} {...rest}>{children}</div>
+}
 
-export const PlanContainer = styled.div`
-  padding-top: 10px;
-  padding-bottom: 30px;
-`
+export function PlanContainer({ children, className, ...rest }) {
+  return <div className={clsx('tw:pt-2.5 tw:pb-8', className)} {...rest}>{children}</div>
+}
 
-export const BannerContainer = styled.div`
-  border-radius: 50px;
-  border-width: 2px !important;
-`
+export function BannerContainer({ children, className, ...rest }) {
+  return <div className={clsx('tw:border-2 !tw:border-solid tw:rounded-[50px]', className)} {...rest}>{children}</div>
+}
 
-export const DialogName = styled.small`
-  position: absolute;
-  top: 50px;
-  width: 70px;
-  text-align: center;
-  font-weight: bold;
-  color: ${BLUE};
-`
-
-BannerContainer.defaultProps = {
-  className: 'border'
+export function DialogName({ children, className, ...rest }) {
+  return <small className={clsx('tw:absolute tw:top-[50px] tw:w-[70px] tw:text-center tw:font-bold tw:text-[#1a56db]', className)} {...rest}>{children}</small>
 }

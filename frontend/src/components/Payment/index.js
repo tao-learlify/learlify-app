@@ -28,7 +28,7 @@ import PATH from 'utils/path'
 
 import { grantControls } from 'store/@reducers/exams'
 import { GRAY } from 'assets/colors'
-import { Button } from 'styled'
+import { Button } from 'components/ui'
 import Register from 'components/Register'
 
 /***

@@ -1,10 +1,9 @@
 import React from 'react'
-import { Col, Row } from 'react-bootstrap'
-import Card from 'react-bootstrap/Card'
-import classNames from 'clsx'
+import clsx from 'clsx'
 import 'assets/css/cards.css'
 
 import Text from 'components/Text'
+import { Card, CardBody } from 'components/ui'
 
 import { Header } from './styles'
 
@@ -20,28 +19,28 @@ import { Header } from './styles'
  * @type {React.FunctionComponent<BoxProps>}
  */
 const Box = ({ children, title, subtitle }) => (
-  <Card className={classNames('custom-border')}>
+  <Card>
     <Header>
-      <Row>
+      <div className="tw:flex tw:flex-wrap">
         {title && (
-          <Col xs={12}>
+          <div className="tw:w-full tw:px-4">
             <Text center tag="h3" color='muted'>
               {title}
             </Text>
-          </Col>
+          </div>
         )}
         {subtitle && (
-          <Col xs={12}>
+          <div className="tw:w-full tw:px-4">
             <Text center tag="h6" color='muted'>
               {subtitle}
             </Text>
-          </Col>
+          </div>
         )}
-      </Row>  
+      </div>  
     </Header>
-    <Card.Body className={classNames('body-style py-0')}>
+    <CardBody className={clsx('py-0')}>
       {children}
-    </Card.Body>
+    </CardBody>
   </Card>
 ) 
 

@@ -81,6 +81,11 @@ export const router = {
         ...defaultRouterConfig
       },
       {
+        component: Exams,
+        path: PATH.EXAMS,
+        ...defaultRouterConfig
+      },
+      {
         component: Dashboard,
         path: '/dashboard',
         ...defaultRouterConfig

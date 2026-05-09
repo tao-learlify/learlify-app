@@ -1,5 +1,4 @@
 import React, { memo } from 'react'
-import { Row, Col, ProgressBar } from 'react-bootstrap'
 import PropTypes from 'prop-types'
 
 import Text from 'components/Text'
@@ -13,23 +12,23 @@ const Presentation = ({
   withProgress
 }) => {
   return (
-    <Row>
+    <div className="tw:flex tw:flex-wrap">
       {withProgress && (
         <React.Fragment>
-          <Col md={4}>
+          <div className="tw:w-full md:tw:w-4/12 tw:px-4">
             <Text tag="h5" color="muted">
               {progressBarTitle}
             </Text>
-          </Col>
-          <Col md={8}>
-            <ProgressBar />
-          </Col>
+          </div>
+          <div className="tw:w-full md:tw:w-8/12 tw:px-4">
+            <Progress />
+          </div>
         </React.Fragment>
       )}
-      <Col md={3}>
+      <div className="tw:w-full md:tw:w-3/12 tw:px-4">
         <img src={titleImage} alt="title" />
-      </Col>
-      <Col md={9}>
+      </div>
+      <div className="tw:w-full md:tw:w-9/12 tw:px-4">
         <Text tag="h2" color="dark">
           {title}
         </Text>
@@ -39,8 +38,8 @@ const Presentation = ({
         <Text tag="p" color="muted">
           {content}
         </Text>
-      </Col>
-    </Row>
+      </div>
+    </div>
   )
 }
 

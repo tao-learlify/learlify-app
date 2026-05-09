@@ -1,0 +1,97 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   Dropdown — Menu dropdown.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border: 1.5px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg-surface);
+  color: var(--color-text-primary);
+  font-family: var(--font-base);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  cursor: pointer;
+  transition:
+    border-color var(--duration-fast) var(--easing-default),
+    background-color var(--duration-fast) var(--easing-default);
+
+  &:hover {
+    border-color: var(--color-brand-primary);
+    background-color: var(--color-bg-muted);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-border-focus);
+    outline-offset: 2px;
+  }
+}
+
+.chevron {
+  transition: transform var(--duration-base) var(--easing-default);
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+/* ── Menu ─────────────────────────────────────────────────────────────────── */
+.menu {
+  z-index: var(--z-dropdown);
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-2);
+  padding: var(--space-2);
+  max-height: 300px;
+  overflow-y: auto;
+  animation: menuIn var(--duration-base) var(--easing-out);
+}
+
+.item {
+  display: block;
+  width: 100%;
+  padding: var(--space-2) var(--space-4);
+  border: none;
+  background: transparent;
+  color: var(--color-text-primary);
+  font-family: var(--font-base);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  text-align: left;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: background-color var(--duration-fast) var(--easing-default);
+
+  &:hover {
+    background-color: var(--color-bg-muted);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-border-focus);
+    outline-offset: -1px;
+  }
+}
+
+.danger {
+  color: var(--color-error);
+
+  &:hover {
+    background-color: var(--color-error-bg);
+  }
+}
+
+/* ── Animation ────────────────────────────────────────────────────────────── */
+@keyframes menuIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

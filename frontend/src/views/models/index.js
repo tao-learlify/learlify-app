@@ -5,8 +5,8 @@ import { useHistory } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { unwrapResult } from '@reduxjs/toolkit'
 import { ReactSVG } from 'react-svg'
+import { motion } from 'framer-motion'
 import 'assets/scss/view.scss'
-
 
 import useMedia from 'hooks/useMedia'
 import useQuery from 'hooks/useQuery'
@@ -15,19 +15,6 @@ import useLocalStorage from 'hooks/useLocalStorage'
 
 import Template from 'components/Template'
 import Text from 'components/Text'
-
-import {
-  BodyContainer,
-  ContainerModels,
-  ImageContainer,
-  Hover,
-  LogoModels,
-  LogoContainer,
-  ModelContainer,
-  StyledCard,
-  TextContainerModels,
-  Title
-} from 'styled'
 
 import { fetchModelsThunk, patchModelThunk } from 'store/@thunks/models'
 import { modelSelector } from 'store/@selectors/models'
@@ -44,6 +31,18 @@ import PATH from 'utils/path'
 
 import { withVerification as WV } from 'hocs'
 import { svg } from 'assets/compat'
+
+import styles from './models.module.scss'
+
+/** Motion wrapper — replaces styled(Hover) from styled/index.js */
+const HoverBtn = (props) => (
+  <motion.div
+    className={styles.hoverBtn}
+    whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.9 }}
+    {...props}
+  />
+)
 
 const Models = () => {
   const ls = useLocalStorage()
@@ -86,7 +85,7 @@ const Models = () => {
 
           history.push(PATH.DASHBOARD)
         })
-        
+
     }
   }, [query, models.data])
 
@@ -126,39 +125,44 @@ const Models = () => {
               {t('MODELS.subtitle')}
             </Text>
           </div>
-          <ContainerModels>
-            <ModelContainer>
+          <div className={styles.wrapper}>
+            <div className={styles.modelList}>
               {models.data.map(model => (
-                <Hover
+                <HoverBtn
                   key={model.id}
                   onClick={() => handleClickModelSelection(model)}
                 >
-                  <BodyContainer>
-                    <StyledCard className="shadow-lg">
-                      <Title backgroundColor={model.color}>
+                  <div className={styles.cardBody}>
+                    <div className={styles.card}>
+                      <div
+                        className={styles.cardTitle}
+                        style={{ backgroundColor: model.color }}
+                      >
                         <Text dunkin tag="h5">
                           {model.name}
                         </Text>
-                      </Title>
-                      <TextContainerModels>
+                      </div>
+                      <div className={styles.cardText}>
                         <Text tag="span">{t(`MODELS.${model.name}`)}</Text>
-                      </TextContainerModels>
-                    </StyledCard>
-                  </BodyContainer>
-                </Hover>
+                      </div>
+                    </div>
+                  </div>
+                </HoverBtn>
               ))}
-            </ModelContainer>
-            <ImageContainer>
+            </div>
+            <div className={styles.modelImage}>
               <ReactSVG beforeInjection={svgCallback} src={svg.model} />
-            </ImageContainer>
-          </ContainerModels>
+            </div>
+          </div>
         </div>
       )}
-      <LogoContainer>
-        <LogoModels src={Aptis} />
-        <LogoModels display="true" isMobile={isResponsive} src={B1B2} />
-        <LogoModels src={IELTS} />
-      </LogoContainer>
+      <div className={styles.logos}>
+        <img className={styles.logoImg} src={Aptis} alt="Aptis" />
+        {isResponsive || (
+          <img className={styles.logoImg} src={B1B2} alt="B1B2" />
+        )}
+        <img className={styles.logoImg} src={IELTS} alt="IELTS" />
+      </div>
     </Template>
   )
 }

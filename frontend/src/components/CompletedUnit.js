@@ -1,5 +1,4 @@
 import React, { memo } from 'react'
-import { Row, Col } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next'
 
 import Text from './Text'
@@ -13,8 +12,8 @@ const CompletedUnit = () => {
 
   return (
     <Animated animationIn="fadeInUp">
-      <Row>
-        <Col md={10}>
+      <div className="tw:flex tw:flex-wrap">
+        <div className="tw:w-full md:tw:w-10/12 tw:px-4">
           <Text dunkin color="blue" tag="h2">
             {t('COMPONENTS.completedUnit.placeholder.congrats')}
           </Text>
@@ -24,18 +23,18 @@ const CompletedUnit = () => {
           <Text lighter color="muted" tag="h5">
             {t('COMPONENTS.completedUnit.placeholder.results')}
           </Text>
-          <Row>
-            <Col md={8}>
+          <div className="tw:flex tw:flex-wrap">
+            <div className="tw:w-full md:tw:w-8/12 tw:px-4">
               <Display>
                 <Text bold lighter color="secondary" tag="p">
                   {t('COMPONENTS.completedUnit.placeholder.machine')}
                   <img lazy="true" src={img.student} alt="student" />
                 </Text>
               </Display>
-            </Col>
-          </Row>
-        </Col>
-      </Row>
+            </div>
+          </div>
+        </div>
+      </div>
     </Animated>
   )
 }

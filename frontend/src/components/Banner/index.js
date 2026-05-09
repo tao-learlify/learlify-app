@@ -14,7 +14,7 @@ import Plan from 'components/Plan'
 
 import styles from './styles.module.scss'
 import { getItemStyle } from 'components/Exams/utils'
-import { Button } from 'styled'
+import { Button } from 'components/ui'
 import { useDispatch } from 'react-redux'
 import { select } from 'store/@reducers/plans'
 import PATH from 'utils/path'

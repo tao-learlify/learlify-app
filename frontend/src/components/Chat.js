@@ -1,12 +1,12 @@
 import React, { memo, useState } from 'react'
 import 'assets/css/chat.css'
 import { Animated } from 'react-animated-css'
-import { Form, Button, InputGroup } from 'react-bootstrap'
+import { Button } from 'components/ui'
 import { v4 as uuid } from 'uuid'
 import { sendO as send } from 'react-icons-kit/fa/sendO'
 import { minus as hide } from 'react-icons-kit/fa/minus'
 import Icon from 'react-icons-kit'
-import styled from 'styled-components'
+import clsx from 'clsx'
 import Text from './Text'
 import moment from 'moment'
 
@@ -17,120 +17,73 @@ import FileUploader from './FileUploader'
 import { img } from 'assets/compat'
 import { ellipsis } from 'utils/functions'
 
-const Container = styled.div`
-  bottom: 0;
-  font-size: 12px;
-  right: 24px;
-  position: fixed;
-  width: 300px;
-`
+function Container({ children, className, ...rest }) {
+  return <div className={clsx('tw:fixed tw:bottom-0 tw:right-6 tw:w-[300px] tw:text-xs', className)} {...rest}>{children}</div>
+}
 
-const Header = styled.header`
-  background: #293239;
-  border-radius: 5px 5px 0 0;
-  color: #fff;
-  cursor: pointer;
-  padding: 11px 22px;
-`
+function Header({ children, className, ...rest }) {
+  return <header className={clsx('tw:bg-[#293239] tw:rounded-t-[5px] tw:text-white tw:cursor-pointer tw:px-[22px] tw:py-[11px]', className)} {...rest}>{children}</header>
+}
 
-const ChatBody = styled.div`
-  z-index: 40;
-  background: #fff;
-`
+function ChatBody({ children, className, ...rest }) {
+  return <div className={clsx('tw:z-40 tw:bg-white', className)} {...rest}>{children}</div>
+}
 
-const ChatScreen = styled.div`
-  height: 260px;
-  padding: 8px 24px;
-  overflow-y: scroll;
-`
+function ChatScreen({ children, className, ...rest }) {
+  return <div className={clsx('tw:h-[260px] tw:overflow-y-scroll tw:px-6 tw:py-2', className)} {...rest}>{children}</div>
+}
 
-const MessageContainer = styled.div`
-  margin: 16px 0;
-`
+function MessageContainer({ children, className, ...rest }) {
+  return <div className={clsx('tw:my-4', className)} {...rest}>{children}</div>
+}
 
-const ChatAvatar = styled.img`
-  border-radius: 50%;
-  float: left;
-`
+function ChatAvatar({ className, ...rest }) {
+  return <img className={clsx('tw:rounded-full tw:float-left', className)} {...rest} />
+}
 
-const Content = styled.div`
-  margin-left: 56px;
-`
+function Content({ children, className, ...rest }) {
+  return <div className={clsx('tw:ml-14', className)} {...rest}>{children}</div>
+}
 
-const TextDate = styled.span`
-  float: right;
-  font-size: 9.5px;
-`
+function TextDate({ children, className, ...rest }) {
+  return <span className={clsx('tw:float-right tw:text-[9.5px]', className)} {...rest}>{children}</span>
+}
 
-const ChatMessage = styled.p`
-  margin: 0;
-  margin-bottom: 5px;
-  font-size: 11px;
-`
+function ChatMessage({ children, className, ...rest }) {
+  return <p className={clsx('tw:m-0 tw:mb-1.5 tw:text-[11px]', className)} {...rest}>{children}</p>
+}
 
-const ChatAction = styled.p`
-  font-size: 10px;
-  font-style: italic;
-  margin: 0 0 0 80px;
-`
+function ChatAction({ children, className, ...rest }) {
+  return <p className={clsx('tw:text-[10px] tw:italic tw:m-0 tw:ml-20', className)} {...rest}>{children}</p>
+}
 
-const ChatFormContainer = styled.div`
-  padding: 24px;
-`
+function ChatFormContainer({ children, className, ...rest }) {
+  return <div className={clsx('tw:p-6', className)} {...rest}>{children}</div>
+}
 
-const ChatDivisor = styled.hr`
-  margin-top: 4px;
-  background: #e9e9e9;
-  border: 0;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 1px;
-  margin: 0;
-  min-height: 1px;
-`
+function ChatDivisor({ className, ...rest }) {
+  return <hr className={clsx('tw:mt-1 tw:bg-[#e9e9e9] tw:border-0 tw:h-px tw:m-0', className)} {...rest} />
+}
 
-const InputDivisor = styled.span`
-  margin-left: 5px;
-  margin-right: 5px;
-`
+function InputDivisor({ className, ...rest }) {
+  return <span className={clsx('tw:mx-[5px]', className)} {...rest} />
+}
 
-const Close = styled.span`
-  color: #fff;
-  display: block;
-  float: right;
-  font-size: 10px;
-  height: 16px;
-  line-height: 16px;
-  margin: 2px 0 0 0;
-  text-align: center;
-  width: 16px;
-`
+function Close({ children, className, ...rest }) {
+  return <span className={clsx('tw:text-white tw:block tw:float-right tw:text-[10px] tw:h-4 tw:leading-4 tw:mt-0.5 tw:text-center tw:w-4', className)} {...rest}>{children}</span>
+}
 
-const UnreadMessages = styled.span`
-  background: #e62727;
-  border: 1px solid #fff;
-  border-radius: 50%;
-  display: none;
-  font-size: 12px;
-  font-weight: bold;
-  height: 28px;
-  left: 0;
-  line-height: 28px;
-  margin: -15px 0 0 -15px;
-  position: absolute;
-  text-align: center;
-  top: 0;
-  width: 28px;
-`
+function UnreadMessages({ children, className, ...rest }) {
+  return <span className={clsx('tw:bg-[#e62727] tw:border tw:border-white tw:rounded-full tw:hidden tw:text-xs tw:font-bold tw:h-7 tw:leading-7 tw:absolute tw:text-center tw:top-0 tw:w-7 tw:left-0 tw:-mt-[15px] tw:-ml-[15px]', className)} {...rest}>{children}</span>
+}
 
-const FileUpload = styled.div`
-  margin-top: 7.5px;
-  margin-bottom: 7.5px;
-  display: flex;
-  justify-content: center;
-`
+function FileUpload({ children, className, ...rest }) {
+  return <div className={clsx('tw:mt-[7.5px] tw:mb-[7.5px] tw:flex tw:justify-center', className)} {...rest}>{children}</div>
+}
 
-const FileDownload = styled.a``
+function FileDownload(props) {
+  return <a {...props} />
+}
 
 /**
  * @typedef {Object} ChatMessage
@@ -281,10 +234,10 @@ const Chat = ({
                   {Boolean(attach) && ellipsis(attach.name, 0, 30)}
                 </Text>
               </FileUpload>
-              <Form encType="multipart/form-data" inline onSubmit={handleSubmitMessage}>
-                <InputGroup>
-                  <Form.Control
-                    className="w-50 rounded chat"
+            <form encType="multipart/form-data" className="tw:flex tw:flex-wrap tw:items-center" onSubmit={handleSubmitMessage}>
+                <div className="input-group tw:flex tw:items-center">
+                  <input
+                    className="form-control tw:w-1/2 tw:rounded-lg tw:border tw:border-gray-300 tw:p-1.5 tw:text-xs chat focus:tw:border-[#58CC02]"
                     name="message"
                     onChange={onChange}
                     onKeyPress={handleTyping}
@@ -308,8 +261,8 @@ const Chat = ({
                   >
                     <Icon icon={send} />
                   </Button>
-                </InputGroup>
-              </Form>
+                </div>
+              </form>
             </ChatFormContainer>
           </Animated>
         )}

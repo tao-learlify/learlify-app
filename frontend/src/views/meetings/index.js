@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { memo, useCallback, useEffect, useLayoutEffect } from 'react'
-import { Alert } from 'react-bootstrap'
+import { Alert } from 'components/ui'
 import { useDebouncedCallback } from 'use-debounce'
 import { useDispatch } from 'react-redux'
 import { ToastsStore } from 'react-toasts'
@@ -299,11 +299,11 @@ const Meetings = () => {
         <Animate>
           {active || (
             <Alert variant="warning">
-              <Alert.Heading>
+              <div>
                 <Text bold center tag="h5">
                   {pendingStreamingToBeEndedMessage} <img alt="timer" src={img.time} />
                 </Text>
-              </Alert.Heading>
+              </div>
               <FlexContainer>
                 <Countdown date={COUNTDOWN} onComplete={handleEndClass} />
               </FlexContainer>

@@ -1,14 +1,11 @@
 import React from 'react'
-import { Row, Col } from 'react-bootstrap'
 import {ic_check} from 'react-icons-kit/md/ic_check'
 import Icon from 'react-icons-kit'
 
-import { makeStyles } from '@material-ui/core/styles'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
-
 
 import useModels from 'hooks/useModels'
 
@@ -18,33 +15,15 @@ import { withModels } from 'hocs'
 
 import styles from '../styles.module.scss'
 import { img } from 'assets/compat'
-import { Button } from 'styled'
+import { Button } from 'components/ui'
 import { BLUE, TURQUOISE } from 'assets/colors'
 
 import AptisTeacherPanda from 'assets/illustrations/pandas/panda-speaking.svg'
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    width: '100%',
-    backgroundColor: theme.palette.background.paper
-  },
-  inline: {
-    display: 'inline'
-  }
-}))
-
-/**
- * @typedef {Object} PreviewProps
- * @property {() => void} onStart
- * @property {() => void} onDemo
- */
 
 /**
  * @type {React.FunctionComponent<PreviewProps>}
  */
 const Preview = ({ onStart, onDemo }) => {
-  const classes = useStyles()
-
   const { model } = useModels()
 
   return (
@@ -63,9 +42,9 @@ const Preview = ({ onStart, onDemo }) => {
         The student will have access to:
       </Text>
       <br />
-      <Row>
-        <Col md={8}>
-          <List className={classes.root}>
+      <div className="d-flex flex-wrap">
+        <div style={{ flex: '2 1 500px', minWidth: 0 }}>
+          <List style={{ width: '100%', backgroundColor: 'transparent' }}>
             <ListItem className={styles.listItem} alignItems="center">
             <ListItemIcon>
               <Icon className="text-success"  size={24} icon={ic_check} />
@@ -115,8 +94,8 @@ const Preview = ({ onStart, onDemo }) => {
               <ListItemText primary="One review unit, to review the basics before the start of the course." />
             </ListItem>
           </List>
-        </Col>
-        <Col md={4}>
+        </div>
+        <div style={{ flex: '1 1 250px', minWidth: 0 }}>
           <div>
             <img alt="panda" src={AptisTeacherPanda} width={300} />
           </div>
@@ -128,8 +107,8 @@ const Preview = ({ onStart, onDemo }) => {
               Start
             </Button>
           </div>
-        </Col>
-      </Row>
+        </div>
+      </div>
     </div>
   )
 }

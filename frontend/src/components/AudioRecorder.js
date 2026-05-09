@@ -1,6 +1,6 @@
 import React, { memo, useEffect, useRef, useState } from 'react'
 import Icon from 'react-icons-kit'
-import { Button } from 'react-bootstrap'
+import { Button } from 'components/ui'
 import { ic_play_arrow } from 'react-icons-kit/md/ic_play_arrow'
 import { ic_pause } from 'react-icons-kit/md/ic_pause'
 import { microphoneSlash } from 'react-icons-kit/fa/microphoneSlash'

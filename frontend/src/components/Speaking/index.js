@@ -1,5 +1,4 @@
 import React, { memo, useReducer, useEffect } from 'react'
-import { Col, Row } from 'react-bootstrap'
 import { ToastsStore } from 'react-toasts'
 import { useTranslation } from 'react-i18next'
 import classNames from 'clsx'
@@ -130,8 +129,8 @@ const Speaking = () => {
           tag="h5"
         />
       )}
-      <Row className={styles.content}>
-        <Col md={4}>
+      <div className={`${styles.content} tw:flex tw:flex-wrap`}>
+        <div className="tw:w-full md:tw:w-4/12 tw:px-4">
           <br />
           {question &&
             (question.title.match(ModuleRegExp.space) ? (
@@ -184,10 +183,9 @@ const Speaking = () => {
             />
           </div>
           <br />
-        </Col>
-        <Col
-          md={8}
-          className="d-flex flex-column align-items-center justify-content-center"
+        </div>
+        <div
+          className="tw:w-full md:tw:w-8/12 tw:px-4 d-flex flex-column align-items-center justify-content-center"
         >
           <div className={styles.circle}>
             <AudioRecorder
@@ -201,8 +199,8 @@ const Speaking = () => {
               currentAudioSnapshot={state.audio}
             />
           </div>
-        </Col>
-      </Row>
+        </div>
+      </div>
     </>
   )
 }

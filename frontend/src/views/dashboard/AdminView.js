@@ -1,7 +1,8 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom'
-import { Form, Col, Row, Button, FormGroup } from 'react-bootstrap'
+
+import { Button } from 'components/ui'
 import { ic_add } from 'react-icons-kit/md/ic_add'
 import { ic_mail } from 'react-icons-kit/md/ic_mail'
 import { creditCardAlt } from 'react-icons-kit/fa/creditCardAlt'
@@ -259,10 +260,9 @@ const AdminView = () => {
             <Text color="blue" tag="small">
               Seleccionar un plan
             </Text>
-            <FormGroup>
-              <Form.Control
-                as="select"
-                className={styles.container}
+            <div className="mb-3">
+              <select
+                className={`${styles.container} w-full p-2 rounded-lg border border-gray-200 text-sm font-medium bg-white text-[var(--color-text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-border-focus)]`}
                 onChange={e => handleChangePlan(e.target.value)}
                 value={plans.selected.name}
               >
@@ -271,12 +271,11 @@ const AdminView = () => {
                     {plan.name}
                   </option>
                 ))}
-              </Form.Control>
-            </FormGroup>
-            <FormGroup>
-              <Form.Control
-                as="select"
-                className={styles.container}
+              </select>
+            </div>
+            <div className="mb-3">
+              <select
+                className={`${styles.container} w-full p-2 rounded-lg border border-gray-200 text-sm font-medium bg-white text-[var(--color-text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-border-focus)]`}
                 onChange={e => handleChangeModel(e.target.value)}
                 value={models.model.name}
               >
@@ -285,8 +284,8 @@ const AdminView = () => {
                     {model.name}
                   </option>
                 ))}
-              </Form.Control>
-            </FormGroup>
+              </select>
+            </div>
             <div className={styles.container}>
               <Button onClick={handleAssignPackage}>Asignar</Button>
             </div>
@@ -338,8 +337,8 @@ const AdminView = () => {
       <ErrorHandler>
         <hr />
         <Meeting />
-        <Row>
-          <Col>
+        <div className="flex flex-wrap -mx-3">
+          <div className="w-full md:w-1/2 px-3">
             <div className={styles.form}>
               <Text color="blue" tag="small" className="link" hovered>
                 <Icon
@@ -350,10 +349,10 @@ const AdminView = () => {
                 Usuario
               </Text>
               <div>
-                <Form.Control
+                <input
                   type="text"
                   name="user"
-                  size="sm"
+                  className="w-full p-2 text-sm rounded-lg border border-gray-200 bg-white text-[var(--color-text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-border-focus)]"
                   onChange={onChange}
                   value={form.user}
                   placeholder="Buscar por correo electrónico"
@@ -398,8 +397,8 @@ const AdminView = () => {
                 <Pagination {...users.pagination} onClick={UP.handleSet} />
               )}
             </FlexContainer>
-          </Col>
-          <Col>
+          </div>
+          <div className="w-full md:w-1/2 px-3">
             <div className={styles.form}>
               <Text color="blue" tag="small" className="link" hovered>
                 <Icon
@@ -410,10 +409,10 @@ const AdminView = () => {
                 Profesor
               </Text>
               <div>
-                <Form.Control
+                <input
                   type="text"
                   name="teacher"
-                  size="sm"
+                  className="w-full p-2 text-sm rounded-lg border border-gray-200 bg-white text-[var(--color-text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-border-focus)]"
                   onChange={onChange}
                   value={form.teacher}
                   placeholder="Buscar por correo electrónico"
@@ -455,8 +454,8 @@ const AdminView = () => {
                 </TableRow>
               ))}
             </Management>
-          </Col>
-        </Row>
+          </div>
+        </div>
       </ErrorHandler>
       <ModalDialog
         textHeader={getTextHeaders()}

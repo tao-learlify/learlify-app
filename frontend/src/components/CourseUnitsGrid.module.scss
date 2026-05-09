@@ -75,7 +75,7 @@
   padding: 1.25rem;
   background: white;
   border: 2px solid #e5e7eb;
-  border-left: 4px solid var(--accent-color, #3b82f6);
+  border-left: 4px solid var(--accent-color, #58CC02);
   border-radius: 0.75rem;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -83,8 +83,8 @@
   overflow: hidden;
 
   &:hover:not(:disabled) {
-    border-color: var(--accent-color, #3b82f6);
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+    border-color: var(--accent-color, #58CC02);
+    box-shadow: 0 4px 12px rgba(88, 204, 2, 0.15);
     transform: translateY(-2px);
   }
 
@@ -100,15 +100,15 @@
 
   // Completed state: green accent
   &.unitCardCompleted {
-    border-left-color: #10b981;
+    border-left-color: #58A700;
     background-color: #f0fdf4;
   }
 
   // Current state: highlight
   &.unitCardCurrent {
-    border-color: var(--accent-color, #3b82f6);
-    background: linear-gradient(135deg, rgba(219, 234, 254, 0.3) 0%, rgba(219, 234, 254, 0) 100%);
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    border-color: var(--accent-color, #58CC02);
+    background: linear-gradient(135deg, rgba(88, 204, 2, 0.08) 0%, transparent 100%);
+    box-shadow: 0 0 0 3px rgba(88, 204, 2, 0.1);
   }
 
   // Locked state
@@ -181,9 +181,9 @@
   margin: 0;
   line-height: 1.5;
   padding: 0.75rem;
-  background-color: var(--bg-color, #dbeafe);
+  background-color: var(--bg-color, rgba(88, 204, 2, 0.08));
   border-radius: 0.5rem;
-  border-left: 2px solid var(--accent-color, #3b82f6);
+  border-left: 2px solid var(--accent-color, #58CC02);
 }
 
 // ── Footer ──────────────────────────────────────────────────────
@@ -230,7 +230,7 @@
   align-items: center;
   justify-content: center;
   padding: 0.5rem 0.75rem;
-  background: linear-gradient(135deg, var(--accent-color, #3b82f6), rgba(59, 130, 246, 0.7));
+  background: linear-gradient(135deg, var(--accent-color, #58CC02), rgba(88, 204, 2, 0.7));
   border-radius: 0.5rem;
   color: white;
 }
@@ -262,10 +262,10 @@
 
 .progressFill {
   height: 100%;
-  background: linear-gradient(90deg, var(--accent-color), rgba(59, 130, 246, 0.6));
+  background: linear-gradient(90deg, var(--accent-color, #58CC02), rgba(88, 204, 2, 0.6));
   transition: width 0.3s ease-out;
   border-radius: 0 0 0.5rem 0.5rem;
-  box-shadow: 0 0 8px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 0 8px rgba(88, 204, 2, 0.3);
 }
 
 // ── Last Accessed ───────────────────────────────────────────────
@@ -303,8 +303,8 @@
   }
 
   &.challengeCardCompleted {
-    background: linear-gradient(135deg, #10b981, #059669);
-    border-color: #10b981;
+    background: linear-gradient(135deg, #58A700, #46A302);
+    border-color: #58A700;
   }
 
   &.challengeCardPremium {

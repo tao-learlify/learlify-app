@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
-import { Modal } from 'react-bootstrap'
 import classNames from 'clsx'
+import { Modal } from 'components/ui'
 
 /**
  * @typedef {Object} ModalDialogProps
@@ -26,37 +26,21 @@ const ModalDialog = ({
   removePadding,
   withView
 }) => {
-  const viewContentStyle = withView
-    ? classNames('dropdown-style')
-    : classNames('dropdown-style pt-5 mt-2')
-
   return (
     <Modal
-      show={enabled}
+      isOpen={enabled}
       size={size}
-      onHide={onCloseRequest}
-      dialogClassName={classNames(
-        "modal-90w",
-        removePadding || "rounded"
-      )}
-      className={viewContentStyle}
-    >
-      {textHeader && (
-        <Modal.Header
-          closeButton
-          className={classNames(
-            'text-secondary',
-            'font-weight-bold',
-            className
-          )}
-        >
-          {textHeader}
-        </Modal.Header>
-      )}
-      <Modal.Body className={classNames(
-        className,
+      onClose={onCloseRequest}
+      title={textHeader || undefined}
+      hideClose={!textHeader}
+      className={classNames(
+        withView ? 'dropdown-style' : 'dropdown-style pt-5 mt-2',
         removePadding && 'p-0'
-      )}>{children}</Modal.Body>
+      )}
+    >
+      <div className={classNames(className, removePadding && 'p-0')}>
+        {children}
+      </div>
     </Modal>
   )
 }

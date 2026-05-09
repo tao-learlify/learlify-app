@@ -1,13 +1,12 @@
 import React, { memo } from 'react'
-import { Card, Col, Row } from 'react-bootstrap'
 import { user as user_alt } from 'react-icons-kit/fa/user'
 import { ic_account_circle } from 'react-icons-kit/md/ic_account_circle'
 import { ic_verified_user } from 'react-icons-kit/md/ic_verified_user'
 import Icon from 'react-icons-kit'
-import styled from 'styled-components'
 
 import useAuthProvider from 'hooks/useAuthProvider'
 
+import { Card, CardHeader, CardBody } from 'components/ui'
 import Text from 'components/Text'
 import { getFullName } from 'utils/functions'
 
@@ -17,37 +16,34 @@ const props = {
   color: 'muted'
 }
 
-const StyledIcon = styled(Icon)`
-  position: relative;
-  bottom: 2.5px;
-`
+function StyledIcon(props) {
+  return <Icon {...props} style={{ position: 'relative', bottom: 2.5 }} />
+}
 
 const Profile = () => {
   const { profile: user } = useAuthProvider()
 
   return (
     <Card className="rounded">
-      <Card.Header>
-        <Card.Title>
-          <Text {...props}>
-            Perfil <Icon className="text-info" icon={ic_account_circle} />
-          </Text>
-        </Card.Title>
-      </Card.Header>
-      <Card.Body>
-        <Row>
-          <Col md={2}>
+      <CardHeader>
+        <Text {...props}>
+          Perfil <Icon className="text-info" icon={ic_account_circle} />
+        </Text>
+      </CardHeader>
+      <CardBody>
+        <div className="tw:flex tw:flex-wrap">
+          <div className="tw:w-full md:tw:w-2/12 tw:px-4">
             <img className="border rounded" src={user.imageUrl} alt="profile" />
-          </Col>
-          <Col md={6}>
-            <Row>
-              <Col md={6}>
+          </div>
+          <div className="tw:w-full md:tw:w-6/12 tw:px-4">
+            <div className="tw:flex tw:flex-wrap">
+              <div className="tw:w-full md:tw:w-6/12 tw:px-4">
                 <Text {...props}>
                   <StyledIcon icon={user_alt} />{' '}
                   {getFullName(user.firstName, user.lastName)}
                 </Text>
-              </Col>
-              <Col md={6}>
+              </div>
+              <div className="tw:w-full md:tw:w-6/12 tw:px-4">
                 <Text {...props}>
                   <StyledIcon
                     className="text-success"
@@ -55,11 +51,11 @@ const Profile = () => {
                   />{' '}
                   Verificado
                 </Text>
-              </Col>
-            </Row>
-          </Col>
-        </Row>
-      </Card.Body>
+              </div>
+            </div>
+          </div>
+        </div>
+      </CardBody>
     </Card>
   )
 }

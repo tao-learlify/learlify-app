@@ -1,6 +1,5 @@
 import React, { memo, useCallback } from 'react'
 import { ic_attach_file as attach } from 'react-icons-kit/md/ic_attach_file'
-import { Form } from 'react-bootstrap'
 import Icon from 'react-icons-kit'
 
 import 'assets/css/fileuploader.css'
@@ -24,12 +23,12 @@ const FileUploader = ({ allowedExts, onChange, renderEncType }) => {
   )
 
   return renderEncType ? (
-    <Form encType="multipart/form-data">
+    <form encType="multipart/form-data">
       <label className="btn btn-primary btn-sm hovered">
         <Icon icon={attach} />{' '}
         <input type="file" name="file" onChange={onChangeFileHandler} hidden />
       </label>
-    </Form>
+    </form>
   ) : (
       <label className="btn btn-primary  btn-sm hovered">
         <Icon icon={attach} />{' '}

@@ -63,7 +63,7 @@
   margin: 0;
   font-size: var(--text-sm);
   font-weight: 600;
-  color: #475569;
+  color: var(--color-text-secondary);
   text-align: center;
 }
 
@@ -100,9 +100,9 @@
 
   &[data-mood='happy'] {
     background: #DCFCE7;
-    color: #15803D;
-    border: 1.5px solid #86EFAC;
-    &::after { border-top-color: #86EFAC; }
+    color: var(--color-success-text);
+    border: 1.5px solid rgba(88, 167, 0, 0.3);
+    &::after { border-top-color: rgba(88, 167, 0, 0.3); }
   }
 
   &[data-mood='oops'] {
@@ -169,9 +169,9 @@
 
   // Finished: warm green — audio fully consumed, ready to answer
   &[data-state='finished'] {
-    border-color: #16A34A;
+    border-color: var(--color-success);
     box-shadow:
-      0 6px 0 0 #15803D,
+      0 6px 0 0 var(--color-success-text),
       0 10px 30px rgba(22, 163, 74, 0.12);
   }
 }
@@ -195,7 +195,7 @@
   transition: color 0.3s ease;
 
   .playerCard[data-state='playing']  & { color: #4F46E5; }
-  .playerCard[data-state='finished'] & { color: #16A34A; }
+  .playerCard[data-state='finished'] & { color: var(--color-success); }
 }
 
 // ── Waveform — CSS-only animated bars ─────────────────────────────────────────
@@ -275,10 +275,10 @@
 
   // Finished: green — audio complete, inviting replay
   .playerCard[data-state='finished'] & {
-    background: #16A34A;
-    box-shadow: 0 5px 0 0 #15803D;
-    &:hover  { box-shadow: 0 7px 0 0 #15803D; }
-    &:active { box-shadow: 0 1px 0 0 #15803D; }
+    background: var(--color-success);
+    box-shadow: 0 5px 0 0 var(--color-success-text);
+    &:hover  { box-shadow: 0 7px 0 0 var(--color-success-text); }
+    &:active { box-shadow: 0 1px 0 0 var(--color-success-text); }
   }
 }
 
@@ -320,7 +320,7 @@
     background: linear-gradient(90deg, #4F46E5, #818CF8);
   }
   .playerCard[data-state='finished'] & {
-    background: linear-gradient(90deg, #16A34A, #4ADE80);
+    background: linear-gradient(90deg, var(--color-success), #4ADE80);
   }
 }
 
@@ -339,7 +339,7 @@
   transition: background 0.3s ease;
 
   .playerCard[data-state='playing']  & { background: #4F46E5; }
-  .playerCard[data-state='finished'] & { background: #16A34A; }
+  .playerCard[data-state='finished'] & { background: var(--color-success); }
 }
 
 .timeRow {
@@ -350,7 +350,7 @@
 .timeValue {
   font-size: 10px;
   font-weight: 700;
-  color: #94A3B8;
+  color: var(--color-text-disabled);
   letter-spacing: 0.02em;
   font-variant-numeric: tabular-nums;
 }
@@ -373,7 +373,7 @@
   margin: 0;
   font-size: clamp(1.05rem, 3vw, 1.25rem);
   font-weight: 800;
-  color: #0F172A;
+  color: var(--color-text-primary);
   text-align: center;
   line-height: 1.45;
 }
@@ -414,10 +414,10 @@
       // Suppress all hover and active feedback
       &:hover:not(:disabled) {
         transform: none;
-        border-color: #CBD5E1;
+        border-color: var(--color-border-default);
         background: #fff;
-        color: #1E293B;
-        box-shadow: 0 2px 0 0 #E2E8F0;
+        color: var(--color-text-primary);
+        box-shadow: 0 2px 0 0 var(--color-border-default);
 
         .optionLetter {
           border-color: #C4B5FD;
@@ -429,7 +429,7 @@
 
       &:active:not(:disabled) {
         transform: none;
-        box-shadow: 0 2px 0 0 #E2E8F0;
+        box-shadow: 0 2px 0 0 var(--color-border-default);
       }
     }
   }
@@ -442,15 +442,15 @@
   padding: 8px var(--space-4);
   min-height: 44px;
   border-radius: 14px;
-  border: 2px solid #CBD5E1;
+  border: 2px solid var(--color-border-default);
   background: #fff;
-  color: #1E293B;
+  color: var(--color-text-primary);
   font-size: var(--text-base);
   font-weight: 700;
   cursor: pointer;
   text-align: left;
   user-select: none;
-  box-shadow: 0 2px 0 0 #E2E8F0;
+  box-shadow: 0 2px 0 0 var(--color-border-default);
   transition:
     opacity       0.4s ease-out,
     border-color  0.18s ease-out,
@@ -476,7 +476,7 @@
 
   &:active:not(:disabled) {
     transform: scale(0.98);
-    box-shadow: 0 1px 0 0 #E2E8F0;
+    box-shadow: 0 1px 0 0 var(--color-border-default);
     transition-duration: 0.08s;
   }
 
@@ -499,15 +499,15 @@
 
   // ── Correct ─────────────────────────────────────────────────────────────────
   &[data-state='correct'] {
-    border-color: #16A34A;
-    background: #F0FDF4;
-    color: #15803D;
-    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.10), 0 3px 0 0 #86EFAC;
+    border-color: var(--color-success);
+    background: var(--color-success-bg);
+    color: var(--color-success-text);
+    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.10), 0 3px 0 0 rgba(88, 167, 0, 0.3);
     animation: optionPop 0.38s cubic-bezier(0.34, 1.56, 0.64, 1) both;
 
     .optionLetter {
-      background: #16A34A;
-      border-color: #16A34A;
+      background: var(--color-success);
+      border-color: var(--color-success);
       color: #fff;
       transform: scale(1.14);
     }
@@ -515,15 +515,15 @@
 
   // ── Incorrect ───────────────────────────────────────────────────────────────
   &[data-state='incorrect'] {
-    border-color: #DC2626;
+    border-color: var(--color-error);
     background: #FFF5F5;
-    color: #B91C1C;
-    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.08), 0 3px 0 0 #FECACA;
+    color: var(--color-error-text);
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.08), 0 3px 0 0 rgba(234, 43, 43, 0.3);
     animation: optionShake 0.42s ease-out both;
 
     .optionLetter {
-      background: #DC2626;
-      border-color: #DC2626;
+      background: var(--color-error);
+      border-color: var(--color-error);
       color: #fff;
     }
   }
@@ -597,9 +597,9 @@
   transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.12s;
 
   &:disabled {
-    background: #F1F5F9;
-    color: #94A3B8;
-    box-shadow: 0 4px 0 0 #E2E8F0;
+    background: var(--color-bg-muted);
+    color: var(--color-text-disabled);
+    box-shadow: 0 4px 0 0 var(--color-border-default);
     cursor: not-allowed;
   }
 
@@ -630,7 +630,7 @@
 
   &[data-correct='false'] {
     background: #FAFAFA;
-    border: 2px solid #FEE2E2;
+    border: 2px solid var(--color-error-bg);
   }
 }
 
@@ -655,13 +655,13 @@
   flex-shrink: 0;
 
   &[data-correct='true'] {
-    background: #16A34A;
+    background: var(--color-success);
     color: #fff;
     box-shadow: 0 2px 10px rgba(22, 163, 74, 0.35), inset 0 -2px 0 rgba(0, 0, 0, 0.12);
   }
 
   &[data-correct='false'] {
-    background: #DC2626;
+    background: var(--color-error);
     color: #fff;
     box-shadow: 0 2px 10px rgba(220, 38, 38, 0.30), inset 0 -2px 0 rgba(0, 0, 0, 0.12);
   }
@@ -671,7 +671,7 @@
   margin: 0 0 var(--space-1);
   font-size: var(--text-sm);
   font-weight: 800;
-  color: #1E293B;
+  color: var(--color-text-primary);
 }
 
 .feedbackXp {
@@ -698,13 +698,13 @@
   margin: 4px 0 0;
   font-size: var(--text-sm);
   font-weight: 700;
-  color: #15803D;
+  color: var(--color-success-text);
 }
 
 .feedbackDesc {
   margin: 4px 0 0;
   font-size: var(--text-sm);
-  color: #64748B;
+  color: var(--color-text-secondary);
   line-height: 1.55;
 }
 
@@ -716,17 +716,17 @@
   margin-top: 8px;
   font-size: var(--text-xs);
   font-weight: 700;
-  color: #DC2626;
+  color: var(--color-error);
   background: none;
-  border: 1.5px solid #FECACA;
+  border: 1.5px solid rgba(234, 43, 43, 0.3);
   border-radius: 8px;
   padding: 4px 10px;
   cursor: pointer;
   transition: background 0.15s, border-color 0.15s;
 
   &:hover  { background: #FFF5F5; border-color: #FCA5A5; }
-  &:active { background: #FEE2E2; transition-duration: 0.08s; }
-  &:focus-visible { outline: 2px solid #DC2626; outline-offset: 2px; }
+  &:active { background: var(--color-error-bg); transition-duration: 0.08s; }
+  &:focus-visible { outline: 2px solid var(--color-error); outline-offset: 2px; }
 }
 
 // ── Continue button ─────────────────────────────────────────────────────────────
@@ -745,15 +745,15 @@
   transition: transform 0.1s, box-shadow 0.1s;
 
   &[data-correct='true'] {
-    background: #16A34A;
+    background: var(--color-success);
     color: #fff;
-    box-shadow: 0 5px 0 0 #15803D;
+    box-shadow: 0 5px 0 0 var(--color-success-text);
   }
 
   &[data-correct='false'] {
-    background: #DC2626;
+    background: var(--color-error);
     color: #fff;
-    box-shadow: 0 5px 0 0 #B91C1C;
+    box-shadow: 0 5px 0 0 var(--color-error-text);
   }
 
   &:hover  { transform: translateY(-2px); }

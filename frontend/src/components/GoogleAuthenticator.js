@@ -1,8 +1,7 @@
 import React from 'react'
 import { GoogleLogin } from 'react-google-login'
 import { useTranslation } from 'react-i18next'
-import { Image } from 'react-bootstrap'
-import { Button } from 'styled'
+import { Button } from 'components/ui'
 import lang from 'lang'
 
 import config from 'config'
@@ -39,7 +38,7 @@ const GoogleAuthenticator = ({
           disabled={props.disabled || disabled}
           type="button"
         >
-          {googleButtonText}  <Image className="ml-1" src={img.search} width={18} />
+          {googleButtonText}  <img className="ml-1" src={img.search} width={18} alt="Google" />
         </Button>
       )
     },

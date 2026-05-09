@@ -245,6 +245,31 @@ class PackagesController {
 
     return res.status(400).json({ statusCode: 400 })
   }
+
+  @Bind
+  async cancel(req: Request, res: Response): Promise<Response> {
+    const { id } = req.params as { id: string }
+    const userId = req.user!.id
+
+    const pkg = await this.packagesService.getOne({ id: parseInt(id, 10), userId }) as unknown as {
+      id: number; isActive: boolean
+    } | undefined
+
+    if (!pkg) {
+      throw new NotFoundException('Package not found')
+    }
+
+    await this.packagesService.updateOne({
+      id: pkg.id,
+      cancelledAt: new Date().toISOString().slice(0, 19).replace('T', ' ')
+    })
+
+    return res.status(200).json({
+      message: 'Subscription cancelled. Access continues until the end of the billing period.',
+      response: { id: pkg.id },
+      statusCode: 200
+    })
+  }
 }
 
 export { PackagesController }

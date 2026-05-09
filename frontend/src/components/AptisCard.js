@@ -1,5 +1,5 @@
 import React, { memo } from 'react'
-import { Card, Row, Col } from 'react-bootstrap'
+import { Card } from 'components/ui'
 
 import Text from './Text'
 
@@ -28,27 +28,27 @@ const AptisCard = ({
 }) => {
 
   return alternative ? (
-    <Card className={"custom-border bg-light"}>
+    <Card className="custom-border bg-light">
       <Card.Header>
-        <Row>
-          <Col md={12}>
+        <div className="flex flex-wrap -mx-3">
+          <div className="w-full md:w-full px-3">
             <Text center color='muted' tag={titleTag}>
               {alternativeTextHeaders.main}
             </Text>
-          </Col>
-          <Col md={12}>
+          </div>
+          <div className="w-full md:w-full px-3">
             <Text center color='muted' tag="h6">
               {alternativeTextHeaders.sub}
             </Text>
-          </Col>
-        </Row>
+          </div>
+        </div>
       </Card.Header>
       <Card.Body className="body-style py-0">
         {children}
       </Card.Body>
     </Card>
   ) : (
-    <Card className={"custom-border bg-light"}>
+    <Card className="custom-border bg-light">
       <Card.Header>
         <Text center color={titleColor} tag={titleTag}>
           {title}

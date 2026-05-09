@@ -1,9 +1,9 @@
-import styled from 'styled-components'
+import React from 'react'
+import clsx from 'clsx'
 
-export const Content = styled.div`
-  margin-top: 15px;
-`
-
-export const AudioRecorderContainer = styled.div`
-  margin-top: 25px;
-`
+export function Content({ children, className, ...rest }) {
+  return <div className={clsx('tw:mt-4', className)} {...rest}>{children}</div>
+}
+export function AudioRecorderContainer({ children, className, ...rest }) {
+  return <div className={clsx('tw:mt-6', className)} {...rest}>{children}</div>
+}

@@ -1,45 +1,22 @@
-import styled from 'styled-components'
+import React from 'react'
+import clsx from 'clsx'
 
-export const ParticipantContainer = styled.div`
-    flex: 1;
-`
+export function ParticipantContainer({ children, className, ...rest }) {
+  return <div className={clsx('tw:flex-1', className)} {...rest}>{children}</div>
+}
 
-export const ClassRoomWrapper = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-    @media(min-width: 640px) {
-        flex-direction: row;
-    }
-`
+export function ClassRoomWrapper({ children, className, ...rest }) {
+  return <div className={clsx('tw:flex tw:items-center tw:justify-center tw:w-full tw:h-full tw:flex-col sm:tw:flex-row', className)} {...rest}>{children}</div>
+}
 
-export const UsersContainer = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-    height: 100%;
-    width: 100%;
-`
+export function UsersContainer({ children, className, ...rest }) {
+  return <div className={clsx('tw:flex tw:items-center tw:justify-center tw:flex-1 tw:h-full tw:w-full', className)} {...rest}>{children}</div>
+}
 
-export const WaitingUser = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    color: gray;
-    font-size: 1.7vw;
-    border-radius: 10px;
-    @media screen and (max-width: 620px){
-        font-size: 4vw;
-    }
-`
+export function WaitingUser({ children, className, ...rest }) {
+  return <div className={clsx('tw:flex tw:flex-col tw:items-center tw:justify-center tw:h-full tw:w-full tw:text-gray-400 tw:text-[1.7vw] tw:rounded-[10px] max-[620px]:tw:text-[4vw]', className)} {...rest}>{children}</div>
+}
 
-export const ImageContainer = styled.div`
-    margin-bottom: 15px;
-`
+export function ImageContainer({ children, className, ...rest }) {
+  return <div className={clsx('tw:mb-[15px]', className)} {...rest}>{children}</div>
+}

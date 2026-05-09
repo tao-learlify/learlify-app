@@ -1,67 +1,103 @@
 /* ==========================================================================
-   DESIGN SYSTEM ENTRY — Tailwind v4 + token mapping.
-
-   IMPORTANT: The `tw:` prefix avoids class name conflicts with Bootstrap 4.
-   Bootstrap defines: d-flex, p-1/2/3/4, text-center, m-auto, text-white, etc.
-   Tailwind would generate identical names without the prefix.
-
-   In Tailwind v4, `prefix(tw)` uses colon as separator: use `tw:flex`,
-   `tw:px-5`, `tw:hover:opacity-90` etc. (NOT `tw-flex` with a dash).
-
-   Remove the prefix declaration (and `prefix(tw)`) ONLY after Bootstrap
-   has been fully removed from the project.
+   DUO-DESIGN ENTRY — Tailwind v4 + Duolingo theme.
+   Prefix tw: to coexist with Bootstrap 4 (remove prefix after Bootstrap is gone).
+   Every design token from tokens.css is mapped here for Tailwind utility access.
    ========================================================================== */
 
 @import './base.css';
 
-/* Tailwind v4 with tw: prefix to coexist with Bootstrap 4 (colon separator, not dash) */
 @import "tailwindcss" prefix(tw);
 
-/* ── SOURCE: explicit scan paths for tw: utility detection ─────────────────
-   Tailwind v4 automatic content detection relies on the Vite module graph,
-   but in practice it misses tsx/js files when a prefix is used and there is
-   no tailwind.config.js.  Declaring @source explicitly fixes this.
-   ─────────────────────────────────────────────────────────────────────────── */
 @source "../**/*.{js,jsx,ts,tsx}";
 
-/* ── THEME: Maps design tokens to Tailwind's utility generation ────────────
-   Tailwind v4 reads this @theme block to generate utility classes.
-   Example: --color-brand-primary becomes tw:bg-brand-primary, tw:text-brand-primary.
-   ─────────────────────────────────────────────────────────────────────────── */
+/* ── DUOLINGO THEME ──────────────────────────────────────────────────────── */
 @theme {
-  /* ── Colors ── */
-  --color-brand-primary:       #1a56db;
-  --color-brand-primary-dark:  #1441a8;
-  --color-brand-primary-light: #eff2ff;
-  --color-brand-accent:        #00b4ae;
-  --color-brand-accent-dark:   #008c88;
-  --color-brand-accent-light:  #e0faf9;
+  /* ══════════════════════════════════════════════════════════════════════════
+     COLOURS
+     ══════════════════════════════════════════════════════════════════════════ */
 
-  --color-bg-page:             #f7f8fa;
-  --color-bg-surface:          #ffffff;
-  --color-bg-muted:            #f1f3f5;
-  --color-bg-interactive:      #e9ecef;
+  /* Brand */
+  --color-brand-primary:        #58CC02;
+  --color-brand-primary-dark:   #46A302;
+  --color-brand-primary-light:  #E3F9C8;
+  --color-brand-primary-hover:  #4CB002;
 
-  --color-text-primary:        #111827;
-  --color-text-secondary:      #6b7280;
-  --color-text-disabled:       #9ca3af;
-  --color-text-inverse:        #ffffff;
-  --color-text-accent:         #1a56db;
+  /* Accent */
+  --color-accent:               #FFC800;
+  --color-accent-dark:          #CC9F00;
+  --color-accent-light:         #FFF3C4;
+  --color-brand-accent:         #FFC800;
+  --color-brand-accent-dark:    #CC9F00;
+  --color-brand-accent-light:   #FFF3C4;
 
-  --color-border-default:      #e5e7eb;
-  --color-border-strong:       #d1d5db;
-  --color-border-focus:        #1a56db;
+  /* Navy */
+  --color-navy:                 #042C60;
+  --color-navy-light:           #0E4B8F;
 
-  --color-success:             #16a34a;
-  --color-success-bg:          #dcfce7;
-  --color-warning:             #d97706;
-  --color-warning-bg:          #fef3c7;
-  --color-danger:              #dc2626;
-  --color-danger-bg:           #fee2e2;
-  --color-info:                #0ea5e9;
-  --color-info-bg:             #e0f2fe;
+  /* Blue */
+  --color-duo-blue:             #1CB0F6;
 
-  /* ── Spacing ── */
+  /* Surfaces */
+  --color-bg-page:              #FFFFFF;
+  --color-bg-surface:           #FFFFFF;
+  --color-bg-muted:             #F7F7F7;
+  --color-bg-interactive:       #F0F0F0;
+  --color-bg-overlay:           rgba(0, 0, 0, 0.50);
+
+  /* Text */
+  --color-text-primary:         #4B4B4B;
+  --color-text-body:            #3C3C3C;
+  --color-text-secondary:       #777777;
+  --color-text-disabled:        #AFAFAF;
+  --color-text-inverse:         #FFFFFF;
+  --color-text-link:            #1CB0F6;
+
+  /* Border */
+  --color-border-default:       #E5E5E5;
+  --color-border-strong:        #D1D5DB;
+  --color-border-focus:         #58CC02;
+
+  /* Feedback */
+  --color-success:              #58A700;
+  --color-success-bg:           #E3F9C8;
+  --color-success-text:         #3D6E00;
+  --color-error:                #EA2B2B;
+  --color-error-bg:             #FDE8E8;
+  --color-error-text:           #B91C1C;
+  --color-warning:              #FFC800;
+  --color-warning-bg:           #FFF8E1;
+  --color-warning-text:         #78350F;
+  --color-info-bg:              #E0F2FE;
+  --color-info-text:            #0369A1;
+  --color-danger:               #EA2B2B;
+  --color-danger-bg:            #FDE8E8;
+  --color-danger-text:          #B91C1C;
+
+  /* Accent colours for specialised cards */
+  --color-accent-amber:         #F59E0B;
+  --color-accent-amber-dark:    #D97706;
+  --color-accent-teal:          #0EA5E9;
+  --color-accent-teal-light:    #E0F2FE;
+  --color-accent-teal-border:   #7DD3FC;
+
+  /* Progress */
+  --color-progress:             #58CC02;
+  --color-progress-light:       #E3F9C8;
+  --color-progress-dark:        #46A302;
+
+  /* Icon-system colours */
+  --color-icon-bg-primary:      #E3F9C8;
+  --color-icon-bg-accent:       #FFF3C4;
+  --color-icon-bg-amber:        #FEF3C7;
+  --color-icon-bg-teal:         #E0F2FE;
+  --color-icon-bg-muted:        #F7F7F7;
+  --color-icon-bg-progress:     #E3F9C8;
+  --color-icon-color-amber:     #D97706;
+  --color-icon-color-progress:  #58CC02;
+
+  /* ══════════════════════════════════════════════════════════════════════════
+     SPACING (base-8 scale)
+     ══════════════════════════════════════════════════════════════════════════ */
   --spacing-1:   4px;
   --spacing-2:   8px;
   --spacing-3:   12px;
@@ -74,41 +110,93 @@
   --spacing-16:  64px;
   --spacing-24:  96px;
 
-  /* ── Border Radius ── */
-  --radius-xs:   4px;
-  --radius-sm:   8px;
-  --radius-md:   12px;
-  --radius-lg:   16px;
-  --radius-xl:   20px;
-  --radius-2xl:  24px;
-  --radius-pill: 9999px;
+  /* ══════════════════════════════════════════════════════════════════════════
+     BORDER RADIUS
+     ══════════════════════════════════════════════════════════════════════════ */
+  --radius-xs:    6px;
+  --radius-sm:    8px;
+  --radius-md:    12px;
+  --radius-lg:    16px;
+  --radius-xl:    20px;
+  --radius-2xl:   24px;
+  --radius-3xl:   28px;
+  --radius-4xl:   32px;
+  --radius-pill:  9999px;
+  --radius-full:  9999px;
 
-  /* ── Typography ── */
-  --font-family-sans:    'Varela Round', sans-serif;
-  --font-family-display: 'Dunkin', sans-serif;
+  /* ══════════════════════════════════════════════════════════════════════════
+     SHADOWS
+     ══════════════════════════════════════════════════════════════════════════ */
+  --shadow-none:          none;
+  --shadow-sm:            0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-md:            0 4px 12px rgba(0, 0, 0, 0.10);
+  --shadow-lg:            0 8px 24px rgba(0, 0, 0, 0.14);
+  --shadow-focus:         0 0 0 3px rgba(88, 204, 2, 0.30);
+  --shadow-button:        0 4px 0 0 #E5E5E5;
+  --shadow-button-active: 0 1px 0 0 #E5E5E5;
+  --shadow-button-brand:  0 4px 0 0 #46A302;
+  --shadow-card:          0 4px 12px rgba(0, 0, 0, 0.10);
+  --shadow-chunky:         0 4px 0 0 #E5E5E5;
+  --shadow-chunky-primary:  0 4px 0 0 #46A302;
+  --shadow-chunky-progress: 0 4px 0 0 #46A302;
+  --shadow-chunky-amber:    0 4px 0 0 #D97706;
 
-  --text-xs:      0.6875rem;
-  --text-sm:      0.75rem;
-  --text-md:      0.875rem;
-  --text-base:    0.9375rem;
-  --text-lg:      1rem;
-  --text-xl:      1.125rem;
-  --text-2xl:     1.25rem;
-  --text-3xl:     1.5rem;
-  --text-4xl:     1.875rem;
-  --text-5xl:     2.25rem;
-  --text-display: 3rem;
+  /* ══════════════════════════════════════════════════════════════════════════
+     TYPOGRAPHY
+     ══════════════════════════════════════════════════════════════════════════ */
 
-  /* ── Breakpoints ── */
+  /* Font families */
+  --font-display: 'Dunkin', sans-serif;
+  --font-body:    'Varela Round', sans-serif;
+
+  /* Type scale (font-size / line-height) */
+  --text-xs:      0.6875rem / 1.25;
+  --text-sm:      0.8125rem / 1.5;
+  --text-md:      0.875rem / 1.5;
+  --text-base:    0.9375rem / 1.6;
+  --text-lg:      1.0625rem / 1.5;
+  --text-xl:      1.1875rem / 1.25;
+  --text-2xl:     1.5rem / 1.25;
+  --text-3xl:     1.875rem / 1.25;
+  --text-4xl:     2.25rem / 1.25;
+  --text-5xl:     2.75rem / 1.2;
+  --text-display: 3rem / 1.15;
+
+  /* Font weights */
+  --font-weight-regular:   400;
+  --font-weight-medium:    500;
+  --font-weight-semibold:  600;
+  --font-weight-bold:      700;
+  --font-weight-black:     900;
+
+  /* ══════════════════════════════════════════════════════════════════════════
+     BREAKPOINTS
+     ══════════════════════════════════════════════════════════════════════════ */
   --breakpoint-sm:  576px;
   --breakpoint-md:  768px;
   --breakpoint-lg:  992px;
   --breakpoint-xl:  1200px;
-  --breakpoint-2xl: 1400px;
+
+  /* ══════════════════════════════════════════════════════════════════════════
+     EASING
+     ══════════════════════════════════════════════════════════════════════════ */
+  --ease-default: ease;
+  --ease-in:      ease-in;
+  --ease-out:     ease-out;
+  --ease-bounce:  cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-/* ── DARK MODE VARIANT ──────────────────────────────────────────────────────
-   Matches [data-theme="dark"] on <html> or any ancestor element.
-   Usage: tw-dark:tw-bg-bg-surface
-   ─────────────────────────────────────────────────────────────────────────── */
+/* ── DARK MODE VARIANT ───────────────────────────────────────────────────── */
 @variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/* ── UTILITY LAYER ───────────────────────────────────────────────────────── */
+@layer utilities {
+  /* Z-index helpers (not natively themable in TW v4) */
+  .tw\:z-below    { z-index: -1; }
+  .tw\:z-raised   { z-index: 10; }
+  .tw\:z-dropdown { z-index: 100; }
+  .tw\:z-sticky   { z-index: 200; }
+  .tw\:z-overlay  { z-index: 300; }
+  .tw\:z-modal    { z-index: 400; }
+  .tw\:z-toast    { z-index: 500; }
+}

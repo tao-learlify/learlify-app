@@ -22,7 +22,8 @@ class Courses {
     return checkSchema({
       demo: {
         in: 'query',
-        isBoolean: true
+        isBoolean: true,
+        optional: true
       },
 
       model: {

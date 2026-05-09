@@ -1,5 +1,5 @@
 import React, { Fragment, memo } from 'react'
-import { Row, Col } from 'react-bootstrap'
+
 
 import useExamConsumer from 'hooks/useExamConsumer'
 
@@ -42,11 +42,11 @@ const Picker = ({ render }) => {
         return (
           <ErrorHandler>
             <CoreContainer>
-              <Row>
-                <Col xs={12} className="text-center">
+              <div className="flex flex-wrap -mx-3">
+                <div className="w-full px-3 text-center">
                   <Core />
-                </Col>
-              </Row>
+                </div>
+              </div>
             </CoreContainer>
           </ErrorHandler>
         )
@@ -55,11 +55,11 @@ const Picker = ({ render }) => {
         return (
           <ErrorHandler>
             <CoreContainer>
-              <Row>
-                <Col xs={12} className="text-center">
+              <div className="flex flex-wrap -mx-3">
+                <div className="w-full px-3 text-center">
                   <Core />
-                </Col>
-              </Row>
+                </div>
+              </div>
             </CoreContainer>
           </ErrorHandler>
         )
@@ -68,11 +68,11 @@ const Picker = ({ render }) => {
         return (
           <ErrorHandler>
             <CoreContainer>
-              <Row>
-                <Col xs={12} className="text-center">
+              <div className="flex flex-wrap -mx-3">
+                <div className="w-full px-3 text-center">
                   <Core />
-                </Col>
-              </Row>
+                </div>
+              </div>
             </CoreContainer>
           </ErrorHandler>
         )

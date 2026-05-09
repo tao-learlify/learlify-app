@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
-import { Row, Col } from 'react-bootstrap'
+
 import { useTranslation } from 'react-i18next'
 
 import useModels from 'hooks/useModels'
@@ -59,27 +59,26 @@ const StatsView = () => {
       view
       withLoader={loading}
     >
-      <Text center color="blue" dunkin tag="h4">
-        {t('STATS.title')} <img alt="stats" src={img.review} width={35} />
-      </Text>
-      <hr />
-      <br />
-      <Row>
-        <Col md={6}>
+      <div className="tw:text-center tw:mb-4">
+        <Text center color="blue" dunkin tag="h4">
+          {t('STATS.title')} <img alt="stats" src={img.review} width={35} />
+        </Text>
+        <hr />
+      </div>
+      <div className="tw:flex tw:flex-wrap tw:-mx-3">
+        <div className="tw:w-full lg:tw:w-1/2 tw:px-3 tw:mb-4">
           <Evaluations onRenderPage={EP.handleSet} />
-        </Col>
-        <Col md={6}>
+        </div>
+        <div className="tw:w-full lg:tw:w-1/2 tw:px-3 tw:mb-4">
           <Stats show={false} />
-        </Col>
-        <Col md={6}>
-        <br />
+        </div>
+        <div className="tw:w-full lg:tw:w-1/2 tw:px-3">
           <Evaluations onRenderPage={LP.handleSet} latest />
-        </Col>
-        <Col md={6}>
-          <br />
+        </div>
+        <div className="tw:w-full lg:tw:w-1/2 tw:px-3">
           {/* <Stats categories show={false} /> */}
-        </Col>
-      </Row>
+        </div>
+      </div>
     </Template>
   )
 }

@@ -1,8 +1,8 @@
 import React, { memo } from 'react'
-import { Row, Col, ProgressBar } from 'react-bootstrap'
+import { Progress } from 'components/ui'
 import { ic_clear } from 'react-icons-kit/md/ic_clear'
-import styled from 'styled-components'
 import Icon from 'react-icons-kit'
+import clsx from 'clsx'
 
 import Emoji from './Emoji'
 import Text from './Text'
@@ -11,9 +11,9 @@ import FlexContainer from './FlexContainer'
 import { over } from 'utils/functions'
 import { calcProgress } from 'utils/progress'
 
-const RowContainer = styled.div`
-  margin-top: 10px;
-`
+function RowContainer({ children, className, ...rest }) {
+  return <div className={clsx('tw:mt-2.5', className)} {...rest}>{children}</div>
+}
 
 /**
  * @typedef {Object} ExamLayoutProps
@@ -44,8 +44,8 @@ const ExamLayout = ({
   render
 }) => (
   <React.Fragment>
-    <Row className="aligns-items-center">
-      <Col xs={12}>
+    <div className="tw:flex tw:flex-wrap tw:items-center">
+      <div className="tw:w-full">
         <div className="d-flex justify-content-center">
           {onLeave && (
             <Icon
@@ -55,18 +55,18 @@ const ExamLayout = ({
               onClick={onLeave}
             />
           )}
-          <ProgressBar
-            className="w-100 bg-progress"
-            now={calcProgress(progress.value + 1, progress.limit)}
+          <Progress
+            className="w-100"
+            value={calcProgress(progress.value + 1, progress.limit)}
             label={over(progress.value, progress.limit)}
           />
         </div>
-      </Col>
-    </Row>
+      </div>
+    </div>
     {render && (
       <RowContainer>
-        <Row>
-          <Col xs={12} className="text-center">
+        <div className="tw:flex tw:flex-wrap">
+          <div className="tw:w-full tw:text-center">
             {typeof emojiName === 'object' ? (
               emojiName.nextline ? (
                 <FlexContainer>
@@ -102,9 +102,9 @@ const ExamLayout = ({
                 {description}
               </Text>
             )}
-          </Col>
+          </div>
           {children}
-        </Row>
+        </div>
       </RowContainer>
     )}
   </React.Fragment>

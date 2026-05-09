@@ -1,19 +1,15 @@
-import styled from 'styled-components'
+import React from 'react'
+import clsx from 'clsx'
 
-export const CoreContainer = styled.div`
-  margin-bottom: 5px;
-`
-
-export const ListeningContainer = styled.div`
-  margin-bottom: 10px;
-`
-
-export const ReadingContainer = styled.div`
-  margin-bottom: 10px;
-  padding-bottom: 10px;
-`
-
-export const WritingContainer = styled.div`
-  margin-bottom: calc(10px + 10vh);
-  padding-bottom: 7.5px;
-`
+export function CoreContainer({ children, className, ...rest }) {
+  return <div className={clsx('tw:mb-1.5', className)} {...rest}>{children}</div>
+}
+export function ListeningContainer({ children, className, ...rest }) {
+  return <div className={clsx('tw:mb-2.5', className)} {...rest}>{children}</div>
+}
+export function ReadingContainer({ children, className, ...rest }) {
+  return <div className={clsx('tw:mb-2.5 tw:pb-2.5', className)} {...rest}>{children}</div>
+}
+export function WritingContainer({ children, className, ...rest }) {
+  return <div className={clsx('tw:mb-[calc(10px+10vh)] tw:pb-2', className)} {...rest}>{children}</div>
+}

@@ -1,6 +1,4 @@
 import React, { memo, useMemo } from 'react'
-import { Form } from 'react-bootstrap'
-
 
 /**
  * @typedef {Object} MatchingProps
@@ -21,12 +19,11 @@ const Matching = ({ classNameInput, name, onChange, value, length }) => {
 
   return (
     <React.Fragment>
-      <Form.Control
-        className={classNameInput} 
+      <input
+        className={`${classNameInput} form-control tw:w-full tw:rounded-lg tw:border tw:border-gray-300 tw:p-2 focus:tw:border-[#58CC02] focus:tw:ring-1 focus:tw:ring-[#58CC02]${maxInputExceed ? ' is-invalid' : ''}`}
         name={name}
         onChange={onChange}
         value={value}
-        isInvalid={maxInputExceed}
       />
     </React.Fragment>
   )
@@ -36,10 +33,6 @@ Matching.defaultProps = {
   classNameInput: '',
   onChange: () => null,
   length: 3,
-
 }
-
-
-
 
 export default memo(Matching)

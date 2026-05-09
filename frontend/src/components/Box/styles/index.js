@@ -1,12 +1,13 @@
-import { Card } from 'react-bootstrap'
-import styled from 'styled-components'
+import React from 'react'
+import clsx from 'clsx'
 
-export const Header = styled(Card.Header)`
-  &:first-child {
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border: 5px solid #d9d9d9;
-    border-bottom: none;
-    background-color: #FFFFFF;
-  }
-`
+export function Header({ children, className, ...rest }) {
+  return (
+    <div
+      className={clsx('tw:rounded-t-[20px] tw:border-[5px] tw:border-[#d9d9d9] tw:border-b-0 tw:bg-white tw:p-3', className)}
+      {...rest}
+    >
+      {children}
+    </div>
+  )
+}

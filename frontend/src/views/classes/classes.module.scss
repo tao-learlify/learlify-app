@@ -3,10 +3,197 @@
   justify-content: space-around;
 }
 
-.commits { 
+.commits {
   margin-top: 30px;
 }
 
 .icon {
   margin-right: 4px;
+}
+
+/* ── Migrated from styled/index.js ──────────────────────────────────────── */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+
+  @media (min-width: 701px) {
+    padding: 10px 40px;
+  }
+}
+
+.title {
+  display: flex;
+  font-family: Dunkin;
+  justify-content: center;
+  align-items: center;
+  color: rgb(60, 60, 60);
+  font-size: 5vw;
+
+  @media (min-width: 601px) {
+    font-size: 42px;
+  }
+}
+
+.descTitle {
+  font-family: 'Roboto';
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  color: rgb(60, 60, 60);
+  font-size: 5vw;
+  padding-bottom: 10px;
+  margin-top: 32px;
+  font-weight: 900;
+  width: 100%;
+
+  @media (min-width: 501px) {
+    font-size: 30px;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.description {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 20px;
+}
+
+.descReservations {
+  justify-content: center;
+  background-color: #008bc1;
+  border-radius: 80px;
+  margin-top: 20px;
+  padding-bottom: 30px;
+}
+
+.boxedReservations {
+  align-items: center;
+  justify-content: center;
+  background-color: #005082;
+  border-radius: 80px;
+  margin-bottom: -50px;
+  width: 400px;
+}
+
+.boxedBehind {
+  justify-content: center;
+  border-radius: 60px;
+  padding: 20px;
+}
+
+.boxedDesc {
+  justify-content: center;
+  border-radius: 60px;
+  padding: 10px 30px;
+}
+
+.keyPoint {
+  font-family: 'Roboto';
+  display: flex;
+  justify-content: center;
+  font-size: 4vw;
+  font-weight: 100;
+
+  @media (min-width: 501px) {
+    font-size: 22px;
+  }
+}
+
+.priceText {
+  display: flex;
+  align-items: left;
+  color: rgb(60, 60, 60);
+  font-size: 4vw;
+  margin-top: 10px;
+  width: 100%;
+
+  @media (min-width: 501px) {
+    font-size: 32px;
+  }
+}
+
+.classText {
+  display: flex;
+  align-items: left;
+  color: rgb(60, 60, 60);
+  font-size: 4vw;
+  margin-top: -15px;
+  font-weight: bold;
+  width: 100%;
+
+  @media (min-width: 501px) {
+    font-size: 42px;
+  }
+}
+
+.boxedTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-family: Dunkin;
+  font-size: 6vw;
+  padding-bottom: 10px;
+  width: 100%;
+
+  @media (min-width: 501px) {
+    font-size: 22px;
+  }
+}
+
+.boxedText {
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-family: Monserrat-Light;
+  font-size: 4vw;
+
+  @media (min-width: 501px) {
+    font-size: 18px;
+  }
+}
+
+.boxedButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 4vw;
+  font-weight: 700;
+  border-radius: 34px;
+  background-color: #005082;
+  color: #ffffff;
+  padding: 10px;
+  text-decoration: none;
+
+  @media (min-width: 601px) {
+    font-size: 18px;
+  }
+
+  &:hover {
+    background-color: #989898;
+    border-color: #989898;
+  }
+
+  &.alt {
+    background-color: #18a2b8;
+  }
+}
+
+.dotImg {
+  width: 30px;
 }

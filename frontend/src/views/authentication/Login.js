@@ -112,7 +112,16 @@ const Login = () => {
   const handleDemoSession = () => {
     dispatch(demoThunk())
       .then(unwrapResult)
-      .then(() => history.push(PATH.MODELS))
+      .then(() => {
+        if (redirect) {
+          const found = links.find(l => l.ref === redirect)
+          if (found) {
+            history.push(found.route)
+            return
+          }
+        }
+        history.push(PATH.MODELS)
+      })
       .catch(({ message }) => ToastsStore.warning(message))
   }
 

@@ -1,42 +1,21 @@
-import styled from 'styled-components'
+import React from 'react'
+import clsx from 'clsx'
 
+export const searchStyles = { position: 'relative', bottom: 3 }
+export const prependStyles = { ...searchStyles, height: 30 }
 
-/**
- * @type {React.CSSProperties} searchStyles
- */
-export const searchStyles = {
-  position: 'relative',
-  bottom: 3
+export function BannerContainer({ children, className, ...rest }) {
+  return <div className={clsx('tw:flex tw:justify-center', className)} {...rest}>{children}</div>
 }
-
-/**
- * @type {React.CSSProperties} searchStyles
- */
-export const prependStyles = {
-  ...searchStyles,
-  height: 30
+export function ViewContainer({ children, className, ...rest }) {
+  return <div className={clsx('tw:mt-4', className)} {...rest}>{children}</div>
 }
-
-export const BannerContainer = styled.div`
-  display: flex;
-  justify-content: center;
-`
-
-export const ViewContainer = styled.div`
-  margin-top: 15px;
-`
-
-export const RowContainer = styled.div`
-  margin-top: 15px;
-`
-
-export const PaperContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  margin-top: 7.5px;
-  padding-top: 7.5px;
-`
-
-export const TestDetailItemContainer = styled.div`
-  margin-bottom: 5px;
-`
+export function RowContainer({ children, className, ...rest }) {
+  return <div className={clsx('tw:mt-4', className)} {...rest}>{children}</div>
+}
+export function PaperContainer({ children, className, ...rest }) {
+  return <div className={clsx('tw:flex tw:justify-center tw:mt-2 tw:pt-2', className)} {...rest}>{children}</div>
+}
+export function TestDetailItemContainer({ children, className, ...rest }) {
+  return <div className={clsx('tw:mb-1.5', className)} {...rest}>{children}</div>
+}

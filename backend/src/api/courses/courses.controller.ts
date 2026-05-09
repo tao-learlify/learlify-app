@@ -139,7 +139,7 @@ class CoursesController {
       // Restore when payment system is ready
       // if (isSubscribed || query.demo === true) {
       
-      // Obtén todas las secciones con progreso
+      // Build units from course advances
       const units = (courses as Record<string, unknown>[])
         .flatMap((c: Record<string, unknown>) => 
           (c.advances as Record<string, unknown>[]).flatMap((adv: Record<string, unknown>) => 
@@ -147,14 +147,24 @@ class CoursesController {
           )
         )
 
+      // Demo mode: limit access to first 2 units, lock the rest
+      const isDemo = query.demo === 'true'
+      const processedUnits = isDemo
+        ? units.map((unit, index) => ({
+            ...unit,
+            state: index < 2 ? undefined : 'locked',
+            locked: index >= 2
+          }))
+        : units
+
       // Remove advances from courses (avoid redundancy)
       const cleanedCourses = (courses as Record<string, unknown>[]).map((course: Record<string, unknown>) => {
         const cleaned = { ...course }
         // Remove the advances array to avoid duplication
         delete cleaned.advances
         // Add totalSections metadata
-        if (units.length > 0) {
-          cleaned.totalSections = units.length
+        if (processedUnits.length > 0) {
+          cleaned.totalSections = processedUnits.length
         }
         return cleaned
       })
@@ -162,14 +172,11 @@ class CoursesController {
       return res.json({
         message: 'Courses Obtained Successfully',
         response: {
-          units,
+          units: processedUnits,
           courses: cleanedCourses
         },
         statusCode: 200
       })
-      // }
-
-      // throw new PaymentException()
     }
 
     throw new NotFoundException()

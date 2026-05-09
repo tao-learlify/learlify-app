@@ -1,5 +1,6 @@
 import React, { memo } from 'react'
-import { Badge, Card } from 'react-bootstrap'
+import { Badge } from 'components/ui'
+import { Card } from 'components/ui'
 
 import CounterItem from './CounterItem'
 import FlexContainer from 'components/FlexContainer'
@@ -27,7 +28,7 @@ const BadgeProps = {
  */
 const CountOverview = ({ classes, speakings, writings }) => (
   <FlexContainer>
-    <Card>
+    <Card elevated>
       <Card.Body>
         <FlexContainer>
           <CounterItem className="mr-2">

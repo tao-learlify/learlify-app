@@ -1,7 +1,6 @@
 import React from 'react'
-import styled from 'styled-components'
+import clsx from 'clsx'
 import { GooSpinner } from 'react-spinners-kit'
-import { Container } from 'react-bootstrap'
 import { useDispatch } from 'react-redux'
 import { Animated } from 'react-animated-css'
 import classNames from 'clsx'
@@ -26,10 +25,9 @@ import { updateNetwork } from 'store/@reducers/settings'
 
 import styles from './template.module.scss'
 
-export const TextSpinnerContainer = styled.div`
-  margin-top: 30px;
-  margin-left: 25px;
-`
+export function TextSpinnerContainer({ children, className, ...rest }) {
+  return <div className={clsx('tw:mt-8 tw:ml-6', className)} {...rest}>{children}</div>
+}
 
 /**
  * @typedef {Object} TemplateProps
@@ -76,7 +74,7 @@ const Template = ({
     <NetworkStatus>
       {withNavbar && <Navigation color={color} />}
       {withLoader ? (
-        <Container className={styles.loading}>
+        <div className={styles.loading}>
           <Animated animationIn="fadeIn">
             <FlexContainer>
               <GooSpinner size={120} color={GRAY} />
@@ -85,17 +83,18 @@ const Template = ({
               {loaderIndicatorName}
             </Text>
           </Animated>
-        </Container>
+        </div>
       ) : view ? (
         <Animated animationIn="fadeIn">
-          <Container
+          <div
             className={classNames(
+              'container mx-auto px-4',
               view && styles.view,
               withoutSpace && styles.withoutSpace
             )}
           >
             {children}
-          </Container>
+          </div>
           {withVideos && !withLoader && (
             <>
               <br />

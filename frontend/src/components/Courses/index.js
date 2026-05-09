@@ -13,7 +13,7 @@ import Text from 'components/Text'
 import Panda from 'assets/illustrations/decorative/courses.svg'
 import styles from './index.module.scss'
 
-import { Button } from 'styled'
+import { Button } from 'components/ui'
 import { BLUE } from 'assets/colors'
 
 import PATH from 'utils/path'

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { ListGroup } from 'react-bootstrap'
+
 import { eye } from 'react-icons-kit/fa/eye'
 import { eyeSlash } from 'react-icons-kit/fa/eyeSlash'
 import { ic_done_all } from 'react-icons-kit/md/ic_done_all'
@@ -112,15 +112,19 @@ const NotificationsView = () => {
           />
         </Text>
       </>
-      <ListGroup className="rounded" variant="flush">
+      <ul className="rounded-xl overflow-hidden divide-y divide-gray-100 border border-gray-100 bg-white">
         {data.map(notification => (
-          <div
+          <li
             onClick={() => handleMarkAsRead(notification)}
             className={classNames(
               notification.read || styles.unread,
-              'list-group-item',
-              'flex-column',
-              'align-items-start'
+              'p-4',
+              'flex',
+              'flex-col',
+              'items-start',
+              'cursor-pointer',
+              'hover:bg-gray-50',
+              'transition-colors'
             )}
             key={notification.id}
           >
@@ -144,9 +148,9 @@ const NotificationsView = () => {
                 />
               </div>
             </FlexContainer>
-          </div>
+          </li>
         ))}
-      </ListGroup>
+      </ul>
       <br />
       <FlexContainer>
         {pagination && pagination.total >= pagination.limit && (

@@ -1,5 +1,4 @@
 import React, { memo } from 'react'
-import { Card } from 'react-bootstrap'
 import { CardElement } from '@stripe/react-stripe-js'
 import { useTranslation } from 'react-i18next'
 import { WhisperSpinner } from 'react-spinners-kit'
@@ -10,7 +9,7 @@ import classNames from 'clsx'
 import Text from 'components/Text'
 
 import styles from '../payment.module.scss'
-import { Button } from 'styled'
+import { Button, Card, CardBody } from 'components/ui'
 import { BLUE, GRAY, RED, TURQUOISE, WHITE } from 'assets/colors'
 import { ic_cancel } from 'react-icons-kit/md/ic_cancel'
 import { ic_card_giftcard } from 'react-icons-kit/md/ic_card_giftcard'
@@ -34,8 +33,8 @@ const Checkout = ({ defaultPaymentMethod, disabled, onPaymentRequest, onCancelPa
   }
 
   return (
-    <Card className={classNames(defaultPaymentMethod || styles.setup)}>
-      <Card.Body>
+    <Card>
+      <CardBody>
         <div className={classNames('checkout', styles.container)}>
           <div>
             <div className="d-flex justify-content-center">
@@ -75,7 +74,7 @@ const Checkout = ({ defaultPaymentMethod, disabled, onPaymentRequest, onCancelPa
             </form>
           </div>
         </div>
-      </Card.Body>
+      </CardBody>
     </Card>
   )
 }

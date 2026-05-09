@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
-import { Container, Button, FormGroup } from 'react-bootstrap'
+
+import { Button } from 'components/ui'
 
 import Animate from 'components/Animate'
 import Emoji from 'components/Emoji'
@@ -76,11 +77,11 @@ class ErrorHandler extends PureComponent {
               <Text center color="muted" tag="h3">
                 Lo sentimos, tienes un problema de incompatibilidad
               </Text>
-              <Container>
+              <div className="container mx-auto px-4">
                 <FlexContainer>
                   <img src={img.settings} alt="critical-error" />
                 </FlexContainer>
-                <Container>
+                <div className="container mx-auto px-4">
                   <br />
                   <Text center bold tag="p" color="muted">
                     Contacta con nosotros para que podamos ayudarte, haz click
@@ -100,7 +101,7 @@ class ErrorHandler extends PureComponent {
                   </FlexContainer>
                   <br />
                   <FlexContainer>
-                    <FormGroup>
+                    <div className="flex gap-2">
                       <Button
                         onClick={this.handleRedirectDashboard}
                         className="m-1"
@@ -115,10 +116,10 @@ class ErrorHandler extends PureComponent {
                       >
                         Reiniciar
                       </Button>
-                    </FormGroup>
+                    </div>
                   </FlexContainer>
-                </Container>
-              </Container>
+                </div>
+              </div>
             </React.Fragment>
           )}
           <Report

@@ -1,16 +1,14 @@
 import React, { memo } from 'react'
-import { Col, Row } from 'react-bootstrap'
-import styled from 'styled-components'
+import clsx from 'clsx'
 
 import Emoji from './Emoji'
 import Text from './Text'
 import Dropdown from './Dropdown'
 import DropdownItem from './DropdownItem'
 
-const PickerContainer = styled.div`
-  margin-bottom: 15px;
-  padding-bottom: 15px;
-`
+function PickerContainer({ children, className, ...rest }) {
+  return <div className={clsx('tw:mb-4 tw:pb-4', className)} {...rest}>{children}</div>
+}
 
 /**
  * @typedef {Object} PickerProps
@@ -48,8 +46,8 @@ const Picker = memo(
           {title}
         </Text>
       </PickerContainer>
-      <Row>
-        <Col md={8} lg={8} xs={12} sm={12}>
+      <div className="tw:flex tw:flex-wrap tw:mb-4">
+        <div className="tw:w-full md:tw:w-8/12 tw:px-4">
           <Text bold color="dark" tag="h4">
             {description}
           </Text>
@@ -64,13 +62,13 @@ const Picker = memo(
               {subheader}
             </Text>
           )}
-        </Col>
-        <Col md={4} lg={4} xs={12} sm={12}>
+        </div>
+        <div className="tw:w-full md:tw:w-4/12 tw:px-4">
           <Emoji name={emoji} />
-        </Col>
-      </Row>
-      <Row>
-        <Col md={6} lg={7} xs={12} sm={12}>
+        </div>
+      </div>
+      <div className="tw:flex tw:flex-wrap">
+        <div className="tw:w-full md:tw:w-7/12 tw:px-4">
           {dropdownTextInfo && (
             <div className="mb-1 pb-1">
               <Text tag="small" color="muted">
@@ -87,8 +85,8 @@ const Picker = memo(
               />
             ))}
           </Dropdown>
-        </Col>
-      </Row>
+        </div>
+      </div>
     </>
   )
 )

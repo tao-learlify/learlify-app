@@ -8,7 +8,7 @@ import { I18nextProvider } from 'react-i18next'
  * @description
  * Styles should stay before <App /> Component mount.
  */
-import 'bootstrap-css-only/css/bootstrap.min.css'
+import 'bootstrap-css-only'
 import 'animate.css'
 import 'react-dragula/dist/dragula.css'
 import 'hover.css/css/hover.css'

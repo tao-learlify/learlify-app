@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from 'react-bootstrap'
+import { Button } from 'components/ui'
 import { useTranslation } from 'react-i18next'
 
 import Text from 'components/Text'

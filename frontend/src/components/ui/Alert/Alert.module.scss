@@ -1,0 +1,80 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   Alert — Semantic notification banner.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.alert {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+  border: 1px solid transparent;
+}
+
+.icon {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+}
+
+.title {
+  font-weight: var(--weight-bold);
+  margin: 0 0 var(--space-1);
+  font-size: var(--text-md);
+}
+
+.body {
+  color: inherit;
+}
+
+.dismiss {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: transparent;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  color: inherit;
+  opacity: 0.7;
+  margin-left: auto;
+  transition: opacity var(--duration-fast) var(--easing-default);
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+/* ── Variants ─────────────────────────────────────────────────────────────── */
+.success {
+  background-color: var(--color-success-bg);
+  color: var(--color-success-text);
+  border-color: var(--color-brand-primary-light);
+}
+
+.error {
+  background-color: var(--color-error-bg);
+  color: var(--color-error-text);
+  border-color: #FECACA;
+}
+
+.warning {
+  background-color: var(--color-warning-bg);
+  color: var(--color-warning-text);
+  border-color: var(--color-accent-light);
+}
+
+.info {
+  background-color: var(--color-bg-muted);
+  color: var(--color-text-primary);
+  border-color: var(--color-border-default);
+}

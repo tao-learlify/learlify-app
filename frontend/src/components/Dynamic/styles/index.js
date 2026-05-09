@@ -1,5 +1,6 @@
-import styled from 'styled-components'
+import React from 'react'
+import clsx from 'clsx'
 
-export const TextInput = styled.div`
-  font-size: 11px;
-`
+export function TextInput({ children, className, ...rest }) {
+  return <div className={clsx('tw:text-[11px]', className)} {...rest}>{children}</div>
+}

@@ -25,6 +25,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import useCourses from 'hooks/useCourses'
 import useAdvance from 'hooks/useAdvance'
+import useAuthProvider from 'hooks/useAuthProvider'
 import useModels from 'hooks/useModels'
 import { fetchCoursesThunk } from 'store/@thunks/courses'
 import { unlockedUnitsSelector } from 'store/@selectors/courses'
@@ -135,7 +136,7 @@ function useLearningPathWithSchema(exams = []) {
   const { data: coursesData, loading: coursesLoading } = useCourses()
   const advance = useAdvance()
   const unlockedUnits = useSelector(unlockedUnitsSelector)
-  const { model } = useModels()
+  const { model } = useModels(); const { demo } = useAuthProvider()
 
   const fetchDispatchedRef = useRef(false)
   const schemaUnitsRef = useRef(null)
@@ -153,7 +154,7 @@ function useLearningPathWithSchema(exams = []) {
     if (!modelName || typeof modelName !== 'string' || modelName.startsWith('[object')) return
     
     fetchDispatchedRef.current = true
-    dispatch(fetchCoursesThunk({ model: modelName, demo: false }))
+    dispatch(fetchCoursesThunk({ model: modelName, demo: demo || false }))
   }, [coursesData.length, coursesLoading])
 
   // ── Step 2: Load schema units once ───────────────────

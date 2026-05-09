@@ -17,7 +17,7 @@ import PATH from 'utils/path'
  * @returns {Promise<import('schemas/course/hierarchy').Unit|null>}
  */
 async function loadSampleUnit(unitOrder) {
-  if (process.env.NODE_ENV !== 'development') return null
+  if (!import.meta.env.DEV) return null
   try {
     const module = await import('schemas/course/samples/index')
     return (await module.getCourseUnit(unitOrder)) || null
