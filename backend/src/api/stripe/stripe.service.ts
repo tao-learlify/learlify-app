@@ -7,28 +7,34 @@ import { ConfigService } from 'api/config/config.service'
 import { MODE } from 'common/process'
 import type { ConfigurationProvider } from '@types'
 import events from './stripe.events'
-import type { StripeCustomer, StripeIntentInfo, PaymentResponse } from './stripe.types'
+import type {
+  StripeCustomer,
+  StripeIntentInfo,
+  PaymentResponse
+} from './stripe.types'
 
 const privateStripeKey = Symbol('privateStripeKey')
 
 class StripeService {
   logger: typeof Logger.Service
-  provider: ConfigurationProvider
+  provider: ConfigurationProvider;
   declare [privateStripeKey]: Stripe
 
   constructor() {
     this.logger = Logger.Service
     this.provider = new ConfigService().provider
-    this[privateStripeKey] = new (Stripe as unknown as new (key: string) => Stripe)(
-      process.env.STRIPE_API_KEY!
-    )
+    this[privateStripeKey] = new ((Stripe as unknown) as new (
+      key: string
+    ) => Stripe)(process.env.STRIPE_API_KEY!)
   }
 
   private get stripe(): Stripe {
     return this[privateStripeKey]
   }
 
-  static generatePaymentResponse(intent: Stripe.PaymentIntent): PaymentResponse {
+  static generatePaymentResponse(
+    intent: Stripe.PaymentIntent
+  ): PaymentResponse {
     if (
       intent.status === events.REQUIRES_ACTION &&
       intent.next_action!.type === events.USE_STRIPE_SDK
@@ -58,20 +64,11 @@ class StripeService {
       }
     }
 
-    const idempotencyKey = crypto
-      .createHash('sha256')
-      .update(`addCustomer:${customer.email}`)
-      .digest('hex')
-
     try {
-      const membership = await this.stripe.customers.create(
-        {
-          source: customer.source,
-          email: customer.email,
-          description: `Customer ${firstName} ${lastName}`
-        },
-        { idempotencyKey }
-      )
+      const membership = await this.stripe.customers.create({
+        email: customer.email,
+        description: `Customer ${firstName} ${lastName}`
+      })
       this.logger.debug('stripe.service.membership', membership)
 
       return {

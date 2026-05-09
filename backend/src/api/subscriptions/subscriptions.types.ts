@@ -32,6 +32,11 @@ export interface CancelSubscriptionInput {
   immediately?: boolean
 }
 
+export interface ReactivateSubscriptionInput {
+  subscriptionId: number
+  userId: number
+}
+
 export interface SubscriptionRow {
   id: number
   user_id: number
@@ -48,4 +53,27 @@ export interface SubscriptionRow {
   stripe_customer_id: string | null
   payment_method_id: string | null
   idempotency_key: string
+}
+
+export interface MySubscriptionResult {
+  subscription: SubscriptionRow & {
+    canCancel: boolean
+    canReactivate: boolean
+    canUpdatePaymentMethod: boolean
+  }
+  package: {
+    isActive: boolean
+    expirationDate: string | null
+    credits: {
+      speaking: number
+      writing: number
+      classes: number
+    }
+  } | null
+  ui: {
+    primaryLabel: string
+    description: string
+    showUpgrade: boolean
+    purchaseDisabled: boolean
+  }
 }

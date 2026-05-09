@@ -13,14 +13,17 @@ import usePlans from 'hooks/usePlans'
 
 import Checkout from './components/Checkout'
 import Text from 'components/Text'
-import ModalDialog from 'components/ModalDialog'
+import { Modal } from 'components/ui'
 
 import Details from './components/Details'
 import FlexContainer from 'components/FlexContainer'
 
 import creditCard from 'assets/illustrations/badges/gold.svg'
 import { select } from 'store/@reducers/plans'
-import { createSubscriptionThunk } from 'store/@thunks/subscriptions'
+import {
+  createSubscriptionThunk,
+  fetchSubscriptionsThunk
+} from 'store/@thunks/subscriptions'
 import { getFullName } from 'utils/functions'
 
 import styles from './payment.module.scss'
@@ -147,6 +150,12 @@ const Payment = ({
         return onPaymentRequest({ plan: selectedPlan })
       } catch (err) {
         setProcessing(false)
+
+        // 409: user already has this plan active — refresh state and close modal
+        if (err?.statusCode === 409) {
+          dispatch(fetchSubscriptionsThunk())
+          onCloseWindow()
+        }
 
         return ToastsStore.error(err?.message || t('COMPONENTS.payment.error'))
       }
@@ -286,22 +295,13 @@ const Payment = ({
         </Text>
       )}
       {defaultPaymentMethod ? (
-        <ModalDialog
-          enabled={openWindow}
-          textHeader={t('COMPONENTS.payment.details', {
-            plan: plans.selected ? plans.selected.name : 'Default'
-          })}
-          onCloseRequest={onCloseWindow}
-        >
-          <FlexContainer>
-            <Checkout
-              defaultPaymentMethod
-              disabled={processing}
-              onPaymentRequest={handlePayment}
-              onCancelPaymentRequest={onCloseWindow}
-            />
-          </FlexContainer>
-        </ModalDialog>
+        <Modal isOpen={openWindow} onClose={onCloseWindow} size="md">
+          <Checkout
+            disabled={processing}
+            onPaymentRequest={handlePayment}
+            onCancelPaymentRequest={onCloseWindow}
+          />
+        </Modal>
       ) : restrict ? (
         <>
           <Details

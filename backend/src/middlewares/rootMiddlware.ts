@@ -16,7 +16,7 @@ import { metricsCollector } from './metricsCollector'
 const corsOptions = {
   origin: config.AUTHORIZED_ORIGINS,
   credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS']
 }
 
 const helmetOptions = {

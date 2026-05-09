@@ -1,91 +1,91 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { ToastsStore } from 'react-toasts'
+import { useDispatch, useSelector } from 'react-redux'
 import clsx from 'clsx'
 import styles from './subscription-cancellation-panel.module.scss'
 import { Button } from 'components/ui'
-import httpClient from 'utils/httpClient'
+import { cancelSubscriptionThunk } from 'store/@thunks/subscriptions'
+import { activeSubscriptionSelector } from 'store/@selectors/subscriptions'
 
 const SubscriptionCancellationPanel = () => {
   const { t } = useTranslation()
-  const [loading, setLoading] = useState(false)
-  const [cancelled, setCancelled] = useState(false)
-  const [activePackageId, setActivePackageId] = useState(null)
-  const [fetching, setFetching] = useState(true)
+  const dispatch = useDispatch()
+  const activeSubscription = useSelector(activeSubscriptionSelector)
 
-  useEffect(() => {
-    httpClient({
-      endpoint: '/api/v1/packages',
-      method: 'GET',
-      requiresAuth: true,
-      queries: { active: true }
-    }).then(data => {
-      const packages = Array.isArray(data?.response) ? data.response : []
-      if (packages.length > 0) {
-        setActivePackageId(packages[0].id)
-      }
-      setFetching(false)
-    }).catch(() => {
-      setFetching(false)
-    })
-  }, [])
+  const [loading, setLoading] = React.useState(false)
+  const [cancelled, setCancelled] = React.useState(false)
+
+  if (!activeSubscription) {
+    return null
+  }
+
+  if (cancelled || activeSubscription.cancelAtPeriodEnd) {
+    return (
+      <div className={clsx(styles.panel, styles.cancelled)}>
+        <h4 className={styles.title}>
+          {t('PLANS.CANCEL.cancelledTitle') || 'Subscription Cancelled'}
+        </h4>
+        <p className={styles.description}>
+          {t('PLANS.CANCEL.cancelledDescription') ||
+            'Your subscription has been cancelled. You will continue to have access until the end of your current billing period.'}
+        </p>
+      </div>
+    )
+  }
 
   const handleCancelSubscription = async () => {
-    if (!window.confirm(t('PLANS.CANCEL.confirm') || 'Are you sure? Your access will continue until the end of the billing period.')) {
+    if (
+      !window.confirm(
+        t('PLANS.CANCEL.confirm') ||
+          'Are you sure? Your access will continue until the end of the billing period.'
+      )
+    ) {
       return
     }
 
     setLoading(true)
 
     try {
-      const data = await httpClient({
-        endpoint: `/api/v1/packages/${activePackageId}`,
-        method: 'DELETE',
-        requiresAuth: true
-      })
-
-      if (data.statusCode === 200) {
-        setCancelled(true)
-        ToastsStore.success(data.message || 'Subscription cancelled successfully')
-      } else {
-        ToastsStore.error(data.message || 'Could not cancel subscription')
-      }
+      await dispatch(
+        cancelSubscriptionThunk({
+          subscriptionId: activeSubscription.id,
+          immediately: false
+        })
+      ).unwrap()
+      setCancelled(true)
+      ToastsStore.success(
+        t('PLANS.CANCEL.success') || 'Subscription cancelled successfully'
+      )
     } catch (error) {
-      ToastsStore.error('Failed to cancel subscription. Please try again or contact support.')
+      ToastsStore.error(
+        error?.message ||
+          'Failed to cancel subscription. Please try again or contact support.'
+      )
     } finally {
       setLoading(false)
     }
   }
 
   return (
-    <div className={clsx(styles.panel, cancelled && styles.cancelled)}>
-      {fetching ? (
-        <p className={styles.description}>Loading your subscription...</p>
-      ) : !activePackageId ? (
-        <p className={styles.description}>No active subscription to cancel.</p>
-      ) : cancelled ? (
-        <>
-          <h4 className={styles.title}>{t('PLANS.CANCEL.cancelledTitle') || 'Subscription Cancelled'}</h4>
-          <p className={styles.description}>
-            {t('PLANS.CANCEL.cancelledDescription') || 'Your subscription has been cancelled. You will continue to have access until the end of your current billing period.'}
-          </p>
-        </>
-      ) : (
-        <>
-          <h4 className={styles.title}>{t('PLANS.CANCEL.title') || 'Cancel Subscription'}</h4>
-          <p className={styles.description}>
-            {t('PLANS.CANCEL.description') || 'If you cancel your subscription, you will continue to have access to all features until the end of your current billing period. After that, your account will be downgraded to the free plan.'}
-          </p>
-          <Button
-            variant="ghost"
-            className={styles.cancelButton}
-            onClick={handleCancelSubscription}
-            disabled={loading}
-          >
-            {loading ? 'Cancelling...' : (t('PLANS.CANCEL.action') || 'Cancel Subscription')}
-          </Button>
-        </>
-      )}
+    <div className={styles.panel}>
+      <h4 className={styles.title}>
+        {t('PLANS.CANCEL.title') || 'Cancel Subscription'}
+      </h4>
+      <p className={styles.description}>
+        {t('PLANS.CANCEL.description') ||
+          'If you cancel your subscription, you will continue to have access to all features until the end of your current billing period.'}
+      </p>
+      <Button
+        variant="ghost"
+        className={styles.cancelButton}
+        onClick={handleCancelSubscription}
+        disabled={loading}
+      >
+        {loading
+          ? 'Cancelling...'
+          : t('PLANS.CANCEL.action') || 'Cancel Subscription'}
+      </Button>
     </div>
   )
 }

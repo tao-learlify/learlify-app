@@ -95,11 +95,51 @@ router.post(
           break
         }
 
-        case 'customer.subscription.deleted':
-          logger.info('stripe.webhook.subscription.deleted', {
-            id: (event.data.object as Stripe.Subscription).id
+        case 'customer.subscription.updated': {
+          const sub = event.data.object as Stripe.Subscription
+          const cancelAtEnd = sub.cancel_at_period_end
+          logger.info('stripe.webhook.subscription.updated', {
+            id: sub.id,
+            cancelAtPeriodEnd: cancelAtEnd
           })
+          // Sync cancel_at_period_end from Stripe to our DB
+          try {
+            await db('subscriptions')
+              .where({ stripe_charge_id: sub.latest_invoice })
+              .orWhere({ stripe_customer_id: sub.customer as string })
+              .where({ status: 'active' })
+              .update({ cancel_at_period_end: cancelAtEnd })
+          } catch (handlerErr) {
+            logger.error('stripe.webhook.subscription.updated.handler', {
+              message: (handlerErr as Error).message
+            })
+          }
           break
+        }
+
+        case 'customer.subscription.deleted': {
+          const sub = event.data.object as Stripe.Subscription
+          logger.info('stripe.webhook.subscription.deleted', { id: sub.id })
+          try {
+            await db('subscriptions')
+              .where({
+                stripe_customer_id: sub.customer as string,
+                status: 'active'
+              })
+              .update({
+                status: 'canceled',
+                canceled_at: new Date()
+                  .toISOString()
+                  .slice(0, 19)
+                  .replace('T', ' ')
+              })
+          } catch (handlerErr) {
+            logger.error('stripe.webhook.subscription.deleted.handler', {
+              message: (handlerErr as Error).message
+            })
+          }
+          break
+        }
 
         default:
           logger.info('stripe.webhook.unhandled', { type: event.type })
