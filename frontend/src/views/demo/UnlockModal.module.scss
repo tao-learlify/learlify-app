@@ -1,0 +1,164 @@
+/* ── UnlockModal ──────────────────────────────────────────────────────────── */
+/* Speed selection → delegate to PaymentModal                                  */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+  padding: var(--space-4);
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal {
+  background: white;
+  border-radius: var(--radius-xl);
+  width: 100%;
+  max-width: 520px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+  animation: slideUp 0.3s ease;
+  position: relative;
+  padding: var(--space-6);
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.closeBtn {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+  z-index: 10;
+
+  &:hover {
+    background: var(--color-bg-muted);
+    color: var(--color-text-primary);
+  }
+}
+
+/* ── Header ──────────────────────────────────────────────────────────────── */
+.emoji {
+  font-size: 36px;
+  margin-bottom: var(--space-3);
+  text-align: center;
+}
+
+.title {
+  font-size: var(--text-xl);
+  font-weight: var(--weight-extrabold);
+  color: var(--color-text-primary);
+  text-align: center;
+  margin: 0 0 var(--space-2);
+}
+
+.subtitle {
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  text-align: center;
+  margin: 0 0 var(--space-5);
+}
+
+/* ── Speed cards ─────────────────────────────────────────────────────────── */
+.speedGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.speedCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--color-border-default);
+  background: white;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    border-color: var(--color-brand-primary);
+    box-shadow: 0 4px 16px rgba(88,204,2,0.15);
+    transform: translateY(-2px);
+  }
+}
+
+.speedIcon {
+  font-size: 32px;
+  margin-bottom: var(--space-2);
+}
+
+.speedName {
+  font-size: var(--text-base);
+  font-weight: var(--weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-1);
+}
+
+.speedDesc {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+/* ── Features ────────────────────────────────────────────────────────────── */
+.features {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-3) 0 0;
+  text-align: left;
+  width: 100%;
+}
+
+.features li {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  padding: var(--space-1) 0;
+  padding-left: var(--space-4);
+  position: relative;
+}
+
+.features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #58CC02;
+  font-weight: var(--weight-bold);
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .modal {
+    padding: var(--space-4);
+  }
+
+  .speedGrid {
+    grid-template-columns: 1fr;
+  }
+}

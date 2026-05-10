@@ -30,6 +30,7 @@ import { termsES } from 'lang/data/terms/es'
 import { textES } from 'lang/data/text/es'
 import { toastNotificationES } from 'lang/data/toastNotification/es'
 import { tourES } from 'lang/data/tour/es'
+import { demoES } from 'lang/data/demo/es'
 
 
 /**
@@ -73,7 +74,12 @@ const es = {
   TOAST_NOTIFICATION: toastNotificationES,
   TOUR: tourES,
   STATS: statsES,
-  TERMS: termsES
+  TERMS: termsES,
+  WELCOME: demoES.WELCOME,
+  DEMO: demoES.DEMO,
+  UNLOCK: demoES.UNLOCK,
+  BANNER: demoES.BANNER,
+  PAYMENT: { ...demoES.PAYMENT }
 }
 
 export default es

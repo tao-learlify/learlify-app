@@ -1,0 +1,166 @@
+/* ── PaymentModal ───────────────────────────────────────────────────────── */
+/* Reusable Stripe payment modal used from UnlockModal, /plans, banner, etc.  */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1100;
+  padding: var(--space-4);
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal {
+  background: white;
+  border-radius: var(--radius-xl);
+  width: 100%;
+  max-width: 560px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+  animation: slideUp 0.3s ease;
+  position: relative;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* ── Close button ────────────────────────────────────────────────────────── */
+.closeBtn {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+  z-index: 10;
+  line-height: 1;
+
+  &:hover {
+    background: var(--color-bg-muted);
+    color: var(--color-text-primary);
+  }
+}
+
+/* ── Header ──────────────────────────────────────────────────────────────── */
+.header {
+  padding: var(--space-5) var(--space-5) 0;
+}
+
+.title {
+  font-size: var(--text-xl);
+  font-weight: var(--weight-extrabold);
+  color: var(--color-text-primary);
+  margin: 0 0 var(--space-1);
+}
+
+.subtitle {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-4);
+}
+
+/* ── Body ────────────────────────────────────────────────────────────────── */
+.body {
+  padding: 0 var(--space-5) var(--space-5);
+}
+
+/* ── Plan grid ───────────────────────────────────────────────────────────── */
+.planGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+/* ── Divider ─────────────────────────────────────────────────────────────── */
+.divider {
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  margin: var(--space-4) 0;
+}
+
+/* ── Tags / billing ──────────────────────────────────────────────────────── */
+.billingToggle {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+  background: var(--color-bg-muted);
+  padding: 3px;
+  border-radius: var(--radius-pill);
+}
+
+.billingOption {
+  flex: 1;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-pill);
+  border: none;
+  background: transparent;
+  font-family: var(--font-base);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.billingOptionActive {
+  background: white;
+  color: var(--color-text-primary);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* ── Skip button ─────────────────────────────────────────────────────────── */
+.skipBtn {
+  display: block;
+  width: 100%;
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  border: none;
+  background: transparent;
+  font-family: var(--font-base);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: color 0.15s;
+
+  &:hover {
+    color: var(--color-text-primary);
+  }
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .modal {
+    max-width: 100%;
+    border-radius: var(--radius-lg);
+  }
+
+  .header {
+    padding: var(--space-4) var(--space-4) 0;
+  }
+
+  .body {
+    padding: 0 var(--space-4) var(--space-4);
+  }
+}

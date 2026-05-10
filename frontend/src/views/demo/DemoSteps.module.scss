@@ -1,0 +1,156 @@
+/* ── Demo Step Screens — shared styles ─────────────────────────────────── */
+/* Used by: DemoExamSelector, DemoCompetencySelector                          */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: var(--space-6) var(--space-4);
+  background: linear-gradient(180deg, #042C60 0%, #063a6e 100%);
+  text-align: center;
+  overflow-y: auto;
+}
+
+/* ── Progress dots ──────────────────────────────────────────────────────── */
+.progressDots {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.25);
+  transition: background 0.3s;
+}
+
+.dotActive {
+  background: var(--color-brand-primary, #58CC02);
+}
+
+.dotDone {
+  background: rgba(255,255,255,0.6);
+}
+
+/* ── Step indicator ─────────────────────────────────────────────────────── */
+.stepLabel {
+  font-size: var(--text-sm);
+  color: rgba(255,255,255,0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-2);
+}
+
+/* ── Heading ─────────────────────────────────────────────────────────────── */
+.heading {
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-extrabold);
+  color: white;
+  margin: 0 0 var(--space-2);
+  line-height: 1.3;
+
+  @media (max-width: 480px) {
+    font-size: var(--text-xl);
+  }
+}
+
+.subheading {
+  font-size: var(--text-base);
+  color: rgba(255,255,255,0.75);
+  margin: 0 0 var(--space-6);
+  max-width: 340px;
+}
+
+/* ── Options grid ───────────────────────────────────────────────────────── */
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  width: 100%;
+  max-width: 380px;
+}
+
+.optionCard {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  width: 100%;
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  border: 2px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.08);
+  color: white;
+  font-family: var(--font-base);
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, transform 0.15s;
+
+  &:hover {
+    background: rgba(255,255,255,0.15);
+    border-color: rgba(255,255,255,0.3);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.optionIcon {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  background: rgba(255,255,255,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+.optionContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.optionTitle {
+  display: block;
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  margin-bottom: var(--space-1);
+}
+
+.optionDesc {
+  display: block;
+  font-size: var(--text-sm);
+  color: rgba(255,255,255,0.7);
+  line-height: 1.4;
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .wrapper {
+    padding: var(--space-4) var(--space-3);
+    justify-content: flex-start;
+    padding-top: 8vh;
+  }
+
+  .heading {
+    font-size: var(--text-xl);
+  }
+
+  .optionCard {
+    padding: var(--space-4);
+  }
+
+  .optionIcon {
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+  }
+}
