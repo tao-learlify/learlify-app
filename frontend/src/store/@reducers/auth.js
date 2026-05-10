@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { demoThunk, forgotPasswordThunk, loginThunk, signUpThunk, socialThunk, telegramThunk, updateProfileThunk, verificationThunk } from 'store/@thunks/auth'
+import { demoThunk, forgotPasswordThunk, googleCodeThunk, loginThunk, signUpThunk, socialThunk, telegramThunk, updateProfileThunk, verificationThunk } from 'store/@thunks/auth'
 import { clearAsyncError } from 'store/@actions'
 import * as localStorageHydrate from 'store/functions/auth'
 
@@ -68,6 +68,10 @@ const authSlice = createSlice({
     [telegramThunk.fulfilled]: loginFullfiledController,
     [telegramThunk.pending]: loginPendingController,
     [telegramThunk.rejected]: loginRejectedController,
+
+    [googleCodeThunk.fulfilled]: loginFullfiledController,
+    [googleCodeThunk.pending]: loginPendingController,
+    [googleCodeThunk.rejected]: loginRejectedController,
 
     [loginThunk.fulfilled]: loginFullfiledController,
     [loginThunk.pending]: loginPendingController,

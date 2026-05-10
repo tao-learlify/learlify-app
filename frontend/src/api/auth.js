@@ -48,6 +48,17 @@ export function telegramLogin(telegramData) {
 }
 
 /**
+ * @param {{ code: string, redirect_uri: string }} data
+ */
+export function googleCodeLogin({ code, redirect_uri }) {
+  return httpClient({
+    body: { code, redirect_uri },
+    endpoint: '/api/v1/auth/social/google/code',
+    method: POST
+  })
+}
+
+/**
  * @param {string} email 
  */ 
 export function forgotPassword (email) {

@@ -29,7 +29,8 @@ import {
   forgotPasswordThunk,
   loginThunk,
   socialThunk,
-  telegramThunk
+  telegramThunk,
+  googleCodeThunk
 } from 'store/@thunks/auth'
 
 import { selectModel } from 'store/@reducers/models'
@@ -100,8 +101,8 @@ const Login = () => {
   }
 
   const handleGoogleSuccess = useCallback(
-    ({ profileObj }) => {
-      dispatch(socialThunk({ user: profileObj, provider: 'google' }))
+    ({ code }) => {
+      dispatch(googleCodeThunk({ code, redirect_uri: window.location.origin }))
         .then(unwrapResult)
         .catch(({ message }) => ToastsStore.warning(message))
     },

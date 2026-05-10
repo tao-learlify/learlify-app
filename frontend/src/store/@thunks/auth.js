@@ -56,6 +56,19 @@ export const telegramThunk = createAsyncThunk(
   }
 )
 
+export const googleCodeThunk = createAsyncThunk(
+  'auth/googleCode',
+  async ({ code, redirect_uri }, { rejectWithValue }) => {
+    try {
+      const service = await api.auth.googleCodeLogin({ code, redirect_uri })
+
+      return service
+    } catch (err) {
+      return rejectWithValue(err)
+    }
+  }
+)
+
 export const forgotPasswordThunk = createAsyncThunk(
   'auth/forgot',
   async ({ email}, { rejectWithValue }) => {

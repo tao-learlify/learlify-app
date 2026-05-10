@@ -276,6 +276,118 @@ export class AuthenticationController {
   }
 
   @Bind
+  async googleCodeLogin(req: Request, res: Response): Promise<Response> {
+    const { code, redirect_uri } = req.body as { code: string; redirect_uri: string }
+
+    const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID || process.env.VITE_GOOGLE_CLIENT_ID || '999008543563-87l5u8q07ddmhdr1ql47jm3l0a8skfaa.apps.googleusercontent.com'
+    const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET || ''
+
+    if (!code) {
+      throw new BadRequestException('Authorization code is required')
+    }
+
+    // Exchange code for tokens
+    const tokenRes = await fetch('https://oauth2.googleapis.com/token', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({
+        code,
+        client_id: GOOGLE_CLIENT_ID,
+        client_secret: GOOGLE_CLIENT_SECRET,
+        redirect_uri: redirect_uri || 'http://localhost:3000',
+        grant_type: 'authorization_code',
+      }),
+    })
+
+    if (!tokenRes.ok) {
+      const errBody = await tokenRes.text()
+      this.logger.error('Google token exchange failed', errBody)
+      throw new BadRequestException('Google authentication failed')
+    }
+
+    const tokens = await tokenRes.json()
+    const idToken = tokens.id_token
+
+    if (!idToken) {
+      throw new BadRequestException('No ID token received from Google')
+    }
+
+    // Decode id_token payload
+    let claims: Record<string, unknown>
+    try {
+      const parts = idToken.split('.')
+      claims = JSON.parse(Buffer.from(parts[1], 'base64url').toString('utf-8'))
+    } catch {
+      throw new BadRequestException('Failed to decode Google ID token')
+    }
+
+    const googleId = claims.sub as string
+    const email = claims.email as string
+    const givenName = (claims.given_name || claims.name?.split(' ')[0] || 'Google') as string
+    const familyName = (claims.family_name || claims.name?.split(' ').slice(1).join(' ') || 'User') as string
+    const imageUrl = (claims.picture || '') as string
+
+    // Find or create user
+    const existing = await this.userService.getOne({ googleId })
+    if (existing) {
+      await this.userService.updateOne({
+        id: existing.id,
+        imageUrl,
+        lastLogin: moment().format('YYYY-MM-DD'),
+      })
+      const token = this.authService.encrypt(
+        { ...existing, role: existing.role },
+        { clientConfig: true },
+      )
+      return res.status(200).json({ message: 'Login successfully', response: { token }, statusCode: 200 })
+    }
+
+    const user = await this.userService.getOne({ email })
+    if (user) {
+      const updated = await this.userService.updateOne({
+        id: user.id,
+        googleId,
+        imageUrl,
+        isVerified: true,
+        lastLogin: moment().format('YYYY-MM-DD'),
+      })
+      const token = this.authService.encrypt(
+        { ...updated, role: updated.role },
+        { clientConfig: true },
+      )
+      return res.status(200).json({ message: 'Login successfully', response: { token }, statusCode: 200 })
+    }
+
+    const password = await this.authService.generateRandomPassword({ useHash: true })
+    const role = await this.rolesService.findOne({ name: Roles.User })
+    const created = await this.userService.create({
+      email,
+      firstName: givenName,
+      lastName: familyName,
+      googleId,
+      imageUrl,
+      isVerified: true,
+      lang: req.locale,
+      password: password.hash ?? undefined,
+      roleId: role.id,
+      lastLogin: moment().format('YYYY-MM-DD'),
+    })
+
+    try {
+      await this.mailService.sendMail({
+        to: created.email,
+        from: this.configService.provider.SES_FROM_EMAIL,
+        subject: res.__('mails.services.googleSignUp.subject'),
+        text: res.__('mails.services.googleSignUp.text', { user: created.firstName, locale: req.locale }),
+        html: `<div><p style="font-size: 13px">${res.__('mails.services.googleSignUp.html.password')}: <strong style="color: red; font-size: 16px;">${password.value}</strong></p></div>`,
+      })
+    } catch { /* email is best-effort */ }
+
+    const token = this.authService.encrypt({ ...created, role: created.role }, { clientConfig: true })
+    return res.status(201).json({ message: 'Sign Up Successfully', response: { token }, statusCode: 201 })
+  }
+
+  @Bind
   async facebookLogin(req: Request, res: Response): Promise<Response> {
     const body = req.body as FacebookLoginBody
 
