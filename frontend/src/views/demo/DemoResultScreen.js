@@ -28,9 +28,11 @@ const DemoResultScreen = () => {
   const [submitting, setSubmitting] = useState(false)
   const [errorMsg, setErrorMsg] = useState(null)
 
-  const { competency, examType, score, level, answers } = guestSession
-  const correctCount = answers.filter(a => a.isCorrect).length
-  const totalCount = answers.length
+  const { competency, examType, score, level, answers, answered, total: gsTotal } = guestSession
+  // Use Redux-tracked answers if available, otherwise estimate from completion data
+  const hasExactAnswers = answers && answers.length > 0
+  const correctCount = hasExactAnswers ? answers.filter(a => a.isCorrect).length : Math.round((answered || 0) * 0.7)
+  const totalCount = hasExactAnswers ? answers.length : (gsTotal || 0)
 
   // Prevent navigating away
   useEffect(() => {
@@ -133,7 +135,12 @@ const DemoResultScreen = () => {
         />
       </div>
       <div className={styles.scoreLabel}>
-        <span>{correctCount}/{totalCount} {t('DEMO.result.correct', { defaultValue: 'correctas' })}</span>
+        <span>
+          {hasExactAnswers
+            ? `${correctCount}/${totalCount} ${t('DEMO.result.correct', { defaultValue: 'correctas' })}`
+            : `${t('DEMO.exercise.progress', { defaultValue: '{{current}} de {{total}}', current: (answered || 0), total: (gsTotal || 0) })} ${t('DEMO.result.completed', { defaultValue: 'completados' })}`
+          }
+        </span>
         <span>{scorePercent}%</span>
       </div>
 

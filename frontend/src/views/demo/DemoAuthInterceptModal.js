@@ -22,8 +22,6 @@ function DemoAuthInterceptModal({ isOpen, onClose }) {
   const [submitting, setSubmitting] = useState(false)
   const [errorMsg, setErrorMsg] = useState(null)
 
-  if (!isOpen) return null
-
   const handleGoogleSuccess = useCallback(({ code }) => {
     dispatch(googleCodeThunk({ code, redirect_uri: window.location.origin }))
       .then(unwrapResult)
@@ -110,6 +108,8 @@ function DemoAuthInterceptModal({ isOpen, onClose }) {
     dispatch(setAuthIntercepted())
     onClose()
   }
+
+  if (!isOpen) return null
 
   return (
     <div className={styles.overlay} role="dialog" aria-modal="true" aria-label={t('DEMO.authModal.title', { defaultValue: 'Guarda tu progreso' })}>

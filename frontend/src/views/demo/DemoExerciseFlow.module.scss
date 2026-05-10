@@ -1,223 +1,63 @@
-/* ── DemoExerciseFlow ───────────────────────────────────────────────────── */
-/* Duolingo-style exercise flow with progress bar, feedback, intercept modal  */
+/* ── DemoExerciseFlow ────────────────────────────────────────────────────── */
+/* Wrapper + non-exercise states. Exercise rendering delegated to            */
+/* GrammarExerciseView / ListeningExerciseView (same layout as exams).       */
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
+.root {
   min-height: 100vh;
   min-height: 100dvh;
-  background: white;
 }
 
-/* ── Progress bar ───────────────────────────────────────────────────────── */
-.progressBar {
-  height: 4px;
-  background: #e5e5e5;
-  position: relative;
-  flex-shrink: 0;
-}
-
-.progressFill {
-  height: 100%;
-  background: #58CC02;
-  transition: width 0.4s ease;
-  border-radius: 0 2px 2px 0;
-}
-
-.progressLabel {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: var(--space-2) var(--space-4);
-  font-size: var(--text-sm);
-  color: var(--color-text-muted);
-}
-
-/* ── Exercise content ───────────────────────────────────────────────────── */
-.exerciseArea {
-  flex: 1;
+/* ── Loading ──────────────────────────────────────────────────────────────── */
+.loadingWrap {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: var(--space-6) var(--space-4);
-  max-width: 600px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.questionNumber {
-  font-size: var(--text-sm);
-  color: var(--color-text-muted);
-  margin-bottom: var(--space-3);
-}
-
-.questionText {
-  font-size: var(--text-2xl);
-  font-weight: var(--weight-bold);
-  color: var(--color-text-primary);
-  text-align: center;
-  margin: 0 0 var(--space-8);
-  line-height: 1.4;
-
-  @media (max-width: 480px) {
-    font-size: var(--text-xl);
-  }
-}
-
-/* ── Answer options ─────────────────────────────────────────────────────── */
-.optionsList {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-3);
-  width: 100%;
-}
-
-.optionBtn {
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
-  width: 100%;
-  padding: var(--space-4) var(--space-5);
-  border-radius: var(--radius-lg);
-  border: 2px solid var(--color-border-default);
-  background: white;
-  font-family: var(--font-base);
-  font-size: var(--text-base);
-  color: var(--color-text-primary);
-  text-align: left;
-  cursor: pointer;
-  transition: all 0.2s;
-
-  &:hover:not(.optionCorrect):not(.optionWrong):not(.optionDisabled) {
-    border-color: var(--color-brand-primary);
-    background: rgba(88,204,2,0.05);
-  }
-}
-
-.optionCorrect {
-  border-color: #58CC02 !important;
-  background: rgba(88,204,2,0.1) !important;
-}
-
-.optionWrong {
-  border-color: #FF3F3F !important;
-  background: rgba(255,63,63,0.08) !important;
-}
-
-.optionDisabled {
-  opacity: 0.5;
-  cursor: default;
-}
-
-.optionLetter {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  border: 2px solid var(--color-border-default);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: var(--weight-bold);
-  font-size: var(--text-sm);
-  flex-shrink: 0;
-}
-
-.optionLetterCorrect {
-  border-color: #58CC02;
-  background: #58CC02;
-  color: white;
-}
-
-.optionLetterWrong {
-  border-color: #FF3F3F;
-  background: #FF3F3F;
-  color: white;
-}
-
-.optionText {
-  flex: 1;
-}
-
-/* ── Feedback bar ───────────────────────────────────────────────────────── */
-.feedbackBar {
-  margin-top: var(--space-6);
-  padding: var(--space-4);
-  border-radius: var(--radius-lg);
-  width: 100%;
-  text-align: center;
-  font-weight: var(--weight-semibold);
-}
-
-.feedbackCorrect {
-  background: rgba(88,204,2,0.1);
-  color: #3a8500;
-}
-
-.feedbackWrong {
-  background: rgba(255,63,63,0.08);
-  color: #cc0000;
-}
-
-/* ── Continue button ────────────────────────────────────────────────────── */
-.continueBtn {
-  margin-top: var(--space-4);
-  min-height: 48px;
-  padding: var(--space-3) var(--space-6);
-  border-radius: var(--radius-pill);
-  border: none;
-  background: #58CC02;
-  color: white;
-  font-family: var(--font-base);
-  font-size: var(--text-base);
-  font-weight: var(--weight-bold);
-  cursor: pointer;
-  box-shadow: 0 4px 14px rgba(88,204,2,0.3);
-  transition: background 0.2s, transform 0.15s;
-
-  &:hover {
-    background: #4cb001;
-    transform: translateY(-1px);
-  }
-
-  &:active {
-    transform: translateY(0);
-  }
-}
-
-/* ── Completion state ───────────────────────────────────────────────────── */
-.completionScreen {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  min-height: 100dvh;
   gap: var(--space-4);
+  text-align: center;
 }
 
-.completionEmoji {
+.loadingEmoji {
+  font-size: 48px;
+}
+
+.loadingText {
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+}
+
+/* ── Done screen ──────────────────────────────────────────────────────────── */
+.doneScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+  gap: var(--space-4);
+  text-align: center;
+  padding: var(--space-6) var(--space-4);
+  background: white;
+}
+
+.doneEmoji {
   font-size: 64px;
-  animation: bounce 0.6s ease;
 }
 
-@keyframes bounce {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.2); }
-}
-
-.completionTitle {
+.doneTitle {
   font-size: var(--text-2xl);
-  font-weight: var(--weight-bold);
+  font-weight: var(--weight-extrabold);
   color: var(--color-text-primary);
   margin: 0;
 }
 
-.completionSubtitle {
+.doneSubtitle {
   font-size: var(--text-base);
   color: var(--color-text-muted);
+  margin: 0;
 }
 
-.completionBtn {
+.doneBtn {
   min-height: 52px;
   padding: var(--space-3) var(--space-8);
   border-radius: var(--radius-pill);
@@ -230,7 +70,6 @@
   cursor: pointer;
   box-shadow: 0 4px 18px rgba(88,204,2,0.35);
   transition: all 0.2s;
-  margin-top: var(--space-2);
 
   &:hover {
     background: #4cb001;
@@ -238,18 +77,68 @@
   }
 }
 
-/* ── Responsive ──────────────────────────────────────────────────────────── */
-@media (max-width: 480px) {
-  .exerciseArea {
-    padding: var(--space-4) var(--space-3);
-  }
+/* ── Exit confirmation dialog ─────────────────────────────────────────────── */
+.exitOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+  padding: var(--space-4);
+}
 
-  .questionText {
-    font-size: var(--text-lg);
-  }
+.exitCard {
+  max-width: 360px;
+  width: 100%;
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+}
 
-  .optionBtn {
-    padding: var(--space-3) var(--space-4);
-    font-size: var(--text-sm);
-  }
+.exitTitle {
+  margin: 0 0 var(--space-2);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  color: var(--color-text-primary);
+}
+
+.exitMessage {
+  margin: 0 0 var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.exitActions {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.exitStayBtn {
+  flex: 1;
+  min-height: 44px;
+  border-radius: var(--radius-md);
+  border: none;
+  background: #e5e5e5;
+  color: var(--color-text-primary);
+  font-family: var(--font-base);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  cursor: pointer;
+}
+
+.exitLeaveBtn {
+  flex: 1;
+  min-height: 44px;
+  border-radius: var(--radius-md);
+  border: none;
+  background: #58CC02;
+  color: white;
+  font-family: var(--font-base);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-bold);
+  cursor: pointer;
 }
