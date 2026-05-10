@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import moment from 'moment'
 import { I18nextProvider } from 'react-i18next'
+import { GoogleOAuthProvider } from '@react-oauth/google'
 
 /**
  * @description
@@ -54,7 +55,9 @@ ReactDOM.render(
   <Suspense fallback={<FallbackMode />}>
     <Provider store={store}>
       <I18nextProvider i18n={lang}>
-        <App />
+        <GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_CLIENT_ID || ''}>
+          <App />
+        </GoogleOAuthProvider>
       </I18nextProvider>
     </Provider>
   </Suspense>,

@@ -1,23 +1,26 @@
-import React from 'react'
-import { GoogleLogin } from 'react-google-login'
+import React, { useCallback, useState } from 'react'
+import { useGoogleLogin } from '@react-oauth/google'
 import { useTranslation } from 'react-i18next'
 import { Button } from 'components/ui'
 import lang from 'lang'
-
-import config from 'config'
-
-
 import { img } from 'assets/compat'
-/**
- * @typedef {Object} GoogleAuthenticatorProps
- * @property {string} className
- * @property {string} googleButtonText
- * @property {() => void} onSuccess
- * @property {() => void} onFailure
- */
+
+/** Decode a JWT payload without verification. */
+function decodeJwtPayload(token) {
+  try {
+    const base64 = token.split('.')[1]
+    return JSON.parse(atob(base64))
+  } catch { return null }
+}
 
 /**
- * @type {React.FunctionComponent<GoogleAuthenticatorProps>}
+ * @type {React.FunctionComponent<{
+ *   className?: string
+ *   googleButtonText?: string
+ *   onSuccess: (user: any) => void
+ *   onFailure?: () => void
+ *   disabled?: boolean
+ * }>}
  */
 const GoogleAuthenticator = ({
   className,
@@ -27,34 +30,49 @@ const GoogleAuthenticator = ({
   googleButtonText
 }) => {
   const { t } = useTranslation()
+  const [internalLoading, setInternalLoading] = useState(false)
 
-  const renderComponent = React.useCallback(
-    props => {
-      return (
-        <Button
-          variant="outline-info"
-          className={className}
-          onClick={props.onClick}
-          disabled={props.disabled || disabled}
-          type="button"
-        >
-          {googleButtonText}  <img className="ml-1" src={img.search} width={18} alt="Google" />
-        </Button>
-      )
+  const googleLogin = useGoogleLogin({
+    onSuccess: (response) => {
+      setInternalLoading(false)
+      const payload = decodeJwtPayload(response.credential)
+      if (payload) {
+        onSuccess({
+          profileObj: {
+            googleId: payload.sub,
+            email: payload.email,
+            givenName: payload.given_name || payload.name?.split(' ')[0] || '',
+            familyName: payload.family_name || payload.name?.split(' ').slice(1).join(' ') || '',
+            imageUrl: payload.picture || '',
+          }
+        })
+      }
     },
-    [googleButtonText, className, disabled]
-  )
+    onError: () => {
+      setInternalLoading(false)
+      onFailure?.()
+    },
+    flow: 'implicit',
+  })
+
+  const handleClick = useCallback(() => {
+    setInternalLoading(true)
+    googleLogin()
+  }, [googleLogin])
 
   return (
-    <GoogleLogin
-      buttonText={t('AUTHENTICATION.signWithGoogle')}
-      clientId={config.GOOGLE_CLIENT_ID}
-      onSuccess={onSuccess}
-      onFailure={onFailure}
-      cookiePolicy={'single_host_origin'}
-      theme="light"
-      render={renderComponent}
-    />
+    <Button
+      variant="outline-info"
+      className={className}
+      onClick={handleClick}
+      disabled={disabled || internalLoading}
+      type="button"
+    >
+      {internalLoading
+        ? t('AUTHENTICATION.signingIn', { defaultValue: 'Signing in…' })
+        : googleButtonText}
+      {!internalLoading && <img className="ml-1" src={img.search} width={18} alt="Google" />}
+    </Button>
   )
 }
 

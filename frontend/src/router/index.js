@@ -4,9 +4,11 @@ import Dashboard from 'views/dashboard/Dashboard'
 import Login from 'views/authentication/Login'
 import ResetPassword from 'views/authentication/ResetPassword'
 import Plans from 'views/plans'
+import Models from 'views/models'
 import Unit1View from 'views/courses/Unit1View'
 import ConnectedUnitView from 'views/courses/ConnectedUnitView'
 import CoursesOverview from 'views/courses/CoursesOverview'
+import Settings from 'views/settings/Settings'
 import GrammarView from 'views/grammar'
 import VocabularyView from 'views/vocabulary'
 import ListeningView from 'views/listening'
@@ -125,6 +127,16 @@ export const router = {
       {
         component: Plans,
         path: '/plans',
+        ...defaultRouterConfig
+      },
+      {
+        component: Models,
+        path: '/models',
+        ...defaultRouterConfig
+      },
+      {
+        component: Settings,
+        path: '/settings',
         ...defaultRouterConfig
       }
     ],

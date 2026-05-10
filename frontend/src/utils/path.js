@@ -24,7 +24,7 @@ const PATH = Object.freeze({
   RESET: '/reset',
   RESULTS: '/results',
   SECTIONS: '/sections',
-  SETTINGS: '/dashboard/settings',
+  SETTINGS: '/settings',
   SIGN_UP: '/signup',
   STREAMING: '/streaming',
   TESTING: '/testing',

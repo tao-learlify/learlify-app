@@ -41,6 +41,12 @@ export class AuthenticationRouter {
     )
 
     this.auth.post(
+      '/social/google/code',
+      [authLimiter, Middleware.LanguageGuard],
+      Middleware.secure(this.controller.googleCodeLogin)
+    )
+
+    this.auth.post(
       '/social/facebook',
       [authLimiter, ...pipe.facebookLogin, Middleware.usePipe, Middleware.LanguageGuard],
       Middleware.secure(this.controller.facebookLogin)

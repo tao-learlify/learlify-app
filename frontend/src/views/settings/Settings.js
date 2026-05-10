@@ -1,6 +1,9 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { ToastsStore } from 'react-toasts'
 
+import { Button } from 'components/ui'
 import Template from 'components/Template'
 import Text from 'components/Text'
 
@@ -19,7 +22,8 @@ import styles from './settings.module.scss'
 
 const Settings = () => {
   const { t } = useTranslation()
-  const { profile, demo, loading: authLoading } = useAuthProvider()
+  const history = useHistory()
+  const { profile, demo, loading: authLoading, logOut } = useAuthProvider()
   const {
     subscription,
     paymentMethod,
@@ -49,6 +53,20 @@ const Settings = () => {
 
       <div className={styles.fullRow}>
         <BillingHistoryCard invoices={invoices} />
+      </div>
+      <br />
+      <div style={{ maxWidth: 400, margin: '0 auto', padding: '0 16px' }}>
+        <Button
+          variant="danger"
+          block
+          onClick={() => {
+            logOut()
+            ToastsStore.info(t('AUTHENTICATION.loggedOut', { defaultValue: 'Sesión cerrada' }))
+            history.push('/')
+          }}
+        >
+          {t('AUTHENTICATION.logout', { defaultValue: 'Cerrar sesión' })}
+        </Button>
       </div>
     </Template>
   )
