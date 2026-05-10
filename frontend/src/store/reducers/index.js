@@ -23,6 +23,7 @@ import settings from 'store/@reducers/settings'
 import stats from 'store/@reducers/stats'
 import users from 'store/@reducers/users'
 import schedule from 'store/@reducers/schedules'
+import guestSession from 'store/@reducers/guestSession'
 
 /** @see https://redux.js.org/api/combinereducers  */
 
@@ -47,7 +48,8 @@ const rootReducer = combineReducers({
   session: sessionReducer,
   stats,
   users,
-  schedule
+  schedule,
+  guestSession
 })
 
 export default rootReducer

@@ -1,0 +1,163 @@
+/* ── Demo Steps — Duolingo onboarding pattern ──────────────────────────── */
+/* Used by: DemoExamSelector, DemoCompetencySelector                        */
+/* One decision per screen, progress dots, full-screen navy hero            */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: var(--space-6) var(--space-4);
+  background: linear-gradient(180deg, var(--color-navy) 0%, var(--color-navy-light) 100%);
+  text-align: center;
+  overflow-y: auto;
+}
+
+/* ── Progress dots (Duolingo onboarding bar) ──────────────────────────── */
+.progressDots {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-full);
+  background: rgba(255,255,255,0.25);
+  transition: background var(--duration-slow) var(--easing-default);
+}
+
+.dotActive {
+  background: var(--color-brand-primary);
+}
+
+.dotDone {
+  background: rgba(255,255,255,0.6);
+}
+
+/* ── Step label ────────────────────────────────────────────────────────── */
+.stepLabel {
+  font-family: var(--font-base);
+  font-size: var(--text-sm);
+  color: rgba(255,255,255,0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-2);
+}
+
+/* ── Heading (Duolingo: H1, Dunkin, white) ────────────────────────────── */
+.heading {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: var(--weight-bold);
+  color: var(--color-text-inverse);
+  margin: 0 0 var(--space-2);
+  line-height: var(--leading-tight);
+
+  @media (max-width: 480px) {
+    font-size: var(--text-2xl);
+  }
+}
+
+.subheading {
+  font-family: var(--font-base);
+  font-size: var(--text-lg);
+  color: rgba(255,255,255,0.75);
+  margin: 0 0 var(--space-6);
+  max-width: 340px;
+  line-height: var(--leading-normal);
+}
+
+/* ── Options (Duolingo radio card pattern) ────────────────────────────── */
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  width: 100%;
+  max-width: 380px;
+}
+
+/* One card per option — large touch target, clear visual hierarchy */
+.optionCard {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  width: 100%;
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  border: 2px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.08);
+  color: var(--color-text-inverse);
+  font-family: var(--font-base);
+  text-align: left;
+  cursor: pointer;
+  transition: background var(--duration-base) var(--easing-default),
+              border-color var(--duration-base) var(--easing-default),
+              transform var(--duration-base) var(--easing-default);
+
+  &:hover {
+    background: rgba(255,255,255,0.15);
+    border-color: rgba(255,255,255,0.3);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+/* Icon box (Duolingo: coloured icon bg in card) */
+.optionIcon {
+  flex-shrink: 0;
+  width: var(--icon-box-xl);
+  height: var(--icon-box-xl);
+  border-radius: var(--radius-md);
+  background: rgba(255,255,255,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+.optionContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.optionTitle {
+  display: block;
+  font-family: var(--font-base);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  margin-bottom: var(--space-1);
+}
+
+.optionDesc {
+  display: block;
+  font-family: var(--font-base);
+  font-size: var(--text-sm);
+  color: rgba(255,255,255,0.7);
+  line-height: var(--leading-normal);
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .wrapper {
+    padding: var(--space-4) var(--space-3);
+    justify-content: flex-start;
+    padding-top: 8vh;
+  }
+
+  .optionCard {
+    padding: var(--space-4);
+  }
+
+  .optionIcon {
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+  }
+}

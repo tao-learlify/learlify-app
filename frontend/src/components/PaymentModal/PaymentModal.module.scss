@@ -1,0 +1,161 @@
+/* ── PaymentModal — Duolingo upsell dialog pattern ──────────────────────── */
+/* Reusable Stripe payment wrapper: plan selection + checkout                */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--color-bg-overlay);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: var(--z-modal);
+  padding: var(--space-4);
+  animation: overlayIn var(--duration-slower) var(--easing-default);
+}
+
+@keyframes overlayIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.modal {
+  background: var(--color-bg-surface);
+  border-radius: var(--radius-2xl);
+  width: 100%;
+  max-width: 560px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-lg);
+  animation: modalUp var(--duration-slow) var(--easing-bounce);
+  position: relative;
+}
+
+@keyframes modalUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+/* ── Close × (top-right) ───────────────────────────────────────────────── */
+.closeBtn {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  border: none;
+  background: transparent;
+  font-size: 22px;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--duration-fast) var(--easing-default),
+              color var(--duration-fast) var(--easing-default);
+  z-index: var(--z-raised);
+  line-height: 1;
+
+  &:hover {
+    background: var(--color-bg-muted);
+    color: var(--color-text-primary);
+  }
+}
+
+/* ── Header ──────────────────────────────────────────────────────────────── */
+.header {
+  padding: var(--space-6) var(--space-6) 0;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-bold);
+  color: var(--color-text-primary);
+  margin: 0 0 var(--space-1);
+}
+
+.subtitle {
+  font-family: var(--font-base);
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+  margin: 0 0 var(--space-5);
+}
+
+/* ── Body ────────────────────────────────────────────────────────────────── */
+.body {
+  padding: 0 var(--space-6) var(--space-6);
+}
+
+/* ── Plan grid ───────────────────────────────────────────────────────────── */
+.planGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+/* ── Billing toggle (Duolingo: pill selector) ───────────────────────────── */
+.billingToggle {
+  display: flex;
+  gap: var(--space-1);
+  margin-bottom: var(--space-5);
+  background: var(--color-bg-muted);
+  padding: 3px;
+  border-radius: var(--radius-pill);
+}
+
+.billingOption {
+  flex: 1;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-pill);
+  border: none;
+  background: transparent;
+  font-family: var(--font-base);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--easing-default);
+}
+
+.billingOptionActive {
+  background: var(--color-bg-surface);
+  color: var(--color-text-primary);
+  box-shadow: var(--shadow-1);
+}
+
+/* ── Skip / "Ahora no" (Duolingo: ghost, subtle) ────────────────────────── */
+.skipBtn {
+  display: block;
+  width: 100%;
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  border: none;
+  background: transparent;
+  font-family: var(--font-base);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: color var(--duration-fast) var(--easing-default);
+
+  &:hover {
+    color: var(--color-text-primary);
+  }
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .modal {
+    max-width: 100%;
+    border-radius: var(--radius-xl);
+  }
+
+  .header {
+    padding: var(--space-4) var(--space-4) 0;
+  }
+
+  .body {
+    padding: 0 var(--space-4) var(--space-4);
+  }
+}

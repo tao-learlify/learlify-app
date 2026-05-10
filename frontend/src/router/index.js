@@ -1,8 +1,15 @@
+import React from 'react'
 import Exams from 'views/exams'
 import SignUp from 'views/authentication/SignUp'
 import Dashboard from 'views/dashboard/Dashboard'
 import Login from 'views/authentication/Login'
 import ResetPassword from 'views/authentication/ResetPassword'
+import WelcomeScreen from 'views/demo/WelcomeScreen'
+import DemoExamSelector from 'views/demo/DemoExamSelector'
+import DemoCompetencySelector from 'views/demo/DemoCompetencySelector'
+import DemoExerciseFlow from 'views/demo/DemoExerciseFlow'
+import DemoResultScreen from 'views/demo/DemoResultScreen'
+import DemoFlowGuard from 'components/DemoFlowGuard'
 import Plans from 'views/plans'
 import Models from 'views/models'
 import Unit1View from 'views/courses/Unit1View'
@@ -40,13 +47,54 @@ export const router = {
   routes: {
     public: [
       {
-        component: Login,
+        component: WelcomeScreen,
         path: '/',
+        ...defaultRouterConfig
+      },
+      {
+        component: Login,
+        path: '/login',
         ...defaultRouterConfig
       },
       {
         component: SignUp,
         path: PATH.SIGN_UP,
+        ...defaultRouterConfig
+      },
+      {
+        component: () => (
+          <DemoFlowGuard requiredStep="exam">
+            <DemoExamSelector />
+          </DemoFlowGuard>
+        ),
+        path: '/demo/exam',
+        ...defaultRouterConfig
+      },
+      {
+        component: () => (
+          <DemoFlowGuard requiredStep="competency">
+            <DemoCompetencySelector />
+          </DemoFlowGuard>
+        ),
+        path: '/demo/competency',
+        ...defaultRouterConfig
+      },
+      {
+        component: () => (
+          <DemoFlowGuard requiredStep="exercise">
+            <DemoExerciseFlow />
+          </DemoFlowGuard>
+        ),
+        path: '/demo/exercise',
+        ...defaultRouterConfig
+      },
+      {
+        component: () => (
+          <DemoFlowGuard requiredStep="result">
+            <DemoResultScreen />
+          </DemoFlowGuard>
+        ),
+        path: '/demo/result',
         ...defaultRouterConfig
       },
       {

@@ -343,6 +343,7 @@ export function ListeningExerciseView({
   xpReward  = 10,
   onComplete,
   onQuit,
+  onAnswer,
 }) {
   const [idx,            setIdx]           = useState(0)
   const [selected,       setSelected]      = useState(null)
@@ -387,6 +388,7 @@ export function ListeningExerciseView({
   }, [selected, exercise])
 
   const handleContinue = useCallback(() => {
+    onAnswer?.()
     if (idx + 1 >= total) {
       onComplete?.()
     } else {
@@ -398,7 +400,7 @@ export function ListeningExerciseView({
       setEarlyClickHint(false)
       clearTimeout(earlyHintTimer.current)
     }
-  }, [idx, total, onComplete])
+  }, [idx, total, onComplete, onAnswer])
 
   // Triggered by the "Listen again" button in the feedback banner
   const handleReplayAudio = useCallback(() => {

@@ -1,0 +1,171 @@
+/* ── DemoExerciseFlow — non-exercise states ────────────────────────────── */
+/* Exercise rendering delegated to GrammarExerciseView / ListeningExerciseView */
+
+.root {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+/* ── Loading ──────────────────────────────────────────────────────────────── */
+.loadingWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+  gap: var(--space-4);
+  text-align: center;
+  background: var(--color-bg-page);
+}
+
+.loadingEmoji {
+  font-size: var(--icon-2xl);
+}
+
+.loadingText {
+  font-family: var(--font-base);
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
+}
+
+/* ── Done screen (Duolingo celebration pattern) ──────────────────────────── */
+.doneScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+  gap: var(--space-5);
+  text-align: center;
+  padding: var(--space-6) var(--space-4);
+  background: var(--color-bg-page);
+}
+
+.doneEmoji {
+  font-size: var(--icon-2xl);
+  animation: doneBounce 0.6s var(--easing-bounce);
+}
+
+@keyframes doneBounce {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.2); }
+}
+
+.doneTitle {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-bold);
+  color: var(--color-text-primary);
+  margin: 0;
+  line-height: var(--leading-tight);
+}
+
+.doneSubtitle {
+  font-family: var(--font-base);
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
+  margin: 0;
+  line-height: var(--leading-normal);
+}
+
+.doneBtn {
+  min-height: 50px;
+  padding: 0 var(--space-8);
+  border-radius: var(--radius-pill);
+  border: none;
+  background: var(--color-brand-primary);
+  color: var(--color-text-inverse);
+  font-family: var(--font-base);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: var(--shadow-button-brand);
+  transition: background var(--duration-fast) var(--easing-default),
+              transform var(--duration-fast) var(--easing-default);
+  letter-spacing: 0.02em;
+
+  &:hover {
+    background: var(--color-brand-primary-hover);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(2px);
+    box-shadow: none;
+  }
+}
+
+/* ── Exit confirmation dialog ─────────────────────────────────────────────── */
+.exitOverlay {
+  position: fixed;
+  inset: 0;
+  background: var(--color-bg-overlay);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: var(--z-modal);
+  padding: var(--space-4);
+}
+
+.exitCard {
+  max-width: 360px;
+  width: 100%;
+  background: var(--color-bg-surface);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+}
+
+.exitTitle {
+  margin: 0 0 var(--space-2);
+  font-family: var(--font-base);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  color: var(--color-text-primary);
+}
+
+.exitMessage {
+  margin: 0 0 var(--space-4);
+  font-family: var(--font-base);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.exitActions {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.exitStayBtn {
+  flex: 1;
+  min-height: 44px;
+  padding: 0 var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--color-border-default);
+  background: transparent;
+  color: var(--color-text-primary);
+  font-family: var(--font-base);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+}
+
+.exitLeaveBtn {
+  flex: 1;
+  min-height: 44px;
+  padding: 0 var(--space-4);
+  border-radius: var(--radius-md);
+  border: none;
+  background: var(--color-brand-primary);
+  color: var(--color-text-inverse);
+  font-family: var(--font-base);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+}

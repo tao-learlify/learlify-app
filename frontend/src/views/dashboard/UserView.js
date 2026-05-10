@@ -3,6 +3,7 @@ import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom'
 
+import DashboardUpgradeBanner from 'components/DashboardUpgradeBanner'
 import useAuthProvider from 'hooks/useAuthProvider'
 import useCategories from 'hooks/useCategories'
 import useEvaluations from 'hooks/useEvaluations'
@@ -108,6 +109,9 @@ const UserView = () => {
     >
       <AppShell hasSidebar sidebar={<SidebarNav />}>
         <div className={styles.page}>
+          {/* ── 0. Upgrade banner (no active subscription) ──── */}
+          <DashboardUpgradeBanner />
+
           {/* ── 1. Dashboard header: greeting + stat pills ────────── */}
           <WelcomeHeader
             firstName={firstName}

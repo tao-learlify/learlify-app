@@ -1,0 +1,180 @@
+/* ── DemoAuthInterceptModal — Duolingo dialog pattern ──────────────────── */
+/* Warm, encouraging, mascot present, chunky buttons, no pressure           */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--color-bg-overlay);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: var(--z-modal);
+  padding: var(--space-4);
+  animation: overlayIn var(--duration-slower) var(--easing-default);
+}
+
+@keyframes overlayIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.modal {
+  background: var(--color-bg-surface);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-8) var(--space-6);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  animation: modalUp var(--duration-slow) var(--easing-bounce);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+@keyframes modalUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+/* ── Emoji celebration ─────────────────────────────────────────────────── */
+.emoji {
+  font-size: var(--icon-2xl);
+  margin-bottom: var(--space-3);
+}
+
+/* ── Title (Duolingo: Dunkin, 24px, dark grey) ────────────────────────── */
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-bold);
+  color: var(--color-text-primary);
+  margin: 0 0 var(--space-2);
+  line-height: var(--leading-tight);
+}
+
+/* ── Subtitle (Duolingo: Varela, 17px, muted) ─────────────────────────── */
+.subtitle {
+  font-family: var(--font-base);
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
+  margin: 0 0 var(--space-5);
+  line-height: var(--leading-normal);
+}
+
+/* ── Social buttons stack ──────────────────────────────────────────────── */
+.socialStack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+/* ── Divider (Duolingo: "or" between social and email) ─────────────────── */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+  font-family: var(--font-base);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+
+  &::before, &::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--color-border-default);
+  }
+}
+
+/* ── Inline form ───────────────────────────────────────────────────────── */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  text-align: left;
+}
+
+.inlineField {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+
+  label {
+    font-family: var(--font-base);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    color: var(--color-text-primary);
+  }
+
+  input {
+    min-height: 48px;
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-md);
+    border: 1.5px solid var(--color-border-default);
+    font-family: var(--font-base);
+    font-size: var(--text-base);
+    color: var(--color-text-primary);
+    transition: border-color var(--duration-fast) var(--easing-default);
+
+    &:focus {
+      outline: none;
+      border-color: var(--color-border-focus);
+      box-shadow: var(--shadow-focus);
+    }
+  }
+}
+
+/* ── Submit button (Duolingo: chunky green, uppercase) ─────────────────── */
+.submitBtn {
+  width: 100%;
+  min-height: 50px;
+  padding: 0 var(--space-4);
+  border-radius: var(--radius-lg);
+  border: none;
+  background: var(--color-navy);
+  color: var(--color-text-inverse);
+  font-family: var(--font-base);
+  font-size: var(--text-base);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background var(--duration-fast) var(--easing-default);
+  letter-spacing: 0.02em;
+
+  &:hover {
+    background: var(--color-navy-light);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.errorMsg {
+  color: var(--color-error);
+  font-family: var(--font-base);
+  font-size: var(--text-sm);
+  text-align: center;
+}
+
+/* ── Skip link (Duolingo: ghost, muted, no pressure) ──────────────────── */
+.skipLink {
+  display: block;
+  width: 100%;
+  margin-top: var(--space-3);
+  padding: var(--space-2);
+  background: none;
+  border: none;
+  font-family: var(--font-base);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+
+  &:hover {
+    color: var(--color-text-primary);
+  }
+}

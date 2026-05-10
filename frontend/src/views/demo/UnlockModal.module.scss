@@ -1,0 +1,180 @@
+/* ── UnlockModal — Duolingo speed selection dialog ──────────────────────── */
+/* Two cards with feature lists, chunky green CTAs, close button top-right   */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--color-bg-overlay);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: var(--z-modal);
+  padding: var(--space-4);
+  animation: overlayIn var(--duration-slower) var(--easing-default);
+}
+
+@keyframes overlayIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.modal {
+  background: var(--color-bg-surface);
+  border-radius: var(--radius-2xl);
+  width: 100%;
+  max-width: 520px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-lg);
+  animation: modalUp var(--duration-slow) var(--easing-bounce);
+  position: relative;
+  padding: var(--space-8) var(--space-6);
+}
+
+@keyframes modalUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+/* ── Close × (top-right, transparent, subtle) ──────────────────────────── */
+.closeBtn {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  border: none;
+  background: transparent;
+  font-size: 22px;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--duration-fast) var(--easing-default),
+              color var(--duration-fast) var(--easing-default);
+  z-index: var(--z-raised);
+  line-height: 1;
+
+  &:hover {
+    background: var(--color-bg-muted);
+    color: var(--color-text-primary);
+  }
+}
+
+/* ── Header ──────────────────────────────────────────────────────────────── */
+.emoji {
+  font-size: 36px;
+  margin-bottom: var(--space-3);
+  text-align: center;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-bold);
+  color: var(--color-text-primary);
+  text-align: center;
+  margin: 0 0 var(--space-2);
+  line-height: var(--leading-tight);
+}
+
+.subtitle {
+  font-family: var(--font-base);
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
+  text-align: center;
+  margin: 0 0 var(--space-6);
+  line-height: var(--leading-normal);
+}
+
+/* ── Speed cards (2-col grid, Duolingo option card pattern) ────────────── */
+.speedGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.speedCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--color-border-default);
+  background: var(--color-bg-surface);
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--duration-base) var(--easing-default);
+
+  &:hover {
+    border-color: var(--color-brand-primary);
+    background: var(--color-brand-primary-light);
+    box-shadow: 0 4px 16px rgba(88,204,2,0.15);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.speedIcon {
+  font-size: 32px;
+  margin-bottom: var(--space-2);
+}
+
+.speedName {
+  font-family: var(--font-base);
+  font-size: var(--text-base);
+  font-weight: var(--weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-1);
+}
+
+.speedDesc {
+  font-family: var(--font-base);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-normal);
+}
+
+/* ── Feature list (green checkmarks) ───────────────────────────────────── */
+.features {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-4) 0 0;
+  text-align: left;
+  width: 100%;
+
+  li {
+    font-family: var(--font-base);
+    font-size: var(--text-xs);
+    color: var(--color-text-secondary);
+    padding: var(--space-1) 0;
+    padding-left: var(--space-5);
+    position: relative;
+    line-height: var(--leading-normal);
+
+    &::before {
+      content: '✓';
+      position: absolute;
+      left: var(--space-1);
+      color: var(--color-success);
+      font-weight: var(--weight-bold);
+    }
+  }
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .modal {
+    padding: var(--space-6) var(--space-4);
+  }
+
+  .speedGrid {
+    grid-template-columns: 1fr;
+  }
+}
