@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, useCallback } from 'react'
 import { useHistory } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { useTranslation } from 'react-i18next'
@@ -117,31 +117,14 @@ const DemoExerciseFlow = () => {
     return () => { cancelled = true }
   }, [examType, competency, dispatch])
 
-  // Track question completions via DOM observer (for auth intercept)
-  // Uses a flag to prevent double-counting while feedback banner is visible
-  useEffect(() => {
-    let bannerWasVisible = false
-
-    const observer = new MutationObserver(() => {
-      if (authIntercepted || authShownRef.current) return
-
-      const hasBanner = !!document.querySelector('[class*="feedbackBanner"]')
-      if (hasBanner && !bannerWasVisible) {
-        // Banner just appeared — one question completed
-        bannerWasVisible = true
-        questionCountRef.current += 1
-        if (questionCountRef.current >= AUTH_INTERCEPT_AFTER) {
-          authShownRef.current = true
-          setTimeout(() => setShowAuthModal(true), 600)
-        }
-      } else if (!hasBanner) {
-        // Banner removed — user clicked Continue
-        bannerWasVisible = false
-      }
-    })
-
-    observer.observe(document.body, { childList: true, subtree: true })
-    return () => observer.disconnect()
+  // Called by the exercise component each time the user clicks "Continue"
+  const handleAnswer = useCallback(() => {
+    if (authIntercepted || authShownRef.current) return
+    questionCountRef.current += 1
+    if (questionCountRef.current >= AUTH_INTERCEPT_AFTER) {
+      authShownRef.current = true
+      setShowAuthModal(true)
+    }
   }, [authIntercepted])
 
   // Block browser back button
@@ -256,6 +239,7 @@ const DemoExerciseFlow = () => {
         exercises={exercises}
         onComplete={handleComplete}
         onQuit={handleQuit}
+        onAnswer={handleAnswer}
       />
 
       {/* Auth intercept modal */}

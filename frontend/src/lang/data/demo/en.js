@@ -1,9 +1,9 @@
 export const demoEN = {
   WELCOME: {
     heading: 'Learn English at your own pace!',
-    subheading: 'The most fun and effective way to prepare for your official English exam',
-    login: 'I have an account',
-    startFree: 'Try without registering',
+    subheading: 'The most fun and effective way to prepare for your official exam. No stress, at your own pace.',
+    login: 'I HAVE AN ACCOUNT',
+    startFree: 'TRY WITHOUT REGISTERING',
     freeNote: 'Free, no commitment. Save your progress later.',
   },
   DEMO: {

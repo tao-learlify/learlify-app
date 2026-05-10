@@ -1,60 +1,67 @@
-/* ── DemoAuthInterceptModal ──────────────────────────────────────────────── */
+/* ── DemoAuthInterceptModal — Duolingo dialog pattern ──────────────────── */
+/* Warm, encouraging, mascot present, chunky buttons, no pressure           */
 
 .overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.6);
+  background: var(--color-bg-overlay);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
+  z-index: var(--z-modal);
   padding: var(--space-4);
-  animation: fadeIn 0.25s ease;
+  animation: overlayIn var(--duration-slower) var(--easing-default);
 }
 
-@keyframes fadeIn {
+@keyframes overlayIn {
   from { opacity: 0; }
-  to { opacity: 1; }
+  to   { opacity: 1; }
 }
 
 .modal {
-  background: white;
-  border-radius: var(--radius-xl);
-  padding: var(--space-6);
+  background: var(--color-bg-surface);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-8) var(--space-6);
   width: 100%;
   max-width: 400px;
   text-align: center;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
-  animation: slideUp 0.3s ease;
+  box-shadow: var(--shadow-lg);
+  animation: modalUp var(--duration-slow) var(--easing-bounce);
   max-height: 90vh;
   overflow-y: auto;
 }
 
-@keyframes slideUp {
+@keyframes modalUp {
   from { transform: translateY(30px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+  to   { transform: translateY(0); opacity: 1; }
 }
 
+/* ── Emoji celebration ─────────────────────────────────────────────────── */
 .emoji {
-  font-size: 48px;
+  font-size: var(--icon-2xl);
   margin-bottom: var(--space-3);
 }
 
+/* ── Title (Duolingo: Dunkin, 24px, dark grey) ────────────────────────── */
 .title {
-  font-size: var(--text-xl);
-  font-weight: var(--weight-extrabold);
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-bold);
   color: var(--color-text-primary);
   margin: 0 0 var(--space-2);
+  line-height: var(--leading-tight);
 }
 
+/* ── Subtitle (Duolingo: Varela, 17px, muted) ─────────────────────────── */
 .subtitle {
-  font-size: var(--text-base);
-  color: var(--color-text-muted);
+  font-family: var(--font-base);
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
   margin: 0 0 var(--space-5);
-  line-height: 1.4;
+  line-height: var(--leading-normal);
 }
 
-/* ── Social buttons ─────────────────────────────────────────────────────── */
+/* ── Social buttons stack ──────────────────────────────────────────────── */
 .socialStack {
   display: flex;
   flex-direction: column;
@@ -62,25 +69,25 @@
   margin-bottom: var(--space-4);
 }
 
-/* ── Divider ─────────────────────────────────────────────────────────────── */
+/* ── Divider (Duolingo: "or" between social and email) ─────────────────── */
 .divider {
   display: flex;
   align-items: center;
   gap: var(--space-3);
   margin-bottom: var(--space-4);
-  color: var(--color-text-muted);
+  font-family: var(--font-base);
   font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+
+  &::before, &::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--color-border-default);
+  }
 }
 
-.divider::before,
-.divider::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: var(--color-border-default);
-}
-
-/* ── Form ────────────────────────────────────────────────────────────────── */
+/* ── Inline form ───────────────────────────────────────────────────────── */
 .form {
   display: flex;
   flex-direction: column;
@@ -92,43 +99,51 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-1);
-}
 
-.inlineField label {
-  font-size: var(--text-sm);
-  font-weight: var(--weight-semibold);
-  color: var(--color-text-primary);
-}
+  label {
+    font-family: var(--font-base);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    color: var(--color-text-primary);
+  }
 
-.inlineField input {
-  min-height: 44px;
-  padding: var(--space-2) var(--space-3);
-  border-radius: var(--radius-md);
-  border: 1.5px solid var(--color-border-default);
-  font-family: var(--font-base);
-  font-size: var(--text-base);
-  transition: border-color 0.2s;
+  input {
+    min-height: 48px;
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-md);
+    border: 1.5px solid var(--color-border-default);
+    font-family: var(--font-base);
+    font-size: var(--text-base);
+    color: var(--color-text-primary);
+    transition: border-color var(--duration-fast) var(--easing-default);
 
-  &:focus {
-    outline: none;
-    border-color: var(--color-brand-primary);
+    &:focus {
+      outline: none;
+      border-color: var(--color-border-focus);
+      box-shadow: var(--shadow-focus);
+    }
   }
 }
 
+/* ── Submit button (Duolingo: chunky green, uppercase) ─────────────────── */
 .submitBtn {
-  min-height: 48px;
-  border-radius: var(--radius-pill);
+  width: 100%;
+  min-height: 50px;
+  padding: 0 var(--space-4);
+  border-radius: var(--radius-lg);
   border: none;
-  background: #042C60;
-  color: white;
+  background: var(--color-navy);
+  color: var(--color-text-inverse);
   font-family: var(--font-base);
   font-size: var(--text-base);
   font-weight: var(--weight-bold);
+  text-transform: uppercase;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background var(--duration-fast) var(--easing-default);
+  letter-spacing: 0.02em;
 
   &:hover {
-    background: #053570;
+    background: var(--color-navy-light);
   }
 
   &:disabled {
@@ -138,22 +153,26 @@
 }
 
 .errorMsg {
-  color: #FF3F3F;
+  color: var(--color-error);
+  font-family: var(--font-base);
   font-size: var(--text-sm);
   text-align: center;
 }
 
-/* ── Skip link ───────────────────────────────────────────────────────────── */
+/* ── Skip link (Duolingo: ghost, muted, no pressure) ──────────────────── */
 .skipLink {
   display: block;
+  width: 100%;
   margin-top: var(--space-3);
-  font-size: var(--text-sm);
-  color: var(--color-text-muted);
+  padding: var(--space-2);
   background: none;
   border: none;
+  font-family: var(--font-base);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
   cursor: pointer;
   text-decoration: underline;
-  font-family: var(--font-base);
+  text-underline-offset: 2px;
 
   &:hover {
     color: var(--color-text-primary);

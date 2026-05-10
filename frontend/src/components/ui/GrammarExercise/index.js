@@ -319,7 +319,8 @@ export function GrammarExerciseView({
   exercises = [],
   xpReward = 10,
   onComplete,
-  onQuit
+  onQuit,
+  onAnswer,
 }) {
   const [idx, setIdx] = useState(0)
   const [selected, setSelected] = useState(null) // 0-based index into answers[]
@@ -358,6 +359,7 @@ export function GrammarExerciseView({
   }, [selected, exercise, streak])
 
   const handleContinue = useCallback(() => {
+    onAnswer?.()
     if (idx + 1 >= total) {
       onComplete?.()
     } else {
@@ -366,7 +368,7 @@ export function GrammarExerciseView({
       setFeedbackMsg('')
       setPhase(PHASE.IDLE)
     }
-  }, [idx, total, onComplete])
+  }, [idx, total, onComplete, onAnswer])
 
   if (!exercise) return null
 

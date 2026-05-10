@@ -54,7 +54,7 @@ const WelcomeScreen = () => {
       </h1>
       <p className={styles.subheading}>
         {t('WELCOME.subheading', {
-          defaultValue: 'La forma más divertida y eficaz de preparar tu examen oficial de inglés'
+          defaultValue: 'La forma más divertida y eficaz de preparar tu examen oficial. Sin estrés, a tu ritmo.'
         })}
       </p>
 
