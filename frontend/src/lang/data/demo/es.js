@@ -1,9 +1,9 @@
 export const demoES = {
   WELCOME: {
     heading: '¡Aprende inglés a tu ritmo!',
-    subheading: 'La forma más divertida y eficaz de preparar tu examen oficial de inglés',
-    login: 'Tengo una cuenta',
-    startFree: 'Probar sin registrarme',
+    subheading: 'La forma más divertida y eficaz de preparar tu examen oficial. Sin estrés, a tu ritmo.',
+    login: 'TENGO UNA CUENTA',
+    startFree: 'PROBAR SIN REGISTRARME',
     freeNote: 'Gratis, sin compromiso. Guarda tu progreso después.',
   },
   DEMO: {
