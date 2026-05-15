@@ -72,3 +72,15 @@ export const reactivateSubscriptionThunk = createAsyncThunk(
     }
   }
 )
+
+export const fetchBillingThunk = createAsyncThunk(
+  'subscriptions/fetchBilling',
+  async (_, { rejectWithValue }) => {
+    try {
+      const result = await api.subscriptions.getBilling()
+      return { response: result.response }
+    } catch (err) {
+      return rejectWithValue(err)
+    }
+  }
+)

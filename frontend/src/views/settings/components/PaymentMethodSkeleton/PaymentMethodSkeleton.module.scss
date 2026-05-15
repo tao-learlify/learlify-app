@@ -1,0 +1,95 @@
+/* ──────────────────────────────────────────────────────────────────────────
+   PaymentMethodSkeleton — Shimmer loader mimicking the card layout
+   ────────────────────────────────────────────────────────────────────────── */
+
+@keyframes shimmer {
+  0% {
+    background-position: -400px 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--color-bg-muted) 25%,
+    var(--color-bg-interactive) 50%,
+    var(--color-bg-muted) 75%
+  );
+  background-size: 800px 100%;
+  animation: shimmer 1.4s infinite linear;
+  border-radius: var(--radius-sm);
+}
+
+/* ── Card skeleton ────────────────────────────────────────────────────── */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.cardSkeleton {
+  border-radius: var(--radius-xl);
+  background: var(--color-bg-muted);
+  padding: var(--space-5) var(--space-6) var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  min-height: 120px;
+}
+
+.cardTopRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brandPill {
+  width: 72px;
+  height: 14px;
+}
+
+.chip {
+  width: 28px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+.number {
+  width: 65%;
+  height: 16px;
+}
+
+.cardBottomRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.expiry {
+  width: 64px;
+  height: 14px;
+}
+
+.badge {
+  width: 72px;
+  height: 22px;
+  border-radius: var(--radius-pill);
+}
+
+/* ── Action bar skeleton ──────────────────────────────────────────────── */
+
+.actionRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-2) var(--space-2);
+}
+
+.actionBtn {
+  width: 72px;
+  height: 28px;
+}

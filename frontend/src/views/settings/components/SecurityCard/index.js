@@ -50,41 +50,53 @@ const SecurityCard = ({ profile, demo }) => {
   return (
     <Card elevated>
       <Card.Body>
-        <span className={styles.sectionLabel}>
-          {t('SETTINGS.SECURITY.title')}
-        </span>
-
-        <div className={styles.formGroup}>
-          <Input
-            label={t('SETTINGS.SECURITY.newLabel')}
-            name="password"
-            type="password"
-            value={form.password}
-            onChange={onChange}
-            placeholder="••••••••"
-            disabled={demo}
-          />
+        <div className={styles.protectionSection}>
+          <div className={styles.protectedBadge}>
+            <div className={styles.statusDot} />
+            <span>{t('SETTINGS.SECURITY.accountProtected')}</span>
+          </div>
+          <p className={styles.protectedDesc}>
+            {t('SETTINGS.SECURITY.protectedDesc')}
+          </p>
         </div>
 
-        <div className={styles.formGroup}>
-          <Input
-            label={t('SETTINGS.SECURITY.confirmLabel')}
-            name="confirm"
-            type="password"
-            value={form.confirm}
-            onChange={onChange}
-            placeholder="••••••••"
-            disabled={demo}
-          />
-        </div>
+        <div className={styles.passwordSection}>
+          <span className={styles.sectionLabel}>
+            {t('SETTINGS.SECURITY.changePasswordTitle')}
+          </span>
 
-        <div className={styles.actions}>
-          <Button
-            onClick={handleSubmit}
-            disabled={demo || !form.password || !form.confirm}
-          >
-            {t('SETTINGS.SECURITY.updateButton')}
-          </Button>
+          <div className={styles.formGroup}>
+            <Input
+              label={t('SETTINGS.SECURITY.newLabel')}
+              name="password"
+              type="password"
+              value={form.password}
+              onChange={onChange}
+              placeholder="••••••••"
+              disabled={demo}
+            />
+          </div>
+
+          <div className={styles.formGroup}>
+            <Input
+              label={t('SETTINGS.SECURITY.confirmLabel')}
+              name="confirm"
+              type="password"
+              value={form.confirm}
+              onChange={onChange}
+              placeholder="••••••••"
+              disabled={demo}
+            />
+          </div>
+
+          <div className={styles.actions}>
+            <Button
+              onClick={handleSubmit}
+              disabled={demo || !form.password || !form.confirm}
+            >
+              {t('SETTINGS.SECURITY.updateButton')}
+            </Button>
+          </div>
         </div>
       </Card.Body>
     </Card>

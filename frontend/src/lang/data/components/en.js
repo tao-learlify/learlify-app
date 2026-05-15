@@ -6,7 +6,12 @@ export const componentsEN = {
   },
   EVALUATIONS: {
     title: 'Evaluations',
+    subtitle: 'Latest',
     notavailable: 'No evaluations available',
+    loading: 'Updating',
+    view: 'View',
+    viewLabel: 'View evaluation for {{category}}',
+    emptyHint: 'Complete an exam to see your evaluation history.',
     rows: {
       category: 'Category',
       date: 'Date',

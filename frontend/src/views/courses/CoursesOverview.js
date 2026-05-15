@@ -16,6 +16,7 @@ import useLearningPathWithSchema from 'hooks/useLearningPathWithSchema'
 import useExams from 'hooks/useExams'
 import useAuthProvider from 'hooks/useAuthProvider'
 import usePricing from 'hooks/usePricing'
+import useModels from 'hooks/useModels'
 import Template from 'components/Template'
 import FallbackMode from 'components/FallbackMode'
 import CourseUnitsGrid from 'components/CourseUnitsGrid'
@@ -30,12 +31,12 @@ import styles from './CoursesOverview.module.scss'
 const CoursesOverview = () => {
   const history = useHistory()
   const user = useAuthProvider()
+  const { model } = useModels()
   const { data: exams } = useExams()
   const pricing = usePricing({ preload: true })
 
   const {
     units = [],
-    courseTitle,
     courseId,
     totalSections,
     completedSections,
@@ -45,7 +46,15 @@ const CoursesOverview = () => {
 
   // Use defaults if no data
   const displayTotalSections = totalSections || 15
-  const displayCourseTitle = courseTitle || 'English Path'
+  const selectedModelName =
+    typeof model?.name === 'string'
+      ? model.name
+      : typeof model?.model === 'string'
+        ? model.model
+        : null
+  const displayCourseTitle = selectedModelName
+    ? `${selectedModelName} Path`
+    : 'Learning Path'
   const displayCourseId = courseId || 1
   const displayCompletedSections = completedSections || 0
   const progressPercent =
@@ -84,25 +93,24 @@ const CoursesOverview = () => {
         {/* Header */}
         <header className={styles.header}>
           <div className={styles.headerContent}>
-            <button
-              onClick={() => history.push('/dashboard')}
-              className={styles.backBtn}
-              aria-label="Back to dashboard"
-            >
-              <ArrowLeft size={20} weight="bold" />
-            </button>
+            <div className={styles.titleRow}>
+              <button
+                onClick={() => history.push('/dashboard')}
+                className={styles.backBtn}
+                aria-label="Back to dashboard"
+              >
+                <ArrowLeft size={20} weight="bold" aria-hidden="true" />
+              </button>
 
-            <div className={styles.titleGroup}>
-              <h1 className={styles.pageTitle}>{displayCourseTitle}</h1>
-              <p className={styles.subtitle}>
-                {displayCompletedSections} of {displayTotalSections} units
-                completed
-              </p>
+              <div className={styles.titleGroup}>
+                <span className={styles.kicker}>Learning journey</span>
+                <h1 className={styles.pageTitle}>{displayCourseTitle}</h1>
+              </div>
             </div>
 
             {user && (
               <div className={styles.userInfo}>
-                <span className={styles.userName}>
+                <span className={styles.userName} aria-label="Current learner">
                   {user.profile?.firstName}
                 </span>
                 <span className={styles.xpBadge}>
@@ -113,14 +121,30 @@ const CoursesOverview = () => {
           </div>
 
           {/* Progress Bar */}
-          <div className={styles.progressContainer}>
-            <div className={styles.progressBar}>
-              <div
-                className={styles.progressFill}
-                style={{ width: `${progressPercent}%` }}
-              />
+          <div className={styles.progressPanel}>
+            <div className={styles.progressCopy}>
+              <span className={styles.progressTitle}>Path progress</span>
+              <span className={styles.progressMeta}>
+                {displayCompletedSections} of {displayTotalSections} units
+                completed
+              </span>
             </div>
-            <span className={styles.progressLabel}>{progressPercent}%</span>
+            <div className={styles.progressTrackWrap}>
+              <div
+                className={styles.progressBar}
+                role="progressbar"
+                aria-label={`${displayCourseTitle} progress`}
+                aria-valuemin={0}
+                aria-valuemax={100}
+                aria-valuenow={progressPercent}
+              >
+                <div
+                  className={styles.progressFill}
+                  style={{ width: `${progressPercent}%` }}
+                />
+              </div>
+              <span className={styles.progressLabel}>{progressPercent}%</span>
+            </div>
           </div>
         </header>
 

@@ -1,0 +1,137 @@
+/* ──────────────────────────────────────────────────────────────────────────
+   AddPaymentMethodModal — DuoDesign-inspired Stripe card form
+   ────────────────────────────────────────────────────────────────────────── */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.description {
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+  margin: 0;
+  line-height: var(--leading-relaxed);
+}
+
+/* ── Stripe CardElement wrapper ──────────────────────────────────────── */
+
+.cardFieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.cardFieldLabel {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-primary);
+}
+
+.cardElementBox {
+  border: 2px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-bg-surface);
+  transition: border-color var(--duration-base) var(--easing-out);
+
+  &:focus-within {
+    border-color: var(--color-brand-primary);
+    box-shadow: var(--shadow-focus);
+  }
+
+  /* StripeElement specifics */
+  :global(.StripeElement) {
+    line-height: 1.6;
+  }
+
+  :global(.StripeElement--invalid) {
+    & {
+      border-color: var(--color-error) !important;
+    }
+  }
+}
+
+/* ── Footer action row ────────────────────────────────────────────────── */
+
+.footerActions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  width: 100%;
+}
+
+/* ── Error alert ──────────────────────────────────────────────────────── */
+
+.errorAlert {
+  margin: 0;
+}
+
+/* ── Success state ────────────────────────────────────────────────────── */
+
+.successState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+  padding: var(--space-8) var(--space-4);
+  text-align: center;
+}
+
+/* Animated checkmark circle */
+.checkmarkCircle {
+  width: 72px;
+  height: 72px;
+  color: var(--color-success);
+  animation: scaleIn var(--duration-slower) var(--easing-bounce) forwards;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.checkmarkSvg {
+  width: 100%;
+  height: 100%;
+}
+
+.checkmarkCirclePath {
+  stroke-dasharray: 157;
+  stroke-dashoffset: 157;
+  animation: drawCircle 0.5s ease-out 0.1s forwards;
+}
+
+@keyframes drawCircle {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.checkmarkCheck {
+  stroke-dasharray: 36;
+  stroke-dashoffset: 36;
+  animation: drawCheck 0.35s ease-out 0.55s forwards;
+}
+
+@keyframes drawCheck {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.successMessage {
+  font-family: var(--font-base);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-bold);
+  color: var(--color-text-primary);
+  margin: 0;
+}

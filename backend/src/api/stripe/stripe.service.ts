@@ -160,6 +160,69 @@ class StripeService {
       throw new Error((err as Error).message)
     }
   }
+
+  @Bind
+  async getPaymentMethod(
+    paymentMethodId: string
+  ): Promise<{
+    id: string
+    card: {
+      brand: string
+      last4: string
+      exp_month: number
+      exp_year: number
+    } | null
+  } | null> {
+    try {
+      const pm = await this.stripe.paymentMethods.retrieve(paymentMethodId)
+      return {
+        id: pm.id,
+        card: pm.card
+          ? {
+              brand: pm.card.brand ?? '',
+              last4: pm.card.last4 ?? '',
+              exp_month: pm.card.exp_month ?? 0,
+              exp_year: pm.card.exp_year ?? 0
+            }
+          : null
+      }
+    } catch (err) {
+      this.logger.error('stripe.getPaymentMethod', err)
+      return null
+    }
+  }
+
+  @Bind
+  async listCustomerInvoices(
+    customerId: string
+  ): Promise<
+    Array<{
+      id: string
+      created: number
+      amount_paid: number
+      currency: string
+      status: string
+      hosted_invoice_url: string | null
+    }>
+  > {
+    try {
+      const result = await this.stripe.invoices.list({
+        customer: customerId,
+        limit: 24
+      })
+      return result.data.map(inv => ({
+        id: inv.id,
+        created: inv.created,
+        amount_paid: inv.amount_paid ?? 0,
+        currency: inv.currency ?? 'eur',
+        status: inv.status ?? 'paid',
+        hosted_invoice_url: inv.hosted_invoice_url ?? null
+      }))
+    } catch (err) {
+      this.logger.error('stripe.listCustomerInvoices', err)
+      return []
+    }
+  }
 }
 
 export { StripeService }

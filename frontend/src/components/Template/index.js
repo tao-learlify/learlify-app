@@ -1,6 +1,5 @@
 import React from 'react'
 import clsx from 'clsx'
-import { GooSpinner } from 'react-spinners-kit'
 import { useDispatch } from 'react-redux'
 import { Animated } from 'react-animated-css'
 import classNames from 'clsx'
@@ -17,7 +16,7 @@ import Videos from 'components/Videos'
 
 import useEventListener from 'hooks/useEventListener'
 
-import { GRAY } from 'assets/colors'
+import { Spinner } from 'components/ui'
 import { updateNetwork } from 'store/@reducers/settings'
 
 import styles from './template.module.scss'
@@ -78,7 +77,7 @@ const Template = ({
         <div className={styles.loading}>
           <Animated animationIn="fadeIn">
             <FlexContainer>
-              <GooSpinner size={120} color={GRAY} />
+              <Spinner size="lg" />
             </FlexContainer>
             <Text center tag="h5">
               {loaderIndicatorName}

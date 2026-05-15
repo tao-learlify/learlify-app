@@ -74,7 +74,8 @@
   display: flex;
   gap: var(--space-3);
   flex-wrap: wrap;
-  padding-top: var(--space-2);
+  justify-content: flex-start;
+  padding-top: var(--space-4);
 }
 
 /* Card top row — title + action aligned */

@@ -1,4 +1,6 @@
-.sectionLabel { composes: sectionLabel from '../_shared.module.scss'; }
+.sectionLabel {
+  composes: sectionLabel from '../_shared.module.scss';
+}
 
 .empty {
   font-size: var(--text-md);
@@ -8,36 +10,70 @@
   padding: var(--space-8) 0;
 }
 
-.tableWrapper {
-  overflow-x: auto;
-}
+/* ── Column header ────────────────────────────────────────────────────────── */
+.listHeader {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1.5fr 1fr;
+  gap: var(--space-3);
+  padding: 0 var(--space-3) var(--space-2);
+  border-bottom: 2px solid var(--color-border-default);
+  margin-bottom: var(--space-1);
 
-.table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: var(--text-md);
-
-  th {
-    font-size: var(--text-sm);
+  span {
+    font-size: var(--text-xs);
     font-weight: var(--weight-semibold);
-    color: var(--color-text-secondary);
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    padding: var(--space-3) var(--space-4);
-    border-bottom: 2px solid var(--color-border-default);
-    text-align: left;
+    color: var(--color-text-secondary);
     white-space: nowrap;
   }
+}
 
-  td {
-    padding: var(--space-3) var(--space-4);
-    border-bottom: 1px solid var(--color-bg-muted);
-    color: var(--color-text-primary);
-    vertical-align: middle;
+/* ── Invoice rows ─────────────────────────────────────────────────────────── */
+.invoiceList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.invoiceRow {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1.5fr 1fr;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-3);
+  border-radius: var(--radius-sm);
+  border-bottom: 1px solid var(--color-bg-muted);
+  transition: background var(--duration-fast) var(--easing-default);
+
+  &:last-child {
+    border-bottom: none;
   }
 
-  tbody tr:last-child td { border-bottom: none; }
-  tbody tr:hover td { background-color: var(--color-bg-muted); }
+  &:hover {
+    background: var(--color-bg-muted);
+  }
+}
+
+.invoiceDate {
+  font-size: var(--text-md);
+  color: var(--color-text-primary);
+}
+
+.invoiceAmount {
+  font-size: var(--text-md);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-primary);
+}
+
+.invoiceStatus {
+  display: flex;
+  align-items: center;
+}
+
+.invoiceAction {
+  display: flex;
+  align-items: center;
 }
 
 .downloadLink {
@@ -61,4 +97,32 @@
 
 .noReceipt {
   color: var(--color-text-disabled);
+}
+
+/* ── Skeleton loading ─────────────────────────────────────────────────────── */
+.skeletonRow {
+  pointer-events: none;
+}
+
+.skeletonLine {
+  display: block;
+  height: 14px;
+  border-radius: var(--radius-xs);
+  background: linear-gradient(
+    90deg,
+    var(--color-bg-muted) 25%,
+    var(--color-border-default) 50%,
+    var(--color-bg-muted) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
 }

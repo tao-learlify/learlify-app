@@ -412,6 +412,52 @@ class SubscriptionsService {
       .where({ stripe_charge_id: stripeChargeId, status: 'past_due' })
       .patch({ status: 'active' })
   }
+
+  @Bind
+  async getBilling(
+    userId: number
+  ): Promise<{
+    paymentMethod: {
+      id: string
+      card: {
+        brand: string
+        last4: string
+        exp_month: number
+        exp_year: number
+      } | null
+    } | null
+    invoices: Array<{
+      id: string
+      created: number
+      amount_paid: number
+      currency: string
+      status: string
+      hosted_invoice_url: string | null
+    }>
+  }> {
+    const subscription = ((await Subscription.query()
+      .where({ user_id: userId, status: 'active' })
+      .orderBy('created_at', 'desc')
+      .first()) as unknown) as SubscriptionRow | undefined
+
+    if (!subscription) {
+      return { paymentMethod: null, invoices: [] }
+    }
+
+    const [pm, invoices] = await Promise.all([
+      subscription.payment_method_id
+        ? this.stripe.getPaymentMethod(subscription.payment_method_id)
+        : Promise.resolve(null),
+      subscription.stripe_customer_id
+        ? this.stripe.listCustomerInvoices(subscription.stripe_customer_id)
+        : Promise.resolve([])
+    ])
+
+    return {
+      paymentMethod: pm ?? null,
+      invoices: invoices ?? []
+    }
+  }
 }
 
 export { SubscriptionsService }

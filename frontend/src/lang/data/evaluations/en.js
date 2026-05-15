@@ -7,6 +7,7 @@ export const evaluationsEN = {
   score: '¡You have scored {{suffix}} {{score}} in {{model}}!',
   STATUS: {
     EVALUATED: 'Evaluated',
-    TAKEN: 'On revision'
+    TAKEN: 'On revision',
+    PENDING: 'Pending'
   }
 }
