@@ -29,3 +29,8 @@ export const activeSubscriptionSelector = createSelector(
     return data.find(s => s.status === 'active') || data[0]
   }
 )
+
+export const billingSelector = createSelector(
+  selector,
+  ({ billing }) => billing
+)

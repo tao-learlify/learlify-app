@@ -10,6 +10,12 @@ export const settingsEN = {
   name: 'Name',
   password: 'Update Password',
   save: 'Save',
+  subtitle: 'Manage your account, subscription, and billing.',
+  TABS: {
+    membership: 'Membership',
+    personal: 'Personal info',
+    security: 'Security'
+  },
   title: 'Account and Subscription',
   update: 'Updated Successfully',
   validations: {
@@ -94,10 +100,15 @@ export const settingsEN = {
   },
   PROFILE: {
     title: 'Profile',
-    editInfo: 'Edit information'
+    description: 'Manage your name and contact details.',
+    editInfo: 'Edit information',
+    emailReadOnly: 'Email address cannot be changed'
   },
   SECURITY: {
     title: 'Security',
+    accountProtected: 'Your account is secured',
+    protectedDesc: 'Your account is protected with a secure password. You can update it below at any time.',
+    changePasswordTitle: 'Change password',
     newLabel: 'New password',
     confirmLabel: 'Confirm new password',
     updateButton: 'Update password'

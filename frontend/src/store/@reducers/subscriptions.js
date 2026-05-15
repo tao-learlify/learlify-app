@@ -4,7 +4,8 @@ import {
   createSubscriptionThunk,
   cancelSubscriptionThunk,
   cancelAtPeriodEndThunk,
-  reactivateSubscriptionThunk
+  reactivateSubscriptionThunk,
+  fetchBillingThunk
 } from 'store/@thunks/subscriptions'
 import {
   fetchSubscriptionsPendingController,
@@ -21,7 +22,10 @@ import {
   cancelAtPeriodEndRejectedController,
   reactivatePendingController,
   reactivateFulfilledController,
-  reactivateRejectedController
+  reactivateRejectedController,
+  fetchBillingPendingController,
+  fetchBillingFulfilledController,
+  fetchBillingRejectedController
 } from 'store/@controllers/subscriptions'
 
 /**
@@ -58,6 +62,11 @@ const initialState = {
   canceling: {
     loading: false,
     error: null
+  },
+  billing: {
+    data: null,
+    loading: false,
+    error: null
   }
 }
 
@@ -84,7 +93,11 @@ const subscriptions = createSlice({
 
     [reactivateSubscriptionThunk.pending]: reactivatePendingController,
     [reactivateSubscriptionThunk.fulfilled]: reactivateFulfilledController,
-    [reactivateSubscriptionThunk.rejected]: reactivateRejectedController
+    [reactivateSubscriptionThunk.rejected]: reactivateRejectedController,
+
+    [fetchBillingThunk.pending]: fetchBillingPendingController,
+    [fetchBillingThunk.fulfilled]: fetchBillingFulfilledController,
+    [fetchBillingThunk.rejected]: fetchBillingRejectedController
   }
 })
 

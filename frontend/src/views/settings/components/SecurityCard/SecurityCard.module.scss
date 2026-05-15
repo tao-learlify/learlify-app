@@ -1,5 +1,49 @@
-.sectionLabel { composes: sectionLabel from '../_shared.module.scss'; }
-.actions      { composes: actions      from '../_shared.module.scss'; }
+.sectionLabel {
+  composes: sectionLabel from '../_shared.module.scss';
+}
+.actions {
+  composes: actions from '../_shared.module.scss';
+}
+
+/* ── Protection section (status + description) ───────────────────────────── */
+.protectionSection {
+  margin-bottom: var(--space-5);
+  padding-bottom: var(--space-5);
+  border-bottom: 1px solid var(--color-border-default);
+}
+
+.protectedBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: var(--color-success-bg);
+  color: var(--color-success-text);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-pill);
+  margin-bottom: var(--space-3);
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+}
+
+.protectedDesc {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  margin: 0;
+  line-height: var(--leading-relaxed);
+}
+
+/* ── Password section ────────────────────────────────────────────────────── */
+.passwordSection {
+  // container — styles inherited from .sectionLabel + .formGroup + .actions
+}
 
 .formGroup {
   margin-bottom: var(--space-4);

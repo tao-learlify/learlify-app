@@ -51,6 +51,12 @@ class SubscriptionsRouter {
       Middleware.secure(this.controller.getMine)
     )
 
+    this.subscriptions.get(
+      '/me/billing',
+      [Middleware.authenticate] as RequestHandler[],
+      Middleware.secure(this.controller.getBilling)
+    )
+
     this.subscriptions.patch(
       '/me/cancel',
       [Middleware.authenticate, Middleware.noDemoReferrer] as RequestHandler[],

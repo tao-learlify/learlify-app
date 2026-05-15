@@ -1,11 +1,15 @@
-import { useEffect, useMemo } from 'react'
+import { useCallback, useEffect, useMemo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import {
   subscriptionsSelector,
-  activeSubscriptionSelector
+  activeSubscriptionSelector,
+  billingSelector
 } from 'store/@selectors/subscriptions'
 import { packagesSelector } from 'store/@selectors/packages'
-import { fetchSubscriptionsThunk } from 'store/@thunks/subscriptions'
+import {
+  fetchSubscriptionsThunk,
+  fetchBillingThunk
+} from 'store/@thunks/subscriptions'
 import usePackages from 'hooks/usePackages'
 
 /**
@@ -148,6 +152,7 @@ function useSubscription() {
 
   const subscriptionsState = useSelector(subscriptionsSelector)
   const activeSubscription = useSelector(activeSubscriptionSelector)
+  const billing = useSelector(billingSelector)
 
   // Legacy packages — kept for payment method / invoice fallback
   const packagesState = useSelector(packagesSelector)
@@ -163,6 +168,17 @@ function useSubscription() {
     }
   }, [dispatch])
 
+  useEffect(() => {
+    dispatch(fetchBillingThunk())
+  }, [dispatch])
+
+  const refetchBilling = useCallback(() => {
+    dispatch(fetchBillingThunk())
+  }, [dispatch])
+
+  // Billing initial loading (suppress spinner on silent refetch when data already loaded)
+  const billingLoading = billing.loading && billing.data === null
+
   const loading = subscriptionsState.loading || packagesLoading
 
   const subscription = useMemo(() => {
@@ -177,19 +193,41 @@ function useSubscription() {
     return !hasSubscription && hasPackage
   }, [subscriptionsState.data, packagesData])
 
-  // Payment method: prefer from active package for now
-  // (subscriptions API does not expose card details)
+  // Payment method: prefer live billing data from /me/billing, fallback to packages
   const paymentMethod = useMemo(() => {
+    const billingPm = billing.data?.paymentMethod
+    if (billingPm?.card?.last4) {
+      return {
+        brand: billingPm.card.brand || '',
+        last4: billingPm.card.last4,
+        expMonth: billingPm.card.exp_month || 0,
+        expYear: billingPm.card.exp_year || 0
+      }
+    }
+    // Fallback: legacy packages data
     const activePackage = packagesData[0]
     return derivePaymentMethodFromPackage(activePackage)
-  }, [packagesData])
+  }, [billing.data, packagesData])
 
+  // Invoices: prefer live billing data from /me/billing, fallback to packages
   const invoices = useMemo(() => {
+    const billingInvoices = billing.data?.invoices
+    if (Array.isArray(billingInvoices) && billingInvoices.length > 0) {
+      return billingInvoices.map(inv => ({
+        id: inv.id,
+        date: inv.created ? new Date(inv.created * 1000).toISOString() : '',
+        amount: inv.amount_paid != null ? inv.amount_paid / 100 : 0,
+        currency: inv.currency || 'EUR',
+        status: inv.status || 'paid',
+        receiptUrl: inv.hosted_invoice_url || null
+      }))
+    }
+    // Fallback: legacy packages data
     const activePackage = packagesData[0]
     return deriveInvoicesFromPackage(activePackage)
-  }, [packagesData])
+  }, [billing.data, packagesData])
 
-  return { subscription, paymentMethod, invoices, loading, isLegacy }
+  return { subscription, paymentMethod, invoices, loading, isLegacy, refetchBilling, billingLoading }
 }
 
 export default useSubscription

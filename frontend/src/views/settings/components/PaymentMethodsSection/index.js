@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useDispatch } from 'react-redux'
+import { fetchBillingThunk } from 'store/@thunks/subscriptions'
 import { Card, Button } from 'components/ui'
 import PaymentMethodCard from '../PaymentMethodCard'
 import PaymentMethodEmptyState from '../PaymentMethodEmptyState'
@@ -27,12 +29,15 @@ import styles from './PaymentMethodsSection.module.scss'
  */
 const PaymentMethodsSection = ({ paymentMethod, loading, demo }) => {
   const { t } = useTranslation()
+  const dispatch = useDispatch()
   const [showAdd, setShowAdd] = useState(false)
   const [showRemove, setShowRemove] = useState(false)
   const [removingMethod, setRemovingMethod] = useState(null)
+  const [optimisticCard, setOptimisticCard] = useState(null)
 
-  // Normalise to array — ready for multi-card support
-  const methods = paymentMethod ? [{ ...paymentMethod, id: 'primary' }] : []
+  // Prefer live paymentMethod from Redux; fall back to optimistic card until refetch completes
+  const resolvedMethod = paymentMethod || optimisticCard
+  const methods = resolvedMethod ? [{ ...resolvedMethod, id: 'primary' }] : []
   const hasCards = methods.length > 0
 
   const handleRemoveClick = method => {
@@ -175,7 +180,11 @@ const PaymentMethodsSection = ({ paymentMethod, loading, demo }) => {
       <AddPaymentMethodModal
         isOpen={showAdd}
         onClose={() => setShowAdd(false)}
-        onSuccess={() => setShowAdd(false)}
+        onSuccess={({ card }) => {
+          if (card) setOptimisticCard(card)
+          setShowAdd(false)
+          dispatch(fetchBillingThunk())
+        }}
       />
 
       <RemovePaymentMethodDialog

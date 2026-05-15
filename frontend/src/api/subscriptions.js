@@ -152,3 +152,15 @@ export function patchReactivate(subscriptionId) {
     requiresAuth: true
   })
 }
+
+/**
+ * Fetch payment method + invoice history for the current user's active subscription.
+ * @returns {Promise<{ response: { paymentMethod: Object|null, invoices: Object[] } }>}
+ */
+export function getBilling() {
+  return httpClient({
+    endpoint: '/api/v1/subscriptions/me/billing',
+    method: GET,
+    requiresAuth: true
+  })
+}

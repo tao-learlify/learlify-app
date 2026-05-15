@@ -116,4 +116,11 @@ export class SubscriptionsController {
       statusCode: 200
     })
   }
+
+  @Bind
+  async getBilling(req: Request, res: Response) {
+    const user = req.user as { id: number }
+    const data = await this.service.getBilling(user.id)
+    return res.status(200).json({ response: data, statusCode: 200 })
+  }
 }

@@ -113,3 +113,18 @@ export const reactivateRejectedController = (state, action) => {
   state.canceling.loading = false
   state.canceling.error = action.payload || true
 }
+
+export const fetchBillingPendingController = state => {
+  state.billing.loading = true
+  state.billing.error = null
+}
+
+export const fetchBillingFulfilledController = (state, action) => {
+  state.billing.loading = false
+  state.billing.data = action.payload.response
+}
+
+export const fetchBillingRejectedController = (state, action) => {
+  state.billing.loading = false
+  state.billing.error = action.payload || true
+}

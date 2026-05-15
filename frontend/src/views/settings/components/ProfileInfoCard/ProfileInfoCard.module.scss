@@ -1,19 +1,75 @@
-.sectionLabel { composes: sectionLabel from '../_shared.module.scss'; }
-.actions      { composes: actions      from '../_shared.module.scss'; }
-.cardTop      { composes: cardTop      from '../_shared.module.scss'; }
-.fieldRow     { composes: fieldRow     from '../_shared.module.scss'; }
-.fieldLabel   { composes: fieldLabel   from '../_shared.module.scss'; }
-.fieldValue   { composes: fieldValue   from '../_shared.module.scss'; }
+.sectionLabel {
+  composes: sectionLabel from '../_shared.module.scss';
+}
+.actions {
+  composes: actions from '../_shared.module.scss';
+}
+.cardTop {
+  composes: cardTop from '../_shared.module.scss';
+}
+.fieldRow {
+  composes: fieldRow from '../_shared.module.scss';
+}
+.fieldLabel {
+  composes: fieldLabel from '../_shared.module.scss';
+}
+.fieldValue {
+  composes: fieldValue from '../_shared.module.scss';
+}
 
+/* ── Workspace layout ────────────────────────────────────────────────────── */
+.workspace {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.workspaceHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.workspaceTitle {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-bold);
+  color: var(--color-text-primary);
+  margin: 0 0 var(--space-1);
+  letter-spacing: 0.3px;
+}
+
+.workspaceDesc {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  margin: 0;
+  line-height: var(--leading-relaxed);
+}
+
+/* ── Field rows (view mode) ──────────────────────────────────────────────── */
 .fieldRows {
   display: flex;
   flex-direction: column;
 }
 
-.formGroup {
-  margin-bottom: var(--space-4);
+/* ── Form layout (edit mode) ─────────────────────────────────────────────── */
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3) var(--space-5);
+  margin-bottom: var(--space-3);
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
 }
 
+.formField {
+  margin-bottom: var(--space-3);
+}
+
+/* ── Edit button ─────────────────────────────────────────────────────────── */
 .btnEdit {
   background-color: transparent;
   color: var(--color-text-accent);
@@ -24,6 +80,8 @@
   cursor: pointer;
   text-decoration: underline;
   text-decoration-color: transparent;
+  white-space: nowrap;
+  flex-shrink: 0;
   transition:
     color var(--duration-base) var(--easing-default),
     text-decoration-color var(--duration-base) var(--easing-default);

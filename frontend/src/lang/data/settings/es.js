@@ -10,6 +10,12 @@ export const settingsES = {
   name: 'Nombre',
   password: 'Actualizar Contraseña',
   save: 'Guardar',
+  subtitle: 'Gestiona tu cuenta, suscripción y facturación.',
+  TABS: {
+    membership: 'Membresía',
+    personal: 'Datos personales',
+    security: 'Seguridad'
+  },
   title: 'Cuenta y Suscripción',
   update: 'Información Actualizada',
   validations: {
@@ -94,10 +100,15 @@ export const settingsES = {
   },
   PROFILE: {
     title: 'Perfil',
-    editInfo: 'Editar información'
+    description: 'Gestiona tu nombre y datos de contacto.',
+    editInfo: 'Editar información',
+    emailReadOnly: 'El correo electrónico no se puede cambiar'
   },
   SECURITY: {
     title: 'Seguridad',
+    accountProtected: 'Tu cuenta está protegida',
+    protectedDesc: 'Tu cuenta está protegida con una contraseña segura. Puedes actualizarla aquí cuando quieras.',
+    changePasswordTitle: 'Cambiar contraseña',
     newLabel: 'Nueva contraseña',
     confirmLabel: 'Confirmar nueva contraseña',
     updateButton: 'Actualizar contraseña'
