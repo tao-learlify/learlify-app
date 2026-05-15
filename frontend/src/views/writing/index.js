@@ -1,193 +1,81 @@
 import React, { useState } from 'react'
-import { useHistory } from 'react-router-dom'
+import { useHistory, useLocation } from 'react-router-dom'
 import { WritingExerciseView } from 'components/ui'
 import pandaImg from 'assets/illustrations/pandas/panda.svg'
 
-// ── Sample exercises ──────────────────────────────────────────────────────────
-// Each exercise has a shared context + two tasks (informal + formal).
-// The context mirrors APTIS Part C writing tasks.
-const WRITING_EXERCISES = [
-  {
-    context: {
-      subject: 'Holiday complaint',
-      scenario:
-        'You recently stayed at the Grand Bay Hotel in Barcelona. You were disappointed with your stay and want to let your friend Sarah know, and also write to the hotel manager.',
-      notes: [
-        'Your room was noisy and had no sea view as promised',
-        'The outdoor pool was closed for repairs without prior notice',
-        'Staff were unhelpful when you raised your concerns',
-      ],
-    },
-    tasks: [
-      {
-        label: 'Task 1',
-        type: 'Informal Email',
-        instruction:
-          'Write an email to your friend Sarah telling her about your disappointing holiday experience.',
-        minWords: 40,
-        targetWords: 50,
-        maxWords: 75,
-        placeholder: 'Hey Sarah,\n\nJust got back from Barcelona — what a nightmare! You\'ll never believe what happened...',
-        hints: [
-          'Use casual language and contractions (I\'m, it\'s, can\'t)',
-          'Express your feelings — frustrated, annoyed, let down…',
-        ],
-      },
-      {
-        label: 'Task 2',
-        type: 'Formal Email',
-        instruction:
-          'Write a formal complaint email to the hotel manager, explaining the problems and requesting a partial refund.',
-        minWords: 120,
-        targetWords: 140,
-        maxWords: 165,
-        placeholder: 'Dear Hotel Manager,\n\nI am writing to formally express my dissatisfaction regarding my recent stay...',
-        hints: [
-          'Open with "Dear [Title]" and close with "Yours faithfully"',
-          'State each issue clearly — avoid emotional language',
-        ],
-      },
-    ],
-  },
-  {
-    context: {
-      subject: 'Community centre closure',
-      scenario:
-        'The local community centre in your town is going to be closed permanently due to budget cuts. You want to write to a friend who used the centre, and also to the town council.',
-      notes: [
-        'The centre hosts weekly sports clubs and language classes',
-        'Many elderly residents rely on it for social activities',
-        'A petition with 800 signatures has already been submitted',
-      ],
-    },
-    tasks: [
-      {
-        label: 'Task 1',
-        type: 'Informal Email',
-        instruction:
-          'Write an email to your friend Tom, who used to attend events at the centre, sharing the news and your thoughts.',
-        minWords: 40,
-        targetWords: 50,
-        maxWords: 75,
-        placeholder: 'Hi Tom,\n\nHave you heard the news about the community centre? I can\'t believe they\'re...',
-        hints: [
-          'Keep it conversational — write as you would speak',
-          'Ask for Tom\'s opinion and suggest what to do next',
-        ],
-      },
-      {
-        label: 'Task 2',
-        type: 'Formal Email',
-        instruction:
-          'Write a formal email to the town council arguing against the closure and proposing an alternative solution.',
-        minWords: 120,
-        targetWords: 140,
-        maxWords: 165,
-        placeholder: 'Dear Members of the Town Council,\n\nI am writing on behalf of the local community to strongly object to...',
-        hints: [
-          'Structure your argument: problem → impact → solution',
-          'Use formal phrases: "I would like to draw your attention to…"',
-        ],
-      },
-    ],
-  },
-]
+import exam01 from 'data/exams/aptis/exam-01.json'
+import exam02 from 'data/exams/aptis/exam-02.json'
+import exam03 from 'data/exams/aptis/exam-03.json'
+import exam04 from 'data/exams/aptis/exam-04.json'
+import exam05 from 'data/exams/aptis/exam-05.json'
+import exam06 from 'data/exams/aptis/exam-06.json'
+import exam07 from 'data/exams/aptis/exam-07.json'
+import exam08 from 'data/exams/aptis/exam-08.json'
+import exam09 from 'data/exams/aptis/exam-09.json'
+import exam10 from 'data/exams/aptis/exam-10.json'
 
-const XP_REWARD = 30
+const EXAM_MAP = {
+  'exam-01': exam01, 'exam-02': exam02, 'exam-03': exam03, 'exam-04': exam04,
+  'exam-05': exam05, 'exam-06': exam06, 'exam-07': exam07, 'exam-08': exam08,
+  'exam-09': exam09, 'exam-10': exam10,
+}
 
-// ── Done screen ───────────────────────────────────────────────────────────────
-function DoneScreen({ total, xpEarned, onRestart, onExit }) {
+function getWritingExercises(examData) {
+  const schema = examData.schema?.find(s => s.category === 'Writing')
+  return schema?.exercises ?? []
+}
+
+const XP_REWARD = 15
+
+function DoneScreen({ total, onRestart, onExit }) {
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        minHeight: '100dvh',
-        gap: 40,
-        padding: '40px 32px',
-        background: 'linear-gradient(180deg, #EEF2FF 0%, #FFFFFF 40%)',
-        textAlign: 'center',
-      }}
-    >
-      <img
-        src={pandaImg}
-        alt=""
-        aria-hidden="true"
-        style={{
-          width: 160,
-          height: 'auto',
-          filter: 'drop-shadow(0 8px 24px rgba(79,70,229,0.20))',
-        }}
-      />
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center',
+      justifyContent: 'center', minHeight: '100dvh', gap: 40, padding: '40px 32px',
+      background: '#FFFFFF', textAlign: 'center' }}>
+      <img src={pandaImg} alt="" aria-hidden="true"
+        style={{ width: 200, height: 'auto', filter: 'drop-shadow(0 8px 24px rgba(0,0,0,0.12))' }} />
       <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-        <h1
-          style={{
-            fontSize: 'var(--text-2xl)',
-            fontWeight: 800,
-            color: 'var(--color-text-primary)',
-            margin: 0,
-          }}
-        >
-          Writing session complete!
+        <h1 style={{ fontSize: 'var(--text-4xl)', fontWeight: 800, color: 'var(--color-text-primary)', margin: 0 }}>
+          🎉 Section complete!
         </h1>
-        <p style={{ fontSize: 'var(--text-base)', color: 'var(--color-text-muted)', margin: 0 }}>
-          You completed {total} {total === 1 ? 'exercise' : 'exercises'} and earned +{xpEarned} XP!
+        <p style={{ fontSize: 'var(--text-base)', color: 'var(--color-text-secondary)', margin: 0 }}>
+          You completed all {total} writing exercises. Great work!
         </p>
       </div>
       <div style={{ display: 'flex', gap: 12, width: '100%', maxWidth: 360 }}>
-        <button
-          onClick={onRestart}
-          style={{
-            flex: 1, padding: '14px 20px', borderRadius: 'var(--radius-xl)',
-            border: '2.5px solid #E2E8F0', background: '#fff', color: '#1E293B',
-            fontWeight: 700, fontSize: 'var(--text-base)', cursor: 'pointer',
-            boxShadow: '0 4px 0 0 #E2E8F0',
-          }}
-        >
-          Restart
+        <button onClick={onRestart} style={{ flex: 1, padding: '14px 20px', borderRadius: 'var(--radius-lg)',
+          border: '2px solid var(--color-border-default)', background: '#FFFFFF', color: 'var(--color-text-primary)',
+          fontWeight: 700, fontSize: 'var(--text-base)', cursor: 'pointer', boxShadow: 'var(--shadow-button)' }}>
+          Try again
         </button>
-        <button
-          onClick={onExit}
-          style={{
-            flex: 1, padding: '14px 20px', borderRadius: 'var(--radius-xl)',
-            border: 'none', background: '#4F46E5', color: '#fff',
-            fontWeight: 800, fontSize: 'var(--text-base)', cursor: 'pointer',
-            boxShadow: '0 4px 0 0 #3730A3',
-          }}
-        >
-          Back to dashboard
+        <button onClick={onExit} style={{ flex: 1, padding: '14px 20px', borderRadius: 'var(--radius-lg)',
+          border: 'none', background: 'var(--color-brand-primary)', color: '#fff', fontWeight: 800,
+          fontSize: 'var(--text-base)', cursor: 'pointer', boxShadow: 'var(--shadow-button-brand)' }}>
+          Back to exams
         </button>
       </div>
     </div>
   )
 }
 
-// ── WritingView ───────────────────────────────────────────────────────────────
 export default function WritingView() {
   const history = useHistory()
+  const location = useLocation()
   const [done, setDone] = useState(false)
   const [key,  setKey]  = useState(0)
 
+  const params   = new URLSearchParams(location.search)
+  const examId   = params.get('exam') ?? 'exam-01'
+  const examData = EXAM_MAP[examId] ?? exam01
+  const exercises = getWritingExercises(examData)
+
   if (done) {
-    return (
-      <DoneScreen
-        total={WRITING_EXERCISES.length}
-        xpEarned={XP_REWARD * WRITING_EXERCISES.length}
-        onRestart={() => { setKey(k => k + 1); setDone(false) }}
-        onExit={() => history.push('/dashboard')}
-      />
-    )
+    return <DoneScreen total={exercises.length} onRestart={() => { setKey(k => k + 1); setDone(false) }}
+      onExit={() => history.push('/exams')} />
   }
 
   return (
-    <WritingExerciseView
-      key={key}
-      exercises={WRITING_EXERCISES}
-      xpReward={XP_REWARD}
-      onComplete={() => setDone(true)}
-      onQuit={() => history.goBack()}
-    />
+    <WritingExerciseView key={key} exercises={exercises} xpReward={XP_REWARD}
+      onComplete={() => setDone(true)} onQuit={() => history.goBack()} />
   )
 }

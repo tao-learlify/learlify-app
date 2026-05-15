@@ -1,12 +1,12 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react'
 import clsx from 'clsx'
 import {
-  CheckCircleIcon,
-  ArrowRightIcon,
-  LightningIcon,
-  MicrophoneIcon,
-  StopCircleIcon,
-  ArrowsClockwiseIcon
+  CheckCircle,
+  ArrowRight,
+  Lightning,
+  Microphone,
+  StopCircle,
+  ArrowsClockwise
 } from '@phosphor-icons/react'
 import pandaImg from 'assets/illustrations/pandas/panda-speaking.svg'
 import { ExerciseHeader } from 'components/ui/GrammarExercise'
@@ -221,11 +221,11 @@ export function SpeakingImageView({
         {/* ── Top row ──────────────────────────────────────────────────────── */}
         <div className={styles.topRow}>
           <span className={styles.skillLabel}>
-            <MicrophoneIcon weight="fill" size={12} aria-hidden="true" />
+            <Microphone weight="fill" size={12} aria-hidden="true" />
             Speaking
           </span>
           <span className={styles.xpBadge}>
-            <LightningIcon weight="fill" size={13} aria-hidden="true" />+
+            <Lightning weight="fill" size={13} aria-hidden="true" />+
             {xpReward} XP
           </span>
         </div>
@@ -258,7 +258,7 @@ export function SpeakingImageView({
             {/* Done badge — bottom left of image */}
             {phase === PHASE.REVIEW && (
               <div className={styles.doneBadge}>
-                <CheckCircleIcon weight="fill" size={13} aria-hidden="true" />
+                <CheckCircle weight="fill" size={13} aria-hidden="true" />
                 {formatTime(seconds)} recorded
               </div>
             )}
@@ -299,7 +299,7 @@ export function SpeakingImageView({
                     onClick={startRecording}
                     aria-label="Tap to start recording your description"
                   >
-                    <MicrophoneIcon
+                    <Microphone
                       weight="fill"
                       size={34}
                       aria-hidden="true"
@@ -385,7 +385,7 @@ export function SpeakingImageView({
                     onClick={stopRecording}
                     aria-label="Stop recording"
                   >
-                    <StopCircleIcon
+                    <StopCircle
                       weight="fill"
                       size={26}
                       aria-hidden="true"
@@ -419,7 +419,7 @@ export function SpeakingImageView({
           {phase === PHASE.REVIEW && (
             <div className={styles.doneActions}>
               <button className={styles.retryBtn} onClick={handleRetry}>
-                <ArrowsClockwiseIcon
+                <ArrowsClockwise
                   weight="bold"
                   size={16}
                   aria-hidden="true"
@@ -432,7 +432,7 @@ export function SpeakingImageView({
                 autoFocus
               >
                 Continue
-                <ArrowRightIcon weight="bold" size={18} aria-hidden="true" />
+                <ArrowRight weight="bold" size={18} aria-hidden="true" />
               </button>
             </div>
           )}

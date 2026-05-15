@@ -1,19 +1,20 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react'
 import clsx from 'clsx'
 import {
-  MicrophoneIcon,
-  StopCircleIcon,
-  ArrowsClockwiseIcon,
-  ArrowRightIcon,
-  LightningIcon,
-  SparkleIcon,
-  PauseIcon,
-  SpeakerHighIcon,
-  WarningIcon,
+  Microphone,
+  StopCircle,
+  ArrowsClockwise,
+  ArrowRight,
+  Lightning,
+  Sparkle,
+  Pause,
+  SpeakerHigh,
+  Warning,
 } from '@phosphor-icons/react'
 import pandaImg from 'assets/illustrations/pandas/panda-speaking.svg'
 import { ExerciseHeader } from 'components/ui/GrammarExercise'
 import { SpeakingReviewZone } from '../SpeakingReviewZone'
+import { VocabSubExercise } from 'components/ui/VocabSubExercise'
 import styles from './SpeakingExercise.module.scss'
 
 // ── Phase state machine ────────────────────────────────────────────────────────
@@ -95,6 +96,8 @@ export function SpeakingExerciseView({
 
   const exercise = exercises[idx]
   const total    = exercises.length
+  const isVocab  = exercise?.questions?.length > 0
+  const isValid  = exercise && (isVocab || (exercise.prompt || exercise.audioUrl))
 
   // ── Refs ─────────────────────────────────────────────────────────────────────
   const recorderRef    = useRef(null)
@@ -284,6 +287,20 @@ export function SpeakingExerciseView({
   }, [idx, total, onComplete])
 
   if (!exercise) return null
+  if (!isValid) return null
+
+  if (isVocab) {
+    return (
+      <div className={styles.root}>
+        <ExerciseHeader current={idx + 1} total={total} onQuit={onQuit} />
+        <VocabSubExercise exercise={exercise} xpReward={xpReward}
+          onContinue={() => {
+            if (idx + 1 >= total) onComplete?.()
+            else setIdx(i => i + 1)
+          }} />
+      </div>
+    )
+  }
 
   // ── Derived UI values ─────────────────────────────────────────────────────────
   const pandaMood    = phase === PHASE.REVIEW ? 'happy' : 'idle'
@@ -311,11 +328,11 @@ export function SpeakingExerciseView({
         {/* ── Skill badge + XP ──────────────────────────────────────── */}
         <div className={styles.topRow}>
           <span className={styles.skillLabel}>
-            <SparkleIcon weight="fill" size={12} aria-hidden="true" />
+            <Sparkle weight="fill" size={12} aria-hidden="true" />
             Speaking
           </span>
           <span className={styles.xpBadge}>
-            <LightningIcon weight="fill" size={13} aria-hidden="true" />
+            <Lightning weight="fill" size={13} aria-hidden="true" />
             +{xpReward} XP
           </span>
         </div>
@@ -366,8 +383,8 @@ export function SpeakingExerciseView({
                   >
                     <span className={styles.nativeBtnIcon}>
                       {refPlaying
-                        ? <PauseIcon      weight="fill" size={18} aria-hidden="true" />
-                        : <SpeakerHighIcon weight="fill" size={18} aria-hidden="true" />
+                        ? <Pause      weight="fill" size={18} aria-hidden="true" />
+                        : <SpeakerHigh weight="fill" size={18} aria-hidden="true" />
                       }
                     </span>
                     <span className={styles.nativeBtnText}>
@@ -396,7 +413,7 @@ export function SpeakingExerciseView({
                   disabled={!!micError}
                   aria-label="Start speaking — tap to record"
                 >
-                  <MicrophoneIcon weight="fill" size={36} aria-hidden="true" />
+                  <Microphone weight="fill" size={36} aria-hidden="true" />
                 </button>
               </div>
 
@@ -408,7 +425,7 @@ export function SpeakingExerciseView({
 
               {micError && (
                 <div className={styles.micError} role="alert">
-                  <WarningIcon weight="fill" size={16} aria-hidden="true" />
+                  <Warning weight="fill" size={16} aria-hidden="true" />
                   {micError === 'denied'
                     ? 'Microphone access denied. Allow mic access and try again.'
                     : 'Microphone is not supported in this browser.'}
@@ -468,7 +485,7 @@ export function SpeakingExerciseView({
                   onClick={stopRecording}
                   aria-label="Stop recording"
                 >
-                  <StopCircleIcon weight="fill" size={28} aria-hidden="true" />
+                  <StopCircle weight="fill" size={28} aria-hidden="true" />
                 </button>
               </div>
 
@@ -516,12 +533,12 @@ export function SpeakingExerciseView({
         {phase === PHASE.REVIEW && (
           <div className={styles.reviewActions}>
             <button className={styles.retryBtn} onClick={handleRetry}>
-              <ArrowsClockwiseIcon weight="bold" size={16} aria-hidden="true" />
+              <ArrowsClockwise weight="bold" size={16} aria-hidden="true" />
               Try again
             </button>
             <button className={styles.continueBtn} onClick={handleContinue}>
               Continue
-              <ArrowRightIcon weight="bold" size={18} aria-hidden="true" />
+              <ArrowRight weight="bold" size={18} aria-hidden="true" />
             </button>
           </div>
         )}

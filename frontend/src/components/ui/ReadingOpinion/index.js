@@ -1,12 +1,12 @@
 import React, { useState, useCallback, useEffect, useMemo } from 'react'
 import clsx from 'clsx'
 import {
-  CheckCircleIcon,
-  XCircleIcon,
-  ArrowRightIcon,
-  LightningIcon,
-  BookOpenIcon,
-  ArrowsClockwiseIcon,
+  CheckCircle,
+  XCircle,
+  ArrowRight,
+  Lightning,
+  BookOpen,
+  ArrowsClockwise,
 } from '@phosphor-icons/react'
 import pandaImg from 'assets/illustrations/pandas/panda.svg'
 import { ExerciseHeader } from 'components/ui/GrammarExercise'
@@ -97,8 +97,8 @@ function Pill({ letter, status, onClick, disabled }) {
       aria-pressed={status === 'selected' || status === 'correct'}
       aria-label={`Select person ${letter}`}
     >
-      {status === 'correct' && <CheckCircleIcon weight="fill" size={11} aria-hidden="true" />}
-      {status === 'wrong'   && <XCircleIcon     weight="fill" size={11} aria-hidden="true" />}
+      {status === 'correct' && <CheckCircle weight="fill" size={11} aria-hidden="true" />}
+      {status === 'wrong'   && <XCircle     weight="fill" size={11} aria-hidden="true" />}
       {letter}
     </button>
   )
@@ -174,8 +174,8 @@ function FeedbackBanner({ score, total, xpReward, onContinue, onRetry }) {
       <div className={styles.feedbackBody}>
         <div className={styles.feedbackIcon} data-correct={allCorrect} aria-hidden="true">
           {allCorrect
-            ? <CheckCircleIcon weight="fill" size={22} />
-            : <XCircleIcon     weight="fill" size={22} />
+            ? <CheckCircle weight="fill" size={22} />
+            : <XCircle     weight="fill" size={22} />
           }
         </div>
         <div>
@@ -184,7 +184,7 @@ function FeedbackBanner({ score, total, xpReward, onContinue, onRetry }) {
           </p>
           {allCorrect && (
             <span className={styles.feedbackXp}>
-              <LightningIcon weight="fill" size={12} aria-hidden="true" />
+              <Lightning weight="fill" size={12} aria-hidden="true" />
               +{xpReward} XP earned
             </span>
           )}
@@ -199,14 +199,14 @@ function FeedbackBanner({ score, total, xpReward, onContinue, onRetry }) {
       <div className={styles.feedbackActions}>
         {!allCorrect && (
           <button className={styles.retryBtn} onClick={onRetry}>
-            <ArrowsClockwiseIcon weight="bold" size={16} aria-hidden="true" />
+            <ArrowsClockwise weight="bold" size={16} aria-hidden="true" />
             Try again
           </button>
         )}
         {allCorrect && (
           <button className={styles.continueBtn} onClick={onContinue} autoFocus>
             Continue
-            <ArrowRightIcon weight="bold" size={18} aria-hidden="true" />
+            <ArrowRight weight="bold" size={18} aria-hidden="true" />
           </button>
         )}
       </div>
@@ -322,11 +322,11 @@ export function ReadingOpinionView({
         {/* ── Top row ─────────────────────────────────────────────────── */}
         <div className={styles.topRow}>
           <span className={styles.skillLabel}>
-            <BookOpenIcon weight="fill" size={12} aria-hidden="true" />
+            <BookOpen weight="fill" size={12} aria-hidden="true" />
             Reading
           </span>
           <span className={styles.xpBadge}>
-            <LightningIcon weight="fill" size={13} aria-hidden="true" />
+            <Lightning weight="fill" size={13} aria-hidden="true" />
             +{xpReward} XP
           </span>
         </div>

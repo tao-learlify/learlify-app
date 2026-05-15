@@ -25,6 +25,7 @@ import ReadingCView from 'views/reading-c'
 import SpeakingView from 'views/speaking'
 import SpeakingCView from 'views/speaking-c'
 import WritingView from 'views/writing'
+import StatsView from 'views/stats'
 
 import PATH from 'utils/path'
 const defaultRouterConfig = {
@@ -185,6 +186,11 @@ export const router = {
       {
         component: Settings,
         path: '/settings',
+        ...defaultRouterConfig
+      },
+      {
+        component: StatsView,
+        path: PATH.STATS,
         ...defaultRouterConfig
       }
     ],

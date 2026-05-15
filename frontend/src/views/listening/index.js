@@ -23,10 +23,11 @@ const EXAM_MAP = {
 function getListeningExercises(examData) {
   const schema = examData.schema?.find(s => s.category === 'Listening')
   if (!schema?.exercises) return []
-  return schema.exercises.map(ex => ({
-    ...ex,
-    audioUrl: ex.recordingUrl || ex.audioUrl || null,
-  }))
+  return schema.exercises
+    .map(ex => ({
+      ...ex,
+      audioUrl: ex.recordingUrl || ex.audioUrl || null,
+    }))
 }
 
 const XP_REWARD = 20

@@ -11,6 +11,31 @@ import { Categories } from 'metadata/categories'
 import { Models } from 'metadata/models'
 import type { Request, Response } from 'express'
 
+const CATEGORY_COLORS: Record<string, string> = {
+  [Categories.Core]: 'rgba(99, 102, 241, 1)',
+  [Categories.Listening]: 'rgba(59, 130, 246, 1)',
+  [Categories.Reading]: 'rgba(16, 185, 129, 1)',
+  [Categories.Writing]: 'rgba(245, 158, 11, 1)',
+  [Categories.Speaking]: 'rgba(239, 68, 68, 1)',
+}
+
+const CEFR_LABELS: Record<string, string> = {
+  'C1': 'C1 · Advanced',
+  'B2': 'B2 · Upper Intermediate',
+  'B1': 'B1 · Intermediate',
+  'A2': 'A2 · Elementary',
+  'A1': 'A1 · Beginner',
+}
+
+interface StatRecord {
+  examId: number
+  categoryId: number
+  points?: number
+  bandScore?: number
+  category?: { name: string }
+  [key: string]: unknown
+}
+
 class StatsController {
   private statsService: StatsService
   private examsService: ExamsService
@@ -62,52 +87,115 @@ class StatsController {
       const allStats = await this.statsService.batchGetAll(
         { examIds: examIdList, userId: req.user!.id, categoryIds: categoryIdList },
         { model: model.name }
-      ) as unknown as (Record<string, unknown> & { examId: number })[]
+      ) as unknown as StatRecord[]
 
-      const statsByExam = new Map<number, (Record<string, unknown>)[]>()
+      // Group stats by examId → then by categoryId
+      const statsByExam = new Map<number, Map<number, StatRecord>>()
       for (const stat of (allStats || [])) {
-        const bucket = statsByExam.get(stat.examId) ?? []
-        bucket.push(stat)
-        statsByExam.set(stat.examId, bucket)
+        if (!statsByExam.has(stat.examId)) {
+          statsByExam.set(stat.examId, new Map())
+        }
+        statsByExam.get(stat.examId)!.set(stat.categoryId, stat)
       }
 
-      let data: (string | undefined)[] = examIdList.map(() => undefined)
+      const examLabels = examIdList.map((_, i) => `Exam ${i + 1}`)
+      const modelRef = model as unknown as { name: string }
+      const labels = StatsFunctions.getLabels(modelRef)
 
-      examIdList.forEach((examId, index) => {
-        ;(data as unknown[])[index] = statsByExam.get(examId) ?? []
+      // Build per-category datasets
+      const datasets: Record<string, unknown>[] = []
+
+      for (const category of categories) {
+        const catName = (category as unknown as Record<string, string>).name
+        const catId = (category as unknown as Record<string, number>).id
+
+        const data: (string | undefined)[] = examIdList.map(examId => {
+          const examStats = statsByExam.get(examId)
+          if (!examStats) return undefined
+
+          const stat = examStats.get(catId)
+          if (!stat) return undefined
+
+          const value = model.name === Models.APTIS ? stat.points : stat.bandScore
+          return StatsFunctions.getDataScore(modelRef, value ?? 0, catName)
+        })
+
+        datasets.push({
+          label: catName,
+          data,
+          borderColor: CATEGORY_COLORS[catName] || 'rgba(107, 114, 128, 1)',
+          backgroundColor: (CATEGORY_COLORS[catName] || 'rgba(107, 114, 128, 1)').replace('1)', '0.15)'),
+          tension: 0.2,
+          fill: false,
+          spanGaps: true,
+          borderWidth: 2,
+        })
+      }
+
+      // Compute overall dataset (average across categories per exam)
+      const overallData: (string | undefined)[] = examIdList.map(examId => {
+        const examStats = statsByExam.get(examId)
+        if (!examStats || examStats.size === 0) return undefined
+
+        let total = 0
+        let count = 0
+        for (const stat of examStats.values()) {
+          total += (model.name === Models.APTIS ? stat.points : stat.bandScore) ?? 0
+          count++
+        }
+
+        if (count === 0) return undefined
+        return StatsFunctions.getDataScore(modelRef, total / count, categories[0] as unknown as Record<string, string>['name'])
       })
 
-      data = (data as unknown as Record<string, unknown>[][]).map(keys => {
-        const output = keys.reduce((accumulator: number, stats: Record<string, unknown>) => {
-          switch (model.name) {
-            case Models.APTIS:
-              return accumulator + (stats.points as number)
+      // Determine CEFR level from the latest overall
+      const latestOverall = overallData.filter(Boolean).pop()
+      let cefrLevel = 'N/A'
+      let cefrLabel = 'No data yet'
+      if (latestOverall && labels) {
+        const idx = parseInt(latestOverall)
+        const cefr = labels[idx]
+        if (cefr && cefr !== 'N/A') {
+          cefrLevel = cefr
+          cefrLabel = CEFR_LABELS[cefr] || cefr
+        }
+      }
 
-            case Models.IELTS:
-              return (accumulator += stats.bandScore as number)
-          }
-          return accumulator
-        }, 0)
+      // Compute best level
+      let bestLevel = 'N/A'
+      const validPoints = overallData.filter(Boolean) as string[]
+      if (validPoints.length > 0 && labels) {
+        const bestIdx = Math.max(...validPoints.map(d => parseInt(d)))
+        bestLevel = labels[bestIdx] || 'N/A'
+      }
 
-        return StatsFunctions.getDataScore(
-          model as unknown as { name: string },
-          output / keys.length,
-          (categories[0] as unknown as Record<string, unknown>).name as string
-        )
+      // Merge overall dataset as last
+      datasets.push({
+        label: 'Overall',
+        data: overallData,
+        borderColor: 'rgba(139, 92, 246, 1)',
+        backgroundColor: 'rgba(139, 92, 246, 0.08)',
+        borderWidth: 3,
+        borderDash: [],
+        tension: 0.2,
+        fill: false,
+        spanGaps: true,
       })
 
       return res.status(200).json({
         response: {
+          cefr: cefrLevel,
+          cefrLabel,
           chart: {
-            labels: (ids as unknown[]).map(StatsFunctions.transformIdToIndex),
-            datasets: [
-              {
-                label: 'General',
-                data: data
-              }
-            ]
+            labels: examLabels,
+            datasets
           },
-          labels: StatsFunctions.getLabels(model as unknown as { name: string })
+          labels,
+          summary: {
+            examsTaken: examIdList.length,
+            latestLevel: cefrLevel,
+            bestLevel
+          }
         },
         statusCode: 200
       })

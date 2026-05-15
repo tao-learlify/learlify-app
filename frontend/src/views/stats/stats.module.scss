@@ -1,0 +1,339 @@
+/* ==========================================================================
+   Stats — Full page view.
+   CEFR level badge + multi-skill chart + exam history.
+   ========================================================================== */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  padding: var(--space-8) var(--space-8) var(--space-16);
+  background: linear-gradient(
+    135deg,
+    var(--color-bg-page) 0%,
+    rgba(88, 204, 2, 0.02) 50%,
+    rgba(4, 44, 96, 0.02) 100%
+  );
+  min-height: 100%;
+
+  @media (max-width: 768px) {
+    padding: var(--space-5) var(--space-4) var(--space-12);
+    gap: var(--space-5);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background: linear-gradient(
+      135deg,
+      var(--color-bg-page) 0%,
+      rgba(88, 204, 2, 0.04) 50%,
+      rgba(4, 44, 96, 0.04) 100%
+    );
+  }
+}
+
+/* ── Page header ──────────────────────────────────────────────────────────── */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+
+  @media (max-width: 576px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.headerText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-4xl);
+  font-weight: var(--weight-black);
+  background: linear-gradient(
+    135deg,
+    var(--color-brand-primary),
+    var(--color-navy)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  line-height: var(--leading-tight);
+}
+
+.subtitle {
+  font-family: var(--font-base);
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* ── CEFR Level banner ─────────────────────────────────────────────────────── */
+.cefrBanner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  padding: var(--space-5) var(--space-6);
+  border-radius: var(--radius-2xl);
+  background: linear-gradient(135deg, rgba(88, 204, 2, 0.08), rgba(4, 44, 96, 0.06));
+  border: 2px solid rgba(88, 204, 2, 0.15);
+  box-shadow: 0 4px 24px rgba(88, 204, 2, 0.06);
+
+  @media (max-width: 576px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background: linear-gradient(135deg, rgba(88, 204, 2, 0.12), rgba(4, 44, 96, 0.1));
+    border-color: rgba(88, 204, 2, 0.2);
+  }
+}
+
+.cefrBadge {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-xl);
+  background: linear-gradient(135deg, var(--color-brand-primary), #3b82f6);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(88, 204, 2, 0.3);
+}
+
+.cefrIcon {
+  flex-shrink: 0;
+}
+
+.cefrLevel {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: var(--weight-black);
+  line-height: 1;
+}
+
+.cefrText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cefrName {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-bold);
+  color: var(--color-text-primary);
+}
+
+.cefrHint {
+  font-size: var(--text-sm);
+  color: var(--color-text-tertiary);
+}
+
+.cefrBest {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-lg);
+  background: rgba(88, 204, 2, 0.08);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--color-brand-primary-dark);
+}
+
+/* ── Stat cards row ────────────────────────────────────────────────────────── */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-5);
+
+  @media (max-width: 576px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ── Full-width card section (chart) ───────────────────────────────────────── */
+.fullWidth {
+  grid-column: 1 / -1;
+}
+
+/* ── Card section header ───────────────────────────────────────────────────── */
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding-bottom: var(--space-4);
+  margin-bottom: var(--space-4);
+  border-bottom: 2px solid var(--color-border-default);
+}
+
+.cardHeaderIcon {
+  color: var(--color-brand-primary);
+  flex-shrink: 0;
+}
+
+.cardHeaderTitle {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-bold);
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+/* ── Chart wrapper ─────────────────────────────────────────────────────────── */
+.chartWrap {
+  height: 340px;
+  margin-bottom: var(--space-4);
+
+  @media (max-width: 576px) {
+    height: 260px;
+  }
+}
+
+/* ── Empty chart state ─────────────────────────────────────────────────────── */
+.emptyChart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  padding: var(--space-12) var(--space-4);
+  color: var(--color-text-tertiary);
+  text-align: center;
+
+  p {
+    font-size: var(--text-lg);
+    margin: 0;
+  }
+}
+
+/* ── Per-category breakdown ────────────────────────────────────────────────── */
+.breakdown {
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border-default);
+}
+
+.breakdownTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-secondary);
+  margin: 0 0 var(--space-3) 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.breakdownList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.breakdownItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border-default);
+}
+
+.breakdownIcon {
+  font-size: var(--text-lg);
+}
+
+.breakdownLabel {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.breakdownLevel {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-bold);
+}
+
+/* ── Evaluations table section ─────────────────────────────────────────────── */
+.tableSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.tableSectionTitle {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-bold);
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+/* ── Domain block (for legacy Evaluations component) ───────────────────────── */
+.domainBlock {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.4)
+  );
+  border: 1px solid rgba(88, 204, 2, 0.08);
+  box-shadow:
+    0 8px 32px rgba(88, 204, 2, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    border-color: rgba(88, 204, 2, 0.14);
+    box-shadow:
+      0 12px 48px rgba(88, 204, 2, 0.09),
+      inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background: linear-gradient(
+      135deg,
+      rgba(30, 41, 59, 0.6),
+      rgba(15, 23, 42, 0.4)
+    );
+    border-color: rgba(88, 204, 2, 0.1);
+  }
+
+  :global(.border) {
+    border-color: transparent !important;
+    border-radius: var(--radius-lg) !important;
+    background: transparent;
+    overflow: hidden;
+  }
+
+  :global(.card) {
+    border-color: transparent;
+    border-radius: var(--radius-lg);
+    background: transparent;
+  }
+
+  :global(.table) {
+    color: var(--color-text-primary);
+  }
+
+  :global(a) {
+    color: var(--color-brand-primary);
+    font-weight: var(--weight-semibold);
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--color-brand-primary-dark);
+    }
+  }
+}

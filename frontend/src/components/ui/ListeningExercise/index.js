@@ -1,15 +1,15 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react'
 import clsx from 'clsx'
 import {
-  PlayIcon,
-  PauseIcon,
-  ArrowsClockwiseIcon,
-  SpeakerHighIcon,
-  SparkleIcon,
-  LightningIcon,
-  CheckIcon,
-  XCircleIcon,
-  ArrowRightIcon,
+  Play,
+  Pause,
+  ArrowsClockwise,
+  SpeakerHigh,
+  Sparkle,
+  Lightning,
+  Check,
+  XCircle,
+  ArrowRight,
 } from '@phosphor-icons/react'
 import pandaImg from 'assets/illustrations/skills/listening.svg'
 import { ExerciseHeader } from 'components/ui/GrammarExercise'
@@ -183,7 +183,7 @@ const AudioPlayer = React.forwardRef(function AudioPlayer({ src, onFirstPlay }, 
       {/* ── Top row: audio label + animated waveform ────────────── */}
       <div className={styles.playerTop}>
         <span className={styles.audioLabel}>
-          <SpeakerHighIcon weight="fill" size={14} aria-hidden="true" />
+          <SpeakerHigh weight="fill" size={14} aria-hidden="true" />
           Audio
         </span>
         <div
@@ -208,9 +208,9 @@ const AudioPlayer = React.forwardRef(function AudioPlayer({ src, onFirstPlay }, 
                          'Play audio'
           }
         >
-          {isPlaying  ? <PauseIcon weight="fill" size={22} /> :
-           isFinished ? <ArrowsClockwiseIcon weight="bold" size={18} /> :
-                        <PlayIcon weight="fill" size={22} />}
+          {isPlaying  ? <Pause weight="fill" size={22} /> :
+           isFinished ? <ArrowsClockwise weight="bold" size={18} /> :
+                        <Play weight="fill" size={22} />}
         </button>
 
         <div className={styles.progressArea}>
@@ -267,8 +267,8 @@ function AnswerOption({ text, letter, isSelected, isChecked, isCorrect, onClick 
       ].filter(Boolean).join(' ')}
     >
       <span className={styles.optionLetter} aria-hidden="true">
-        {isChecked && isCorrect                  ? <CheckIcon  weight="bold" size={14} /> : null}
-        {isChecked && isSelected && !isCorrect   ? <XCircleIcon weight="bold" size={14} /> : null}
+        {isChecked && isCorrect                  ? <Check  weight="bold" size={14} /> : null}
+        {isChecked && isSelected && !isCorrect   ? <XCircle weight="bold" size={14} /> : null}
         {!isChecked ? letter : null}
       </span>
       <span className={styles.optionText}>{text}</span>
@@ -291,15 +291,15 @@ function ListeningFeedbackBanner({
       <div className={styles.feedbackBody}>
         <div className={styles.feedbackIcon} data-correct={isCorrect}>
           {isCorrect
-            ? <CheckIcon  weight="bold" size={20} aria-hidden="true" />
-            : <XCircleIcon weight="bold" size={20} aria-hidden="true" />
+            ? <Check  weight="bold" size={20} aria-hidden="true" />
+            : <XCircle weight="bold" size={20} aria-hidden="true" />
           }
         </div>
         <div>
           <p className={styles.feedbackTitle}>{message}</p>
           {isCorrect && (
             <span className={styles.feedbackXp} aria-label={`+${xpReward} XP earned`}>
-              <LightningIcon weight="fill" size={12} aria-hidden="true" />
+              <Lightning weight="fill" size={12} aria-hidden="true" />
               +{xpReward} XP earned
             </span>
           )}
@@ -308,7 +308,7 @@ function ListeningFeedbackBanner({
           )}
           {!isCorrect && (
             <button className={styles.replayBtn} onClick={onReplayAudio}>
-              <ArrowsClockwiseIcon weight="bold" size={12} aria-hidden="true" />
+              <ArrowsClockwise weight="bold" size={12} aria-hidden="true" />
               Listen again
             </button>
           )}
@@ -324,7 +324,7 @@ function ListeningFeedbackBanner({
         autoFocus
       >
         Continue
-        <ArrowRightIcon weight="bold" size={18} aria-hidden="true" />
+        <ArrowRight weight="bold" size={18} aria-hidden="true" />
       </button>
     </div>
   )
@@ -351,17 +351,43 @@ export function ListeningExerciseView({
   const [feedbackMsg,    setFeedbackMsg]   = useState('')
   const [hasPlayedOnce,  setHasPlayedOnce] = useState(false)
   const [earlyClickHint, setEarlyClickHint] = useState(false)
+  const [vocabSelections, setVocabSelections] = useState(null)
 
   const playerRef      = useRef(null)
   const earlyHintTimer = useRef(null)
 
   const exercise = exercises[idx]
   const total    = exercises.length
+  const isVocab  = exercise?.questions?.length > 0
 
-  const isCorrect  = selected === exercise?.correct
-  const correctText = exercise
-    ? stripAnswerPrefix(exercise.answers[exercise.correct])
-    : ''
+  const isValid = exercise && (
+    isVocab || (exercise.title && exercise.answers && exercise.correct != null)
+  )
+
+  // Auto-skip malformed exercises
+  useEffect(() => {
+    if (exercise && !isValid) {
+      if (idx + 1 >= total) { onComplete?.() }
+      else { setIdx(i => i + 1); setSelected(null); setFeedbackMsg(''); setPhase(PHASE.IDLE); setHasPlayedOnce(false); setEarlyClickHint(false) }
+    }
+  }, [exercise, isValid, idx, total, onComplete])
+
+  // Init vocab state when entering a vocab exercise
+  useEffect(() => {
+    if (isVocab && exercise) {
+      const qCount = (exercise.questions || []).length
+      setVocabSelections(new Array(qCount).fill(null))
+      setSelected(null)
+      setPhase(PHASE.IDLE)
+      setFeedbackMsg('')
+      setHasPlayedOnce(false)
+      setEarlyClickHint(false)
+    }
+  }, [idx, isVocab, exercise])
+
+  // ── Listening path variables (always called, guarded for vocab) ───────
+  const listeningIsCorrect  = isVocab ? false : selected === exercise?.correct
+  const listeningCorrectText = isVocab ? '' : (exercise ? stripAnswerPrefix(exercise?.answers?.[exercise?.correct]) : '')
 
   const handleFirstPlay = useCallback(() => {
     setHasPlayedOnce(true)
@@ -408,6 +434,117 @@ export function ListeningExerciseView({
   }, [])
 
   if (!exercise) return null
+  if (!isValid) return null
+
+  // ── Vocabulary path ────────────────────────────────────────────────────
+  if (isVocab) {
+    const questions = exercise.questions || []
+    const qCount = questions.length
+    const allVocabSelected = vocabSelections && vocabSelections.every(s => s != null)
+
+    const handleVocabSelect = (qIdx, optIdx) => {
+      if (phase === PHASE.CHECKED) return
+      setVocabSelections(prev => { const n = [...prev]; n[qIdx] = optIdx; return n })
+      setPhase(PHASE.SELECTED)
+    }
+
+    const handleVocabCheck = () => {
+      const correct = questions.filter((q, i) => vocabSelections[i] === q.correct).length
+      const allRight = correct === qCount
+      setFeedbackMsg(allRight ? pickRandom(CORRECT_MSGS) : pickRandom(ERROR_MSGS))
+      setPhase(PHASE.CHECKED)
+    }
+
+    const handleVocabContinue = () => {
+      onAnswer?.()
+      if (idx + 1 >= total) { onComplete?.() }
+      else {
+        setIdx(i => i + 1)
+        setSelected(null)
+        setFeedbackMsg('')
+        setPhase(PHASE.IDLE)
+        setHasPlayedOnce(false)
+        setEarlyClickHint(false)
+        clearTimeout(earlyHintTimer.current)
+      }
+    }
+
+    const vocabCorrectCount = phase === PHASE.CHECKED
+      ? questions.filter((q, i) => vocabSelections[i] === q.correct).length : 0
+    const vocabAllCorrect = vocabCorrectCount === qCount
+    const vocabPandaMood = phase === PHASE.CHECKED ? (vocabAllCorrect ? 'happy' : 'oops') : 'idle'
+    const vocabPandaMsg = phase === PHASE.CHECKED
+      ? (vocabAllCorrect ? 'Great listening! 🎧' : 'Listen again! 🔄') : null
+
+    return (
+      <div className={styles.root}>
+        <ExerciseHeader current={idx + 1} total={total} onQuit={onQuit} />
+        <main className={styles.body}>
+          <div className={styles.topRow}>
+            <span className={styles.skillLabel}>
+              <Sparkle weight="fill" size={12} aria-hidden="true" />
+              Listening
+            </span>
+            <span className={styles.xpBadge} aria-label={`+${xpReward} XP per correct answer`}>
+              <Lightning weight="fill" size={13} aria-hidden="true" />+{xpReward} XP
+            </span>
+          </div>
+          {exercise.description && (
+            <p className={styles.vocabInstruction}>{exercise.description}</p>
+          )}
+          <p className={styles.instruction}>Pick the best answer for each item</p>
+          <PandaGuide mood={vocabPandaMood} message={vocabPandaMsg} />
+          <div className={styles.vocabList}>
+            {questions.map((q, qIdx) => (
+              <div key={qIdx} className={styles.vocabItem}>
+                <p className={styles.vocabQuestion}>{stripQuestionNumber(q.title)}</p>
+                <div className={styles.vocabOptions} role="group" aria-label={`Choices for ${qIdx + 1}`}>
+                  {(q.answers || []).map((raw, optIdx) => (
+                    <AnswerOption key={optIdx} text={stripAnswerPrefix(raw)}
+                      letter={LETTERS[optIdx] ?? String(optIdx + 1)}
+                      isSelected={vocabSelections && vocabSelections[qIdx] === optIdx}
+                      isChecked={phase === PHASE.CHECKED}
+                      isCorrect={q.correct === optIdx}
+                      onClick={() => handleVocabSelect(qIdx, optIdx)} />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </main>
+        <div className={styles.footer}>
+          {phase !== PHASE.CHECKED ? (
+            <>
+              {!allVocabSelected && phase === PHASE.SELECTED && (
+                <p className={styles.vocabHint}>
+                  {(vocabSelections || []).filter(s => s != null).length} of {qCount} answered
+                </p>
+              )}
+              <button className={styles.checkBtn} disabled={!allVocabSelected} onClick={handleVocabCheck}>
+                Check answers
+              </button>
+            </>
+          ) : (
+            <ListeningFeedbackBanner
+              isCorrect={vocabAllCorrect}
+              message={feedbackMsg}
+              xpReward={xpReward * vocabCorrectCount}
+              correctAnswer={`${vocabCorrectCount}/${qCount} correct`}
+              description={null}
+              onContinue={handleVocabContinue}
+              onReplayAudio={() => {}}
+            />
+          )}
+        </div>
+      </div>
+    )
+  }
+
+  // ═══════════════════════════════════════════════════════════════════════
+  //  LISTENING (audio) PATH
+  // ═══════════════════════════════════════════════════════════════════════
+  const isCorrect  = listeningIsCorrect
+  const correctText = listeningCorrectText
 
   const pandaMood    = phase === PHASE.CHECKED ? (isCorrect ? 'happy' : 'oops') : 'idle'
   const pandaMessage = phase === PHASE.CHECKED
@@ -425,11 +562,11 @@ export function ListeningExerciseView({
         {/* ── Skill label + XP ─────────────────────────────────────── */}
         <div className={styles.topRow}>
           <span className={styles.skillLabel}>
-            <SparkleIcon weight="fill" size={12} aria-hidden="true" />
+            <Sparkle weight="fill" size={12} aria-hidden="true" />
             Listening
           </span>
           <span className={styles.xpBadge} aria-label={`+${xpReward} XP per correct answer`}>
-            <LightningIcon weight="fill" size={13} aria-hidden="true" />
+            <Lightning weight="fill" size={13} aria-hidden="true" />
             +{xpReward} XP
           </span>
         </div>

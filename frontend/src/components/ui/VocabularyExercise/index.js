@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useMemo, useRef, useEffect } from 'react'
 import clsx from 'clsx'
-import { Check, XCircle, ArrowRight, Lightning, Sparkle, ArrowsClockwise, HourglassIcon } from '@phosphor-icons/react'
+import { Check, XCircle, ArrowRight, Lightning, Sparkle, ArrowsClockwise, Hourglass } from '@phosphor-icons/react'
 import pandaImg from 'assets/illustrations/pandas/panda.svg'
 import { ExerciseHeader } from 'components/ui/GrammarExercise'
 import styles from './VocabularyExercise.module.scss'
@@ -430,7 +430,7 @@ export function VocabularyExerciseView({
             {/* Countdown status pill — above the rows, separate from panda */}
             {phase === PHASE.REVIEW_COUNTDOWN && (
               <div className={styles.countdownStatus} role="status" aria-live="polite">
-                <HourglassIcon weight="fill" size={13} aria-hidden="true" />
+                <Hourglass weight="fill" size={13} aria-hidden="true" />
                 <span>Showing correct answers in</span>
                 <span className={styles.countdownNum} key={countdown}>{countdown}</span>
               </div>

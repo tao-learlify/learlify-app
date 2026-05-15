@@ -1,16 +1,17 @@
 import React, { useState, useCallback, useMemo, useEffect, useRef } from 'react'
 import clsx from 'clsx'
 import {
-  CheckIcon,
-  XCircleIcon,
-  ArrowRightIcon,
-  LightningIcon,
-  SparkleIcon,
+  Check,
+  XCircle,
+  ArrowRight,
+  Lightning,
+  Sparkle,
   ArrowsClockwise,
   DotsSixVertical,
 } from '@phosphor-icons/react'
 import pandaImg from 'assets/illustrations/pandas/panda.svg'
 import { ExerciseHeader } from 'components/ui/GrammarExercise'
+import { VocabSubExercise } from 'components/ui/VocabSubExercise'
 import styles from './ReadingExercise.module.scss'
 
 // ── Phase ──────────────────────────────────────────────────────────────────────
@@ -90,8 +91,8 @@ function SequenceSlot({
         >
           <DotsSixVertical className={styles.dragHandle} weight="bold" size={14} aria-hidden="true" />
           <span className={styles.cardText}>{card.text}</span>
-          {result === 'correct'   && <CheckIcon   className={styles.resultIcon} weight="bold" size={14} aria-hidden="true" />}
-          {result === 'incorrect' && <XCircleIcon className={styles.resultIcon} weight="bold" size={14} aria-hidden="true" />}
+          {result === 'correct'   && <Check   className={styles.resultIcon} weight="bold" size={14} aria-hidden="true" />}
+          {result === 'incorrect' && <XCircle className={styles.resultIcon} weight="bold" size={14} aria-hidden="true" />}
         </div>
       ) : (
         <span className={styles.slotPlaceholder} data-over={isOver || undefined}>
@@ -131,15 +132,15 @@ function FeedbackBanner({ isCorrect, message, xpReward, description, onContinue,
       <div className={styles.feedbackBody}>
         <div className={styles.feedbackIcon} data-correct={isCorrect}>
           {isCorrect
-            ? <CheckIcon  weight="bold" size={20} aria-hidden="true" />
-            : <XCircleIcon weight="bold" size={20} aria-hidden="true" />
+            ? <Check  weight="bold" size={20} aria-hidden="true" />
+            : <XCircle weight="bold" size={20} aria-hidden="true" />
           }
         </div>
         <div>
           <p className={styles.feedbackTitle}>{message}</p>
           {isCorrect && (
             <span className={styles.feedbackXp} aria-label={`+${xpReward} XP earned`}>
-              <LightningIcon weight="fill" size={12} aria-hidden="true" />
+              <Lightning weight="fill" size={12} aria-hidden="true" />
               +{xpReward} XP earned
             </span>
           )}
@@ -155,7 +156,7 @@ function FeedbackBanner({ isCorrect, message, xpReward, description, onContinue,
           autoFocus
         >
           Continue
-          <ArrowRightIcon weight="bold" size={18} aria-hidden="true" />
+          <ArrowRight weight="bold" size={18} aria-hidden="true" />
         </button>
       ) : (
         <button className={styles.retryBtn} onClick={onRetry} autoFocus>
@@ -186,8 +187,11 @@ export function ReadingExerciseView({
   const [feedbackMsg, setFeedbackMsg] = useState('')
 
   const exercise = exercises[idx]
-  const items    = useMemo(() => exercise?.items ?? [], [exercise])
   const total    = exercises.length
+  const isVocab  = exercise?.questions?.length > 0
+  const isValid  = exercise && (isVocab || (exercise.items && exercise.correct))
+
+  const items    = useMemo(() => exercise?.items ?? [], [exercise])
 
   const [slots,       setSlots]       = useState(() => Array(items.length).fill(null))
   const [slotResults, setSlotResults] = useState([])
@@ -323,6 +327,21 @@ export function ReadingExerciseView({
   }, [idx, total, onComplete])
 
   if (!exercise) return null
+  if (!isValid) return null
+
+  // ── Vocabulary exercises (from exam data) ────────────────────────────
+  if (isVocab) {
+    return (
+      <div className={styles.root}>
+        <ExerciseHeader current={idx + 1} total={total} onQuit={onQuit} />
+        <VocabSubExercise exercise={exercise} xpReward={xpReward}
+          onContinue={() => {
+            if (idx + 1 >= total) onComplete?.()
+            else setIdx(i => i + 1)
+          }} />
+      </div>
+    )
+  }
 
   // ── Panda ────────────────────────────────────────────────────────────────────
   const pandaMood    = phase === PHASE.SUCCESS ? 'happy' : phase === PHASE.ERROR ? 'oops' : 'idle'
@@ -338,11 +357,11 @@ export function ReadingExerciseView({
         {/* ── Skill label + XP ─────────────────────────────────────── */}
         <div className={styles.topRow}>
           <span className={styles.skillLabel}>
-            <SparkleIcon weight="fill" size={12} aria-hidden="true" />
+            <Sparkle weight="fill" size={12} aria-hidden="true" />
             Reading
           </span>
           <span className={styles.xpBadge} aria-label={`+${xpReward} XP per correct answer`}>
-            <LightningIcon weight="fill" size={13} aria-hidden="true" />
+            <Lightning weight="fill" size={13} aria-hidden="true" />
             +{xpReward} XP
           </span>
         </div>
@@ -404,7 +423,7 @@ export function ReadingExerciseView({
           <div className={styles.pool}>
             {pool.length === 0 ? (
               <p className={styles.poolEmpty}>
-                <CheckIcon weight="bold" size={14} aria-hidden="true" />
+                <Check weight="bold" size={14} aria-hidden="true" />
                 All steps placed
               </p>
             ) : (
