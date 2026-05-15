@@ -305,8 +305,8 @@ export class AuthenticationController {
       throw new BadRequestException('Google authentication failed')
     }
 
-    const tokens = await tokenRes.json()
-    const idToken = tokens.id_token
+    const tokens = await tokenRes.json() as Record<string, unknown>
+    const idToken = tokens.id_token as string
 
     if (!idToken) {
       throw new BadRequestException('No ID token received from Google')
@@ -323,8 +323,8 @@ export class AuthenticationController {
 
     const googleId = claims.sub as string
     const email = claims.email as string
-    const givenName = (claims.given_name || claims.name?.split(' ')[0] || 'Google') as string
-    const familyName = (claims.family_name || claims.name?.split(' ').slice(1).join(' ') || 'User') as string
+    const givenName = (claims.given_name || (claims.name as string)?.split(' ')[0] || 'Google') as string
+    const familyName = (claims.family_name || (claims.name as string)?.split(' ').slice(1).join(' ') || 'User') as string
     const imageUrl = (claims.picture || '') as string
 
     // Find or create user

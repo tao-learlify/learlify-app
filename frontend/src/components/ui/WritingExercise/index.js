@@ -1,17 +1,18 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react'
 import clsx from 'clsx'
 import {
-  PencilSimpleIcon,
-  EnvelopeIcon,
-  TimerIcon,
-  CheckCircleIcon,
-  ArrowRightIcon,
-  LightningIcon,
-  SparkleIcon,
-  WarningIcon
+  PencilSimple,
+  Envelope,
+  Timer as ClockIcon,
+  CheckCircle,
+  ArrowRight,
+  Lightning,
+  Sparkle,
+  Warning
 } from '@phosphor-icons/react'
 import pandaImg from 'assets/illustrations/pandas/panda.svg'
 import { ExerciseHeader } from 'components/ui/GrammarExercise'
+import { VocabSubExercise } from 'components/ui/VocabSubExercise'
 import styles from './WritingExercise.module.scss'
 
 // ── Phase machine ─────────────────────────────────────────────────────────────
@@ -84,7 +85,7 @@ function Timer({ seconds }) {
       aria-live="off"
       aria-label={`Time remaining: ${fmtTime(seconds)}`}
     >
-      <TimerIcon size={13} weight="fill" aria-hidden="true" />
+      <ClockIcon size={13} weight="fill" aria-hidden="true" />
       {fmtTime(seconds)}
     </div>
   )
@@ -96,7 +97,7 @@ function ContextCard({ context }) {
     <div className={styles.contextCard}>
       <div className={styles.contextHeader}>
         <div className={styles.contextIcon}>
-          <EnvelopeIcon weight="fill" size={16} aria-hidden="true" />
+          <Envelope weight="fill" size={16} aria-hidden="true" />
         </div>
         <div className={styles.contextMeta}>
           <span className={styles.contextLabel}>Writing situation</span>
@@ -158,13 +159,13 @@ function HintChip({ text, type = 'tip' }) {
   return (
     <div className={styles.hintChip} data-type={type}>
       {type === 'warning' && (
-        <WarningIcon weight="fill" size={13} aria-hidden="true" />
+        <Warning weight="fill" size={13} aria-hidden="true" />
       )}
       {type === 'tip' && (
-        <SparkleIcon weight="fill" size={13} aria-hidden="true" />
+        <Sparkle weight="fill" size={13} aria-hidden="true" />
       )}
       {type === 'check' && (
-        <CheckCircleIcon weight="fill" size={13} aria-hidden="true" />
+        <CheckCircle weight="fill" size={13} aria-hidden="true" />
       )}
       {text}
     </div>
@@ -218,7 +219,7 @@ function SubmittedState({ answers, onContinue }) {
     <div className={styles.submittedWrap}>
       {/* Checkmark icon */}
       <div className={styles.submittedIcon} aria-hidden="true">
-        <CheckCircleIcon weight="fill" size={36} />
+        <CheckCircle weight="fill" size={36} />
       </div>
 
       <h2 className={styles.submittedTitle}>Writing submitted!</h2>
@@ -230,7 +231,7 @@ function SubmittedState({ answers, onContinue }) {
       <div className={styles.stepper} role="list" aria-label="Review progress">
         <div className={styles.step} role="listitem">
           <div className={styles.stepDot} data-done="true">
-            <CheckCircleIcon weight="fill" size={13} aria-hidden="true" />
+            <CheckCircle weight="fill" size={13} aria-hidden="true" />
           </div>
           <span className={clsx(styles.stepLabel, styles.stepLabelDone)}>
             Submitted
@@ -266,7 +267,7 @@ function SubmittedState({ answers, onContinue }) {
 
       <button className={styles.continueBtn} onClick={onContinue}>
         Continue
-        <ArrowRightIcon weight="bold" size={18} aria-hidden="true" />
+        <ArrowRight weight="bold" size={18} aria-hidden="true" />
       </button>
     </div>
   )
@@ -296,6 +297,8 @@ export function WritingExerciseView({
 
   const exercise = exercises[idx]
   const total = exercises.length
+  const isVocab = exercise?.questions?.length > 0
+  const isValid = exercise && (isVocab || (exercise.tasks && exercise.tasks.length > 0))
 
   // ── Countdown timer ─────────────────────────────────────────────────────────
   useEffect(() => {
@@ -341,6 +344,20 @@ export function WritingExerciseView({
   }, [idx, total, onComplete])
 
   if (!exercise) return null
+  if (!isValid) return null
+
+  if (isVocab) {
+    return (
+      <div className={styles.root}>
+        <ExerciseHeader current={idx + 1} total={total} onQuit={onQuit} />
+        <VocabSubExercise exercise={exercise} xpReward={xpReward}
+          onContinue={() => {
+            if (idx + 1 >= total) onComplete?.()
+            else setIdx(i => i + 1)
+          }} />
+      </div>
+    )
+  }
 
   // ── Derived values ──────────────────────────────────────────────────────────
   const tasks = exercise.tasks
@@ -390,12 +407,12 @@ export function WritingExerciseView({
         {/* ── Top row: skill label + XP + timer ──────────────────────── */}
         <div className={styles.topRow}>
           <span className={styles.skillLabel}>
-            <PencilSimpleIcon weight="fill" size={12} aria-hidden="true" />
+            <PencilSimple weight="fill" size={12} aria-hidden="true" />
             Writing
           </span>
           <div className={styles.topRowRight}>
             <span className={styles.xpBadge}>
-              <LightningIcon weight="fill" size={13} aria-hidden="true" />+
+              <Lightning weight="fill" size={13} aria-hidden="true" />+
               {xpReward} XP
             </span>
             <Timer seconds={timeLeft} />
@@ -429,7 +446,7 @@ export function WritingExerciseView({
                 onClick={() => setActiveTask(i)}
               >
                 {done && (
-                  <CheckCircleIcon weight="fill" size={13} aria-hidden="true" />
+                  <CheckCircle weight="fill" size={13} aria-hidden="true" />
                 )}
                 {task.label}
                 <span className={styles.tabWordCount}>{wc}w</span>
@@ -481,7 +498,7 @@ export function WritingExerciseView({
         >
           {bothDone ? 'Review my answer' : 'Complete both tasks first'}
           {bothDone && (
-            <ArrowRightIcon weight="bold" size={18} aria-hidden="true" />
+            <ArrowRight weight="bold" size={18} aria-hidden="true" />
           )}
         </button>
       </div>
