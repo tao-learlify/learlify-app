@@ -1,0 +1,62 @@
+/* ──────────────────────────────────────────────────────────────────────────
+   RemovePaymentMethodDialog — Friendly confirmation dialog
+   ────────────────────────────────────────────────────────────────────────── */
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+/* ── Card preview chip ────────────────────────────────────────────────── */
+
+.cardPreview {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  background: linear-gradient(135deg, #042c60 0%, #1871ef 100%);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-5);
+  color: #fff;
+  align-self: flex-start;
+}
+
+.previewBrand {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-black);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.previewNumber {
+  font-family: 'Courier New', monospace;
+  font-size: var(--text-base);
+  letter-spacing: 2px;
+  opacity: 0.9;
+}
+
+/* ── Body copy ────────────────────────────────────────────────────────── */
+
+.body {
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+  margin: 0;
+}
+
+/* ── Footer ───────────────────────────────────────────────────────────── */
+
+.footerActions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  width: 100%;
+}
+
+/* ── Error ────────────────────────────────────────────────────────────── */
+
+.errorAlert {
+  margin: 0;
+}

@@ -81,8 +81,9 @@ class StatsController {
         )
       )
 
+      const validCategories = categories.filter(Boolean)
       const examIdList = (ids as unknown as number[])
-      const categoryIdList = categories.map(c => (c as unknown as Record<string, number>).id)
+      const categoryIdList = validCategories.map(c => (c as unknown as Record<string, number>).id)
 
       const allStats = await this.statsService.batchGetAll(
         { examIds: examIdList, userId: req.user!.id, categoryIds: categoryIdList },
@@ -105,7 +106,7 @@ class StatsController {
       // Build per-category datasets
       const datasets: Record<string, unknown>[] = []
 
-      for (const category of categories) {
+      for (const category of validCategories) {
         const catName = (category as unknown as Record<string, string>).name
         const catId = (category as unknown as Record<string, number>).id
 

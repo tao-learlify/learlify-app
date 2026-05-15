@@ -50,11 +50,47 @@ export const settingsES = {
     }
   },
   PAYMENT_METHOD: {
-    title: 'Método de Pago',
+    title: 'Métodos de Pago',
+    sectionDescription:
+      'Los pagos de tu suscripción son seguros y fáciles de gestionar.',
     cardLabel: 'Tarjeta',
-    expiryLabel: 'Válida hasta',
+    expiryLabel: 'Vence',
+    defaultBadge: 'Principal',
     update: 'Actualizar método de pago',
-    noCard: 'No tienes un método de pago registrado.'
+    noCard: 'No tienes un método de pago registrado.',
+    // Añadir tarjeta
+    addCard: 'Añadir método de pago',
+    addCardTitle: 'Añadir una nueva tarjeta',
+    addCardDescription:
+      'Los datos de tu tarjeta son cifrados y procesados de forma segura por Stripe.',
+    nameOnCard: 'Nombre en la tarjeta',
+    nameOnCardPlaceholder: 'Nombre completo',
+    cardDetails: 'Datos de la tarjeta',
+    addCardSubmit: 'Guardar tarjeta',
+    addCardCancel: 'Cancelar',
+    addCardAdding: 'Guardando...',
+    addCardSuccess: '¡Listo! Tarjeta guardada correctamente.',
+    // Eliminar
+    removeTitle: '¿Eliminar esta tarjeta?',
+    removeBody:
+      'Esta tarjeta será eliminada de tu cuenta. Asegúrate de tener otro método de pago si lo necesitas para mantener tu suscripción activa.',
+    removeConfirm: 'Sí, eliminar',
+    removeDismiss: 'Mantenerla',
+    removeRemoving: 'Eliminando...',
+    // Confianza
+    trust1: 'Cifrado SSL',
+    trust2: 'Cumple PCI',
+    trust3: 'Protegido por Stripe',
+    // Validación
+    validNameRequired: 'Por favor, introduce el nombre de la tarjeta',
+    // Estado vacío
+    emptyTitle: 'Sin tarjetas aún',
+    emptyDescription:
+      'Añade tu primer método de pago para mantener tu aprendizaje sin interrupciones.',
+    emptyAdd: 'Añadir tarjeta',
+    // Acciones
+    actionEdit: 'Actualizar',
+    actionRemove: 'Eliminar'
   },
   PROFILE: {
     title: 'Perfil',

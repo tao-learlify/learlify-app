@@ -1,65 +1,159 @@
-.sectionLabel { composes: sectionLabel from '../_shared.module.scss'; }
+/* ──────────────────────────────────────────────────────────────────────────
+   PaymentMethodCard — Duolingo-inspired "collectible" card item
+   ────────────────────────────────────────────────────────────────────────── */
 
-.body {
+.card {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: linear-gradient(135deg, #042c60 0%, #1871ef 60%, #0d9ee8 100%);
+  color: var(--color-text-inverse);
+  box-shadow:
+    var(--shadow-lg),
+    0 0 0 1px rgba(255, 255, 255, 0.06);
+  transition:
+    transform var(--duration-slow) var(--easing-bounce),
+    box-shadow var(--duration-slow) var(--easing-out);
+  cursor: default;
+
+  &:hover {
+    transform: translateY(-3px) scale(1.01);
+    box-shadow:
+      var(--shadow-lg),
+      0 12px 32px rgba(24, 113, 239, 0.28);
+  }
+
+  &.isDefault {
+    background: linear-gradient(135deg, #042c60 0%, #0f6fde 50%, #1aa87c 100%);
+    box-shadow:
+      var(--shadow-lg),
+      0 0 0 2px var(--color-brand-primary);
+  }
+}
+
+/* ── Card face (visual area) ─────────────────────────────────────────── */
+
+.cardFace {
+  padding: var(--space-5) var(--space-6) var(--space-4);
   display: flex;
   flex-direction: column;
-  gap: var(--space-4);
+  gap: var(--space-3);
+  min-height: 120px;
 }
 
-.noCard {
-  font-size: var(--text-md);
-  color: var(--color-text-secondary);
-  margin: 0;
-}
-
-/* Credit card visual chip */
-.cardRow {
+.cardTopRow {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--space-4);
-  background: linear-gradient(135deg, var(--color-brand-primary) 0%, #0f6fde 100%);
-  border-radius: var(--radius-md);
-  padding: var(--space-4) var(--space-5);
-  color: var(--color-text-inverse);
 }
 
-.cardVisual {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-1);
-}
-
-.brandLabel {
+.brandName {
+  font-family: var(--font-base);
   font-size: var(--text-base);
-  font-weight: var(--weight-bold);
-  letter-spacing: 0.5px;
-  opacity: 0.9;
-  text-transform: uppercase;
-}
-
-.cardNumber {
-  font-size: var(--text-md);
+  font-weight: var(--weight-black);
   letter-spacing: 2px;
-  opacity: 0.85;
-  font-family: 'Courier New', monospace;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.92);
 }
 
-.cardMeta {
+/* Embossed chip */
+.chip {
+  display: block;
+  width: 28px;
+  height: 20px;
+  border-radius: 4px;
+  background: linear-gradient(135deg, #e8d5a3 0%, #c9a84c 100%);
+  opacity: 0.85;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.maskedNumber {
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: var(--text-lg);
+  letter-spacing: 3px;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.cardBottomRow {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.expiryBlock {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
   gap: 2px;
 }
 
 .expiryLabel {
   font-size: var(--text-xs);
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  opacity: 0.7;
+  letter-spacing: 0.8px;
+  color: rgba(255, 255, 255, 0.6);
 }
 
-.expiry {
-  font-size: var(--text-md);
+.expiryValue {
+  font-size: var(--text-base);
   font-weight: var(--weight-semibold);
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 1px;
+}
+
+.defaultBadge {
+  /* Badge sits on the card face — invert to look good on dark bg */
+  background: rgba(255, 255, 255, 0.18) !important;
+  color: #fff !important;
+  border: 1px solid rgba(255, 255, 255, 0.32) !important;
+  backdrop-filter: blur(4px);
+
+  /* Override dot color */
+  & span[class*='dot'] {
+    background: var(--color-brand-primary) !important;
+  }
+}
+
+/* ── Brand accent bar (bottom) ───────────────────────────────────────── */
+
+.brandBar {
+  height: 3px;
+  width: 100%;
+}
+
+/* ── Action row ──────────────────────────────────────────────────────── */
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-2) var(--space-4) var(--space-3);
+  background: rgba(255, 255, 255, 0.06);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.actionBtn {
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-size: var(--text-sm) !important;
+  font-weight: var(--weight-semibold) !important;
+  padding: var(--space-1) var(--space-2) !important;
+
+  &:hover:not(:disabled) {
+    color: #fff !important;
+    background: rgba(255, 255, 255, 0.12) !important;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}
+
+.removeBtn {
+  color: rgba(255, 180, 180, 0.85) !important;
+
+  &:hover:not(:disabled) {
+    color: #fca5a5 !important;
+    background: rgba(234, 43, 43, 0.18) !important;
+  }
 }

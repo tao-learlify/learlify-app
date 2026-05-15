@@ -13,7 +13,7 @@ import useSubscription from 'hooks/useSubscription'
 import { withVerification as WV } from 'hocs'
 
 import AccountMembershipCard from './components/AccountMembershipCard'
-import PaymentMethodCard from './components/PaymentMethodCard'
+import PaymentMethodsSection from './components/PaymentMethodsSection'
 import ProfileInfoCard from './components/ProfileInfoCard'
 import SecurityCard from './components/SecurityCard'
 import BillingHistoryCard from './components/BillingHistoryCard'
@@ -43,7 +43,11 @@ const Settings = () => {
           isLegacy={isLegacy}
           demo={demo}
         />
-        <PaymentMethodCard paymentMethod={paymentMethod} demo={demo} />
+        <PaymentMethodsSection
+          paymentMethod={paymentMethod}
+          loading={subLoading}
+          demo={demo}
+        />
       </div>
 
       <div className={styles.row2}>
@@ -61,7 +65,9 @@ const Settings = () => {
           block
           onClick={() => {
             logOut()
-            ToastsStore.info(t('AUTHENTICATION.loggedOut', { defaultValue: 'Sesión cerrada' }))
+            ToastsStore.info(
+              t('AUTHENTICATION.loggedOut', { defaultValue: 'Sesión cerrada' })
+            )
             history.push('/')
           }}
         >
