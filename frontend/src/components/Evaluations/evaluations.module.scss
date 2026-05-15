@@ -85,7 +85,9 @@
 }
 
 .row {
-  transition: background-color var(--duration-base) var(--easing-default), transform var(--duration-base) var(--easing-default);
+  transition:
+    background-color var(--duration-base) var(--easing-default),
+    transform var(--duration-base) var(--easing-default);
 
   &:hover {
     background: rgba(227, 249, 200, 0.38);
@@ -167,7 +169,10 @@
   font-family: var(--font-base);
   font-size: var(--text-sm);
   font-weight: var(--weight-bold);
-  transition: background-color var(--duration-base) var(--easing-default), border-color var(--duration-base) var(--easing-default), transform var(--duration-base) var(--easing-default);
+  transition:
+    background-color var(--duration-base) var(--easing-default),
+    border-color var(--duration-base) var(--easing-default),
+    transform var(--duration-base) var(--easing-default);
 
   &:hover {
     border-color: var(--color-brand-primary);
@@ -198,7 +203,11 @@
   padding: var(--space-6);
   border: 2px dashed rgba(88, 204, 2, 0.22);
   border-radius: var(--radius-xl);
-  background: linear-gradient(180deg, rgba(227, 249, 200, 0.3), rgba(255, 255, 255, 0.72));
+  background: linear-gradient(
+    180deg,
+    rgba(227, 249, 200, 0.3),
+    rgba(255, 255, 255, 0.72)
+  );
 }
 
 .emptyIcon {
@@ -210,7 +219,9 @@
   border-radius: var(--radius-2xl);
   color: var(--color-text-link);
   background: var(--color-info-bg);
-  box-shadow: var(--shadow-sm), 0 4px 0 rgba(28, 176, 246, 0.16);
+  box-shadow:
+    var(--shadow-sm),
+    0 4px 0 rgba(28, 176, 246, 0.16);
 }
 
 .emptyCopy {
@@ -263,7 +274,12 @@
   display: block;
   height: 14px;
   border-radius: var(--radius-pill);
-  background: linear-gradient(90deg, var(--color-bg-muted) 25%, var(--color-border-default) 50%, var(--color-bg-muted) 75%);
+  background: linear-gradient(
+    90deg,
+    var(--color-bg-muted) 25%,
+    var(--color-border-default) 50%,
+    var(--color-bg-muted) 75%
+  );
   background-size: 200% 100%;
   animation: shimmer 1.4s infinite;
 }

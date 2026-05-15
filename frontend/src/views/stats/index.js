@@ -72,7 +72,15 @@ function SkeletonLine({ className }) {
   return <span className={joinClasses(styles.skeletonLine, className)} />
 }
 
-function StatsHeader({ t, firstName, loading, hasData, cefr, cefrLabel, bestLevel }) {
+function StatsHeader({
+  t,
+  firstName,
+  loading,
+  hasData,
+  cefr,
+  cefrLabel,
+  bestLevel
+}) {
   const subtitle = firstName
     ? t('STATS.subtitle', {
         defaultValue: 'Track your learning journey, {{name}}',
@@ -95,7 +103,10 @@ function StatsHeader({ t, firstName, loading, hasData, cefr, cefrLabel, bestLeve
         <p className={styles.subtitle}>{subtitle}</p>
       </div>
 
-      <aside className={styles.headerAccent} aria-label={t('STATS.currentLevel', { defaultValue: 'Current level' })}>
+      <aside
+        className={styles.headerAccent}
+        aria-label={t('STATS.currentLevel', { defaultValue: 'Current level' })}
+      >
         <div className={styles.headerAccentIcon} aria-hidden="true">
           <Medal size={28} weight="fill" />
         </div>
@@ -108,18 +119,25 @@ function StatsHeader({ t, firstName, loading, hasData, cefr, cefrLabel, bestLeve
           {loading ? (
             <SkeletonLine className={styles.headerAccentSkeleton} />
           ) : (
-            <span className={styles.headerAccentValue}>{hasData ? cefr : 'N/A'}</span>
+            <span className={styles.headerAccentValue}>
+              {hasData ? cefr : 'N/A'}
+            </span>
           )}
           <span className={styles.headerAccentHint}>
             {hasData
               ? cefrLabel
-              : t('STATS.completeFirstExam', { defaultValue: 'Complete your first exam' })}
+              : t('STATS.completeFirstExam', {
+                  defaultValue: 'Complete your first exam'
+                })}
           </span>
         </div>
         {hasData && !isEmptyLevel(bestLevel) && bestLevel !== cefr && (
           <span className={styles.headerBestBadge}>
             <ArrowUp size={14} weight="bold" aria-hidden="true" />
-            {t('STATS.bestShort', { defaultValue: 'Best: {{level}}', level: bestLevel })}
+            {t('STATS.bestShort', {
+              defaultValue: 'Best: {{level}}',
+              level: bestLevel
+            })}
           </span>
         )}
       </aside>
@@ -133,7 +151,9 @@ function StatsKpiCard({ icon, label, value, helper, tone, loading }) {
   return (
     <article className={joinClasses(styles.kpiCard, styles[`kpi${tone}`])}>
       <div className={styles.kpiTopRow}>
-        <span className={styles.kpiIcon} aria-hidden="true">{icon}</span>
+        <span className={styles.kpiIcon} aria-hidden="true">
+          {icon}
+        </span>
         <span className={styles.kpiAccentDot} aria-hidden="true" />
       </div>
       {loading ? (
@@ -144,7 +164,12 @@ function StatsKpiCard({ icon, label, value, helper, tone, loading }) {
         </>
       ) : (
         <>
-          <strong className={joinClasses(styles.kpiValue, isEmptyLevel(value) && styles.kpiValueEmpty)}>
+          <strong
+            className={joinClasses(
+              styles.kpiValue,
+              isEmptyLevel(value) && styles.kpiValueEmpty
+            )}
+          >
             {displayValue}
           </strong>
           <span className={styles.kpiLabel}>{label}</span>
@@ -164,9 +189,14 @@ function StatsKpiGrid({ t, summary, loading }) {
       key: 'examsTaken',
       label: t('STATS.examsTaken', { defaultValue: 'Exams taken' }),
       value: summary.examsTaken,
-      helper: Number(summary.examsTaken) > 0
-        ? t('STATS.examsTakenHelpActive', { defaultValue: 'Completed Aptis attempts' })
-        : t('STATS.examsTakenHelpEmpty', { defaultValue: 'Your first result will appear here' }),
+      helper:
+        Number(summary.examsTaken) > 0
+          ? t('STATS.examsTakenHelpActive', {
+              defaultValue: 'Completed Aptis attempts'
+            })
+          : t('STATS.examsTakenHelpEmpty', {
+              defaultValue: 'Your first result will appear here'
+            }),
       icon: <Exam size={26} weight="fill" />,
       tone: 'Green'
     },
@@ -175,8 +205,12 @@ function StatsKpiGrid({ t, summary, loading }) {
       label: t('STATS.latestLevel', { defaultValue: 'Latest level' }),
       value: summary.latestLevel,
       helper: latestIsEmpty
-        ? t('STATS.completeFirstExam', { defaultValue: 'Complete your first exam' })
-        : t('STATS.latestLevelHelpActive', { defaultValue: 'Most recent exam result' }),
+        ? t('STATS.completeFirstExam', {
+            defaultValue: 'Complete your first exam'
+          })
+        : t('STATS.latestLevelHelpActive', {
+            defaultValue: 'Most recent exam result'
+          }),
       icon: <ChartBar size={26} weight="fill" />,
       tone: 'Blue'
     },
@@ -185,8 +219,12 @@ function StatsKpiGrid({ t, summary, loading }) {
       label: t('STATS.bestLevel', { defaultValue: 'Best level' }),
       value: summary.bestLevel,
       helper: bestIsEmpty
-        ? t('STATS.completeFirstExam', { defaultValue: 'Complete your first exam' })
-        : t('STATS.bestLevelHelpActive', { defaultValue: 'Your strongest result so far' }),
+        ? t('STATS.completeFirstExam', {
+            defaultValue: 'Complete your first exam'
+          })
+        : t('STATS.bestLevelHelpActive', {
+            defaultValue: 'Your strongest result so far'
+          }),
       icon: <Trophy size={26} weight="fill" />,
       tone: 'Gold'
     }
@@ -228,8 +266,16 @@ function ProgressEmptyState({ t }) {
         <span className={styles.emptySparkTwo} />
       </div>
       <div className={styles.emptyTextGroup}>
-        <h3>{t('STATS.noDataTitle', { defaultValue: 'Your progress graph is ready' })}</h3>
-        <p>{t('STATS.noData', { defaultValue: 'Complete an exam to see your progress.' })}</p>
+        <h3>
+          {t('STATS.noDataTitle', {
+            defaultValue: 'Your progress graph is ready'
+          })}
+        </h3>
+        <p>
+          {t('STATS.noData', {
+            defaultValue: 'Complete an exam to see your progress.'
+          })}
+        </p>
       </div>
     </div>
   )
@@ -246,7 +292,11 @@ function SkillBreakdown({ t, categoryBreakdown }) {
       </h3>
       <div className={styles.breakdownList}>
         {categoryBreakdown.map(cat => (
-          <div key={cat.label} className={styles.breakdownItem} style={{ '--skill-color': cat.color }}>
+          <div
+            key={cat.label}
+            className={styles.breakdownItem}
+            style={{ '--skill-color': cat.color }}
+          >
             <span className={styles.breakdownIcon}>{cat.icon}</span>
             <span className={styles.breakdownLabel}>{cat.label}</span>
             <span className={styles.breakdownLevel}>{cat.level}</span>
@@ -257,7 +307,14 @@ function SkillBreakdown({ t, categoryBreakdown }) {
   )
 }
 
-function ProgressOverTimeCard({ t, loading, hasChartData, chartData, chartOptions, categoryBreakdown }) {
+function ProgressOverTimeCard({
+  t,
+  loading,
+  hasChartData,
+  chartData,
+  chartOptions,
+  categoryBreakdown
+}) {
   return (
     <Card elevated className={styles.progressCard}>
       <div className={styles.sectionHeader}>
@@ -267,10 +324,15 @@ function ProgressOverTimeCard({ t, loading, hasChartData, chartData, chartOption
           </span>
           <div>
             <h2 className={styles.sectionTitle}>
-              {t('STATS.progressOverTime', { defaultValue: 'Progress over time' })}
+              {t('STATS.progressOverTime', {
+                defaultValue: 'Progress over time'
+              })}
             </h2>
             <p className={styles.sectionSubtitle}>
-              {t('STATS.progressSubtitle', { defaultValue: 'See how your Aptis level changes after each exam.' })}
+              {t('STATS.progressSubtitle', {
+                defaultValue:
+                  'See how your Aptis level changes after each exam.'
+              })}
             </p>
           </div>
         </div>
@@ -307,11 +369,13 @@ const StatsView = () => {
 
   useEffect(() => {
     if (model) {
-      dispatch(fetchEvaluationsThunk({
-        page: EP.page,
-        model: model.name,
-        own: false
-      }))
+      dispatch(
+        fetchEvaluationsThunk({
+          page: EP.page,
+          model: model.name,
+          own: false
+        })
+      )
     }
   }, [dispatch, EP.page, model])
 
@@ -319,7 +383,10 @@ const StatsView = () => {
 
   const summary = statsData?.summary || EMPTY_SUMMARY
   const cefr = statsData?.cefr || 'N/A'
-  const cefrLabel = statsData?.cefrLabel || CEFR_NAMES[cefr] || t('STATS.noDataYet', { defaultValue: 'No data yet' })
+  const cefrLabel =
+    statsData?.cefrLabel ||
+    CEFR_NAMES[cefr] ||
+    t('STATS.noDataYet', { defaultValue: 'No data yet' })
   const hasData = Number(summary.examsTaken) > 0
   const showStatsSkeleton = loading && !statsData?.summary
 
@@ -329,13 +396,16 @@ const StatsView = () => {
     const labelMap = statsData?.labels || {}
 
     const numericDatasets = datasets.map((dataset, index) => {
-      const color = dataset.label === 'Overall'
-        ? CHART_COLORS[0]
-        : CHART_COLORS[(index + 1) % CHART_COLORS.length]
+      const color =
+        dataset.label === 'Overall'
+          ? CHART_COLORS[0]
+          : CHART_COLORS[(index + 1) % CHART_COLORS.length]
 
       return {
         ...dataset,
-        data: (dataset.data || []).map(value => (value != null ? Number(value) : undefined)),
+        data: (dataset.data || []).map(value =>
+          value != null ? Number(value) : undefined
+        ),
         fill: false,
         borderColor: color,
         backgroundColor: color,
@@ -351,9 +421,10 @@ const StatsView = () => {
       }
     })
 
-    const labelEntries = Object.entries(labelMap).map(
-      ([key, value]) => [Number(key), value]
-    )
+    const labelEntries = Object.entries(labelMap).map(([key, value]) => [
+      Number(key),
+      value
+    ])
     labelEntries.sort((first, second) => first[0] - second[0])
 
     const data = {
@@ -399,8 +470,14 @@ const StatsView = () => {
             type: 'linear',
             ticks: {
               min: labelEntries.length > 0 ? labelEntries[0][0] : 0,
-              max: labelEntries.length > 0 ? labelEntries[labelEntries.length - 1][0] : 8,
-              stepSize: labelEntries.length > 1 ? labelEntries[1][0] - labelEntries[0][0] : 1,
+              max:
+                labelEntries.length > 0
+                  ? labelEntries[labelEntries.length - 1][0]
+                  : 8,
+              stepSize:
+                labelEntries.length > 1
+                  ? labelEntries[1][0] - labelEntries[0][0]
+                  : 1,
               callback: value => labelMap[value] || '',
               fontColor: '#777777',
               fontFamily: 'Varela Round',
@@ -487,14 +564,20 @@ const StatsView = () => {
             categoryBreakdown={categoryBreakdown}
           />
 
-          <section className={styles.historySection} aria-labelledby="exam-history-title">
+          <section
+            className={styles.historySection}
+            aria-labelledby="exam-history-title"
+          >
             <div className={styles.historyHeader}>
               <div>
                 <h2 id="exam-history-title" className={styles.historyTitle}>
                   {t('STATS.examHistory', { defaultValue: 'Exam history' })}
                 </h2>
                 <p className={styles.historySubtitle}>
-                  {t('STATS.examHistorySubtitle', { defaultValue: 'Review your evaluation feedback as it arrives.' })}
+                  {t('STATS.examHistorySubtitle', {
+                    defaultValue:
+                      'Review your evaluation feedback as it arrives.'
+                  })}
                 </p>
               </div>
             </div>

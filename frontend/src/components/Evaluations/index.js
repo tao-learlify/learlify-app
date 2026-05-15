@@ -47,7 +47,8 @@ function getStatusMeta(status, t) {
       return {
         className: styles.statusPending,
         icon: <Hourglass size={16} weight="fill" aria-hidden="true" />,
-        label: status || t('EVALUATIONS.STATUS.PENDING', { defaultValue: 'Pending' })
+        label:
+          status || t('EVALUATIONS.STATUS.PENDING', { defaultValue: 'Pending' })
       }
   }
 }
@@ -108,10 +109,15 @@ const Evaluations = ({ onRenderPage, latest, show, className }) => {
   }
 
   return (
-    <section className={clsx(styles.container, latest && styles.compact, className)} aria-labelledby={headingId}>
+    <section
+      className={clsx(styles.container, latest && styles.compact, className)}
+      aria-labelledby={headingId}
+    >
       <div className={styles.header}>
         <div>
-          <span className={styles.eyebrow}>{t('COMPONENTS.EVALUATIONS.subtitle')}</span>
+          <span className={styles.eyebrow}>
+            {t('COMPONENTS.EVALUATIONS.subtitle')}
+          </span>
           <h3 id={headingId} className={styles.title}>
             {latest
               ? t('COMPONENTS.EVALUATIONS.subtitle')
@@ -126,7 +132,14 @@ const Evaluations = ({ onRenderPage, latest, show, className }) => {
       </div>
 
       <div className={styles.tableWrap}>
-        <table className={styles.table} aria-describedby={!loading && rows.length === 0 ? 'evaluations-empty-state' : undefined}>
+        <table
+          className={styles.table}
+          aria-describedby={
+            !loading && rows.length === 0
+              ? 'evaluations-empty-state'
+              : undefined
+          }
+        >
           <thead>
             <tr>
               <th scope="col">{labels.category}</th>
@@ -138,67 +151,98 @@ const Evaluations = ({ onRenderPage, latest, show, className }) => {
           <tbody>
             {loading ? (
               <EvaluationSkeletonRows labels={labels} />
-            ) : rows.map(evaluation => {
-              const categoryName = evaluation.category?.name || 'Aptis'
-              const statusMeta = getStatusMeta(evaluation.status, t)
+            ) : (
+              rows.map(evaluation => {
+                const categoryName = evaluation.category?.name || 'Aptis'
+                const statusMeta = getStatusMeta(evaluation.status, t)
 
-              return (
-                <tr key={evaluation.id} className={styles.row}>
-                  <td data-label={labels.category}>
-                    <span className={styles.categoryCell}>
-                      <span className={styles.categoryIcon} aria-hidden="true">
-                        {categoryName.charAt(0)}
+                return (
+                  <tr key={evaluation.id} className={styles.row}>
+                    <td data-label={labels.category}>
+                      <span className={styles.categoryCell}>
+                        <span
+                          className={styles.categoryIcon}
+                          aria-hidden="true"
+                        >
+                          {categoryName.charAt(0)}
+                        </span>
+                        <span className={styles.categoryName}>
+                          {categoryName}
+                        </span>
                       </span>
-                      <span className={styles.categoryName}>{categoryName}</span>
-                    </span>
-                  </td>
-                  <td data-label={labels.date}>
-                    <time className={styles.dateText} dateTime={evaluation.createdAt}>
-                      {moment(evaluation.createdAt).fromNow()}
-                    </time>
-                  </td>
-                  <td data-label={labels.status}>
-                    <span className={clsx(styles.statusPill, statusMeta.className)}>
-                      {statusMeta.icon}
-                      {statusMeta.label}
-                    </span>
-                  </td>
-                  <td data-label={labels.options}>
-                    <button
-                      type="button"
-                      className={styles.actionButton}
-                      onClick={() => handlePreviewEvaluation(evaluation)}
-                      aria-label={t('COMPONENTS.EVALUATIONS.viewLabel', {
-                        defaultValue: 'View evaluation for {{category}}',
-                        category: categoryName
-                      })}
-                    >
-                      <Eye size={18} weight="bold" aria-hidden="true" />
-                      <span>{t('COMPONENTS.EVALUATIONS.view', { defaultValue: 'View' })}</span>
-                    </button>
-                  </td>
-                </tr>
-              )
-            })}
+                    </td>
+                    <td data-label={labels.date}>
+                      <time
+                        className={styles.dateText}
+                        dateTime={evaluation.createdAt}
+                      >
+                        {moment(evaluation.createdAt).fromNow()}
+                      </time>
+                    </td>
+                    <td data-label={labels.status}>
+                      <span
+                        className={clsx(
+                          styles.statusPill,
+                          statusMeta.className
+                        )}
+                      >
+                        {statusMeta.icon}
+                        {statusMeta.label}
+                      </span>
+                    </td>
+                    <td data-label={labels.options}>
+                      <button
+                        type="button"
+                        className={styles.actionButton}
+                        onClick={() => handlePreviewEvaluation(evaluation)}
+                        aria-label={t('COMPONENTS.EVALUATIONS.viewLabel', {
+                          defaultValue: 'View evaluation for {{category}}',
+                          category: categoryName
+                        })}
+                      >
+                        <Eye size={18} weight="bold" aria-hidden="true" />
+                        <span>
+                          {t('COMPONENTS.EVALUATIONS.view', {
+                            defaultValue: 'View'
+                          })}
+                        </span>
+                      </button>
+                    </td>
+                  </tr>
+                )
+              })
+            )}
           </tbody>
         </table>
       </div>
 
       {!loading && rows.length === 0 && (
-        <div id="evaluations-empty-state" className={styles.emptyState} role="status">
+        <div
+          id="evaluations-empty-state"
+          className={styles.emptyState}
+          role="status"
+        >
           <div className={styles.emptyIcon} aria-hidden="true">
             <ClipboardText size={34} weight="fill" />
           </div>
           <div className={styles.emptyCopy}>
             <h4>{t('COMPONENTS.EVALUATIONS.notavailable')}</h4>
-            <p>{t('COMPONENTS.EVALUATIONS.emptyHint', { defaultValue: 'Complete an exam to see your evaluation history.' })}</p>
+            <p>
+              {t('COMPONENTS.EVALUATIONS.emptyHint', {
+                defaultValue: 'Complete an exam to see your evaluation history.'
+              })}
+            </p>
           </div>
         </div>
       )}
 
       <div className={styles.footer}>
         {show && (
-          <button type="button" className={styles.seeAllButton} onClick={handleStats}>
+          <button
+            type="button"
+            className={styles.seeAllButton}
+            onClick={handleStats}
+          >
             {t('EVALUATIONS.seeAll')}
             <CaretRight size={18} weight="bold" aria-hidden="true" />
           </button>

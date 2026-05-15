@@ -4,7 +4,11 @@
   gap: var(--space-4);
   min-height: 100%;
   padding: var(--space-6) var(--space-6) var(--space-12);
-  background: linear-gradient(180deg, rgba(88, 204, 2, 0.04) 0%, var(--color-bg-page) 28%);
+  background: linear-gradient(
+    180deg,
+    rgba(88, 204, 2, 0.04) 0%,
+    var(--color-bg-page) 28%
+  );
 
   @media (max-width: 768px) {
     gap: var(--space-4);
@@ -76,7 +80,9 @@
   border: 1px solid rgba(88, 204, 2, 0.22);
   border-radius: var(--radius-2xl);
   background: var(--color-bg-surface);
-  box-shadow: var(--shadow-sm), 0 4px 0 rgba(88, 204, 2, 0.16);
+  box-shadow:
+    var(--shadow-sm),
+    0 4px 0 rgba(88, 204, 2, 0.16);
 
   @media (max-width: 900px) {
     align-self: flex-start;
@@ -163,13 +169,20 @@
   border: 1px solid var(--kpi-border);
   border-radius: var(--radius-2xl);
   background: var(--color-bg-surface);
-  box-shadow: var(--shadow-sm), 0 4px 0 rgba(0, 0, 0, 0.06);
-  transition: transform var(--duration-base) var(--easing-out), box-shadow var(--duration-base) var(--easing-out), border-color var(--duration-base) var(--easing-out);
+  box-shadow:
+    var(--shadow-sm),
+    0 4px 0 rgba(0, 0, 0, 0.06);
+  transition:
+    transform var(--duration-base) var(--easing-out),
+    box-shadow var(--duration-base) var(--easing-out),
+    border-color var(--duration-base) var(--easing-out);
 
   &:hover {
     transform: translateY(-2px);
     border-color: var(--kpi-color);
-    box-shadow: var(--shadow-md), 0 6px 0 rgba(0, 0, 0, 0.06);
+    box-shadow:
+      var(--shadow-md),
+      0 6px 0 rgba(0, 0, 0, 0.06);
   }
 }
 
@@ -332,7 +345,11 @@
   padding: var(--space-6);
   border: 2px dashed rgba(88, 204, 2, 0.22);
   border-radius: var(--radius-xl);
-  background: linear-gradient(180deg, rgba(227, 249, 200, 0.38), rgba(255, 255, 255, 0.72));
+  background: linear-gradient(
+    180deg,
+    rgba(227, 249, 200, 0.38),
+    rgba(255, 255, 255, 0.72)
+  );
   text-align: left;
 
   @media (max-width: 576px) {
@@ -352,7 +369,9 @@
   border-radius: var(--radius-2xl);
   color: var(--color-brand-primary-dark);
   background: var(--color-bg-surface);
-  box-shadow: var(--shadow-sm), 0 4px 0 rgba(88, 204, 2, 0.16);
+  box-shadow:
+    var(--shadow-sm),
+    0 4px 0 rgba(88, 204, 2, 0.16);
 }
 
 .emptySparkOne,
@@ -495,7 +514,12 @@
   width: 100%;
   height: 14px;
   border-radius: var(--radius-pill);
-  background: linear-gradient(90deg, var(--color-bg-muted) 25%, var(--color-border-default) 50%, var(--color-bg-muted) 75%);
+  background: linear-gradient(
+    90deg,
+    var(--color-bg-muted) 25%,
+    var(--color-border-default) 50%,
+    var(--color-bg-muted) 75%
+  );
   background-size: 200% 100%;
   animation: shimmer 1.4s infinite;
 }
@@ -540,14 +564,27 @@
 
   span {
     display: block;
-    border-radius: var(--radius-lg) var(--radius-lg) var(--radius-xs) var(--radius-xs);
-    background: linear-gradient(180deg, rgba(88, 204, 2, 0.36), rgba(28, 176, 246, 0.24));
+    border-radius: var(--radius-lg) var(--radius-lg) var(--radius-xs)
+      var(--radius-xs);
+    background: linear-gradient(
+      180deg,
+      rgba(88, 204, 2, 0.36),
+      rgba(28, 176, 246, 0.24)
+    );
   }
 
-  span:nth-child(1) { height: 38%; }
-  span:nth-child(2) { height: 62%; }
-  span:nth-child(3) { height: 46%; }
-  span:nth-child(4) { height: 74%; }
+  span:nth-child(1) {
+    height: 38%;
+  }
+  span:nth-child(2) {
+    height: 62%;
+  }
+  span:nth-child(3) {
+    height: 46%;
+  }
+  span:nth-child(4) {
+    height: 74%;
+  }
 }
 
 .breakdownSkeleton {
