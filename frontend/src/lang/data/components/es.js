@@ -8,6 +8,10 @@ export const componentsES = {
     title: 'Evaluaciones',
     subtitle: 'Lo último',
     notavailable: 'No hay evaluaciones disponibles',
+    loading: 'Actualizando',
+    view: 'Ver',
+    viewLabel: 'Ver evaluación de {{category}}',
+    emptyHint: 'Completa un examen para ver tu historial de evaluaciones.',
     rows: {
       category: 'Categoría',
       date: 'Fecha',

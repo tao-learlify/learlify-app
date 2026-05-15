@@ -59,72 +59,81 @@ const AccountMembershipCard = ({ subscription, isLegacy, demo }) => {
 
   return (
     <>
-      <Card elevated>
-        <Card.Body>
-          <span className={styles.sectionLabel}>
-            {t('SETTINGS.SUBSCRIPTION.title')}
-          </span>
+      <Card elevated className={styles.cardRoot}>
+        <Card.Body className={styles.cardBody}>
+          {/* ── Grows to fill available space ── */}
+          <div className={styles.cardContent}>
+            <span className={styles.sectionLabel}>
+              {t('SETTINGS.SUBSCRIPTION.title')}
+            </span>
 
-          {!subscription ? (
-            <EmptyMembershipState />
-          ) : (
-            <>
-              <div className={styles.planLayout}>
-                <div className={styles.planIcon} aria-hidden="true">
-                  {subscription.planName.charAt(0)}
-                </div>
-                <div className={styles.planContent}>
-                  <div className={styles.planNameRow}>
-                    <p className={styles.planName}>{subscription.planName}</p>
-                    <SubscriptionStatusBadge status={subscription.status} />
+            {!subscription ? (
+              <EmptyMembershipState />
+            ) : (
+              <>
+                <div className={styles.planLayout}>
+                  <div className={styles.planIcon} aria-hidden="true">
+                    {subscription.planName.charAt(0)}
                   </div>
+                  <div className={styles.planContent}>
+                    <div className={styles.planNameRow}>
+                      <p className={styles.planName}>{subscription.planName}</p>
+                      <SubscriptionStatusBadge status={subscription.status} />
+                    </div>
 
-                  {subscription.price != null && (
-                    <p className={styles.planPrice}>
-                      {subscription.discount > 0 && (
-                        <Badge variant="active">
-                          -{subscription.discount}%
-                        </Badge>
-                      )}
-                      <span className={styles.priceAmount}>
-                        {subscription.price}&nbsp;{subscription.currency}
-                      </span>
-                      <span className={styles.perMonth}>
-                        {t('SETTINGS.SUBSCRIPTION.perMonth')}
-                      </span>
-                    </p>
-                  )}
-
-                  <dl className={styles.metaList}>
-                    <div className={styles.metaItem}>
-                      <dt>{t('SETTINGS.SUBSCRIPTION.billingCycleLabel')}</dt>
-                      <dd>
-                        {t(
-                          `SETTINGS.SUBSCRIPTION.BILLING_CYCLE.${subscription.billingCycle}`,
-                          { defaultValue: subscription.billingCycle }
+                    {subscription.price != null && (
+                      <p className={styles.planPrice}>
+                        {subscription.discount > 0 && (
+                          <Badge variant="active">
+                            -{subscription.discount}%
+                          </Badge>
                         )}
-                      </dd>
-                    </div>
-                    <div className={styles.metaItem}>
-                      <dt>{t('SETTINGS.SUBSCRIPTION.renewalLabel')}</dt>
-                      <dd>
-                        {subscription.cancelAtPeriodEnd
-                          ? t('SETTINGS.SUBSCRIPTION.noRenewal')
-                          : formatDate(subscription.currentPeriodEnd)}
-                      </dd>
-                    </div>
-                  </dl>
+                        <span className={styles.priceAmount}>
+                          {subscription.price}&nbsp;{subscription.currency}
+                        </span>
+                        <span className={styles.perMonth}>
+                          {t('SETTINGS.SUBSCRIPTION.perMonth')}
+                        </span>
+                      </p>
+                    )}
+
+                    <dl className={styles.metaList}>
+                      <div className={styles.metaItem}>
+                        <dt>{t('SETTINGS.SUBSCRIPTION.billingCycleLabel')}</dt>
+                        <dd>
+                          {t(
+                            `SETTINGS.SUBSCRIPTION.BILLING_CYCLE.${subscription.billingCycle}`,
+                            { defaultValue: subscription.billingCycle }
+                          )}
+                        </dd>
+                      </div>
+                      <div className={styles.metaItem}>
+                        <dt>{t('SETTINGS.SUBSCRIPTION.renewalLabel')}</dt>
+                        <dd>
+                          {subscription.cancelAtPeriodEnd
+                            ? t('SETTINGS.SUBSCRIPTION.noRenewal')
+                            : formatDate(subscription.currentPeriodEnd)}
+                        </dd>
+                      </div>
+                    </dl>
+                  </div>
                 </div>
-              </div>
 
-              {subscription.cancelAtPeriodEnd && (
-                <p className={styles.cancelNotice}>
-                  {t('SETTINGS.SUBSCRIPTION.cancelAtPeriodEndMessage', {
-                    date: formatDate(subscription.currentPeriodEnd)
-                  })}
-                </p>
-              )}
+                {subscription.cancelAtPeriodEnd && (
+                  <p className={styles.cancelNotice}>
+                    {t('SETTINGS.SUBSCRIPTION.cancelAtPeriodEndMessage', {
+                      date: formatDate(subscription.currentPeriodEnd)
+                    })}
+                  </p>
+                )}
+              </>
+            )}
+          </div>
 
+          {/* ── Divider + actions pinned to bottom ── */}
+          {subscription && (
+            <>
+              <hr className={styles.divider} />
               <div className={styles.actions}>
                 <Button
                   onClick={() => history.push(PATH.PAYMENTS)}

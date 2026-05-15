@@ -1,3 +1,26 @@
 export const statsES = {
-  title: 'Estadísticas & Evaluaciones'
+  title: 'Estadísticas & Evaluaciones',
+  headerEyebrow: 'Progreso de aprendizaje',
+  subtitle: 'Sigue tu progreso, {{name}}',
+  subtitleGeneric: 'Sigue tu progreso',
+  currentLevel: 'Nivel actual',
+  firstMilestone: 'Primer logro',
+  completeFirstExam: 'Completa tu primer examen',
+  bestShort: 'Mejor: {{level}}',
+  noDataYet: 'Sin datos todavía',
+  examsTaken: 'Exámenes realizados',
+  examsTakenHelpActive: 'Intentos Aptis completados',
+  examsTakenHelpEmpty: 'Tu primer resultado aparecerá aquí',
+  latestLevel: 'Último nivel',
+  latestLevelHelpActive: 'Resultado del examen más reciente',
+  bestLevel: 'Mejor nivel',
+  bestLevelHelpActive: 'Tu resultado más alto hasta ahora',
+  progressOverTime: 'Progreso en el tiempo',
+  progressSubtitle: 'Mira cómo cambia tu nivel Aptis tras cada examen.',
+  cefrTimeline: 'Línea CEFR',
+  noDataTitle: 'Tu gráfico de progreso está listo',
+  noData: 'Completa un examen para ver tu progreso.',
+  latestBreakdown: 'Último por habilidad',
+  examHistory: 'Historial de exámenes',
+  examHistorySubtitle: 'Revisa tus evaluaciones conforme vayan llegando.'
 }

@@ -87,13 +87,6 @@ const PaymentMethodCard = ({
         </div>
       </div>
 
-      {/* Brand accent bar */}
-      <div
-        className={styles.brandBar}
-        style={{ background: brandAccent }}
-        aria-hidden="true"
-      />
-
       {/* Actions */}
       <div className={styles.actions}>
         <Button

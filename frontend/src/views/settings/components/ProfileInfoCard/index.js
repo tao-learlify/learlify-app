@@ -187,6 +187,7 @@ const ProfileInfoCard = ({ profile, demo }) => {
               label={t('SETTINGS.SECURITY.newLabel')}
               name="password"
               type="password"
+              autoComplete="new-password"
               value={passwordForm.password}
               onChange={onPasswordChange}
               placeholder="••••••••"
@@ -198,6 +199,7 @@ const ProfileInfoCard = ({ profile, demo }) => {
               label={t('SETTINGS.SECURITY.confirmLabel')}
               name="confirm"
               type="password"
+              autoComplete="new-password"
               value={passwordForm.confirm}
               onChange={onPasswordChange}
               placeholder="••••••••"

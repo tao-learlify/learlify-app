@@ -1,32 +1,35 @@
 /* ──────────────────────────────────────────────────────────────────────────
-   PaymentMethodCard — Duolingo-inspired "collectible" card item
+   PaymentMethodCard — compact realistic card proportions
    ────────────────────────────────────────────────────────────────────────── */
 
 .card {
   position: relative;
-  border-radius: var(--radius-xl);
+  width: 45%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: var(--radius-lg);
   overflow: hidden;
   background: linear-gradient(135deg, #042c60 0%, #1871ef 60%, #0d9ee8 100%);
   color: var(--color-text-inverse);
   box-shadow:
-    var(--shadow-lg),
+    var(--shadow-md),
     0 0 0 1px rgba(255, 255, 255, 0.06);
   transition:
-    transform var(--duration-slow) var(--easing-bounce),
-    box-shadow var(--duration-slow) var(--easing-out);
+    transform var(--duration-base) var(--easing-out),
+    box-shadow var(--duration-base) var(--easing-out);
   cursor: default;
 
   &:hover {
-    transform: translateY(-3px) scale(1.01);
+    transform: translateY(-2px);
     box-shadow:
       var(--shadow-lg),
-      0 12px 32px rgba(24, 113, 239, 0.28);
+      0 8px 20px rgba(24, 113, 239, 0.22);
   }
 
   &.isDefault {
     background: linear-gradient(135deg, #042c60 0%, #0f6fde 50%, #1aa87c 100%);
     box-shadow:
-      var(--shadow-lg),
+      var(--shadow-md),
       0 0 0 2px var(--color-brand-primary);
   }
 }
@@ -34,24 +37,25 @@
 /* ── Card face (visual area) ─────────────────────────────────────────── */
 
 .cardFace {
-  padding: var(--space-5) var(--space-6) var(--space-4);
+  padding: 12px 14px 8px;
   display: flex;
   flex-direction: column;
-  gap: var(--space-3);
-  min-height: 120px;
+  gap: 4px;
+  min-height: 76px;
 }
 
 .cardTopRow {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 2px;
 }
 
 .brandName {
   font-family: var(--font-base);
-  font-size: var(--text-base);
+  font-size: var(--text-sm);
   font-weight: var(--weight-black);
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.92);
 }
@@ -59,9 +63,9 @@
 /* Embossed chip */
 .chip {
   display: block;
-  width: 28px;
-  height: 20px;
-  border-radius: 4px;
+  width: 22px;
+  height: 15px;
+  border-radius: 3px;
   background: linear-gradient(135deg, #e8d5a3 0%, #c9a84c 100%);
   opacity: 0.85;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
@@ -69,56 +73,53 @@
 
 .maskedNumber {
   font-family: 'Courier New', 'Courier', monospace;
-  font-size: var(--text-lg);
-  letter-spacing: 3px;
-  color: rgba(255, 255, 255, 0.88);
+  font-size: var(--text-sm);
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.82);
 }
 
 .cardBottomRow {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
-  gap: var(--space-3);
+  gap: var(--space-2);
+  margin-top: 2px;
 }
 
 .expiryBlock {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 1px;
 }
 
 .expiryLabel {
-  font-size: var(--text-xs);
+  font-size: 9px;
   text-transform: uppercase;
-  letter-spacing: 0.8px;
-  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.6px;
+  color: rgba(255, 255, 255, 0.55);
 }
 
 .expiryValue {
-  font-size: var(--text-base);
+  font-size: var(--text-sm);
   font-weight: var(--weight-semibold);
   color: rgba(255, 255, 255, 0.9);
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
 }
 
 .defaultBadge {
-  /* Badge sits on the card face — invert to look good on dark bg */
-  background: rgba(255, 255, 255, 0.18) !important;
+  background: rgba(255, 255, 255, 0.15) !important;
   color: #fff !important;
-  border: 1px solid rgba(255, 255, 255, 0.32) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
   backdrop-filter: blur(4px);
+  font-size: 9px !important;
+  padding: 2px 7px !important;
+  letter-spacing: 0.5px;
 
-  /* Override dot color */
   & span[class*='dot'] {
     background: var(--color-brand-primary) !important;
+    width: 5px !important;
+    height: 5px !important;
   }
-}
-
-/* ── Brand accent bar (bottom) ───────────────────────────────────────── */
-
-.brandBar {
-  height: 3px;
-  width: 100%;
 }
 
 /* ── Action row ──────────────────────────────────────────────────────── */
@@ -127,19 +128,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--space-2) var(--space-4) var(--space-3);
-  background: rgba(255, 255, 255, 0.06);
+  padding: 4px var(--space-3) 6px;
 }
 
 .actionBtn {
-  color: rgba(255, 255, 255, 0.8) !important;
-  font-size: var(--text-sm) !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-size: var(--text-xs) !important;
   font-weight: var(--weight-semibold) !important;
-  padding: var(--space-1) var(--space-2) !important;
+  padding: 3px var(--space-2) !important;
 
   &:hover:not(:disabled) {
     color: #fff !important;
-    background: rgba(255, 255, 255, 0.12) !important;
+    background: rgba(255, 255, 255, 0.1) !important;
   }
 
   &:disabled {
@@ -149,10 +149,10 @@
 }
 
 .removeBtn {
-  color: rgba(255, 180, 180, 0.85) !important;
+  color: rgba(255, 160, 160, 0.8) !important;
 
   &:hover:not(:disabled) {
     color: #fca5a5 !important;
-    background: rgba(234, 43, 43, 0.18) !important;
+    background: rgba(234, 43, 43, 0.15) !important;
   }
 }
