@@ -414,10 +414,17 @@ class SubscriptionsService {
   }
 
   @Bind
-  async getBilling(userId: number): Promise<{
+  async getBilling(
+    userId: number
+  ): Promise<{
     paymentMethod: {
       id: string
-      card: { brand: string; last4: string; exp_month: number; exp_year: number } | null
+      card: {
+        brand: string
+        last4: string
+        exp_month: number
+        exp_year: number
+      } | null
     } | null
     invoices: Array<{
       id: string

@@ -36,7 +36,10 @@ const BillingHistoryCard = ({ invoices, loading }) => {
       return (
         <ul className={styles.invoiceList} aria-busy="true">
           {[1, 2, 3].map(i => (
-            <li key={i} className={`${styles.invoiceRow} ${styles.skeletonRow}`}>
+            <li
+              key={i}
+              className={`${styles.invoiceRow} ${styles.skeletonRow}`}
+            >
               <span className={styles.skeletonLine} style={{ width: '70%' }} />
               <span className={styles.skeletonLine} style={{ width: '50%' }} />
               <span className={styles.skeletonLine} style={{ width: '40%' }} />
@@ -69,9 +72,7 @@ const BillingHistoryCard = ({ invoices, loading }) => {
                 {formatAmount(invoice.amount, invoice.currency)}
               </span>
               <span className={styles.invoiceStatus}>
-                <Badge
-                  variant={STATUS_VARIANT[invoice.status] || 'neutral'}
-                >
+                <Badge variant={STATUS_VARIANT[invoice.status] || 'neutral'}>
                   {t(`SETTINGS.BILLING_HISTORY.STATUS.${invoice.status}`, {
                     defaultValue: invoice.status
                   })}

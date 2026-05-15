@@ -107,7 +107,8 @@ export const settingsES = {
   SECURITY: {
     title: 'Seguridad',
     accountProtected: 'Tu cuenta está protegida',
-    protectedDesc: 'Tu cuenta está protegida con una contraseña segura. Puedes actualizarla aquí cuando quieras.',
+    protectedDesc:
+      'Tu cuenta está protegida con una contraseña segura. Puedes actualizarla aquí cuando quieras.',
     changePasswordTitle: 'Cambiar contraseña',
     newLabel: 'Nueva contraseña',
     confirmLabel: 'Confirmar nueva contraseña',

@@ -227,7 +227,15 @@ function useSubscription() {
     return deriveInvoicesFromPackage(activePackage)
   }, [billing.data, packagesData])
 
-  return { subscription, paymentMethod, invoices, loading, isLegacy, refetchBilling, billingLoading }
+  return {
+    subscription,
+    paymentMethod,
+    invoices,
+    loading,
+    isLegacy,
+    refetchBilling,
+    billingLoading
+  }
 }
 
 export default useSubscription

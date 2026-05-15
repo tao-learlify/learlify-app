@@ -162,9 +162,16 @@ class StripeService {
   }
 
   @Bind
-  async getPaymentMethod(paymentMethodId: string): Promise<{
+  async getPaymentMethod(
+    paymentMethodId: string
+  ): Promise<{
     id: string
-    card: { brand: string; last4: string; exp_month: number; exp_year: number } | null
+    card: {
+      brand: string
+      last4: string
+      exp_month: number
+      exp_year: number
+    } | null
   } | null> {
     try {
       const pm = await this.stripe.paymentMethods.retrieve(paymentMethodId)
@@ -186,7 +193,9 @@ class StripeService {
   }
 
   @Bind
-  async listCustomerInvoices(customerId: string): Promise<
+  async listCustomerInvoices(
+    customerId: string
+  ): Promise<
     Array<{
       id: string
       created: number

@@ -7,7 +7,10 @@ import useForm from 'hooks/useForm'
 import useToggler from 'hooks/useToggler'
 import useLocalStorage from 'hooks/useLocalStorage'
 import { ModuleValidaton } from 'common/module.validation'
-import { loginNameValidator, loginPasswordValidator } from 'views/authentication/validation/login'
+import {
+  loginNameValidator,
+  loginPasswordValidator
+} from 'views/authentication/validation/login'
 import { updateProfileThunk } from 'store/@thunks/auth'
 import { validateName } from '../../validation'
 import styles from './ProfileInfoCard.module.scss'

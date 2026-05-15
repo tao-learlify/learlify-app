@@ -57,7 +57,6 @@ const Settings = () => {
           <ProfileInfoCard profile={profile} demo={demo} />
         </Tabs.Tab>
       </Tabs>
-
     </Template>
   )
 }

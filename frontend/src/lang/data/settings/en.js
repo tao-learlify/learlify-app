@@ -107,7 +107,8 @@ export const settingsEN = {
   SECURITY: {
     title: 'Security',
     accountProtected: 'Your account is secured',
-    protectedDesc: 'Your account is protected with a secure password. You can update it below at any time.',
+    protectedDesc:
+      'Your account is protected with a secure password. You can update it below at any time.',
     changePasswordTitle: 'Change password',
     newLabel: 'New password',
     confirmLabel: 'Confirm new password',
